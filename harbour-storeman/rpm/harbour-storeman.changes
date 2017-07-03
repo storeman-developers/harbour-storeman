@@ -1,0 +1,9 @@
+* Mon Jul  3 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.2-2
+- Install polkit rules to remove Warehouse dependency
+
+* Mon Jul  3 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.2-1
+- Fix typo in the recent apps page
+- Fix not loading when network is not available
+
+* Mon Jul  3 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.1-1
+- Initial release
