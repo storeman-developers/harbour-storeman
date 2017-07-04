@@ -4,17 +4,14 @@ import harbour.orn 1.0
 
 PullDownMenu {
     id: pullMenu
-    enabled: networkManager.state === "online"
-
-    onBusyChanged: {
-        var length = children.length
-        for (var i = 0; i < length; ++i) {
-            children[i].enabled = !busy
-        }
-    }
+    visible: networkManager.state === "online" &&
+             (repoMenuItem.text   || installMenuItem.text ||
+              app.updateAvailable || app.installedVersion)
 
     MenuItem {
+        id: repoMenuItem
         visible: text
+        enabled: !parent.busy
         text: {
             switch (app.repoStatus) {
             case OrnApplication.RepoNotInstalled:
@@ -45,7 +42,9 @@ PullDownMenu {
     }
 
     MenuItem {
+        id: installMenuItem
         visible: text
+        enabled: !parent.busy
         text: {
             if (app.installedVersion) {
                 //% "Remove"
@@ -75,7 +74,9 @@ PullDownMenu {
     }
 
     MenuItem {
+        id: updateMenuItem
         visible: app.updateAvailable
+        enabled: !parent.busy
         //% "Update"
         text: qsTrId("orn-update")
         onClicked: {
@@ -85,7 +86,9 @@ PullDownMenu {
     }
 
     MenuItem {
+        id: launchMenuItem
         visible: app.installedVersion
+        enabled: !parent.busy
         //% "Launch"
         text: qsTrId("orn-launch")
         onClicked: app.launch()
