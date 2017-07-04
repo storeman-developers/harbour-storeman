@@ -27,23 +27,24 @@ HEADERS += \
 OTHER_FILES += qml/harbour-storeman.qml \
     qml/cover/CoverPage.qml \
     qml/pages/RecentAppsPage.qml \
-    qml/components/AppListDelegate.qml \
-    qml/components/RatingBox.qml \
     qml/pages/ApplicationPage.qml \
     qml/pages/RepositoriesPage.qml \
+    qml/pages/ScreenshotPage.qml \
+    qml/pages/ChangelogPage.qml \
+    qml/pages/UserPage.qml \
+    qml/pages/CommentsPage.qml \
+    qml/pages/SearchPage.qml \
+    qml/components/AppListDelegate.qml \
+    qml/components/RatingBox.qml \
     qml/components/IconLabel.qml \
     qml/components/FancyPageHeader.qml \
     qml/components/PackageInformation.qml \
     qml/components/AppInformation.qml \
     qml/components/AppInfoLabel.qml \
     qml/components/ScreenshotsBox.qml \
-    qml/pages/ScreenshotPage.qml \
     qml/components/MoreButton.qml \
     qml/components/ApplicationPageMenu.qml \
-    qml/pages/ChangelogPage.qml \
-    qml/pages/UserPage.qml \
     qml/components/RefreshMenuItem.qml \
-    qml/pages/CommentsPage.qml \
     rpm/harbour-storeman.changes \
     rpm/harbour-storeman.spec \
     rpm/harbour-storeman.yaml \

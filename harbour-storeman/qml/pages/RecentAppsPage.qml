@@ -50,15 +50,22 @@ Page {
                 MenuItem {
                     //% "Repositories"
                     text: qsTrId("orn-repositories")
-                    onClicked: pageStack.push(Qt.resolvedUrl("../pages/RepositoriesPage.qml"))
+                    onClicked: pageStack.push(Qt.resolvedUrl("RepositoriesPage.qml"))
                 }
 
                 RefreshMenuItem {
                     model: appsModel
                 }
+
+                MenuItem {
+                    //: The search menu item and the search page header text - should be a noun
+                    //% "Search"
+                    text: qsTrId("orn-search")
+                    onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"))
+                }
             }
 
-            VerticalScrollDecorator {}
+            VerticalScrollDecorator { }
 
             BusyIndicator {
                 size: BusyIndicatorSize.Large
