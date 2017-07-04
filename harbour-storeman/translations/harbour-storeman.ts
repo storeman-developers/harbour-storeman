@@ -152,8 +152,9 @@
         <translation>First release</translation>
     </message>
     <message id="orn-version-noavailable">
-        <source>Enable the repository first</source>
-        <translation>Enable the repository first</translation>
+        <source>No versions available</source>
+        <oldsource>Enable the repository first</oldsource>
+        <translation>No versions available</translation>
     </message>
     <message id="orn-created-note">
         <source>OpenRepos can give an incorrect date</source>
@@ -311,6 +312,36 @@
     <message id="orn-comments-withnum">
         <source>Comments (%0)</source>
         <translation>Comments (%0)</translation>
+    </message>
+    <message id="orn-version-repo-disabled">
+        <source>Enable the repository first</source>
+        <translation>Enable the repository first</translation>
+    </message>
+    <message id="orn-search">
+        <source>Search</source>
+        <extracomment>The search menu item and the search page header text - should be a noun</extracomment>
+        <translation>Search</translation>
+    </message>
+    <message id="orn-searchpage-placeholder-noresults">
+        <source>Nothing found</source>
+        <translation>Nothing found</translation>
+    </message>
+    <message id="orn-searchpage-placeholder-noresults-hint">
+        <source>Try to change search keywords</source>
+        <translation>Try to change search keywords</translation>
+    </message>
+    <message id="orn-searchfield-placeholder">
+        <source>Search</source>
+        <extracomment>The search field placeholder text - should be a verb</extracomment>
+        <translation>Search</translation>
+    </message>
+    <message id="orn-searchpage-placeholder-default">
+        <source>Search results will be shown here</source>
+        <translation>Search results will be shown here</translation>
+    </message>
+    <message id="orn-searchpage-placeholder-default-hint">
+        <source>Type some keywords in the field above</source>
+        <translation>Type some keywords in the field above</translation>
     </message>
 </context>
 </TS>

@@ -19,6 +19,13 @@
         <oldsource>Recentry updated</oldsource>
         <translation>Недавно обновленные</translation>
     </message>
+    <message id="orn-search">
+        <location filename="../qml/pages/RecentAppsPage.qml" line="63"/>
+        <location filename="../qml/pages/SearchPage.qml" line="39"/>
+        <source>Search</source>
+        <extracomment>The search menu item and the search page header text - should be a noun</extracomment>
+        <translation>Поиск</translation>
+    </message>
     <message id="orn-today">
         <location filename="../../ornplugin/src/ornapplistitem.cpp" line="51"/>
         <source>Today</source>
@@ -48,7 +55,7 @@
     </message>
     <message id="orn-repositories">
         <location filename="../qml/pages/RecentAppsPage.qml" line="52"/>
-        <location filename="../qml/pages/RecentAppsPage.qml" line="80"/>
+        <location filename="../qml/pages/RecentAppsPage.qml" line="87"/>
         <location filename="../qml/pages/RepositoriesPage.qml" line="12"/>
         <source>Repositories</source>
         <translation>Репозитории</translation>
@@ -60,7 +67,7 @@
         <translation>Обновить</translation>
     </message>
     <message id="orn-network-idle">
-        <location filename="../qml/pages/RecentAppsPage.qml" line="92"/>
+        <location filename="../qml/pages/RecentAppsPage.qml" line="99"/>
         <source>Network is unavailable</source>
         <translation>Сеть недоступна</translation>
     </message>
@@ -95,7 +102,7 @@
         <translation>Удалить</translation>
     </message>
     <message id="orn-removing">
-        <location filename="../qml/components/ApplicationPageMenu.qml" line="62"/>
+        <location filename="../qml/components/ApplicationPageMenu.qml" line="61"/>
         <location filename="../qml/pages/RepositoriesPage.qml" line="61"/>
         <source>Removing</source>
         <translation>Удаление</translation>
@@ -144,12 +151,12 @@
         <translation>Комментарии (%0)</translation>
     </message>
     <message id="orn-remove">
-        <location filename="../qml/components/ApplicationPageMenu.qml" line="52"/>
+        <location filename="../qml/components/ApplicationPageMenu.qml" line="51"/>
         <source>Remove</source>
         <translation>Удалить</translation>
     </message>
     <message id="orn-update">
-        <location filename="../qml/components/ApplicationPageMenu.qml" line="80"/>
+        <location filename="../qml/components/ApplicationPageMenu.qml" line="81"/>
         <source>Update</source>
         <translation>Обновить</translation>
     </message>
@@ -165,12 +172,12 @@
         <translation>Также от %0</translation>
     </message>
     <message id="orn-repo-add">
-        <location filename="../qml/components/ApplicationPageMenu.qml" line="22"/>
+        <location filename="../qml/components/ApplicationPageMenu.qml" line="19"/>
         <source>Add repository</source>
         <translation>Добавить репозиторий</translation>
     </message>
     <message id="orn-repo-enable">
-        <location filename="../qml/components/ApplicationPageMenu.qml" line="25"/>
+        <location filename="../qml/components/ApplicationPageMenu.qml" line="22"/>
         <source>Enable repository</source>
         <translation>Включить репозиторий</translation>
     </message>
@@ -185,54 +192,60 @@
         <translation>Доступно обновление</translation>
     </message>
     <message id="orn-install">
-        <location filename="../qml/components/ApplicationPageMenu.qml" line="55"/>
+        <location filename="../qml/components/ApplicationPageMenu.qml" line="54"/>
         <source>Install</source>
         <translation>Установить</translation>
     </message>
     <message id="orn-launch">
-        <location filename="../qml/components/ApplicationPageMenu.qml" line="90"/>
+        <location filename="../qml/components/ApplicationPageMenu.qml" line="93"/>
         <source>Launch</source>
         <translation>Открыть</translation>
     </message>
     <message id="orn-adding-repo">
-        <location filename="../qml/components/ApplicationPageMenu.qml" line="34"/>
+        <location filename="../qml/components/ApplicationPageMenu.qml" line="31"/>
         <source>Adding</source>
         <translation>Добавление</translation>
     </message>
     <message id="orn-version-installed">
-        <location filename="../qml/components/AppInformation.qml" line="59"/>
+        <location filename="../qml/components/AppInformation.qml" line="60"/>
         <source>Installed version</source>
         <translation>Установленная версия</translation>
     </message>
     <message id="orn-version-available">
-        <location filename="../qml/components/AppInformation.qml" line="66"/>
+        <location filename="../qml/components/AppInformation.qml" line="67"/>
         <source>Available version</source>
         <translation>Доступная версия</translation>
     </message>
     <message id="orn-version-noavailable">
-        <location filename="../qml/components/AppInformation.qml" line="70"/>
+        <location filename="../qml/components/AppInformation.qml" line="74"/>
+        <source>No versions available</source>
+        <oldsource>Enable the repository first</oldsource>
+        <translation>Нет доступных версий</translation>
+    </message>
+    <message id="orn-version-repo-disabled">
+        <location filename="../qml/components/AppInformation.qml" line="78"/>
         <source>Enable the repository first</source>
         <translation>Необходимо включить репозиторий</translation>
     </message>
     <message id="orn-version-updated">
-        <location filename="../qml/components/AppInformation.qml" line="76"/>
+        <location filename="../qml/components/AppInformation.qml" line="86"/>
         <source>Last updated</source>
         <translation>Последнее обновление</translation>
     </message>
     <message id="orn-dt-format">
-        <location filename="../qml/components/AppInformation.qml" line="79"/>
-        <location filename="../qml/components/AppInformation.qml" line="86"/>
+        <location filename="../qml/components/AppInformation.qml" line="89"/>
+        <location filename="../qml/components/AppInformation.qml" line="96"/>
         <source>yyyy-dd-MM hh:mm</source>
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
         <translation>hh:mm, dd.MM.yyyy</translation>
     </message>
     <message id="orn-version-created">
-        <location filename="../qml/components/AppInformation.qml" line="85"/>
+        <location filename="../qml/components/AppInformation.qml" line="95"/>
         <source>First release</source>
         <translation>Первый выпуск</translation>
     </message>
     <message id="orn-created-note">
-        <location filename="../qml/components/AppInformation.qml" line="88"/>
+        <location filename="../qml/components/AppInformation.qml" line="98"/>
         <source>OpenRepos can give an incorrect date</source>
         <translation>OpenRepos может отдавать неправильные даты</translation>
     </message>
@@ -397,6 +410,32 @@
         <location filename="../qml/pages/UserPage.qml" line="21"/>
         <source>User applications</source>
         <translation>Приложения пользователя</translation>
+    </message>
+    <message id="orn-searchpage-placeholder-noresults">
+        <location filename="../qml/pages/SearchPage.qml" line="27"/>
+        <source>Nothing found</source>
+        <translation>Ничего не найдено</translation>
+    </message>
+    <message id="orn-searchpage-placeholder-noresults-hint">
+        <location filename="../qml/pages/SearchPage.qml" line="29"/>
+        <source>Try to change search keywords</source>
+        <translation>Попробуйте изменить слова поиска</translation>
+    </message>
+    <message id="orn-searchfield-placeholder">
+        <location filename="../qml/pages/SearchPage.qml" line="46"/>
+        <source>Search</source>
+        <extracomment>The search field placeholder text - should be a verb</extracomment>
+        <translation>Искать</translation>
+    </message>
+    <message id="orn-searchpage-placeholder-default">
+        <location filename="../qml/pages/SearchPage.qml" line="10"/>
+        <source>Search results will be shown here</source>
+        <translation>Здесь появятся результаты поиска</translation>
+    </message>
+    <message id="orn-searchpage-placeholder-default-hint">
+        <location filename="../qml/pages/SearchPage.qml" line="12"/>
+        <source>Type some keywords in the field above</source>
+        <translation>Введите слова для поиска в поле выше</translation>
     </message>
 </context>
 </TS>
