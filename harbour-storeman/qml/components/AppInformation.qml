@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import harbour.orn 1.0
 
 BackgroundItem {
     property bool _expanded: false
@@ -64,10 +65,19 @@ BackgroundItem {
             visible: _expanded
             //% "Available version"
             label: qsTrId("orn-version-available")
-            value: app.availableVersion ?
-                       app.availableVersion :
-                       //% "Enable the repository first"
-                       qsTrId("orn-version-noavailable")
+            value: {
+                if (app.repoStatus === OrnApplication.RepoEnabled) {
+                    if (app.availableVersion) {
+                        return app.availableVersion
+                    } else {
+                        //% "No versions available"
+                        return qsTrId("orn-version-noavailable")
+                    }
+                } else {
+                    //% "Enable the repository first"
+                    return qsTrId("orn-version-repo-disabled")
+                }
+            }
         }
 
         AppInfoLabel {
