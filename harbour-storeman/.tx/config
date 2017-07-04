@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[harbour-storeman.harbour-storeman_ts]
+source_file = translations/harbour-storeman.ts
+source_lang = en
+type = QT
+file_filter = translations/harbour-storeman-<lang>.ts
