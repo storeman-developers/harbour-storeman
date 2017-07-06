@@ -9,6 +9,7 @@ Page {
         anchors.fill: parent
 
         header: PageHeader {
+            //% "Repositories"
             title: qsTrId("orn-repositories")
         }
 

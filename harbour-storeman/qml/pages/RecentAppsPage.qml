@@ -7,96 +7,81 @@ Page {
     id: page
     allowedOrientations: Orientation.All
 
-    Loader {
-        id: loader
-        anchors.fill: parent
-        sourceComponent: networkManager.state === "idle" ?
-                             flickableComponent : appListComponent
+    OrnRecentAppsModel {
+        id: appsModel
+        Component.onCompleted: apiRequest.networkManager = dataAccessManager
+        onRowsInserted: proxyModel.sort(Qt.DescendingOrder)
     }
 
-    Component {
-        id: appListComponent
+    SilicaListView {
+        id: appsList
+        anchors.fill: parent
+        model: OrnProxyModel {
+            id: proxyModel
+            sortRole: OrnRecentAppsModel.DateRole
+            sourceModel: networkManager.state === "online" ? appsModel : null
+        }
 
-        SilicaListView {
-            id: appsList
-            anchors.fill: parent
+        header: PageHeader {
+            //% "Recently updated"
+            title: qsTrId("orn-recently-updated")
+        }
 
-            header: PageHeader {
-                //% "Recently updated"
-                title: qsTrId("orn-recently-updated")
-            }
+        delegate: AppListDelegate { }
 
-            model: OrnProxyModel {
-                id: proxyModel
-                sortRole: OrnRecentAppsModel.DateRole
-                sourceModel: OrnRecentAppsModel {
-                    id: appsModel
-                    onRowsInserted: proxyModel.sort(Qt.DescendingOrder)
-                    Component.onCompleted: apiRequest.networkManager = dataAccessManager
-                }
-            }
-
-            delegate: AppListDelegate { }
-
-            section {
-                property: "appData.sinceUpdate"
-                delegate: SectionHeader {
-                    text: section
-                }
-            }
-
-            PullDownMenu {
-
-                MenuItem {
-                    //% "Repositories"
-                    text: qsTrId("orn-repositories")
-                    onClicked: pageStack.push(Qt.resolvedUrl("RepositoriesPage.qml"))
-                }
-
-                RefreshMenuItem {
-                    model: appsModel
-                }
-
-                MenuItem {
-                    //: The search menu item and the search page header text - should be a noun
-                    //% "Search"
-                    text: qsTrId("orn-search")
-                    onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"))
-                }
-            }
-
-            VerticalScrollDecorator { }
-
-            BusyIndicator {
-                size: BusyIndicatorSize.Large
-                anchors.centerIn: parent
-                running: appsList.count === 0
+        section {
+            property: "appData.sinceUpdate"
+            delegate: SectionHeader {
+                text: section
             }
         }
-    }
 
-    Component {
-        id: flickableComponent
+        PullDownMenu {
+            id: menu
 
-        SilicaFlickable {
-            anchors.fill: parent
-
-            PullDownMenu {
-
-                MenuItem {
-                    text: qsTrId("orn-repositories")
-                    onClicked: pageStack.push(Qt.resolvedUrl("../pages/RepositoriesPage.qml"))
-                }
-
-                RefreshMenuItem {
-                    model: appsModel
-                }
+            MenuItem {
+                text: qsTrId("orn-repositories")
+                onClicked: pageStack.push(Qt.resolvedUrl("RepositoriesPage.qml"))
             }
 
-            ViewPlaceholder {
-                enabled: true
-                //% "Network is unavailable"
-                text: qsTrId("orn-network-idle")
+            RefreshMenuItem {
+                model: appsModel
+            }
+
+            MenuItem {
+                visible: networkManager.state === "online" &&
+                         !appsModel.apiRequest.networkError
+                text: qsTrId("orn-search")
+                onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"))
+            }
+        }
+
+        VerticalScrollDecorator { }
+
+        BusyIndicator {
+            size: BusyIndicatorSize.Large
+            anchors.centerIn: parent
+            running: !viewPlaceholder.text &&
+                     appsList.count === 0 &&
+                     !menu.active
+        }
+
+        ViewPlaceholder {
+            id: viewPlaceholder
+            enabled: text
+            text: {
+                hintText = ""
+                if (networkManager.state === "idle") {
+                    //% "Network is unavailable"
+                    return qsTrId("orn-network-idle")
+                }
+                if (appsModel.apiRequest.networkError) {
+                    //% "Pull down to refresh"
+                    hintText = qsTrId("orn-pull-refresh")
+                    //% "A network error occurred"
+                    return qsTrId("orn-network-error")
+                }
+                return ""
             }
         }
     }

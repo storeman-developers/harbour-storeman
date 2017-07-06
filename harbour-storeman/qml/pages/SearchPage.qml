@@ -36,6 +36,8 @@ Page {
            width: parent.width
 
            PageHeader {
+               //: The search menu item and the search page header text - should be a noun
+               //% "Search"
                title: qsTrId("orn-search")
            }
 
