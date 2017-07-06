@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1">
+<TS version="2.1" language="en">
 <context>
     <name></name>
     <message id="orn-storeman">
@@ -41,7 +41,6 @@
     </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
-        <oldsource>Recentry updated</oldsource>
         <translation>Recently updated</translation>
     </message>
     <message id="orn-app-not-found-body">
@@ -74,7 +73,6 @@
     </message>
     <message id="orn-month-format">
         <source>MMM yyyy</source>
-        <oldsource>MMMM yyyy</oldsource>
         <extracomment>Output format for the month and year. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
         <translation>MMM yyyy</translation>
     </message>
@@ -153,7 +151,6 @@
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
-        <oldsource>Enable the repository first</oldsource>
         <translation>No versions available</translation>
     </message>
     <message id="orn-created-note">
@@ -162,7 +159,6 @@
     </message>
     <message id="orn-comments">
         <source>Comments</source>
-        <oldsource>Comments (%0)</oldsource>
         <translation>Comments</translation>
     </message>
     <message id="orn-author-apps">
@@ -342,6 +338,62 @@
     <message id="orn-searchpage-placeholder-default-hint">
         <source>Type some keywords in the field above</source>
         <translation>Type some keywords in the field above</translation>
+    </message>
+    <message id="orn-about">
+        <source>About Storeman</source>
+        <translation>About Storeman</translation>
+    </message>
+    <message id="orn-translations">
+        <source>Translations</source>
+        <translation>Translations</translation>
+    </message>
+    <message id="orn-coordinators">
+        <source>Coordinators</source>
+        <translation>Coordinators</translation>
+    </message>
+    <message id="orn-translators">
+        <source>Translators</source>
+        <translation>Translators</translation>
+    </message>
+    <message id="orn-reviewers">
+        <source>Reviewers</source>
+        <translation>Reviewers</translation>
+    </message>
+    <message id="orn-app-description">
+        <source>Unofficial native OpenRepos.net client for Sailfish OS</source>
+        <translation>Unofficial native OpenRepos.net client for Sailfish OS</translation>
+    </message>
+    <message id="orn-report">
+        <source>Report an Issue</source>
+        <translation>Report an Issue</translation>
+    </message>
+    <message id="orn-app-licensing">
+        <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
+        <translation>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</translation>
+    </message>
+    <message id="orn-network-error">
+        <source>A network error occurred</source>
+        <translation>A network error occurred</translation>
+    </message>
+    <message id="orn-pull-refresh">
+        <source>Pull down to refresh</source>
+        <translation>Pull down to refresh</translation>
+    </message>
+    <message id="orn-development">
+        <source>Development</source>
+        <translation>Development</translation>
+    </message>
+    <message id="orn-developers">
+        <source>Developers</source>
+        <translation>Developers</translation>
+    </message>
+    <message id="orn-appicon">
+        <source>Application Icon</source>
+        <translation>Application Icon</translation>
+    </message>
+    <message id="orn-sources">
+        <source>Source Code</source>
+        <translation>Source Code</translation>
     </message>
 </context>
 </TS>

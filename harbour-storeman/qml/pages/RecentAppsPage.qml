@@ -40,6 +40,11 @@ Page {
             id: menu
 
             MenuItem {
+                text: qsTrId("orn-about")
+                onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
+            }
+
+            MenuItem {
                 text: qsTrId("orn-repositories")
                 onClicked: pageStack.push(Qt.resolvedUrl("RepositoriesPage.qml"))
             }

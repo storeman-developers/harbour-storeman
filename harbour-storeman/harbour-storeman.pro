@@ -34,6 +34,9 @@ OTHER_FILES += qml/harbour-storeman.qml \
     qml/pages/UserPage.qml \
     qml/pages/CommentsPage.qml \
     qml/pages/SearchPage.qml \
+    qml/pages/AboutPage.qml \
+    qml/pages/TranslationsPage.qml \
+    qml/pages/DevelopmentPage.qml \
     qml/components/AppListDelegate.qml \
     qml/components/RatingBox.qml \
     qml/components/IconLabel.qml \
@@ -45,10 +48,12 @@ OTHER_FILES += qml/harbour-storeman.qml \
     qml/components/MoreButton.qml \
     qml/components/ApplicationPageMenu.qml \
     qml/components/RefreshMenuItem.qml \
+    qml/components/ParticipantsDelegate.qml  \
     rpm/harbour-storeman.changes \
     rpm/harbour-storeman.spec \
     rpm/harbour-storeman.yaml \
     translations/*.ts \
+    translations/update_translations.py \
     harbour-storeman.desktop \
     .gitignore
 
@@ -57,7 +62,10 @@ RESOURCES += \
 
 TRANSLATIONS += \
     translations/harbour-storeman.ts \
-    translations/harbour-storeman-ru.ts
+    translations/harbour-storeman-nl.ts \
+    translations/harbour-storeman-pl.ts \
+    translations/harbour-storeman-ru.ts \
+    translations/harbour-storeman-sv.ts
 
 TRANSLATION_SOURCES += $$PWD/../ornplugin/src
 
