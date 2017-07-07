@@ -48,7 +48,9 @@ OTHER_FILES += qml/harbour-storeman.qml \
     qml/components/MoreButton.qml \
     qml/components/ApplicationPageMenu.qml \
     qml/components/RefreshMenuItem.qml \
-    qml/components/ParticipantsDelegate.qml  \
+    qml/components/ParticipantsDelegate.qml \
+    qml/models/DevelopersModel.qml \
+    qml/models/TranslatorsModel.qml \
     rpm/harbour-storeman.changes \
     rpm/harbour-storeman.spec \
     rpm/harbour-storeman.yaml \

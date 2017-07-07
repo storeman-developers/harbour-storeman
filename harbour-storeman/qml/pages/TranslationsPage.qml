@@ -1,57 +1,13 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import "../components"
+import "../models"
 
 Page {
 
-    ListModel {
-        id: participantsModel
-
-        ListElement {
-            locale: "nl"
-            coordinators: [
-                ListElement { name: "pljmn" }
-            ]
-            translators: []
-            reviewers: []
-        }
-        ListElement {
-            locale: "de_DE"
-            coordinators: [
-                ListElement { name: "monkeyisland" }
-            ]
-            translators: []
-            reviewers: []
-        }
-        ListElement {
-            locale: "pl"
-            coordinators: [
-                ListElement { name: "atlochowski" }
-            ]
-            translators: []
-            reviewers: []
-        }
-        ListElement {
-            locale: "ru"
-            coordinators: [
-                ListElement { name: "mentaljam" }
-            ]
-            translators: []
-            reviewers: []
-        }
-        ListElement {
-            locale: "sv"
-            coordinators: [
-                ListElement { name: "eson" }
-            ]
-            translators: []
-            reviewers: []
-        }
-    }
-
     SilicaListView {
         anchors.fill: parent
-        model: participantsModel
+        model: TranslatorsModel { }
 
         header: PageHeader {
             //% "Translations"

@@ -14,7 +14,7 @@ ListElement {{
     coordinators: [{}]
     translators: [{}]
     reviewers: [{}]
-}}\
+}}
 '''
 
 def get_participants(array):
@@ -32,17 +32,16 @@ def main():
         try:
             trc.read(TRC_PATH)
             section = trc['https://www.transifex.com']
-            tlogin = section.get('username')
+            tlogin = section['username']
             tpassword = section['password']
-        except:
-            print('Error reading {}'.format(TRC_PATH))
-            # pass
+        except Exception as e:
+            print('Error reading .transifexrc: {}'.format(e))
+            sys.exit(1)
     else:
         print('\n    Usage: update_translations.py <user> <password>\n')
     # Getting data
     print('Fetching {}\n'.format(URL))
     reply = requests.get(URL, auth=(tlogin, tpassword)).content
-#    print(reply.decode('UTF-8'))
     data = json.loads(reply.decode('UTF-8'))
     for tr in data:
         print(TEMPL.format(

@@ -1,38 +1,12 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import "../components"
+import "../models"
 
 Page {
 
-    ListModel {
-        id: participantsModel
-
-        ListElement {
-            //% "Developers"
-            role: qsTrId("orn-developers")
-            participants: [
-                ListElement {
-                    name: "Petr Tsymbarovich"
-                    link: "https://github.com/mentaljam"
-                }
-            ]
-        }
-
-        ListElement {
-            //% "Application Icon"
-            role: qsTrId("orn-appicon")
-            participants: [
-                ListElement {
-                    name: "Laurent_C"
-                    link: "mailto:l.chambon@gmail.com"
-                }
-            ]
-        }
-    }
-
     SilicaListView {
         anchors.fill: parent
-        model: participantsModel
+        model: DevelopersModel { }
 
         header: PageHeader {
             //% "Development
