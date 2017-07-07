@@ -55,6 +55,7 @@ OTHER_FILES += qml/harbour-storeman.qml \
     translations/*.ts \
     translations/update_translations.py \
     harbour-storeman.desktop \
+    icons/harbour-storeman.svg \
     .gitignore
 
 RESOURCES += \
