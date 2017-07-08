@@ -373,27 +373,49 @@
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
-        <translation type="unfinished"></translation>
+        <translation>Er trad een netwerkfout op</translation>
     </message>
     <message id="orn-pull-refresh">
         <source>Pull down to refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Trek omlaag om te verversen</translation>
     </message>
     <message id="orn-development">
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>Ontwikkeling</translation>
     </message>
     <message id="orn-developers">
         <source>Developers</source>
-        <translation type="unfinished"></translation>
+        <translation>Ontwikkelaars</translation>
     </message>
     <message id="orn-appicon">
         <source>Application Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>App-pictogram</translation>
     </message>
     <message id="orn-sources">
         <source>Source Code</source>
-        <translation type="unfinished"></translation>
+        <translation>Broncode</translation>
+    </message>
+    <message id="orn-just-now">
+        <source>Just now</source>
+        <translation>Zojuist</translation>
+    </message>
+    <message id="orn-mins-ago" numerus="yes">
+        <source>%0 minute(s) ago</source>
+        <translation>
+            <numerusform>%0 minuut geleden</numerusform>
+            <numerusform>%0 minuten geleden</numerusform>
+        </translation>
+    </message>
+    <message id="orn-hours-ago" numerus="yes">
+        <source>%0 hour(s) ago</source>
+        <translation>
+            <numerusform>%0 uur geleden</numerusform>
+            <numerusform>%0 uur geleden</numerusform>
+        </translation>
+    </message>
+    <message id="orn-reply-to">
+        <source>Reply to %0</source>
+        <translation>Antwoord op %0</translation>
     </message>
 </context>
 </TS>
