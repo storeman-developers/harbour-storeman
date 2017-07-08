@@ -3,10 +3,7 @@ TARGET = harbour-storeman
 VERSION = $$system("echo $(awk -F ':' '/Version/ {print $2}' rpm/$${TARGET}.yaml)")
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
 
-CONFIG += \
-    sailfishapp \
-    sailfishapp_i18n \
-    sailfishapp_i18n_idbased
+CONFIG += sailfishapp
 CONFIG(release, debug|release): DEFINES += QT_NO_DEBUG_OUTPUT
 
 LIBS += -lornplugin -L$$OUT_PWD/../ornplugin
@@ -24,7 +21,8 @@ SOURCES += \
 HEADERS += \
     src/networkaccessmanagerfactory.h
 
-OTHER_FILES += qml/harbour-storeman.qml \
+OTHER_FILES += \
+    qml/harbour-storeman.qml \
     qml/cover/CoverPage.qml \
     qml/pages/RecentAppsPage.qml \
     qml/pages/ApplicationPage.qml \
@@ -54,8 +52,6 @@ OTHER_FILES += qml/harbour-storeman.qml \
     rpm/harbour-storeman.changes \
     rpm/harbour-storeman.spec \
     rpm/harbour-storeman.yaml \
-    translations/*.ts \
-    translations/update_translations.py \
     harbour-storeman.desktop \
     icons/harbour-storeman.svg \
     .gitignore
@@ -63,16 +59,9 @@ OTHER_FILES += qml/harbour-storeman.qml \
 RESOURCES += \
     harbour-storeman.qrc
 
-TRANSLATIONS += \
-    translations/harbour-storeman.ts \
-    translations/harbour-storeman-nl.ts \
-    translations/harbour-storeman-pl.ts \
-    translations/harbour-storeman-ru.ts \
-    translations/harbour-storeman-sv.ts
-
-TRANSLATION_SOURCES += $$PWD/../ornplugin/src
-
 polkit.files = rpm/50-harbour-storeman-packagekit.pkla
 polkit.path = $$INSTALL_ROOT/var/lib/polkit-1/localauthority/50-local.d
 
 INSTALLS += polkit
+
+include(translations/translations.pri)
