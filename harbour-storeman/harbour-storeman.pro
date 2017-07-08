@@ -47,6 +47,7 @@ OTHER_FILES += \
     qml/components/ApplicationPageMenu.qml \
     qml/components/RefreshMenuItem.qml \
     qml/components/ParticipantsDelegate.qml \
+    qml/components/CommentDelegate.qml \
     qml/models/DevelopersModel.qml \
     qml/models/TranslatorsModel.qml \
     rpm/harbour-storeman.changes \
