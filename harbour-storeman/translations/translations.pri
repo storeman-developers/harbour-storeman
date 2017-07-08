@@ -4,6 +4,7 @@ CONFIG += \
 
 TRANSLATIONS += \
     translations/harbour-storeman.ts \
+    translations/harbour-storeman-de_DE.ts \
     translations/harbour-storeman-nl.ts \
     translations/harbour-storeman-pl.ts \
     translations/harbour-storeman-ru.ts \
@@ -11,6 +12,7 @@ TRANSLATIONS += \
 
 OTHER_FILES += \
     $$TRANSLATIONS \
-    translations/update_translations.py
+    $$PWD/update_translations.py \
+    $$PWD/set_default_translations.py
 
 TRANSLATION_SOURCES += $$PWD/../../ornplugin/src
