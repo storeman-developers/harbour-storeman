@@ -10,4 +10,6 @@ If you want to test your translation before publishing you should compile it and
 
     /usr/share/harbour-storeman/translations
 
-The application tries to load translation files automatically basing on your system locale settings.
+The application tries to load translation files automatically basing on your system locale settings. Also you can run application with selected locale from terminal. For example for Russian language the command is
+
+    LANG=ru harbour-storeman
