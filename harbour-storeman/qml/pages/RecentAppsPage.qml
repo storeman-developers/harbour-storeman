@@ -7,6 +7,14 @@ Page {
     id: page
     allowedOrientations: Orientation.All
 
+    onStatusChanged: {
+        if (status === PageStatus.Active) {
+            if (!pageStack._currentContainer.attachedContainer) {
+                pageStack.pushAttached(Qt.resolvedUrl("CategoriesPage.qml"))
+            }
+        }
+    }
+
     OrnRecentAppsModel {
         id: appsModel
         Component.onCompleted: apiRequest.networkManager = dataAccessManager

@@ -3,6 +3,8 @@ import Sailfish.Silica 1.0
 
 BackgroundItem {
     property alias text: label.text
+    property alias textAlignment: label.horizontalAlignment
+    property int depth: 0
 
     height: Theme.itemSizeSmall
 
@@ -12,12 +14,18 @@ BackgroundItem {
             left: parent.left
             right: image.left
             verticalCenter: parent.verticalCenter
-            leftMargin: Theme.horizontalPageMargin
+            leftMargin: Theme.horizontalPageMargin + depth * Theme.paddingLarge
             rightMargin: Theme.paddingMedium
         }
         horizontalAlignment: Text.AlignRight
         truncationMode: TruncationMode.Fade
         color: parent.highlighted ? Theme.highlightColor : Theme.primaryColor
+    }    
+
+    OpacityRampEffect {
+        sourceItem: label
+        enabled: label.contentWidth > label.width
+        direction: OpacityRamp.LeftToRight
     }
 
     Image {

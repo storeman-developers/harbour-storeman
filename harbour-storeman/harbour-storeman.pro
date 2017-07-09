@@ -67,3 +67,7 @@ polkit.path = $$INSTALL_ROOT/var/lib/polkit-1/localauthority/50-local.d
 INSTALLS += polkit
 
 include(translations/translations.pri)
+
+DISTFILES += \
+    qml/pages/CategoriesPage.qml \
+    qml/pages/CategoryPage.qml
