@@ -1,3 +1,7 @@
+* Mon Jul 10 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.5-1
+- Add categories page
+- Update translations (add French, Italian and Spanish translations)
+
 * Mon Jul  9 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.4-1
 - Add about page
 - Add Dutch, German, Polish and Swedish translations (thanks to the community, details are on the Transifex project page)
