@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     OrnPlugin().registerTypes();
 
     auto app = SailfishApp::application(argc, argv);
-    app->setApplicationVersion(APP_VERSION);
+    app->setApplicationVersion(QStringLiteral(APP_VERSION));
 
     // SailfishApp does not load default id based translation file
     // if there is no a translation for the current locale

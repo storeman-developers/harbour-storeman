@@ -1,9 +1,8 @@
 TARGET = harbour-storeman
 
-VERSION = $$system("echo $(awk -F ':' '/Version/ {print $2}' rpm/$${TARGET}.yaml)")
-DEFINES += APP_VERSION=\\\"$$VERSION\\\"
-
 CONFIG += sailfishapp
+
+DEFINES += APP_VERSION=\\\"$$VERSION\\\"
 CONFIG(release, debug|release): DEFINES += QT_NO_DEBUG_OUTPUT
 
 LIBS += -lornplugin -L$$OUT_PWD/../ornplugin
@@ -21,7 +20,7 @@ SOURCES += \
 HEADERS += \
     src/networkaccessmanagerfactory.h
 
-OTHER_FILES += \
+OTHER_FILES +=  \
     qml/harbour-storeman.qml \
     qml/cover/CoverPage.qml \
     qml/pages/RecentAppsPage.qml \
@@ -49,7 +48,9 @@ OTHER_FILES += \
     qml/components/ParticipantsDelegate.qml \
     qml/components/CommentDelegate.qml \
     qml/models/DevelopersModel.qml \
-    qml/models/TranslatorsModel.qml \
+    qml/models/TranslatorsModel.qml
+
+OTHER_FILES += \
     rpm/harbour-storeman.changes \
     rpm/harbour-storeman.spec \
     rpm/harbour-storeman.yaml \

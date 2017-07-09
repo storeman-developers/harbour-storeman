@@ -11,6 +11,7 @@ Description: |
   Unofficial native OpenRepos.net client for Sailfish OS
 Configure: none
 Builder: qtc5
+QMakeOptions: VERSION=%{version}
 
 PkgConfigBR:
   - sailfishapp >= 1.0.2
@@ -18,9 +19,6 @@ PkgConfigBR:
   - Qt5Qml
   - Qt5Quick
   - packagekit-qt5 >= 0.8.8
-
-# PkgBR:
-#  - ssu-devel
 
 Requires:
   - sailfishsilica-qt5 >= 0.10.9 
