@@ -231,7 +231,7 @@
     </message>
     <message id="orn-cat-unknown">
         <source>Unknown</source>
-        <translation>Неизвестная категория</translation>
+        <translation>Другие</translation>
     </message>
     <message id="orn-cat-utilities">
         <source>Utilities</source>
@@ -418,6 +418,18 @@
     <message id="orn-reply-to">
         <source>Reply to %0</source>
         <translation>Ответ на %0</translation>
+    </message>
+    <message id="orn-categories">
+        <source>Categories</source>
+        <translation>Категории</translation>
+    </message>
+    <message id="orn-category-noapps">
+        <source>Currently there are no apps in this category</source>
+        <translation>В этой категории еще нет приложений</translation>
+    </message>
+    <message id="orn-cat-unknown2">
+        <source>Unknown category</source>
+        <translation>Неизвестная категория</translation>
     </message>
 </context>
 </TS>

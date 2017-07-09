@@ -419,5 +419,17 @@
         <source>Reply to %0</source>
         <translation>Reply to %0</translation>
     </message>
+    <message id="orn-categories">
+        <source>Categories</source>
+        <translation>Categories</translation>
+    </message>
+    <message id="orn-category-noapps">
+        <source>Currently there are no apps in this category</source>
+        <translation>Currently there are no apps in this category</translation>
+    </message>
+    <message id="orn-cat-unknown2">
+        <source>Unknown category</source>
+        <translation>Unknown category</translation>
+    </message>
 </context>
 </TS>

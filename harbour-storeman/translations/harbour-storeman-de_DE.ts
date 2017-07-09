@@ -13,7 +13,7 @@
     </message>
     <message id="orn-repositories">
         <source>Repositories</source>
-        <translation>Software Quellen</translation>
+        <translation>Softwarequellen</translation>
     </message>
     <message id="orn-refresh">
         <source>Refresh</source>
@@ -94,7 +94,7 @@
     </message>
     <message id="orn-repo-remove-error">
         <source>Could not remove the repository</source>
-        <translation>Kann Repository nicht entfernen</translation>
+        <translation>Kann Quelle nicht entfernen</translation>
     </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
@@ -295,7 +295,7 @@
     </message>
     <message id="orn-update">
         <source>Update</source>
-        <translation>Aktualisierung</translation>
+        <translation>Aktualisieren</translation>
     </message>
     <message id="orn-changelog">
         <source>Changelog</source>
@@ -369,53 +369,65 @@
     </message>
     <message id="orn-app-licensing">
         <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation>Dies ist eine Open Source Software, die unter den Bedingungen der&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;erstellt wurde.</translation>
+        <translation>Dies ist eine Open Source Software, die unter den Bedingungen der&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt; erstellt wurde.</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
-        <translation>A network error occurred</translation>
+        <translation>Ein Netzwerkfehler ist aufgetreten</translation>
     </message>
     <message id="orn-pull-refresh">
         <source>Pull down to refresh</source>
-        <translation>Pull down to refresh</translation>
+        <translation>Zum Aktualisieren herunterziehen</translation>
     </message>
     <message id="orn-development">
         <source>Development</source>
-        <translation>Development</translation>
+        <translation>Entwicklung</translation>
     </message>
     <message id="orn-developers">
         <source>Developers</source>
-        <translation>Developers</translation>
+        <translation>Entwickler</translation>
     </message>
     <message id="orn-appicon">
         <source>Application Icon</source>
-        <translation>Application Icon</translation>
+        <translation>Programm-Icon</translation>
     </message>
     <message id="orn-sources">
         <source>Source Code</source>
-        <translation>Quell Code</translation>
+        <translation>Quell-Code</translation>
     </message>
     <message id="orn-just-now">
         <source>Just now</source>
-        <translation>Just now</translation>
+        <translation>Gerade</translation>
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%0 minute(s) ago</source>
         <translation>
-            <numerusform>%0 minute ago</numerusform>
-            <numerusform>%0 minutes ago</numerusform>
+            <numerusform>Vor %0 Minute</numerusform>
+            <numerusform>Vor %0 Minuten</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%0 hour(s) ago</source>
         <translation>
-            <numerusform>%0 hour ago</numerusform>
-            <numerusform>%0 hours ago</numerusform>
+            <numerusform>Vor %0 Stunde</numerusform>
+            <numerusform>Vor %0 Stunden</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
-        <translation>Reply to %0</translation>
+        <translation>Antworte %0</translation>
+    </message>
+    <message id="orn-categories">
+        <source>Categories</source>
+        <translation>Categories</translation>
+    </message>
+    <message id="orn-category-noapps">
+        <source>Currently there are no apps in this category</source>
+        <translation>Currently there are no apps in this category</translation>
+    </message>
+    <message id="orn-cat-unknown2">
+        <source>Unknown category</source>
+        <translation>Unknown category</translation>
     </message>
 </context>
 </TS>

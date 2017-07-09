@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl">
+<TS version="2.1" language="es">
 <context>
     <name></name>
     <message id="orn-storeman">
@@ -9,67 +9,67 @@
     </message>
     <message id="orn-notrated">
         <source>Not rated yet</source>
-        <translation>Nog geen waardering</translation>
+        <translation>No valorado aún</translation>
     </message>
     <message id="orn-repositories">
         <source>Repositories</source>
-        <translation>Pakketbronnen</translation>
+        <translation>Repositorios</translation>
     </message>
     <message id="orn-refresh">
         <source>Refresh</source>
-        <translation>Verversen</translation>
+        <translation>Actualizar</translation>
     </message>
     <message id="orn-disable">
         <source>Disable</source>
-        <translation>Uitschakelen</translation>
+        <translation>Deshabilitar</translation>
     </message>
     <message id="orn-enable">
         <source>Enable</source>
-        <translation>Inschakelen</translation>
+        <translation>Habilitar</translation>
     </message>
     <message id="orn-enabled">
         <source>Enabled</source>
-        <translation>Ingeschakeld</translation>
+        <translation>Habilitado</translation>
     </message>
     <message id="orn-disabled">
         <source>Disabled</source>
-        <translation>Uitgeschakeld</translation>
+        <translation>Deshabilitado</translation>
     </message>
     <message id="orn-reload">
         <source>Reload</source>
-        <translation>Herladen</translation>
+        <translation>Volver a cargar</translation>
     </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
-        <translation>Recent bijgewerkt</translation>
+        <translation>Actualizado recientemente</translation>
     </message>
     <message id="orn-app-not-found-body">
         <source>Application with such id was not found</source>
-        <translation>Applicatie met die ID kon niet gevonden worden</translation>
+        <translation>No se encontró ninguna aplicación con dicho id</translation>
     </message>
     <message id="orn-app-error-body">
         <source>An error occured while fetching application data</source>
-        <translation>Er trad een fout op bij het ophalen van applicatiegegevens</translation>
+        <translation>Se ha producido un error al obtener datos de la aplicación</translation>
     </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
-        <translation>Netwerk niet beschikbaar</translation>
+        <translation>La red no está disponible</translation>
     </message>
     <message id="orn-today">
         <source>Today</source>
-        <translation>Vandaag</translation>
+        <translation>Hoy</translation>
     </message>
     <message id="orn-yesterday">
         <source>Yesterday</source>
-        <translation>Gisteren</translation>
+        <translation>Ayer</translation>
     </message>
     <message id="orn-this-week">
         <source>This week</source>
-        <translation>Deze week</translation>
+        <translation>Esta semana</translation>
     </message>
     <message id="orn-this-month">
         <source>This month</source>
-        <translation>Deze maand</translation>
+        <translation>Este mes</translation>
     </message>
     <message id="orn-month-format">
         <source>MMM yyyy</source>
@@ -78,180 +78,180 @@
     </message>
     <message id="orn-adding-repo">
         <source>Adding</source>
-        <translation>Wordt toegeveogd</translation>
+        <translation>Añadiendo</translation>
     </message>
     <message id="orb-remove">
         <source>Remove</source>
-        <translation>Verwijderen</translation>
+        <translation>Eliminar</translation>
     </message>
     <message id="orn-removing">
         <source>Removing</source>
-        <translation>Wordt verwijderd</translation>
+        <translation>Eliminando</translation>
     </message>
     <message id="orn-error">
         <source>An error occured</source>
-        <translation>Er trad een fout op</translation>
+        <translation>Se produjo un error</translation>
     </message>
     <message id="orn-repo-remove-error">
         <source>Could not remove the repository</source>
-        <translation>Kon de pakketbron niet verwijderen</translation>
+        <translation>No se pudo eliminar el repositorio</translation>
     </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
-        <translation>Pakketbron toevoegen</translation>
+        <translation>Añadir repositorio</translation>
     </message>
     <message id="orn-repo-enable">
         <source>Enable repository</source>
-        <translation>Pakketbron inschakelen</translation>
+        <translation>Habilitar repositorio</translation>
     </message>
     <message id="orn-install">
         <source>Install</source>
-        <translation>Installeren</translation>
+        <translation>Instalar</translation>
     </message>
     <message id="orn-remove">
         <source>Remove</source>
-        <translation>Verwijderen</translation>
+        <translation>Eliminar</translation>
     </message>
     <message id="orn-launch">
         <source>Launch</source>
-        <translation>Starten</translation>
+        <translation>Lanzar</translation>
     </message>
     <message id="orn-package-installed">
         <source>Package %0 was successfully installed</source>
-        <translation>Pakket %0 is geïnstalleerd</translation>
+        <translation>El paquete %0 se instaló correctamente</translation>
     </message>
     <message id="orn-package-removed">
         <source>Package %0 was successfully removed</source>
-        <translation>Pakket %0 is verwijderd</translation>
+        <translation>El paquete %0 se eliminó correctamente</translation>
     </message>
     <message id="orn-installed">
         <source>Installed</source>
-        <translation>Geïnstalleerd</translation>
+        <translation>Instalado</translation>
     </message>
     <message id="orn-version-installed">
         <source>Installed version</source>
-        <translation>Geïnstalleerd</translation>
+        <translation>Versión instalada</translation>
     </message>
     <message id="orn-version-available">
         <source>Available version</source>
-        <translation>Beschikbaar</translation>
+        <translation>Versión disponible</translation>
     </message>
     <message id="orn-version-updated">
         <source>Last updated</source>
-        <translation>Bijgewerkt</translation>
+        <translation>Última actualización</translation>
     </message>
     <message id="orn-dt-format">
         <source>yyyy-dd-MM hh:mm</source>
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation>hh:mm dd-MM-yy</translation>
+        <translation>dd-MM-yyyy hh:mm</translation>
     </message>
     <message id="orn-version-created">
         <source>First release</source>
-        <translation>Gepubliceerd</translation>
+        <translation>Primera publicación</translation>
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
-        <translation>Geen versies beschikbaar</translation>
+        <translation>No hay versiones disponibles</translation>
     </message>
     <message id="orn-created-note">
         <source>OpenRepos can give an incorrect date</source>
-        <translation>OpenRepos kan een onjuiste datum geven</translation>
+        <translation>OpenRepos puede proporcionar una fecha incorrecta</translation>
     </message>
     <message id="orn-comments">
         <source>Comments</source>
-        <translation>Reacties</translation>
+        <translation>Comentarios</translation>
     </message>
     <message id="orn-author-apps">
         <source>More by %0</source>
-        <translation>Ook van %0</translation>
+        <translation>Más de %0</translation>
     </message>
     <message id="orn-cat-coding-competition">
         <source>Coding Competition</source>
-        <translation>Programmeerwedstrijd</translation>
+        <translation>Concurso de programación</translation>
     </message>
     <message id="orn-cat-applications">
         <source>Applications</source>
-        <translation>Apps</translation>
+        <translation>Aplicaciones</translation>
     </message>
     <message id="orn-cat-application">
         <source>Application</source>
-        <translation>App</translation>
+        <translation>Aplicación</translation>
     </message>
     <message id="orn-cat-ambience-themes">
         <source>Ambience &amp; Themes</source>
-        <translation>Sferen &amp; thema&apos;s</translation>
+        <translation>Ambiente &amp; Temas</translation>
     </message>
     <message id="orn-cat-business">
         <source>Business</source>
-        <translation>Zakelijk</translation>
+        <translation>Negocios</translation>
     </message>
     <message id="orn-cat-city-guides-maps">
         <source>City guides &amp; maps</source>
-        <translation>Stadsgidsen &amp; kaarten</translation>
+        <translation>Guías de ciudades &amp; Mapas</translation>
     </message>
     <message id="orn-cat-education-science">
         <source>Education &amp; Science</source>
-        <translation>Educatief &amp; wetenschap</translation>
+        <translation>Educación &amp; Ciencia</translation>
     </message>
     <message id="orn-cat-entertainment">
         <source>Entertainment</source>
-        <translation>Amusement</translation>
+        <translation>Entretenimiento</translation>
     </message>
     <message id="orn-cat-music">
         <source>Music</source>
-        <translation>Muziek</translation>
+        <translation>Música</translation>
     </message>
     <message id="orn-cat-network">
         <source>Network</source>
-        <translation>Netwerk</translation>
+        <translation>Red</translation>
     </message>
     <message id="orn-cat-news-info">
         <source>News &amp; info</source>
-        <translation>Nieuws &amp; info</translation>
+        <translation>Noticias &amp; Info</translation>
     </message>
     <message id="orn-cat-patches">
         <source>Patches</source>
-        <translation>Pleisters</translation>
+        <translation>Parches</translation>
     </message>
     <message id="orn-cat-photo-video">
         <source>Photo &amp; video</source>
-        <translation>Foto &amp; video</translation>
+        <translation>Foto &amp; Vídeo</translation>
     </message>
     <message id="orn-cat-social-networks">
         <source>Social Networks</source>
-        <translation>Sociale netwerken</translation>
+        <translation>Redes sociales</translation>
     </message>
     <message id="orn-cat-sports">
         <source>Sports</source>
-        <translation>Sport</translation>
+        <translation>Deportes</translation>
     </message>
     <message id="orn-cat-system">
         <source>System</source>
-        <translation>Systeem</translation>
+        <translation>Sistema</translation>
     </message>
     <message id="orn-cat-unknown">
         <source>Unknown</source>
-        <translation>Onbekend</translation>
+        <translation>Desconocido</translation>
     </message>
     <message id="orn-cat-utilities">
         <source>Utilities</source>
-        <translation>Hulpprogramma&apos;s</translation>
+        <translation>Utilidades</translation>
     </message>
     <message id="orn-cat-games">
         <source>Games</source>
-        <translation>Spellen</translation>
+        <translation>Juegos</translation>
     </message>
     <message id="orn-cat-game">
         <source>Game</source>
-        <translation>Spel</translation>
+        <translation>Juego</translation>
     </message>
     <message id="orn-cat-action">
         <source>Action</source>
-        <translation>Actie</translation>
+        <translation>Acción</translation>
     </message>
     <message id="orn-cat-adventure">
         <source>Adventure</source>
-        <translation>Avontuur</translation>
+        <translation>Aventura</translation>
     </message>
     <message id="orn-cat-arcade">
         <source>Arcade</source>
@@ -259,171 +259,171 @@
     </message>
     <message id="orn-cat-card-casino">
         <source>Card &amp; casino</source>
-        <translation>Kaarten &amp; casino</translation>
+        <translation>Tarjeta &amp; Casino</translation>
     </message>
     <message id="orn-cat-education">
         <source>Education</source>
-        <translation>Educatief</translation>
+        <translation>Educación</translation>
     </message>
     <message id="orn-cat-puzzle">
         <source>Puzzle</source>
-        <translation>Puzzel</translation>
+        <translation>Puzzle</translation>
     </message>
     <message id="orn-cat-strategy">
         <source>Strategy</source>
-        <translation>Strategie</translation>
+        <translation>Estrategia</translation>
     </message>
     <message id="orn-cat-trivia">
         <source>Trivia</source>
-        <translation>Trivia</translation>
+        <translation>Preguntas y respuestas</translation>
     </message>
     <message id="orn-cat-translations">
         <source>Translations</source>
-        <translation>Vertalingen</translation>
+        <translation>Traducciones</translation>
     </message>
     <message id="orn-cat-fonts">
         <source>Fonts</source>
-        <translation>Lettertypen</translation>
+        <translation>Fuentes</translation>
     </message>
     <message id="orn-cat-libraries">
         <source>Libraries</source>
-        <translation>Bibliotheken</translation>
+        <translation>Librerías</translation>
     </message>
     <message id="orn-update-available">
         <source>Update available</source>
-        <translation>Update beschikbaar</translation>
+        <translation>Actualización disponible</translation>
     </message>
     <message id="orn-update">
         <source>Update</source>
-        <translation>Update</translation>
+        <translation>Actualizar</translation>
     </message>
     <message id="orn-changelog">
         <source>Changelog</source>
-        <translation>Wijzigingslog</translation>
+        <translation>Registro de cambios</translation>
     </message>
     <message id="orn-user-apps">
         <source>User applications</source>
-        <translation>Apps van gebruiker</translation>
+        <translation>Aplicaciones del usuario</translation>
     </message>
     <message id="orn-comments-withnum">
         <source>Comments (%0)</source>
-        <translation>Reacties (%0)</translation>
+        <translation>Comentarios (%0)</translation>
     </message>
     <message id="orn-version-repo-disabled">
         <source>Enable the repository first</source>
-        <translation>Schakel eerst de pakketbron in</translation>
+        <translation>Habilitar primero el repositorio</translation>
     </message>
     <message id="orn-search">
         <source>Search</source>
         <extracomment>The search menu item and the search page header text - should be a noun</extracomment>
-        <translation>Zoeken</translation>
+        <translation>Buscar</translation>
     </message>
     <message id="orn-searchpage-placeholder-noresults">
         <source>Nothing found</source>
-        <translation>Niets gevonden</translation>
+        <translation>No se encontró nada</translation>
     </message>
     <message id="orn-searchpage-placeholder-noresults-hint">
         <source>Try to change search keywords</source>
-        <translation>Probeer andere zoektermen</translation>
+        <translation>Prueba a cambiar las palabras clave de búsqueda</translation>
     </message>
     <message id="orn-searchfield-placeholder">
         <source>Search</source>
         <extracomment>The search field placeholder text - should be a verb</extracomment>
-        <translation>Zoeken</translation>
+        <translation>Buscar</translation>
     </message>
     <message id="orn-searchpage-placeholder-default">
         <source>Search results will be shown here</source>
-        <translation>Zoekresultaten worden hier weergegeven</translation>
+        <translation>Aquí se mostrarán los resultados de la búsqueda</translation>
     </message>
     <message id="orn-searchpage-placeholder-default-hint">
         <source>Type some keywords in the field above</source>
-        <translation>Voer hierboven enkele sleutelwoorden in</translation>
+        <translation>Escribe las palabras clave en el campo de abajo</translation>
     </message>
     <message id="orn-about">
         <source>About Storeman</source>
-        <translation>Over Storeman</translation>
+        <translation>Acerca de Storeman</translation>
     </message>
     <message id="orn-translations">
         <source>Translations</source>
-        <translation>Vertalingen</translation>
+        <translation>Traducciones</translation>
     </message>
     <message id="orn-coordinators">
         <source>Coordinators</source>
-        <translation>Coördinators</translation>
+        <translation>Coordinadores</translation>
     </message>
     <message id="orn-translators">
         <source>Translators</source>
-        <translation>Vertalers</translation>
+        <translation>Traductores</translation>
     </message>
     <message id="orn-reviewers">
         <source>Reviewers</source>
-        <translation>Beoordelaars</translation>
+        <translation>Revisores</translation>
     </message>
     <message id="orn-app-description">
         <source>Unofficial native OpenRepos.net client for Sailfish OS</source>
-        <translation>Onofficiële OpenRepos.net-cliënt voor Sailfish OS</translation>
+        <translation>Cliente nativo no oficial de OpenRepos.net para Sailfish OS </translation>
     </message>
     <message id="orn-report">
         <source>Report an Issue</source>
-        <translation>Meld een probleem</translation>
+        <translation>Informar de un fallo</translation>
     </message>
     <message id="orn-app-licensing">
         <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation>Dit is openbronsoftware, uitgebracht onder de voorwaarden van de&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT-licentie&lt;/a&gt;</translation>
+        <translation>Esta es una aplicación de código abierto que se distribuye bajo los términos de la&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;Licencia MIT&lt;/a&gt;</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
-        <translation>Er trad een netwerkfout op</translation>
+        <translation>Se ha producido un error en la red</translation>
     </message>
     <message id="orn-pull-refresh">
         <source>Pull down to refresh</source>
-        <translation>Trek omlaag om te verversen</translation>
+        <translation>Desliza hacia abajo para actualizar</translation>
     </message>
     <message id="orn-development">
         <source>Development</source>
-        <translation>Ontwikkeling</translation>
+        <translation>Desarrollo</translation>
     </message>
     <message id="orn-developers">
         <source>Developers</source>
-        <translation>Ontwikkelaars</translation>
+        <translation>Desarrolladores</translation>
     </message>
     <message id="orn-appicon">
         <source>Application Icon</source>
-        <translation>App-pictogram</translation>
+        <translation>Icono de al aplicación</translation>
     </message>
     <message id="orn-sources">
         <source>Source Code</source>
-        <translation>Broncode</translation>
+        <translation>Código fuente</translation>
     </message>
     <message id="orn-just-now">
         <source>Just now</source>
-        <translation>Zojuist</translation>
+        <translation>Justo ahora</translation>
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%0 minute(s) ago</source>
         <translation>
-            <numerusform>%0 minuut geleden</numerusform>
-            <numerusform>%0 minuten geleden</numerusform>
+            <numerusform>Hace %0 minuto</numerusform>
+            <numerusform>Hace %0 minutos</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%0 hour(s) ago</source>
         <translation>
-            <numerusform>%0 uur geleden</numerusform>
-            <numerusform>%0 uur geleden</numerusform>
+            <numerusform>Hace %0 hora</numerusform>
+            <numerusform>Hace %0 horas</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
-        <translation>Antwoord op %0</translation>
+        <translation>Responder a %0</translation>
     </message>
     <message id="orn-categories">
         <source>Categories</source>
-        <translation>Categories</translation>
+        <translation>Categorías</translation>
     </message>
     <message id="orn-category-noapps">
         <source>Currently there are no apps in this category</source>
-        <translation>Currently there are no apps in this category</translation>
+        <translation>Actualmente no hay aplicaciones en esta categoría</translation>
     </message>
     <message id="orn-cat-unknown2">
         <source>Unknown category</source>

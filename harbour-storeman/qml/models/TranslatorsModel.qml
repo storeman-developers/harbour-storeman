@@ -12,12 +12,34 @@ ListModel {
     }
 
     ListElement {
+        locale: "fr"
+        coordinators: [
+            ListElement { name: "Jordi" },
+            ListElement { name: "LaurentC" }
+        ]
+        translators: []
+        reviewers: []
+    }
+
+    ListElement {
         locale: "de_DE"
         coordinators: [
             ListElement { name: "monkeyisland" }
         ]
         translators: [
-            ListElement { name: "olf" }
+            ListElement { name: "olf" },
+            ListElement { name: "inta" }
+        ]
+        reviewers: []
+    }
+
+    ListElement {
+        locale: "it"
+        coordinators: [
+            ListElement { name: "ghostofasmile" }
+        ]
+        translators: [
+            ListElement { name: "tichy" }
         ]
         reviewers: []
     }
@@ -35,6 +57,15 @@ ListModel {
         locale: "ru"
         coordinators: [
             ListElement { name: "mentaljam" }
+        ]
+        translators: []
+        reviewers: []
+    }
+
+    ListElement {
+        locale: "es"
+        coordinators: [
+            ListElement { name: "carmenfdezb" }
         ]
         translators: []
         reviewers: []
