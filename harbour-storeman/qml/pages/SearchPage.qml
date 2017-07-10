@@ -34,15 +34,15 @@ Page {
         }
 
         header: Column {
-           width: parent.width
+            width: parent.width
 
-           PageHeader {
+            PageHeader {
                //: The search menu item and the search page header text - should be a noun
                //% "Search"
                title: qsTrId("orn-search")
-           }
+            }
 
-           SearchField {
+            SearchField {
                width: parent.width
                //: The search field placeholder text - should be a verb
                //% "Search"
@@ -58,7 +58,7 @@ Page {
 
                onTextChanged: if (!text) page._reset()
                Component.onCompleted: forceActiveFocus()
-           }
+            }
         }
 
         delegate: AppListDelegate { }
@@ -68,6 +68,14 @@ Page {
         ViewPlaceholder {
             id: viewPlaceholder
             enabled: text
+            verticalOffset: {
+                var h = Qt.inputMethod.keyboardRectangle.height
+                return h ? (parent.height - h) * 0.5 : 0
+            }
+
+            Behavior on verticalOffset {
+                NumberAnimation { duration: 200; easing.type: Easing.InOutQuad }
+            }
         }
 
         BusyIndicator {

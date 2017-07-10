@@ -10,6 +10,7 @@ BackgroundItem {
     height: content.height
     clip: true
     highlighted: down && !highlightDelayTimer.running
+    _showPress: highlighted
     propagateComposedEvents: true
 
     onPressedChanged: {
