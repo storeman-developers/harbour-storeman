@@ -90,7 +90,8 @@ BackgroundItem {
         }
 
         AppInfoLabel {
-            visible: _expanded && app.created
+            // TODO: Remove completely?
+            visible: false //_expanded && app.created
             //% "First release"
             label: qsTrId("orn-version-created")
             value: app.created.toLocaleString(locale, qsTrId("orn-dt-format")) +
