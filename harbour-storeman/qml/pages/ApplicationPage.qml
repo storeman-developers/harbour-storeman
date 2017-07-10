@@ -9,6 +9,7 @@ Page {
     readonly property variant locale: Qt.locale()
 
     id: page
+    allowedOrientations: defaultAllowedOrientations
 
     OrnApplication {
         id: app

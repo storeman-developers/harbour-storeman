@@ -4,6 +4,7 @@ import harbour.orn 1.0
 import "../components"
 
 Page {
+    allowedOrientations: defaultAllowedOrientations
 
     Connections {
         target: networkManager

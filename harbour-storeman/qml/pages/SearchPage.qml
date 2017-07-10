@@ -13,6 +13,7 @@ Page {
     }
 
     id: page
+    allowedOrientations: defaultAllowedOrientations
 
     Component.onCompleted: _reset()
 

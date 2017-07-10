@@ -4,6 +4,7 @@ import "../components"
 import "../models"
 
 Page {
+    allowedOrientations: defaultAllowedOrientations
 
     SilicaListView {
         anchors.fill: parent

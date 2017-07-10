@@ -7,6 +7,8 @@ Page {
     property alias categoryId: categoryModel.categoryId
     property string categoryName
 
+    allowedOrientations: defaultAllowedOrientations
+
     SilicaListView {
         id: categoryList
         anchors.fill: parent

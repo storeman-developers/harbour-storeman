@@ -3,6 +3,7 @@ import Sailfish.Silica 1.0
 import "../models"
 
 Page {
+    allowedOrientations: defaultAllowedOrientations
 
     SilicaListView {
         anchors.fill: parent

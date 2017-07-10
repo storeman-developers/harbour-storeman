@@ -10,6 +10,7 @@ Page {
     property int previousAppId: -1
 
     id: page
+    allowedOrientations: defaultAllowedOrientations
 
     SilicaListView {
         id: appsList

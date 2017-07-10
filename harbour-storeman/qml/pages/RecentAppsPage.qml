@@ -5,7 +5,7 @@ import "../components"
 
 Page {
     id: page
-    allowedOrientations: Orientation.All
+    allowedOrientations: defaultAllowedOrientations
 
     onStatusChanged: {
         if (status === PageStatus.Active) {

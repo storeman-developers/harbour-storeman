@@ -7,6 +7,8 @@ Page {
     property alias appId: commentsModel.appId
     property string userName
 
+    allowedOrientations: defaultAllowedOrientations
+
     SilicaListView {
         id: commentsList
         anchors.fill: parent

@@ -4,6 +4,8 @@ import Sailfish.Silica 1.0
 Page {
     property alias changelog: label.text
 
+    allowedOrientations: defaultAllowedOrientations
+
     SilicaFlickable {
         anchors.fill: parent
         contentHeight: content.height

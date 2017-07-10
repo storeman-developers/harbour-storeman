@@ -7,6 +7,7 @@ Page {
 
     id: page
     backNavigation: false
+    allowedOrientations: defaultAllowedOrientations
 
     SlideshowView {
         id: slideshow
