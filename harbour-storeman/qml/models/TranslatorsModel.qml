@@ -12,6 +12,15 @@ ListModel {
     }
 
     ListElement {
+        locale: "fi_FI"
+        coordinators: [
+            ListElement { name: "LaurentC" }
+        ]
+        translators: []
+        reviewers: []
+    }
+
+    ListElement {
         locale: "fr"
         coordinators: [
             ListElement { name: "Jordi" },
@@ -29,6 +38,15 @@ ListModel {
         translators: [
             ListElement { name: "olf" },
             ListElement { name: "inta" }
+        ]
+        reviewers: []
+    }
+
+    ListElement {
+        locale: "hu_HU"
+        coordinators: []
+        translators: [
+            ListElement { name: "Headarias" }
         ]
         reviewers: []
     }

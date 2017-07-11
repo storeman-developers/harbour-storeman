@@ -72,9 +72,10 @@
         <translation>Deze maand</translation>
     </message>
     <message id="orn-month-format">
-        <source>MMM yyyy</source>
-        <extracomment>Output format for the month and year. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation>MMM yyyy</translation>
+        <source>%0 %1</source>
+        <oldsource>MMM yyyy</oldsource>
+        <extracomment>Output format for the month and year - %0 is a long month name and %1 is a year (for example &quot;May 2017&quot;)</extracomment>
+        <translation>%0 %1</translation>
     </message>
     <message id="orn-adding-repo">
         <source>Adding</source>
@@ -419,15 +420,32 @@
     </message>
     <message id="orn-categories">
         <source>Categories</source>
-        <translation>Categories</translation>
+        <translation>Categorieën</translation>
     </message>
     <message id="orn-category-noapps">
         <source>Currently there are no apps in this category</source>
-        <translation>Currently there are no apps in this category</translation>
+        <translation>Er zijn momenteel geen apps in deze categorie</translation>
     </message>
     <message id="orn-cat-unknown2">
         <source>Unknown category</source>
-        <translation>Unknown category</translation>
+        <translation>Onbekende categorie</translation>
+    </message>
+    <message id="orn-reply-body">
+        <source>Your reply</source>
+        <translation>Je antwoord</translation>
+    </message>
+    <message id="orn-comment-body">
+        <source>Your comment</source>
+        <translation>Je reactie</translation>
+    </message>
+    <message id="orn-comment-send">
+        <source>Send</source>
+        <translation>Verzenden</translation>
+    </message>
+    <message id="orn-comment-update">
+        <source>Update</source>
+        <extracomment>Update a comment</extracomment>
+        <translation>Aanpassen</translation>
     </message>
 </context>
 </TS>

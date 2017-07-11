@@ -72,9 +72,10 @@
         <translation>W tym miesiącu</translation>
     </message>
     <message id="orn-month-format">
-        <source>MMM yyyy</source>
-        <extracomment>Output format for the month and year. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation>MMM yyyy</translation>
+        <source>%0 %1</source>
+        <oldsource>MMM yyyy</oldsource>
+        <extracomment>Output format for the month and year - %0 is a long month name and %1 is a year (for example &quot;May 2017&quot;)</extracomment>
+        <translation>%0 %1</translation>
     </message>
     <message id="orn-adding-repo">
         <source>Adding</source>
@@ -299,7 +300,7 @@
     </message>
     <message id="orn-changelog">
         <source>Changelog</source>
-        <translation>Changelog</translation>
+        <translation>Lista zmian</translation>
     </message>
     <message id="orn-user-apps">
         <source>User applications</source>
@@ -361,7 +362,7 @@
     </message>
     <message id="orn-app-description">
         <source>Unofficial native OpenRepos.net client for Sailfish OS</source>
-        <translation>Nieoficjalny, natywny client OpenRepos.net dla Sailfish OS</translation>
+        <translation>Nieoficjalny, natywny klient OpenRepos.net dla Sailfish OS</translation>
     </message>
     <message id="orn-report">
         <source>Report an Issue</source>
@@ -373,23 +374,23 @@
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
-        <translation>A network error occurred</translation>
+        <translation>Wystąpił błąd sieci</translation>
     </message>
     <message id="orn-pull-refresh">
         <source>Pull down to refresh</source>
-        <translation>Pull down to refresh</translation>
+        <translation>Przeciągnij w dół aby odświeżyć</translation>
     </message>
     <message id="orn-development">
         <source>Development</source>
-        <translation>Development</translation>
+        <translation>Rozwój</translation>
     </message>
     <message id="orn-developers">
         <source>Developers</source>
-        <translation>Developers</translation>
+        <translation>Deweloperzy</translation>
     </message>
     <message id="orn-appicon">
         <source>Application Icon</source>
-        <translation>Application Icon</translation>
+        <translation>Ikona aplikacji</translation>
     </message>
     <message id="orn-sources">
         <source>Source Code</source>
@@ -397,39 +398,56 @@
     </message>
     <message id="orn-just-now">
         <source>Just now</source>
-        <translation>Just now</translation>
+        <translation>W tej chwili</translation>
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%0 minute(s) ago</source>
         <translation>
-            <numerusform>%0 minute ago</numerusform>
-            <numerusform>%0 minutes ago</numerusform>
-            <numerusform></numerusform>
+            <numerusform>%0 minutę temu</numerusform>
+            <numerusform>%0 minuty temu</numerusform>
+            <numerusform>%0 minut temu</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%0 hour(s) ago</source>
         <translation>
-            <numerusform>%0 hour ago</numerusform>
-            <numerusform>%0 hours ago</numerusform>
-            <numerusform></numerusform>
+            <numerusform>%0 godzinę temu</numerusform>
+            <numerusform>%0 godziny temu</numerusform>
+            <numerusform>%0 godzin temu</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
-        <translation>Reply to %0</translation>
+        <translation>Odpowiedz %0</translation>
     </message>
     <message id="orn-categories">
         <source>Categories</source>
-        <translation>Categories</translation>
+        <translation>Kategorie</translation>
     </message>
     <message id="orn-category-noapps">
         <source>Currently there are no apps in this category</source>
-        <translation>Currently there are no apps in this category</translation>
+        <translation>Obecnie nie ma aplikacji w tej kategorii</translation>
     </message>
     <message id="orn-cat-unknown2">
         <source>Unknown category</source>
-        <translation>Unknown category</translation>
+        <translation>Nieznana kategoria</translation>
+    </message>
+    <message id="orn-reply-body">
+        <source>Your reply</source>
+        <translation>Twoja odpowiedź</translation>
+    </message>
+    <message id="orn-comment-body">
+        <source>Your comment</source>
+        <translation>Twój komentarz</translation>
+    </message>
+    <message id="orn-comment-send">
+        <source>Send</source>
+        <translation>Wyślij</translation>
+    </message>
+    <message id="orn-comment-update">
+        <source>Update</source>
+        <extracomment>Update a comment</extracomment>
+        <translation>Zaktualizuj</translation>
     </message>
 </context>
 </TS>

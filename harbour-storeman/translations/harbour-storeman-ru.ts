@@ -72,9 +72,10 @@
         <translation>В этом месяце</translation>
     </message>
     <message id="orn-month-format">
-        <source>MMM yyyy</source>
-        <extracomment>Output format for the month and year. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation>MMM yyyy</translation>
+        <source>%0 %1</source>
+        <oldsource>MMM yyyy</oldsource>
+        <extracomment>Output format for the month and year - %0 is a long month name and %1 is a year (for example &quot;May 2017&quot;)</extracomment>
+        <translation>%0 %1</translation>
     </message>
     <message id="orn-adding-repo">
         <source>Adding</source>
@@ -402,7 +403,7 @@
     <message id="orn-mins-ago" numerus="yes">
         <source>%0 minute(s) ago</source>
         <translation>
-            <numerusform>%0 минута назад</numerusform>
+            <numerusform>%0 минуту назад</numerusform>
             <numerusform>%0 минуты назад</numerusform>
             <numerusform>%0 минут назад</numerusform>
         </translation>
@@ -430,6 +431,23 @@
     <message id="orn-cat-unknown2">
         <source>Unknown category</source>
         <translation>Неизвестная категория</translation>
+    </message>
+    <message id="orn-reply-body">
+        <source>Your reply</source>
+        <translation>Ваш ответ</translation>
+    </message>
+    <message id="orn-comment-body">
+        <source>Your comment</source>
+        <translation>Ваш комментарий</translation>
+    </message>
+    <message id="orn-comment-send">
+        <source>Send</source>
+        <translation>Отправить</translation>
+    </message>
+    <message id="orn-comment-update">
+        <source>Update</source>
+        <extracomment>Update a comment</extracomment>
+        <translation>Обновить</translation>
     </message>
 </context>
 </TS>
