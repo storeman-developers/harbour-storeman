@@ -73,9 +73,8 @@
     </message>
     <message id="orn-month-format">
         <source>%0 %1</source>
-        <oldsource>MMM yyyy</oldsource>
         <extracomment>Output format for the month and year - %0 is a long month name and %1 is a year (for example &quot;May 2017&quot;)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%0 %1</translation>
     </message>
     <message id="orn-adding-repo">
         <source>Adding</source>
@@ -416,7 +415,7 @@
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
-        <translation>Responder a %0</translation>
+        <translation>En respuesta a %0</translation>
     </message>
     <message id="orn-categories">
         <source>Categories</source>
@@ -432,20 +431,20 @@
     </message>
     <message id="orn-reply-body">
         <source>Your reply</source>
-        <translation type="unfinished"></translation>
+        <translation>Tu respuesta</translation>
     </message>
     <message id="orn-comment-body">
         <source>Your comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Tu comentario</translation>
     </message>
     <message id="orn-comment-send">
         <source>Send</source>
-        <translation type="unfinished"></translation>
+        <translation>Enviar</translation>
     </message>
     <message id="orn-comment-update">
         <source>Update</source>
         <extracomment>Update a comment</extracomment>
-        <translation type="unfinished">Actualizar</translation>
+        <translation>Actualizar</translation>
     </message>
 </context>
 </TS>

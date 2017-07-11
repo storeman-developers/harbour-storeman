@@ -9,7 +9,7 @@
     </message>
     <message id="orn-notrated">
         <source>Not rated yet</source>
-        <translation>Ei vielä arvioinut</translation>
+        <translation>Ei arviointeja vielä</translation>
     </message>
     <message id="orn-repositories">
         <source>Repositories</source>
@@ -17,7 +17,7 @@
     </message>
     <message id="orn-refresh">
         <source>Refresh</source>
-        <translation>Piristää</translation>
+        <translation>Päivitä</translation>
     </message>
     <message id="orn-disable">
         <source>Disable</source>
@@ -29,7 +29,7 @@
     </message>
     <message id="orn-enabled">
         <source>Enabled</source>
-        <translation>Poistettu</translation>
+        <translation>Käytössä</translation>
     </message>
     <message id="orn-disabled">
         <source>Disabled</source>
@@ -37,19 +37,19 @@
     </message>
     <message id="orn-reload">
         <source>Reload</source>
-        <translation>Ladata uudelleen</translation>
+        <translation>Lataa uudelleen</translation>
     </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
-        <translation>Viimeiset päivitetyt</translation>
+        <translation>Viimeksi päivitetty</translation>
     </message>
     <message id="orn-app-not-found-body">
         <source>Application with such id was not found</source>
-        <translation>Sovellus ei löytynyt</translation>
+        <translation>Sovellusta ei löytynyt</translation>
     </message>
     <message id="orn-app-error-body">
         <source>An error occured while fetching application data</source>
-        <translation>Sovelluksen tiedon hakemisen aikana tapahtui virhe</translation>
+        <translation>Sovellustietojen hakemisen aikana tapahtui virhe</translation>
     </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
@@ -65,7 +65,7 @@
     </message>
     <message id="orn-this-week">
         <source>This week</source>
-        <translation>Tämä viikkoa</translation>
+        <translation>Tämä viikko</translation>
     </message>
     <message id="orn-this-month">
         <source>This month</source>
@@ -73,13 +73,12 @@
     </message>
     <message id="orn-month-format">
         <source>%0 %1</source>
-        <oldsource>MMM yyyy</oldsource>
         <extracomment>Output format for the month and year - %0 is a long month name and %1 is a year (for example &quot;May 2017&quot;)</extracomment>
         <translation>%0 %1</translation>
     </message>
     <message id="orn-adding-repo">
         <source>Adding</source>
-        <translation>Lisätä</translation>
+        <translation>Lisätään</translation>
     </message>
     <message id="orb-remove">
         <source>Remove</source>
@@ -95,7 +94,7 @@
     </message>
     <message id="orn-repo-remove-error">
         <source>Could not remove the repository</source>
-        <translation>Lähde ei voitu poistaa</translation>
+        <translation>Lähdettä ei voitu poistaa</translation>
     </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
@@ -103,7 +102,7 @@
     </message>
     <message id="orn-repo-enable">
         <source>Enable repository</source>
-        <translation>Ota käyttöön lähde</translation>
+        <translation>Ota lähde käyttöön</translation>
     </message>
     <message id="orn-install">
         <source>Install</source>
@@ -119,11 +118,11 @@
     </message>
     <message id="orn-package-installed">
         <source>Package %0 was successfully installed</source>
-        <translation type="unfinished"></translation>
+        <translation>%0 paketti asennettiin onnistuneesti</translation>
     </message>
     <message id="orn-package-removed">
         <source>Package %0 was successfully removed</source>
-        <translation type="unfinished"></translation>
+        <translation>%0 paketti poistettiin onnistuneesti</translation>
     </message>
     <message id="orn-installed">
         <source>Installed</source>
@@ -135,40 +134,40 @@
     </message>
     <message id="orn-version-available">
         <source>Available version</source>
-        <translation>Saatavilla versio</translation>
+        <translation>Saatavilla oleva versio</translation>
     </message>
     <message id="orn-version-updated">
         <source>Last updated</source>
-        <translation>Viimeisin päivitetty</translation>
+        <translation>Viimeksi päivitetty</translation>
     </message>
     <message id="orn-dt-format">
         <source>yyyy-dd-MM hh:mm</source>
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>hh:mm, dd-M-yyyy</translation>
     </message>
     <message id="orn-version-created">
         <source>First release</source>
-        <translation type="unfinished"></translation>
+        <translation>Julkaistu</translation>
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei saatavilla olevia versioita</translation>
     </message>
     <message id="orn-created-note">
         <source>OpenRepos can give an incorrect date</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenRepos voi antaa virheellisen päivämäärän</translation>
     </message>
     <message id="orn-comments">
         <source>Comments</source>
-        <translation>Kommentteja</translation>
+        <translation>Kommentit</translation>
     </message>
     <message id="orn-author-apps">
         <source>More by %0</source>
-        <translation type="unfinished"></translation>
+        <translation>Myös tekijältä %0</translation>
     </message>
     <message id="orn-cat-coding-competition">
         <source>Coding Competition</source>
-        <translation type="unfinished"></translation>
+        <translation>Koodauskilpailu</translation>
     </message>
     <message id="orn-cat-applications">
         <source>Applications</source>
@@ -180,19 +179,19 @@
     </message>
     <message id="orn-cat-ambience-themes">
         <source>Ambience &amp; Themes</source>
-        <translation>Ulkoasu &amp; Teemat</translation>
+        <translation>Tunnelma &amp; Teemat</translation>
     </message>
     <message id="orn-cat-business">
         <source>Business</source>
-        <translation>Liike</translation>
+        <translation>Liiketoiminta</translation>
     </message>
     <message id="orn-cat-city-guides-maps">
         <source>City guides &amp; maps</source>
-        <translation>Opas &amp; Kartat</translation>
+        <translation>Oppaat &amp; Kartat</translation>
     </message>
     <message id="orn-cat-education-science">
         <source>Education &amp; Science</source>
-        <translation>Koulutus &amp; Tiedot</translation>
+        <translation>Koulutus &amp; Tiede</translation>
     </message>
     <message id="orn-cat-entertainment">
         <source>Entertainment</source>
@@ -216,7 +215,7 @@
     </message>
     <message id="orn-cat-photo-video">
         <source>Photo &amp; video</source>
-        <translation>Kuva &amp; video</translation>
+        <translation>Kuva &amp; Video</translation>
     </message>
     <message id="orn-cat-social-networks">
         <source>Social Networks</source>
@@ -224,11 +223,11 @@
     </message>
     <message id="orn-cat-sports">
         <source>Sports</source>
-        <translation>Uhreilu</translation>
+        <translation>Urheilu</translation>
     </message>
     <message id="orn-cat-system">
         <source>System</source>
-        <translation>Systeemi</translation>
+        <translation>Järjestelmä</translation>
     </message>
     <message id="orn-cat-unknown">
         <source>Unknown</source>
@@ -236,7 +235,7 @@
     </message>
     <message id="orn-cat-utilities">
         <source>Utilities</source>
-        <translation>Apuohjelmia</translation>
+        <translation>Apuohjelmat</translation>
     </message>
     <message id="orn-cat-games">
         <source>Games</source>
@@ -288,31 +287,31 @@
     </message>
     <message id="orn-cat-libraries">
         <source>Libraries</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjastot</translation>
     </message>
     <message id="orn-update-available">
         <source>Update available</source>
-        <translation>Päivitys käytettävissä</translation>
+        <translation>Päivitys saatavilla</translation>
     </message>
     <message id="orn-update">
         <source>Update</source>
-        <translation>Päivitys</translation>
+        <translation>Päivitä</translation>
     </message>
     <message id="orn-changelog">
         <source>Changelog</source>
-        <translation type="unfinished"></translation>
+        <translation>Muutokset</translation>
     </message>
     <message id="orn-user-apps">
         <source>User applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Sovellukset</translation>
     </message>
     <message id="orn-comments-withnum">
         <source>Comments (%0)</source>
-        <translation type="unfinished"></translation>
+        <translation>Kommentit (%0)</translation>
     </message>
     <message id="orn-version-repo-disabled">
         <source>Enable the repository first</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää asennuslähde ensin</translation>
     </message>
     <message id="orn-search">
         <source>Search</source>
@@ -321,36 +320,36 @@
     </message>
     <message id="orn-searchpage-placeholder-noresults">
         <source>Nothing found</source>
-        <translation>Tuloksia ei löytynyt</translation>
+        <translation>Mitään ei löytynyt</translation>
     </message>
     <message id="orn-searchpage-placeholder-noresults-hint">
         <source>Try to change search keywords</source>
-        <translation type="unfinished"></translation>
+        <translation>Kokeile muita hakusanoja</translation>
     </message>
     <message id="orn-searchfield-placeholder">
         <source>Search</source>
         <extracomment>The search field placeholder text - should be a verb</extracomment>
-        <translation>Haku</translation>
+        <translation>Hae</translation>
     </message>
     <message id="orn-searchpage-placeholder-default">
         <source>Search results will be shown here</source>
-        <translation type="unfinished"></translation>
+        <translation>Hakutulokset näytetään tässä</translation>
     </message>
     <message id="orn-searchpage-placeholder-default-hint">
         <source>Type some keywords in the field above</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjoita jotain avainsanoja ylläolevaan kenttään</translation>
     </message>
     <message id="orn-about">
         <source>About Storeman</source>
-        <translation>Tietoja</translation>
+        <translation>Tietoja sovelluksesta</translation>
     </message>
     <message id="orn-translations">
         <source>Translations</source>
-        <translation>Käännös</translation>
+        <translation>Käännökset</translation>
     </message>
     <message id="orn-coordinators">
         <source>Coordinators</source>
-        <translation type="unfinished"></translation>
+        <translation>Koordinaattorit</translation>
     </message>
     <message id="orn-translators">
         <source>Translators</source>
@@ -358,31 +357,31 @@
     </message>
     <message id="orn-reviewers">
         <source>Reviewers</source>
-        <translation type="unfinished"></translation>
+        <translation>Arvostelijat</translation>
     </message>
     <message id="orn-app-description">
         <source>Unofficial native OpenRepos.net client for Sailfish OS</source>
-        <translation type="unfinished"></translation>
+        <translation>Epävirallinen OpenRepos.net-sovellus Sailfish-käyttöjärjestelmälle</translation>
     </message>
     <message id="orn-report">
         <source>Report an Issue</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilmoita ongelmasta</translation>
     </message>
     <message id="orn-app-licensing">
         <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Tämä on avoimen lähdekoodin sovellus, joka on julkaistu &lt;a href=&apos;%0&apos;&gt;MIT-lisenssin&lt;/a&gt; ehtojen alaisena</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
-        <translation type="unfinished"></translation>
+        <translation>Verkkovirhe</translation>
     </message>
     <message id="orn-pull-refresh">
         <source>Pull down to refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Päivitä vetämällä alas</translation>
     </message>
     <message id="orn-development">
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>Kehitys</translation>
     </message>
     <message id="orn-developers">
         <source>Developers</source>
@@ -398,25 +397,25 @@
     </message>
     <message id="orn-just-now">
         <source>Just now</source>
-        <translation>Nyt</translation>
+        <translation>Juuri nyt</translation>
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%0 minute(s) ago</source>
         <translation>
-            <numerusform>minuuttia sitten</numerusform>
+            <numerusform>%0 minuutti sitten</numerusform>
             <numerusform>%0 minuuttia sitten</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%0 hour(s) ago</source>
         <translation>
-            <numerusform>%0 tuntia sitten</numerusform>
+            <numerusform>%0 tunti sitten</numerusform>
             <numerusform>%0 tuntia sitten</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
-        <translation type="unfinished"></translation>
+        <translation>Vastaus käyttäjälle %0</translation>
     </message>
     <message id="orn-categories">
         <source>Categories</source>
@@ -424,7 +423,7 @@
     </message>
     <message id="orn-category-noapps">
         <source>Currently there are no apps in this category</source>
-        <translation type="unfinished"></translation>
+        <translation>Tässä kategoriassa ei ole sovelluksia tällä hetkellä</translation>
     </message>
     <message id="orn-cat-unknown2">
         <source>Unknown category</source>
@@ -432,20 +431,20 @@
     </message>
     <message id="orn-reply-body">
         <source>Your reply</source>
-        <translation type="unfinished"></translation>
+        <translation>Vastauksesi</translation>
     </message>
     <message id="orn-comment-body">
         <source>Your comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Kommenttisi</translation>
     </message>
     <message id="orn-comment-send">
         <source>Send</source>
-        <translation type="unfinished"></translation>
+        <translation>Lähetä</translation>
     </message>
     <message id="orn-comment-update">
         <source>Update</source>
         <extracomment>Update a comment</extracomment>
-        <translation type="unfinished">Päivitys</translation>
+        <translation>Päivitä</translation>
     </message>
 </context>
 </TS>

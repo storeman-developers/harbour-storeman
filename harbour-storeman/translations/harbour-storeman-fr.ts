@@ -49,7 +49,7 @@
     </message>
     <message id="orn-app-error-body">
         <source>An error occured while fetching application data</source>
-        <translation>Une erreur s&apos;est produite lors de l&apos;extraction des données de l&apos;application</translation>
+        <translation>Une erreur s&apos;est produite lors de la récupération des données</translation>
     </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
@@ -69,11 +69,10 @@
     </message>
     <message id="orn-this-month">
         <source>This month</source>
-        <translation>Ce mois</translation>
+        <translation>Ce mois-ci</translation>
     </message>
     <message id="orn-month-format">
         <source>%0 %1</source>
-        <oldsource>MMM yyyy</oldsource>
         <extracomment>Output format for the month and year - %0 is a long month name and %1 is a year (for example &quot;May 2017&quot;)</extracomment>
         <translation>%0 %1</translation>
     </message>
@@ -91,7 +90,7 @@
     </message>
     <message id="orn-error">
         <source>An error occured</source>
-        <translation>Une erreur est survenue</translation>
+        <translation>Une erreur s&apos;est produite</translation>
     </message>
     <message id="orn-repo-remove-error">
         <source>Could not remove the repository</source>
@@ -144,7 +143,7 @@
     <message id="orn-dt-format">
         <source>yyyy-dd-MM hh:mm</source>
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation>aaaa-jj-MM hh:mm</translation>
+        <translation>yyyy-MM-dd hh:mm</translation>
     </message>
     <message id="orn-version-created">
         <source>First release</source>
@@ -164,7 +163,7 @@
     </message>
     <message id="orn-author-apps">
         <source>More by %0</source>
-        <translation>Plus que %0</translation>
+        <translation>Aussi de %0</translation>
     </message>
     <message id="orn-cat-coding-competition">
         <source>Coding Competition</source>
@@ -208,7 +207,7 @@
     </message>
     <message id="orn-cat-news-info">
         <source>News &amp; info</source>
-        <translation>Nouvelles et informations</translation>
+        <translation>Actualité et informations</translation>
     </message>
     <message id="orn-cat-patches">
         <source>Patches</source>
@@ -300,7 +299,7 @@
     </message>
     <message id="orn-changelog">
         <source>Changelog</source>
-        <translation>Liste de modifications</translation>
+        <translation>Journal des modifications</translation>
     </message>
     <message id="orn-user-apps">
         <source>User applications</source>
@@ -334,7 +333,7 @@
     </message>
     <message id="orn-searchpage-placeholder-default">
         <source>Search results will be shown here</source>
-        <translation>Les résultats de recherche s&apos;afficheront ici</translation>
+        <translation>Les résultats de recherche s&apos;affichent ici</translation>
     </message>
     <message id="orn-searchpage-placeholder-default-hint">
         <source>Type some keywords in the field above</source>
@@ -362,7 +361,7 @@
     </message>
     <message id="orn-app-description">
         <source>Unofficial native OpenRepos.net client for Sailfish OS</source>
-        <translation>Client OpenRepos.net natif non-officiel pour Sailfish OS</translation>
+        <translation>Client OpenRepos.net natif non-officiel pour Sailfish OS.</translation>
     </message>
     <message id="orn-report">
         <source>Report an Issue</source>
@@ -416,7 +415,7 @@
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
-        <translation>Répondre à %0</translation>
+        <translation>Réponse à %0</translation>
     </message>
     <message id="orn-categories">
         <source>Categories</source>
@@ -432,20 +431,20 @@
     </message>
     <message id="orn-reply-body">
         <source>Your reply</source>
-        <translation type="unfinished"></translation>
+        <translation>Votre réponse</translation>
     </message>
     <message id="orn-comment-body">
         <source>Your comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Votre commentaire</translation>
     </message>
     <message id="orn-comment-send">
         <source>Send</source>
-        <translation type="unfinished"></translation>
+        <translation>Envoyer</translation>
     </message>
     <message id="orn-comment-update">
         <source>Update</source>
         <extracomment>Update a comment</extracomment>
-        <translation type="unfinished">Mise à jour</translation>
+        <translation>Mis à jour</translation>
     </message>
 </context>
 </TS>

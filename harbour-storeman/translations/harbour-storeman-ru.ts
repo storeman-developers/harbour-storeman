@@ -73,7 +73,6 @@
     </message>
     <message id="orn-month-format">
         <source>%0 %1</source>
-        <oldsource>MMM yyyy</oldsource>
         <extracomment>Output format for the month and year - %0 is a long month name and %1 is a year (for example &quot;May 2017&quot;)</extracomment>
         <translation>%0 %1</translation>
     </message>

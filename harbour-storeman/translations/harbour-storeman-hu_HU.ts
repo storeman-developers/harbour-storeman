@@ -13,7 +13,7 @@
     </message>
     <message id="orn-repositories">
         <source>Repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Repositories</translation>
     </message>
     <message id="orn-refresh">
         <source>Refresh</source>
@@ -21,19 +21,19 @@
     </message>
     <message id="orn-disable">
         <source>Disable</source>
-        <translation type="unfinished"></translation>
+        <translation>Letilt</translation>
     </message>
     <message id="orn-enable">
         <source>Enable</source>
-        <translation type="unfinished"></translation>
+        <translation>Engedélyez</translation>
     </message>
     <message id="orn-enabled">
         <source>Enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Engedélyezve</translation>
     </message>
     <message id="orn-disabled">
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiltva</translation>
     </message>
     <message id="orn-reload">
         <source>Reload</source>
@@ -41,15 +41,15 @@
     </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
-        <translation type="unfinished"></translation>
+        <translation>Nemrég frissült</translation>
     </message>
     <message id="orn-app-not-found-body">
         <source>Application with such id was not found</source>
-        <translation type="unfinished"></translation>
+        <translation>Application with such id was not found</translation>
     </message>
     <message id="orn-app-error-body">
         <source>An error occured while fetching application data</source>
-        <translation type="unfinished"></translation>
+        <translation>An error occured while fetching application data</translation>
     </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
@@ -65,45 +65,44 @@
     </message>
     <message id="orn-this-week">
         <source>This week</source>
-        <translation type="unfinished"></translation>
+        <translation>Ezen a héten</translation>
     </message>
     <message id="orn-this-month">
         <source>This month</source>
-        <translation type="unfinished"></translation>
+        <translation>Ebben a hónapban</translation>
     </message>
     <message id="orn-month-format">
         <source>%0 %1</source>
-        <oldsource>MMM yyyy</oldsource>
         <extracomment>Output format for the month and year - %0 is a long month name and %1 is a year (for example &quot;May 2017&quot;)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%0 %1</translation>
     </message>
     <message id="orn-adding-repo">
         <source>Adding</source>
-        <translation type="unfinished"></translation>
+        <translation>Hozzáadás</translation>
     </message>
     <message id="orb-remove">
         <source>Remove</source>
-        <translation type="unfinished">Eltávolít</translation>
+        <translation>Eltávolít</translation>
     </message>
     <message id="orn-removing">
         <source>Removing</source>
-        <translation type="unfinished"></translation>
+        <translation>Eltávolítás</translation>
     </message>
     <message id="orn-error">
         <source>An error occured</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiba történt</translation>
     </message>
     <message id="orn-repo-remove-error">
         <source>Could not remove the repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Could not remove the repository</translation>
     </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Add repository</translation>
     </message>
     <message id="orn-repo-enable">
         <source>Enable repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Enable repository</translation>
     </message>
     <message id="orn-install">
         <source>Install</source>
@@ -119,11 +118,11 @@
     </message>
     <message id="orn-package-installed">
         <source>Package %0 was successfully installed</source>
-        <translation type="unfinished"></translation>
+        <translation>Package %0 was successfully installed</translation>
     </message>
     <message id="orn-package-removed">
         <source>Package %0 was successfully removed</source>
-        <translation type="unfinished"></translation>
+        <translation>Package %0 was successfully removed</translation>
     </message>
     <message id="orn-installed">
         <source>Installed</source>
@@ -139,7 +138,7 @@
     </message>
     <message id="orn-version-updated">
         <source>Last updated</source>
-        <translation type="unfinished"></translation>
+        <translation>Utoljára fissítve</translation>
     </message>
     <message id="orn-dt-format">
         <source>yyyy-dd-MM hh:mm</source>
@@ -148,15 +147,15 @@
     </message>
     <message id="orn-version-created">
         <source>First release</source>
-        <translation type="unfinished"></translation>
+        <translation>Első kiadás</translation>
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
-        <translation type="unfinished"></translation>
+        <translation>No versions available</translation>
     </message>
     <message id="orn-created-note">
         <source>OpenRepos can give an incorrect date</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenRepos can give an incorrect date</translation>
     </message>
     <message id="orn-comments">
         <source>Comments</source>
@@ -164,11 +163,11 @@
     </message>
     <message id="orn-author-apps">
         <source>More by %0</source>
-        <translation type="unfinished"></translation>
+        <translation>More by %0</translation>
     </message>
     <message id="orn-cat-coding-competition">
         <source>Coding Competition</source>
-        <translation type="unfinished"></translation>
+        <translation>Coding Competition</translation>
     </message>
     <message id="orn-cat-applications">
         <source>Applications</source>
@@ -180,15 +179,15 @@
     </message>
     <message id="orn-cat-ambience-themes">
         <source>Ambience &amp; Themes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ambience és Témák</translation>
     </message>
     <message id="orn-cat-business">
         <source>Business</source>
-        <translation type="unfinished"></translation>
+        <translation>Üzlet</translation>
     </message>
     <message id="orn-cat-city-guides-maps">
         <source>City guides &amp; maps</source>
-        <translation type="unfinished"></translation>
+        <translation>City guides &amp; Maps</translation>
     </message>
     <message id="orn-cat-education-science">
         <source>Education &amp; Science</source>
@@ -220,7 +219,7 @@
     </message>
     <message id="orn-cat-social-networks">
         <source>Social Networks</source>
-        <translation type="unfinished"></translation>
+        <translation>Közösségi háló</translation>
     </message>
     <message id="orn-cat-sports">
         <source>Sports</source>
@@ -256,11 +255,11 @@
     </message>
     <message id="orn-cat-arcade">
         <source>Arcade</source>
-        <translation type="unfinished"></translation>
+        <translation>Árkád</translation>
     </message>
     <message id="orn-cat-card-casino">
         <source>Card &amp; casino</source>
-        <translation type="unfinished"></translation>
+        <translation>Card &amp; Casino</translation>
     </message>
     <message id="orn-cat-education">
         <source>Education</source>
@@ -276,19 +275,19 @@
     </message>
     <message id="orn-cat-trivia">
         <source>Trivia</source>
-        <translation type="unfinished"></translation>
+        <translation>Trivia</translation>
     </message>
     <message id="orn-cat-translations">
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Lokalizációk</translation>
     </message>
     <message id="orn-cat-fonts">
         <source>Fonts</source>
-        <translation type="unfinished"></translation>
+        <translation>Betűkészletek</translation>
     </message>
     <message id="orn-cat-libraries">
         <source>Libraries</source>
-        <translation type="unfinished"></translation>
+        <translation>Könyvtárak</translation>
     </message>
     <message id="orn-update-available">
         <source>Update available</source>
@@ -304,15 +303,15 @@
     </message>
     <message id="orn-user-apps">
         <source>User applications</source>
-        <translation type="unfinished"></translation>
+        <translation>User applications</translation>
     </message>
     <message id="orn-comments-withnum">
         <source>Comments (%0)</source>
-        <translation type="unfinished"></translation>
+        <translation>Kommentek (%0)</translation>
     </message>
     <message id="orn-version-repo-disabled">
         <source>Enable the repository first</source>
-        <translation type="unfinished"></translation>
+        <translation>Enable the repository first</translation>
     </message>
     <message id="orn-search">
         <source>Search</source>
@@ -321,11 +320,11 @@
     </message>
     <message id="orn-searchpage-placeholder-noresults">
         <source>Nothing found</source>
-        <translation type="unfinished"></translation>
+        <translation>Nincs találat</translation>
     </message>
     <message id="orn-searchpage-placeholder-noresults-hint">
         <source>Try to change search keywords</source>
-        <translation type="unfinished"></translation>
+        <translation>Try to change search keywords</translation>
     </message>
     <message id="orn-searchfield-placeholder">
         <source>Search</source>
@@ -334,11 +333,11 @@
     </message>
     <message id="orn-searchpage-placeholder-default">
         <source>Search results will be shown here</source>
-        <translation type="unfinished"></translation>
+        <translation>A keresési eredményeket itt láthatod</translation>
     </message>
     <message id="orn-searchpage-placeholder-default-hint">
         <source>Type some keywords in the field above</source>
-        <translation type="unfinished"></translation>
+        <translation>Type some keywords in the field above</translation>
     </message>
     <message id="orn-about">
         <source>About Storeman</source>
@@ -346,23 +345,23 @@
     </message>
     <message id="orn-translations">
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Lokalizációk</translation>
     </message>
     <message id="orn-coordinators">
         <source>Coordinators</source>
-        <translation type="unfinished"></translation>
+        <translation>Koordinátorok</translation>
     </message>
     <message id="orn-translators">
         <source>Translators</source>
-        <translation type="unfinished"></translation>
+        <translation>Fordítók</translation>
     </message>
     <message id="orn-reviewers">
         <source>Reviewers</source>
-        <translation type="unfinished"></translation>
+        <translation>Reviewers</translation>
     </message>
     <message id="orn-app-description">
         <source>Unofficial native OpenRepos.net client for Sailfish OS</source>
-        <translation type="unfinished"></translation>
+        <translation>Nem hivatalos, natív OpenRepos.net kliens Sailfish OS-hez.</translation>
     </message>
     <message id="orn-report">
         <source>Report an Issue</source>
@@ -370,7 +369,7 @@
     </message>
     <message id="orn-app-licensing">
         <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
@@ -382,7 +381,7 @@
     </message>
     <message id="orn-development">
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>Fejlesztés</translation>
     </message>
     <message id="orn-developers">
         <source>Developers</source>
@@ -402,48 +401,48 @@
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%0 minute(s) ago</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%0 minute ago</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%0 hour(s) ago</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%0 hour ago</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
-        <translation type="unfinished"></translation>
+        <translation>Reply to %0</translation>
     </message>
     <message id="orn-categories">
         <source>Categories</source>
-        <translation type="unfinished"></translation>
+        <translation>Kategóriák</translation>
     </message>
     <message id="orn-category-noapps">
         <source>Currently there are no apps in this category</source>
-        <translation type="unfinished"></translation>
+        <translation>Jelenleg nem található alkalmazás ebben a kategóriában</translation>
     </message>
     <message id="orn-cat-unknown2">
         <source>Unknown category</source>
-        <translation type="unfinished"></translation>
+        <translation>Ismeretlen kategória</translation>
     </message>
     <message id="orn-reply-body">
         <source>Your reply</source>
-        <translation type="unfinished"></translation>
+        <translation>A válaszod</translation>
     </message>
     <message id="orn-comment-body">
         <source>Your comment</source>
-        <translation type="unfinished"></translation>
+        <translation>A kommented</translation>
     </message>
     <message id="orn-comment-send">
         <source>Send</source>
-        <translation type="unfinished"></translation>
+        <translation>Küldés</translation>
     </message>
     <message id="orn-comment-update">
         <source>Update</source>
         <extracomment>Update a comment</extracomment>
-        <translation type="unfinished">Frissítés</translation>
+        <translation>Frissítés</translation>
     </message>
 </context>
 </TS>

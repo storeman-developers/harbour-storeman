@@ -73,9 +73,8 @@
     </message>
     <message id="orn-month-format">
         <source>%0 %1</source>
-        <oldsource>MMM yyyy</oldsource>
         <extracomment>Output format for the month and year - %0 is a long month name and %1 is a year (for example &quot;May 2017&quot;)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%0 %1</translation>
     </message>
     <message id="orn-adding-repo">
         <source>Adding</source>
@@ -420,32 +419,32 @@
     </message>
     <message id="orn-categories">
         <source>Categories</source>
-        <translation type="unfinished"></translation>
+        <translation>Categories</translation>
     </message>
     <message id="orn-category-noapps">
         <source>Currently there are no apps in this category</source>
-        <translation type="unfinished"></translation>
+        <translation>Currently there are no apps in this category</translation>
     </message>
     <message id="orn-cat-unknown2">
         <source>Unknown category</source>
-        <translation type="unfinished"></translation>
+        <translation>Unknown category</translation>
     </message>
     <message id="orn-reply-body">
         <source>Your reply</source>
-        <translation type="unfinished"></translation>
+        <translation>Your reply</translation>
     </message>
     <message id="orn-comment-body">
         <source>Your comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Your comment</translation>
     </message>
     <message id="orn-comment-send">
         <source>Send</source>
-        <translation type="unfinished"></translation>
+        <translation>Send</translation>
     </message>
     <message id="orn-comment-update">
         <source>Update</source>
         <extracomment>Update a comment</extracomment>
-        <translation type="unfinished">Aggiorna</translation>
+        <translation>Update</translation>
     </message>
 </context>
 </TS>
