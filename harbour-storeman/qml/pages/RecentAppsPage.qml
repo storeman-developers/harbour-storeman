@@ -18,17 +18,12 @@ Page {
     OrnRecentAppsModel {
         id: appsModel
         Component.onCompleted: apiRequest.networkManager = dataAccessManager
-        onRowsInserted: proxyModel.sort(Qt.DescendingOrder)
     }
 
     SilicaListView {
         id: appsList
         anchors.fill: parent
-        model: OrnProxyModel {
-            id: proxyModel
-            sortRole: OrnRecentAppsModel.DateRole
-            sourceModel: networkManager.state === "online" ? appsModel : null
-        }
+        model: networkManager.state === "online" ? appsModel : null
 
         header: PageHeader {
             //% "Recently updated"

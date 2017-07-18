@@ -82,12 +82,12 @@ BackgroundItem {
         }
 
         AppInfoLabel {
-            visible: _expanded && app.updated
+            visible: _expanded && app.created
             //% "Last updated"
             label: qsTrId("orn-version-updated")
             //: Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString
             //% "yyyy-dd-MM hh:mm"
-            value: app.updated.toLocaleString(locale, qsTrId("orn-dt-format"))
+            value: app.created.toLocaleString(locale, qsTrId("orn-dt-format"))
         }
 
         AppInfoLabel {
