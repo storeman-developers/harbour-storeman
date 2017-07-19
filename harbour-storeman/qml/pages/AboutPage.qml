@@ -49,7 +49,7 @@ Page {
                 font.pixelSize: Theme.fontSizeSmall
                 wrapMode: Text.WordWrap
                 horizontalAlignment: Qt.AlignHCenter
-                //% "Unofficial native OpenRepos.net client for Sailfish OS"
+                //% "Unofficial native OpenRepos.net client for Sailfish&nbsp;OS"
                 text: qsTrId("orn-app-description") + "<br />" +
                 //% "This is an open source software which is distributed under the terms of the<br /><a href='%0'>MIT License</a>"
                       qsTrId("orn-app-licensing").arg("https://github.com/mentaljam/harbour-storeman/blob/master/LICENSE")
