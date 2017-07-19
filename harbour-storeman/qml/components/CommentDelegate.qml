@@ -2,9 +2,44 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.orn 1.0
 
-Item {
-    width: commentsList.width
-    height: content.height + Theme.paddingLarge * 2
+ListItem {
+    readonly property bool _userComment: ornClient.userId === commentData.userId
+    readonly property bool _authorComment: commentData.userId === userId
+
+    contentHeight: content.height + Theme.paddingLarge * 2
+
+    ContextMenu {
+        id: contextMenu
+
+        MenuItem {
+            //: Menu item to reply for a comment - should be a verb
+            //% "Reply"
+            text: qsTrId("orn-reply")
+            onClicked: commentField.reply(commentData.commentId, commentData.userName, commentData.text)
+        }
+
+        MenuItem {
+            //% "Edit"
+            text: qsTrId("orn-edit")
+            visible: _userComment
+            onClicked: commentField.edit(commentData.commentId, commentData.text)
+        }
+
+//        MenuItem {
+//            //% "Delete"
+//            text: qsTrId("orn-delete")
+//            visible: _userComment || ornClient.userId === userId
+//            //% "Deleting"
+//            onClicked: remorseAction(qsTrId("orn-deleting"), function() {
+//                ornClient.deleteComment(commentData.commentId)
+//                commentsModel.removeRow(index, 1)
+//            })
+//        }
+    }
+
+    menu: ornClient.authorised ? contextMenu : null
+    highlighted: down && ornClient.authorised
+    _showPress: highlighted
 
     Column {
         id: content
@@ -42,14 +77,17 @@ Item {
 
                 Label {
                     width: parent.width
-                    color: Theme.secondaryColor
+                    color: highlighted ? Theme.highlightColor :
+                                         _userComment ? Theme.primaryColor : Theme.secondaryColor
                     wrapMode: Text.WordWrap
-                    text: commentData.userName
+                    text: (_userComment ? "<img src='image://theme/icon-s-edit'> " :
+                                          _authorComment ? "<img src='image://theme/icon-s-developer'> " : "") +
+                          commentData.userName
                 }
 
                 Label {
                     width: parent.width
-                    color: Theme.secondaryColor
+                    color: highlighted ? Theme.highlightColor : Theme.secondaryColor
                     font.pixelSize: Theme.fontSizeExtraSmall
                     wrapMode: Text.WordWrap
                     text: commentData.date
@@ -59,9 +97,11 @@ Item {
                     readonly property OrnCommentListItem replyTo: commentsModel.findItem(commentData.parentId)
 
                     width: parent.width
+                    color: highlighted ? Theme.highlightColor : Theme.primaryColor
                     visible: replyTo
                     font.pixelSize: Theme.fontSizeExtraSmall
                     wrapMode: Text.WordWrap
+                    //: Active label to navigate to the original comment - should be a noun
                     //% "Reply to %0"
                     text: visible ? qsTrId("orn-reply-to").arg(replyTo.userName) : ""
 
@@ -73,7 +113,8 @@ Item {
                             moveAnimation.from = commentsList.contentY
                             commentsList.positionViewAtIndex(
                                         commentsModel.findItemRow(parent.replyTo.commentId),
-                                        ListView.Beginning)
+                                        ListView.End)
+                            // FIXME: Sometimes it's not defined
                             moveAnimation.to = commentsList.contentY
                             moveAnimation.start()
                         }
@@ -88,6 +129,7 @@ Item {
             linkColor: Theme.primaryColor
             font.pixelSize: Theme.fontSizeSmall
             wrapMode: Text.WordWrap
+            textFormat: Text.RichText
             text: commentData.text
             onLinkActivated: Qt.openUrlExternally(link)
         }

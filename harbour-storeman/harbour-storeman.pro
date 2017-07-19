@@ -28,12 +28,16 @@ OTHER_FILES +=  \
     qml/pages/RepositoriesPage.qml \
     qml/pages/ScreenshotPage.qml \
     qml/pages/ChangelogPage.qml \
-    qml/pages/UserPage.qml \
+    qml/pages/UserAppsPage.qml \
     qml/pages/CommentsPage.qml \
     qml/pages/SearchPage.qml \
     qml/pages/AboutPage.qml \
     qml/pages/TranslationsPage.qml \
     qml/pages/DevelopmentPage.qml \
+    qml/pages/CategoriesPage.qml \
+    qml/pages/CategoryPage.qml \
+    qml/pages/DevicePage.qml \
+    qml/pages/AuthorisationDialog.qml \
     qml/components/AppListDelegate.qml \
     qml/components/RatingBox.qml \
     qml/components/IconLabel.qml \
@@ -47,6 +51,8 @@ OTHER_FILES +=  \
     qml/components/RefreshMenuItem.qml \
     qml/components/ParticipantsDelegate.qml \
     qml/components/CommentDelegate.qml \
+    qml/components/CommentField.qml \
+    qml/components/ListMenuItem.qml \
     qml/models/DevelopersModel.qml \
     qml/models/TranslatorsModel.qml
 
@@ -67,7 +73,3 @@ polkit.path = $$INSTALL_ROOT/var/lib/polkit-1/localauthority/50-local.d
 INSTALLS += polkit
 
 include(translations/translations.pri)
-
-DISTFILES += \
-    qml/pages/CategoriesPage.qml \
-    qml/pages/CategoryPage.qml

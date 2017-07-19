@@ -5,27 +5,21 @@ import "../components"
 
 Page {
     property alias appId: commentsModel.appId
+    property alias commentField: commentsList.headerItem
+    property int userId
     property string userName
+    property bool hasComments: false
 
     allowedOrientations: defaultAllowedOrientations
 
-    SilicaListView {
-        id: commentsList
+    Connections {
+        target: ornClient
+        onCommentAdded: commentsModel.addComment(cid)
+        onCommentEdited: commentsModel.editComment(cid)
+    }
+
+    SilicaFlickable {
         anchors.fill: parent
-
-        header: PageHeader {
-            id: header
-            //% "Comments"
-            title: qsTrId("orn-comments")
-            description: userName
-        }
-
-        model: OrnCommentsModel {
-            id: commentsModel
-            Component.onCompleted: apiRequest.networkManager = dataAccessManager
-        }
-
-        delegate: CommentDelegate { }
 
         PullDownMenu {
             RefreshMenuItem {
@@ -33,12 +27,40 @@ Page {
             }
         }
 
-        VerticalScrollDecorator { }
+        PageHeader {
+            id: pageHeader
+            //% "Comments"
+            title: qsTrId("orn-comments")
+            description: userName
+        }
 
-        BusyIndicator {
-            size: BusyIndicatorSize.Large
-            anchors.centerIn: parent
-            running: commentsList.count === 0
+        SilicaListView {
+            id: commentsList
+            anchors {
+                left: parent.left
+                top: pageHeader.bottom
+                right: parent.right
+                bottom: parent.bottom
+            }
+            clip: true
+            verticalLayoutDirection: ListView.BottomToTop
+
+            header: CommentField { }
+
+            model: OrnCommentsModel {
+                id: commentsModel
+                Component.onCompleted: apiRequest.networkManager = dataAccessManager
+            }
+
+            delegate: CommentDelegate { }
+
+            VerticalScrollDecorator { }
+
+            BusyIndicator {
+                size: BusyIndicatorSize.Large
+                anchors.centerIn: parent
+                running: commentsList.count === 0 && hasComments
+            }
         }
     }
 

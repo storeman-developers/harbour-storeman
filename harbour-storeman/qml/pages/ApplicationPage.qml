@@ -92,12 +92,15 @@ Page {
             }
 
             MoreButton {
-                visible: app.commentsCount
+                visible: app.commentsCount || ornClient.authorised
                 //% "Comments (%0)"
-                text: qsTrId("orn-comments-withnum").arg(app.commentsCount)
+                text: app.commentsCount ? qsTrId("orn-comments-withnum").arg(app.commentsCount) :
+                                          qsTrId("orn-comments")
                 onClicked: pageStack.push(Qt.resolvedUrl("CommentsPage.qml"), {
                                               appId: app.appId,
-                                              userName: app.userName
+                                              userId: app.userId,
+                                              userName: app.userName,
+                                              hasComments: app.commentsCount
                                           })
             }
 
@@ -108,7 +111,7 @@ Page {
                                // This page was openned from user page so just go back
                                pageStack.navigateBack():
                                // Open a new user page
-                               pageStack.push(Qt.resolvedUrl("UserPage.qml"), {
+                               pageStack.push(Qt.resolvedUrl("UserAppsPage.qml"), {
                                                   userId: app.userId,
                                                   userName: app.userName,
                                                   userIcon: app.userIconSource,

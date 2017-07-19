@@ -48,8 +48,8 @@ Page {
             }
 
             MenuItem {
-                text: qsTrId("orn-repositories")
-                onClicked: pageStack.push(Qt.resolvedUrl("RepositoriesPage.qml"))
+                text: qsTrId("orn-thisdevice")
+                onClicked: pageStack.push(Qt.resolvedUrl("DevicePage.qml"))
             }
 
             RefreshMenuItem {
