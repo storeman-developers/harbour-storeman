@@ -1,3 +1,13 @@
+* Mon Jul 20 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.7-1
+- Fix version comparing
+- Use package update time instead of OpenRepos page update time
+- Add ability to comment, reply to comments and edit comments
+- Add device and authorisation pages
+- Reverse comments list
+- Mark the developers' and yours comments like in the Store client
+- Some UI improvements
+- Update translations and add Danish translation
+
 * Mon Jul 11 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.6-1
 - Allow all orintations
 - Do not highlight app information label on short press or flick
