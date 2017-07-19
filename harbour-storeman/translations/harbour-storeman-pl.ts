@@ -360,8 +360,8 @@
         <translation>Recenzenci</translation>
     </message>
     <message id="orn-app-description">
-        <source>Unofficial native OpenRepos.net client for Sailfish OS</source>
-        <translation>Nieoficjalny, natywny klient OpenRepos.net dla Sailfish OS</translation>
+        <source>Unofficial native OpenRepos.net client for Sailfish&amp;nbsp;OS</source>
+        <translation>Nieoficjalny, natywny klient OpenRepos.net dla Sailfish&amp;nbsp;OS</translation>
     </message>
     <message id="orn-report">
         <source>Report an Issue</source>
@@ -417,6 +417,7 @@
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
+        <extracomment>Active label to navigate to the original comment - should be a noun</extracomment>
         <translation>Odpowiedz %0</translation>
     </message>
     <message id="orn-categories">
@@ -431,22 +432,106 @@
         <source>Unknown category</source>
         <translation>Nieznana kategoria</translation>
     </message>
-    <message id="orn-reply-body">
-        <source>Your reply</source>
-        <translation>Twoja odpowiedź</translation>
-    </message>
     <message id="orn-comment-body">
         <source>Your comment</source>
         <translation>Twój komentarz</translation>
     </message>
-    <message id="orn-comment-send">
-        <source>Send</source>
-        <translation>Wyślij</translation>
+    <message id="orn-reply">
+        <source>Reply</source>
+        <extracomment>Menu item to reply for a comment - should be a verb</extracomment>
+        <translation>Odpowiedz</translation>
+    </message>
+    <message id="orn-edit">
+        <source>Edit</source>
+        <translation>Edytuj</translation>
+    </message>
+    <message id="orn-thisdevice">
+        <source>This Device</source>
+        <translation>To urządzenie</translation>
+    </message>
+    <message id="orn-login-menu-item">
+        <source>Log in to OpenRepos.net</source>
+        <translation>Zaloguj się do Openrepos.net</translation>
+    </message>
+    <message id="orn-login-action">
+        <source>Log in</source>
+        <translation>Zaloguj</translation>
+    </message>
+    <message id="orn-username">
+        <source>Username</source>
+        <translation>Nazwa użytkownika</translation>
+    </message>
+    <message id="orn-acceptable-username">
+        <source>Only letters, numbers, and underscores</source>
+        <extracomment>A translated string should not be longer than the original</extracomment>
+        <translation>Tylko litery, cyfry i podkreślenia</translation>
+    </message>
+    <message id="orn-login-help">
+        <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
+        <translation>Zaloguj się do OpenRepos.net aby komentować aplikacje i odpowiadać na komentarze innych.&lt;br /&gt;&lt;br /&gt;Storeman nie przechowuje twojego hasła i nie wysyła go do osób trzecich.</translation>
+    </message>
+    <message id="orn-loggedin-message">
+        <source>You have successfully logged in to the OpenRepos.net</source>
+        <translation>Zalogowałeś się do OpenRepos.net</translation>
+    </message>
+    <message id="orn-loggedout-message">
+        <source>You have logged out from the OpenRepos.net</source>
+        <translation>Wylogowałeś się z OpenRepos.net</translation>
+    </message>
+    <message id="orn-login-error-title">
+        <source>Login error</source>
+        <translation>Błąd logowania</translation>
+    </message>
+    <message id="orn-login-error-message">
+        <source>Could not log in the OpenRepos.net - check your credentials and network connection</source>
+        <translation>Nie można zalogować do OpenRepos.net - sprawdź dane logowania oraz połączenie z siecią</translation>
+    </message>
+    <message id="orn-loggedin-menu-item">
+        <source>Logged in as %0</source>
+        <translation>Zalogowany jako %0</translation>
+    </message>
+    <message id="orn-logout-action">
+        <source>Log out</source>
+        <extracomment>Menu item</extracomment>
+        <translation>Wyloguj</translation>
+    </message>
+    <message id="orn-logout-remorse">
+        <source>Logging out</source>
+        <extracomment>Remorse text</extracomment>
+        <translation>Wylogowywanie</translation>
+    </message>
+    <message id="orn-comment-edit-label">
+        <source>Edit your comment</source>
+        <translation>Edytuj swój komentarz</translation>
     </message>
     <message id="orn-comment-update">
         <source>Update</source>
         <extracomment>Update a comment</extracomment>
         <translation>Zaktualizuj</translation>
+    </message>
+    <message id="orn-comment-send">
+        <source>Send</source>
+        <translation>Wyślij</translation>
+    </message>
+    <message id="orn-authorisation-expires-summary">
+        <source>Authorisation expires</source>
+        <translation>Authorisation expires</translation>
+    </message>
+    <message id="orn-authorisation-expires-body">
+        <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
+        <translation>The OpenRepos authorisation expires. Click to reauthorise.</translation>
+    </message>
+    <message id="orn-authorisation-expired-summary">
+        <source>Authorisation expired</source>
+        <translation>Authorisation expired</translation>
+    </message>
+    <message id="orn-authorisation-expired-body">
+        <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
+        <translation>The OpenRepos authorisation has expired. Click to reauthorise.</translation>
+    </message>
+    <message id="orn-reauthorise">
+        <source>Click to reauthorise</source>
+        <translation>Click to reauthorise</translation>
     </message>
 </context>
 </TS>

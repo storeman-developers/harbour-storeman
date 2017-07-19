@@ -41,7 +41,7 @@
     </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
-        <translation>Mise à jour récemment</translation>
+        <translation>Mises à jour récentes</translation>
     </message>
     <message id="orn-app-not-found-body">
         <source>Application with such id was not found</source>
@@ -360,8 +360,8 @@
         <translation>Réviseurs</translation>
     </message>
     <message id="orn-app-description">
-        <source>Unofficial native OpenRepos.net client for Sailfish OS</source>
-        <translation>Client OpenRepos.net natif non-officiel pour Sailfish OS.</translation>
+        <source>Unofficial native OpenRepos.net client for Sailfish&amp;nbsp;OS</source>
+        <translation>Client OpenRepos.net natif non-officiel pour Sailfish&amp;nbsp;OS</translation>
     </message>
     <message id="orn-report">
         <source>Report an Issue</source>
@@ -415,6 +415,7 @@
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
+        <extracomment>Active label to navigate to the original comment - should be a noun</extracomment>
         <translation>Réponse à %0</translation>
     </message>
     <message id="orn-categories">
@@ -429,22 +430,106 @@
         <source>Unknown category</source>
         <translation>Catégorie inconnue</translation>
     </message>
-    <message id="orn-reply-body">
-        <source>Your reply</source>
-        <translation>Votre réponse</translation>
-    </message>
     <message id="orn-comment-body">
         <source>Your comment</source>
         <translation>Votre commentaire</translation>
     </message>
-    <message id="orn-comment-send">
-        <source>Send</source>
-        <translation>Envoyer</translation>
+    <message id="orn-reply">
+        <source>Reply</source>
+        <extracomment>Menu item to reply for a comment - should be a verb</extracomment>
+        <translation>Répondre</translation>
+    </message>
+    <message id="orn-edit">
+        <source>Edit</source>
+        <translation>Modifier</translation>
+    </message>
+    <message id="orn-thisdevice">
+        <source>This Device</source>
+        <translation>Cet appareil</translation>
+    </message>
+    <message id="orn-login-menu-item">
+        <source>Log in to OpenRepos.net</source>
+        <translation>Se connecter à OpenRepos.net</translation>
+    </message>
+    <message id="orn-login-action">
+        <source>Log in</source>
+        <translation>Connexion</translation>
+    </message>
+    <message id="orn-username">
+        <source>Username</source>
+        <translation>Nom d&apos;utilisateur</translation>
+    </message>
+    <message id="orn-acceptable-username">
+        <source>Only letters, numbers, and underscores</source>
+        <extracomment>A translated string should not be longer than the original</extracomment>
+        <translation>Lettres, chiffres et tirets bas seulement</translation>
+    </message>
+    <message id="orn-login-help">
+        <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
+        <translation>Connectez-vous à OpenRepos.net pour commenter les applications.&lt;br /&gt;&lt;br /&gt;Storeman ne conserve pas votre mot de passe ni ne le transmet à des tiers.</translation>
+    </message>
+    <message id="orn-loggedin-message">
+        <source>You have successfully logged in to the OpenRepos.net</source>
+        <translation>Vous êtes connectés à OpenRepos.net</translation>
+    </message>
+    <message id="orn-loggedout-message">
+        <source>You have logged out from the OpenRepos.net</source>
+        <translation>Vous vous êtes déconnectés d&apos;OpenRepos.net</translation>
+    </message>
+    <message id="orn-login-error-title">
+        <source>Login error</source>
+        <translation>Erreur de connexion</translation>
+    </message>
+    <message id="orn-login-error-message">
+        <source>Could not log in the OpenRepos.net - check your credentials and network connection</source>
+        <translation>Connexion à OpenRepos.net impossible - vérifiez vos informations et paramètres de connexion</translation>
+    </message>
+    <message id="orn-loggedin-menu-item">
+        <source>Logged in as %0</source>
+        <translation>Connecté en tant que %0</translation>
+    </message>
+    <message id="orn-logout-action">
+        <source>Log out</source>
+        <extracomment>Menu item</extracomment>
+        <translation>Se déconnecter</translation>
+    </message>
+    <message id="orn-logout-remorse">
+        <source>Logging out</source>
+        <extracomment>Remorse text</extracomment>
+        <translation>Déconnexion</translation>
+    </message>
+    <message id="orn-comment-edit-label">
+        <source>Edit your comment</source>
+        <translation>Modifier votre commentaire</translation>
     </message>
     <message id="orn-comment-update">
         <source>Update</source>
         <extracomment>Update a comment</extracomment>
         <translation>Mis à jour</translation>
+    </message>
+    <message id="orn-comment-send">
+        <source>Send</source>
+        <translation>Envoyer</translation>
+    </message>
+    <message id="orn-authorisation-expires-summary">
+        <source>Authorisation expires</source>
+        <translation>Authorisation expires</translation>
+    </message>
+    <message id="orn-authorisation-expires-body">
+        <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
+        <translation>The OpenRepos authorisation expires. Click to reauthorise.</translation>
+    </message>
+    <message id="orn-authorisation-expired-summary">
+        <source>Authorisation expired</source>
+        <translation>Authorisation expired</translation>
+    </message>
+    <message id="orn-authorisation-expired-body">
+        <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
+        <translation>The OpenRepos authorisation has expired. Click to reauthorise.</translation>
+    </message>
+    <message id="orn-reauthorise">
+        <source>Click to reauthorise</source>
+        <translation>Click to reauthorise</translation>
     </message>
 </context>
 </TS>

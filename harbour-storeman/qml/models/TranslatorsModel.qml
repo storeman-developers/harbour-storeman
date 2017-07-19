@@ -3,6 +3,15 @@ import QtQuick 2.0
 ListModel {
 
     ListElement {
+        locale: "da"
+        coordinators: []
+        translators: [
+            ListElement { name: "brix" }
+        ]
+        reviewers: []
+    }
+
+    ListElement {
         locale: "nl"
         coordinators: [
             ListElement { name: "pljmn" }
@@ -14,9 +23,11 @@ ListModel {
     ListElement {
         locale: "fi_FI"
         coordinators: [
+            ListElement { name: "hartzi" }
+        ]
+        translators: [
             ListElement { name: "LaurentC" }
         ]
-        translators: []
         reviewers: []
     }
 
@@ -36,8 +47,8 @@ ListModel {
             ListElement { name: "monkeyisland" }
         ]
         translators: [
-            ListElement { name: "olf" },
-            ListElement { name: "inta" }
+            ListElement { name: "inta" },
+            ListElement { name: "olf" }
         ]
         reviewers: []
     }

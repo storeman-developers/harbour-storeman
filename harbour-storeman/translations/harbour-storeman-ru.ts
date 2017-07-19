@@ -360,8 +360,8 @@
         <translation> Корректоры</translation>
     </message>
     <message id="orn-app-description">
-        <source>Unofficial native OpenRepos.net client for Sailfish OS</source>
-        <translation>Неофициальный нативный клиент OpenRepos.net для Sailfish OS</translation>
+        <source>Unofficial native OpenRepos.net client for Sailfish&amp;nbsp;OS</source>
+        <translation>Неофициальный нативный клиент OpenRepos.net для Sailfish&amp;nbsp;OS</translation>
     </message>
     <message id="orn-report">
         <source>Report an Issue</source>
@@ -417,7 +417,8 @@
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
-        <translation>Ответ на %0</translation>
+        <extracomment>Active label to navigate to the original comment - should be a noun</extracomment>
+        <translation>Ответ %0</translation>
     </message>
     <message id="orn-categories">
         <source>Categories</source>
@@ -431,22 +432,106 @@
         <source>Unknown category</source>
         <translation>Неизвестная категория</translation>
     </message>
-    <message id="orn-reply-body">
-        <source>Your reply</source>
-        <translation>Ваш ответ</translation>
-    </message>
     <message id="orn-comment-body">
         <source>Your comment</source>
         <translation>Ваш комментарий</translation>
     </message>
-    <message id="orn-comment-send">
-        <source>Send</source>
-        <translation>Отправить</translation>
+    <message id="orn-reply">
+        <source>Reply</source>
+        <extracomment>Menu item to reply for a comment - should be a verb</extracomment>
+        <translation>Ответить</translation>
+    </message>
+    <message id="orn-edit">
+        <source>Edit</source>
+        <translation>Изменить</translation>
+    </message>
+    <message id="orn-thisdevice">
+        <source>This Device</source>
+        <translation>Это устройство</translation>
+    </message>
+    <message id="orn-login-menu-item">
+        <source>Log in to OpenRepos.net</source>
+        <translation>Войти в OpenRepos</translation>
+    </message>
+    <message id="orn-login-action">
+        <source>Log in</source>
+        <translation>Войти</translation>
+    </message>
+    <message id="orn-username">
+        <source>Username</source>
+        <translation>Имя пользователя</translation>
+    </message>
+    <message id="orn-acceptable-username">
+        <source>Only letters, numbers, and underscores</source>
+        <extracomment>A translated string should not be longer than the original</extracomment>
+        <translation>Только буквы, цифры и подчеркивание</translation>
+    </message>
+    <message id="orn-login-help">
+        <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
+        <translation>Авторизуйтесь на OpenRepos.net, чтобы комментировать приложения и отвечать на комментарии других пользователей.&lt;br /&gt;&lt;br /&gt;Storeman не хранит ваш пароль и не передает его третьим лицам.</translation>
+    </message>
+    <message id="orn-loggedin-message">
+        <source>You have successfully logged in to the OpenRepos.net</source>
+        <translation>Успешная авторизация на OpenRepos.net</translation>
+    </message>
+    <message id="orn-loggedout-message">
+        <source>You have logged out from the OpenRepos.net</source>
+        <translation>Вы вышли из OpenRepos.net</translation>
+    </message>
+    <message id="orn-login-error-title">
+        <source>Login error</source>
+        <translation>Ошибка входа</translation>
+    </message>
+    <message id="orn-login-error-message">
+        <source>Could not log in the OpenRepos.net - check your credentials and network connection</source>
+        <translation>Не удалось авторизоваться на OpenRepos.net - проверьте свои учетные данные и сетевое подключение</translation>
+    </message>
+    <message id="orn-loggedin-menu-item">
+        <source>Logged in as %0</source>
+        <translation>Вы вошли как %0</translation>
+    </message>
+    <message id="orn-logout-action">
+        <source>Log out</source>
+        <extracomment>Menu item</extracomment>
+        <translation>Выйти</translation>
+    </message>
+    <message id="orn-logout-remorse">
+        <source>Logging out</source>
+        <extracomment>Remorse text</extracomment>
+        <translation>Выход</translation>
+    </message>
+    <message id="orn-comment-edit-label">
+        <source>Edit your comment</source>
+        <translation>Редактировать комментарий</translation>
     </message>
     <message id="orn-comment-update">
         <source>Update</source>
         <extracomment>Update a comment</extracomment>
         <translation>Обновить</translation>
+    </message>
+    <message id="orn-comment-send">
+        <source>Send</source>
+        <translation>Отправить</translation>
+    </message>
+    <message id="orn-authorisation-expires-summary">
+        <source>Authorisation expires</source>
+        <translation>Истекает срок авторизации</translation>
+    </message>
+    <message id="orn-authorisation-expires-body">
+        <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
+        <translation>Истекает срок авторизации на OpenRepos. Коснитесь, чтобы войти заново.</translation>
+    </message>
+    <message id="orn-authorisation-expired-summary">
+        <source>Authorisation expired</source>
+        <translation>Истек срок авторизации</translation>
+    </message>
+    <message id="orn-authorisation-expired-body">
+        <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
+        <translation>Истек срок авторизации на OpenRepos. Коснитесь, чтобы войти заново.</translation>
+    </message>
+    <message id="orn-reauthorise">
+        <source>Click to reauthorise</source>
+        <translation>Коснитесь, чтобы войти заново</translation>
     </message>
 </context>
 </TS>

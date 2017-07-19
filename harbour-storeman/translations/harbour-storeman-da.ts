@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv">
+<TS version="2.1" language="da">
 <context>
     <name></name>
     <message id="orn-storeman">
@@ -9,51 +9,51 @@
     </message>
     <message id="orn-notrated">
         <source>Not rated yet</source>
-        <translation>Inte betygsatt än</translation>
+        <translation>Ikke bedømt endnu</translation>
     </message>
     <message id="orn-repositories">
         <source>Repositories</source>
-        <translation>Förråd</translation>
+        <translation>Repositorier</translation>
     </message>
     <message id="orn-refresh">
         <source>Refresh</source>
-        <translation>Uppdatera</translation>
+        <translation>Genindlæs</translation>
     </message>
     <message id="orn-disable">
         <source>Disable</source>
-        <translation>Inaktivera</translation>
+        <translation>Deaktiver</translation>
     </message>
     <message id="orn-enable">
         <source>Enable</source>
-        <translation>Aktivera</translation>
+        <translation>Aktiver</translation>
     </message>
     <message id="orn-enabled">
         <source>Enabled</source>
-        <translation>Aktiverat</translation>
+        <translation>Aktiveret</translation>
     </message>
     <message id="orn-disabled">
         <source>Disabled</source>
-        <translation>Inaktiverat</translation>
+        <translation>Deaktiveret</translation>
     </message>
     <message id="orn-reload">
         <source>Reload</source>
-        <translation>Uppdatera</translation>
+        <translation>Genindlæs</translation>
     </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
-        <translation>Nyligen uppdaterat</translation>
+        <translation>Opdateret fornyligt</translation>
     </message>
     <message id="orn-app-not-found-body">
         <source>Application with such id was not found</source>
-        <translation>Hittade ingen app med ett sådant ID</translation>
+        <translation>Kunne ikke finde program med matchende id</translation>
     </message>
     <message id="orn-app-error-body">
         <source>An error occured while fetching application data</source>
-        <translation>Ett fel inträffade vid hämtning av applikationsdata</translation>
+        <translation>Der opstod en fejl ved indlæsning af program data</translation>
     </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
-        <translation>Nätverket är otillgängligt</translation>
+        <translation>Der er intet netværk</translation>
     </message>
     <message id="orn-today">
         <source>Today</source>
@@ -65,11 +65,11 @@
     </message>
     <message id="orn-this-week">
         <source>This week</source>
-        <translation>Denna vecka</translation>
+        <translation>Denne uge</translation>
     </message>
     <message id="orn-this-month">
         <source>This month</source>
-        <translation>Denna månad</translation>
+        <translation>Denne måned</translation>
     </message>
     <message id="orn-month-format">
         <source>%0 %1</source>
@@ -78,84 +78,84 @@
     </message>
     <message id="orn-adding-repo">
         <source>Adding</source>
-        <translation>Lägger till</translation>
+        <translation>Tilføjer</translation>
     </message>
     <message id="orb-remove">
         <source>Remove</source>
-        <translation>Ta bort</translation>
+        <translation>Fjern</translation>
     </message>
     <message id="orn-removing">
         <source>Removing</source>
-        <translation>Tar bort</translation>
+        <translation>Fjerner</translation>
     </message>
     <message id="orn-error">
         <source>An error occured</source>
-        <translation>Ett fel inträffade</translation>
+        <translation>Der opstod en fejl</translation>
     </message>
     <message id="orn-repo-remove-error">
         <source>Could not remove the repository</source>
-        <translation>Kunde inte ta bort förrådet</translation>
+        <translation>Kan ikke fjerne repositorium</translation>
     </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
-        <translation>Lägg till förrådet</translation>
+        <translation>Tilføj repositorium</translation>
     </message>
     <message id="orn-repo-enable">
         <source>Enable repository</source>
-        <translation>Aktivera förrådet</translation>
+        <translation>Aktiver repositorium</translation>
     </message>
     <message id="orn-install">
         <source>Install</source>
-        <translation>Installera</translation>
+        <translation>Installér</translation>
     </message>
     <message id="orn-remove">
         <source>Remove</source>
-        <translation>Ta bort</translation>
+        <translation>Fjern</translation>
     </message>
     <message id="orn-launch">
         <source>Launch</source>
-        <translation>Starta</translation>
+        <translation>Kør</translation>
     </message>
     <message id="orn-package-installed">
         <source>Package %0 was successfully installed</source>
-        <translation>Paketet %0 installerades korrekt</translation>
+        <translation>%0 er nu installeret</translation>
     </message>
     <message id="orn-package-removed">
         <source>Package %0 was successfully removed</source>
-        <translation>Paketet %0 togs bort korrekt</translation>
+        <translation>%0 er nu fjernet</translation>
     </message>
     <message id="orn-installed">
         <source>Installed</source>
-        <translation>Installerad</translation>
+        <translation>Installeret</translation>
     </message>
     <message id="orn-version-installed">
         <source>Installed version</source>
-        <translation>Installerad version</translation>
+        <translation>Installeret version</translation>
     </message>
     <message id="orn-version-available">
         <source>Available version</source>
-        <translation>Tillgänglig version</translation>
+        <translation>Tilgængelig version</translation>
     </message>
     <message id="orn-version-updated">
         <source>Last updated</source>
-        <translation>Senast uppdaterad</translation>
+        <translation>Sidst opdateret</translation>
     </message>
     <message id="orn-dt-format">
         <source>yyyy-dd-MM hh:mm</source>
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation>yyyy-MM-dd hh:mm</translation>
+        <translation>dd-MM-yyyy hh:mm</translation>
     </message>
     <message id="orn-version-created">
         <source>First release</source>
-        <translation>Första publicering</translation>
+        <translation>Første udgivelse</translation>
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
-        <translation>Inga versioner tillgängliga</translation>
+        <translation>Ingen versioner tilgængelige</translation>
     </message>
     <message id="orn-created-note">
         <source>OpenRepos can give an incorrect date</source>
-        <translation>OpenRepos kan ange ett felaktigt datum</translation>
+        <translation>OpenRepos kan give en forkert dato</translation>
     </message>
     <message id="orn-comments">
         <source>Comments</source>
@@ -163,39 +163,39 @@
     </message>
     <message id="orn-author-apps">
         <source>More by %0</source>
-        <translation>Mer av %0</translation>
+        <translation>Mere af %0</translation>
     </message>
     <message id="orn-cat-coding-competition">
         <source>Coding Competition</source>
-        <translation>Programmeringstävling</translation>
+        <translation>Kodekonkurrence</translation>
     </message>
     <message id="orn-cat-applications">
         <source>Applications</source>
-        <translation>Applikationer</translation>
+        <translation>Programmer</translation>
     </message>
     <message id="orn-cat-application">
         <source>Application</source>
-        <translation>Applikation</translation>
+        <translation>Program</translation>
     </message>
     <message id="orn-cat-ambience-themes">
         <source>Ambience &amp; Themes</source>
-        <translation>Atmosfär &amp; Tema</translation>
+        <translation>Atmosfærer &amp; Temaer</translation>
     </message>
     <message id="orn-cat-business">
         <source>Business</source>
-        <translation>Affärslivet</translation>
+        <translation>Forretning</translation>
     </message>
     <message id="orn-cat-city-guides-maps">
         <source>City guides &amp; maps</source>
-        <translation>Stadsguider &amp; kartor</translation>
+        <translation>By guider &amp; Kort</translation>
     </message>
     <message id="orn-cat-education-science">
         <source>Education &amp; Science</source>
-        <translation>Utbildning &amp; Vetenskap</translation>
+        <translation>Uddannelse &amp; Forskning</translation>
     </message>
     <message id="orn-cat-entertainment">
         <source>Entertainment</source>
-        <translation>Underhållning</translation>
+        <translation>Underholdning</translation>
     </message>
     <message id="orn-cat-music">
         <source>Music</source>
@@ -203,23 +203,23 @@
     </message>
     <message id="orn-cat-network">
         <source>Network</source>
-        <translation>Nätverk</translation>
+        <translation>Netværk</translation>
     </message>
     <message id="orn-cat-news-info">
         <source>News &amp; info</source>
-        <translation>Nyheter &amp; Info</translation>
+        <translation>Nyheder &amp; Info</translation>
     </message>
     <message id="orn-cat-patches">
         <source>Patches</source>
-        <translation>Patchar</translation>
+        <translation>Ændringer</translation>
     </message>
     <message id="orn-cat-photo-video">
         <source>Photo &amp; video</source>
-        <translation>Foto &amp; Film</translation>
+        <translation>Foto &amp; Video</translation>
     </message>
     <message id="orn-cat-social-networks">
         <source>Social Networks</source>
-        <translation>Sociala nätverk</translation>
+        <translation>Sociale Netværk</translation>
     </message>
     <message id="orn-cat-sports">
         <source>Sports</source>
@@ -231,19 +231,19 @@
     </message>
     <message id="orn-cat-unknown">
         <source>Unknown</source>
-        <translation>Okänt</translation>
+        <translation>Ukendt</translation>
     </message>
     <message id="orn-cat-utilities">
         <source>Utilities</source>
-        <translation>Verktyg</translation>
+        <translation>Værktøjer</translation>
     </message>
     <message id="orn-cat-games">
         <source>Games</source>
-        <translation>Spel</translation>
+        <translation>Spil</translation>
     </message>
     <message id="orn-cat-game">
         <source>Game</source>
-        <translation>Spel</translation>
+        <translation>Spil</translation>
     </message>
     <message id="orn-cat-action">
         <source>Action</source>
@@ -251,11 +251,11 @@
     </message>
     <message id="orn-cat-adventure">
         <source>Adventure</source>
-        <translation>Äventyr</translation>
+        <translation>Eventyr</translation>
     </message>
     <message id="orn-cat-arcade">
         <source>Arcade</source>
-        <translation>Arkad</translation>
+        <translation>Arkade</translation>
     </message>
     <message id="orn-cat-card-casino">
         <source>Card &amp; casino</source>
@@ -263,11 +263,11 @@
     </message>
     <message id="orn-cat-education">
         <source>Education</source>
-        <translation>Utbildning</translation>
+        <translation>Uddannelse</translation>
     </message>
     <message id="orn-cat-puzzle">
         <source>Puzzle</source>
-        <translation>Pussel</translation>
+        <translation>Gåde</translation>
     </message>
     <message id="orn-cat-strategy">
         <source>Strategy</source>
@@ -279,31 +279,31 @@
     </message>
     <message id="orn-cat-translations">
         <source>Translations</source>
-        <translation>Översättningar</translation>
+        <translation>Oversættelser</translation>
     </message>
     <message id="orn-cat-fonts">
         <source>Fonts</source>
-        <translation>Teckensnitt</translation>
+        <translation>Skifttyper</translation>
     </message>
     <message id="orn-cat-libraries">
         <source>Libraries</source>
-        <translation>Bibliotek</translation>
+        <translation>Biblioteker</translation>
     </message>
     <message id="orn-update-available">
         <source>Update available</source>
-        <translation>Uppdatering tillgänglig</translation>
+        <translation>Opdatering tilgængelig</translation>
     </message>
     <message id="orn-update">
         <source>Update</source>
-        <translation>Uppdatera</translation>
+        <translation>Opdatér</translation>
     </message>
     <message id="orn-changelog">
         <source>Changelog</source>
-        <translation>Ändringslogg</translation>
+        <translation>Ændringer</translation>
     </message>
     <message id="orn-user-apps">
         <source>User applications</source>
-        <translation>Användarapplikationer</translation>
+        <translation>Bruger programmer</translation>
     </message>
     <message id="orn-comments-withnum">
         <source>Comments (%0)</source>
@@ -311,41 +311,41 @@
     </message>
     <message id="orn-version-repo-disabled">
         <source>Enable the repository first</source>
-        <translation>Aktivera förrådet först</translation>
+        <translation>Aktivér repositoriumet først</translation>
     </message>
     <message id="orn-search">
         <source>Search</source>
         <extracomment>The search menu item and the search page header text - should be a noun</extracomment>
-        <translation>Sök</translation>
+        <translation>Søgning</translation>
     </message>
     <message id="orn-searchpage-placeholder-noresults">
         <source>Nothing found</source>
-        <translation>Inget hittades</translation>
+        <translation>Intet fundet</translation>
     </message>
     <message id="orn-searchpage-placeholder-noresults-hint">
         <source>Try to change search keywords</source>
-        <translation>Försök ändra sökorden</translation>
+        <translation>Prøv at skifte søgeudtryk</translation>
     </message>
     <message id="orn-searchfield-placeholder">
         <source>Search</source>
         <extracomment>The search field placeholder text - should be a verb</extracomment>
-        <translation>Sök</translation>
+        <translation>Søg</translation>
     </message>
     <message id="orn-searchpage-placeholder-default">
         <source>Search results will be shown here</source>
-        <translation>Sökresultat visas här</translation>
+        <translation>Søgeresultater vil blive vist her</translation>
     </message>
     <message id="orn-searchpage-placeholder-default-hint">
         <source>Type some keywords in the field above</source>
-        <translation>Skriv några sökord i fältet ovan</translation>
+        <translation>Indtast nogle udtryk i feltet over</translation>
     </message>
     <message id="orn-about">
         <source>About Storeman</source>
-        <translation>Om Storeman</translation>
+        <translation>Omkring Storeman</translation>
     </message>
     <message id="orn-translations">
         <source>Translations</source>
-        <translation>Översättningar</translation>
+        <translation>Oversættelser</translation>
     </message>
     <message id="orn-coordinators">
         <source>Coordinators</source>
@@ -353,70 +353,70 @@
     </message>
     <message id="orn-translators">
         <source>Translators</source>
-        <translation>Översättare</translation>
+        <translation>Oversættere</translation>
     </message>
     <message id="orn-reviewers">
         <source>Reviewers</source>
-        <translation>Granskare</translation>
+        <translation>Korrekturlæsere</translation>
     </message>
     <message id="orn-app-description">
         <source>Unofficial native OpenRepos.net client for Sailfish&amp;nbsp;OS</source>
-        <translation>Inofficiell OpenRepos-klient för Sailfish&amp;nbsp;OS</translation>
+        <translation>Uofficiel OpenRepos.net klient til Sailfish&amp;nbsp;OS</translation>
     </message>
     <message id="orn-report">
         <source>Report an Issue</source>
-        <translation>Rapportera ett problem</translation>
+        <translation>Rapportér et problem</translation>
     </message>
     <message id="orn-app-licensing">
         <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation>Detta är öppen källkod, som distribueras under villkoren för &lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT-licensen&lt;/a&gt;</translation>
+        <translation>Denne software er open source distribueret under vilkårende for &lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT Licensen&lt;/a&gt;</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
-        <translation>Ett nätverksfel inträffade</translation>
+        <translation>Der opstod en netværksfejl</translation>
     </message>
     <message id="orn-pull-refresh">
         <source>Pull down to refresh</source>
-        <translation>Dra neråt för att uppdatera</translation>
+        <translation>Træk ned for at genindlæse</translation>
     </message>
     <message id="orn-development">
         <source>Development</source>
-        <translation>Utveckling</translation>
+        <translation>Udvikling</translation>
     </message>
     <message id="orn-developers">
         <source>Developers</source>
-        <translation>Utvecklare</translation>
+        <translation>Udviklere</translation>
     </message>
     <message id="orn-appicon">
         <source>Application Icon</source>
-        <translation>Programikon</translation>
+        <translation>Program Ikon</translation>
     </message>
     <message id="orn-sources">
         <source>Source Code</source>
-        <translation>Källkod</translation>
+        <translation>Kildekode</translation>
     </message>
     <message id="orn-just-now">
         <source>Just now</source>
-        <translation>Just nu</translation>
+        <translation>Lige nu</translation>
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%0 minute(s) ago</source>
         <translation>
-            <numerusform>%0 minut sedan</numerusform>
-            <numerusform>%0 minuter sedan</numerusform>
+            <numerusform>%0 minutter siden</numerusform>
+            <numerusform>%0 minutter siden</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%0 hour(s) ago</source>
         <translation>
-            <numerusform>%0 timma sedan</numerusform>
-            <numerusform>%0 timmar sedan</numerusform>
+            <numerusform>%0 timer siden</numerusform>
+            <numerusform>%0 timer siden</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
         <extracomment>Active label to navigate to the original comment - should be a noun</extracomment>
-        <translation>Svar till %0</translation>
+        <translation>Svar til %0</translation>
     </message>
     <message id="orn-categories">
         <source>Categories</source>
@@ -424,11 +424,11 @@
     </message>
     <message id="orn-category-noapps">
         <source>Currently there are no apps in this category</source>
-        <translation>Det finns ännu inga appar i denna kategori</translation>
+        <translation>Der er endnu ingen programmer i denne kategori</translation>
     </message>
     <message id="orn-cat-unknown2">
         <source>Unknown category</source>
-        <translation>Okänd kategori</translation>
+        <translation>Ukendt kategori</translation>
     </message>
     <message id="orn-comment-body">
         <source>Your comment</source>
@@ -437,99 +437,99 @@
     <message id="orn-reply">
         <source>Reply</source>
         <extracomment>Menu item to reply for a comment - should be a verb</extracomment>
-        <translation>Svara</translation>
+        <translation>Send svar</translation>
     </message>
     <message id="orn-edit">
         <source>Edit</source>
-        <translation>Redigera</translation>
+        <translation>Redigér</translation>
     </message>
     <message id="orn-thisdevice">
         <source>This Device</source>
-        <translation>Denna enhet</translation>
+        <translation>This Device</translation>
     </message>
     <message id="orn-login-menu-item">
         <source>Log in to OpenRepos.net</source>
-        <translation>Logga in på OpenRepos.net</translation>
+        <translation>Log in to OpenRepos.net</translation>
     </message>
     <message id="orn-login-action">
         <source>Log in</source>
-        <translation>Lösenord</translation>
+        <translation>Log in</translation>
     </message>
     <message id="orn-username">
         <source>Username</source>
-        <translation>Användarnamn</translation>
+        <translation>Username</translation>
     </message>
     <message id="orn-acceptable-username">
         <source>Only letters, numbers, and underscores</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation>Endast bokstäver, siffror och understreck</translation>
+        <translation>Only letters, numbers, and underscores</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
-        <translation>Logga in på OpenRepos.net för att kommentera appar och svara på andras kommentarer.&lt;br /&gt;&lt;br /&gt;Storeman lagrar inte ditt lösenord, eller skickar det till tredje part.</translation>
+        <translation>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
-        <translation>Du är inloggad på OpenRepos.net</translation>
+        <translation>You have successfully logged in to the OpenRepos.net</translation>
     </message>
     <message id="orn-loggedout-message">
         <source>You have logged out from the OpenRepos.net</source>
-        <translation>Du har loggat ut från OpenRepos.net</translation>
+        <translation>You have logged out from the OpenRepos.net</translation>
     </message>
     <message id="orn-login-error-title">
         <source>Login error</source>
-        <translation>Inloggningsfel</translation>
+        <translation>Login error</translation>
     </message>
     <message id="orn-login-error-message">
         <source>Could not log in the OpenRepos.net - check your credentials and network connection</source>
-        <translation>Kunde inte logga in på OpenRepos.net. Kontrollera dina inloggningsuppgifter och din nätverksanslutning.</translation>
+        <translation>Could not log in the OpenRepos.net - check your credentials and network connection</translation>
     </message>
     <message id="orn-loggedin-menu-item">
         <source>Logged in as %0</source>
-        <translation>inloggad som %0</translation>
+        <translation>Logged in as %0</translation>
     </message>
     <message id="orn-logout-action">
         <source>Log out</source>
         <extracomment>Menu item</extracomment>
-        <translation>Logga ut</translation>
+        <translation>Log out</translation>
     </message>
     <message id="orn-logout-remorse">
         <source>Logging out</source>
         <extracomment>Remorse text</extracomment>
-        <translation>Loggar ut</translation>
+        <translation>Logging out</translation>
     </message>
     <message id="orn-comment-edit-label">
         <source>Edit your comment</source>
-        <translation>Redigera din kommentar</translation>
+        <translation>Edit your comment</translation>
     </message>
     <message id="orn-comment-update">
         <source>Update</source>
         <extracomment>Update a comment</extracomment>
-        <translation>Uppdatera</translation>
+        <translation>Opdatér</translation>
     </message>
     <message id="orn-comment-send">
         <source>Send</source>
-        <translation>Skicka</translation>
+        <translation>Send</translation>
     </message>
     <message id="orn-authorisation-expires-summary">
         <source>Authorisation expires</source>
-        <translation>Auktoriseringen upphör</translation>
+        <translation>Authorisation expires</translation>
     </message>
     <message id="orn-authorisation-expires-body">
         <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>OpenRepos-auktoriseringen upphör. Klicka för att återauktorisera.</translation>
+        <translation>The OpenRepos authorisation expires. Click to reauthorise.</translation>
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
-        <translation>Auktoriseringen har upphört</translation>
+        <translation>Authorisation expired</translation>
     </message>
     <message id="orn-authorisation-expired-body">
         <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>OpenRepos-auktoriseringen har upphört. Klicka för att återauktorisera.</translation>
+        <translation>The OpenRepos authorisation has expired. Click to reauthorise.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
-        <translation>Klicka för att återauktorisera</translation>
+        <translation>Click to reauthorise</translation>
     </message>
 </context>
 </TS>
