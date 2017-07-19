@@ -20,12 +20,6 @@ BackgroundItem {
         horizontalAlignment: Text.AlignRight
         truncationMode: TruncationMode.Fade
         color: parent.highlighted ? Theme.highlightColor : Theme.primaryColor
-    }    
-
-    OpacityRampEffect {
-        sourceItem: label
-        enabled: label.contentWidth > label.width
-        direction: OpacityRamp.LeftToRight
     }
 
     Image {
