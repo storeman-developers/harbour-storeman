@@ -120,6 +120,7 @@ Item {
         }
         color: !_hasText ? Theme.secondaryColor :
                     sendButtonMouseArea.pressed ? Theme.highlightColor : Theme.primaryColor
+        font.pixelSize: Theme.fontSizeSmall
         text: {
             if (opacity < 1.0) {
                 return ""

@@ -6,7 +6,10 @@ ListItem {
     readonly property bool _userComment: ornClient.userId === commentData.userId
     readonly property bool _authorComment: commentData.userId === userId
 
-    contentHeight: content.height + Theme.paddingLarge * 2
+    contentHeight: content.height + Theme.paddingMedium * 2
+    menu: ornClient.authorised ? contextMenu : null
+    highlighted: down && ornClient.authorised
+    _showPress: highlighted
 
     ContextMenu {
         id: contextMenu
@@ -36,10 +39,6 @@ ListItem {
 //            })
 //        }
     }
-
-    menu: ornClient.authorised ? contextMenu : null
-    highlighted: down && ornClient.authorised
-    _showPress: highlighted
 
     Column {
         id: content
@@ -129,7 +128,6 @@ ListItem {
             linkColor: Theme.primaryColor
             font.pixelSize: Theme.fontSizeSmall
             wrapMode: Text.WordWrap
-            textFormat: Text.RichText
             text: commentData.text
             onLinkActivated: Qt.openUrlExternally(link)
         }
