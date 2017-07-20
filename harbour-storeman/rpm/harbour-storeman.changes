@@ -1,3 +1,8 @@
+* Mon Jul 21 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.7-2
+- Improve comments page appearance
+- Fix comment field jumps when typing in landscape mode
+- Update translations
+
 * Mon Jul 20 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.7-1
 - Fix version comparing
 - Use package update time instead of OpenRepos page update time
