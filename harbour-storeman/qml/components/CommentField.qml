@@ -3,6 +3,7 @@ import Sailfish.Silica 1.0
 import harbour.orn 1.0
 
 Item {
+    property alias isActive: body.activeFocus
     property string _editId
     property string _replyToId
     readonly property bool _hasText: body.text.trim()
@@ -108,15 +109,17 @@ Item {
         //% "Your comment"
         label: qsTrId("orn-comment-body")
         placeholderText: label
+        font.pixelSize: Theme.fontSizeSmall
+        focusOutBehavior: FocusBehavior.KeepFocus
     }
 
     Label {
         id: sendButton
         anchors {
             right: parent.right
-            bottom: body.bottom
             rightMargin: Theme.horizontalPageMargin
-            bottomMargin: height + Theme.paddingMedium
+            verticalCenter: body.top
+            verticalCenterOffset: body.textVerticalCenterOffset + (body._editor.height - height)
         }
         color: !_hasText ? Theme.secondaryColor :
                     sendButtonMouseArea.pressed ? Theme.highlightColor : Theme.primaryColor

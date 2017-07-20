@@ -29,9 +29,15 @@ Page {
 
         PageHeader {
             id: pageHeader
+            // Hide header when typing comment
+            height: orientation === Orientation.Landscape && commentField.isActive ?
+                        0.0 : _preferredHeight
+            visible: height === _preferredHeight
             //% "Comments"
             title: qsTrId("orn-comments")
             description: userName
+
+            Behavior on height { NumberAnimation { } }
         }
 
         SilicaListView {
@@ -45,7 +51,9 @@ Page {
             clip: true
             verticalLayoutDirection: ListView.BottomToTop
 
-            header: CommentField { }
+            header: CommentField {
+                id: commentField
+            }
 
             model: OrnCommentsModel {
                 id: commentsModel
