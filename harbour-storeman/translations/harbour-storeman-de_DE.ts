@@ -143,7 +143,7 @@
     <message id="orn-dt-format">
         <source>yyyy-dd-MM hh:mm</source>
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation>yyyy-dd-MM hh:mm</translation>
+        <translation>dd-MM-yyyy hh:mm</translation>
     </message>
     <message id="orn-version-created">
         <source>First release</source>
@@ -513,23 +513,23 @@
     </message>
     <message id="orn-authorisation-expires-summary">
         <source>Authorisation expires</source>
-        <translation>Authorisation expires</translation>
+        <translation>Authorisierung läuft ab</translation>
     </message>
     <message id="orn-authorisation-expires-body">
         <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>The OpenRepos authorisation expires. Click to reauthorise.</translation>
+        <translation>Die OpenRepos Authorisierung läuft ab. Klicken, um erneut zu authorisieren.</translation>
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
-        <translation>Authorisation expired</translation>
+        <translation>Authorisierung abgelaufen</translation>
     </message>
     <message id="orn-authorisation-expired-body">
         <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>The OpenRepos authorisation has expired. Click to reauthorise.</translation>
+        <translation>Die OpenRepos Authorisierung ist abgelaufen. Klicken, um erneut zu authorisieren.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
-        <translation>Click to reauthorise</translation>
+        <translation>Klicken, um erneut zu authorisieren</translation>
     </message>
 </context>
 </TS>

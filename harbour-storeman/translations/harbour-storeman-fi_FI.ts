@@ -432,7 +432,7 @@
     </message>
     <message id="orn-comment-body">
         <source>Your comment</source>
-        <translation>Kommenttisi</translation>
+        <translation>Kommentti</translation>
     </message>
     <message id="orn-reply">
         <source>Reply</source>
@@ -513,23 +513,23 @@
     </message>
     <message id="orn-authorisation-expires-summary">
         <source>Authorisation expires</source>
-        <translation>Authorisation expires</translation>
+        <translation>Tunnusten käyttöoikeus vanhenee</translation>
     </message>
     <message id="orn-authorisation-expires-body">
         <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>The OpenRepos authorisation expires. Click to reauthorise.</translation>
+        <translation>OpenRepos-tunnusten käyttöoikeus vanhenee. Paina uudistaaksesi käyttöoikeus.</translation>
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
-        <translation>Authorisation expired</translation>
+        <translation>Tunnusten käyttöoikeus vanhentunut</translation>
     </message>
     <message id="orn-authorisation-expired-body">
         <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>The OpenRepos authorisation has expired. Click to reauthorise.</translation>
+        <translation>OpenRepos-tunnusten käyttöoikeus on vanhentunut. Paina uudistaaksesi käyttöoikeus.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
-        <translation>Click to reauthorise</translation>
+        <translation>Uudista käyttöoikeus</translation>
     </message>
 </context>
 </TS>

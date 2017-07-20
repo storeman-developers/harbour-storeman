@@ -175,7 +175,7 @@
     </message>
     <message id="orn-cat-application">
         <source>Application</source>
-        <translation>Applicazione</translation>
+        <translation>App</translation>
     </message>
     <message id="orn-cat-ambience-themes">
         <source>Ambience &amp; Themes</source>
@@ -420,116 +420,116 @@
     </message>
     <message id="orn-categories">
         <source>Categories</source>
-        <translation>Categories</translation>
+        <translation>Categorie</translation>
     </message>
     <message id="orn-category-noapps">
         <source>Currently there are no apps in this category</source>
-        <translation>Currently there are no apps in this category</translation>
+        <translation>Non ci sono app in questa categoria</translation>
     </message>
     <message id="orn-cat-unknown2">
         <source>Unknown category</source>
-        <translation>Unknown category</translation>
+        <translation>Sconosciuto</translation>
     </message>
     <message id="orn-comment-body">
         <source>Your comment</source>
-        <translation>Your comment</translation>
+        <translation>Il tuo commento</translation>
     </message>
     <message id="orn-reply">
         <source>Reply</source>
         <extracomment>Menu item to reply for a comment - should be a verb</extracomment>
-        <translation>Reply</translation>
+        <translation>Rispondi</translation>
     </message>
     <message id="orn-edit">
         <source>Edit</source>
-        <translation>Edit</translation>
+        <translation>Modifica</translation>
     </message>
     <message id="orn-thisdevice">
         <source>This Device</source>
-        <translation>This Device</translation>
+        <translation>Questo dispositivo</translation>
     </message>
     <message id="orn-login-menu-item">
         <source>Log in to OpenRepos.net</source>
-        <translation>Log in to OpenRepos.net</translation>
+        <translation>Accedi a OpenRepos.net</translation>
     </message>
     <message id="orn-login-action">
         <source>Log in</source>
-        <translation>Log in</translation>
+        <translation>Accedi</translation>
     </message>
     <message id="orn-username">
         <source>Username</source>
-        <translation>Username</translation>
+        <translation>Nome utente</translation>
     </message>
     <message id="orn-acceptable-username">
         <source>Only letters, numbers, and underscores</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation>Only letters, numbers, and underscores</translation>
+        <translation>Solo lettere, numeri e trattini bassi</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
-        <translation>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</translation>
+        <translation>Accedi a OpenRepos.net per commentare e rispondere agli altri commenti.&lt;br /&gt;&lt;br /&gt;Storeman non salverà né invierà la tua password a terzi.</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
-        <translation>You have successfully logged in to the OpenRepos.net</translation>
+        <translation>Accesso a OpenRepos.net eseguito</translation>
     </message>
     <message id="orn-loggedout-message">
         <source>You have logged out from the OpenRepos.net</source>
-        <translation>You have logged out from the OpenRepos.net</translation>
+        <translation>Sei uscito da OpenRepos.net</translation>
     </message>
     <message id="orn-login-error-title">
         <source>Login error</source>
-        <translation>Login error</translation>
+        <translation>Errore accesso</translation>
     </message>
     <message id="orn-login-error-message">
         <source>Could not log in the OpenRepos.net - check your credentials and network connection</source>
-        <translation>Could not log in the OpenRepos.net - check your credentials and network connection</translation>
+        <translation>Non è possibile accedere a OpenRepos.net - controlla le tue credenziali e la rete</translation>
     </message>
     <message id="orn-loggedin-menu-item">
         <source>Logged in as %0</source>
-        <translation>Logged in as %0</translation>
+        <translation>Accesso come %0</translation>
     </message>
     <message id="orn-logout-action">
         <source>Log out</source>
         <extracomment>Menu item</extracomment>
-        <translation>Log out</translation>
+        <translation>Esci</translation>
     </message>
     <message id="orn-logout-remorse">
         <source>Logging out</source>
         <extracomment>Remorse text</extracomment>
-        <translation>Logging out</translation>
+        <translation>Uscita</translation>
     </message>
     <message id="orn-comment-edit-label">
         <source>Edit your comment</source>
-        <translation>Edit your comment</translation>
+        <translation>Modifica commento</translation>
     </message>
     <message id="orn-comment-update">
         <source>Update</source>
         <extracomment>Update a comment</extracomment>
-        <translation>Update</translation>
+        <translation>Aggiorna</translation>
     </message>
     <message id="orn-comment-send">
         <source>Send</source>
-        <translation>Send</translation>
+        <translation>Invia</translation>
     </message>
     <message id="orn-authorisation-expires-summary">
         <source>Authorisation expires</source>
-        <translation>Authorisation expires</translation>
+        <translation>Autorizzazione scade</translation>
     </message>
     <message id="orn-authorisation-expires-body">
         <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>The OpenRepos authorisation expires. Click to reauthorise.</translation>
+        <translation>L&apos;autorizzazione a OpenRepos.net scade. Clicca per riaccedere.</translation>
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
-        <translation>Authorisation expired</translation>
+        <translation>Autorizzazione scaduta</translation>
     </message>
     <message id="orn-authorisation-expired-body">
         <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>The OpenRepos authorisation has expired. Click to reauthorise.</translation>
+        <translation>L&apos;autorizzazione a OpenRepos.net è scaduta. Clicca per riaccedere.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
-        <translation>Click to reauthorise</translation>
+        <translation>Clicca per riaccedere</translation>
     </message>
 </context>
 </TS>

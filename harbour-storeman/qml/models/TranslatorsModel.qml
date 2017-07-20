@@ -47,6 +47,7 @@ ListModel {
             ListElement { name: "monkeyisland" }
         ]
         translators: [
+            ListElement { name: "chwa" },
             ListElement { name: "inta" },
             ListElement { name: "olf" }
         ]

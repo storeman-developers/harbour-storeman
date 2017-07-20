@@ -486,7 +486,7 @@
     </message>
     <message id="orn-loggedin-menu-item">
         <source>Logged in as %0</source>
-        <translation>Iniciada sesión como %0</translation>
+        <translation>Sesión iniciada como %0</translation>
     </message>
     <message id="orn-logout-action">
         <source>Log out</source>

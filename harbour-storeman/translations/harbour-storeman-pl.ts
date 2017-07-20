@@ -418,7 +418,7 @@
     <message id="orn-reply-to">
         <source>Reply to %0</source>
         <extracomment>Active label to navigate to the original comment - should be a noun</extracomment>
-        <translation>Odpowiedz %0</translation>
+        <translation>Odpowiedź do %0</translation>
     </message>
     <message id="orn-categories">
         <source>Categories</source>
@@ -515,23 +515,23 @@
     </message>
     <message id="orn-authorisation-expires-summary">
         <source>Authorisation expires</source>
-        <translation>Authorisation expires</translation>
+        <translation>Autoryzacja wygasa</translation>
     </message>
     <message id="orn-authorisation-expires-body">
         <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>The OpenRepos authorisation expires. Click to reauthorise.</translation>
+        <translation>Autoryzacja OpenRepos wygasa. Kliknij aby uzyskać auoryzację ponownie.</translation>
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
-        <translation>Authorisation expired</translation>
+        <translation>Autoryzacja wygasła</translation>
     </message>
     <message id="orn-authorisation-expired-body">
         <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>The OpenRepos authorisation has expired. Click to reauthorise.</translation>
+        <translation>Autoryzacja OpenRepos wygasła. Kliknij aby uzyskać auoryzację ponownie.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
-        <translation>Click to reauthorise</translation>
+        <translation>Kliknij aby uzyskać autoryzację ponownie.</translation>
     </message>
 </context>
 </TS>

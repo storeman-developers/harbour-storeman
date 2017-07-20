@@ -207,7 +207,7 @@
     </message>
     <message id="orn-cat-news-info">
         <source>News &amp; info</source>
-        <translation>Actualité et informations</translation>
+        <translation>Actualité et Informations</translation>
     </message>
     <message id="orn-cat-patches">
         <source>Patches</source>
@@ -513,23 +513,23 @@
     </message>
     <message id="orn-authorisation-expires-summary">
         <source>Authorisation expires</source>
-        <translation>Authorisation expires</translation>
+        <translation>L&apos;autorisation expire</translation>
     </message>
     <message id="orn-authorisation-expires-body">
         <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>The OpenRepos authorisation expires. Click to reauthorise.</translation>
+        <translation>L&apos;autorisation à OpenRepos expire. Cliquer pour renouveler l&apos;autorisation.</translation>
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
-        <translation>Authorisation expired</translation>
+        <translation>Autorisation expirée</translation>
     </message>
     <message id="orn-authorisation-expired-body">
         <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>The OpenRepos authorisation has expired. Click to reauthorise.</translation>
+        <translation>L&apos;autorisation à OpenRepos a expiré. Cliquer pour renouveler l&apos;autorisation.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
-        <translation>Click to reauthorise</translation>
+        <translation>Cliquer pour renouveler l&apos;autorisation</translation>
     </message>
 </context>
 </TS>

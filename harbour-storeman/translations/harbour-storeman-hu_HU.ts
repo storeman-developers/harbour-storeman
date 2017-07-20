@@ -369,7 +369,7 @@
     </message>
     <message id="orn-app-licensing">
         <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation>Ez egy nyílt forráskódú szoftver, ami az &lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT Licenc&lt;/a&gt;feltételei alapján terjerszthető.</translation>
+        <translation>Ez egy nyílt forráskódú szoftver, ami az &lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT Licenc&lt;/a&gt; feltételei alapján terjerszthető.</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
@@ -511,23 +511,23 @@
     </message>
     <message id="orn-authorisation-expires-summary">
         <source>Authorisation expires</source>
-        <translation>Authorisation expires</translation>
+        <translation>Engedély lejár</translation>
     </message>
     <message id="orn-authorisation-expires-body">
         <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>The OpenRepos authorisation expires. Click to reauthorise.</translation>
+        <translation>Az OpenRepos engedélyezése lejár. Kattints az újraengedélyezéshez.</translation>
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
-        <translation>Authorisation expired</translation>
+        <translation>Engedély lejárt</translation>
     </message>
     <message id="orn-authorisation-expired-body">
         <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>The OpenRepos authorisation has expired. Click to reauthorise.</translation>
+        <translation>Az OpenRepos engedélyezése lejárt. Kattints az újraengedélyezéshez.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
-        <translation>Click to reauthorise</translation>
+        <translation>Kattints az újraengedélyezéshez</translation>
     </message>
 </context>
 </TS>
