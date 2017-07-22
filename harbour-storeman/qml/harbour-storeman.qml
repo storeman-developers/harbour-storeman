@@ -2,6 +2,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import MeeGo.Connman 0.2
 import org.nemomobile.notifications 1.0
+import org.nemomobile.dbus 2.0
 import harbour.orn 1.0
 import "pages"
 
@@ -10,6 +11,11 @@ ApplicationWindow
     initialPage: Component { RecentAppsPage { } }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: defaultAllowedOrientations
+
+    Connections {
+        target: __quickWindow
+        onClosing: authorisationWarning.close()
+    }
 
     NetworkManager {
         id: networkManager
@@ -37,12 +43,30 @@ ApplicationWindow
         expireTimeout: 3000
     }
 
+    DBusAdaptor {
+        service: "harbour.storeman.service"
+        iface: "harbour.storeman.service"
+        path: "/harbour/storeman/service"
+        xml: "  <interface name=\"harbour.storeman.service\">\n" +
+             "    <method name=\"loginPage\"/>\n" +
+             "  </interface>\n"
+
+        function loginPage() {
+            __silica_applicationwindow_instance.activate()
+            pageStack.push(Qt.resolvedUrl("pages/AuthorisationDialog.qml"))
+        }
+    }
+
     Notification {
         id: authorisationWarning
-        replacesId: 0
         appIcon: "image://theme/icon-lock-warning"
-        // TODO
-        onClicked: console.log("Implement me!!!")
+        remoteActions: [ {
+                name: "default",
+                service: "harbour.storeman.service",
+                path: "/harbour/storeman/service",
+                iface: "harbour.storeman.service",
+                method: "loginPage"
+            } ]
     }
 
     OrnClient {
@@ -78,4 +102,3 @@ ApplicationWindow
         }
     }
 }
-
