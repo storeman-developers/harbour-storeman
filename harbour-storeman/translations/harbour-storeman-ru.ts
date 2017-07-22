@@ -525,5 +525,21 @@
         <source>Click to reauthorise</source>
         <translation>Коснитесь, чтобы войти заново</translation>
     </message>
+    <message id="orn-enable-all">
+        <source>Enable all</source>
+        <translation>Включить все</translation>
+    </message>
+    <message id="orn-disable-all">
+        <source>Disable all</source>
+        <translation>Отключить все</translation>
+    </message>
+    <message id="orn-enabling-all">
+        <source>Enabling all</source>
+        <translation>Включение</translation>
+    </message>
+    <message id="orn-disabling-all">
+        <source>Disabling all</source>
+        <translation>Отключение</translation>
+    </message>
 </context>
 </TS>

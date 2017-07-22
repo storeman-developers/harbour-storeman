@@ -525,5 +525,21 @@
         <source>Click to reauthorise</source>
         <translation>Kliknij aby uzyskać autoryzację ponownie.</translation>
     </message>
+    <message id="orn-enable-all">
+        <source>Enable all</source>
+        <translation>Enable all</translation>
+    </message>
+    <message id="orn-disable-all">
+        <source>Disable all</source>
+        <translation>Disable all</translation>
+    </message>
+    <message id="orn-enabling-all">
+        <source>Enabling all</source>
+        <translation>Enabling all</translation>
+    </message>
+    <message id="orn-disabling-all">
+        <source>Disabling all</source>
+        <translation>Disabling all</translation>
+    </message>
 </context>
 </TS>

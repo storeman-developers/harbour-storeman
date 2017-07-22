@@ -3,6 +3,7 @@ import Sailfish.Silica 1.0
 import harbour.orn 1.0
 
 Page {
+    id: page
     allowedOrientations: Orientation.All
 
     SilicaListView {
@@ -80,6 +81,25 @@ Page {
                 //% "Reload"
                 text: qsTrId("orn-reload")
                 onClicked: repoModel.reset()
+            }
+
+            MenuItem {
+                visible: repoModel.hasDisabledRepos
+                //% "Enable all"
+                text: qsTrId("orn-enable-all")
+                //% "Enabling all"
+                onClicked: Remorse.popupAction(page, qsTrId("orn-enabling-all"),
+                                               function() { repoModel.enableRepos(true) })
+
+            }
+
+            MenuItem {
+                visible: repoModel.hasEnabledRepos
+                //% "Disable all"
+                text: qsTrId("orn-disable-all")
+                //% "Disabling all"
+                onClicked: Remorse.popupAction(page, qsTrId("orn-disabling-all"),
+                                               function() { repoModel.enableRepos(false) })
             }
         }
     }
