@@ -11,7 +11,6 @@ Item {
 
     PageHeader {
         id: header
-        // TODO: something more elegant
         width: parent.width -
                (image.visible ? image.width + Theme.paddingMedium : 0)
     }

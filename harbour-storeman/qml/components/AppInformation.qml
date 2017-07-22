@@ -90,16 +90,6 @@ BackgroundItem {
             value: app.created.toLocaleString(locale, qsTrId("orn-dt-format"))
         }
 
-        AppInfoLabel {
-            // TODO: Remove completely?
-            visible: false //_expanded && app.created
-            //% "First release"
-            label: qsTrId("orn-version-created")
-            value: app.created.toLocaleString(locale, qsTrId("orn-dt-format")) +
-                   //% "OpenRepos can give an incorrect date"
-                   "<br /><i>* " + qsTrId("orn-created-note") + "</i>"
-        }
-
         Image {
             anchors.right: parent.right
             source: "image://theme/icon-lock-more"

@@ -145,17 +145,9 @@
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
         <translation>dd-MM-yyyy hh:mm</translation>
     </message>
-    <message id="orn-version-created">
-        <source>First release</source>
-        <translation>Erste Veröffentlichung</translation>
-    </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
         <translation>Keine Versionen verfügbar</translation>
-    </message>
-    <message id="orn-created-note">
-        <source>OpenRepos can give an incorrect date</source>
-        <translation>OpenRepos kann ein falsches Datum angeben</translation>
     </message>
     <message id="orn-comments">
         <source>Comments</source>
@@ -361,7 +353,7 @@
     </message>
     <message id="orn-app-description">
         <source>Unofficial native OpenRepos.net client for Sailfish&amp;nbsp;OS</source>
-        <translation>Inoffizieller nativer OpenRepos.net client für Sailfish&amp;nbsp;OS</translation>
+        <translation>Inoffizieller nativer OpenRepos.net-Client für Sailfish&amp;nbsp;OS</translation>
     </message>
     <message id="orn-report">
         <source>Report an Issue</source>
@@ -369,7 +361,7 @@
     </message>
     <message id="orn-app-licensing">
         <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation>Dies ist eine Open Source Software, die unter den Bedingungen der&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt; erstellt wurde.</translation>
+        <translation>Dies ist eine Open Source Software, die unter den Bedingungen der&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT-Lizenz&lt;/a&gt; erstellt wurde.</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
@@ -482,7 +474,7 @@
     </message>
     <message id="orn-login-error-message">
         <source>Could not log in the OpenRepos.net - check your credentials and network connection</source>
-        <translation>Du konntest nicht bei OpenRepos.net angemeldet werden, überprüfe deine Zugsangsdaten und die Netzwerkverbindung</translation>
+        <translation>Du konntest nicht bei OpenRepos.net angemeldet werden, überprüfe deine Zugangsdaten und die Netzwerkverbindung</translation>
     </message>
     <message id="orn-loggedin-menu-item">
         <source>Logged in as %0</source>
@@ -513,23 +505,23 @@
     </message>
     <message id="orn-authorisation-expires-summary">
         <source>Authorisation expires</source>
-        <translation>Authorisierung läuft ab</translation>
+        <translation>Autorisierung läuft ab</translation>
     </message>
     <message id="orn-authorisation-expires-body">
         <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>Die OpenRepos Authorisierung läuft ab. Klicken, um erneut zu authorisieren.</translation>
+        <translation>Die OpenRepos-Autorisierung läuft ab. Klicken, um erneut zu autorisieren.</translation>
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
-        <translation>Authorisierung abgelaufen</translation>
+        <translation>Autorisierung abgelaufen</translation>
     </message>
     <message id="orn-authorisation-expired-body">
         <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>Die OpenRepos Authorisierung ist abgelaufen. Klicken, um erneut zu authorisieren.</translation>
+        <translation>Die OpenRepos-Autorisierung ist abgelaufen. Klicken, um erneut zu autorisieren.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
-        <translation>Klicken, um erneut zu authorisieren</translation>
+        <translation>Klicken, um erneut zu autorisieren</translation>
     </message>
 </context>
 </TS>

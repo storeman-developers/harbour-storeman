@@ -145,17 +145,9 @@
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
         <translation>dd-MM-yyyy hh:mm</translation>
     </message>
-    <message id="orn-version-created">
-        <source>First release</source>
-        <translation>Første udgivelse</translation>
-    </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
         <translation>Ingen versioner tilgængelige</translation>
-    </message>
-    <message id="orn-created-note">
-        <source>OpenRepos can give an incorrect date</source>
-        <translation>OpenRepos kan give en forkert dato</translation>
     </message>
     <message id="orn-comments">
         <source>Comments</source>
