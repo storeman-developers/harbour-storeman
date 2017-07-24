@@ -539,5 +539,13 @@
         <source>Disabling all</source>
         <translation>Disabling all</translation>
     </message>
+    <message id="orn-installed-apps">
+        <source>Installed Applications</source>
+        <translation>Installed Applications</translation>
+    </message>
+    <message id="orn-no-installed-apps">
+        <source>Could not find any applications installed from OpenRepos</source>
+        <translation>Could not find any applications installed from OpenRepos</translation>
+    </message>
 </context>
 </TS>

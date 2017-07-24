@@ -527,19 +527,27 @@
     </message>
     <message id="orn-enable-all">
         <source>Enable all</source>
-        <translation>Enable all</translation>
+        <translation>Włącz wszystkie</translation>
     </message>
     <message id="orn-disable-all">
         <source>Disable all</source>
-        <translation>Disable all</translation>
+        <translation>Wyłącz wszystkie</translation>
     </message>
     <message id="orn-enabling-all">
         <source>Enabling all</source>
-        <translation>Enabling all</translation>
+        <translation>Włączanie wszystkich</translation>
     </message>
     <message id="orn-disabling-all">
         <source>Disabling all</source>
-        <translation>Disabling all</translation>
+        <translation>Wyłączanie wszystkich</translation>
+    </message>
+    <message id="orn-installed-apps">
+        <source>Installed Applications</source>
+        <translation>Installed Applications</translation>
+    </message>
+    <message id="orn-no-installed-apps">
+        <source>Could not find any applications installed from OpenRepos</source>
+        <translation>Could not find any applications installed from OpenRepos</translation>
     </message>
 </context>
 </TS>

@@ -454,7 +454,7 @@
     <message id="orn-acceptable-username">
         <source>Only letters, numbers, and underscores</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation>Sólo letras, números y subrayados</translation>
+        <translation>Sólo letras, números y guiones bajos</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
@@ -525,19 +525,27 @@
     </message>
     <message id="orn-enable-all">
         <source>Enable all</source>
-        <translation>Enable all</translation>
+        <translation>Habilitar todo</translation>
     </message>
     <message id="orn-disable-all">
         <source>Disable all</source>
-        <translation>Disable all</translation>
+        <translation>Deshabilitar todo</translation>
     </message>
     <message id="orn-enabling-all">
         <source>Enabling all</source>
-        <translation>Enabling all</translation>
+        <translation>Habilitando todo</translation>
     </message>
     <message id="orn-disabling-all">
         <source>Disabling all</source>
-        <translation>Disabling all</translation>
+        <translation>Deshabilitando todo</translation>
+    </message>
+    <message id="orn-installed-apps">
+        <source>Installed Applications</source>
+        <translation>Installed Applications</translation>
+    </message>
+    <message id="orn-no-installed-apps">
+        <source>Could not find any applications installed from OpenRepos</source>
+        <translation>Could not find any applications installed from OpenRepos</translation>
     </message>
 </context>
 </TS>
