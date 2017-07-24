@@ -1,9 +1,16 @@
-* Mon Jul 21 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.7-2
+* Tue Jul 25 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.8-1
+- Add authorisation notification action
+- Add enable/disable all repositories functionality
+- Initial support for listing of installed apps
+- Update translations
+- Fix weekdays in changelog
+
+* Fri Jul 21 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.7-2
 - Improve comments page appearance
 - Fix comment field jumps when typing in landscape mode
 - Update translations
 
-* Mon Jul 20 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.7-1
+* Thu Jul 20 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.7-1
 - Fix version comparing
 - Use package update time instead of OpenRepos page update time
 - Add ability to comment, reply to comments and edit comments
@@ -13,7 +20,7 @@
 - Some UI improvements
 - Update translations and add Danish translation
 
-* Mon Jul 11 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.6-1
+* Tue Jul 11 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.6-1
 - Allow all orintations
 - Do not highlight app information label on short press or flick
 - Better update month label
@@ -26,14 +33,14 @@
 - Add categories page
 - Update translations (add French, Italian and Spanish translations)
 
-* Mon Jul  9 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.4-1
+* Sun Jul  9 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.4-1
 - Add about page
 - Add Dutch, German, Polish and Swedish translations (thanks to the community, details are on the Transifex project page)
 - New awesome application icon by Laurent_C <l.chambon@gmail.com>
 - Improve comments list (add link to an original comment for replies, better timestamp label)
 - Update recently updated apps list
 
-* Mon Jul  4 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.3-1
+* Tue Jul  4 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.3-1
 - Add search page
 - Fix freezing after installation/removing
 - Better information about available app version
