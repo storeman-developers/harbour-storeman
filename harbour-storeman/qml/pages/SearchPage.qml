@@ -4,6 +4,8 @@ import harbour.orn 1.0
 import "../components"
 
 Page {
+    property string initialSearch
+
     function _reset() {
         searchModel.searchKey = ""
         //% "Search results will be shown here"
@@ -12,10 +14,16 @@ Page {
         viewPlaceholder.hintText = qsTrId("orn-searchpage-placeholder-default-hint")
     }
 
+    function _search(text) {
+        searchModel.searchKey = text
+        viewPlaceholder.text = ""
+        viewPlaceholder.hintText = ""
+    }
+
     id: page
     allowedOrientations: defaultAllowedOrientations
 
-    Component.onCompleted: _reset()
+    Component.onCompleted: if (!initialSearch) _reset()
 
     SilicaListView
     {
@@ -37,27 +45,30 @@ Page {
             width: parent.width
 
             PageHeader {
-               //: The search menu item and the search page header text - should be a noun
-               //% "Search"
-               title: qsTrId("orn-search")
+                //: The search menu item and the search page header text - should be a noun
+                //% "Search"
+                title: qsTrId("orn-search")
             }
 
             SearchField {
-               width: parent.width
-               //: The search field placeholder text - should be a verb
-               //% "Search"
-               placeholderText: qsTrId("orn-searchfield-placeholder")
+                width: parent.width
+                //: The search field placeholder text - should be a verb
+                //% "Search"
+                placeholderText: qsTrId("orn-searchfield-placeholder")
 
-               EnterKey.enabled: text.length > 0
-               EnterKey.iconSource: "image://theme/icon-m-enter-accept"
-               EnterKey.onClicked: {
-                   searchModel.searchKey = text
-                   viewPlaceholder.text = ""
-                   viewPlaceholder.hintText = ""
-               }
+                EnterKey.enabled: text.length > 0
+                EnterKey.iconSource: "image://theme/icon-m-enter-accept"
+                EnterKey.onClicked: _search(text)
 
-               onTextChanged: if (!text) page._reset()
-               Component.onCompleted: forceActiveFocus()
+                onTextChanged: if (!text) _reset()
+                Component.onCompleted: {
+                    if (initialSearch) {
+                        text = initialSearch
+                        _search(initialSearch)
+                    } else {
+                        forceActiveFocus()
+                    }
+                }
             }
         }
 

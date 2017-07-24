@@ -41,6 +41,8 @@ Page {
 
         delegate: ListItem {
             contentHeight: Theme.itemSizeExtraLarge
+            onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
+                                      { initialSearch: appName })
 
             Row {
                 id: row
