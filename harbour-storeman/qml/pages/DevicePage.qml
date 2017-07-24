@@ -57,6 +57,13 @@ Page {
                 text: qsTrId("orn-repositories")
                 onClicked: pageStack.push(Qt.resolvedUrl("RepositoriesPage.qml"))
             }
+
+            ListMenuItem {
+                iconSource: "image://theme/icon-m-sailfish?" +
+                            (pressed ? Theme.highlightColor : Theme.primaryColor)
+                text: qsTrId("orn-installed-apps")
+                onClicked: pageStack.push(Qt.resolvedUrl("InstalledAppsPage.qml"))
+            }
         }
 
         VerticalScrollDecorator { }

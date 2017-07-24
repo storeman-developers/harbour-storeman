@@ -19,6 +19,7 @@ PkgConfigBR:
   - Qt5Qml
   - Qt5Quick
   - packagekit-qt5 >= 0.8.8
+  - libzypp
 
 Requires:
   - sailfishsilica-qt5 >= 0.10.9 

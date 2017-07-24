@@ -9,7 +9,7 @@ LIBS += -lornplugin -L$$OUT_PWD/../ornplugin
 PRE_TARGETDEPS += $$OUT_PWD/../ornplugin/libornplugin.a
 INCLUDEPATH += ../ornplugin/src
 
-PKGCONFIG += packagekit-qt5
+PKGCONFIG += packagekit-qt5 libzypp
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 256x256
 
@@ -38,6 +38,7 @@ OTHER_FILES +=  \
     qml/pages/CategoryPage.qml \
     qml/pages/DevicePage.qml \
     qml/pages/AuthorisationDialog.qml \
+    qml/pages/InstalledAppsPage.qml \
     qml/components/AppListDelegate.qml \
     qml/components/RatingBox.qml \
     qml/components/IconLabel.qml \
