@@ -66,6 +66,8 @@ Page {
                 }
             }
 
+            onClicked: showMenu()
+
             Label {
                 anchors.verticalCenter: parent.verticalCenter
                 x: Theme.horizontalPageMargin
