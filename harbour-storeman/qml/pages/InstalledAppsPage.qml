@@ -12,10 +12,11 @@ Page {
         anchors.fill: parent
         model: OrnProxyModel {
             id: proxyModel
-            sortRole: OrnInstalledAppsModel.NameRole
+            sortRole: OrnInstalledAppsModel.TitleRole
             sortCaseSensitivity: Qt.CaseInsensitive
             sourceModel: OrnInstalledAppsModel {
                 id: installedAppsModel
+                zypp: zyppRunner
                 onModelAboutToBeReset: viewPlaceholder.text = ""
                 onModelReset: {
                     proxyModel.sort(Qt.AscendingOrder)
@@ -77,7 +78,7 @@ Page {
                         verticalAlignment: Qt.AlignVCenter
                         font.pixelSize: Theme.fontSizeExtraSmall
                         wrapMode: Text.WordWrap
-                        text: appName
+                        text: appTitle
                     }
 
                     Label {
