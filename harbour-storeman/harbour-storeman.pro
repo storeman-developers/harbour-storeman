@@ -1,5 +1,6 @@
 TARGET = harbour-storeman
 
+QT += concurrent
 CONFIG += sailfishapp
 
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"

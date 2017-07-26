@@ -10,7 +10,7 @@ Page {
         model: DevelopersModel { }
 
         header: PageHeader {
-            //% "Development
+            //% "Development"
             title: qsTrId("orn-development")
         }
 
