@@ -17,7 +17,6 @@ Page {
 
     OrnRecentAppsModel {
         id: appsModel
-        Component.onCompleted: apiRequest.networkManager = dataAccessManager
     }
 
     SilicaListView {

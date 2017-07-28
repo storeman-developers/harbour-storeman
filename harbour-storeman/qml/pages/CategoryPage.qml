@@ -19,7 +19,6 @@ Page {
 
         model: OrnCategoryAppsModel {
             id: categoryModel
-            Component.onCompleted: apiRequest.networkManager = dataAccessManager
             onReplyProcessed: {
                 if (rowCount() === 0) {
                     //% "Currently there are no apps in this category"

@@ -71,7 +71,6 @@ ApplicationWindow
 
     OrnClient {
         id: ornClient
-        networkManager: dataAccessManager
         onAuthorisedChanged: authorised ?
                                  //% "You have successfully logged in to the OpenRepos.net"
                                  notification.show(qsTrId("orn-loggedin-message")) :

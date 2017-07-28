@@ -27,7 +27,6 @@ Page {
 
         model: OrnCategoriesModel {
             id: categoriesModel
-            Component.onCompleted: apiRequest.networkManager = dataAccessManager
         }
 
         delegate: MoreButton {

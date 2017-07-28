@@ -7,7 +7,7 @@ ListItem {
     property alias showUser: userNameLabel.visible
     property int previousAppId: -1
     // To reduce calls of model data() method store item data in a property
-    readonly property OrnAppListItem app: appData
+    readonly property variant app: appData
 
     contentHeight: Theme.itemSizeExtraLarge
 
@@ -43,7 +43,7 @@ ListItem {
 
             Label {
                 id: titleLabel
-                width: parent.width
+                width: parent.width - star.width
                 maximumLineCount: 2
                 verticalAlignment: Qt.AlignVCenter
                 font.pixelSize: Theme.fontSizeExtraSmall
@@ -75,6 +75,16 @@ ListItem {
                     text: app.userName
                 }
             }
+        }
+    }
+
+    BookmarkButton {
+        id: star
+        anchors {
+            right: parent.right
+            rightMargin: Theme.paddingSmall
+            bottom: parent.bottom
+            bottomMargin: userNameLabel.height + Theme.paddingSmall
         }
     }
 }

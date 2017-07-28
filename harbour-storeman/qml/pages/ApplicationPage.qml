@@ -13,7 +13,6 @@ Page {
 
     OrnApplication {
         id: app
-        networkManager: dataAccessManager
 
         onUpdated: flickable.visible = true
 

@@ -37,9 +37,6 @@ int main(int argc, char *argv[])
     auto view = SailfishApp::createView();
     auto root = view->rootContext();
 
-    QNetworkAccessManager dataAccessManager;
-    root->setContextProperty(QStringLiteral("dataAccessManager"), &dataAccessManager);
-
     OrnZypp zyppRunner;
     root->setContextProperty(QStringLiteral("zyppRunner"), &zyppRunner);
 

@@ -30,7 +30,6 @@ Page {
             sourceModel: OrnUserAppsModel {
                 id: appsModel
                 onRowsInserted: proxyModel.sort(Qt.AscendingOrder)
-                Component.onCompleted: apiRequest.networkManager = dataAccessManager
             }
         }
 

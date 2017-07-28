@@ -57,7 +57,6 @@ Page {
 
             model: OrnCommentsModel {
                 id: commentsModel
-                Component.onCompleted: apiRequest.networkManager = dataAccessManager
             }
 
             delegate: CommentDelegate { }

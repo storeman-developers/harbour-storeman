@@ -40,6 +40,7 @@ OTHER_FILES +=  \
     qml/pages/DevicePage.qml \
     qml/pages/AuthorisationDialog.qml \
     qml/pages/InstalledAppsPage.qml \
+    qml/pages/BookmarksPage.qml \
     qml/components/AppListDelegate.qml \
     qml/components/RatingBox.qml \
     qml/components/IconLabel.qml \
@@ -55,6 +56,7 @@ OTHER_FILES +=  \
     qml/components/CommentDelegate.qml \
     qml/components/CommentField.qml \
     qml/components/ListMenuItem.qml \
+    qml/components/BookmarkButton.qml \
     qml/models/DevelopersModel.qml \
     qml/models/TranslatorsModel.qml
 

@@ -18,14 +18,14 @@ Page {
             PageHeader {
                 //% "This Device"
                 title: qsTrId("orn-thisdevice")
-                description: ornClient.deviceModel
+                description: ornClient ? ornClient.deviceModel : ""
             }
 
             ListMenuItem {
-                iconSource: ornClient.userIconSource ? ornClient.userIconSource :
+                iconSource: ornClient && ornClient.userIconSource ? ornClient.userIconSource :
                                 "image://theme/icon-m-person?" +
                                 (pressed ? Theme.highlightColor : Theme.primaryColor)
-                text: ornClient.authorised ?
+                text: ornClient && ornClient.authorised ?
                           //% "Logged in as %0"
                           qsTrId("orn-loggedin-menu-item").arg(ornClient.userName) :
                           //% "Log in to OpenRepos.net"
@@ -63,6 +63,13 @@ Page {
                             (pressed ? Theme.highlightColor : Theme.primaryColor)
                 text: qsTrId("orn-installed-apps")
                 onClicked: pageStack.push(Qt.resolvedUrl("InstalledAppsPage.qml"))
+            }
+
+            ListMenuItem {
+                iconSource: "image://theme/icon-m-favorite-selected?" +
+                            (pressed ? Theme.highlightColor : Theme.primaryColor)
+                text: qsTrId("orn-bookmarks")
+                onClicked: pageStack.push(Qt.resolvedUrl("BookmarksPage.qml"))
             }
         }
 

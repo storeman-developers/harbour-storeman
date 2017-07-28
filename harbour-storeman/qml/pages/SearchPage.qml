@@ -38,7 +38,6 @@ Page {
                     viewPlaceholder.hintText = qsTrId("orn-searchpage-placeholder-noresults-hint")
                 }
             }
-            Component.onCompleted: apiRequest.networkManager = dataAccessManager
         }
 
         header: Column {
