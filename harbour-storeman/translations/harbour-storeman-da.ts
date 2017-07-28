@@ -547,5 +547,21 @@
         <source>Could not find any applications installed from OpenRepos</source>
         <translation>Could not find any applications installed from OpenRepos</translation>
     </message>
+    <message id="orn-bookmarks-added">
+        <source>The app was added to bookmarks</source>
+        <translation>The app was added to bookmarks</translation>
+    </message>
+    <message id="orn-bookmarks-removed">
+        <source>The app was removed from bookmarks</source>
+        <translation>The app was removed from bookmarks</translation>
+    </message>
+    <message id="orn-no-bookmarks">
+        <source>Your bookmarked applications will be shown here</source>
+        <translation>Your bookmarked applications will be shown here</translation>
+    </message>
+    <message id="orn-bookmarks">
+        <source>Bookmarks</source>
+        <translation>Bookmarks</translation>
+    </message>
 </context>
 </TS>

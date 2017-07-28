@@ -460,7 +460,9 @@
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
-        <translation>Авторизуйтесь на OpenRepos.net, чтобы комментировать приложения и отвечать на комментарии других пользователей.&lt;br /&gt;&lt;br /&gt;Storeman не хранит ваш пароль и не передает его третьим лицам.</translation>
+        <translation>Авторизуйтесь на OpenRepos.net, чтобы комментировать приложения и отвечать на комментарии других пользователей.
+
+Storeman не хранит ваш пароль и не передает его третьим лицам.</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
@@ -548,6 +550,22 @@
     <message id="orn-no-installed-apps">
         <source>Could not find any applications installed from OpenRepos</source>
         <translation>Не удалось найти приложения, установленные из OpenRepos</translation>
+    </message>
+    <message id="orn-bookmarks-added">
+        <source>The app was added to bookmarks</source>
+        <translation>Приложение добавлено в закладки</translation>
+    </message>
+    <message id="orn-bookmarks-removed">
+        <source>The app was removed from bookmarks</source>
+        <translation>Приложение удалено из закладок</translation>
+    </message>
+    <message id="orn-no-bookmarks">
+        <source>Your bookmarked applications will be shown here</source>
+        <translation>Здесь появятся ваши закладки</translation>
+    </message>
+    <message id="orn-bookmarks">
+        <source>Bookmarks</source>
+        <translation>Закладки</translation>
     </message>
 </context>
 </TS>

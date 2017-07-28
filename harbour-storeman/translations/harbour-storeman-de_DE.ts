@@ -45,15 +45,15 @@
     </message>
     <message id="orn-app-not-found-body">
         <source>Application with such id was not found</source>
-        <translation>Die Anwendung mit einer solchen ID wurde nicht gefunden</translation>
+        <translation>Eine Anwendung mit einer solchen ID wurde nicht gefunden</translation>
     </message>
     <message id="orn-app-error-body">
         <source>An error occured while fetching application data</source>
-        <translation>Beim Abrufen von Anwendungsdaten ist ein Fehler aufgetreten</translation>
+        <translation>Beim Abrufen der Anwendungsdaten ist ein Fehler aufgetreten</translation>
     </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
-        <translation>Keine Netzwerkverbindung </translation>
+        <translation>Keine Netzwerkverbindung</translation>
     </message>
     <message id="orn-today">
         <source>Today</source>
@@ -143,7 +143,7 @@
     <message id="orn-dt-format">
         <source>yyyy-dd-MM hh:mm</source>
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation>dd-MM-yyyy hh:mm</translation>
+        <translation>dd.MM.yyyy hh:mm</translation>
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
@@ -207,7 +207,7 @@
     </message>
     <message id="orn-cat-photo-video">
         <source>Photo &amp; video</source>
-        <translation>Photo &amp; Video</translation>
+        <translation>Foto &amp; Video</translation>
     </message>
     <message id="orn-cat-social-networks">
         <source>Social Networks</source>
@@ -361,7 +361,7 @@
     </message>
     <message id="orn-app-licensing">
         <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation>Dies ist eine Open Source Software, die unter den Bedingungen der&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT-Lizenz&lt;/a&gt; erstellt wurde.</translation>
+        <translation>Dies ist eine Open-Source-Software, die unter den Bedingungen der&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT-Lizenz&lt;/a&gt; erstellt wurde.</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
@@ -385,7 +385,7 @@
     </message>
     <message id="orn-sources">
         <source>Source Code</source>
-        <translation>Quell-Code</translation>
+        <translation>Quelltext</translation>
     </message>
     <message id="orn-just-now">
         <source>Just now</source>
@@ -408,7 +408,7 @@
     <message id="orn-reply-to">
         <source>Reply to %0</source>
         <extracomment>Active label to navigate to the original comment - should be a noun</extracomment>
-        <translation>Antworte %0</translation>
+        <translation>Antwort an %0</translation>
     </message>
     <message id="orn-categories">
         <source>Categories</source>
@@ -458,7 +458,7 @@
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
-        <translation>Anmelden um bei OpenRepos.net Programme zu kommentieren und auf Kommentare zu antworten. &lt;br /&gt;&lt;br /&gt;Storeman speichert weder dein Passwort, noch wird es an dritte weitergegeben.</translation>
+        <translation>Melde dich bei OpenRepos.net an, um Programme zu kommentieren und auf Kommentare zu antworten. &lt;br /&gt;&lt;br /&gt;Storeman speichert weder dein Passwort, noch wird es an dritte weitergegeben.</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
@@ -541,11 +541,27 @@
     </message>
     <message id="orn-installed-apps">
         <source>Installed Applications</source>
-        <translation>Installed Applications</translation>
+        <translation>Installierte Programme</translation>
     </message>
     <message id="orn-no-installed-apps">
         <source>Could not find any applications installed from OpenRepos</source>
-        <translation>Could not find any applications installed from OpenRepos</translation>
+        <translation>Keine über OpenRepos installierten Programme gefunden</translation>
+    </message>
+    <message id="orn-bookmarks-added">
+        <source>The app was added to bookmarks</source>
+        <translation>Das Programm wurde zu den Lesezeichen hinzugefügt</translation>
+    </message>
+    <message id="orn-bookmarks-removed">
+        <source>The app was removed from bookmarks</source>
+        <translation>Das Programm wurde aus den Lesezeichen entfernt</translation>
+    </message>
+    <message id="orn-no-bookmarks">
+        <source>Your bookmarked applications will be shown here</source>
+        <translation>Your bookmarked applications will be shown here</translation>
+    </message>
+    <message id="orn-bookmarks">
+        <source>Bookmarks</source>
+        <translation>Bookmarks</translation>
     </message>
 </context>
 </TS>

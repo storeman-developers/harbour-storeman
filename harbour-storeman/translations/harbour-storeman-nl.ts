@@ -541,11 +541,27 @@
     </message>
     <message id="orn-installed-apps">
         <source>Installed Applications</source>
-        <translation>Installed Applications</translation>
+        <translation>Geïnstalleerde apps</translation>
     </message>
     <message id="orn-no-installed-apps">
         <source>Could not find any applications installed from OpenRepos</source>
-        <translation>Could not find any applications installed from OpenRepos</translation>
+        <translation>Geen apps geïnstalleerd van OpenRepos gevonden</translation>
+    </message>
+    <message id="orn-bookmarks-added">
+        <source>The app was added to bookmarks</source>
+        <translation>De app is toegevoegd aan je bladwijzers</translation>
+    </message>
+    <message id="orn-bookmarks-removed">
+        <source>The app was removed from bookmarks</source>
+        <translation>De app is verwijderd uit je bladwijzers</translation>
+    </message>
+    <message id="orn-no-bookmarks">
+        <source>Your bookmarked applications will be shown here</source>
+        <translation>Your bookmarked applications will be shown here</translation>
+    </message>
+    <message id="orn-bookmarks">
+        <source>Bookmarks</source>
+        <translation>Bookmarks</translation>
     </message>
 </context>
 </TS>

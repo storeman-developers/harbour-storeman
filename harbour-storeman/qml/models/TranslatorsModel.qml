@@ -47,6 +47,7 @@ ListModel {
             ListElement { name: "monkeyisland" }
         ]
         translators: [
+            ListElement { name: "feldbaum" },
             ListElement { name: "chwa" },
             ListElement { name: "inta" },
             ListElement { name: "olf" }
@@ -89,6 +90,15 @@ ListModel {
             ListElement { name: "mentaljam" }
         ]
         translators: []
+        reviewers: []
+    }
+
+    ListElement {
+        locale: "sl_SI"
+        coordinators: []
+        translators: [
+            ListElement { name: "sponka" }
+        ]
         reviewers: []
     }
 

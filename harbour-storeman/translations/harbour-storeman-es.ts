@@ -478,7 +478,7 @@
     </message>
     <message id="orn-loggedin-menu-item">
         <source>Logged in as %0</source>
-        <translation>Sesión iniciada como %0</translation>
+        <translation>Conectado como %0</translation>
     </message>
     <message id="orn-logout-action">
         <source>Log out</source>
@@ -541,11 +541,27 @@
     </message>
     <message id="orn-installed-apps">
         <source>Installed Applications</source>
-        <translation>Installed Applications</translation>
+        <translation>Aplicaciones instaladas</translation>
     </message>
     <message id="orn-no-installed-apps">
         <source>Could not find any applications installed from OpenRepos</source>
-        <translation>Could not find any applications installed from OpenRepos</translation>
+        <translation>No se pudo encontrar ninguna aplicación instalada de OpenRepos</translation>
+    </message>
+    <message id="orn-bookmarks-added">
+        <source>The app was added to bookmarks</source>
+        <translation>La aplicación se ha añadido a favoritos</translation>
+    </message>
+    <message id="orn-bookmarks-removed">
+        <source>The app was removed from bookmarks</source>
+        <translation>La aplicación se ha eliminado de favoritos</translation>
+    </message>
+    <message id="orn-no-bookmarks">
+        <source>Your bookmarked applications will be shown here</source>
+        <translation>Your bookmarked applications will be shown here</translation>
+    </message>
+    <message id="orn-bookmarks">
+        <source>Bookmarks</source>
+        <translation>Bookmarks</translation>
     </message>
 </context>
 </TS>
