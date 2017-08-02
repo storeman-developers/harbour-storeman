@@ -37,8 +37,7 @@ int main(int argc, char *argv[])
     auto view = SailfishApp::createView();
     auto root = view->rootContext();
 
-    OrnZypp zyppRunner;
-    root->setContextProperty(QStringLiteral("zyppRunner"), &zyppRunner);
+    root->setContextProperty(QStringLiteral("ornZypp"), OrnZypp::instance());
 
     NetworkAccessManagerFactory factory;
     view->engine()->setNetworkAccessManagerFactory(&factory);

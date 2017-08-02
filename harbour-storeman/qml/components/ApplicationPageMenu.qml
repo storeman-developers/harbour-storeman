@@ -13,11 +13,14 @@ PullDownMenu {
         visible: text
         enabled: !parent.busy
         text: {
+            if (!app.repoAlias) {
+                return ""
+            }
             switch (app.repoStatus) {
-            case OrnApplication.RepoNotInstalled:
+            case OrnZypp.RepoNotInstalled:
                 //% "Add repository"
                 return qsTrId("orn-repo-add")
-            case OrnApplication.RepoDisabled:
+            case OrnZypp.RepoDisabled:
                 //% "Enable repository"
                 return qsTrId("orn-repo-enable")
             default:
@@ -29,11 +32,11 @@ PullDownMenu {
             case OrnApplication.RepoNotInstalled:
                 //% "Adding"
                 Remorse.popupAction(page, qsTrId("orn-adding-repo"), function() {
-                    app.enableRepo()
+                    ornZypp.addRepo(app.userName)
                 })
                 break
             case OrnApplication.RepoDisabled:
-                app.enableRepo()
+                ornZypp.modifyRepo(app.repoAlias, OrnZypp.EnableRepo)
                 break
             default:
                 break
@@ -87,7 +90,7 @@ PullDownMenu {
 
     MenuItem {
         id: launchMenuItem
-        visible: app.installedVersion
+        visible: app.canBeLaunched
         enabled: !parent.busy
         //% "Launch"
         text: qsTrId("orn-launch")

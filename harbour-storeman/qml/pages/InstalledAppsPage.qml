@@ -4,6 +4,8 @@ import harbour.orn 1.0
 import "../components"
 
 Page {
+    property bool _working: false
+
     id: page
     allowedOrientations: defaultAllowedOrientations
 
@@ -16,14 +18,11 @@ Page {
             sortCaseSensitivity: Qt.CaseInsensitive
             sourceModel: OrnInstalledAppsModel {
                 id: installedAppsModel
-                zypp: zyppRunner
-                onModelAboutToBeReset: viewPlaceholder.text = ""
+                zypp: ornZypp
+                onModelAboutToBeReset: _working = true
                 onModelReset: {
+                    _working = false
                     proxyModel.sort(Qt.AscendingOrder)
-                    if (!rowCount()) {
-                        //% "Could not find any applications installed from OpenRepos"
-                        viewPlaceholder.text = qsTrId("orn-no-installed-apps")
-                    }
                 }
             }
         }
@@ -114,14 +113,14 @@ Page {
         BusyIndicator {
             size: BusyIndicatorSize.Large
             anchors.centerIn: parent
-            running: !viewPlaceholder.text &&
-                     appsList.count === 0 &&
-                     !menu.active
+            running: _working && !menu.active
         }
 
         ViewPlaceholder {
             id: viewPlaceholder
-            enabled: text
+            enabled: appsList.count === 0 && !_working
+            //% "Could not find any applications installed from OpenRepos"
+            text: qsTrId("orn-no-installed-apps")
         }
     }
 }

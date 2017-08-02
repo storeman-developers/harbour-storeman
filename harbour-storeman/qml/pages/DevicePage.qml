@@ -18,7 +18,7 @@ Page {
             PageHeader {
                 //% "This Device"
                 title: qsTrId("orn-thisdevice")
-                description: ornClient ? ornClient.deviceModel : ""
+                description: ornZypp.deviceModel()
             }
 
             ListMenuItem {

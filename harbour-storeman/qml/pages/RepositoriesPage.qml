@@ -3,10 +3,13 @@ import Sailfish.Silica 1.0
 import harbour.orn 1.0
 
 Page {
+    property bool _working: false
+
     id: page
     allowedOrientations: Orientation.All
 
     SilicaListView {
+        id: reposList
         anchors.fill: parent
 
         header: PageHeader {
@@ -17,13 +20,15 @@ Page {
         model: OrnProxyModel {
             id: proxyModel
             sortRole: OrnRepoModel.SortRole
+            sortCaseSensitivity: Qt.CaseInsensitive
             sourceModel: OrnRepoModel {
                 id: repoModel
-                onRowsInserted: proxyModel.sort(Qt.AscendingOrder)
-                onErrorRemoveRepo: notification.showPopup(
-                                       qsTrId("orn-error"),
-                                       //% "Could not remove the repository"
-                                       qsTrId("orn-repo-remove-error"))
+                onRowsInserted: proxyModel.sort()
+                onModelAboutToBeReset: _working = true
+                onModelReset: {
+                    _working = false
+                    proxyModel.sort()
+                }
             }
         }
 
@@ -43,8 +48,9 @@ Page {
             menu: ContextMenu {
 
                 MenuItem {
-                    text: qsTrId("orn-refresh")
-                    onClicked: repoModel.refreshRepo(repoId)
+                    //% "Refresh cache"
+                    text: qsTrId("orn-refresh-cache")
+                    onClicked: ornZypp.refreshRepo(repoAlias, true)
                 }
 
                 MenuItem {
@@ -53,7 +59,8 @@ Page {
                               qsTrId("orn-disable") :
                               //% "Enable"
                               qsTrId("orn-enable")
-                    onClicked: repoModel.enableRepo(repoId, !repoEnabled)
+                    onClicked: ornZypp.modifyRepo(
+                                   repoAlias, repoEnabled ? OrnZypp.DisableRepo : OrnZypp.EnableRepo)
                 }
 
                 MenuItem {
@@ -61,7 +68,7 @@ Page {
                     text: qsTrId("orb-remove")
                     //% "Removing"
                     onClicked: Remorse.itemAction(repoItem, qsTrId("orn-removing"), function() {
-                        repoModel.removeRepo(repoAuthor)
+                        ornZypp.modifyRepo(repoAlias, OrnZypp.RemoveRepo)
                     })
                 }
             }
@@ -78,6 +85,7 @@ Page {
         }
 
         PullDownMenu {
+            id: menu
 
             MenuItem {
                 //% "Reload"
@@ -86,12 +94,17 @@ Page {
             }
 
             MenuItem {
+                text: qsTrId("orn-refresh-cache")
+                onClicked: ornZypp.refreshRepos(true)
+            }
+
+            MenuItem {
                 visible: repoModel.hasDisabledRepos
                 //% "Enable all"
                 text: qsTrId("orn-enable-all")
                 //% "Enabling all"
                 onClicked: Remorse.popupAction(page, qsTrId("orn-enabling-all"),
-                                               function() { repoModel.enableRepos(true) })
+                                               function() { ornZypp.enableRepos(true) })
 
             }
 
@@ -101,8 +114,25 @@ Page {
                 text: qsTrId("orn-disable-all")
                 //% "Disabling all"
                 onClicked: Remorse.popupAction(page, qsTrId("orn-disabling-all"),
-                                               function() { repoModel.enableRepos(false) })
+                                               function() { ornZypp.enableRepos(false) })
             }
+        }
+
+        VerticalScrollDecorator { }
+
+        BusyIndicator {
+            size: BusyIndicatorSize.Large
+            anchors.centerIn: parent
+            running: _working && !menu.active
+        }
+
+        ViewPlaceholder {
+            id: viewPlaceholder
+            enabled: reposList.count === 0 && !_working
+            //% "No OpenRepos repositories have been added yet"
+            text: qsTrId("orn-no-repos")
+            //% "You can add a repository from an application page"
+            hintText: qsTrId("orn-add-repo-hint")
         }
     }
 }
