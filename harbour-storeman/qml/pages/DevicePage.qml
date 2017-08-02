@@ -25,7 +25,7 @@ Page {
                 iconSource: ornClient && ornClient.userIconSource ? ornClient.userIconSource :
                                 "image://theme/icon-m-person?" +
                                 (pressed ? Theme.highlightColor : Theme.primaryColor)
-                text: ornClient && ornClient.authorised ?
+                text: userAuthorised ?
                           //% "Logged in as %0"
                           qsTrId("orn-loggedin-menu-item").arg(ornClient.userName) :
                           //% "Log in to OpenRepos.net"
@@ -36,7 +36,7 @@ Page {
                         //% "Log out"
                         text: qsTrId("orn-logout-action")
                         onClicked: {
-                            if (ornClient.authorised) {
+                            if (userAuthorised) {
                                 //: Remorse text
                                 //% "Logging out"
                                 Remorse.popupAction(page, qsTrId("orn-logout-remorse"), ornClient.logout)
@@ -45,7 +45,7 @@ Page {
                     }
                 }
 
-                onClicked: ornClient.authorised ?
+                onClicked: userAuthorised ?
                                showMenu() :
                                pageStack.push(Qt.resolvedUrl("AuthorisationDialog.qml"))
 

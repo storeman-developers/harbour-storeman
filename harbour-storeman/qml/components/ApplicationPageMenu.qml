@@ -63,10 +63,12 @@ PullDownMenu {
             if (app.installedVersion) {
                 Remorse.popupAction(page, qsTrId("orn-removing"), function()
                 {
+                    page.state = "Removing"
                     pullMenu.busy = true
                     app.remove()
                 })
             } else if (app.availableVersion) {
+                page.state = "Installing"
                 pullMenu.busy = true
                 app.install()
             }
@@ -80,6 +82,7 @@ PullDownMenu {
         //% "Update"
         text: qsTrId("orn-update")
         onClicked: {
+            page.state = "Updating"
             pullMenu.busy = true
             app.install()
         }

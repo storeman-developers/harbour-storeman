@@ -2,6 +2,8 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 Item {
+    property alias statusLabel: statusLabel
+
     anchors {
         left: parent.left
         right: parent.right
@@ -21,13 +23,8 @@ Item {
         spacing: Theme.paddingMedium
 
         IconLabel {
+            id: statusLabel
             width: parent.width
-            icon: app.updateAvailable ? "image://theme/icon-s-update" :
-                    app.installedVersion ? "image://theme/icon-s-installed" : ""
-            //% "Update available"
-            text: app.updateAvailable ? qsTrId("orn-update-available") :
-                    //% "Installed"
-                    app.installedVersion ? qsTrId("orn-installed") : ""
         }
 
         Row {

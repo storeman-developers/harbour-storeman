@@ -10,6 +10,67 @@ Page {
 
     id: page
     allowedOrientations: defaultAllowedOrientations
+    state: "NotInstalled"
+    states: [
+        State {
+            name: "NotInstalled"
+            PropertyChanges {
+                target: packageInfo.statusLabel
+                running: false
+                icon: ""
+                //% "Not installed"
+                text: qsTrId("orn-not-installed")
+            }
+        },
+        State {
+            name: "Installed"
+            when: app.installedVersion
+            PropertyChanges {
+                target: packageInfo.statusLabel
+                running: false
+                icon: "image://theme/icon-s-installed"
+                //% "Installed"
+                text: qsTrId("orn-installed")
+            }
+        },
+        State {
+            name: "UpdateAvailable"
+            when: app.updateAvailable
+            PropertyChanges {
+                target: packageInfo.statusLabel
+                running: false
+                icon: "image://theme/icon-s-update"
+                //% "Update available"
+                text: qsTrId("orn-update-available")
+            }
+        },
+        State {
+            name: "Installing"
+            PropertyChanges {
+                target: packageInfo.statusLabel
+                running: true
+                //% "Installing"
+                text: qsTrId("orn-installing")
+            }
+        },
+        State {
+            name: "Updating"
+            PropertyChanges {
+                target: packageInfo.statusLabel
+                running: true
+                //% "Updating"
+                text: qsTrId("orn-updating")
+            }
+        },
+        State {
+            name: "Removing"
+            PropertyChanges {
+                target: packageInfo.statusLabel
+                running: true
+                text: qsTrId("orn-removing")
+            }
+        }
+    ]
 
     OrnApplication {
         id: app
@@ -40,6 +101,7 @@ Page {
         }
 
         onRemoved: {
+            state = "NotInstalled"
             pageMenu.busy = false
             //% "Package %0 was successfully removed"
             notification.show(qsTrId("orn-package-removed").arg(packageName))
@@ -83,7 +145,9 @@ Page {
                 iconSource: app.iconSource
             }
 
-            PackageInformation { }
+            PackageInformation {
+                id: packageInfo
+            }
 
             AppInformation { }
 
@@ -99,7 +163,7 @@ Page {
             }
 
             MoreButton {
-                visible: app.commentsCount || ornClient.authorised
+                visible: userAuthorised || app.commentsCount
                 //% "Comments (%0)"
                 text: app.commentsCount ? qsTrId("orn-comments-withnum").arg(app.commentsCount) :
                                           qsTrId("orn-comments")
