@@ -111,6 +111,7 @@ Item {
         placeholderText: label
         font.pixelSize: Theme.fontSizeSmall
         focusOutBehavior: FocusBehavior.KeepFocus
+        Component.onCompleted: _editor.textFormat = TextEdit.PlainText
     }
 
     Label {
