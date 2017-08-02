@@ -99,5 +99,12 @@ ApplicationWindow
             authorisationWarning.body = qsTrId("orn-authorisation-expired-body")
             authorisationWarning.publish()
         }
+        onBookmarkChanged: {
+            notification.show(bookmarked ?
+                                  //% "The app was added to bookmarks"
+                                  qsTrId("orn-bookmarks-added") :
+                                  //% "The app was removed from bookmarks"
+                                  qsTrId("orn-bookmarks-removed"))
+        }
     }
 }
