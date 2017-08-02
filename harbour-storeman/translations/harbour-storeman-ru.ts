@@ -575,5 +575,17 @@ Storeman не хранит ваш пароль и не передает его �
         <source>Refresh cache</source>
         <translation>Обновить кеш</translation>
     </message>
+    <message id="orn-not-installed">
+        <source>Not installed</source>
+        <translation>Не установлено</translation>
+    </message>
+    <message id="orn-installing">
+        <source>Installing</source>
+        <translation>Установка</translation>
+    </message>
+    <message id="orn-updating">
+        <source>Updating</source>
+        <translation>Обновление</translation>
+    </message>
 </context>
 </TS>

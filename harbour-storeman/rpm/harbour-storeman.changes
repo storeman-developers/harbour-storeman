@@ -1,3 +1,9 @@
+* Thu Aug  3 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.11-1
+- Enhance links handling in comments - navigate to a comment on clicking an OpenRepos comment link if its in current model
+- Comment field - force use PlainText format
+- Fix fetching list of available packages
+- ApplicationPage - more information about package status and operations
+
 * Wed Aug  2 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.10-1
 - Run enable/disable all repos asynchronously
 - Add local bookmarks for applications

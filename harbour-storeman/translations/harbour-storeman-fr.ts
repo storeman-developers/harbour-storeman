@@ -571,5 +571,17 @@
         <source>Refresh cache</source>
         <translation>Rafraîchir le cache</translation>
     </message>
+    <message id="orn-not-installed">
+        <source>Not installed</source>
+        <translation>Not installed</translation>
+    </message>
+    <message id="orn-installing">
+        <source>Installing</source>
+        <translation>Installing</translation>
+    </message>
+    <message id="orn-updating">
+        <source>Updating</source>
+        <translation>Updating</translation>
+    </message>
 </context>
 </TS>
