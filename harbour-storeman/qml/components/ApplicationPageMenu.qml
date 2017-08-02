@@ -11,7 +11,7 @@ PullDownMenu {
     MenuItem {
         id: repoMenuItem
         visible: text
-        enabled: !parent.busy
+        enabled: !pullMenu.busy
         text: {
             if (!app.repoAlias) {
                 return ""
@@ -47,7 +47,7 @@ PullDownMenu {
     MenuItem {
         id: installMenuItem
         visible: text
-        enabled: !parent.busy
+        enabled: !pullMenu.busy
         text: {
             if (app.installedVersion) {
                 //% "Remove"
@@ -71,15 +71,12 @@ PullDownMenu {
                 app.install()
             }
         }
-        onTextChanged: {
-            pullMenu.busy = false
-        }
     }
 
     MenuItem {
         id: updateMenuItem
         visible: app.updateAvailable
-        enabled: !parent.busy
+        enabled: !pullMenu.busy
         //% "Update"
         text: qsTrId("orn-update")
         onClicked: {
@@ -91,7 +88,7 @@ PullDownMenu {
     MenuItem {
         id: launchMenuItem
         visible: app.canBeLaunched
-        enabled: !parent.busy
+        enabled: !pullMenu.busy
         //% "Launch"
         text: qsTrId("orn-launch")
         onClicked: app.launch()

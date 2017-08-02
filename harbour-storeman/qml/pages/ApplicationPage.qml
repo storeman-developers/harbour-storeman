@@ -33,11 +33,17 @@ Page {
             pageStack.navigateBack()
         }
 
-        //% "Package %0 was successfully installed"
-        onInstalled: notification.show(qsTrId("orn-package-installed").arg(packageName))
+        onInstalled: {
+            pageMenu.busy = false
+            //% "Package %0 was successfully installed"
+            notification.show(qsTrId("orn-package-installed").arg(packageName))
+        }
 
-        //% "Package %0 was successfully removed"
-        onRemoved: notification.show(qsTrId("orn-package-removed").arg(packageName))
+        onRemoved: {
+            pageMenu.busy = false
+            //% "Package %0 was successfully removed"
+            notification.show(qsTrId("orn-package-removed").arg(packageName))
+        }
     }
 
     Connections {
@@ -62,7 +68,9 @@ Page {
         visible: false
         contentHeight: content.height
 
-        ApplicationPageMenu { }
+        ApplicationPageMenu {
+            id: pageMenu
+        }
 
         Column {
             id: content
