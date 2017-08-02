@@ -92,10 +92,6 @@
         <source>An error occured</source>
         <translation>Hiba történt</translation>
     </message>
-    <message id="orn-repo-remove-error">
-        <source>Could not remove the repository</source>
-        <translation>A csomagtárolót nem sikerült eltávolítani</translation>
-    </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
         <translation>Csomagtároló hozzáadása</translation>
@@ -555,11 +551,23 @@
     </message>
     <message id="orn-no-bookmarks">
         <source>Your bookmarked applications will be shown here</source>
-        <translation>Your bookmarked applications will be shown here</translation>
+        <translation>Itt találod a könyvjelzőzött applikációidat</translation>
     </message>
     <message id="orn-bookmarks">
         <source>Bookmarks</source>
-        <translation>Bookmarks</translation>
+        <translation>Könyvjelzők</translation>
+    </message>
+    <message id="orn-no-repos">
+        <source>No OpenRepos repositories have been added yet</source>
+        <translation>Nincs még mentett OpenRepos csomagtároló</translation>
+    </message>
+    <message id="orn-add-repo-hint">
+        <source>You can add a repository from an application page</source>
+        <translation>Hozzáadhatsz csomagtárolót az alkalmazás oldaláról</translation>
+    </message>
+    <message id="orn-refresh-cache">
+        <source>Refresh cache</source>
+        <translation>Cache frissítése</translation>
     </message>
 </context>
 </TS>

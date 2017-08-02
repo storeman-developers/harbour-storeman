@@ -92,10 +92,6 @@
         <source>An error occured</source>
         <translation>Une erreur s&apos;est produite</translation>
     </message>
-    <message id="orn-repo-remove-error">
-        <source>Could not remove the repository</source>
-        <translation>Impossible de suprimer le dépôt</translation>
-    </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
         <translation>Ajouter un dépôt</translation>
@@ -557,11 +553,23 @@
     </message>
     <message id="orn-no-bookmarks">
         <source>Your bookmarked applications will be shown here</source>
-        <translation>Your bookmarked applications will be shown here</translation>
+        <translation>Vos applications favorites apparaitront ici</translation>
     </message>
     <message id="orn-bookmarks">
         <source>Bookmarks</source>
-        <translation>Bookmarks</translation>
+        <translation>Favoris</translation>
+    </message>
+    <message id="orn-no-repos">
+        <source>No OpenRepos repositories have been added yet</source>
+        <translation>Aucun dépôt OpenRepos n&apos;est ajouté pour l&apos;instant</translation>
+    </message>
+    <message id="orn-add-repo-hint">
+        <source>You can add a repository from an application page</source>
+        <translation>Vous pouvez ajouter un dépôt depuis la page d&apos;une application</translation>
+    </message>
+    <message id="orn-refresh-cache">
+        <source>Refresh cache</source>
+        <translation>Rafraîchir le cache</translation>
     </message>
 </context>
 </TS>

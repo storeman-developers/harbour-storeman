@@ -92,10 +92,6 @@
         <source>An error occured</source>
         <translation>Er trad een fout op</translation>
     </message>
-    <message id="orn-repo-remove-error">
-        <source>Could not remove the repository</source>
-        <translation>Kon de pakketbron niet verwijderen</translation>
-    </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
         <translation>Pakketbron toevoegen</translation>
@@ -557,11 +553,23 @@
     </message>
     <message id="orn-no-bookmarks">
         <source>Your bookmarked applications will be shown here</source>
-        <translation>Your bookmarked applications will be shown here</translation>
+        <translation>Je app-bladwijzers zullen hier worden weergegeven</translation>
     </message>
     <message id="orn-bookmarks">
         <source>Bookmarks</source>
-        <translation>Bookmarks</translation>
+        <translation>Bladwijzers</translation>
+    </message>
+    <message id="orn-no-repos">
+        <source>No OpenRepos repositories have been added yet</source>
+        <translation>Er zijn nog geen pakketbronnen van OpenRepos toegevoegd</translation>
+    </message>
+    <message id="orn-add-repo-hint">
+        <source>You can add a repository from an application page</source>
+        <translation>Je kan een pakketbron toevoegen via de app-pagina</translation>
+    </message>
+    <message id="orn-refresh-cache">
+        <source>Refresh cache</source>
+        <translation>Cache verversen</translation>
     </message>
 </context>
 </TS>

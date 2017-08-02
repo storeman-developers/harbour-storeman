@@ -92,10 +92,6 @@
         <source>An error occured</source>
         <translation>Ошибка</translation>
     </message>
-    <message id="orn-repo-remove-error">
-        <source>Could not remove the repository</source>
-        <translation>Не удалось удалить репозиторий</translation>
-    </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
         <translation>Добавить репозиторий</translation>
@@ -566,6 +562,18 @@ Storeman не хранит ваш пароль и не передает его �
     <message id="orn-bookmarks">
         <source>Bookmarks</source>
         <translation>Закладки</translation>
+    </message>
+    <message id="orn-no-repos">
+        <source>No OpenRepos repositories have been added yet</source>
+        <translation>Репозитории OpenRepos еще не добавлены</translation>
+    </message>
+    <message id="orn-add-repo-hint">
+        <source>You can add a repository from an application page</source>
+        <translation>Репозиторий можно добавить  со страницы приложения</translation>
+    </message>
+    <message id="orn-refresh-cache">
+        <source>Refresh cache</source>
+        <translation>Обновить кеш</translation>
     </message>
 </context>
 </TS>

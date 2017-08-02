@@ -92,10 +92,6 @@
         <source>An error occured</source>
         <translation>Tapahtui virhe</translation>
     </message>
-    <message id="orn-repo-remove-error">
-        <source>Could not remove the repository</source>
-        <translation>Lähdettä ei voitu poistaa</translation>
-    </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
         <translation>Lisää lähde</translation>
@@ -525,43 +521,55 @@
     </message>
     <message id="orn-enable-all">
         <source>Enable all</source>
-        <translation>Enable all</translation>
+        <translation>Ota kaikki käyttöön</translation>
     </message>
     <message id="orn-disable-all">
         <source>Disable all</source>
-        <translation>Disable all</translation>
+        <translation>Poista kaikki käytöstä</translation>
     </message>
     <message id="orn-enabling-all">
         <source>Enabling all</source>
-        <translation>Enabling all</translation>
+        <translation>Otetaan käyttöön</translation>
     </message>
     <message id="orn-disabling-all">
         <source>Disabling all</source>
-        <translation>Disabling all</translation>
+        <translation>Poistetaan käytöstä</translation>
     </message>
     <message id="orn-installed-apps">
         <source>Installed Applications</source>
-        <translation>Installed Applications</translation>
+        <translation>Asennetut sovellukset</translation>
     </message>
     <message id="orn-no-installed-apps">
         <source>Could not find any applications installed from OpenRepos</source>
-        <translation>Could not find any applications installed from OpenRepos</translation>
+        <translation>Yhtään kohteesta OpenRepos asennettua sovellusta ei löytynyt</translation>
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
-        <translation>The app was added to bookmarks</translation>
+        <translation>Sovellus lisättiin kirjanmerkkeihin</translation>
     </message>
     <message id="orn-bookmarks-removed">
         <source>The app was removed from bookmarks</source>
-        <translation>The app was removed from bookmarks</translation>
+        <translation>Sovellus poistettiin kirjanmerkeistä</translation>
     </message>
     <message id="orn-no-bookmarks">
         <source>Your bookmarked applications will be shown here</source>
-        <translation>Your bookmarked applications will be shown here</translation>
+        <translation>Kirjanmerkkeihin lisätyt sovellukset näkyvät tässä</translation>
     </message>
     <message id="orn-bookmarks">
         <source>Bookmarks</source>
-        <translation>Bookmarks</translation>
+        <translation>Kirjanmerkit</translation>
+    </message>
+    <message id="orn-no-repos">
+        <source>No OpenRepos repositories have been added yet</source>
+        <translation>Asennuslähteitä ei ole lisätty vielä</translation>
+    </message>
+    <message id="orn-add-repo-hint">
+        <source>You can add a repository from an application page</source>
+        <translation>Voit lisätä asennuslähteen sovelluksen sivulta</translation>
+    </message>
+    <message id="orn-refresh-cache">
+        <source>Refresh cache</source>
+        <translation>Refresh cache</translation>
     </message>
 </context>
 </TS>

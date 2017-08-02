@@ -92,10 +92,6 @@
         <source>An error occured</source>
         <translation>Wystąpił błąd</translation>
     </message>
-    <message id="orn-repo-remove-error">
-        <source>Could not remove the repository</source>
-        <translation>Nie można usunąć repozytorium</translation>
-    </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
         <translation>Dodaj repozyorium</translation>
@@ -551,19 +547,31 @@
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
-        <translation>The app was added to bookmarks</translation>
+        <translation>Aplikacja została dodana do zakładek</translation>
     </message>
     <message id="orn-bookmarks-removed">
         <source>The app was removed from bookmarks</source>
-        <translation>The app was removed from bookmarks</translation>
+        <translation>Aplikacja została usunięta z zakładek</translation>
     </message>
     <message id="orn-no-bookmarks">
         <source>Your bookmarked applications will be shown here</source>
-        <translation>Your bookmarked applications will be shown here</translation>
+        <translation>Twoja aplikacja, dodana do zakładek, pojawi się tutaj</translation>
     </message>
     <message id="orn-bookmarks">
         <source>Bookmarks</source>
-        <translation>Bookmarks</translation>
+        <translation>Zakładki</translation>
+    </message>
+    <message id="orn-no-repos">
+        <source>No OpenRepos repositories have been added yet</source>
+        <translation>Nie dodano jeszcze żadnych repozytoriów</translation>
+    </message>
+    <message id="orn-add-repo-hint">
+        <source>You can add a repository from an application page</source>
+        <translation>Można dodać repozytorium ze strony aplikacji</translation>
+    </message>
+    <message id="orn-refresh-cache">
+        <source>Refresh cache</source>
+        <translation>Odśwież pamięć podręczną</translation>
     </message>
 </context>
 </TS>

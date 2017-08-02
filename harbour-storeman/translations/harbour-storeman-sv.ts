@@ -92,10 +92,6 @@
         <source>An error occured</source>
         <translation>Ett fel inträffade</translation>
     </message>
-    <message id="orn-repo-remove-error">
-        <source>Could not remove the repository</source>
-        <translation>Kunde inte ta bort förrådet</translation>
-    </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
         <translation>Lägg till förrådet</translation>
@@ -557,11 +553,23 @@
     </message>
     <message id="orn-no-bookmarks">
         <source>Your bookmarked applications will be shown here</source>
-        <translation>Your bookmarked applications will be shown here</translation>
+        <translation>Dina bokmärkta appar kommer att visas här</translation>
     </message>
     <message id="orn-bookmarks">
         <source>Bookmarks</source>
-        <translation>Bookmarks</translation>
+        <translation>Bokmärken</translation>
+    </message>
+    <message id="orn-no-repos">
+        <source>No OpenRepos repositories have been added yet</source>
+        <translation>Inget OpenRepos-förråd har lagts till än</translation>
+    </message>
+    <message id="orn-add-repo-hint">
+        <source>You can add a repository from an application page</source>
+        <translation>Du kan lägga till ett förråd från valfri app-sida</translation>
+    </message>
+    <message id="orn-refresh-cache">
+        <source>Refresh cache</source>
+        <translation>Uppdatera cachen</translation>
     </message>
 </context>
 </TS>

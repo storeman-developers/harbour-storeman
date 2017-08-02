@@ -92,10 +92,6 @@
         <source>An error occured</source>
         <translation>Ein Fehler ist aufgetreten</translation>
     </message>
-    <message id="orn-repo-remove-error">
-        <source>Could not remove the repository</source>
-        <translation>Kann Quelle nicht entfernen</translation>
-    </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
         <translation>Quelle hinzufügen</translation>
@@ -557,11 +553,23 @@
     </message>
     <message id="orn-no-bookmarks">
         <source>Your bookmarked applications will be shown here</source>
-        <translation>Your bookmarked applications will be shown here</translation>
+        <translation>Hier werden die Lesezeichen angezeigt</translation>
     </message>
     <message id="orn-bookmarks">
         <source>Bookmarks</source>
-        <translation>Bookmarks</translation>
+        <translation>Lesezeichen</translation>
+    </message>
+    <message id="orn-no-repos">
+        <source>No OpenRepos repositories have been added yet</source>
+        <translation>No OpenRepos repositories have been added yet</translation>
+    </message>
+    <message id="orn-add-repo-hint">
+        <source>You can add a repository from an application page</source>
+        <translation>You can add a repository from an application page</translation>
+    </message>
+    <message id="orn-refresh-cache">
+        <source>Refresh cache</source>
+        <translation>Refresh cache</translation>
     </message>
 </context>
 </TS>

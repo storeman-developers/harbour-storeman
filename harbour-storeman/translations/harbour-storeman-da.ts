@@ -92,10 +92,6 @@
         <source>An error occured</source>
         <translation>Der opstod en fejl</translation>
     </message>
-    <message id="orn-repo-remove-error">
-        <source>Could not remove the repository</source>
-        <translation>Kan ikke fjerne repositorium</translation>
-    </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
         <translation>Tilføj repositorium</translation>
@@ -562,6 +558,18 @@
     <message id="orn-bookmarks">
         <source>Bookmarks</source>
         <translation>Bookmarks</translation>
+    </message>
+    <message id="orn-no-repos">
+        <source>No OpenRepos repositories have been added yet</source>
+        <translation>No OpenRepos repositories have been added yet</translation>
+    </message>
+    <message id="orn-add-repo-hint">
+        <source>You can add a repository from an application page</source>
+        <translation>You can add a repository from an application page</translation>
+    </message>
+    <message id="orn-refresh-cache">
+        <source>Refresh cache</source>
+        <translation>Refresh cache</translation>
     </message>
 </context>
 </TS>

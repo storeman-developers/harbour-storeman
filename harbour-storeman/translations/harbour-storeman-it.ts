@@ -92,10 +92,6 @@
         <source>An error occured</source>
         <translation>Errore</translation>
     </message>
-    <message id="orn-repo-remove-error">
-        <source>Could not remove the repository</source>
-        <translation>Impossibile rimuovere il repository</translation>
-    </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
         <translation>Aggiungi repository</translation>
@@ -525,43 +521,55 @@
     </message>
     <message id="orn-enable-all">
         <source>Enable all</source>
-        <translation>Enable all</translation>
+        <translation>Attiva tutti</translation>
     </message>
     <message id="orn-disable-all">
         <source>Disable all</source>
-        <translation>Disable all</translation>
+        <translation>Disattiva tutti</translation>
     </message>
     <message id="orn-enabling-all">
         <source>Enabling all</source>
-        <translation>Enabling all</translation>
+        <translation>Attivazione</translation>
     </message>
     <message id="orn-disabling-all">
         <source>Disabling all</source>
-        <translation>Disabling all</translation>
+        <translation>Disattivazione</translation>
     </message>
     <message id="orn-installed-apps">
         <source>Installed Applications</source>
-        <translation>Installed Applications</translation>
+        <translation>Applicazioni installate</translation>
     </message>
     <message id="orn-no-installed-apps">
         <source>Could not find any applications installed from OpenRepos</source>
-        <translation>Could not find any applications installed from OpenRepos</translation>
+        <translation>Nessuna applicazione installata da OpenRepos</translation>
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
-        <translation>The app was added to bookmarks</translation>
+        <translation>L&apos;app è stata aggiunta ai preferiti</translation>
     </message>
     <message id="orn-bookmarks-removed">
         <source>The app was removed from bookmarks</source>
-        <translation>The app was removed from bookmarks</translation>
+        <translation>L&apos;app è stata rimossa dai preferiti</translation>
     </message>
     <message id="orn-no-bookmarks">
         <source>Your bookmarked applications will be shown here</source>
-        <translation>Your bookmarked applications will be shown here</translation>
+        <translation>Le tue app preferite saranno mostrate qui</translation>
     </message>
     <message id="orn-bookmarks">
         <source>Bookmarks</source>
-        <translation>Bookmarks</translation>
+        <translation>Preferiti</translation>
+    </message>
+    <message id="orn-no-repos">
+        <source>No OpenRepos repositories have been added yet</source>
+        <translation>Nessun repository di OpenRepos aggiunto</translation>
+    </message>
+    <message id="orn-add-repo-hint">
+        <source>You can add a repository from an application page</source>
+        <translation>Puoi aggiungere un repository dalla pagina dell&apos;applicazione</translation>
+    </message>
+    <message id="orn-refresh-cache">
+        <source>Refresh cache</source>
+        <translation>Aggiorna cache</translation>
     </message>
 </context>
 </TS>
