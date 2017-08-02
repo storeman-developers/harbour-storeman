@@ -106,17 +106,8 @@ ListItem {
 
                     MouseArea {
                         anchors.fill: parent
-                        // TODO: Something more elegant
-                        onClicked: {
-                            moveAnimation.stop()
-                            moveAnimation.from = commentsList.contentY
-                            commentsList.positionViewAtIndex(
-                                        commentsModel.findItemRow(parent.replyTo.commentId),
-                                        ListView.End)
-                            // FIXME: Sometimes it's not defined
-                            moveAnimation.to = commentsList.contentY
-                            moveAnimation.start()
-                        }
+                        onClicked: moveAnimation.moveTo(
+                                       commentsModel.findItemRow(parent.replyTo.commentId))
                     }
                 }
             }
@@ -129,7 +120,17 @@ ListItem {
             font.pixelSize: Theme.fontSizeSmall
             wrapMode: Text.WordWrap
             text: commentData.text
-            onLinkActivated: Qt.openUrlExternally(link)
+            onLinkActivated: {
+                var match = link.match(/https:\/\/openrepos\.net\/.*#comment-(\d*)/)
+                if (match) {
+                    var pos = commentsModel.findItemRow(match[1])
+                    if (pos !== -1) {
+                        moveAnimation.moveTo(pos)
+                        return
+                    }
+                }
+                Qt.openUrlExternally(link)
+            }
         }
     }
 }
