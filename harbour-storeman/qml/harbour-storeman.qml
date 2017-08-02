@@ -8,6 +8,8 @@ import "pages"
 
 ApplicationWindow
 {
+    readonly property bool userAuthorised: ornClient && ornClient.authorised
+
     initialPage: Component { RecentAppsPage { } }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: defaultAllowedOrientations

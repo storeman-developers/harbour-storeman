@@ -39,7 +39,7 @@ Item {
     }
 
     width: parent.width
-    height: ornClient.authorised ? body.height + typeItem.height + Theme.paddingLarge : 0
+    height: userAuthorised ? body.height + typeItem.height + Theme.paddingLarge : 0
 
     Item {
         id: typeItem

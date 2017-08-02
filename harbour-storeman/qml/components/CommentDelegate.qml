@@ -3,12 +3,12 @@ import Sailfish.Silica 1.0
 import harbour.orn 1.0
 
 ListItem {
-    readonly property bool _userComment: ornClient.userId === commentData.userId
+    readonly property bool _userComment: ornClient && ornClient.userId === commentData.userId
     readonly property bool _authorComment: commentData.userId === userId
 
     contentHeight: content.height + Theme.paddingMedium * 2
-    menu: ornClient.authorised ? contextMenu : null
-    highlighted: down && ornClient.authorised
+    menu: userAuthorised ? contextMenu : null
+    highlighted: userAuthorised && down
     _showPress: highlighted
 
     ContextMenu {
