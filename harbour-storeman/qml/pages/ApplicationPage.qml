@@ -6,7 +6,7 @@ import "../components"
 Page {
     property bool returnToUser: false
     property alias appId: app.appId
-    readonly property variant locale: Qt.locale()
+    readonly property var locale: Qt.locale()
 
     id: page
     allowedOrientations: defaultAllowedOrientations

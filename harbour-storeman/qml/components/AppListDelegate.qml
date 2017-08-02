@@ -7,7 +7,7 @@ ListItem {
     property alias showUser: userNameLabel.visible
     property int previousAppId: -1
     // To reduce calls of model data() method store item data in a property
-    readonly property variant app: appData
+    readonly property var app: appData
 
     contentHeight: Theme.itemSizeExtraLarge
 
