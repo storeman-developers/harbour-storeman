@@ -119,7 +119,13 @@ ListItem {
             linkColor: Theme.primaryColor
             font.pixelSize: Theme.fontSizeSmall
             wrapMode: Text.WordWrap
+            textFormat: Text.RichText
             text: commentData.text
+                .replace(/<a([^>]*)>([^<]+)<\/a>/g,
+                         '<a$1><font color="%0">$2</font></a>'.arg(Theme.primaryColor))
+                .replace(/<pre>([^<]+)<\/pre>/g,
+                        '<p style="color:%0;font-family:monospace;font-size:%1px;">$1</p>'
+                            .arg(Theme.secondaryColor).arg(Theme.fontSizeTiny))
             onLinkActivated: {
                 var match = link.match(/https:\/\/openrepos\.net\/.*#comment-(\d*)/)
                 if (match) {
