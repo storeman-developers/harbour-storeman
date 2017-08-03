@@ -587,5 +587,25 @@ Storeman не хранит ваш пароль и не передает его �
         <source>Updating</source>
         <translation>Обновление</translation>
     </message>
+    <message id="orn-tag-underscore">
+        <source>U</source>
+        <extracomment>Tag underscore</extracomment>
+        <translation>Ч</translation>
+    </message>
+    <message id="orn-tag-strong">
+        <source>B</source>
+        <extracomment>Tag strong</extracomment>
+        <translation>Ж</translation>
+    </message>
+    <message id="orn-tag-emphasize">
+        <source>I</source>
+        <extracomment>Tag emphasize</extracomment>
+        <translation>К</translation>
+    </message>
+    <message id="orn-tag-preformatted">
+        <source>M</source>
+        <extracomment>Tag preformatted</extracomment>
+        <translation>М</translation>
+    </message>
 </context>
 </TS>

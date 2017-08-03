@@ -585,5 +585,25 @@
         <source>Updating</source>
         <translation>Updating</translation>
     </message>
+    <message id="orn-tag-underscore">
+        <source>U</source>
+        <extracomment>Tag underscore</extracomment>
+        <translation>U</translation>
+    </message>
+    <message id="orn-tag-strong">
+        <source>B</source>
+        <extracomment>Tag strong</extracomment>
+        <translation>B</translation>
+    </message>
+    <message id="orn-tag-emphasize">
+        <source>I</source>
+        <extracomment>Tag emphasize</extracomment>
+        <translation>I</translation>
+    </message>
+    <message id="orn-tag-preformatted">
+        <source>M</source>
+        <extracomment>Tag preformatted</extracomment>
+        <translation>M</translation>
+    </message>
 </context>
 </TS>

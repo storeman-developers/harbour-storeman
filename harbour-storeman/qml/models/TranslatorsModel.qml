@@ -48,9 +48,18 @@ ListModel {
         ]
         translators: [
             ListElement { name: "feldbaum" },
-            ListElement { name: "chwa" },
+            ListElement { name: "olf" },
             ListElement { name: "inta" },
-            ListElement { name: "olf" }
+            ListElement { name: "chwa" }
+        ]
+        reviewers: []
+    }
+
+    ListElement {
+        locale: "el"
+        coordinators: []
+        translators: [
+            ListElement { name: "dglent" }
         ]
         reviewers: []
     }
