@@ -1,3 +1,9 @@
+* Fri Aug  4 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.12-1
+- Set edited comments format to Filtered HTML explicitly to avoid corruption of tags
+- Use RichText format and a piece of regex magic for better comments style
+- Comment field - add tags panel
+- Update translations
+
 * Thu Aug  3 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.11-1
 - Enhance links handling in comments - navigate to a comment on clicking an OpenRepos comment link if its in current model
 - Comment field - force use PlainText format
