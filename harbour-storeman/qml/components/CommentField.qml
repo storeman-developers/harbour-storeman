@@ -2,7 +2,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.orn 1.0
 
-Item {
+Column {
     property alias isActive: body.activeFocus
     property string _editId
     property string _replyToId
@@ -39,7 +39,7 @@ Item {
     }
 
     width: parent.width
-    height: userAuthorised ? body.height + typeItem.height + Theme.paddingLarge : 0
+    spacing: Theme.paddingSmall
 
     Item {
         id: typeItem
@@ -99,63 +99,114 @@ Item {
         }
     }
 
+    Item {
+        id: spacer
+        height: Theme.paddingMedium
+        width: parent.width
+    }
+
+    Row {
+        id: tagsPanel
+        anchors {
+            left: parent.left
+            right: parent.right
+            leftMargin: Theme.horizontalPageMargin
+            rightMargin: Theme.horizontalPageMargin
+        }
+        width: parent.width
+        opacity: body.activeFocus ? 1.0 : 0.0
+        visible: opacity > 0.0
+        spacing: Theme.paddingSmall
+
+        Behavior on opacity { NumberAnimation { } }
+
+        HtmlTagButton {
+            //: Tag strong
+            //% "B"
+            text: "<b>%0</b>".arg(qsTrId("orn-tag-strong"))
+            tag: "strong"
+        }
+
+        HtmlTagButton {
+            //: Tag emphasize
+            //% "I"
+            text: "<i>%0</i>".arg(qsTrId("orn-tag-emphasize"))
+            tag: "em"
+        }
+
+        HtmlTagButton {
+            //: Tag underscore
+            //% "U"
+            text: "<u>%0</u>".arg(qsTrId("orn-tag-underscore"))
+            tag: "u"
+        }
+
+        HtmlTagButton {
+            text: "🔗"
+            tag: "a"
+            attrs: ' href=""'
+        }
+
+        HtmlTagButton {
+            //: Tag preformatted
+            //% "M"
+            text: '<font face="monospace">%0</font>'.arg(qsTrId("orn-tag-preformatted"))
+            tag: "pre"
+        }
+    }
+
     TextArea {
         id: body
-        anchors {
-            top: typeItem.bottom
-            topMargin: Theme.paddingMedium
-        }
-        width: parent.width - sendButton.width
+        width: parent.width - sendButton.width - Theme.horizontalPageMargin
         //% "Your comment"
         label: qsTrId("orn-comment-body")
         placeholderText: label
         font.pixelSize: Theme.fontSizeSmall
         focusOutBehavior: FocusBehavior.KeepFocus
         Component.onCompleted: _editor.textFormat = TextEdit.PlainText
-    }
 
-    Label {
-        id: sendButton
-        anchors {
-            right: parent.right
-            rightMargin: Theme.horizontalPageMargin
-            verticalCenter: body.top
-            verticalCenterOffset: body.textVerticalCenterOffset + (body._editor.height - height)
-        }
-        color: !_hasText ? Theme.secondaryColor :
-                    sendButtonMouseArea.pressed ? Theme.highlightColor : Theme.primaryColor
-        font.pixelSize: Theme.fontSizeSmall
-        text: {
-            if (opacity < 1.0) {
-                return ""
+        Label {
+            id: sendButton
+            anchors {
+                verticalCenter: parent.top
+                verticalCenterOffset: body.textVerticalCenterOffset + (body._editor.height - height)
             }
-            if (_editId) {
-                //: Update a comment
-                //% "Update"
-                return qsTrId("orn-comment-update")
-            }
-            if (_replyToId) {
-                return qsTrId("orn-reply")
-            }
-            //% "Send"
-            return qsTrId("orn-comment-send")
-        }
-
-        opacity: body.text || body.activeFocus ? 1.0 : 0.0
-        Behavior on opacity { FadeAnimation { } }
-
-        MouseArea {
-            id: sendButtonMouseArea
-            anchors.fill: parent
-            onClicked: {
-                if (_editId) {
-                    ornClient.editComment(_editId, body.text)
-                } else if (_replyToId) {
-                    ornClient.comment(appId, body.text, _replyToId)
-                } else {
-                    ornClient.comment(appId, body.text)
+            x: parent.x + parent.width
+            color: !_hasText ? Theme.secondaryColor :
+                        sendButtonMouseArea.pressed ? Theme.highlightColor : Theme.primaryColor
+            font.pixelSize: Theme.fontSizeSmall
+            text: {
+                if (opacity < 1.0) {
+                    return ""
                 }
-                _reset()
+                if (_editId) {
+                    //: Update a comment
+                    //% "Update"
+                    return qsTrId("orn-comment-update")
+                }
+                if (_replyToId) {
+                    return qsTrId("orn-reply")
+                }
+                //% "Send"
+                return qsTrId("orn-comment-send")
+            }
+
+            opacity: body.text || body.activeFocus ? 1.0 : 0.0
+            Behavior on opacity { FadeAnimation { } }
+
+            MouseArea {
+                id: sendButtonMouseArea
+                anchors.fill: parent
+                onClicked: {
+                    if (_editId) {
+                        ornClient.editComment(_editId, body.text)
+                    } else if (_replyToId) {
+                        ornClient.comment(appId, body.text, _replyToId)
+                    } else {
+                        ornClient.comment(appId, body.text)
+                    }
+                    _reset()
+                }
             }
         }
     }
