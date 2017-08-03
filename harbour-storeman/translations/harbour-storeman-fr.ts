@@ -329,7 +329,7 @@
     </message>
     <message id="orn-about">
         <source>About Storeman</source>
-        <translation>A propos de Storman</translation>
+        <translation>A propos de Storeman</translation>
     </message>
     <message id="orn-translations">
         <source>Translations</source>

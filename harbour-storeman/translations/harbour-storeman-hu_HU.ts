@@ -571,15 +571,15 @@
     </message>
     <message id="orn-not-installed">
         <source>Not installed</source>
-        <translation>Not installed</translation>
+        <translation>Nincs telepítve</translation>
     </message>
     <message id="orn-installing">
         <source>Installing</source>
-        <translation>Installing</translation>
+        <translation>Telepítés</translation>
     </message>
     <message id="orn-updating">
         <source>Updating</source>
-        <translation>Updating</translation>
+        <translation>Frissítés</translation>
     </message>
 </context>
 </TS>

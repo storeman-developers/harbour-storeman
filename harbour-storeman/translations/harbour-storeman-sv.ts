@@ -573,15 +573,17 @@
     </message>
     <message id="orn-not-installed">
         <source>Not installed</source>
-        <translation>Not installed</translation>
+        <translation>Inte installerad</translation>
     </message>
     <message id="orn-installing">
         <source>Installing</source>
-        <translation>Installing</translation>
+        <translation>Installerar</translation>
     </message>
     <message id="orn-updating">
         <source>Updating</source>
-        <translation>Updating</translation>
+        <translation>Upptaterar
+
+</translation>
     </message>
 </context>
 </TS>
