@@ -24,7 +24,7 @@ Page {
         },
         State {
             name: "Installed"
-            when: app.installedVersion
+            when: !app.updateAvailable && app.installedVersion
             PropertyChanges {
                 target: packageInfo.statusLabel
                 running: false
