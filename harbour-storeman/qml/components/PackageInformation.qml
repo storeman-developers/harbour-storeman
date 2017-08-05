@@ -11,6 +11,7 @@ Item {
         rightMargin: Theme.horizontalPageMargin
     }
     height: Math.max(column.height, star.height)
+            + categoryPanel.height + Theme.paddingLarge * 3
 
     Column {
         id: column
@@ -52,6 +53,41 @@ Item {
         anchors {
             verticalCenter: parent.verticalCenter
             right: parent.right
+        }
+    }
+
+    Row {
+        id: categoryPanel
+        anchors {
+            top: column.bottom
+            topMargin: Theme.paddingMedium
+        }
+        width: parent.width
+        spacing: Theme.paddingMedium
+
+        Label {
+            text: qsTrId("orn-categories") + ':'
+            font.pixelSize: Theme.fontSizeExtraSmall
+            color: Theme.highlightColor
+        }
+
+        Repeater {
+            model: app.categories
+
+            Label {
+                text: modelData.name
+                font.pixelSize: Theme.fontSizeExtraSmall
+                color: touchArea.pressed ? Theme.highlightColor : Theme.primaryColor
+
+                MouseArea {
+                    id: touchArea
+                    anchors.fill: parent
+                    onClicked: pageStack.push(Qt.resolvedUrl("../pages/CategoryPage.qml"), {
+                                                  categoryId: modelData.id,
+                                                  categoryName: modelData.name
+                                              })
+                }
+            }
         }
     }
 }
