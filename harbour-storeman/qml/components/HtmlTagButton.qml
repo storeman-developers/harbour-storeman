@@ -9,7 +9,7 @@ MouseArea {
     property bool _showPress: (pressed && containsMouse) || pressTimer.running
 
     height: Theme.itemSizeExtraSmall * 0.75
-    width: height
+    width: Math.max(height, buttonText.width + Theme.paddingLarge)
 
     onPressedChanged: if (pressed) pressTimer.start()
     onCanceled: pressTimer.stop()
@@ -38,6 +38,7 @@ MouseArea {
             anchors.centerIn: parent
             horizontalAlignment: Qt.AlignHCenter
             color: _showPress ? Theme.highlightColor : Theme.primaryColor
+            textFormat: Text.RichText
         }
     }
 

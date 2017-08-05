@@ -23,6 +23,7 @@ Column {
         body.forceActiveFocus()
         //% "Edit your comment"
         _setTypeLabel(qsTrId("orn-comment-edit-label"), text)
+        body.cursorPosition = body.text.length
     }
 
     function _setTypeLabel(title, preview) {
@@ -105,7 +106,7 @@ Column {
         width: parent.width
     }
 
-    Row {
+    Flickable {
         id: tagsPanel
         anchors {
             left: parent.left
@@ -113,45 +114,59 @@ Column {
             leftMargin: Theme.horizontalPageMargin
             rightMargin: Theme.horizontalPageMargin
         }
-        width: parent.width
+        height: tagsRow.height + Theme.paddingMedium
+        contentWidth: tagsRow.width
+        clip: true
         opacity: body.activeFocus ? 1.0 : 0.0
         visible: opacity > 0.0
-        spacing: Theme.paddingSmall
 
         Behavior on opacity { NumberAnimation { } }
 
-        HtmlTagButton {
-            //: Tag strong
-            //% "B"
-            text: "<b>%0</b>".arg(qsTrId("orn-tag-strong"))
-            tag: "strong"
-        }
+        Row {
+            id: tagsRow
+            spacing: Theme.paddingSmall
 
-        HtmlTagButton {
-            //: Tag emphasize
-            //% "I"
-            text: "<i>%0</i>".arg(qsTrId("orn-tag-emphasize"))
-            tag: "em"
-        }
+            HtmlTagButton {
+                //: Tag strong
+                //% "B"
+                text: "<b>%0</b>".arg(qsTrId("orn-tag-strong"))
+                tag: "strong"
+            }
 
-        HtmlTagButton {
-            //: Tag underscore
-            //% "U"
-            text: "<u>%0</u>".arg(qsTrId("orn-tag-underscore"))
-            tag: "u"
-        }
+            HtmlTagButton {
+                //: Tag emphasize
+                //% "I"
+                text: "<i>%0</i>".arg(qsTrId("orn-tag-emphasize"))
+                tag: "em"
+            }
 
-        HtmlTagButton {
-            text: "🔗"
-            tag: "a"
-            attrs: ' href=""'
-        }
+            HtmlTagButton {
+                //: Tag underscore
+                //% "U"
+                text: "<u>%0</u>".arg(qsTrId("orn-tag-underscore"))
+                tag: "u"
+            }
 
-        HtmlTagButton {
-            //: Tag preformatted
-            //% "M"
-            text: '<font face="monospace">%0</font>'.arg(qsTrId("orn-tag-preformatted"))
-            tag: "pre"
+            HtmlTagButton {
+                text: "🙶"
+                tag: "blockquote"
+            }
+
+            HtmlTagButton {
+                text: '<font face="monospace">‹›</font>'
+                tag: "code"
+            }
+
+            HtmlTagButton {
+                text: '<font face="monospace">pre</font>'
+                tag: "pre"
+            }
+
+            HtmlTagButton {
+                text: "🔗"
+                tag: "a"
+                attrs: ' href=""'
+            }
         }
     }
 
@@ -163,6 +178,7 @@ Column {
         placeholderText: label
         font.pixelSize: Theme.fontSizeSmall
         focusOutBehavior: FocusBehavior.KeepFocus
+
         Component.onCompleted: _editor.textFormat = TextEdit.PlainText
 
         Label {

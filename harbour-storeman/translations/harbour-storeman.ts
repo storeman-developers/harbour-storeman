@@ -598,10 +598,5 @@
         <extracomment>Tag emphasize</extracomment>
         <translation>I</translation>
     </message>
-    <message id="orn-tag-preformatted">
-        <source>M</source>
-        <extracomment>Tag preformatted</extracomment>
-        <translation>M</translation>
-    </message>
 </context>
 </TS>
