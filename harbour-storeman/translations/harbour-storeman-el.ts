@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr">
+<TS version="2.1" language="el">
 <context>
     <name></name>
     <message id="orn-storeman">
@@ -9,67 +9,67 @@
     </message>
     <message id="orn-notrated">
         <source>Not rated yet</source>
-        <translation>Pas encore noté</translation>
+        <translation>Χωρίς αξιολόγηση</translation>
     </message>
     <message id="orn-repositories">
         <source>Repositories</source>
-        <translation>Dépôts</translation>
+        <translation>Αποθετήρια</translation>
     </message>
     <message id="orn-refresh">
         <source>Refresh</source>
-        <translation>Rafraîchir</translation>
+        <translation>Ανανέωση</translation>
     </message>
     <message id="orn-disable">
         <source>Disable</source>
-        <translation>Désactiver</translation>
+        <translation>Απενεργοποίηση</translation>
     </message>
     <message id="orn-enable">
         <source>Enable</source>
-        <translation>Activer</translation>
+        <translation>Ενεργοποίηση</translation>
     </message>
     <message id="orn-enabled">
         <source>Enabled</source>
-        <translation>Activé</translation>
+        <translation>Ενεργοποιημένο</translation>
     </message>
     <message id="orn-disabled">
         <source>Disabled</source>
-        <translation>Désactivé</translation>
+        <translation>Απενεργοποιημένο</translation>
     </message>
     <message id="orn-reload">
         <source>Reload</source>
-        <translation>Recharger</translation>
+        <translation>Επαναφόρτωση</translation>
     </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
-        <translation>Mises à jour récentes</translation>
+        <translation>Ενημερωμένο πρόσφατα</translation>
     </message>
     <message id="orn-app-not-found-body">
         <source>Application with such id was not found</source>
-        <translation>Aucune application trouvée avec cette ID</translation>
+        <translation>Δεν βρέθηκε εφαρμογή με αυτό το αναγνωριστικό</translation>
     </message>
     <message id="orn-app-error-body">
         <source>An error occured while fetching application data</source>
-        <translation>Une erreur s&apos;est produite lors de la récupération des données</translation>
+        <translation>Παρουσιάστηκε ένα σφάλμα κατά την λήψη των δεδομένων της εφαρμογής</translation>
     </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
-        <translation>Réseau indisponible</translation>
+        <translation>Το δίκτυο δεν είναι διαθέσιμο</translation>
     </message>
     <message id="orn-today">
         <source>Today</source>
-        <translation>Aujourd&apos;hui</translation>
+        <translation>Σήμερα</translation>
     </message>
     <message id="orn-yesterday">
         <source>Yesterday</source>
-        <translation>Hier</translation>
+        <translation>Εχθές</translation>
     </message>
     <message id="orn-this-week">
         <source>This week</source>
-        <translation>Cette semaine</translation>
+        <translation>Αυτήν την εβδομάδα</translation>
     </message>
     <message id="orn-this-month">
         <source>This month</source>
-        <translation>Ce mois-ci</translation>
+        <translation>Αυτόν τον μήνα</translation>
     </message>
     <message id="orn-month-format">
         <source>%0 %1</source>
@@ -78,510 +78,510 @@
     </message>
     <message id="orn-adding-repo">
         <source>Adding</source>
-        <translation>Ajout</translation>
+        <translation>Προσθήκη</translation>
     </message>
     <message id="orb-remove">
         <source>Remove</source>
-        <translation>Supprimer</translation>
+        <translation>Αφαίρεση</translation>
     </message>
     <message id="orn-removing">
         <source>Removing</source>
-        <translation>Suppression</translation>
+        <translation>Αφαίρεση</translation>
     </message>
     <message id="orn-error">
         <source>An error occured</source>
-        <translation>Une erreur s&apos;est produite</translation>
+        <translation>Παρουσιάστηκε ένα σφάλμα</translation>
     </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
-        <translation>Ajouter un dépôt</translation>
+        <translation>Προσθήκη αποθετηρίου</translation>
     </message>
     <message id="orn-repo-enable">
         <source>Enable repository</source>
-        <translation>Activer le dépôt</translation>
+        <translation>Ενεργοποίηση αποθετηρίου</translation>
     </message>
     <message id="orn-install">
         <source>Install</source>
-        <translation>Installer</translation>
+        <translation>Εγκατάσταση</translation>
     </message>
     <message id="orn-remove">
         <source>Remove</source>
-        <translation>Supprimer</translation>
+        <translation>Αφαίρεση</translation>
     </message>
     <message id="orn-launch">
         <source>Launch</source>
-        <translation>Démarrer</translation>
+        <translation>Εκκίνηση</translation>
     </message>
     <message id="orn-package-installed">
         <source>Package %0 was successfully installed</source>
-        <translation>Le paquet %0 a été installé avec succès</translation>
+        <translation>Το πακέτο %0 εγκαταστάθηκε επιτυχώς</translation>
     </message>
     <message id="orn-package-removed">
         <source>Package %0 was successfully removed</source>
-        <translation>Le paquet %0 a été désinstallé avec succès</translation>
+        <translation>Το πακέτο %0 απεγκαταστάθηκε επιτυχώς</translation>
     </message>
     <message id="orn-installed">
         <source>Installed</source>
-        <translation>Installé</translation>
+        <translation>Εγκατεστημένο</translation>
     </message>
     <message id="orn-version-installed">
         <source>Installed version</source>
-        <translation>Version installée</translation>
+        <translation>Εγκατεστημένη έκδοση</translation>
     </message>
     <message id="orn-version-available">
         <source>Available version</source>
-        <translation>Version disponible</translation>
+        <translation>Διαθέσιμη έκδοση</translation>
     </message>
     <message id="orn-version-updated">
         <source>Last updated</source>
-        <translation>Dernière mise à jour</translation>
+        <translation>Ενημερωμένα πρόσφατα</translation>
     </message>
     <message id="orn-dt-format">
         <source>yyyy-dd-MM hh:mm</source>
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation>yyyy-MM-dd hh:mm</translation>
+        <translation>yyyy-dd-MM hh:mm</translation>
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
-        <translation>Aucune version disponible</translation>
+        <translation>Οι εκδόσεις δεν είναι διαθέσιμες</translation>
     </message>
     <message id="orn-comments">
         <source>Comments</source>
-        <translation>Commentaires</translation>
+        <translation>Σχόλια</translation>
     </message>
     <message id="orn-author-apps">
         <source>More by %0</source>
-        <translation>Aussi de %0</translation>
+        <translation>Περισσότερα από τον/την %0</translation>
     </message>
     <message id="orn-cat-coding-competition">
         <source>Coding Competition</source>
-        <translation>Coding Competition</translation>
+        <translation>Διαγωνισμός προγραμματισμού</translation>
     </message>
     <message id="orn-cat-applications">
         <source>Applications</source>
-        <translation>Applications</translation>
+        <translation>Εφαρμογές</translation>
     </message>
     <message id="orn-cat-application">
         <source>Application</source>
-        <translation>Application</translation>
+        <translation>Εφαρμογή</translation>
     </message>
     <message id="orn-cat-ambience-themes">
         <source>Ambience &amp; Themes</source>
-        <translation>Ambiance &amp; Thèmes</translation>
+        <translation>Περιβάλλον &amp; Θέματα</translation>
     </message>
     <message id="orn-cat-business">
         <source>Business</source>
-        <translation>Business</translation>
+        <translation>Επιχείρηση</translation>
     </message>
     <message id="orn-cat-city-guides-maps">
         <source>City guides &amp; maps</source>
-        <translation>Guides de ville et Cartes</translation>
+        <translation>Οδηγοί και χάρτες πόλεων</translation>
     </message>
     <message id="orn-cat-education-science">
         <source>Education &amp; Science</source>
-        <translation>Education et Science</translation>
+        <translation>Εκπαίδευση &amp; Επιστήμη</translation>
     </message>
     <message id="orn-cat-entertainment">
         <source>Entertainment</source>
-        <translation>Divertissement</translation>
+        <translation>Ψυχαγωγία</translation>
     </message>
     <message id="orn-cat-music">
         <source>Music</source>
-        <translation>Musique</translation>
+        <translation>Μουσική</translation>
     </message>
     <message id="orn-cat-network">
         <source>Network</source>
-        <translation>Réseau</translation>
+        <translation>Δίκτυο</translation>
     </message>
     <message id="orn-cat-news-info">
         <source>News &amp; info</source>
-        <translation>Actualité et Informations</translation>
+        <translation>Ειδήσεις &amp; ενημέρωση</translation>
     </message>
     <message id="orn-cat-patches">
         <source>Patches</source>
-        <translation>Patches</translation>
+        <translation>Διορθωτικά</translation>
     </message>
     <message id="orn-cat-photo-video">
         <source>Photo &amp; video</source>
-        <translation>Photo &amp; Vidéo</translation>
+        <translation>Φωτογραφία &amp; βίντεο</translation>
     </message>
     <message id="orn-cat-social-networks">
         <source>Social Networks</source>
-        <translation>Réseaux sociaux</translation>
+        <translation>Κοινωνικά δίκτυα</translation>
     </message>
     <message id="orn-cat-sports">
         <source>Sports</source>
-        <translation>Sports</translation>
+        <translation>Αθλητικά</translation>
     </message>
     <message id="orn-cat-system">
         <source>System</source>
-        <translation>Système</translation>
+        <translation>Σύστημα</translation>
     </message>
     <message id="orn-cat-unknown">
         <source>Unknown</source>
-        <translation>Inconnu</translation>
+        <translation>Άγνωστο</translation>
     </message>
     <message id="orn-cat-utilities">
         <source>Utilities</source>
-        <translation>Utilitaires</translation>
+        <translation>Εργαλεία</translation>
     </message>
     <message id="orn-cat-games">
         <source>Games</source>
-        <translation>Jeux</translation>
+        <translation>Παιχνίδια</translation>
     </message>
     <message id="orn-cat-game">
         <source>Game</source>
-        <translation>Jeu</translation>
+        <translation>Παιχνίδι</translation>
     </message>
     <message id="orn-cat-action">
         <source>Action</source>
-        <translation>Action</translation>
+        <translation>Δράση</translation>
     </message>
     <message id="orn-cat-adventure">
         <source>Adventure</source>
-        <translation>Aventure</translation>
+        <translation>Περιπέτεια</translation>
     </message>
     <message id="orn-cat-arcade">
         <source>Arcade</source>
-        <translation>Arcade</translation>
+        <translation>Ηλεκτρονικά</translation>
     </message>
     <message id="orn-cat-card-casino">
         <source>Card &amp; casino</source>
-        <translation>Cartes et Casino</translation>
+        <translation>Χαρτοπαίγνια και Καζίνο</translation>
     </message>
     <message id="orn-cat-education">
         <source>Education</source>
-        <translation>Education</translation>
+        <translation>Εκπαίδευση</translation>
     </message>
     <message id="orn-cat-puzzle">
         <source>Puzzle</source>
-        <translation>Puzzle</translation>
+        <translation>Παζλ</translation>
     </message>
     <message id="orn-cat-strategy">
         <source>Strategy</source>
-        <translation>Stratégie</translation>
+        <translation>Στρατηγική</translation>
     </message>
     <message id="orn-cat-trivia">
         <source>Trivia</source>
-        <translation>Jeu-questionnaire</translation>
+        <translation>Γνώσεων</translation>
     </message>
     <message id="orn-cat-translations">
         <source>Translations</source>
-        <translation>Traductions</translation>
+        <translation>Μεταφράσεις</translation>
     </message>
     <message id="orn-cat-fonts">
         <source>Fonts</source>
-        <translation>Polices</translation>
+        <translation>Γραμματοσειρές</translation>
     </message>
     <message id="orn-cat-libraries">
         <source>Libraries</source>
-        <translation>Librairies</translation>
+        <translation>Βιβλιοθήκες</translation>
     </message>
     <message id="orn-update-available">
         <source>Update available</source>
-        <translation>Mise à jour disponible</translation>
+        <translation>Διαθέσιμη ενημέρωση</translation>
     </message>
     <message id="orn-update">
         <source>Update</source>
-        <translation>Mise à jour</translation>
+        <translation>Ενημέρωση</translation>
     </message>
     <message id="orn-changelog">
         <source>Changelog</source>
-        <translation>Journal des modifications</translation>
+        <translation>Ιστορικό αλλαγών</translation>
     </message>
     <message id="orn-user-apps">
         <source>User applications</source>
-        <translation>Vos applications</translation>
+        <translation>Εφαρμογές χρήστη</translation>
     </message>
     <message id="orn-comments-withnum">
         <source>Comments (%0)</source>
-        <translation>Commentaires (%0)</translation>
+        <translation>Σχόλια (%0)</translation>
     </message>
     <message id="orn-version-repo-disabled">
         <source>Enable the repository first</source>
-        <translation>Commencez par activer le dépôt</translation>
+        <translation>Ενεργοποιήστε το αποθετήριο πρώτα</translation>
     </message>
     <message id="orn-search">
         <source>Search</source>
         <extracomment>The search menu item and the search page header text - should be a noun</extracomment>
-        <translation>Recherche</translation>
+        <translation>Αναζήτηση</translation>
     </message>
     <message id="orn-searchpage-placeholder-noresults">
         <source>Nothing found</source>
-        <translation>Aucun résultat</translation>
+        <translation>Κανένα αποτέλεσμα</translation>
     </message>
     <message id="orn-searchpage-placeholder-noresults-hint">
         <source>Try to change search keywords</source>
-        <translation>Essayer avec d&apos;autres mots-clés</translation>
+        <translation>Δοκιμάστε με άλλες λέξεις κλειδιά</translation>
     </message>
     <message id="orn-searchfield-placeholder">
         <source>Search</source>
         <extracomment>The search field placeholder text - should be a verb</extracomment>
-        <translation>Recherche</translation>
+        <translation>Αναζήτηση</translation>
     </message>
     <message id="orn-searchpage-placeholder-default">
         <source>Search results will be shown here</source>
-        <translation>Les résultats de recherche s&apos;affichent ici</translation>
+        <translation>Τα αποτελέσματα της αναζήτησης θα εμφανιστούν εδώ</translation>
     </message>
     <message id="orn-searchpage-placeholder-default-hint">
         <source>Type some keywords in the field above</source>
-        <translation>Saisir les mots-clés dans le champ ci-dessus</translation>
+        <translation>Πληκτρολογήστε μερικές λέξεις κλειδιά στο ανωτέρω πεδίο</translation>
     </message>
     <message id="orn-about">
         <source>About Storeman</source>
-        <translation>A propos de Storeman</translation>
+        <translation>Περί του Storeman</translation>
     </message>
     <message id="orn-translations">
         <source>Translations</source>
-        <translation>Traductions</translation>
+        <translation>Μεταφράσεις</translation>
     </message>
     <message id="orn-coordinators">
         <source>Coordinators</source>
-        <translation>Coordinateurs</translation>
+        <translation>Συντονιστές</translation>
     </message>
     <message id="orn-translators">
         <source>Translators</source>
-        <translation>Traducteurs</translation>
+        <translation>Μεταφραστές</translation>
     </message>
     <message id="orn-reviewers">
         <source>Reviewers</source>
-        <translation>Réviseurs</translation>
+        <translation>Αναθεωρητές</translation>
     </message>
     <message id="orn-app-description">
         <source>Unofficial native OpenRepos.net client for Sailfish&amp;nbsp;OS</source>
-        <translation>Client OpenRepos.net natif non-officiel pour Sailfish&amp;nbsp;OS</translation>
+        <translation>Ανεπίσημος εγγενής πελάτης του OpenRepos.net για το λειτουργικό Sailfish&amp;nbsp;OS</translation>
     </message>
     <message id="orn-report">
         <source>Report an Issue</source>
-        <translation>Signaler un problème</translation>
+        <translation>Αναφέρετε ένα σφάλμα</translation>
     </message>
     <message id="orn-app-licensing">
         <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation>Ceci est un logiciel open source distribué sous les termes de la&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;Licence MIT&lt;/a&gt;</translation>
+        <translation>Αυτό είναι ένα λογισμικό ανοιχτού κώδικα το οποίοι διανέμεται υπό την άδεια χρήσης &lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT&lt;/a&gt;</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
-        <translation>Une erreur réseau s&apos;est produite</translation>
+        <translation>Παρουσιάστηκε ένα πρόβλημα με το δίκτυο</translation>
     </message>
     <message id="orn-pull-refresh">
         <source>Pull down to refresh</source>
-        <translation>Tirer vers le bas pour rafraichir</translation>
+        <translation>Τραβήξτε κάτω για ανανέωση</translation>
     </message>
     <message id="orn-development">
         <source>Development</source>
-        <translation>Développement</translation>
+        <translation>Ανάπτυξη</translation>
     </message>
     <message id="orn-developers">
         <source>Developers</source>
-        <translation>Développeurs</translation>
+        <translation>Δημιουργοί</translation>
     </message>
     <message id="orn-appicon">
         <source>Application Icon</source>
-        <translation>Icône de l&apos;application</translation>
+        <translation>Εικονίδιο εφαρμογής</translation>
     </message>
     <message id="orn-sources">
         <source>Source Code</source>
-        <translation>Code source</translation>
+        <translation>Πηγαίος κώδικας</translation>
     </message>
     <message id="orn-just-now">
         <source>Just now</source>
-        <translation>A l&apos;instant</translation>
+        <translation>Μόλις τώρα</translation>
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%0 minute(s) ago</source>
         <translation>
-            <numerusform>Il y a %0 minute</numerusform>
-            <numerusform>Il y a %0 minutes</numerusform>
+            <numerusform>Πριν από %0 λεπτό(ά)</numerusform>
+            <numerusform>Πριν από %0 λεπτό(ά)</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%0 hour(s) ago</source>
         <translation>
-            <numerusform>Il y a %0 heure</numerusform>
-            <numerusform>Il y a %0 heures</numerusform>
+            <numerusform>Πριν από %0 ώρα(ες)</numerusform>
+            <numerusform>Πριν από %0 ώρα(ες)</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
         <extracomment>Active label to navigate to the original comment - should be a noun</extracomment>
-        <translation>Réponse à %0</translation>
+        <translation>Απάντηση στον/στην %0</translation>
     </message>
     <message id="orn-categories">
         <source>Categories</source>
-        <translation>Catégories</translation>
+        <translation>Κατηγορίες</translation>
     </message>
     <message id="orn-category-noapps">
         <source>Currently there are no apps in this category</source>
-        <translation>Il n&apos;y actuellement pas d&apos;application dans cette catégorie</translation>
+        <translation>Δεν υπάρχουν εφαρμογές στην κατηγορία αυτή</translation>
     </message>
     <message id="orn-cat-unknown2">
         <source>Unknown category</source>
-        <translation>Catégorie inconnue</translation>
+        <translation>Άγνωστη κατηγορία</translation>
     </message>
     <message id="orn-comment-body">
         <source>Your comment</source>
-        <translation>Votre commentaire</translation>
+        <translation>Το σχόλιο σας</translation>
     </message>
     <message id="orn-reply">
         <source>Reply</source>
         <extracomment>Menu item to reply for a comment - should be a verb</extracomment>
-        <translation>Répondre</translation>
+        <translation>Απάντηση</translation>
     </message>
     <message id="orn-edit">
         <source>Edit</source>
-        <translation>Modifier</translation>
+        <translation>Επεξεργασία</translation>
     </message>
     <message id="orn-thisdevice">
         <source>This Device</source>
-        <translation>Cet appareil</translation>
+        <translation>Στη συσκευή</translation>
     </message>
     <message id="orn-login-menu-item">
         <source>Log in to OpenRepos.net</source>
-        <translation>Se connecter à OpenRepos.net</translation>
+        <translation>Σύνδεση στο OpenRepos.net</translation>
     </message>
     <message id="orn-login-action">
         <source>Log in</source>
-        <translation>Connexion</translation>
+        <translation>Σύνδεση</translation>
     </message>
     <message id="orn-username">
         <source>Username</source>
-        <translation>Nom d&apos;utilisateur</translation>
+        <translation>Όνομα χρήστη</translation>
     </message>
     <message id="orn-acceptable-username">
         <source>Only letters, numbers, and underscores</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation>Lettres, chiffres et tirets bas seulement</translation>
+        <translation>Μόνο γράμματα, αριθμούς και κάτω παύλες</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
-        <translation>Connectez-vous à OpenRepos.net pour commenter les applications.&lt;br /&gt;&lt;br /&gt;Storeman ne conserve pas votre mot de passe ni ne le transmet à des tiers.</translation>
+        <translation>Συνδεθείτε στο OpenRepos.net ούτως ώστε να σχολιάζετε για τις εφαρμογές και να απαντάτε σε άλλα σχόλια.&lt;br /&gt;&lt;br /&gt;Το Storeman δεν αποθηκεύει τον κωδικό πρόσβασης και δεν τον κοινοποιεί σε τρίτους.</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
-        <translation>Vous êtes connectés à OpenRepos.net</translation>
+        <translation>Συνδεθήκατε επιτυχώς στο OpenRepos.net</translation>
     </message>
     <message id="orn-loggedout-message">
         <source>You have logged out from the OpenRepos.net</source>
-        <translation>Vous vous êtes déconnectés d&apos;OpenRepos.net</translation>
+        <translation>Αποσυνδεθήκατε από το OpenRepos.net</translation>
     </message>
     <message id="orn-login-error-title">
         <source>Login error</source>
-        <translation>Erreur de connexion</translation>
+        <translation>Σφάλμα σύνδεσης</translation>
     </message>
     <message id="orn-login-error-message">
         <source>Could not log in the OpenRepos.net - check your credentials and network connection</source>
-        <translation>Connexion à OpenRepos.net impossible - vérifiez vos informations et paramètres de connexion</translation>
+        <translation>Αδύνατη η σύνδεση με το OpenRepos.net - ελέγξτε τα διαπιστευτήριά σας και την δικτυακή σας σύνδεση</translation>
     </message>
     <message id="orn-loggedin-menu-item">
         <source>Logged in as %0</source>
-        <translation>Connecté en tant que %0</translation>
+        <translation>Συνδέθηκε ως %0</translation>
     </message>
     <message id="orn-logout-action">
         <source>Log out</source>
         <extracomment>Menu item</extracomment>
-        <translation>Se déconnecter</translation>
+        <translation>Αποσύνδεση</translation>
     </message>
     <message id="orn-logout-remorse">
         <source>Logging out</source>
         <extracomment>Remorse text</extracomment>
-        <translation>Déconnexion</translation>
+        <translation>Αποσύνδεση</translation>
     </message>
     <message id="orn-comment-edit-label">
         <source>Edit your comment</source>
-        <translation>Modifier votre commentaire</translation>
+        <translation>Επεξεργασία του σχολίου σας</translation>
     </message>
     <message id="orn-comment-update">
         <source>Update</source>
         <extracomment>Update a comment</extracomment>
-        <translation>Mis à jour</translation>
+        <translation>Ενημέρωση</translation>
     </message>
     <message id="orn-comment-send">
         <source>Send</source>
-        <translation>Envoyer</translation>
+        <translation>Αποστολή</translation>
     </message>
     <message id="orn-authorisation-expires-summary">
         <source>Authorisation expires</source>
-        <translation>L&apos;autorisation expire</translation>
+        <translation>Η εξουσιοδότηση λήγει</translation>
     </message>
     <message id="orn-authorisation-expires-body">
         <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>L&apos;autorisation à OpenRepos expire. Cliquer pour renouveler l&apos;autorisation.</translation>
+        <translation>Η εξουσιοδότηση του OpenRepos λήγει. Κάντε κλικ για ανανέωση.</translation>
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
-        <translation>Autorisation expirée</translation>
+        <translation>Η εξουσιοδότηση έληξε</translation>
     </message>
     <message id="orn-authorisation-expired-body">
         <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>L&apos;autorisation à OpenRepos a expiré. Cliquer pour renouveler l&apos;autorisation.</translation>
+        <translation>Η εξουσιοδότηση του OpenRepos έληξε. Κάντε κλικ για ανανέωση.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
-        <translation>Cliquer pour renouveler l&apos;autorisation</translation>
+        <translation>Κάντε κλικ για ανανέωση της εξουσιοδότησης</translation>
     </message>
     <message id="orn-enable-all">
         <source>Enable all</source>
-        <translation>Tout activer</translation>
+        <translation>Ενεργοποίηση όλων</translation>
     </message>
     <message id="orn-disable-all">
         <source>Disable all</source>
-        <translation>Tout désactiver</translation>
+        <translation>Απενεργοποίηση όλων</translation>
     </message>
     <message id="orn-enabling-all">
         <source>Enabling all</source>
-        <translation>Active tout </translation>
+        <translation>Ενεργοποίηση όλων</translation>
     </message>
     <message id="orn-disabling-all">
         <source>Disabling all</source>
-        <translation>Désactive tout</translation>
+        <translation>Απενεργοποίηση όλων</translation>
     </message>
     <message id="orn-installed-apps">
         <source>Installed Applications</source>
-        <translation>Applications installées</translation>
+        <translation>Εγκατεστημένες εφαρμογές</translation>
     </message>
     <message id="orn-no-installed-apps">
         <source>Could not find any applications installed from OpenRepos</source>
-        <translation>Aucune application installée d&apos;OpenRepos</translation>
+        <translation>Δεν βρέθηκαν εφαρμογές εγκατεστημένες από το OpenRepos</translation>
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
-        <translation>L&apos;application a été ajoutée aux favoris</translation>
+        <translation>Η εφαρμογή προστέθηκε στους σελιδοδείκτες</translation>
     </message>
     <message id="orn-bookmarks-removed">
         <source>The app was removed from bookmarks</source>
-        <translation>L&apos;application a été retirée des favoris</translation>
+        <translation>Η εφαρμογή αφαιρέθηκε από τους σελιδοδείκτες</translation>
     </message>
     <message id="orn-no-bookmarks">
         <source>Your bookmarked applications will be shown here</source>
-        <translation>Vos applications favorites apparaitront ici</translation>
+        <translation>Οι εφαρμογές σας στους σελιδοδείκτες θα εμφανίζονται εδώ</translation>
     </message>
     <message id="orn-bookmarks">
         <source>Bookmarks</source>
-        <translation>Favoris</translation>
+        <translation>Σελιδοδείκτες</translation>
     </message>
     <message id="orn-no-repos">
         <source>No OpenRepos repositories have been added yet</source>
-        <translation>Aucun dépôt OpenRepos n&apos;est ajouté pour l&apos;instant</translation>
+        <translation>Δεν έχουν προστεθεί αποθετήρια από το OpenRepos ακόμα</translation>
     </message>
     <message id="orn-add-repo-hint">
         <source>You can add a repository from an application page</source>
-        <translation>Vous pouvez ajouter un dépôt depuis la page d&apos;une application</translation>
+        <translation>Η προσθήκη ενός αποθετηρίου μπορεί να γίνει από την σελίδα μιας εφαρμογής</translation>
     </message>
     <message id="orn-refresh-cache">
         <source>Refresh cache</source>
-        <translation>Rafraîchir le cache</translation>
+        <translation>Ανανέωση της κρυφής μνήμης</translation>
     </message>
     <message id="orn-not-installed">
         <source>Not installed</source>
-        <translation>Non installé</translation>
+        <translation>Μη εγκατεστημένα</translation>
     </message>
     <message id="orn-installing">
         <source>Installing</source>
-        <translation>Installation</translation>
+        <translation>Εγκατάσταση</translation>
     </message>
     <message id="orn-updating">
         <source>Updating</source>
-        <translation>Mise à jour</translation>
+        <translation>Ενημέρωση</translation>
     </message>
     <message id="orn-tag-underscore">
         <source>U</source>
