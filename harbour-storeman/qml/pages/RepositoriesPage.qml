@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.orn 1.0
+import "../components"
 
 Page {
     property bool _working: false
@@ -45,9 +46,12 @@ Page {
 
         delegate: ListItem {
             id: repoItem
+            onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
+                                      { initialSearch: repoAuthor })
             menu: ContextMenu {
 
                 MenuItem {
+                    visible: repoEnabled
                     //% "Refresh cache"
                     text: qsTrId("orn-refresh-cache")
                     onClicked: ornZypp.refreshRepo(repoAlias, true)
@@ -73,8 +77,6 @@ Page {
                 }
             }
 
-            onClicked: showMenu()
-
             Label {
                 anchors.verticalCenter: parent.verticalCenter
                 x: Theme.horizontalPageMargin
@@ -87,10 +89,8 @@ Page {
         PullDownMenu {
             id: menu
 
-            MenuItem {
-                //% "Reload"
-                text: qsTrId("orn-reload")
-                onClicked: repoModel.reset()
+            RefreshMenuItem {
+                model: repoModel
             }
 
             MenuItem {
