@@ -38,15 +38,27 @@ BackgroundItem {
             rightMargin: Theme.horizontalPageMargin
         }
 
-        Label {
+        Item {
             width: parent.width
-            maximumLineCount: _expanded ? 0 : 6
-            text: app.body
-            color: infoItem.highlighted ? Theme.highlightColor : Theme.primaryColor
-            linkColor: Theme.highlightColor
-            font.pixelSize: Theme.fontSizeSmall
-            wrapMode: Text.WordWrap
-            onLinkActivated: Qt.openUrlExternally(link)
+            height: bodyLabel.height
+
+            Label {
+                id: bodyLabel
+                width: parent.width
+                maximumLineCount: _expanded ? 0 : 7
+                text: app.body
+                color: infoItem.highlighted ? Theme.highlightColor : Theme.primaryColor
+                linkColor: Theme.highlightColor
+                font.pixelSize: Theme.fontSizeSmall
+                wrapMode: Text.WordWrap
+                onLinkActivated: Qt.openUrlExternally(link)
+            }
+
+            OpacityRampEffect {
+                sourceItem: bodyLabel
+                enabled: !_expanded
+                direction: OpacityRamp.TopToBottom
+            }
         }
 
         Item {
