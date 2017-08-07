@@ -14,11 +14,10 @@ Page {
         anchors.fill: parent
         model: OrnProxyModel {
             id: proxyModel
-            sortRole: OrnInstalledAppsModel.TitleRole
+            sortRole: OrnInstalledAppsModel.SortRole
             sortCaseSensitivity: Qt.CaseInsensitive
             sourceModel: OrnInstalledAppsModel {
                 id: installedAppsModel
-                zypp: ornZypp
                 onModelAboutToBeReset: _working = true
                 onModelReset: {
                     _working = false
@@ -30,12 +29,19 @@ Page {
         header: PageHeader {
             //% "Installed Applications"
             title: qsTrId("orn-installed-apps")
+            //% "Only from enabled repositories"
+            description: qsTrId("orn-installed-apps-description")
         }
 
         section {
-            property: "section"
+            property: ornZypp.updatesAvailable ? "updateAvailable" : "section"
             delegate: SectionHeader {
-                text: section
+                // If updates are available then show sections by status
+                // otherwise show sections by the first letter of titles
+                text: ornZypp.updatesAvailable ?
+                          (section === '1' ? qsTrId("orn-update-available") :
+                                             qsTrId("orn-installed")) :
+                          section
             }
         }
 
@@ -43,6 +49,14 @@ Page {
             contentHeight: Theme.itemSizeExtraLarge
             onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
                                       { initialSearch: appName })
+            showMenuOnPressAndHold: updateAvailable
+
+            menu: ContextMenu {
+                MenuItem {
+                    text: qsTrId("orn-update")
+                    onClicked: ornZypp.installPackage(ornZypp.updatePackage(appName))
+                }
+            }
 
             Row {
                 id: row
@@ -105,6 +119,13 @@ Page {
 
             RefreshMenuItem {
                 model: installedAppsModel
+            }
+
+            MenuItem {
+                visible: ornZypp.updatesAvailable
+                //% "Update all"
+                text: qsTrId("orn-update-all")
+                onClicked: ornZypp.updateAll()
             }
         }
 

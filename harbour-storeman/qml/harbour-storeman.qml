@@ -9,6 +9,7 @@ import "pages"
 ApplicationWindow
 {
     readonly property bool userAuthorised: ornClient && ornClient.authorised
+    property bool _showUpdatesNotification: true
 
     initialPage: Component { RecentAppsPage { } }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
@@ -51,11 +52,18 @@ ApplicationWindow
         path: "/harbour/storeman/service"
         xml: "  <interface name=\"harbour.storeman.service\">\n" +
              "    <method name=\"loginPage\"/>\n" +
+             "    <method name=\"installedAppsPage\"/>\n" +
              "  </interface>\n"
 
         function loginPage() {
             __silica_applicationwindow_instance.activate()
             pageStack.push(Qt.resolvedUrl("pages/AuthorisationDialog.qml"))
+        }
+
+        function installedAppsPage() {
+            _showUpdatesNotification = false
+            __silica_applicationwindow_instance.activate()
+            pageStack.push(Qt.resolvedUrl("pages/InstalledAppsPage.qml"))
         }
     }
 
@@ -107,6 +115,50 @@ ApplicationWindow
                                   qsTrId("orn-bookmarks-added") :
                                   //% "The app was removed from bookmarks"
                                   qsTrId("orn-bookmarks-removed"))
+        }
+    }
+
+    Notification {
+        id: updatesNotification
+        appIcon: "image://theme/icon-lock-application-update"
+        //% "Updates available"
+        previewSummary: qsTrId("orn-updates-available-summary")
+        //% "Click to view updates"
+        previewBody: qsTrId("orn-updates-available-preview")
+        //% "Applications updates are available. Click to view details."
+        body: qsTrId("orn-updates-available-body")
+        remoteActions: [ {
+                name: "default",
+                service: "harbour.storeman.service",
+                path: "/harbour/storeman/service",
+                iface: "harbour.storeman.service",
+                method: "installedAppsPage"
+            } ]
+
+        Component.onCompleted: {
+            var uid = ornClient.value("gui/update_notification_id")
+            if (uid !== undefined) {
+                replacesId = uid
+            }
+        }
+
+        onClosed: ornClient.setValue("gui/update_notification_id", undefined)
+    }
+
+    Connections {
+        target: ornZypp
+        onUpdatesAvailableChanged: {
+            // Don't show notification if
+            // the app was openned from notification
+            if (ornZypp.updatesAvailable) {
+                if (_showUpdatesNotification) {
+                    updatesNotification.publish()
+                    ornClient.setValue("gui/update_notification_id", updatesNotification.replacesId)
+                }
+            } else {
+                updatesNotification.close()
+            }
+            _showUpdatesNotification = true
         }
     }
 }

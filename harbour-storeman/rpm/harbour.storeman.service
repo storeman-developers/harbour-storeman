@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=harbour.storeman.service
+Exec=/usr/bin/harbour-storeman
+User=nemo

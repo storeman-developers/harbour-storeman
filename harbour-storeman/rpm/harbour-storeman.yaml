@@ -19,7 +19,7 @@ PkgConfigBR:
   - Qt5Qml
   - Qt5Quick
   - packagekit-qt5 >= 0.8.8
-  - libzypp
+  - zlib
 
 Requires:
   - sailfishsilica-qt5 >= 0.10.9 
@@ -32,3 +32,4 @@ Files:
   - '%{_datadir}/applications/%{name}.desktop'
   - '%{_datadir}/icons/hicolor/*/apps/%{name}.png'
   - '%{_sharedstatedir}/polkit-1/localauthority/50-local.d/50-harbour-storeman-packagekit.pkla'
+  - '%{_datadir}/dbus-1/services/harbour.storeman.service'

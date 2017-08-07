@@ -6,11 +6,11 @@ CONFIG += sailfishapp
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
 CONFIG(release, debug|release): DEFINES += QT_NO_DEBUG_OUTPUT
 
-LIBS += -lornplugin -L$$OUT_PWD/../ornplugin
+LIBS += -lornplugin -L$$OUT_PWD/../ornplugin -lz
 PRE_TARGETDEPS += $$OUT_PWD/../ornplugin/libornplugin.a
 INCLUDEPATH += ../ornplugin/src
 
-PKGCONFIG += packagekit-qt5 libzypp
+PKGCONFIG += packagekit-qt5
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 256x256
 
@@ -75,6 +75,9 @@ RESOURCES += \
 polkit.files = rpm/50-harbour-storeman-packagekit.pkla
 polkit.path = $$INSTALL_ROOT/var/lib/polkit-1/localauthority/50-local.d
 
-INSTALLS += polkit
+dbus.files = rpm/harbour.storeman.service
+dbus.path = $$INSTALL_ROOT/usr/share/dbus-1/services
+
+INSTALLS += polkit dbus
 
 include(translations/translations.pri)
