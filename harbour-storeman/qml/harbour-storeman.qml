@@ -9,11 +9,15 @@ import "pages"
 ApplicationWindow
 {
     readonly property bool userAuthorised: ornClient && ornClient.authorised
+    property bool repoFetching: true
     property bool _showUpdatesNotification: true
 
     initialPage: Component { RecentAppsPage { } }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: defaultAllowedOrientations
+
+    // This signal is emitting before gui ready
+    Component.onCompleted: ornZypp.beginRepoFetching()
 
     Connections {
         target: __quickWindow
@@ -26,19 +30,19 @@ ApplicationWindow
 
     Notification {
 
-        function show(message, icon) {
+        function show(message, icn) {
             replacesId = 0
             previewSummary = ""
             previewBody = message
-            appIcon = icon ? icon : "harbour-storeman"
+            icon = icn
             publish()
         }
 
-        function showPopup(title, message, icon) {
+        function showPopup(title, message, icn) {
             replacesId = 0
             previewSummary = title
             previewBody = message
-            appIcon = icon ? icon : "harbour-storeman"
+            icon = icn
             publish()
         }
 
@@ -159,6 +163,18 @@ ApplicationWindow
                 updatesNotification.close()
             }
             _showUpdatesNotification = true
+        }
+        onBeginRepoFetching: {
+            repoFetching = true
+            //% "Wait while repositories data is fetched"
+            notification.show(qsTrId("orn-begin-repofetching"),
+                              "image://theme/icon-s-high-importance")
+        }
+        onEndRepoFetching: {
+            repoFetching = false
+            //% "Repositories data was fetched"
+            notification.show(qsTrId("orn-end-repofetching"),
+                              "image://theme/icon-s-installed")
         }
     }
 }

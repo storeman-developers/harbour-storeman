@@ -3,8 +3,11 @@ import Sailfish.Silica 1.0
 import harbour.orn 1.0
 
 ListItem {
-    property alias iconSource: icon.source
     property alias text: label.text
+    property string iconSource
+    readonly property string _color:
+        pressed ? Theme.highlightColor :
+                  enabled ? Theme.primaryColor : Theme.secondaryHighlightColor
 
     id: item
     width: parent.width
@@ -26,12 +29,13 @@ ListItem {
             width: Theme.iconSizeMedium
             height: Theme.iconSizeMedium
             fillMode: Image.PreserveAspectFit
+            source: iconSource ? (iconSource + "?" + _color) : ""
         }
 
         Label {
             id: label
             anchors.verticalCenter: parent.verticalCenter
-            color: item.pressed ? Theme.highlightColor : Theme.primaryColor
+            color: _color
         }
     }
 }

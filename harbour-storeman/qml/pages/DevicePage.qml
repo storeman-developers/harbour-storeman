@@ -22,9 +22,8 @@ Page {
             }
 
             ListMenuItem {
-                iconSource: ornClient && ornClient.userIconSource ? ornClient.userIconSource :
-                                "image://theme/icon-m-person?" +
-                                (pressed ? Theme.highlightColor : Theme.primaryColor)
+                iconSource: ornClient && ornClient.userIconSource ?
+                                ornClient.userIconSource : "image://theme/icon-m-person"
                 text: userAuthorised ?
                           //% "Logged in as %0"
                           qsTrId("orn-loggedin-menu-item").arg(ornClient.userName) :
@@ -52,22 +51,21 @@ Page {
             }
 
             ListMenuItem {
-                iconSource: "image://theme/icon-m-document?" +
-                            (pressed ? Theme.highlightColor : Theme.primaryColor)
+                enabled: !repoFetching
+                iconSource: "image://theme/icon-m-document"
                 text: qsTrId("orn-repositories")
                 onClicked: pageStack.push(Qt.resolvedUrl("RepositoriesPage.qml"))
             }
 
             ListMenuItem {
-                iconSource: "image://theme/icon-m-sailfish?" +
-                            (pressed ? Theme.highlightColor : Theme.primaryColor)
+                enabled: !repoFetching
+                iconSource: "image://theme/icon-m-sailfish"
                 text: qsTrId("orn-installed-apps")
                 onClicked: pageStack.push(Qt.resolvedUrl("InstalledAppsPage.qml"))
             }
 
             ListMenuItem {
-                iconSource: "image://theme/icon-m-favorite-selected?" +
-                            (pressed ? Theme.highlightColor : Theme.primaryColor)
+                iconSource: "image://theme/icon-m-favorite-selected"
                 text: qsTrId("orn-bookmarks")
                 onClicked: pageStack.push(Qt.resolvedUrl("BookmarksPage.qml"))
             }
