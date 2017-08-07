@@ -14,6 +14,7 @@ Page {
     states: [
         State {
             name: "NotInstalled"
+            when: !app.installedVersion
             PropertyChanges {
                 target: packageInfo.statusLabel
                 running: false
@@ -147,6 +148,12 @@ Page {
 
             PackageInformation {
                 id: packageInfo
+            }
+
+            Item {
+                // Spacer
+                width: parent.width
+                height: Theme.paddingSmall
             }
 
             AppInformation { }

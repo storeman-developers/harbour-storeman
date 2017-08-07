@@ -77,7 +77,7 @@ PullDownMenu {
 
     MenuItem {
         id: updateMenuItem
-        visible: app.updateAvailable
+        visible: page.state === "UpdateAvailable"
         enabled: !pullMenu.busy
         //% "Update"
         text: qsTrId("orn-update")
