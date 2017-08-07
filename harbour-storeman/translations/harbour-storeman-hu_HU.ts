@@ -35,10 +35,6 @@
         <source>Disabled</source>
         <translation>Tiltva</translation>
     </message>
-    <message id="orn-reload">
-        <source>Reload</source>
-        <translation>Újratöltés</translation>
-    </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
         <translation>Nemrég frissült</translation>
@@ -596,10 +592,25 @@
         <extracomment>Tag emphasize</extracomment>
         <translation>I</translation>
     </message>
-    <message id="orn-tag-preformatted">
-        <source>M</source>
-        <extracomment>Tag preformatted</extracomment>
-        <translation>M</translation>
+    <message id="orn-updates-available-summary">
+        <source>Updates available</source>
+        <translation>Elérhető frissítések</translation>
+    </message>
+    <message id="orn-updates-available-preview">
+        <source>Click to view updates</source>
+        <translation>Kattints a frissítések megtekintéséhez</translation>
+    </message>
+    <message id="orn-updates-available-body">
+        <source>Applications updates are available. Click to view details.</source>
+        <translation>Alkalmazás frissítései elérhetőek. Kattints a részletek megtekintéséhez.</translation>
+    </message>
+    <message id="orn-installed-apps-description">
+        <source>Only from enabled repositories</source>
+        <translation>Csak az engedélyezett csomagtárolókból</translation>
+    </message>
+    <message id="orn-update-all">
+        <source>Update all</source>
+        <translation>Az összes frissítése</translation>
     </message>
 </context>
 </TS>

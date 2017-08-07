@@ -35,10 +35,6 @@
         <source>Disabled</source>
         <translation>Απενεργοποιημένο</translation>
     </message>
-    <message id="orn-reload">
-        <source>Reload</source>
-        <translation>Επαναφόρτωση</translation>
-    </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
         <translation>Ενημερωμένο πρόσφατα</translation>
@@ -598,10 +594,25 @@
         <extracomment>Tag emphasize</extracomment>
         <translation>I</translation>
     </message>
-    <message id="orn-tag-preformatted">
-        <source>M</source>
-        <extracomment>Tag preformatted</extracomment>
-        <translation>M</translation>
+    <message id="orn-updates-available-summary">
+        <source>Updates available</source>
+        <translation>Updates available</translation>
+    </message>
+    <message id="orn-updates-available-preview">
+        <source>Click to view updates</source>
+        <translation>Click to view updates</translation>
+    </message>
+    <message id="orn-updates-available-body">
+        <source>Applications updates are available. Click to view details.</source>
+        <translation>Applications updates are available. Click to view details.</translation>
+    </message>
+    <message id="orn-installed-apps-description">
+        <source>Only from enabled repositories</source>
+        <translation>Only from enabled repositories</translation>
+    </message>
+    <message id="orn-update-all">
+        <source>Update all</source>
+        <translation>Update all</translation>
     </message>
 </context>
 </TS>

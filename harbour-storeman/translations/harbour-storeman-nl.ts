@@ -35,10 +35,6 @@
         <source>Disabled</source>
         <translation>Uitgeschakeld</translation>
     </message>
-    <message id="orn-reload">
-        <source>Reload</source>
-        <translation>Herladen</translation>
-    </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
         <translation>Recent bijgewerkt</translation>
@@ -78,7 +74,7 @@
     </message>
     <message id="orn-adding-repo">
         <source>Adding</source>
-        <translation>Wordt toegeveogd</translation>
+        <translation>Wordt toegevoegd</translation>
     </message>
     <message id="orb-remove">
         <source>Remove</source>
@@ -586,22 +582,37 @@
     <message id="orn-tag-underscore">
         <source>U</source>
         <extracomment>Tag underscore</extracomment>
-        <translation>U</translation>
+        <translation>O</translation>
     </message>
     <message id="orn-tag-strong">
         <source>B</source>
         <extracomment>Tag strong</extracomment>
-        <translation>B</translation>
+        <translation>V</translation>
     </message>
     <message id="orn-tag-emphasize">
         <source>I</source>
         <extracomment>Tag emphasize</extracomment>
-        <translation>I</translation>
+        <translation>S</translation>
     </message>
-    <message id="orn-tag-preformatted">
-        <source>M</source>
-        <extracomment>Tag preformatted</extracomment>
-        <translation>M</translation>
+    <message id="orn-updates-available-summary">
+        <source>Updates available</source>
+        <translation>Updates beschikbaar</translation>
+    </message>
+    <message id="orn-updates-available-preview">
+        <source>Click to view updates</source>
+        <translation>Tik om de updates te bekijken</translation>
+    </message>
+    <message id="orn-updates-available-body">
+        <source>Applications updates are available. Click to view details.</source>
+        <translation>Er zijn updates voor je apps beschikbaar. Tik voor meer info.</translation>
+    </message>
+    <message id="orn-installed-apps-description">
+        <source>Only from enabled repositories</source>
+        <translation>Enkel uit ingeschakelde pakketbronnen</translation>
+    </message>
+    <message id="orn-update-all">
+        <source>Update all</source>
+        <translation>Alles bijwerken</translation>
     </message>
 </context>
 </TS>

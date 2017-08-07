@@ -35,10 +35,6 @@
         <source>Disabled</source>
         <translation>Désactivé</translation>
     </message>
-    <message id="orn-reload">
-        <source>Reload</source>
-        <translation>Recharger</translation>
-    </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
         <translation>Mises à jour récentes</translation>
@@ -598,10 +594,25 @@
         <extracomment>Tag emphasize</extracomment>
         <translation>I</translation>
     </message>
-    <message id="orn-tag-preformatted">
-        <source>M</source>
-        <extracomment>Tag preformatted</extracomment>
-        <translation>M</translation>
+    <message id="orn-updates-available-summary">
+        <source>Updates available</source>
+        <translation>Mises à jour disponibles</translation>
+    </message>
+    <message id="orn-updates-available-preview">
+        <source>Click to view updates</source>
+        <translation>Cliquez pour voir les mises à jour</translation>
+    </message>
+    <message id="orn-updates-available-body">
+        <source>Applications updates are available. Click to view details.</source>
+        <translation>Des mises à jour d&apos;applications sont disponibles. Cliquez pour voir les détails.</translation>
+    </message>
+    <message id="orn-installed-apps-description">
+        <source>Only from enabled repositories</source>
+        <translation>Dépôts activés uniquement</translation>
+    </message>
+    <message id="orn-update-all">
+        <source>Update all</source>
+        <translation>Tout mettre à jour</translation>
     </message>
 </context>
 </TS>
