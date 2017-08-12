@@ -616,11 +616,11 @@
     </message>
     <message id="orn-begin-repofetching">
         <source>Wait while repositories data is fetched</source>
-        <translation>Wait while repositories data is fetched</translation>
+        <translation>Veuillez patienter, les données des dépôts sont récupérées</translation>
     </message>
     <message id="orn-end-repofetching">
         <source>Repositories data was fetched</source>
-        <translation>Repositories data was fetched</translation>
+        <translation>Les données des dépôts sont récupérées</translation>
     </message>
 </context>
 </TS>

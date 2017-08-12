@@ -616,11 +616,11 @@
     </message>
     <message id="orn-begin-repofetching">
         <source>Wait while repositories data is fetched</source>
-        <translation>Wait while repositories data is fetched</translation>
+        <translation>Even geduld, de pakketbrongegevens worden opgehaald</translation>
     </message>
     <message id="orn-end-repofetching">
         <source>Repositories data was fetched</source>
-        <translation>Repositories data was fetched</translation>
+        <translation>Pakketbrongegevens opgehaald</translation>
     </message>
 </context>
 </TS>

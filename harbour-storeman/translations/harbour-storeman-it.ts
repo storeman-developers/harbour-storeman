@@ -596,31 +596,31 @@
     </message>
     <message id="orn-updates-available-summary">
         <source>Updates available</source>
-        <translation>Updates available</translation>
+        <translation>Aggiornamenti disponibili</translation>
     </message>
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
-        <translation>Click to view updates</translation>
+        <translation>Clicca per vedere gli aggiornamenti</translation>
     </message>
     <message id="orn-updates-available-body">
         <source>Applications updates are available. Click to view details.</source>
-        <translation>Applications updates are available. Click to view details.</translation>
+        <translation>Disponibili aggiornamenti delle applicazioni. Clicca per i dettagli.</translation>
     </message>
     <message id="orn-installed-apps-description">
         <source>Only from enabled repositories</source>
-        <translation>Only from enabled repositories</translation>
+        <translation>Solo dai repository abilitati</translation>
     </message>
     <message id="orn-update-all">
         <source>Update all</source>
-        <translation>Update all</translation>
+        <translation>Aggiorna tutto</translation>
     </message>
     <message id="orn-begin-repofetching">
         <source>Wait while repositories data is fetched</source>
-        <translation>Wait while repositories data is fetched</translation>
+        <translation>Attendere scaricamento dati dai repository</translation>
     </message>
     <message id="orn-end-repofetching">
         <source>Repositories data was fetched</source>
-        <translation>Repositories data was fetched</translation>
+        <translation>Dati dai repository scaricati</translation>
     </message>
 </context>
 </TS>

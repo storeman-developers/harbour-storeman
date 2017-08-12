@@ -614,11 +614,11 @@
     </message>
     <message id="orn-begin-repofetching">
         <source>Wait while repositories data is fetched</source>
-        <translation>Wait while repositories data is fetched</translation>
+        <translation>Várj amíg a csomagtárolók adatainak lekérése befelyeződik </translation>
     </message>
     <message id="orn-end-repofetching">
         <source>Repositories data was fetched</source>
-        <translation>Repositories data was fetched</translation>
+        <translation>A csomagtárolók adatainak lekérése elkészült</translation>
     </message>
 </context>
 </TS>

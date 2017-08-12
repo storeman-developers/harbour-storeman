@@ -557,27 +557,27 @@
     </message>
     <message id="orn-no-repos">
         <source>No OpenRepos repositories have been added yet</source>
-        <translation>No OpenRepos repositories have been added yet</translation>
+        <translation>Es wurden noch keine OpenRepos-Quellen hinzugefügt</translation>
     </message>
     <message id="orn-add-repo-hint">
         <source>You can add a repository from an application page</source>
-        <translation>You can add a repository from an application page</translation>
+        <translation>Du kannst eine Quelle von der Programm-Seite hinzufügen</translation>
     </message>
     <message id="orn-refresh-cache">
         <source>Refresh cache</source>
-        <translation>Refresh cache</translation>
+        <translation>Cache aktualisieren</translation>
     </message>
     <message id="orn-not-installed">
         <source>Not installed</source>
-        <translation>Not installed</translation>
+        <translation>Nicht installiert</translation>
     </message>
     <message id="orn-installing">
         <source>Installing</source>
-        <translation>Installing</translation>
+        <translation>Installiere</translation>
     </message>
     <message id="orn-updating">
         <source>Updating</source>
-        <translation>Updating</translation>
+        <translation>Aktualisiere</translation>
     </message>
     <message id="orn-tag-underscore">
         <source>U</source>
@@ -596,31 +596,31 @@
     </message>
     <message id="orn-updates-available-summary">
         <source>Updates available</source>
-        <translation>Updates available</translation>
+        <translation>Updates verfügbar</translation>
     </message>
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
-        <translation>Click to view updates</translation>
+        <translation>Klicken zum Anzeigen der Updates</translation>
     </message>
     <message id="orn-updates-available-body">
         <source>Applications updates are available. Click to view details.</source>
-        <translation>Applications updates are available. Click to view details.</translation>
+        <translation>Programm-Updates sind verfügbar. Klicken, um Details zu sehen.</translation>
     </message>
     <message id="orn-installed-apps-description">
         <source>Only from enabled repositories</source>
-        <translation>Only from enabled repositories</translation>
+        <translation>Nur von aktivierten Quellen</translation>
     </message>
     <message id="orn-update-all">
         <source>Update all</source>
-        <translation>Update all</translation>
+        <translation>Alle Updates installieren</translation>
     </message>
     <message id="orn-begin-repofetching">
         <source>Wait while repositories data is fetched</source>
-        <translation>Wait while repositories data is fetched</translation>
+        <translation>Warte während Daten aus den Quellen abgerufen werden</translation>
     </message>
     <message id="orn-end-repofetching">
         <source>Repositories data was fetched</source>
-        <translation>Repositories data was fetched</translation>
+        <translation>Daten wurden aus den Quellen abgerufen</translation>
     </message>
 </context>
 </TS>

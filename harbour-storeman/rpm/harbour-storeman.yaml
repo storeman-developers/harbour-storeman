@@ -1,7 +1,7 @@
 Name: harbour-storeman
 Summary: OpenRepos Client for Sailfish OS
 Version: 0.0.13
-Release: 1
+Release: 2
 Group: Qt/Qt
 URL: https://github.com/mentaljam/harbour-storeman
 License: LICENSE
@@ -11,7 +11,9 @@ Description: |
   Unofficial native OpenRepos.net client for Sailfish OS
 Configure: none
 Builder: qtc5
-QMakeOptions: VERSION=%{version}
+
+QMakeOptions:
+  - VERSION=%{version}
 
 PkgConfigBR:
   - sailfishapp >= 1.0.2

@@ -1,3 +1,6 @@
+* Sat Aug 12 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.13-2
+- Update translations
+
 * Tue Aug  8 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.13-1
 - Application page - show categories (tap for open the category page)
 - Application page - add opacity ramp effect for app description label

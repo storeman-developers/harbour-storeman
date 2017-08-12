@@ -37,7 +37,7 @@
     </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
-        <translation>Ενημερωμένο πρόσφατα</translation>
+        <translation>Ενημερωμένα πρόσφατα</translation>
     </message>
     <message id="orn-app-not-found-body">
         <source>Application with such id was not found</source>
@@ -596,31 +596,31 @@
     </message>
     <message id="orn-updates-available-summary">
         <source>Updates available</source>
-        <translation>Updates available</translation>
+        <translation>Διαθέσιμες ενημερώσεις</translation>
     </message>
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
-        <translation>Click to view updates</translation>
+        <translation>Κάντε κλικ για προβολή των ενημερώσεων</translation>
     </message>
     <message id="orn-updates-available-body">
         <source>Applications updates are available. Click to view details.</source>
-        <translation>Applications updates are available. Click to view details.</translation>
+        <translation>Υπάρχουν διαθέσιμες ενημερώσεις εφαρμογών. Κάντε κλικ για την προβολή λεπτομερειών.</translation>
     </message>
     <message id="orn-installed-apps-description">
         <source>Only from enabled repositories</source>
-        <translation>Only from enabled repositories</translation>
+        <translation>Μόνο από τα ενεργοποιημένα αποθετήρια</translation>
     </message>
     <message id="orn-update-all">
         <source>Update all</source>
-        <translation>Update all</translation>
+        <translation>Ενημέρωση όλων</translation>
     </message>
     <message id="orn-begin-repofetching">
         <source>Wait while repositories data is fetched</source>
-        <translation>Wait while repositories data is fetched</translation>
+        <translation>Παρακαλώ περιμένετε την λήψη των δεδομένων των αποθετηρίων</translation>
     </message>
     <message id="orn-end-repofetching">
         <source>Repositories data was fetched</source>
-        <translation>Repositories data was fetched</translation>
+        <translation>Η λήψη των δεδομένων των αποθετηρίων ολοκληρώθηκε</translation>
     </message>
 </context>
 </TS>
