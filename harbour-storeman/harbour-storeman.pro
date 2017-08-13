@@ -6,7 +6,7 @@ CONFIG += sailfishapp
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
 CONFIG(release, debug|release): DEFINES += QT_NO_DEBUG_OUTPUT
 
-LIBS += -lornplugin -L$$OUT_PWD/../ornplugin -lz
+LIBS += -lornplugin -L$$OUT_PWD/../ornplugin -lsolv
 PRE_TARGETDEPS += $$OUT_PWD/../ornplugin/libornplugin.a
 INCLUDEPATH += ../ornplugin/src
 

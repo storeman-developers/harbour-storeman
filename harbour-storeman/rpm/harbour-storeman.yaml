@@ -21,12 +21,15 @@ PkgConfigBR:
   - Qt5Qml
   - Qt5Quick
   - packagekit-qt5 >= 0.8.8
-  - zlib
+
+PkgBR:
+  - libsolv-devel
 
 Requires:
   - sailfishsilica-qt5 >= 0.10.9 
   - PackageKit >= 0.8.9
   - PackageKit-Qt5 >= 0.8.8
+  - libsolv0
 
 Files:
   - '%{_bindir}'

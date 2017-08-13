@@ -17,7 +17,7 @@ ApplicationWindow
     allowedOrientations: defaultAllowedOrientations
 
     // This signal is emitting before gui ready
-    Component.onCompleted: ornZypp.beginRepoFetching()
+    Component.onCompleted: ornZypp.fetchRepos()
 
     Connections {
         target: __quickWindow
