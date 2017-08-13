@@ -41,6 +41,7 @@ OTHER_FILES +=  \
     qml/pages/AuthorisationDialog.qml \
     qml/pages/InstalledAppsPage.qml \
     qml/pages/BookmarksPage.qml \
+    qml/pages/ErrorPage.qml \
     qml/components/AppListDelegate.qml \
     qml/components/RatingBox.qml \
     qml/components/IconLabel.qml \

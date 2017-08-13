@@ -622,5 +622,9 @@
         <source>Finished reading the repositories data</source>
         <translation>Finished reading the repositories data</translation>
     </message>
+    <message id="orn-view-details">
+        <source>Click to view details</source>
+        <translation>Click to view details</translation>
+    </message>
 </context>
 </TS>
