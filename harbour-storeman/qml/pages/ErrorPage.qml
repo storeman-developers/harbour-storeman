@@ -27,6 +27,7 @@ Page {
                     rightMargin: Theme.horizontalPageMargin
                 }
                 color: Theme.highlightColor
+                wrapMode: Text.WordWrap
             }
         }
 
