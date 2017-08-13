@@ -614,13 +614,13 @@
         <source>Update all</source>
         <translation>Actualizar todo</translation>
     </message>
-    <message id="orn-begin-repofetching">
-        <source>Wait while repositories data is fetched</source>
-        <translation>Wait while repositories data is fetched</translation>
+    <message id="orn-reading-repos-begin">
+        <source>Reading the repositories data</source>
+        <translation>Reading the repositories data</translation>
     </message>
-    <message id="orn-end-repofetching">
-        <source>Repositories data was fetched</source>
-        <translation>Repositories data was fetched</translation>
+    <message id="orn-reading-repos-end">
+        <source>Finished reading the repositories data</source>
+        <translation>Finished reading the repositories data</translation>
     </message>
 </context>
 </TS>

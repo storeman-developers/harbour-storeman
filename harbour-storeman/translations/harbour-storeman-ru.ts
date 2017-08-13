@@ -618,13 +618,13 @@ Storeman не хранит ваш пароль и не передает его �
         <source>Update all</source>
         <translation>Обновить все</translation>
     </message>
-    <message id="orn-begin-repofetching">
-        <source>Wait while repositories data is fetched</source>
-        <translation>Подождите, пока загружаются данные репозиториев</translation>
+    <message id="orn-reading-repos-begin">
+        <source>Reading the repositories data</source>
+        <translation>Выполняется чтение репозиториев</translation>
     </message>
-    <message id="orn-end-repofetching">
-        <source>Repositories data was fetched</source>
-        <translation>Данные репозиториев прочитаны</translation>
+    <message id="orn-reading-repos-end">
+        <source>Finished reading the repositories data</source>
+        <translation>Чтение репозиториев завершено</translation>
     </message>
 </context>
 </TS>

@@ -612,13 +612,13 @@
         <source>Update all</source>
         <translation>Az összes frissítése</translation>
     </message>
-    <message id="orn-begin-repofetching">
-        <source>Wait while repositories data is fetched</source>
-        <translation>Várj amíg a csomagtárolók adatainak lekérése befelyeződik </translation>
+    <message id="orn-reading-repos-begin">
+        <source>Reading the repositories data</source>
+        <translation>Reading the repositories data</translation>
     </message>
-    <message id="orn-end-repofetching">
-        <source>Repositories data was fetched</source>
-        <translation>A csomagtárolók adatainak lekérése elkészült</translation>
+    <message id="orn-reading-repos-end">
+        <source>Finished reading the repositories data</source>
+        <translation>Finished reading the repositories data</translation>
     </message>
 </context>
 </TS>

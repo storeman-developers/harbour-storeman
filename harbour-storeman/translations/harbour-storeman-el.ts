@@ -614,13 +614,13 @@
         <source>Update all</source>
         <translation>Ενημέρωση όλων</translation>
     </message>
-    <message id="orn-begin-repofetching">
-        <source>Wait while repositories data is fetched</source>
-        <translation>Παρακαλώ περιμένετε την λήψη των δεδομένων των αποθετηρίων</translation>
+    <message id="orn-reading-repos-begin">
+        <source>Reading the repositories data</source>
+        <translation>Reading the repositories data</translation>
     </message>
-    <message id="orn-end-repofetching">
-        <source>Repositories data was fetched</source>
-        <translation>Η λήψη των δεδομένων των αποθετηρίων ολοκληρώθηκε</translation>
+    <message id="orn-reading-repos-end">
+        <source>Finished reading the repositories data</source>
+        <translation>Finished reading the repositories data</translation>
     </message>
 </context>
 </TS>

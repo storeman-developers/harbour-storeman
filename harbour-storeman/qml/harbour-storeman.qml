@@ -166,14 +166,14 @@ ApplicationWindow
         }
         onBeginRepoFetching: {
             repoFetching = true
-            //% "Wait while repositories data is fetched"
-            notification.show(qsTrId("orn-begin-repofetching"),
+            //% "Reading the repositories data"
+            notification.show(qsTrId("orn-reading-repos-begin"),
                               "image://theme/icon-s-high-importance")
         }
         onEndRepoFetching: {
             repoFetching = false
-            //% "Repositories data was fetched"
-            notification.show(qsTrId("orn-end-repofetching"),
+            //% "Finished reading the repositories data"
+            notification.show(qsTrId("orn-reading-repos-end"),
                               "image://theme/icon-s-installed")
         }
     }
