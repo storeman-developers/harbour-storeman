@@ -7,6 +7,9 @@ PullDownMenu {
     visible: networkManager.state === "online" &&
              (repoMenuItem.text   || installMenuItem.text ||
               app.updateAvailable || app.installedVersion)
+    busy: page.state === "installing" ||
+          page.state === "removing" ||
+          page.state === "updating"
 
     MenuItem {
         id: repoMenuItem
@@ -63,13 +66,11 @@ PullDownMenu {
             if (app.installedVersion) {
                 Remorse.popupAction(page, qsTrId("orn-removing"), function()
                 {
-                    page.state = "Removing"
-                    pullMenu.busy = true
+                    page.setState("removing")
                     app.remove()
                 })
             } else if (app.availableVersion) {
-                page.state = "Installing"
-                pullMenu.busy = true
+                page.setState("installing")
                 app.install()
             }
         }
@@ -77,13 +78,12 @@ PullDownMenu {
 
     MenuItem {
         id: updateMenuItem
-        visible: page.state === "UpdateAvailable"
+        visible: page.state === "updateavailable"
         enabled: !pullMenu.busy
         //% "Update"
         text: qsTrId("orn-update")
         onClicked: {
-            page.state = "Updating"
-            pullMenu.busy = true
+            page.setState("updating")
             app.install()
         }
     }

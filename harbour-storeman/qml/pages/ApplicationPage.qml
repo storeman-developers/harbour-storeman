@@ -6,14 +6,21 @@ import "../components"
 Page {
     property bool returnToUser: false
     property alias appId: app.appId
+    property string _prevState
     readonly property var locale: Qt.locale()
+
+    // Store the previous state to reset it on error
+    function setState(newState) {
+        _prevState = state
+        state = newState
+    }
 
     id: page
     allowedOrientations: defaultAllowedOrientations
-    state: "NotInstalled"
+    state: "notinstalled"
     states: [
         State {
-            name: "NotInstalled"
+            name: "notinstalled"
             when: !app.installedVersion
             PropertyChanges {
                 target: packageInfo.statusLabel
@@ -24,7 +31,7 @@ Page {
             }
         },
         State {
-            name: "Installed"
+            name: "installed"
             when: !app.updateAvailable && app.installedVersion
             PropertyChanges {
                 target: packageInfo.statusLabel
@@ -35,7 +42,7 @@ Page {
             }
         },
         State {
-            name: "UpdateAvailable"
+            name: "updateavailable"
             when: app.updateAvailable
             PropertyChanges {
                 target: packageInfo.statusLabel
@@ -46,7 +53,7 @@ Page {
             }
         },
         State {
-            name: "Installing"
+            name: "installing"
             PropertyChanges {
                 target: packageInfo.statusLabel
                 running: true
@@ -55,7 +62,7 @@ Page {
             }
         },
         State {
-            name: "Updating"
+            name: "updating"
             PropertyChanges {
                 target: packageInfo.statusLabel
                 running: true
@@ -64,7 +71,7 @@ Page {
             }
         },
         State {
-            name: "Removing"
+            name: "removing"
             PropertyChanges {
                 target: packageInfo.statusLabel
                 running: true
@@ -72,6 +79,12 @@ Page {
             }
         }
     ]
+
+    // NOTE: is it working without filtering errors?
+    Connections {
+        target: ornZypp
+        onPkError: state = _prevState
+    }
 
     OrnApplication {
         id: app
@@ -102,7 +115,7 @@ Page {
         }
 
         onRemoved: {
-            state = "NotInstalled"
+            state = "notinstalled"
             pageMenu.busy = false
             //% "Package %0 was successfully removed"
             notification.show(qsTrId("orn-package-removed").arg(packageName))
