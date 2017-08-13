@@ -60,7 +60,7 @@ ApplicationWindow
             replacesId = 0
             previewSummary = ""
             previewBody = message
-            icon = icn
+            if (icn) icon = icn
             publish()
         }
 
@@ -207,6 +207,18 @@ ApplicationWindow
         }
 
         onPkError: {
+            switch (error) {
+            case OrnZypp.ErrorDepResolutionFailed:
+                var match = details.match(/nothing provides (.*) needed by (.*)/)
+                console.log(match)
+                //: A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.
+                //% "Nothing provides %1 needed by %2"
+                details = qsTrId("orn-error-depresolution").arg(match[1]).arg(match[2])
+                break
+            default:
+                break
+            }
+
             errorNotification.replacesId = 0
             errorNotification.body = details
             errorNotification.publish()

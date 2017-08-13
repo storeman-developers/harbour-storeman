@@ -626,5 +626,10 @@
         <source>Click to view details</source>
         <translation>Click to view details</translation>
     </message>
+    <message id="orn-error-depresolution">
+        <source>Nothing provides %1 needed by %2</source>
+        <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
+        <translation>Nothing provides %1 needed by %2</translation>
+    </message>
 </context>
 </TS>
