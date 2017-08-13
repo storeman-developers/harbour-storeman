@@ -14,6 +14,16 @@ ListModel {
     }
 
     ListElement {
+        role: "OpenRepos"
+        participants: [
+            ListElement {
+                name: "Basil Semuonov"
+                link: "https://github.com/custodian"
+            }
+        ]
+    }
+
+    ListElement {
         //% "Application Icon"
         role: qsTrId("orn-appicon")
         participants: [
