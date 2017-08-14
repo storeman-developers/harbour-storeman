@@ -100,14 +100,6 @@ Page {
             pageStack.navigateBack()
         }
 
-        onUpdateError: {
-            notification.showPopup(
-                        qsTrId("orn-error"),
-                        //% "An error occured while fetching application data"
-                        qsTrId("orn-app-error-body"))
-            pageStack.navigateBack()
-        }
-
         onInstalled: {
             pageMenu.busy = false
             //% "Package %0 was successfully installed"

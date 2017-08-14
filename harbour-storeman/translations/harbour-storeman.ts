@@ -43,10 +43,6 @@
         <source>Application with such id was not found</source>
         <translation>Application with such id was not found</translation>
     </message>
-    <message id="orn-app-error-body">
-        <source>An error occured while fetching application data</source>
-        <translation>An error occured while fetching application data</translation>
-    </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
         <translation>Network is unavailable</translation>
