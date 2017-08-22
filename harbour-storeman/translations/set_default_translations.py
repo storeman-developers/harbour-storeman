@@ -1,15 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import glob
+import os, glob
 import xml.etree.ElementTree as ET
 
 def main():
+    # Get translations dir
+    trdir = os.path.dirname(os.path.abspath(__file__))
     # Get default ts root
-    default_ts = ET.parse('harbour-storeman.ts').getroot()
+    ts_path = os.path.join(trdir, 'harbour-storeman.ts')
+    default_ts = ET.parse(ts_path).getroot()
     # Iterate over other ts files
-    for ts_file in glob.glob('harbour-storeman-*.ts'):
-        print(ts_file)
+    ts_tmpl = os.path.join(trdir, 'harbour-storeman-*.ts')
+    for ts_file in glob.glob(ts_tmpl):
+        print(os.path.basename(ts_file))
         # Get current ts tree, root and context
         current_tree = ET.parse(ts_file)
         current_ts = current_tree.getroot()
