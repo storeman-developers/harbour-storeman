@@ -33,7 +33,13 @@ Unofficial native OpenRepos.net client for Sailfish OS
 - List and manage repositories
 - List and manage applications installed from OpenRepos
 - Initial support for applications bookmarks
+- Initial support for backups
 
 ## Development
 
+- OpenRepos service by [Basil Semuonov](https://github.com/custodian)
 - Application icon by [Laurent_C](https://openrepos.net/users/laurentc)
+
+## Translations
+
+Read [here](harbour-storeman/translations/README.md)
