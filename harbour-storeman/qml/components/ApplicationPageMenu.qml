@@ -27,7 +27,7 @@ PullDownMenu {
                 //% "Enable repository"
                 return qsTrId("orn-repo-enable")
             default:
-                return ""
+                return qsTrId("orn-refresh-cache")
             }
         }
         onClicked: {
@@ -42,6 +42,7 @@ PullDownMenu {
                 OrnZypp.modifyRepo(app.repoAlias, OrnZypp.EnableRepo)
                 break
             default:
+                OrnZypp.refreshRepo(app.repoAlias, true)
                 break
             }
         }
