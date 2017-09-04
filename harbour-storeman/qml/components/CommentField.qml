@@ -215,11 +215,11 @@ Column {
                 anchors.fill: parent
                 onClicked: {
                     if (_editId) {
-                        ornClient.editComment(_editId, body.text)
+                        OrnClient.editComment(_editId, body.text)
                     } else if (_replyToId) {
-                        ornClient.comment(appId, body.text, _replyToId)
+                        OrnClient.comment(appId, body.text, _replyToId)
                     } else {
-                        ornClient.comment(appId, body.text)
+                        OrnClient.comment(appId, body.text)
                     }
                     _reset()
                 }

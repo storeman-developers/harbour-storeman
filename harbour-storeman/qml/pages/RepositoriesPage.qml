@@ -54,7 +54,7 @@ Page {
                     visible: repoEnabled
                     //% "Refresh cache"
                     text: qsTrId("orn-refresh-cache")
-                    onClicked: ornZypp.refreshRepo(repoAlias, true)
+                    onClicked: OrnZypp.refreshRepo(repoAlias, true)
                 }
 
                 MenuItem {
@@ -63,7 +63,7 @@ Page {
                               qsTrId("orn-disable") :
                               //% "Enable"
                               qsTrId("orn-enable")
-                    onClicked: ornZypp.modifyRepo(
+                    onClicked: OrnZypp.modifyRepo(
                                    repoAlias, repoEnabled ? OrnZypp.DisableRepo : OrnZypp.EnableRepo)
                 }
 
@@ -72,7 +72,7 @@ Page {
                     text: qsTrId("orb-remove")
                     //% "Removing"
                     onClicked: Remorse.itemAction(repoItem, qsTrId("orn-removing"), function() {
-                        ornZypp.modifyRepo(repoAlias, OrnZypp.RemoveRepo)
+                        OrnZypp.modifyRepo(repoAlias, OrnZypp.RemoveRepo)
                     })
                 }
             }
@@ -95,7 +95,7 @@ Page {
 
             MenuItem {
                 text: qsTrId("orn-refresh-cache")
-                onClicked: ornZypp.refreshRepos(true)
+                onClicked: OrnZypp.refreshRepos(true)
             }
 
             MenuItem {
@@ -104,7 +104,7 @@ Page {
                 text: qsTrId("orn-enable-all")
                 //% "Enabling all"
                 onClicked: Remorse.popupAction(page, qsTrId("orn-enabling-all"),
-                                               function() { ornZypp.enableRepos(true) })
+                                               function() { OrnZypp.enableRepos(true) })
 
             }
 
@@ -114,7 +114,7 @@ Page {
                 text: qsTrId("orn-disable-all")
                 //% "Disabling all"
                 onClicked: Remorse.popupAction(page, qsTrId("orn-disabling-all"),
-                                               function() { ornZypp.enableRepos(false) })
+                                               function() { OrnZypp.enableRepos(false) })
             }
         }
 

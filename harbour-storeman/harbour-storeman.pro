@@ -42,6 +42,8 @@ OTHER_FILES +=  \
     qml/pages/InstalledAppsPage.qml \
     qml/pages/BookmarksPage.qml \
     qml/pages/ErrorPage.qml \
+    qml/pages/BackupsPage.qml \
+    qml/pages/RestoreDialog.qml \
     qml/components/AppListDelegate.qml \
     qml/components/RatingBox.qml \
     qml/components/IconLabel.qml \

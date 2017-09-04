@@ -34,11 +34,11 @@ Page {
         }
 
         section {
-            property: ornZypp.updatesAvailable ? "updateAvailable" : "section"
+            property: OrnZypp.updatesAvailable ? "updateAvailable" : "section"
             delegate: SectionHeader {
                 // If updates are available then show sections by status
                 // otherwise show sections by the first letter of titles
-                text: ornZypp.updatesAvailable ?
+                text: OrnZypp.updatesAvailable ?
                           (section === '1' ? qsTrId("orn-update-available") :
                                              qsTrId("orn-installed")) :
                           section
@@ -54,7 +54,7 @@ Page {
             menu: ContextMenu {
                 MenuItem {
                     text: qsTrId("orn-update")
-                    onClicked: ornZypp.installPackage(ornZypp.updatePackage(appName))
+                    onClicked: OrnZypp.installPackage(OrnZypp.updatePackage(appName))
                 }
             }
 
@@ -122,10 +122,10 @@ Page {
             }
 
             MenuItem {
-                visible: ornZypp.updatesAvailable
+                visible: OrnZypp.updatesAvailable
                 //% "Update all"
                 text: qsTrId("orn-update-all")
-                onClicked: ornZypp.updateAll()
+                onClicked: OrnZypp.updateAll()
             }
         }
 

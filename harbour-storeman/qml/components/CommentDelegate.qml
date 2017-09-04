@@ -3,12 +3,12 @@ import Sailfish.Silica 1.0
 import harbour.orn 1.0
 
 ListItem {
-    readonly property bool _userComment: ornClient && ornClient.userId === commentData.userId
+    readonly property bool _userComment: OrnClient.userId === commentData.userId
     readonly property bool _authorComment: commentData.userId === userId
 
     contentHeight: content.height + Theme.paddingMedium * 2
-    menu: userAuthorised ? contextMenu : null
-    highlighted: userAuthorised && down
+    menu: OrnClient.authorised ? contextMenu : null
+    highlighted: OrnClient.authorised && down
     _showPress: highlighted
 
     ContextMenu {
@@ -31,10 +31,10 @@ ListItem {
 //        MenuItem {
 //            //% "Delete"
 //            text: qsTrId("orn-delete")
-//            visible: _userComment || ornClient.userId === userId
+//            visible: _userComment || OrnClient.userId === userId
 //            //% "Deleting"
 //            onClicked: remorseAction(qsTrId("orn-deleting"), function() {
-//                ornClient.deleteComment(commentData.commentId)
+//                OrnClient.deleteComment(commentData.commentId)
 //                commentsModel.removeRow(index, 1)
 //            })
 //        }

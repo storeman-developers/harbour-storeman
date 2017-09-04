@@ -35,11 +35,11 @@ PullDownMenu {
             case OrnApplication.RepoNotInstalled:
                 //% "Adding"
                 Remorse.popupAction(page, qsTrId("orn-adding-repo"), function() {
-                    ornZypp.addRepo(app.userName)
+                    OrnZypp.addRepo(app.userName)
                 })
                 break
             case OrnApplication.RepoDisabled:
-                ornZypp.modifyRepo(app.repoAlias, OrnZypp.EnableRepo)
+                OrnZypp.modifyRepo(app.repoAlias, OrnZypp.EnableRepo)
                 break
             default:
                 break

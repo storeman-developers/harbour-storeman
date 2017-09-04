@@ -18,15 +18,15 @@ Page {
             PageHeader {
                 //% "This Device"
                 title: qsTrId("orn-thisdevice")
-                description: ornZypp.deviceModel()
+                description: OrnZypp.deviceModel()
             }
 
             ListMenuItem {
-                iconSource: ornClient && ornClient.userIconSource ?
-                                ornClient.userIconSource : "image://theme/icon-m-person"
-                text: userAuthorised ?
+                iconSource: OrnClient.userIconSource ?
+                                OrnClient.userIconSource : "image://theme/icon-m-person"
+                text: OrnClient.authorised ?
                           //% "Logged in as %0"
-                          qsTrId("orn-loggedin-menu-item").arg(ornClient.userName) :
+                          qsTrId("orn-loggedin-menu-item").arg(OrnClient.userName) :
                           //% "Log in to OpenRepos.net"
                           qsTrId("orn-login-menu-item")
                 menu: ContextMenu {
@@ -35,16 +35,16 @@ Page {
                         //% "Log out"
                         text: qsTrId("orn-logout-action")
                         onClicked: {
-                            if (userAuthorised) {
+                            if (OrnClient.authorised) {
                                 //: Remorse text
                                 //% "Logging out"
-                                Remorse.popupAction(page, qsTrId("orn-logout-remorse"), ornClient.logout)
+                                Remorse.popupAction(page, qsTrId("orn-logout-remorse"), OrnClient.logout)
                             }
                         }
                     }
                 }
 
-                onClicked: userAuthorised ?
+                onClicked: OrnClient.authorised ?
                                showMenu() :
                                pageStack.push(Qt.resolvedUrl("AuthorisationDialog.qml"))
 
@@ -68,6 +68,12 @@ Page {
                 iconSource: "image://theme/icon-m-favorite-selected"
                 text: qsTrId("orn-bookmarks")
                 onClicked: pageStack.push(Qt.resolvedUrl("BookmarksPage.qml"))
+            }
+
+            ListMenuItem {
+                iconSource: "image://theme/icon-m-backup"
+                text: qsTrId("orn-backups")
+                onClicked: pageStack.push(Qt.resolvedUrl("BackupsPage.qml"))
             }
         }
 

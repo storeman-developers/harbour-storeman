@@ -8,7 +8,6 @@ import "pages"
 
 ApplicationWindow
 {
-    readonly property bool userAuthorised: ornClient && ornClient.authorised
     property bool repoFetching: true
     property bool _showUpdatesNotification: true
 
@@ -16,7 +15,7 @@ ApplicationWindow
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: defaultAllowedOrientations
 
-    Component.onCompleted: ornZypp.fetchRepos()
+    Component.onCompleted: OrnZypp.fetchRepos()
 
     Connections {
         target: __quickWindow
@@ -60,7 +59,7 @@ ApplicationWindow
             replacesId = 0
             previewSummary = ""
             previewBody = message
-            if (icn) icon = icn
+            icon = icn ? icn : ""
             publish()
         }
 
@@ -106,13 +105,13 @@ ApplicationWindow
             } ]
 
         Component.onCompleted: {
-            var uid = ornClient.value("gui/update_notification_id")
+            var uid = OrnClient.value("gui/update_notification_id")
             if (uid !== undefined) {
                 replacesId = uid
             }
         }
 
-        onClosed: ornClient.setValue("gui/update_notification_id", undefined)
+        onClosed: OrnClient.setValue("gui/update_notification_id", undefined)
     }
 
     Notification {
@@ -131,10 +130,10 @@ ApplicationWindow
             } ]
     }
 
-    OrnClient {
-        id: ornClient
+    Connections {
+        target: OrnClient
 
-        onAuthorisedChanged: authorised ?
+        onAuthorisedChanged: OrnClient.authorised ?
                                  //% "You have successfully logged in to the OpenRepos.net"
                                  notification.show(qsTrId("orn-loggedin-message")) :
                                  //% "You have logged out from the OpenRepos.net"
@@ -157,7 +156,7 @@ ApplicationWindow
             authorisationWarning.publish()
         }
 
-        onCookieIsValidChanged: if (!cookieIsValid) {
+        onCookieIsValidChanged: if (!OrnClient.cookieIsValid) {
             //% "Authorisation expired"
             authorisationWarning.previewSummary = qsTrId("orn-authorisation-expired-summary")
             authorisationWarning.previewBody = qsTrId("orn-reauthorise")
@@ -176,15 +175,15 @@ ApplicationWindow
     }
 
     Connections {
-        target: ornZypp
+        target: OrnZypp
 
         onUpdatesAvailableChanged: {
             // Don't show notification if
             // the app was openned from notification
-            if (ornZypp.updatesAvailable) {
+            if (OrnZypp.updatesAvailable) {
                 if (_showUpdatesNotification) {
                     updatesNotification.publish()
-                    ornClient.setValue("gui/update_notification_id", updatesNotification.replacesId)
+                    OrnClient.setValue("gui/update_notification_id", updatesNotification.replacesId)
                 }
             } else {
                 updatesNotification.close()

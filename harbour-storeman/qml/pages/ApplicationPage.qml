@@ -82,7 +82,7 @@ Page {
 
     // NOTE: is it working without filtering errors?
     Connections {
-        target: ornZypp
+        target: OrnZypp
         onPkError: state = _prevState
     }
 
@@ -175,7 +175,7 @@ Page {
             }
 
             MoreButton {
-                visible: userAuthorised || app.commentsCount
+                visible: OrnClient.authorised || app.commentsCount
                 //% "Comments (%0)"
                 text: app.commentsCount ? qsTrId("orn-comments-withnum").arg(app.commentsCount) :
                                           qsTrId("orn-comments")

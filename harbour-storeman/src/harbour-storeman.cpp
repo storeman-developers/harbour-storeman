@@ -2,7 +2,6 @@
 #include <sailfishapp.h>
 
 #include <orn_plugin.h>
-#include <ornzypp.h>
 #include "networkaccessmanagerfactory.h"
 
 Q_IMPORT_PLUGIN(OrnPlugin)
@@ -35,9 +34,6 @@ int main(int argc, char *argv[])
     }
 
     auto view = SailfishApp::createView();
-    auto root = view->rootContext();
-
-    root->setContextProperty(QStringLiteral("ornZypp"), OrnZypp::instance());
 
     NetworkAccessManagerFactory factory;
     view->engine()->setNetworkAccessManagerFactory(&factory);

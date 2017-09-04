@@ -7,8 +7,6 @@ Page {
     id: page
     allowedOrientations: defaultAllowedOrientations
 
-    onStatusChanged: if (status === PageStatus.Active) bookmarksModel.client = ornClient
-
     SilicaListView {
         id: bookmarksList
         anchors.fill: parent

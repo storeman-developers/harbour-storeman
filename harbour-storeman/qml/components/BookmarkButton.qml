@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import harbour.orn 1.0
 
 IconButton {
     property bool _bookmarked
@@ -9,10 +10,10 @@ IconButton {
                  (pressed ? Theme.highlightColor : Theme.primaryColor)
 
     onClicked: {
-        var f = _bookmarked ? ornClient.removeBookmark : ornClient.addBookmark
+        var f = _bookmarked ? OrnClient.removeBookmark : OrnClient.addBookmark
         f(app.appId)
         _bookmarked = !_bookmarked
     }
 
-    Component.onCompleted: _bookmarked = ornClient.hasBookmark(app.appId)
+    Component.onCompleted: _bookmarked = OrnClient.hasBookmark(app.appId)
 }

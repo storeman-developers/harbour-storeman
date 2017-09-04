@@ -13,7 +13,7 @@ Page {
     allowedOrientations: defaultAllowedOrientations
 
     Connections {
-        target: ornClient
+        target: OrnClient
         onCommentAdded: commentsModel.addComment(cid)
         onCommentEdited: commentsModel.editComment(cid)
     }

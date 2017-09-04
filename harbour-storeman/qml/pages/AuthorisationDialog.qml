@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import harbour.orn 1.0
 
 Dialog {
     id: dialog
@@ -8,7 +9,7 @@ Dialog {
                usernameField.acceptableInput &&
                passwordField.text
 
-    onAccepted: ornClient.login(usernameField.text, passwordField.text)
+    onAccepted: OrnClient.login(usernameField.text, passwordField.text)
 
     DialogHeader {
         id: header
