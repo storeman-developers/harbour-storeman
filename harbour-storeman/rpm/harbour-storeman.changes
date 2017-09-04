@@ -1,3 +1,14 @@
+* Mon Sep 04 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.14-1
+- Use libsolv to read repodata
+- Fix notification messages
+- Show notifications on PackageKit errors
+- Translate PackageKit errors
+- Application page - better handling of errors
+- Initial support for backups
+- Add option to refresh repo cache from the app page
+- Update translations
+- Add Basil to the developers list
+
 * Sat Aug 12 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.13-2
 - Update translations
 
