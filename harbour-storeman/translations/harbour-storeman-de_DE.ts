@@ -43,10 +43,6 @@
         <source>Application with such id was not found</source>
         <translation>Eine Anwendung mit einer solchen ID wurde nicht gefunden</translation>
     </message>
-    <message id="orn-app-error-body">
-        <source>An error occured while fetching application data</source>
-        <translation>Beim Abrufen der Anwendungsdaten ist ein Fehler aufgetreten</translation>
-    </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
         <translation>Keine Netzwerkverbindung</translation>
@@ -616,11 +612,104 @@
     </message>
     <message id="orn-reading-repos-begin">
         <source>Reading the repositories data</source>
-        <translation>Reading the repositories data</translation>
+        <translation>Lese die Daten aus den Quellen</translation>
     </message>
     <message id="orn-reading-repos-end">
         <source>Finished reading the repositories data</source>
-        <translation>Finished reading the repositories data</translation>
+        <translation>Lesen der Daten aus den Quellen beendet</translation>
+    </message>
+    <message id="orn-view-details">
+        <source>Click to view details</source>
+        <translation>Klicken zum Anzeigen der Details</translation>
+    </message>
+    <message id="orn-error-depresolution">
+        <source>Nothing provides %1 needed by %2</source>
+        <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
+        <translation>Nichts stellt %1 bereit, welches von %2 benötigt wird</translation>
+    </message>
+    <message id="orn-backups">
+        <source>Backups</source>
+        <translation>Backups</translation>
+    </message>
+    <message id="orn-backup-description">
+        <source>Backup and restore repos and installed apps</source>
+        <translation>Quellen und installierte Programme sichern und wiederherstellen</translation>
+    </message>
+    <message id="orn-create-backup">
+        <source>Create a backup</source>
+        <translation>Backup erstellen</translation>
+    </message>
+    <message id="orn-backup-error">
+        <source>Backup error</source>
+        <translation>Backup-Fehler</translation>
+    </message>
+    <message id="orn-backup-error-directory">
+        <source>Could not create directory</source>
+        <translation>Konnte Verzechnis nicht erstellen</translation>
+    </message>
+    <message id="orn-creating-backup">
+        <source>Creating a backup</source>
+        <translation>Erstelle ein Backup</translation>
+    </message>
+    <message id="orn-restore-title">
+        <source>Restore from file</source>
+        <translation>Aus Datei wiederherstellen</translation>
+    </message>
+    <message id="orn-restore">
+        <source>Restore</source>
+        <translation>Wiederherstellen</translation>
+    </message>
+    <message id="orn-restore-hint">
+        <source>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</source>
+        <translation>Wiederherstellen der OpenRepos-Quellen und installierten Programme aus der ausgewählten Datei. Diese Aktion betrifft nicht deine aktuellen Quellen und wird keine installierten Programme entfernen.</translation>
+    </message>
+    <message id="orn-created">
+        <source>Created</source>
+        <translation>Erstellt</translation>
+    </message>
+    <message id="orn-total-repos">
+        <source>Total repositories</source>
+        <translation>Quellen gesamt</translation>
+    </message>
+    <message id="orn-details">
+        <source>Details</source>
+        <translation>Details</translation>
+    </message>
+    <message id="orn-backups-placeholder">
+        <source>Backups will be shown here</source>
+        <translation>Hier werden die Backups angezeigt</translation>
+    </message>
+    <message id="orn-restoring-repos">
+        <source>Restoring repositories</source>
+        <translation>Quellen wiederherstellen</translation>
+    </message>
+    <message id="orn-refreshing-repos">
+        <source>Refreshing repositories</source>
+        <translation>Quellen aktualisieren</translation>
+    </message>
+    <message id="orn-searching-packages">
+        <source>Searching packages</source>
+        <translation>Suche Pakete</translation>
+    </message>
+    <message id="orn-installing-repos">
+        <source>Installing packages</source>
+        <translation>Installiere Pakete</translation>
+    </message>
+    <message id="orn-restoring-title">
+        <source>Restoring</source>
+        <translation>Wiederherstellen</translation>
+    </message>
+    <message id="orn-success-backup">
+        <source>Successful backup</source>
+        <translation>Backup erfolgreich</translation>
+    </message>
+    <message id="orn-success-restore">
+        <source>Successful restore</source>
+        <translation>Wiederherstellung erfolgreich</translation>
+    </message>
+    <message id="orn-installed-packages">
+        <source>Installed packages</source>
+        <translation>Installierte Pakete</translation>
     </message>
 </context>
 </TS>

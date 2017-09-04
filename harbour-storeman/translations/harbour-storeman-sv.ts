@@ -43,10 +43,6 @@
         <source>Application with such id was not found</source>
         <translation>Hittade ingen app med ett sådant ID</translation>
     </message>
-    <message id="orn-app-error-body">
-        <source>An error occured while fetching application data</source>
-        <translation>Ett fel inträffade vid hämtning av applikationsdata</translation>
-    </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
         <translation>Nätverket är otillgängligt</translation>
@@ -618,11 +614,104 @@
     </message>
     <message id="orn-reading-repos-begin">
         <source>Reading the repositories data</source>
-        <translation>Reading the repositories data</translation>
+        <translation>Läser förrådsdata</translation>
     </message>
     <message id="orn-reading-repos-end">
         <source>Finished reading the repositories data</source>
-        <translation>Finished reading the repositories data</translation>
+        <translation>Läsning av förrådsdata slutförd</translation>
+    </message>
+    <message id="orn-view-details">
+        <source>Click to view details</source>
+        <translation>Tryck för att visa detaljer</translation>
+    </message>
+    <message id="orn-error-depresolution">
+        <source>Nothing provides %1 needed by %2</source>
+        <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
+        <translation>Inget tillhandahåller %1,  som behövs av %2</translation>
+    </message>
+    <message id="orn-backups">
+        <source>Backups</source>
+        <translation>Säkerhetskopior</translation>
+    </message>
+    <message id="orn-backup-description">
+        <source>Backup and restore repos and installed apps</source>
+        <translation>Säkerhetskopiera och återställ förråd och installerade appar</translation>
+    </message>
+    <message id="orn-create-backup">
+        <source>Create a backup</source>
+        <translation>Skapa säkerhetskopia</translation>
+    </message>
+    <message id="orn-backup-error">
+        <source>Backup error</source>
+        <translation>Säkerhetskopieringsfel</translation>
+    </message>
+    <message id="orn-backup-error-directory">
+        <source>Could not create directory</source>
+        <translation>Kunde inte skapa mapp</translation>
+    </message>
+    <message id="orn-creating-backup">
+        <source>Creating a backup</source>
+        <translation>Skapar en säkerhetskopia</translation>
+    </message>
+    <message id="orn-restore-title">
+        <source>Restore from file</source>
+        <translation>Återställ från fil</translation>
+    </message>
+    <message id="orn-restore">
+        <source>Restore</source>
+        <translation>Återställ</translation>
+    </message>
+    <message id="orn-restore-hint">
+        <source>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</source>
+        <translation>Återställ OpenRepos-förråd och installerade appar från markerad fil. Denna åtgärd påverkar inte dina aktuella förråd och tar inte bort installerade appar.</translation>
+    </message>
+    <message id="orn-created">
+        <source>Created</source>
+        <translation>Skapad</translation>
+    </message>
+    <message id="orn-total-repos">
+        <source>Total repositories</source>
+        <translation>Antal förråd</translation>
+    </message>
+    <message id="orn-details">
+        <source>Details</source>
+        <translation>Detaljerat</translation>
+    </message>
+    <message id="orn-backups-placeholder">
+        <source>Backups will be shown here</source>
+        <translation>Säkerhetskopior kommer att visas här</translation>
+    </message>
+    <message id="orn-restoring-repos">
+        <source>Restoring repositories</source>
+        <translation>Återställer förråd</translation>
+    </message>
+    <message id="orn-refreshing-repos">
+        <source>Refreshing repositories</source>
+        <translation>Uppdaterar förråd</translation>
+    </message>
+    <message id="orn-searching-packages">
+        <source>Searching packages</source>
+        <translation>Söker efter paket</translation>
+    </message>
+    <message id="orn-installing-repos">
+        <source>Installing packages</source>
+        <translation>Installerar paket</translation>
+    </message>
+    <message id="orn-restoring-title">
+        <source>Restoring</source>
+        <translation>Återställer</translation>
+    </message>
+    <message id="orn-success-backup">
+        <source>Successful backup</source>
+        <translation>Lyckad säkerhetskopiering</translation>
+    </message>
+    <message id="orn-success-restore">
+        <source>Successful restore</source>
+        <translation>Lyckad återställning</translation>
+    </message>
+    <message id="orn-installed-packages">
+        <source>Installed packages</source>
+        <translation>Installerade paket</translation>
     </message>
 </context>
 </TS>

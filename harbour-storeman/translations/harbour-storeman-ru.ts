@@ -43,10 +43,6 @@
         <source>Application with such id was not found</source>
         <translation>Такое приложение не найдено</translation>
     </message>
-    <message id="orn-app-error-body">
-        <source>An error occured while fetching application data</source>
-        <translation>При получении данных о приложении произошла ошибка</translation>
-    </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
         <translation>Сеть недоступна</translation>
@@ -625,6 +621,99 @@ Storeman не хранит ваш пароль и не передает его �
     <message id="orn-reading-repos-end">
         <source>Finished reading the repositories data</source>
         <translation>Чтение репозиториев завершено</translation>
+    </message>
+    <message id="orn-view-details">
+        <source>Click to view details</source>
+        <translation>Нажмите, чтобы просмотреть детали</translation>
+    </message>
+    <message id="orn-error-depresolution">
+        <source>Nothing provides %1 needed by %2</source>
+        <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
+        <translation>Невозможно удовлетворить зависимость %1, необходимую для %2.</translation>
+    </message>
+    <message id="orn-backups">
+        <source>Backups</source>
+        <translation>Резервные копии</translation>
+    </message>
+    <message id="orn-backup-description">
+        <source>Backup and restore repos and installed apps</source>
+        <translation>Сохранение и восстановление репозиториев и приложений</translation>
+    </message>
+    <message id="orn-create-backup">
+        <source>Create a backup</source>
+        <translation>Создать резервную копию</translation>
+    </message>
+    <message id="orn-backup-error">
+        <source>Backup error</source>
+        <translation>Ошибка создания</translation>
+    </message>
+    <message id="orn-backup-error-directory">
+        <source>Could not create directory</source>
+        <translation>Не удалось создать каталог</translation>
+    </message>
+    <message id="orn-creating-backup">
+        <source>Creating a backup</source>
+        <translation>Создание копии</translation>
+    </message>
+    <message id="orn-restore-title">
+        <source>Restore from file</source>
+        <translation>Восстановить из файла</translation>
+    </message>
+    <message id="orn-restore">
+        <source>Restore</source>
+        <translation>Восстановить</translation>
+    </message>
+    <message id="orn-restore-hint">
+        <source>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</source>
+        <translation>Восстановите репозитории OpenRepos и установленные приложения из выбранного файла. Это действие не повлияет на ваши текущие настройки репозиториев и не удалит установленные приложения.</translation>
+    </message>
+    <message id="orn-created">
+        <source>Created</source>
+        <translation>Создан</translation>
+    </message>
+    <message id="orn-total-repos">
+        <source>Total repositories</source>
+        <translation>Всего репозиториев</translation>
+    </message>
+    <message id="orn-details">
+        <source>Details</source>
+        <translation>Детали</translation>
+    </message>
+    <message id="orn-backups-placeholder">
+        <source>Backups will be shown here</source>
+        <translation>Здесь появятся резервные копии</translation>
+    </message>
+    <message id="orn-restoring-repos">
+        <source>Restoring repositories</source>
+        <translation>Восстановление репозиториев</translation>
+    </message>
+    <message id="orn-refreshing-repos">
+        <source>Refreshing repositories</source>
+        <translation>Обновление репозиториев</translation>
+    </message>
+    <message id="orn-searching-packages">
+        <source>Searching packages</source>
+        <translation>Поиск пакетов</translation>
+    </message>
+    <message id="orn-installing-repos">
+        <source>Installing packages</source>
+        <translation>Установка пакетов</translation>
+    </message>
+    <message id="orn-restoring-title">
+        <source>Restoring</source>
+        <translation>Восстановление</translation>
+    </message>
+    <message id="orn-success-backup">
+        <source>Successful backup</source>
+        <translation>Копирование успешно завершено</translation>
+    </message>
+    <message id="orn-success-restore">
+        <source>Successful restore</source>
+        <translation>Восстановление успешно завершено</translation>
+    </message>
+    <message id="orn-installed-packages">
+        <source>Installed packages</source>
+        <translation>Установленные пакеты</translation>
     </message>
 </context>
 </TS>

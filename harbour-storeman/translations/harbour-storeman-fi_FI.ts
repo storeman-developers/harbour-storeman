@@ -43,10 +43,6 @@
         <source>Application with such id was not found</source>
         <translation>Sovellusta ei löytynyt</translation>
     </message>
-    <message id="orn-app-error-body">
-        <source>An error occured while fetching application data</source>
-        <translation>Sovellustietojen hakemisen aikana tapahtui virhe</translation>
-    </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
         <translation>Verkko ei ole käytettävissä</translation>
@@ -565,19 +561,19 @@
     </message>
     <message id="orn-refresh-cache">
         <source>Refresh cache</source>
-        <translation>Refresh cache</translation>
+        <translation>Virkistä välimuisti</translation>
     </message>
     <message id="orn-not-installed">
         <source>Not installed</source>
-        <translation>Not installed</translation>
+        <translation>Ei asennettu</translation>
     </message>
     <message id="orn-installing">
         <source>Installing</source>
-        <translation>Installing</translation>
+        <translation>Asennetaan</translation>
     </message>
     <message id="orn-updating">
         <source>Updating</source>
-        <translation>Updating</translation>
+        <translation>Päivitetään</translation>
     </message>
     <message id="orn-tag-underscore">
         <source>U</source>
@@ -596,31 +592,124 @@
     </message>
     <message id="orn-updates-available-summary">
         <source>Updates available</source>
-        <translation>Updates available</translation>
+        <translation>Päivityksiä saatavana</translation>
     </message>
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
-        <translation>Click to view updates</translation>
+        <translation>Katso päivitykset painamalla</translation>
     </message>
     <message id="orn-updates-available-body">
         <source>Applications updates are available. Click to view details.</source>
-        <translation>Applications updates are available. Click to view details.</translation>
+        <translation>Sovelluspäivityksiä saatavana. Katso lisätiedot painamalla.</translation>
     </message>
     <message id="orn-installed-apps-description">
         <source>Only from enabled repositories</source>
-        <translation>Only from enabled repositories</translation>
+        <translation>Vain käyttöönotetuista asennuslähteistä</translation>
     </message>
     <message id="orn-update-all">
         <source>Update all</source>
-        <translation>Update all</translation>
+        <translation>Päivitä kaikki</translation>
     </message>
     <message id="orn-reading-repos-begin">
         <source>Reading the repositories data</source>
-        <translation>Reading the repositories data</translation>
+        <translation>Luetaan asennustietolähteitä</translation>
     </message>
     <message id="orn-reading-repos-end">
         <source>Finished reading the repositories data</source>
-        <translation>Finished reading the repositories data</translation>
+        <translation>Asennustietolähteiden lukeminen valmis</translation>
+    </message>
+    <message id="orn-view-details">
+        <source>Click to view details</source>
+        <translation>Katso lisätietoja painamalla</translation>
+    </message>
+    <message id="orn-error-depresolution">
+        <source>Nothing provides %1 needed by %2</source>
+        <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
+        <translation>%2 tarvitsee %1-paketin, jota ei löydy</translation>
+    </message>
+    <message id="orn-backups">
+        <source>Backups</source>
+        <translation>Backups</translation>
+    </message>
+    <message id="orn-backup-description">
+        <source>Backup and restore repos and installed apps</source>
+        <translation>Backup and restore repos and installed apps</translation>
+    </message>
+    <message id="orn-create-backup">
+        <source>Create a backup</source>
+        <translation>Create a backup</translation>
+    </message>
+    <message id="orn-backup-error">
+        <source>Backup error</source>
+        <translation>Backup error</translation>
+    </message>
+    <message id="orn-backup-error-directory">
+        <source>Could not create directory</source>
+        <translation>Could not create directory</translation>
+    </message>
+    <message id="orn-creating-backup">
+        <source>Creating a backup</source>
+        <translation>Creating a backup</translation>
+    </message>
+    <message id="orn-restore-title">
+        <source>Restore from file</source>
+        <translation>Restore from file</translation>
+    </message>
+    <message id="orn-restore">
+        <source>Restore</source>
+        <translation>Restore</translation>
+    </message>
+    <message id="orn-restore-hint">
+        <source>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</source>
+        <translation>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</translation>
+    </message>
+    <message id="orn-created">
+        <source>Created</source>
+        <translation>Created</translation>
+    </message>
+    <message id="orn-total-repos">
+        <source>Total repositories</source>
+        <translation>Total repositories</translation>
+    </message>
+    <message id="orn-details">
+        <source>Details</source>
+        <translation>Details</translation>
+    </message>
+    <message id="orn-backups-placeholder">
+        <source>Backups will be shown here</source>
+        <translation>Backups will be shown here</translation>
+    </message>
+    <message id="orn-restoring-repos">
+        <source>Restoring repositories</source>
+        <translation>Restoring repositories</translation>
+    </message>
+    <message id="orn-refreshing-repos">
+        <source>Refreshing repositories</source>
+        <translation>Refreshing repositories</translation>
+    </message>
+    <message id="orn-searching-packages">
+        <source>Searching packages</source>
+        <translation>Searching packages</translation>
+    </message>
+    <message id="orn-installing-repos">
+        <source>Installing packages</source>
+        <translation>Installing packages</translation>
+    </message>
+    <message id="orn-restoring-title">
+        <source>Restoring</source>
+        <translation>Restoring</translation>
+    </message>
+    <message id="orn-success-backup">
+        <source>Successful backup</source>
+        <translation>Successful backup</translation>
+    </message>
+    <message id="orn-success-restore">
+        <source>Successful restore</source>
+        <translation>Successful restore</translation>
+    </message>
+    <message id="orn-installed-packages">
+        <source>Installed packages</source>
+        <translation>Installed packages</translation>
     </message>
 </context>
 </TS>

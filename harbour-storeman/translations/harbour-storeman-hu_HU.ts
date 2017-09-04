@@ -37,15 +37,11 @@
     </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
-        <translation>Nemrég frissült</translation>
+        <translation>Nemrég frissítve</translation>
     </message>
     <message id="orn-app-not-found-body">
         <source>Application with such id was not found</source>
         <translation>Alkalmazás nem található ilyen azonosítóval</translation>
-    </message>
-    <message id="orn-app-error-body">
-        <source>An error occured while fetching application data</source>
-        <translation>Hiba történt az alkalmazásadatok lekérésekor</translation>
     </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
@@ -135,7 +131,7 @@
     <message id="orn-dt-format">
         <source>yyyy-dd-MM hh:mm</source>
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation>éééé-nn-hh óó:pp</translation>
+        <translation>yyyy-dd-MM hh:mm</translation>
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
@@ -614,11 +610,104 @@
     </message>
     <message id="orn-reading-repos-begin">
         <source>Reading the repositories data</source>
-        <translation>Reading the repositories data</translation>
+        <translation>Csomagtárolók adatainak beolvasása</translation>
     </message>
     <message id="orn-reading-repos-end">
         <source>Finished reading the repositories data</source>
-        <translation>Finished reading the repositories data</translation>
+        <translation>Tárolóadatok beolvasása kész</translation>
+    </message>
+    <message id="orn-view-details">
+        <source>Click to view details</source>
+        <translation>Kattints a részletek megtekintéséhez</translation>
+    </message>
+    <message id="orn-error-depresolution">
+        <source>Nothing provides %1 needed by %2</source>
+        <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
+        <translation>A(z) %2 által igényelt %1 függőség nem beszerezhető</translation>
+    </message>
+    <message id="orn-backups">
+        <source>Backups</source>
+        <translation>Biztonsági mentések</translation>
+    </message>
+    <message id="orn-backup-description">
+        <source>Backup and restore repos and installed apps</source>
+        <translation>Csomagtárolók és alkalmazások mentése és visszaállítása</translation>
+    </message>
+    <message id="orn-create-backup">
+        <source>Create a backup</source>
+        <translation>Biztonsági mentés létrehozása</translation>
+    </message>
+    <message id="orn-backup-error">
+        <source>Backup error</source>
+        <translation>Mentési hiba</translation>
+    </message>
+    <message id="orn-backup-error-directory">
+        <source>Could not create directory</source>
+        <translation>Mappa létrehozása sikertelen</translation>
+    </message>
+    <message id="orn-creating-backup">
+        <source>Creating a backup</source>
+        <translation>Biztonsági mentés létrehozása</translation>
+    </message>
+    <message id="orn-restore-title">
+        <source>Restore from file</source>
+        <translation>Visszaállítás fájlból</translation>
+    </message>
+    <message id="orn-restore">
+        <source>Restore</source>
+        <translation>Visszaállítás</translation>
+    </message>
+    <message id="orn-restore-hint">
+        <source>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</source>
+        <translation>OpenRepos-ból telepített alkalmazások telepítése előzőleg elmentett fájl alapján. A művelet nem érinti a jelenleg beállított tárolókat és nem fogja eltávolítani a telepített alkalmazásaidat.</translation>
+    </message>
+    <message id="orn-created">
+        <source>Created</source>
+        <translation>Létrehozva</translation>
+    </message>
+    <message id="orn-total-repos">
+        <source>Total repositories</source>
+        <translation>Összes csomagtároló</translation>
+    </message>
+    <message id="orn-details">
+        <source>Details</source>
+        <translation>Részletek</translation>
+    </message>
+    <message id="orn-backups-placeholder">
+        <source>Backups will be shown here</source>
+        <translation>A biztonsági mentésetet itt találod</translation>
+    </message>
+    <message id="orn-restoring-repos">
+        <source>Restoring repositories</source>
+        <translation>Csomagtárolók visszaállítása</translation>
+    </message>
+    <message id="orn-refreshing-repos">
+        <source>Refreshing repositories</source>
+        <translation>Csomagtárolók frissítése</translation>
+    </message>
+    <message id="orn-searching-packages">
+        <source>Searching packages</source>
+        <translation>Csomagok keresése</translation>
+    </message>
+    <message id="orn-installing-repos">
+        <source>Installing packages</source>
+        <translation>Csomagok telepítése</translation>
+    </message>
+    <message id="orn-restoring-title">
+        <source>Restoring</source>
+        <translation>Visszaállítás</translation>
+    </message>
+    <message id="orn-success-backup">
+        <source>Successful backup</source>
+        <translation>Sikeres biztonsági mentés</translation>
+    </message>
+    <message id="orn-success-restore">
+        <source>Successful restore</source>
+        <translation>Sikeres visszaállítás</translation>
+    </message>
+    <message id="orn-installed-packages">
+        <source>Installed packages</source>
+        <translation>Telepített csomagok</translation>
     </message>
 </context>
 </TS>

@@ -43,10 +43,6 @@
         <source>Application with such id was not found</source>
         <translation>Applicatie met die ID kon niet gevonden worden</translation>
     </message>
-    <message id="orn-app-error-body">
-        <source>An error occured while fetching application data</source>
-        <translation>Er trad een fout op bij het ophalen van applicatiegegevens</translation>
-    </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
         <translation>Netwerk niet beschikbaar</translation>
@@ -549,7 +545,7 @@
     </message>
     <message id="orn-no-bookmarks">
         <source>Your bookmarked applications will be shown here</source>
-        <translation>Je app-bladwijzers zullen hier worden weergegeven</translation>
+        <translation>Je app-bladwijzers worden hier weergegeven</translation>
     </message>
     <message id="orn-bookmarks">
         <source>Bookmarks</source>
@@ -616,11 +612,104 @@
     </message>
     <message id="orn-reading-repos-begin">
         <source>Reading the repositories data</source>
-        <translation>Reading the repositories data</translation>
+        <translation>De pakketbrongegevens worden gelezen</translation>
     </message>
     <message id="orn-reading-repos-end">
         <source>Finished reading the repositories data</source>
-        <translation>Finished reading the repositories data</translation>
+        <translation>De pakketbrongegevens zijn gelezen</translation>
+    </message>
+    <message id="orn-view-details">
+        <source>Click to view details</source>
+        <translation>Tik voor meer info</translation>
+    </message>
+    <message id="orn-error-depresolution">
+        <source>Nothing provides %1 needed by %2</source>
+        <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
+        <translation>Niets biedt %1, nodig voor %2, aan</translation>
+    </message>
+    <message id="orn-backups">
+        <source>Backups</source>
+        <translation>Back-ups</translation>
+    </message>
+    <message id="orn-backup-description">
+        <source>Backup and restore repos and installed apps</source>
+        <translation>Back-up/herstel van pakketbronnen en geïnstalleerde apps</translation>
+    </message>
+    <message id="orn-create-backup">
+        <source>Create a backup</source>
+        <translation>Back-up aanmaken</translation>
+    </message>
+    <message id="orn-backup-error">
+        <source>Backup error</source>
+        <translation>Back-upfout</translation>
+    </message>
+    <message id="orn-backup-error-directory">
+        <source>Could not create directory</source>
+        <translation>Kon map niet aanmaken</translation>
+    </message>
+    <message id="orn-creating-backup">
+        <source>Creating a backup</source>
+        <translation>Back-up wordt aangemaakt</translation>
+    </message>
+    <message id="orn-restore-title">
+        <source>Restore from file</source>
+        <translation>Herstellen uit bestand</translation>
+    </message>
+    <message id="orn-restore">
+        <source>Restore</source>
+        <translation>Herstellen</translation>
+    </message>
+    <message id="orn-restore-hint">
+        <source>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</source>
+        <translation>Herstel OpenRepos-pakketbronnen en geïnstalleerde apps uit het geselecteerde bestand. Deze handeling heeft geen invloed op je huidige pakketbronnen, en zal geïnstalleerde apps niet verwijderen.</translation>
+    </message>
+    <message id="orn-created">
+        <source>Created</source>
+        <translation>Aangemaakte</translation>
+    </message>
+    <message id="orn-total-repos">
+        <source>Total repositories</source>
+        <translation>Totaal aantal pakketbronnen</translation>
+    </message>
+    <message id="orn-details">
+        <source>Details</source>
+        <translation>Details</translation>
+    </message>
+    <message id="orn-backups-placeholder">
+        <source>Backups will be shown here</source>
+        <translation>Back-ups worden hier weergegeven</translation>
+    </message>
+    <message id="orn-restoring-repos">
+        <source>Restoring repositories</source>
+        <translation>Pakketbronnen worden hersteld</translation>
+    </message>
+    <message id="orn-refreshing-repos">
+        <source>Refreshing repositories</source>
+        <translation>Pakketbronnen worden ververst</translation>
+    </message>
+    <message id="orn-searching-packages">
+        <source>Searching packages</source>
+        <translation>Pakketten worden gezocht</translation>
+    </message>
+    <message id="orn-installing-repos">
+        <source>Installing packages</source>
+        <translation>Pakketten worden geïnstalleerd</translation>
+    </message>
+    <message id="orn-restoring-title">
+        <source>Restoring</source>
+        <translation>Bezig met herstellen</translation>
+    </message>
+    <message id="orn-success-backup">
+        <source>Successful backup</source>
+        <translation>Back-up voltooid</translation>
+    </message>
+    <message id="orn-success-restore">
+        <source>Successful restore</source>
+        <translation>Herstel voltooid</translation>
+    </message>
+    <message id="orn-installed-packages">
+        <source>Installed packages</source>
+        <translation>Geïnstalleerde pakketten</translation>
     </message>
 </context>
 </TS>
