@@ -31,25 +31,12 @@ ApplicationWindow
         iface: "harbour.storeman.service"
         path: "/harbour/storeman/service"
         xml: "  <interface name=\"harbour.storeman.service\">\n" +
-             "    <method name=\"loginPage\"/>\n" +
-             "    <method name=\"installedAppsPage\"/>\n" +
-             "    <method name=\"errorPage\"/>\n" +
+             "    <method name=\"openPage\"/>\n" +
              "  </interface>\n"
 
-        function loginPage() {
+        function openPage(page, arguments) {
             __silica_applicationwindow_instance.activate()
-            pageStack.push(Qt.resolvedUrl("pages/AuthorisationDialog.qml"))
-        }
-
-        function installedAppsPage() {
-            _showUpdatesNotification = false
-            __silica_applicationwindow_instance.activate()
-            pageStack.push(Qt.resolvedUrl("pages/InstalledAppsPage.qml"))
-        }
-
-        function errorPage(message) {
-            __silica_applicationwindow_instance.activate()
-            pageStack.push(Qt.resolvedUrl("pages/ErrorPage.qml"), { message: message })
+            pageStack.push(Qt.resolvedUrl(page), arguments)
         }
     }
 
@@ -83,7 +70,8 @@ ApplicationWindow
                 service: "harbour.storeman.service",
                 path: "/harbour/storeman/service",
                 iface: "harbour.storeman.service",
-                method: "loginPage"
+                method: "openPage",
+                arguments: [ "pages/AuthorisationDialog.qml", {} ]
             } ]
     }
 
@@ -101,7 +89,8 @@ ApplicationWindow
                 service: "harbour.storeman.service",
                 path: "/harbour/storeman/service",
                 iface: "harbour.storeman.service",
-                method: "installedAppsPage"
+                method: "openPage",
+                arguments: [ "pages/InstalledAppsPage.qml", {} ]
             } ]
 
         Component.onCompleted: {
@@ -125,8 +114,8 @@ ApplicationWindow
                 service: "harbour.storeman.service",
                 path: "/harbour/storeman/service",
                 iface: "harbour.storeman.service",
-                method: "errorPage",
-                arguments: [ body ]
+                method: "openPage",
+                arguments: [ "pages/ErrorPage.qml", { message: body } ]
             } ]
     }
 

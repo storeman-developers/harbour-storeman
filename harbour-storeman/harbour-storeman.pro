@@ -79,9 +79,6 @@ RESOURCES += \
 polkit.files = rpm/50-harbour-storeman-packagekit.pkla
 polkit.path = $$INSTALL_ROOT/var/lib/polkit-1/localauthority/50-local.d
 
-dbus.files = rpm/harbour.storeman.service
-dbus.path = $$INSTALL_ROOT/usr/share/dbus-1/services
-
-INSTALLS += polkit dbus
+INSTALLS += polkit
 
 include(translations/translations.pri)
