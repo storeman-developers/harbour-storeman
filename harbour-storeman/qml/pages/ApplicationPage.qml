@@ -80,6 +80,13 @@ Page {
         }
     ]
 
+    onStatusChanged: {
+        // Wait until page loads to prevent lagging
+        if (status === PageStatus.Active) {
+            app.update()
+        }
+    }
+
     // NOTE: is it working without filtering errors?
     Connections {
         target: OrnZypp
@@ -111,16 +118,6 @@ Page {
             pageMenu.busy = false
             //% "Package %0 was successfully removed"
             notification.show(qsTrId("orn-package-removed").arg(packageName))
-        }
-    }
-
-    Connections {
-        // Wait until page loads to prevent lagging
-        target: pageStack
-        onBusyChanged: {
-            if (!pageStack.busy && pageStack.currentPage === page) {
-                app.update()
-            }
         }
     }
 
