@@ -58,6 +58,7 @@ OTHER_FILES +=  \
     qml/components/ParticipantsDelegate.qml \
     qml/components/CommentDelegate.qml \
     qml/components/CommentField.qml \
+    qml/components/CommentLabel.qml \
     qml/components/HtmlTagButton.qml \
     qml/components/ListMenuItem.qml \
     qml/components/BookmarkButton.qml \

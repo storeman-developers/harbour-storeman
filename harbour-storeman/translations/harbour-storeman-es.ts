@@ -711,5 +711,9 @@
         <source>Installed packages</source>
         <translation>Paquetes instalados</translation>
     </message>
+    <message id="orn-login2comment">
+        <source>Login to comment</source>
+        <translation>Login to comment</translation>
+    </message>
 </context>
 </TS>

@@ -31,8 +31,8 @@ Page {
             id: pageHeader
             // Hide header when typing comment
             height: orientation === Orientation.Landscape && commentField.isActive ?
-                        0.0 : _preferredHeight
-            visible: height === _preferredHeight
+                        0.0 : _preferredHeight + Theme.paddingMedium
+            visible: height > 0.0
             //% "Comments"
             title: qsTrId("orn-comments")
             description: userName
@@ -51,8 +51,10 @@ Page {
             clip: true
             verticalLayoutDirection: ListView.BottomToTop
 
-            header: CommentField {
-                id: commentField
+            header: Loader {
+                width: parent.width
+                source: OrnClient.authorised ? Qt.resolvedUrl("../components/CommentField.qml") :
+                                               Qt.resolvedUrl("../components/CommentLabel.qml")
             }
 
             model: OrnCommentsModel {

@@ -74,7 +74,7 @@
     </message>
     <message id="orb-remove">
         <source>Remove</source>
-        <translation>Eltávolít</translation>
+        <translation>Eltávolítás</translation>
     </message>
     <message id="orn-removing">
         <source>Removing</source>
@@ -98,7 +98,7 @@
     </message>
     <message id="orn-remove">
         <source>Remove</source>
-        <translation>Eltávolít</translation>
+        <translation>Eltávolítás</translation>
     </message>
     <message id="orn-launch">
         <source>Launch</source>
@@ -143,7 +143,7 @@
     </message>
     <message id="orn-author-apps">
         <source>More by %0</source>
-        <translation>Még több: %0</translation>
+        <translation>%0 további alkalmazásai</translation>
     </message>
     <message id="orn-cat-coding-competition">
         <source>Coding Competition</source>
@@ -155,7 +155,7 @@
     </message>
     <message id="orn-cat-application">
         <source>Application</source>
-        <translation>Alkalmazás</translation>
+        <translation>Általános</translation>
     </message>
     <message id="orn-cat-ambience-themes">
         <source>Ambience &amp; Themes</source>
@@ -167,7 +167,7 @@
     </message>
     <message id="orn-cat-city-guides-maps">
         <source>City guides &amp; maps</source>
-        <translation>Térképek és városkalauz</translation>
+        <translation>Térképek és városkalauzok</translation>
     </message>
     <message id="orn-cat-education-science">
         <source>Education &amp; Science</source>
@@ -187,7 +187,7 @@
     </message>
     <message id="orn-cat-news-info">
         <source>News &amp; info</source>
-        <translation>Hírek és Infó</translation>
+        <translation>Hírek és infó</translation>
     </message>
     <message id="orn-cat-patches">
         <source>Patches</source>
@@ -195,7 +195,7 @@
     </message>
     <message id="orn-cat-photo-video">
         <source>Photo &amp; video</source>
-        <translation>Fotó és Videó</translation>
+        <translation>Fotó és videó</translation>
     </message>
     <message id="orn-cat-social-networks">
         <source>Social Networks</source>
@@ -211,7 +211,7 @@
     </message>
     <message id="orn-cat-unknown">
         <source>Unknown</source>
-        <translation>Ismeretlen</translation>
+        <translation>Kategorizálatlan</translation>
     </message>
     <message id="orn-cat-utilities">
         <source>Utilities</source>
@@ -491,7 +491,7 @@
     </message>
     <message id="orn-authorisation-expires-summary">
         <source>Authorisation expires</source>
-        <translation>Engedély lejár</translation>
+        <translation>Az engedély lejár</translation>
     </message>
     <message id="orn-authorisation-expires-body">
         <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
@@ -499,7 +499,7 @@
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
-        <translation>Engedély lejárt</translation>
+        <translation>Az engedély lejárt</translation>
     </message>
     <message id="orn-authorisation-expired-body">
         <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
@@ -527,11 +527,11 @@
     </message>
     <message id="orn-installed-apps">
         <source>Installed Applications</source>
-        <translation>Telepített Applikációk</translation>
+        <translation>Telepített alkalmazások</translation>
     </message>
     <message id="orn-no-installed-apps">
         <source>Could not find any applications installed from OpenRepos</source>
-        <translation>Nem találhatók OpenRepos-ból telepített applikációk</translation>
+        <translation>Nem találhatók OpenRepos-ból telepített alkalmazások</translation>
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
@@ -539,7 +539,7 @@
     </message>
     <message id="orn-bookmarks-removed">
         <source>The app was removed from bookmarks</source>
-        <translation>Az alkalmazás eltávolítva a kőnyvjelzők közül</translation>
+        <translation>Az alkalmazás eltávolítva a könyvjelzők közül</translation>
     </message>
     <message id="orn-no-bookmarks">
         <source>Your bookmarked applications will be shown here</source>
@@ -614,7 +614,7 @@
     </message>
     <message id="orn-reading-repos-end">
         <source>Finished reading the repositories data</source>
-        <translation>Tárolóadatok beolvasása kész</translation>
+        <translation>A csomagtárolók adatainak beolvasása elkészült</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>
@@ -659,7 +659,7 @@
     </message>
     <message id="orn-restore-hint">
         <source>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</source>
-        <translation>OpenRepos-ból telepített alkalmazások telepítése előzőleg elmentett fájl alapján. A művelet nem érinti a jelenleg beállított tárolókat és nem fogja eltávolítani a telepített alkalmazásaidat.</translation>
+        <translation>OpenRepos csomagtárolók és telepített alkalmazások visszaállítása előzőleg elmentett fájlból. A művelet nem érinti a jelenleg beállított tárolókat és nem távolít el telepített alkalmazásokat.</translation>
     </message>
     <message id="orn-created">
         <source>Created</source>
@@ -675,7 +675,7 @@
     </message>
     <message id="orn-backups-placeholder">
         <source>Backups will be shown here</source>
-        <translation>A biztonsági mentésetet itt találod</translation>
+        <translation>A biztonsági mentéseket itt találod</translation>
     </message>
     <message id="orn-restoring-repos">
         <source>Restoring repositories</source>
@@ -708,6 +708,10 @@
     <message id="orn-installed-packages">
         <source>Installed packages</source>
         <translation>Telepített csomagok</translation>
+    </message>
+    <message id="orn-login2comment">
+        <source>Login to comment</source>
+        <translation>Login to comment</translation>
     </message>
 </context>
 </TS>

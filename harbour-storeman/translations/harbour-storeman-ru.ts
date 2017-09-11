@@ -715,5 +715,9 @@ Storeman не хранит ваш пароль и не передает его �
         <source>Installed packages</source>
         <translation>Установленные пакеты</translation>
     </message>
+    <message id="orn-login2comment">
+        <source>Login to comment</source>
+        <translation>Войдите, чтобы комментировать</translation>
+    </message>
 </context>
 </TS>
