@@ -2,7 +2,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 BackgroundItem {
-    width: parent.width
+    width: Screen.width
     height: Theme.itemSizeLarge
     onClicked: pageStack.push(Qt.resolvedUrl("../pages/AuthorisationDialog.qml"))
 

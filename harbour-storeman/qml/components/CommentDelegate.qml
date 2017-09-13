@@ -18,7 +18,7 @@ ListItem {
             //: Menu item to reply for a comment - should be a verb
             //% "Reply"
             text: qsTrId("orn-reply")
-            onClicked: commentField.reply(commentData.commentId, commentData.userName, commentData.text)
+            onClicked: commentField.item.reply(commentData.commentId, commentData.userName, commentData.text)
         }
 
         MenuItem {

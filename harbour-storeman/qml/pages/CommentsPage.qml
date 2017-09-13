@@ -30,7 +30,7 @@ Page {
         PageHeader {
             id: pageHeader
             // Hide header when typing comment
-            height: orientation === Orientation.Landscape && commentField.isActive ?
+            height: orientation === Orientation.Landscape && commentField.item.isActive ?
                         0.0 : _preferredHeight + Theme.paddingMedium
             visible: height > 0.0
             //% "Comments"
