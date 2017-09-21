@@ -6,7 +6,6 @@ import harbour.orn 1.0
 import "../components"
 
 Page {
-    readonly property string _backupDir: StandardPaths.documents + "/Storeman"
     property string _restoringFileName
 
     id: page
@@ -55,7 +54,7 @@ Page {
             anchors.fill: parent
             model: FolderListModel {
                 id: folderModel
-                folder: _backupDir
+                folder: StandardPaths.documents + "/Storeman"
                 showDirs: false
                 nameFilters: [ "*.ini" ]
                 sortField: FolderListModel.Time
@@ -111,10 +110,9 @@ Page {
                     //% "Create a backup"
                     text: qsTrId("orn-create-backup")
                     //% "Creating a backup"
-                    onClicked: Remorse.popupAction(page, qsTrId("orn-creating-backup"), function() {
-                        backup.backup("%0/Storeman-%1.ini".arg(_backupDir)
-                                      .arg(Qt.formatDateTime(new Date(), "yyyyMMddhhmmss")))
-                    })
+                    onClicked: pageStack.push(Qt.resolvedUrl("BackupDialog.qml"), {
+                                                  backup: backup
+                                              })
                 }
             }
 

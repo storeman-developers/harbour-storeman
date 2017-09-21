@@ -15,7 +15,7 @@ Dialog {
 
     DialogHeader {
         id: header
-        //% "Restore from file"
+        //% "Restore from a file"
         title: qsTrId("orn-restore-title")
         //% "Restore"
         acceptText: qsTrId("orn-restore")
