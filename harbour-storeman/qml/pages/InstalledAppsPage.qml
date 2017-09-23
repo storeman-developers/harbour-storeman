@@ -46,15 +46,24 @@ Page {
         }
 
         delegate: ListItem {
+            id: item
             contentHeight: Theme.itemSizeExtraLarge
             onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
                                       { initialSearch: appName })
-            showMenuOnPressAndHold: updateAvailable
 
             menu: ContextMenu {
+
                 MenuItem {
+                    visible: updateAvailable
                     text: qsTrId("orn-update")
-                    onClicked: OrnZypp.installPackage(OrnZypp.updatePackage(appName))
+                    onClicked: OrnZypp.installPackage(updateId)
+                }
+
+                MenuItem {
+                    text: qsTrId("orn-remove")
+                    onClicked: Remorse.itemAction(item, qsTrId("orn-removing"), function() {
+                        OrnZypp.removePackage(packageId)
+                    })
                 }
             }
 
