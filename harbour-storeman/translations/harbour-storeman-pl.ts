@@ -649,12 +649,8 @@
         <source>Could not create directory</source>
         <translation>Nie można utworzyć katalogu</translation>
     </message>
-    <message id="orn-creating-backup">
-        <source>Creating a backup</source>
-        <translation>Tworzenie kopii zapasowej</translation>
-    </message>
     <message id="orn-restore-title">
-        <source>Restore from file</source>
+        <source>Restore from a file</source>
         <translation>Przywróć z pliku</translation>
     </message>
     <message id="orn-restore">
@@ -715,7 +711,19 @@
     </message>
     <message id="orn-login2comment">
         <source>Login to comment</source>
-        <translation>Login to comment</translation>
+        <translation>Zaloguj się, aby skomentować</translation>
+    </message>
+    <message id="orn-backup-title">
+        <source>Backup to a file</source>
+        <translation>Kopia zapasowa do pliku</translation>
+    </message>
+    <message id="orn-backup">
+        <source>Backup</source>
+        <translation>Kopia zapasowa</translation>
+    </message>
+    <message id="orn-backup-hint">
+        <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
+        <translation>Kopia zapasowa pozwala na zapisanie obecnych repozytoriów OpenRepos, zainstalowanych applikacji i zakładek, a także przywrócenia ich (np. po zresetowaniu urządzenia). Kopia zapasowa jest plikiem zapisanym lokalnie w katalogu &lt;br /&gt;&lt;i&gt;~/Documents/Storman&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Uwaga!&lt;/b&gt;Powinieneś skopiować swoją kopię zapasową w jakieś bezpieczne miejsce przed zresetowaniem urządzenia. Może to być karta SD, urządzenie zewnętrzne, chmura lub coś innego.</translation>
     </message>
 </context>
 </TS>

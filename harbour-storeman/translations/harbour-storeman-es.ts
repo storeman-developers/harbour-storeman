@@ -647,13 +647,9 @@
         <source>Could not create directory</source>
         <translation>No se pudo crear el directorio</translation>
     </message>
-    <message id="orn-creating-backup">
-        <source>Creating a backup</source>
-        <translation>Creando copia de seguridad</translation>
-    </message>
     <message id="orn-restore-title">
-        <source>Restore from file</source>
-        <translation>Restaurar desde fichero</translation>
+        <source>Restore from a file</source>
+        <translation>Restaurar desde archivo</translation>
     </message>
     <message id="orn-restore">
         <source>Restore</source>
@@ -661,7 +657,7 @@
     </message>
     <message id="orn-restore-hint">
         <source>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</source>
-        <translation>Restaurar repositorios y aplicaciones instaladas de OpenRepos desde el fichero seleccionado. Esta acción no afectará a tus repositorios actuales y no eliminará las aplicaciones instaladas.</translation>
+        <translation>Restaurar repositorios y aplicaciones instaladas de OpenRepos desde el archivo seleccionado. Esta acción no afectará a tus repositorios actuales y no eliminará las aplicaciones instaladas.</translation>
     </message>
     <message id="orn-created">
         <source>Created</source>
@@ -713,7 +709,19 @@
     </message>
     <message id="orn-login2comment">
         <source>Login to comment</source>
-        <translation>Login to comment</translation>
+        <translation>Iniciar sesión para comentar</translation>
+    </message>
+    <message id="orn-backup-title">
+        <source>Backup to a file</source>
+        <translation>Copiar a archivo</translation>
+    </message>
+    <message id="orn-backup">
+        <source>Backup</source>
+        <translation>Copia de seguridad</translation>
+    </message>
+    <message id="orn-backup-hint">
+        <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
+        <translation>La copia de seguridad te permite guardar tus repositorios actuales de OpenRepos, las aplicaciones instaladas y las favoritas y restaurarlas después (por ejemplo, tras un reseteo de fábrica). Una copia de seguridad es un archivo local que se guarda en el directorio&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;¡Atención!&lt;/b&gt; Debes copiar tus copias de seguridad en algún lugar seguro antes de hacer un reseteo de fábrica. Podría ser tu tarjeta SD, dispositivo externo, almacenamiento en la nube o cualquier otro.</translation>
     </message>
 </context>
 </TS>

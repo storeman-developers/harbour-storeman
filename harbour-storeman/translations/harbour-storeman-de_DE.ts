@@ -647,12 +647,8 @@
         <source>Could not create directory</source>
         <translation>Konnte Verzechnis nicht erstellen</translation>
     </message>
-    <message id="orn-creating-backup">
-        <source>Creating a backup</source>
-        <translation>Erstelle ein Backup</translation>
-    </message>
     <message id="orn-restore-title">
-        <source>Restore from file</source>
+        <source>Restore from a file</source>
         <translation>Aus Datei wiederherstellen</translation>
     </message>
     <message id="orn-restore">
@@ -713,7 +709,19 @@
     </message>
     <message id="orn-login2comment">
         <source>Login to comment</source>
-        <translation>Login to comment</translation>
+        <translation>Zum Kommentieren anmelden</translation>
+    </message>
+    <message id="orn-backup-title">
+        <source>Backup to a file</source>
+        <translation>Backup-Datei erstellen</translation>
+    </message>
+    <message id="orn-backup">
+        <source>Backup</source>
+        <translation>Backup</translation>
+    </message>
+    <message id="orn-backup-hint">
+        <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
+        <translation>Backup ermöglicht es dir deine OpenRepos-Quellen, installierte Programme und Lesezeichen zu sichern und später wiederherzustellen (zum Beispiel nach dem Zurücksetzen auf Werkseinstellung). Ein Backup ist eine lokale Datei die im Ordner &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;abgelegt wird. &lt;br /&gt;&lt;br /&gt;&lt;b&gt;Achtung!&lt;/b&gt;Du solltest die Backups vor einem Zurücksetzen auf Werkseinstellung an einen sicheren Ort kopieren. Das könnte zum Beispiel die SD-Karte, ein externes Gerät, in der Cloud oder ähnliches sein.</translation>
     </message>
 </context>
 </TS>

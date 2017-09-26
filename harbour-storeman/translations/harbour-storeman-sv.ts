@@ -580,7 +580,7 @@
     <message id="orn-tag-underscore">
         <source>U</source>
         <extracomment>Tag underscore</extracomment>
-        <translation>U</translation>
+        <translation>Logga in för att kommentera</translation>
     </message>
     <message id="orn-tag-strong">
         <source>B</source>
@@ -649,13 +649,9 @@
         <source>Could not create directory</source>
         <translation>Kunde inte skapa mapp</translation>
     </message>
-    <message id="orn-creating-backup">
-        <source>Creating a backup</source>
-        <translation>Skapar en säkerhetskopia</translation>
-    </message>
     <message id="orn-restore-title">
-        <source>Restore from file</source>
-        <translation>Återställ från fil</translation>
+        <source>Restore from a file</source>
+        <translation>Återställ från en fil</translation>
     </message>
     <message id="orn-restore">
         <source>Restore</source>
@@ -715,7 +711,19 @@
     </message>
     <message id="orn-login2comment">
         <source>Login to comment</source>
-        <translation>Login to comment</translation>
+        <translation>Logga in för att kommentera</translation>
+    </message>
+    <message id="orn-backup-title">
+        <source>Backup to a file</source>
+        <translation>Säkerhetskopiera till en fil</translation>
+    </message>
+    <message id="orn-backup">
+        <source>Backup</source>
+        <translation>Säkerhetskopiera</translation>
+    </message>
+    <message id="orn-backup-hint">
+        <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
+        <translation>Säkerhetskopiering låter dig spara dina aktuella OpenRepos-förråd, installerade appar, bokmärken och att återställa dem senare (t.ex. efter en fabriksåterställning). Säkerhetskopian är en lokal fil som sparas i&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;. &lt;br /&gt;&lt;br /&gt;&lt;b&gt;OBS!&lt;/b&gt; Du måste kopiera dina säkerhetskopior till en säker plats, innan du utför en fabriksåterställning. Det kan vara ditt SD-kort, en extern enhet, molnlagring eller något annat.</translation>
     </message>
 </context>
 </TS>

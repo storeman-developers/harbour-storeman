@@ -126,7 +126,7 @@
     </message>
     <message id="orn-version-updated">
         <source>Last updated</source>
-        <translation>Utoljára fissítve</translation>
+        <translation>Utoljára frissítve</translation>
     </message>
     <message id="orn-dt-format">
         <source>yyyy-dd-MM hh:mm</source>
@@ -645,12 +645,8 @@
         <source>Could not create directory</source>
         <translation>Mappa létrehozása sikertelen</translation>
     </message>
-    <message id="orn-creating-backup">
-        <source>Creating a backup</source>
-        <translation>Biztonsági mentés létrehozása</translation>
-    </message>
     <message id="orn-restore-title">
-        <source>Restore from file</source>
+        <source>Restore from a file</source>
         <translation>Visszaállítás fájlból</translation>
     </message>
     <message id="orn-restore">
@@ -711,7 +707,19 @@
     </message>
     <message id="orn-login2comment">
         <source>Login to comment</source>
-        <translation>Login to comment</translation>
+        <translation>Jelentkezz be a kommeteléshez</translation>
+    </message>
+    <message id="orn-backup-title">
+        <source>Backup to a file</source>
+        <translation>Biztonsági mentés fájlba</translation>
+    </message>
+    <message id="orn-backup">
+        <source>Backup</source>
+        <translation>Biztonsági mentés</translation>
+    </message>
+    <message id="orn-backup-hint">
+        <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
+        <translation>A biztonsági mentés lehetőséget ad kimenteni a jelenlegi OpenRepos csomagtárolóidat, telepített alkalmazásaidat és könyvjelzőket egy későbbi visszaállításhoz. (pl: a készülék alaphelyzetbe állítása után) A biztonsági mentés egy helyileg tárolt fálj ami a &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; könyvtárban található. &lt;br /&gt;&lt;br /&gt;&lt;b&gt;Figyelem!&lt;/b&gt; Mielőtt a készüléket alaphelyzetbe állítanád, a biztonági mentéseket manuálisan kell biztos helyre másolnod. Ez lehet SD kártya, külső eszköz, felhő tárhely vagy bármi más.</translation>
     </message>
 </context>
 </TS>

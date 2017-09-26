@@ -647,12 +647,8 @@
         <source>Could not create directory</source>
         <translation>Kon map niet aanmaken</translation>
     </message>
-    <message id="orn-creating-backup">
-        <source>Creating a backup</source>
-        <translation>Back-up wordt aangemaakt</translation>
-    </message>
     <message id="orn-restore-title">
-        <source>Restore from file</source>
+        <source>Restore from a file</source>
         <translation>Herstellen uit bestand</translation>
     </message>
     <message id="orn-restore">
@@ -713,7 +709,19 @@
     </message>
     <message id="orn-login2comment">
         <source>Login to comment</source>
-        <translation>Login to comment</translation>
+        <translation>Meld je aan om een reactie te plaatsen</translation>
+    </message>
+    <message id="orn-backup-title">
+        <source>Backup to a file</source>
+        <translation>Back-up naar bestand</translation>
+    </message>
+    <message id="orn-backup">
+        <source>Backup</source>
+        <translation>Back-up</translation>
+    </message>
+    <message id="orn-backup-hint">
+        <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
+        <translation>Back-up laat je toe je huidige OpenRepos-pakketbronnen op te slaan, evenals je geïnstalleerde apps en bladwijzers, om deze later te herstellen (bijvoorbeeld nadat je je apparaat hebt teruggebracht naar de fabrieksinstellingen). Een back-up is een lokaal bestand dat wordt opgeslagen in de &lt;br /&gt;map &lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Opgelet!&lt;/b&gt; Kopieer je back-ups handmatig naar een veilige locatie, zoals je SD-kaart, een extern apparaat of een cloudopslagdienst, vooraleer je je apparaat terugbrengt naar de fabrieksinstellingen.</translation>
     </message>
 </context>
 </TS>

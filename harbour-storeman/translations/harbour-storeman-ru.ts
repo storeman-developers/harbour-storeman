@@ -651,12 +651,8 @@ Storeman не хранит ваш пароль и не передает его �
         <source>Could not create directory</source>
         <translation>Не удалось создать каталог</translation>
     </message>
-    <message id="orn-creating-backup">
-        <source>Creating a backup</source>
-        <translation>Создание копии</translation>
-    </message>
     <message id="orn-restore-title">
-        <source>Restore from file</source>
+        <source>Restore from a file</source>
         <translation>Восстановить из файла</translation>
     </message>
     <message id="orn-restore">
@@ -718,6 +714,18 @@ Storeman не хранит ваш пароль и не передает его �
     <message id="orn-login2comment">
         <source>Login to comment</source>
         <translation>Войдите, чтобы комментировать</translation>
+    </message>
+    <message id="orn-backup-title">
+        <source>Backup to a file</source>
+        <translation>Сохранить в файл</translation>
+    </message>
+    <message id="orn-backup">
+        <source>Backup</source>
+        <translation>Сохранить</translation>
+    </message>
+    <message id="orn-backup-hint">
+        <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
+        <translation>Резервное копирование позволяет сохранить текущие репозитории OpenRepos, установленные приложения и закладки, чтобы позже их восстановить (например, после сброса устройства). Резервная копия – это локальный файл, который сохраняется в каталоге&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Внимание!&lt;/b&gt; Перед сбросом устройства необходимо вручную скопировать резервные копии в безопасное место. Это может быть ваша SD-карта, внешнее устройство, облачное хранилище или что-либо еще.</translation>
     </message>
 </context>
 </TS>
