@@ -1,3 +1,13 @@
+* Tue Sep 26 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.15-1
+- Comments page - show a "Login to comment" button when user isn't authorised
+- Comments page - fix header height
+- Simplify loading of the application page
+- Use the .desktop file to register DBus service instead of a .service file
+- Add information dialog for backups
+- Installed applications page - add the "remove" item to the context menu
+- Application page - open OpenRepos links within Storeman
+- Update translations
+
 * Mon Sep 04 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.14-1
 - Use libsolv to read repodata
 - Fix notification messages
