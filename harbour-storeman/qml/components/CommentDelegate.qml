@@ -135,7 +135,7 @@ ListItem {
                         return
                     }
                 }
-                Qt.openUrlExternally(link)
+                openLink(link)
             }
         }
     }

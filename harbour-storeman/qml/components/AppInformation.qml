@@ -51,35 +51,7 @@ BackgroundItem {
                 linkColor: Theme.highlightColor
                 font.pixelSize: Theme.fontSizeSmall
                 wrapMode: Text.WordWrap
-                onLinkActivated: {
-                    // Check if link looks like an OpenRepos application link
-                    if (/http[s]:\/\/openrepos\.net\/content\/[a-zA-Z\-_]*\/[a-zA-Z\-_]*/.exec(link)) {
-                        var req = new XMLHttpRequest()
-                        // Prepare a http request to get headers
-                        req.open("GET", link, true)
-                        req.onreadystatechange = function() {
-                            if (req.readyState == 4) {
-                                if (req.status == 200) {
-                                    // Check if headers contain an id link
-                                    var match = /<\/node\/(\d*)>.*/.exec(req.getResponseHeader("link"))
-                                    if (match) {
-                                        // Load the application page
-                                        pageStack.push(Qt.resolvedUrl("../pages/ApplicationPage.qml"), {
-                                                           appId: match[1],
-                                                           returnToUser: false
-                                                       })
-                                        return
-                                    }
-                                }
-                                Qt.openUrlExternally(link)
-                            }
-                        }
-                        req.send(null)
-                    // Open other links externally
-                    } else {
-                        Qt.openUrlExternally(link)
-                    }
-                }
+                onLinkActivated: openLink(link)
             }
 
             OpacityRampEffect {
