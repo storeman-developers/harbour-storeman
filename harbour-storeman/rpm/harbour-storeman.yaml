@@ -1,7 +1,7 @@
 Name: harbour-storeman
 Summary: OpenRepos Client for Sailfish OS
 Version: 0.0.15
-Release: 1
+Release: 2
 Group: Qt/Qt
 URL: https://github.com/mentaljam/harbour-storeman
 License: LICENSE
@@ -37,3 +37,4 @@ Files:
   - '%{_datadir}/applications/%{name}.desktop'
   - '%{_datadir}/icons/hicolor/*/apps/%{name}.png'
   - '%{_sharedstatedir}/polkit-1/localauthority/50-local.d/50-harbour-storeman-packagekit.pkla'
+  - '%{_datadir}/dbus-1/services/harbour.storeman.service'

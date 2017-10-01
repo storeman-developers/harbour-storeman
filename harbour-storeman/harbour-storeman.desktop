@@ -1,9 +1,6 @@
 [Desktop Entry]
 Type=Application
 X-Nemo-Application-Type=silica-qt5
-X-Maemo-Service=harbour.storeman.service
-X-Maemo-Object-Path=/harbour/storeman/service
-X-Maemo-Method=harbour.storeman.service.openPage
 Icon=harbour-storeman
 Exec=harbour-storeman
 Name=Storeman

@@ -620,108 +620,108 @@
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>
-        <translation>Click to view details</translation>
+        <translation>Κλικ για προβολή των λεπτομερειών</translation>
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
         <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
-        <translation>Nothing provides %1 needed by %2</translation>
+        <translation>Δεν παρέχεται το %1 που απαιτείται από το %2</translation>
     </message>
     <message id="orn-backups">
         <source>Backups</source>
-        <translation>Backups</translation>
+        <translation>Αντίγραφα ασφαλείας</translation>
     </message>
     <message id="orn-backup-description">
         <source>Backup and restore repos and installed apps</source>
-        <translation>Backup and restore repos and installed apps</translation>
+        <translation>Αντίγραφα ασφαλείας και επαναφορά των αποθετηρίων και των εγκατεστημένων εφαρμογών</translation>
     </message>
     <message id="orn-create-backup">
         <source>Create a backup</source>
-        <translation>Create a backup</translation>
+        <translation>Δημιουργία ενός εφεδρικού αντιγράφου</translation>
     </message>
     <message id="orn-backup-error">
         <source>Backup error</source>
-        <translation>Backup error</translation>
+        <translation>Σφάλμα κατά την λήψη του αντιγράφου ασφαλείας</translation>
     </message>
     <message id="orn-backup-error-directory">
         <source>Could not create directory</source>
-        <translation>Could not create directory</translation>
+        <translation>Αδύνατη η δημιουργία του καταλόγου</translation>
     </message>
     <message id="orn-restore-title">
         <source>Restore from a file</source>
-        <translation>Restore from a file</translation>
+        <translation>Επαναφορά από αρχείο</translation>
     </message>
     <message id="orn-restore">
         <source>Restore</source>
-        <translation>Restore</translation>
+        <translation>Επαναφορά</translation>
     </message>
     <message id="orn-restore-hint">
         <source>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</source>
-        <translation>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</translation>
+        <translation>Επαναφορά των αποθετηρίων του OpenRepos και των εγκατεστημένων εφαρμογών από το επιλεγμένο αρχείο. Αυτή η ενέργεια δεν θα επηρεάσει τα τρέχοντα αποθετήρια και δεν θα αφαιρέσει τις εγκατεστημένες εφαρμογές.</translation>
     </message>
     <message id="orn-created">
         <source>Created</source>
-        <translation>Created</translation>
+        <translation>Δημιουργήθηκε</translation>
     </message>
     <message id="orn-total-repos">
         <source>Total repositories</source>
-        <translation>Total repositories</translation>
+        <translation>Σύνολο αποθετηρίων</translation>
     </message>
     <message id="orn-details">
         <source>Details</source>
-        <translation>Details</translation>
+        <translation>Λεπτομέρειες</translation>
     </message>
     <message id="orn-backups-placeholder">
         <source>Backups will be shown here</source>
-        <translation>Backups will be shown here</translation>
+        <translation>Τα εφεδρικά αντίγραφα θα εμφανιστούν εδώ</translation>
     </message>
     <message id="orn-restoring-repos">
         <source>Restoring repositories</source>
-        <translation>Restoring repositories</translation>
+        <translation>Επαναφορά αποθετηρίων</translation>
     </message>
     <message id="orn-refreshing-repos">
         <source>Refreshing repositories</source>
-        <translation>Refreshing repositories</translation>
+        <translation>Ανανέωση αποθετηρίων</translation>
     </message>
     <message id="orn-searching-packages">
         <source>Searching packages</source>
-        <translation>Searching packages</translation>
+        <translation>Αναζήτηση πακέτων</translation>
     </message>
     <message id="orn-installing-repos">
         <source>Installing packages</source>
-        <translation>Installing packages</translation>
+        <translation>Εγκατάσταση πακέτων</translation>
     </message>
     <message id="orn-restoring-title">
         <source>Restoring</source>
-        <translation>Restoring</translation>
+        <translation>Επαναφορά</translation>
     </message>
     <message id="orn-success-backup">
         <source>Successful backup</source>
-        <translation>Successful backup</translation>
+        <translation>Η λήψη εφεδρικού αντιγράφου έγινε επιτυχώς</translation>
     </message>
     <message id="orn-success-restore">
         <source>Successful restore</source>
-        <translation>Successful restore</translation>
+        <translation>Η επαναφορά έγινε επιτυχώς</translation>
     </message>
     <message id="orn-installed-packages">
         <source>Installed packages</source>
-        <translation>Installed packages</translation>
+        <translation>Εγκατεστημένα πακέτα</translation>
     </message>
     <message id="orn-login2comment">
         <source>Login to comment</source>
-        <translation>Login to comment</translation>
+        <translation>Συνδεθείτε για να ανάρτηση σχολίου</translation>
     </message>
     <message id="orn-backup-title">
         <source>Backup to a file</source>
-        <translation>Backup to a file</translation>
+        <translation>Αντίγραφο ασφαλείας σε αρχείο</translation>
     </message>
     <message id="orn-backup">
         <source>Backup</source>
-        <translation>Backup</translation>
+        <translation>Αντίγραφα ασφαλείας</translation>
     </message>
     <message id="orn-backup-hint">
         <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
-        <translation>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</translation>
+        <translation>Τα αντίγραφα ασφαλείας σας επιτρέπουν την αποθήκευση των αποθετηρίων του OpenRepos, τις εγκατεστημένες εφαρμογές και σελιδοδείκτες και να τις επαναφέρετε αργότερα (πχ μετά από μια επαναφορά των ρυθμίσεων εργοστασίου). Ένα εφεδρικό αντίγραφο είναι ένα τοπικό αρχείο αποθηκευμένο στον κατάλογο&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Προσοχή!&lt;/b&gt; Θα πρέπει να αποθηκεύσετε τα αντίγραφα ασφαλείας σε ένα ασφαλές μέρος χειροκίνητα πριν την επαναφορά στις εργοστασιακές ρυθμίσεις. Για παράδειγμα στην κάρτα SD, σε μια εξωτερική συσκευή, μια υπηρεσία αποθήκευσης νέφους ή κάπου αλλού.</translation>
     </message>
 </context>
 </TS>

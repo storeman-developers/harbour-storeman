@@ -649,7 +649,7 @@
     </message>
     <message id="orn-restore-title">
         <source>Restore from a file</source>
-        <translation>Restore from a file</translation>
+        <translation>Ripristina da file</translation>
     </message>
     <message id="orn-restore">
         <source>Restore</source>
@@ -709,11 +709,11 @@
     </message>
     <message id="orn-login2comment">
         <source>Login to comment</source>
-        <translation>Login to comment</translation>
+        <translation>Accedi per commentare</translation>
     </message>
     <message id="orn-backup-title">
         <source>Backup to a file</source>
-        <translation>Backup to a file</translation>
+        <translation>Backup su file</translation>
     </message>
     <message id="orn-backup">
         <source>Backup</source>
@@ -721,7 +721,7 @@
     </message>
     <message id="orn-backup-hint">
         <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
-        <translation>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</translation>
+        <translation>I backup permettono di salvare i repository attuali di OpenRepos, le applicazioni installate e preferite e di ripristinarli successivamente (ad esempio dopo un reset delle impostazioni). Un backup è un file salvato in locale nella cartella &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attenzione!&lt;/b&gt; Dovresti copiare manualmente i tuoi backup in un posto sicuro prima di fare un reset delle impostazioni. Ad esempio la tua memoria SD, un dispositivo esterno, uno spazio cloud, eccetera.</translation>
     </message>
 </context>
 </TS>
