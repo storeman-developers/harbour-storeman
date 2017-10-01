@@ -72,6 +72,9 @@ ApplicationWindow
              "  </interface>\n"
 
         function openPage(page, arguments) {
+            if (page === "pages/InstalledAppsPage.qml") {
+                _showUpdatesNotification = false
+            }
             __silica_applicationwindow_instance.activate()
             pageStack.push(Qt.resolvedUrl(page), arguments)
         }
