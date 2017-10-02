@@ -25,7 +25,7 @@ ListItem {
             //% "Edit"
             text: qsTrId("orn-edit")
             visible: _userComment
-            onClicked: commentField.edit(commentData.commentId, commentData.text)
+            onClicked: commentField.item.edit(commentData.commentId, commentData.text)
         }
 
 //        MenuItem {

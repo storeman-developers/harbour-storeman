@@ -37,6 +37,7 @@ Column {
         _replyToId = ""
         body.text = ""
         typeLabel.text = ""
+        body.focus = false
     }
 
     width: parent.width
