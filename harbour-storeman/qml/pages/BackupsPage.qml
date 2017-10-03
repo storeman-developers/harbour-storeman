@@ -153,7 +153,6 @@ Page {
                     topMargin: Theme.paddingLarge
                     leftMargin: Theme.horizontalPageMargin
                     rightMargin: Theme.horizontalPageMargin
-                    horizontalCenter: parent.horizontalCenter
                 }
                 horizontalAlignment: Qt.AlignHCenter
                 wrapMode: Text.WordWrap
