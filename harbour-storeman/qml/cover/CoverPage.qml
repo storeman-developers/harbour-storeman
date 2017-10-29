@@ -11,8 +11,7 @@ CoverBackground {
 
     CoverActionList {
         id: coverAction
-        enabled: networkManager.state === "online" &&
-                 !appsModel.apiRequest.networkError
+        enabled: networkManager.state === "online"
 
         CoverAction {
             iconSource: "image://theme/icon-cover-search"
@@ -21,11 +20,11 @@ CoverBackground {
                     return page.toString().substr(0, 10) === "SearchPage"
                 })
                 if (searchOnPageStack) {
-                    pageStack.pop(searchOnPageStack)
+                    pageStack.pop(searchOnPageStack, PageStackAction.Immediate)
                 } else {
-                    pageStack.push(Qt.resolvedUrl("../pages/SearchPage.qml"))
+                    pageStack.push(Qt.resolvedUrl("../pages/SearchPage.qml"), {}, PageStackAction.Immediate)
                 }
-                appWindow.activate()
+                __silica_applicationwindow_instance.activate()
             }
         }
 

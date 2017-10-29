@@ -8,8 +8,6 @@ import "pages"
 
 ApplicationWindow
 {
-    id: appWindow
-
     property bool repoFetching: true
     property bool _showUpdatesNotification: true
     property string _processingLink
