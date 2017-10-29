@@ -9,16 +9,25 @@ CoverBackground {
         text: qsTrId("orn-storeman")
     }
 
-//    CoverActionList {
-//        id: coverAction
+    CoverActionList {
+        id: coverAction
+        enabled: networkManager.state === "online"
 
-//        CoverAction {
-//            iconSource: "image://theme/icon-cover-next"
-//        }
+        CoverAction {
+            iconSource: "image://theme/icon-cover-search"
+            onTriggered: {
+                const searchOnPageStack = pageStack.find(function(page) {
+                    return page.toString().substr(0, 10) === "SearchPage"
+                })
+                if (searchOnPageStack) {
+                    pageStack.pop(searchOnPageStack, PageStackAction.Immediate)
+                } else {
+                    pageStack.push(Qt.resolvedUrl("../pages/SearchPage.qml"), {}, PageStackAction.Immediate)
+                }
+                __silica_applicationwindow_instance.activate()
+            }
+        }
 
-//        CoverAction {
-//            iconSource: "image://theme/icon-cover-pause"
-//        }
-//    }
+    }
 }
 
