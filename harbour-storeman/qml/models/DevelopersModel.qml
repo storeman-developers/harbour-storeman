@@ -9,6 +9,10 @@ ListModel {
             ListElement {
                 name: "Petr Tsymbarovich"
                 link: "https://github.com/mentaljam"
+            },
+            ListElement {
+                name: "Christoph"
+                link: "https://github.com/inta"
             }
         ]
     }
