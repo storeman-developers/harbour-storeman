@@ -1,6 +1,7 @@
 CONFIG += \
     sailfishapp_i18n \
-    sailfishapp_i18n_idbased
+    sailfishapp_i18n_idbased \
+    sailfishapp_i18n_unfinished
 
 TRANSLATIONS += \
     translations/harbour-storeman.ts \
@@ -19,7 +20,6 @@ TRANSLATIONS += \
 
 OTHER_FILES += \
     $$TRANSLATIONS \
-    $$PWD/update_translations.py \
-    $$PWD/set_default_translations.py
+    $$PWD/update_translations.py
 
 TRANSLATION_SOURCES += $$PWD/../../ornplugin/src
