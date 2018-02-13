@@ -3,7 +3,13 @@ TARGET = harbour-storeman
 QT += concurrent
 CONFIG += sailfishapp
 
-DEFINES += APP_VERSION=\\\"$$VERSION\\\"
+# Write version file
+VERSION_H = \
+"$${LITERAL_HASH}ifndef STOREMAN_VERSION" \
+"$${LITERAL_HASH}   define STOREMAN_VERSION \"$$VERSION\"" \
+"$${LITERAL_HASH}endif"
+write_file($$$$OUT_PWD/storeman_version.h, VERSION_H)
+
 CONFIG(release, debug|release): DEFINES += QT_NO_DEBUG_OUTPUT
 
 LIBS += -lornplugin -L$$OUT_PWD/../ornplugin -lsolv
