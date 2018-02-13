@@ -17,7 +17,7 @@
     </message>
     <message id="orn-refresh">
         <source>Refresh</source>
-        <translation>Verversen</translation>
+        <translation>Vernieuwen</translation>
     </message>
     <message id="orn-disable">
         <source>Disable</source>
@@ -38,10 +38,6 @@
     <message id="orn-recently-updated">
         <source>Recently updated</source>
         <translation>Recent bijgewerkt</translation>
-    </message>
-    <message id="orn-app-not-found-body">
-        <source>Application with such id was not found</source>
-        <translation>Applicatie met die ID kon niet gevonden worden</translation>
     </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
@@ -120,10 +116,6 @@
         <source>Installed version</source>
         <translation>Geïnstalleerd</translation>
     </message>
-    <message id="orn-version-available">
-        <source>Available version</source>
-        <translation>Beschikbaar</translation>
-    </message>
     <message id="orn-version-updated">
         <source>Last updated</source>
         <translation>Bijgewerkt</translation>
@@ -159,7 +151,7 @@
     </message>
     <message id="orn-cat-ambience-themes">
         <source>Ambience &amp; Themes</source>
-        <translation>Sferen &amp; thema&apos;s</translation>
+        <translation>Sferen &amp; thema’s</translation>
     </message>
     <message id="orn-cat-business">
         <source>Business</source>
@@ -215,7 +207,7 @@
     </message>
     <message id="orn-cat-utilities">
         <source>Utilities</source>
-        <translation>Hulpprogramma&apos;s</translation>
+        <translation>Hulpprogramma’s</translation>
     </message>
     <message id="orn-cat-games">
         <source>Games</source>
@@ -349,7 +341,7 @@
     </message>
     <message id="orn-app-licensing">
         <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation>Dit is openbronsoftware, uitgebracht onder de voorwaarden van de&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT-licentie&lt;/a&gt;</translation>
+        <translation>Dit is vrije software, uitgebracht onder de voorwaarden van de&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT-licentie&lt;/a&gt;</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
@@ -357,7 +349,7 @@
     </message>
     <message id="orn-pull-refresh">
         <source>Pull down to refresh</source>
-        <translation>Trek omlaag om te verversen</translation>
+        <translation>Trek omlaag om te vernieuwen</translation>
     </message>
     <message id="orn-development">
         <source>Development</source>
@@ -531,10 +523,6 @@
         <source>Installed Applications</source>
         <translation>Geïnstalleerde apps</translation>
     </message>
-    <message id="orn-no-installed-apps">
-        <source>Could not find any applications installed from OpenRepos</source>
-        <translation>Geen apps geïnstalleerd van OpenRepos gevonden</translation>
-    </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
         <translation>De app is toegevoegd aan je bladwijzers</translation>
@@ -561,19 +549,7 @@
     </message>
     <message id="orn-refresh-cache">
         <source>Refresh cache</source>
-        <translation>Cache verversen</translation>
-    </message>
-    <message id="orn-not-installed">
-        <source>Not installed</source>
-        <translation>Niet geïnstalleerd</translation>
-    </message>
-    <message id="orn-installing">
-        <source>Installing</source>
-        <translation>Wordt geïnstalleerd</translation>
-    </message>
-    <message id="orn-updating">
-        <source>Updating</source>
-        <translation>Wordt bijgewerkt</translation>
+        <translation>Cache vernieuwen</translation>
     </message>
     <message id="orn-tag-underscore">
         <source>U</source>
@@ -601,22 +577,6 @@
     <message id="orn-updates-available-body">
         <source>Applications updates are available. Click to view details.</source>
         <translation>Er zijn updates voor je apps beschikbaar. Tik voor meer info.</translation>
-    </message>
-    <message id="orn-installed-apps-description">
-        <source>Only from enabled repositories</source>
-        <translation>Enkel uit ingeschakelde pakketbronnen</translation>
-    </message>
-    <message id="orn-update-all">
-        <source>Update all</source>
-        <translation>Alles bijwerken</translation>
-    </message>
-    <message id="orn-reading-repos-begin">
-        <source>Reading the repositories data</source>
-        <translation>De pakketbrongegevens worden gelezen</translation>
-    </message>
-    <message id="orn-reading-repos-end">
-        <source>Finished reading the repositories data</source>
-        <translation>De pakketbrongegevens zijn gelezen</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>
@@ -681,7 +641,7 @@
     </message>
     <message id="orn-refreshing-repos">
         <source>Refreshing repositories</source>
-        <translation>Pakketbronnen worden ververst</translation>
+        <translation>Pakketbronnen worden vernieuwd</translation>
     </message>
     <message id="orn-searching-packages">
         <source>Searching packages</source>
@@ -722,6 +682,137 @@
     <message id="orn-backup-hint">
         <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
         <translation>Back-up laat je toe je huidige OpenRepos-pakketbronnen op te slaan, evenals je geïnstalleerde apps en bladwijzers, om deze later te herstellen (bijvoorbeeld nadat je je apparaat hebt teruggebracht naar de fabrieksinstellingen). Een back-up is een lokaal bestand dat wordt opgeslagen in de &lt;br /&gt;map &lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Opgelet!&lt;/b&gt; Kopieer je back-ups handmatig naar een veilige locatie, zoals je SD-kaart, een extern apparaat of een cloudopslagdienst, vooraleer je je apparaat terugbrengt naar de fabrieksinstellingen.</translation>
+    </message>
+    <message id="orn-pmstate-initialising">
+        <source>Initialising</source>
+        <translation>Initialiseren</translation>
+    </message>
+    <message id="orn-pmstate-addingrepo">
+        <source>Adding repo %0</source>
+        <translation>Pakketbron %0 wordt toegevoegd</translation>
+    </message>
+    <message id="orn-pmstate-removingrepo">
+        <source>Removing repo %0</source>
+        <translation>Pakketbron %0 wordt verwijderd</translation>
+    </message>
+    <message id="orn-pmstate-enablingrepo">
+        <source>Enabling repo %0</source>
+        <translation>Pakketbron %0 wordt ingeschakeld</translation>
+    </message>
+    <message id="orn-pmstate-disablingrepo">
+        <source>Disabling repo %0</source>
+        <translation>Pakketbron %0 wordt uitgeschakeld</translation>
+    </message>
+    <message id="orn-pmstate-refreshingrepo">
+        <source>Refreshing %0</source>
+        <translation>%0 wordt vernieuwd</translation>
+    </message>
+    <message id="orn-pmstate-installingpackage">
+        <source>Installing package %0</source>
+        <translation>Pakket %0 wordt geïnstalleerd</translation>
+    </message>
+    <message id="orn-pmstate-removingpackage">
+        <source>Removing package %0</source>
+        <translation>Pakket %0 wordt verwijderd</translation>
+    </message>
+    <message id="orn-pmstate-updatingpackage">
+        <source>Updating package %0</source>
+        <translation>Pakket %0 wordt bijgewerkt</translation>
+    </message>
+    <message id="orn-repo-removed">
+        <source>The repository %0 was removed</source>
+        <translation>Pakketbron %0 is verwijderd</translation>
+    </message>
+    <message id="orn-repo-added">
+        <source>The repository %0 was added</source>
+        <translation>Pakketbron %0 is toegevoegd</translation>
+    </message>
+    <message id="orn-repo-disabled">
+        <source>The repository %0 was disabled</source>
+        <translation>Pakketbron %0 is uitgeschakeld</translation>
+    </message>
+    <message id="orn-repo-enabled">
+        <source>The repository %0 was enabled</source>
+        <translation>Pakketbron %0 is ingeschakeld</translation>
+    </message>
+    <message id="orn-not-installed">
+        <source>Not installed</source>
+        <translation>Niet geïnstalleerd</translation>
+    </message>
+    <message id="orn-installing">
+        <source>Installing</source>
+        <translation>Wordt geïnstalleerd</translation>
+    </message>
+    <message id="orn-unknown">
+        <source>Unknown</source>
+        <translation>Onbekend</translation>
+    </message>
+    <message id="orn-updating">
+        <source>Updating</source>
+        <translation>Wordt bijgewerkt</translation>
+    </message>
+    <message id="orn-version-available-global">
+        <source>Available in other repositories</source>
+        <translation>Beschikbaar in andere pakketbronnen</translation>
+    </message>
+    <message id="orn-installed-apps-description">
+        <source>Only from enabled repositories</source>
+        <translation>Enkel uit ingeschakelde pakketbronnen</translation>
+    </message>
+    <message id="orn-update-all">
+        <source>Update all</source>
+        <translation>Alles bijwerken</translation>
+    </message>
+    <message id="orn-no-installed-apps">
+        <source>Could not find any applications installed from OpenRepos</source>
+        <translation>Geen apps geïnstalleerd van OpenRepos gevonden</translation>
+    </message>
+    <message id="orn-pmstate-multiple" numerus="yes">
+        <source>%n operations are in progress</source>
+        <extracomment>There are always more than 1 operations</extracomment>
+        <translation>
+            <numerusform>%n actie wordt uitgevoerd</numerusform>
+            <numerusform>%n acties worden uitgevoerd</numerusform>
+        </translation>
+    </message>
+    <message id="orn-version-available">
+        <source>Available version</source>
+        <translation>Beschikbaar</translation>
+    </message>
+    <message id="orn-size-kb">
+        <source>%0 KB</source>
+        <translation>%0 KB</translation>
+    </message>
+    <message id="orn-size-mb">
+        <source>%0 MB</source>
+        <translation>%0 MB</translation>
+    </message>
+    <message id="orn-size-gb">
+        <source>%0 GB</source>
+        <translation>%0 GB</translation>
+    </message>
+    <message id="orn-error-packagenotfound">
+        <source>Couldn&apos;t find package</source>
+        <translation>Kon pakket niet vinden</translation>
+    </message>
+    <message id="orn-size-installed">
+        <source>Installed size</source>
+        <translation>Geïnstalleerde grootte</translation>
+    </message>
+    <message id="orn-size-bytes" numerus="yes">
+        <source>%n byte(s)</source>
+        <translation>
+            <numerusform>%n byte</numerusform>
+            <numerusform>%n bytes</numerusform>
+        </translation>
+    </message>
+    <message id="orn-size-download-install">
+        <source>Download / install size</source>
+        <translation>Download-/installatiegrootte</translation>
+    </message>
+    <message id="orn-cat-public-transport">
+        <source>Public Transport</source>
+        <translation>Openbaar vervoer</translation>
     </message>
 </context>
 </TS>

@@ -39,10 +39,6 @@
         <source>Recently updated</source>
         <translation>Ενημερωμένα πρόσφατα</translation>
     </message>
-    <message id="orn-app-not-found-body">
-        <source>Application with such id was not found</source>
-        <translation>Δεν βρέθηκε εφαρμογή με αυτό το αναγνωριστικό</translation>
-    </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
         <translation>Το δίκτυο δεν είναι διαθέσιμο</translation>
@@ -119,10 +115,6 @@
     <message id="orn-version-installed">
         <source>Installed version</source>
         <translation>Εγκατεστημένη έκδοση</translation>
-    </message>
-    <message id="orn-version-available">
-        <source>Available version</source>
-        <translation>Διαθέσιμη έκδοση</translation>
     </message>
     <message id="orn-version-updated">
         <source>Last updated</source>
@@ -531,10 +523,6 @@
         <source>Installed Applications</source>
         <translation>Εγκατεστημένες εφαρμογές</translation>
     </message>
-    <message id="orn-no-installed-apps">
-        <source>Could not find any applications installed from OpenRepos</source>
-        <translation>Δεν βρέθηκαν εφαρμογές εγκατεστημένες από το OpenRepos</translation>
-    </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
         <translation>Η εφαρμογή προστέθηκε στους σελιδοδείκτες</translation>
@@ -563,18 +551,6 @@
         <source>Refresh cache</source>
         <translation>Ανανέωση της κρυφής μνήμης</translation>
     </message>
-    <message id="orn-not-installed">
-        <source>Not installed</source>
-        <translation>Μη εγκατεστημένο</translation>
-    </message>
-    <message id="orn-installing">
-        <source>Installing</source>
-        <translation>Εγκατάσταση</translation>
-    </message>
-    <message id="orn-updating">
-        <source>Updating</source>
-        <translation>Ενημέρωση</translation>
-    </message>
     <message id="orn-tag-underscore">
         <source>U</source>
         <extracomment>Tag underscore</extracomment>
@@ -601,22 +577,6 @@
     <message id="orn-updates-available-body">
         <source>Applications updates are available. Click to view details.</source>
         <translation>Υπάρχουν διαθέσιμες ενημερώσεις εφαρμογών. Κάντε κλικ για την προβολή λεπτομερειών.</translation>
-    </message>
-    <message id="orn-installed-apps-description">
-        <source>Only from enabled repositories</source>
-        <translation>Μόνο από τα ενεργοποιημένα αποθετήρια</translation>
-    </message>
-    <message id="orn-update-all">
-        <source>Update all</source>
-        <translation>Ενημέρωση όλων</translation>
-    </message>
-    <message id="orn-reading-repos-begin">
-        <source>Reading the repositories data</source>
-        <translation>Ανάγνωση των δεδομένων των αποθετηρίων</translation>
-    </message>
-    <message id="orn-reading-repos-end">
-        <source>Finished reading the repositories data</source>
-        <translation>Ολοκλήρωση της ανάγνωσης των δεδομένων των αποθετηρίων</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>
@@ -722,6 +682,137 @@
     <message id="orn-backup-hint">
         <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
         <translation>Τα αντίγραφα ασφαλείας σας επιτρέπουν την αποθήκευση των αποθετηρίων του OpenRepos, τις εγκατεστημένες εφαρμογές και σελιδοδείκτες και να τις επαναφέρετε αργότερα (πχ μετά από μια επαναφορά των ρυθμίσεων εργοστασίου). Ένα εφεδρικό αντίγραφο είναι ένα τοπικό αρχείο αποθηκευμένο στον κατάλογο&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Προσοχή!&lt;/b&gt; Θα πρέπει να αποθηκεύσετε τα αντίγραφα ασφαλείας σε ένα ασφαλές μέρος χειροκίνητα πριν την επαναφορά στις εργοστασιακές ρυθμίσεις. Για παράδειγμα στην κάρτα SD, σε μια εξωτερική συσκευή, μια υπηρεσία αποθήκευσης νέφους ή κάπου αλλού.</translation>
+    </message>
+    <message id="orn-pmstate-initialising">
+        <source>Initialising</source>
+        <translation>Αρχικοποίηση</translation>
+    </message>
+    <message id="orn-pmstate-addingrepo">
+        <source>Adding repo %0</source>
+        <translation>Προσθήκη του αποθετηρίου %0</translation>
+    </message>
+    <message id="orn-pmstate-removingrepo">
+        <source>Removing repo %0</source>
+        <translation>Αφαίρεση του αποθετηρίου %0</translation>
+    </message>
+    <message id="orn-pmstate-enablingrepo">
+        <source>Enabling repo %0</source>
+        <translation>Ενεργοποίηση του αποθετηρίου %0</translation>
+    </message>
+    <message id="orn-pmstate-disablingrepo">
+        <source>Disabling repo %0</source>
+        <translation>Απενεργοποίηση του αποθετηρίου %0</translation>
+    </message>
+    <message id="orn-pmstate-refreshingrepo">
+        <source>Refreshing %0</source>
+        <translation>Ανανέωση του %0</translation>
+    </message>
+    <message id="orn-pmstate-installingpackage">
+        <source>Installing package %0</source>
+        <translation>Εγκατάσταση του πακέτου %0</translation>
+    </message>
+    <message id="orn-pmstate-removingpackage">
+        <source>Removing package %0</source>
+        <translation>Αφαίρεση του πακέτου %0 </translation>
+    </message>
+    <message id="orn-pmstate-updatingpackage">
+        <source>Updating package %0</source>
+        <translation>Ενημέρωση του πακέτου %0</translation>
+    </message>
+    <message id="orn-repo-removed">
+        <source>The repository %0 was removed</source>
+        <translation>Το αποθετήριο %0 αφαιρέθηκε</translation>
+    </message>
+    <message id="orn-repo-added">
+        <source>The repository %0 was added</source>
+        <translation>Προστέθηκε το αποθετήριο %0</translation>
+    </message>
+    <message id="orn-repo-disabled">
+        <source>The repository %0 was disabled</source>
+        <translation>Το αποθετήριο %0 απενεργοποιήθηκε</translation>
+    </message>
+    <message id="orn-repo-enabled">
+        <source>The repository %0 was enabled</source>
+        <translation>Το αποθετήριο %0 ενεργοποιήθηκε</translation>
+    </message>
+    <message id="orn-not-installed">
+        <source>Not installed</source>
+        <translation>Μη εγκατεστημένο</translation>
+    </message>
+    <message id="orn-installing">
+        <source>Installing</source>
+        <translation>Εγκατάσταση</translation>
+    </message>
+    <message id="orn-unknown">
+        <source>Unknown</source>
+        <translation>Άγνωστο</translation>
+    </message>
+    <message id="orn-updating">
+        <source>Updating</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-version-available-global">
+        <source>Available in other repositories</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-installed-apps-description">
+        <source>Only from enabled repositories</source>
+        <translation>Μόνο από τα ενεργοποιημένα αποθετήρια</translation>
+    </message>
+    <message id="orn-update-all">
+        <source>Update all</source>
+        <translation>Ενημέρωση όλων</translation>
+    </message>
+    <message id="orn-no-installed-apps">
+        <source>Could not find any applications installed from OpenRepos</source>
+        <translation>Δεν βρέθηκαν εφαρμογές εγκατεστημένες από το OpenRepos</translation>
+    </message>
+    <message id="orn-pmstate-multiple" numerus="yes">
+        <source>%n operations are in progress</source>
+        <extracomment>There are always more than 1 operations</extracomment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message id="orn-version-available">
+        <source>Available version</source>
+        <translation>Διαθέσιμη έκδοση</translation>
+    </message>
+    <message id="orn-size-kb">
+        <source>%0 KB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-size-mb">
+        <source>%0 MB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-size-gb">
+        <source>%0 GB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-error-packagenotfound">
+        <source>Couldn&apos;t find package</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-size-installed">
+        <source>Installed size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-size-bytes" numerus="yes">
+        <source>%n byte(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message id="orn-size-download-install">
+        <source>Download / install size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-cat-public-transport">
+        <source>Public Transport</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

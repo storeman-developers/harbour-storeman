@@ -39,10 +39,6 @@
         <source>Recently updated</source>
         <translation>Nyligen uppdaterat</translation>
     </message>
-    <message id="orn-app-not-found-body">
-        <source>Application with such id was not found</source>
-        <translation>Hittade ingen app med ett sådant ID</translation>
-    </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
         <translation>Nätverket är otillgängligt</translation>
@@ -119,10 +115,6 @@
     <message id="orn-version-installed">
         <source>Installed version</source>
         <translation>Installerad version</translation>
-    </message>
-    <message id="orn-version-available">
-        <source>Available version</source>
-        <translation>Tillgänglig version</translation>
     </message>
     <message id="orn-version-updated">
         <source>Last updated</source>
@@ -531,10 +523,6 @@
         <source>Installed Applications</source>
         <translation>Installerade applikationer</translation>
     </message>
-    <message id="orn-no-installed-apps">
-        <source>Could not find any applications installed from OpenRepos</source>
-        <translation>Kunde inte hitta någon installerad applikation från OpenRepos</translation>
-    </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
         <translation>Appen har lagts till som bokmärke</translation>
@@ -563,20 +551,6 @@
         <source>Refresh cache</source>
         <translation>Uppdatera cachen</translation>
     </message>
-    <message id="orn-not-installed">
-        <source>Not installed</source>
-        <translation>Inte installerad</translation>
-    </message>
-    <message id="orn-installing">
-        <source>Installing</source>
-        <translation>Installerar</translation>
-    </message>
-    <message id="orn-updating">
-        <source>Updating</source>
-        <translation>Upptaterar
-
-</translation>
-    </message>
     <message id="orn-tag-underscore">
         <source>U</source>
         <extracomment>Tag underscore</extracomment>
@@ -603,22 +577,6 @@
     <message id="orn-updates-available-body">
         <source>Applications updates are available. Click to view details.</source>
         <translation>App-uppdateringar finns tillgängliga. Tryck för detaljerad information.</translation>
-    </message>
-    <message id="orn-installed-apps-description">
-        <source>Only from enabled repositories</source>
-        <translation>Endast från aktiverade förråd</translation>
-    </message>
-    <message id="orn-update-all">
-        <source>Update all</source>
-        <translation>Uppdatera alla</translation>
-    </message>
-    <message id="orn-reading-repos-begin">
-        <source>Reading the repositories data</source>
-        <translation>Läser förrådsdata</translation>
-    </message>
-    <message id="orn-reading-repos-end">
-        <source>Finished reading the repositories data</source>
-        <translation>Läsning av förrådsdata slutförd</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>
@@ -724,6 +682,137 @@
     <message id="orn-backup-hint">
         <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
         <translation>Säkerhetskopiering låter dig spara dina aktuella OpenRepos-förråd, installerade appar, bokmärken och att återställa dem senare (t.ex. efter en fabriksåterställning). Säkerhetskopian är en lokal fil som sparas i&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;. &lt;br /&gt;&lt;br /&gt;&lt;b&gt;OBS!&lt;/b&gt; Du måste kopiera dina säkerhetskopior till en säker plats, innan du utför en fabriksåterställning. Det kan vara ditt SD-kort, en extern enhet, molnlagring eller något annat.</translation>
+    </message>
+    <message id="orn-pmstate-initialising">
+        <source>Initialising</source>
+        <translation>Startar</translation>
+    </message>
+    <message id="orn-pmstate-addingrepo">
+        <source>Adding repo %0</source>
+        <translation>Lägger till förråd %0</translation>
+    </message>
+    <message id="orn-pmstate-removingrepo">
+        <source>Removing repo %0</source>
+        <translation>Tar bort förråd %0</translation>
+    </message>
+    <message id="orn-pmstate-enablingrepo">
+        <source>Enabling repo %0</source>
+        <translation>Aktiverar förråd %0</translation>
+    </message>
+    <message id="orn-pmstate-disablingrepo">
+        <source>Disabling repo %0</source>
+        <translation>Avaktiverar förråd %0</translation>
+    </message>
+    <message id="orn-pmstate-refreshingrepo">
+        <source>Refreshing %0</source>
+        <translation>Uppdaterar %0</translation>
+    </message>
+    <message id="orn-pmstate-installingpackage">
+        <source>Installing package %0</source>
+        <translation>Installerar paket %0</translation>
+    </message>
+    <message id="orn-pmstate-removingpackage">
+        <source>Removing package %0</source>
+        <translation>Tar bort paket %0</translation>
+    </message>
+    <message id="orn-pmstate-updatingpackage">
+        <source>Updating package %0</source>
+        <translation>Uppdaterar paket %0</translation>
+    </message>
+    <message id="orn-repo-removed">
+        <source>The repository %0 was removed</source>
+        <translation>Förråd %0 har tagits bort</translation>
+    </message>
+    <message id="orn-repo-added">
+        <source>The repository %0 was added</source>
+        <translation>Förråd %0 har lagts till</translation>
+    </message>
+    <message id="orn-repo-disabled">
+        <source>The repository %0 was disabled</source>
+        <translation>Förråd %0 har avaktiverats</translation>
+    </message>
+    <message id="orn-repo-enabled">
+        <source>The repository %0 was enabled</source>
+        <translation>Förråd %0 har aktiverats</translation>
+    </message>
+    <message id="orn-not-installed">
+        <source>Not installed</source>
+        <translation>Inte installerad</translation>
+    </message>
+    <message id="orn-installing">
+        <source>Installing</source>
+        <translation>Installerar</translation>
+    </message>
+    <message id="orn-unknown">
+        <source>Unknown</source>
+        <translation>Okänd</translation>
+    </message>
+    <message id="orn-updating">
+        <source>Updating</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-version-available-global">
+        <source>Available in other repositories</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-installed-apps-description">
+        <source>Only from enabled repositories</source>
+        <translation>Endast från aktiverade förråd</translation>
+    </message>
+    <message id="orn-update-all">
+        <source>Update all</source>
+        <translation>Uppdatera alla</translation>
+    </message>
+    <message id="orn-no-installed-apps">
+        <source>Could not find any applications installed from OpenRepos</source>
+        <translation>Kunde inte hitta någon installerad applikation från OpenRepos</translation>
+    </message>
+    <message id="orn-pmstate-multiple" numerus="yes">
+        <source>%n operations are in progress</source>
+        <extracomment>There are always more than 1 operations</extracomment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message id="orn-version-available">
+        <source>Available version</source>
+        <translation>Tillgänglig version</translation>
+    </message>
+    <message id="orn-size-kb">
+        <source>%0 KB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-size-mb">
+        <source>%0 MB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-size-gb">
+        <source>%0 GB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-error-packagenotfound">
+        <source>Couldn&apos;t find package</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-size-installed">
+        <source>Installed size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-size-bytes" numerus="yes">
+        <source>%n byte(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message id="orn-size-download-install">
+        <source>Download / install size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-cat-public-transport">
+        <source>Public Transport</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

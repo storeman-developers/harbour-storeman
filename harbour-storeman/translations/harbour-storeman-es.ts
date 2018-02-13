@@ -39,10 +39,6 @@
         <source>Recently updated</source>
         <translation>Actualizado recientemente</translation>
     </message>
-    <message id="orn-app-not-found-body">
-        <source>Application with such id was not found</source>
-        <translation>No se encontró ninguna aplicación con dicho id</translation>
-    </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
         <translation>La red no está disponible</translation>
@@ -119,10 +115,6 @@
     <message id="orn-version-installed">
         <source>Installed version</source>
         <translation>Versión instalada</translation>
-    </message>
-    <message id="orn-version-available">
-        <source>Available version</source>
-        <translation>Versión disponible</translation>
     </message>
     <message id="orn-version-updated">
         <source>Last updated</source>
@@ -531,10 +523,6 @@
         <source>Installed Applications</source>
         <translation>Aplicaciones instaladas</translation>
     </message>
-    <message id="orn-no-installed-apps">
-        <source>Could not find any applications installed from OpenRepos</source>
-        <translation>No se pudo encontrar ninguna aplicación instalada de OpenRepos</translation>
-    </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
         <translation>La aplicación se ha añadido a favoritos</translation>
@@ -563,18 +551,6 @@
         <source>Refresh cache</source>
         <translation>Actualizar caché</translation>
     </message>
-    <message id="orn-not-installed">
-        <source>Not installed</source>
-        <translation>No instalado</translation>
-    </message>
-    <message id="orn-installing">
-        <source>Installing</source>
-        <translation>Instalando</translation>
-    </message>
-    <message id="orn-updating">
-        <source>Updating</source>
-        <translation>Actualizando</translation>
-    </message>
     <message id="orn-tag-underscore">
         <source>U</source>
         <extracomment>Tag underscore</extracomment>
@@ -601,22 +577,6 @@
     <message id="orn-updates-available-body">
         <source>Applications updates are available. Click to view details.</source>
         <translation>Hay actualizaciones disponibles. Haz clic para ver detalles.</translation>
-    </message>
-    <message id="orn-installed-apps-description">
-        <source>Only from enabled repositories</source>
-        <translation>Sólo desde repositorios habilitados</translation>
-    </message>
-    <message id="orn-update-all">
-        <source>Update all</source>
-        <translation>Actualizar todo</translation>
-    </message>
-    <message id="orn-reading-repos-begin">
-        <source>Reading the repositories data</source>
-        <translation>Leyendo datos de repositorios</translation>
-    </message>
-    <message id="orn-reading-repos-end">
-        <source>Finished reading the repositories data</source>
-        <translation>Lectura de datos de repositorios finalizada</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>
@@ -722,6 +682,137 @@
     <message id="orn-backup-hint">
         <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
         <translation>La copia de seguridad te permite guardar tus repositorios actuales de OpenRepos, las aplicaciones instaladas y las favoritas y restaurarlas después (por ejemplo, tras un reseteo de fábrica). Una copia de seguridad es un archivo local que se guarda en el directorio&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;¡Atención!&lt;/b&gt; Debes copiar tus copias de seguridad en algún lugar seguro antes de hacer un reseteo de fábrica. Podría ser tu tarjeta SD, dispositivo externo, almacenamiento en la nube o cualquier otro.</translation>
+    </message>
+    <message id="orn-pmstate-initialising">
+        <source>Initialising</source>
+        <translation>Iniciando</translation>
+    </message>
+    <message id="orn-pmstate-addingrepo">
+        <source>Adding repo %0</source>
+        <translation>Añadiendo repo %0</translation>
+    </message>
+    <message id="orn-pmstate-removingrepo">
+        <source>Removing repo %0</source>
+        <translation>Eliminando repo %0</translation>
+    </message>
+    <message id="orn-pmstate-enablingrepo">
+        <source>Enabling repo %0</source>
+        <translation>Habilitando repo %0</translation>
+    </message>
+    <message id="orn-pmstate-disablingrepo">
+        <source>Disabling repo %0</source>
+        <translation>Deshabilitando repo %0</translation>
+    </message>
+    <message id="orn-pmstate-refreshingrepo">
+        <source>Refreshing %0</source>
+        <translation>Actualizando %0</translation>
+    </message>
+    <message id="orn-pmstate-installingpackage">
+        <source>Installing package %0</source>
+        <translation>Instalando paquete %0</translation>
+    </message>
+    <message id="orn-pmstate-removingpackage">
+        <source>Removing package %0</source>
+        <translation>Eliminando paquete %0</translation>
+    </message>
+    <message id="orn-pmstate-updatingpackage">
+        <source>Updating package %0</source>
+        <translation>Actualizando paquete %0</translation>
+    </message>
+    <message id="orn-repo-removed">
+        <source>The repository %0 was removed</source>
+        <translation>El repositorio %0 se ha eliminado</translation>
+    </message>
+    <message id="orn-repo-added">
+        <source>The repository %0 was added</source>
+        <translation>El repositorio %0 se ha añadido</translation>
+    </message>
+    <message id="orn-repo-disabled">
+        <source>The repository %0 was disabled</source>
+        <translation>El repositorio %0 se ha deshabilitado</translation>
+    </message>
+    <message id="orn-repo-enabled">
+        <source>The repository %0 was enabled</source>
+        <translation>El repositorio %0 se ha habilitado</translation>
+    </message>
+    <message id="orn-not-installed">
+        <source>Not installed</source>
+        <translation>No instalado</translation>
+    </message>
+    <message id="orn-installing">
+        <source>Installing</source>
+        <translation>Instalando</translation>
+    </message>
+    <message id="orn-unknown">
+        <source>Unknown</source>
+        <translation>Desconocido</translation>
+    </message>
+    <message id="orn-updating">
+        <source>Updating</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-version-available-global">
+        <source>Available in other repositories</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-installed-apps-description">
+        <source>Only from enabled repositories</source>
+        <translation>Sólo desde repositorios habilitados</translation>
+    </message>
+    <message id="orn-update-all">
+        <source>Update all</source>
+        <translation>Actualizar todo</translation>
+    </message>
+    <message id="orn-no-installed-apps">
+        <source>Could not find any applications installed from OpenRepos</source>
+        <translation>No se pudo encontrar ninguna aplicación instalada de OpenRepos</translation>
+    </message>
+    <message id="orn-pmstate-multiple" numerus="yes">
+        <source>%n operations are in progress</source>
+        <extracomment>There are always more than 1 operations</extracomment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message id="orn-version-available">
+        <source>Available version</source>
+        <translation>Versión disponible</translation>
+    </message>
+    <message id="orn-size-kb">
+        <source>%0 KB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-size-mb">
+        <source>%0 MB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-size-gb">
+        <source>%0 GB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-error-packagenotfound">
+        <source>Couldn&apos;t find package</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-size-installed">
+        <source>Installed size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-size-bytes" numerus="yes">
+        <source>%n byte(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message id="orn-size-download-install">
+        <source>Download / install size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-cat-public-transport">
+        <source>Public Transport</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

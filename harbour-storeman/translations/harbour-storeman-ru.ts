@@ -39,10 +39,6 @@
         <source>Recently updated</source>
         <translation>Недавно обновленные</translation>
     </message>
-    <message id="orn-app-not-found-body">
-        <source>Application with such id was not found</source>
-        <translation>Такое приложение не найдено</translation>
-    </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
         <translation>Сеть недоступна</translation>
@@ -119,10 +115,6 @@
     <message id="orn-version-installed">
         <source>Installed version</source>
         <translation>Установленная версия</translation>
-    </message>
-    <message id="orn-version-available">
-        <source>Available version</source>
-        <translation>Доступная версия</translation>
     </message>
     <message id="orn-version-updated">
         <source>Last updated</source>
@@ -535,10 +527,6 @@ Storeman не хранит ваш пароль и не передает его �
         <source>Installed Applications</source>
         <translation>Установленные приложения</translation>
     </message>
-    <message id="orn-no-installed-apps">
-        <source>Could not find any applications installed from OpenRepos</source>
-        <translation>Не удалось найти приложения, установленные из OpenRepos</translation>
-    </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
         <translation>Приложение добавлено в закладки</translation>
@@ -567,18 +555,6 @@ Storeman не хранит ваш пароль и не передает его �
         <source>Refresh cache</source>
         <translation>Обновить кеш</translation>
     </message>
-    <message id="orn-not-installed">
-        <source>Not installed</source>
-        <translation>Не установлено</translation>
-    </message>
-    <message id="orn-installing">
-        <source>Installing</source>
-        <translation>Установка</translation>
-    </message>
-    <message id="orn-updating">
-        <source>Updating</source>
-        <translation>Обновление</translation>
-    </message>
     <message id="orn-tag-underscore">
         <source>U</source>
         <extracomment>Tag underscore</extracomment>
@@ -605,22 +581,6 @@ Storeman не хранит ваш пароль и не передает его �
     <message id="orn-updates-available-body">
         <source>Applications updates are available. Click to view details.</source>
         <translation>Доступны обновления приложений. Нажмите, чтобы просмотреть детали.</translation>
-    </message>
-    <message id="orn-installed-apps-description">
-        <source>Only from enabled repositories</source>
-        <translation>Только из подключенных репозиториев</translation>
-    </message>
-    <message id="orn-update-all">
-        <source>Update all</source>
-        <translation>Обновить все</translation>
-    </message>
-    <message id="orn-reading-repos-begin">
-        <source>Reading the repositories data</source>
-        <translation>Выполняется чтение репозиториев</translation>
-    </message>
-    <message id="orn-reading-repos-end">
-        <source>Finished reading the repositories data</source>
-        <translation>Чтение репозиториев завершено</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>
@@ -726,6 +686,139 @@ Storeman не хранит ваш пароль и не передает его �
     <message id="orn-backup-hint">
         <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
         <translation>Резервное копирование позволяет сохранить текущие репозитории OpenRepos, установленные приложения и закладки, чтобы позже их восстановить (например, после сброса устройства). Резервная копия – это локальный файл, который сохраняется в каталоге&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Внимание!&lt;/b&gt; Перед сбросом устройства необходимо вручную скопировать резервные копии в безопасное место. Это может быть ваша SD-карта, внешнее устройство, облачное хранилище или что-либо еще.</translation>
+    </message>
+    <message id="orn-pmstate-initialising">
+        <source>Initialising</source>
+        <translation>Загрузка</translation>
+    </message>
+    <message id="orn-pmstate-addingrepo">
+        <source>Adding repo %0</source>
+        <translation>Добавление %0</translation>
+    </message>
+    <message id="orn-pmstate-removingrepo">
+        <source>Removing repo %0</source>
+        <translation>Удаление %0</translation>
+    </message>
+    <message id="orn-pmstate-enablingrepo">
+        <source>Enabling repo %0</source>
+        <translation>Включение %0</translation>
+    </message>
+    <message id="orn-pmstate-disablingrepo">
+        <source>Disabling repo %0</source>
+        <translation>Выключение %0</translation>
+    </message>
+    <message id="orn-pmstate-refreshingrepo">
+        <source>Refreshing %0</source>
+        <translation>Обновление %0</translation>
+    </message>
+    <message id="orn-pmstate-installingpackage">
+        <source>Installing package %0</source>
+        <translation>Установка %0</translation>
+    </message>
+    <message id="orn-pmstate-removingpackage">
+        <source>Removing package %0</source>
+        <translation>Удаление %0</translation>
+    </message>
+    <message id="orn-pmstate-updatingpackage">
+        <source>Updating package %0</source>
+        <translation>Обновление %0</translation>
+    </message>
+    <message id="orn-repo-removed">
+        <source>The repository %0 was removed</source>
+        <translation>Репозиторий %0 удален</translation>
+    </message>
+    <message id="orn-repo-added">
+        <source>The repository %0 was added</source>
+        <translation>Репозиторий %0 добавлен</translation>
+    </message>
+    <message id="orn-repo-disabled">
+        <source>The repository %0 was disabled</source>
+        <translation>Репозиторий %0 отключен</translation>
+    </message>
+    <message id="orn-repo-enabled">
+        <source>The repository %0 was enabled</source>
+        <translation>Репозиторий %0 включен</translation>
+    </message>
+    <message id="orn-not-installed">
+        <source>Not installed</source>
+        <translation>Не установлено</translation>
+    </message>
+    <message id="orn-installing">
+        <source>Installing</source>
+        <translation>Установка</translation>
+    </message>
+    <message id="orn-unknown">
+        <source>Unknown</source>
+        <translation>Неизвестно</translation>
+    </message>
+    <message id="orn-updating">
+        <source>Updating</source>
+        <translation>Обновление</translation>
+    </message>
+    <message id="orn-version-available-global">
+        <source>Available in other repositories</source>
+        <translation>Доступно в других репозиториях</translation>
+    </message>
+    <message id="orn-installed-apps-description">
+        <source>Only from enabled repositories</source>
+        <translation>Только доступные в репозиториях</translation>
+    </message>
+    <message id="orn-update-all">
+        <source>Update all</source>
+        <translation>Обновить все</translation>
+    </message>
+    <message id="orn-no-installed-apps">
+        <source>Could not find any applications installed from OpenRepos</source>
+        <translation>Не удалось найти приложения, установленные с OpenRepos</translation>
+    </message>
+    <message id="orn-pmstate-multiple" numerus="yes">
+        <source>%n operations are in progress</source>
+        <extracomment>There are always more than 1 operations</extracomment>
+        <translation>
+            <numerusform>Выполняется %n операция</numerusform>
+            <numerusform>Выполняется %n операции</numerusform>
+            <numerusform>Выполняется %n операций</numerusform>
+        </translation>
+    </message>
+    <message id="orn-version-available">
+        <source>Available version</source>
+        <translation>Доступная версия</translation>
+    </message>
+    <message id="orn-size-kb">
+        <source>%0 KB</source>
+        <translation>%0 КБ</translation>
+    </message>
+    <message id="orn-size-mb">
+        <source>%0 MB</source>
+        <translation>%0 МБ</translation>
+    </message>
+    <message id="orn-size-gb">
+        <source>%0 GB</source>
+        <translation>%0 ГБ</translation>
+    </message>
+    <message id="orn-error-packagenotfound">
+        <source>Couldn&apos;t find package</source>
+        <translation>Пакет не найден</translation>
+    </message>
+    <message id="orn-size-installed">
+        <source>Installed size</source>
+        <translation>Установленный размер</translation>
+    </message>
+    <message id="orn-size-bytes" numerus="yes">
+        <source>%n byte(s)</source>
+        <translation>
+            <numerusform>%n байт</numerusform>
+            <numerusform>%n байта</numerusform>
+            <numerusform>%n байтов</numerusform>
+        </translation>
+    </message>
+    <message id="orn-size-download-install">
+        <source>Download / install size</source>
+        <translation>Размер загрузки / установки</translation>
+    </message>
+    <message id="orn-cat-public-transport">
+        <source>Public Transport</source>
+        <translation>Общественный транспорт</translation>
     </message>
 </context>
 </TS>

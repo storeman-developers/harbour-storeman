@@ -3,6 +3,15 @@ import QtQuick 2.0
 ListModel {
 
     ListElement {
+        locale: "zh_CN"
+        coordinators: [
+            ListElement { name: "0312birdzhang" }
+        ]
+        translators: []
+        reviewers: []
+    }
+
+    ListElement {
         locale: "da"
         coordinators: []
         translators: [
@@ -26,6 +35,8 @@ ListModel {
             ListElement { name: "hartzi" }
         ]
         translators: [
+            ListElement { name: "Ingvix" },
+            ListElement { name: "Toxip" },
             ListElement { name: "LaurentC" }
         ]
         reviewers: []
@@ -37,7 +48,9 @@ ListModel {
             ListElement { name: "Jordi" },
             ListElement { name: "LaurentC" }
         ]
-        translators: []
+        translators: [
+            ListElement { name: "lutinotmalin" }
+        ]
         reviewers: []
     }
 
@@ -48,11 +61,12 @@ ListModel {
         ]
         translators: [
             ListElement { name: "feldbaum" },
-            ListElement { name: "olf" },
-            ListElement { name: "inta" },
-            ListElement { name: "chwa" }
+            ListElement { name: "chwa" },
+            ListElement { name: "olf" }
         ]
-        reviewers: []
+        reviewers: [
+            ListElement { name: "inta" }
+        ]
     }
 
     ListElement {
@@ -68,7 +82,8 @@ ListModel {
         locale: "hu_HU"
         coordinators: []
         translators: [
-            ListElement { name: "Headarias" }
+            ListElement { name: "Headarias" },
+            ListElement { name: "martonmiklos" }
         ]
         reviewers: []
     }
@@ -89,7 +104,9 @@ ListModel {
         coordinators: [
             ListElement { name: "atlochowski" }
         ]
-        translators: []
+        translators: [
+            ListElement { name: "pemekcz" }
+        ]
         reviewers: []
     }
 
