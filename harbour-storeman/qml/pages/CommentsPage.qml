@@ -22,9 +22,12 @@ Page {
         anchors.fill: parent
 
         PullDownMenu {
+
             RefreshMenuItem {
                 model: commentsModel
             }
+
+            MenuStatusLabel { }
         }
 
         PageHeader {

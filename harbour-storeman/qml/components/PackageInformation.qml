@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import Sailfish.Silica 1.0
+import harbour.orn 1.0
 
 GridLayout {
     property alias statusLabel: statusLabel
@@ -18,6 +19,44 @@ GridLayout {
     IconLabel {
         id: statusLabel
         Layout.fillWidth: true
+        running: _packageStatus === OrnPm.PackageInstalling ||
+                 _packageStatus === OrnPm.PackageRemoving   ||
+                 _packageStatus === OrnPm.PackageUpdating
+        text: {
+            switch (_packageStatus) {
+            case OrnPm.PackageNotInstalled:
+            case OrnPm.PackageAvailable:
+                //% "Not installed"
+                return qsTrId("orn-not-installed")
+            case OrnPm.PackageInstalled:
+                //% "Installed"
+                return qsTrId("orn-installed")
+            case OrnPm.PackageUpdateAvailable:
+                //% "Update available"
+                return qsTrId("orn-update-available")
+            case OrnPm.PackageInstalling:
+                //% "Installing"
+                return qsTrId("orn-installing")
+            case OrnPm.PackageRemoving:
+                return qsTrId("orn-removing")
+            case OrnPm.PackageUpdating:
+                //% "Updating"
+                return qsTrId("orn-updating")
+            default:
+                //% "Unknown"
+                return qsTrId("orn-unknown")
+            }
+        }
+        icon: {
+            switch (_packageStatus) {
+            case OrnPm.PackageInstalled:
+                return "image://theme/icon-s-installed"
+            case OrnPm.PackageUpdateAvailable:
+                return "image://theme/icon-s-update"
+            default:
+                return ""
+            }
+        }
     }
 
     BookmarkButton {
@@ -31,7 +70,7 @@ GridLayout {
 
         IconLabel {
             icon: "image://theme/icon-s-like"
-            text: app.ratingCount.toLocaleString(locale, "f", 0)
+            text: app.ratingCount.toLocaleString(_locale, "f", 0)
         }
 
         RatingBox {
@@ -40,7 +79,7 @@ GridLayout {
 
         IconLabel {
             icon: "image://theme/icon-s-cloud-download"
-            text: app.downloadsCount.toLocaleString(locale, "f", 0)
+            text: app.downloadsCount.toLocaleString(_locale, "f", 0)
         }
     }
 

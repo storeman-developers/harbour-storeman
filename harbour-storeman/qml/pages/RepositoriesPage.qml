@@ -54,7 +54,7 @@ Page {
                     visible: repoEnabled
                     //% "Refresh cache"
                     text: qsTrId("orn-refresh-cache")
-                    onClicked: OrnZypp.refreshRepo(repoAlias, true)
+                    onClicked: OrnPm.refreshRepo(repoAlias, true)
                 }
 
                 MenuItem {
@@ -63,8 +63,8 @@ Page {
                               qsTrId("orn-disable") :
                               //% "Enable"
                               qsTrId("orn-enable")
-                    onClicked: OrnZypp.modifyRepo(
-                                   repoAlias, repoEnabled ? OrnZypp.DisableRepo : OrnZypp.EnableRepo)
+                    onClicked: OrnPm.modifyRepo(
+                                   repoAlias, repoEnabled ? OrnPm.DisableRepo : OrnPm.EnableRepo)
                 }
 
                 MenuItem {
@@ -72,7 +72,7 @@ Page {
                     text: qsTrId("orb-remove")
                     //% "Removing"
                     onClicked: Remorse.itemAction(repoItem, qsTrId("orn-removing"), function() {
-                        OrnZypp.modifyRepo(repoAlias, OrnZypp.RemoveRepo)
+                        OrnPm.modifyRepo(repoAlias, OrnPm.RemoveRepo)
                     })
                 }
             }
@@ -95,7 +95,7 @@ Page {
 
             MenuItem {
                 text: qsTrId("orn-refresh-cache")
-                onClicked: OrnZypp.refreshRepos(true)
+                onClicked: Storeman.resetUpdatesTimer()
             }
 
             MenuItem {
@@ -104,7 +104,10 @@ Page {
                 text: qsTrId("orn-enable-all")
                 //% "Enabling all"
                 onClicked: Remorse.popupAction(page, qsTrId("orn-enabling-all"),
-                                               function() { OrnZypp.enableRepos(true) })
+                                               function() {
+                                                   _working = true
+                                                   OrnPm.enableRepos(true)
+                                               })
 
             }
 
@@ -114,8 +117,13 @@ Page {
                 text: qsTrId("orn-disable-all")
                 //% "Disabling all"
                 onClicked: Remorse.popupAction(page, qsTrId("orn-disabling-all"),
-                                               function() { OrnZypp.enableRepos(false) })
+                                               function() {
+                                                   _working = true
+                                                   OrnPm.enableRepos(false)
+                                               })
             }
+
+            MenuStatusLabel { }
         }
 
         VerticalScrollDecorator { }

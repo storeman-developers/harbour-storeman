@@ -40,6 +40,8 @@ Page {
             RefreshMenuItem {
                 model: bookmarksModel
             }
+
+            MenuStatusLabel { }
         }
 
         VerticalScrollDecorator { }

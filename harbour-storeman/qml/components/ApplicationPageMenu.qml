@@ -4,12 +4,7 @@ import harbour.orn 1.0
 
 PullDownMenu {
     id: pullMenu
-    visible: networkManager.state === "online" &&
-             (repoMenuItem.text   || installMenuItem.text ||
-              app.updateAvailable || app.installedVersion)
-    busy: page.state === "installing" ||
-          page.state === "removing" ||
-          page.state === "updating"
+    visible: networkManager.state === "online" && OrnPm.initialised
 
     MenuItem {
         id: repoMenuItem
@@ -20,29 +15,30 @@ PullDownMenu {
                 return ""
             }
             switch (app.repoStatus) {
-            case OrnZypp.RepoNotInstalled:
+            case OrnPm.RepoNotInstalled:
                 //% "Add repository"
                 return qsTrId("orn-repo-add")
-            case OrnZypp.RepoDisabled:
+            case OrnPm.RepoDisabled:
                 //% "Enable repository"
                 return qsTrId("orn-repo-enable")
             default:
                 return qsTrId("orn-refresh-cache")
             }
         }
+
         onClicked: {
             switch (app.repoStatus) {
-            case OrnApplication.RepoNotInstalled:
+            case OrnPm.RepoNotInstalled:
                 //% "Adding"
                 Remorse.popupAction(page, qsTrId("orn-adding-repo"), function() {
-                    OrnZypp.addRepo(app.userName)
+                    OrnPm.addRepo(app.userName)
                 })
                 break
-            case OrnApplication.RepoDisabled:
-                OrnZypp.modifyRepo(app.repoAlias, OrnZypp.EnableRepo)
+            case OrnPm.RepoDisabled:
+                OrnPm.modifyRepo(app.repoAlias, OrnPm.EnableRepo)
                 break
             default:
-                OrnZypp.refreshRepo(app.repoAlias, true)
+                OrnPm.refreshRepo(app.repoAlias, true)
                 break
             }
         }
@@ -53,40 +49,40 @@ PullDownMenu {
         visible: text
         enabled: !pullMenu.busy
         text: {
-            if (app.installedVersion) {
-                //% "Remove"
-                return qsTrId("orn-remove")
-            } else if (app.availableVersion) {
+            switch (_packageStatus) {
+            case OrnPm.PackageAvailable:
                 //% "Install"
                 return qsTrId("orn-install")
-            } else {
+            case OrnPm.PackageInstalled:
+            case OrnPm.PackageUpdateAvailable:
+                //% "Remove"
+                return qsTrId("orn-remove")
+            default:
                 return ""
             }
         }
+
         onClicked: {
-            if (app.installedVersion) {
-                Remorse.popupAction(page, qsTrId("orn-removing"), function()
-                {
-                    page.setState("removing")
-                    app.remove()
+            switch (_packageStatus) {
+            case OrnPm.PackageAvailable:
+                OrnPm.installPackage(app.availableId)
+                break
+            case OrnPm.PackageInstalled:
+                Remorse.popupAction(page, qsTrId("orn-removing"), function() {
+                    OrnPm.removePackage(app.installedId)
                 })
-            } else if (app.availableVersion) {
-                page.setState("installing")
-                app.install()
+                break
             }
         }
     }
 
     MenuItem {
         id: updateMenuItem
-        visible: page.state === "updateavailable"
+        visible: _packageStatus == OrnPm.PackageUpdateAvailable
         enabled: !pullMenu.busy
         //% "Update"
         text: qsTrId("orn-update")
-        onClicked: {
-            page.setState("updating")
-            app.install()
-        }
+        onClicked: OrnPm.updatePackage(app.packageName)
     }
 
     MenuItem {
@@ -97,4 +93,6 @@ PullDownMenu {
         text: qsTrId("orn-launch")
         onClicked: app.launch()
     }
+
+    MenuStatusLabel { }
 }

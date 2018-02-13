@@ -63,10 +63,13 @@ Page {
         }
 
         PullDownMenu {
+
             MenuItem {
                 text: "Transifex"
                 onClicked: Qt.openUrlExternally("https://www.transifex.com/mentaljam/harbour-storeman")
             }
+
+            MenuStatusLabel { }
         }
 
         VerticalScrollDecorator { }

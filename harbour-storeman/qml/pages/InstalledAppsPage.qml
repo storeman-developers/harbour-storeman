@@ -34,11 +34,11 @@ Page {
         }
 
         section {
-            property: OrnZypp.updatesAvailable ? "updateAvailable" : "section"
+            property: OrnPm.updatesAvailable ? "updateAvailable" : "section"
             delegate: SectionHeader {
                 // If updates are available then show sections by status
                 // otherwise show sections by the first letter of titles
-                text: OrnZypp.updatesAvailable ?
+                text: OrnPm.updatesAvailable ?
                           (section === '1' ? qsTrId("orn-update-available") :
                                              qsTrId("orn-installed")) :
                           section
@@ -49,20 +49,21 @@ Page {
             id: item
             contentHeight: Theme.itemSizeExtraLarge
             onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
-                                      { initialSearch: appName })
+                                      { initialSearch: packageName })
 
             menu: ContextMenu {
 
                 MenuItem {
                     visible: updateAvailable
                     text: qsTrId("orn-update")
-                    onClicked: OrnZypp.installPackage(updateId)
+                    onClicked: OrnPm.installPackage(packageName)
                 }
 
                 MenuItem {
                     text: qsTrId("orn-remove")
                     onClicked: Remorse.itemAction(item, qsTrId("orn-removing"), function() {
-                        OrnZypp.removePackage(packageId)
+                        // FIXME
+                        OrnPm.removePackage(packageId)
                     })
                 }
             }
@@ -84,7 +85,7 @@ Page {
                     width: Theme.iconSizeLauncher
                     height: Theme.iconSizeLauncher
                     fillMode: Image.PreserveAspectFit
-                    source: appIconSource ? appIconSource : "qrc:/images/appicon.png"
+                    source: packageIcon ? packageIcon : "qrc:/images/appicon.png"
                 }
 
                 Column {
@@ -100,7 +101,7 @@ Page {
                         verticalAlignment: Qt.AlignVCenter
                         font.pixelSize: Theme.fontSizeExtraSmall
                         wrapMode: Text.WordWrap
-                        text: appTitle
+                        text: packageTitle
                     }
 
                     Label {
@@ -108,16 +109,7 @@ Page {
                         width: parent.width
                         font.pixelSize: Theme.fontSizeExtraSmall
                         color: Theme.secondaryColor
-                        text: appVersion
-                    }
-
-                    Label {
-                        id: userNameLabel
-                        width: column.width
-                        horizontalAlignment: Qt.AlignRight
-                        font.pixelSize: Theme.fontSizeTiny
-                        color: Theme.highlightColor
-                        text: appAuthor
+                        text: packageVersion
                     }
                 }
             }
@@ -131,11 +123,13 @@ Page {
             }
 
             MenuItem {
-                visible: OrnZypp.updatesAvailable
+                visible: OrnPm.updatesAvailable
                 //% "Update all"
                 text: qsTrId("orn-update-all")
-                onClicked: OrnZypp.updateAll()
+                onClicked: OrnPm.updateAll()
             }
+
+            MenuStatusLabel { }
         }
 
         VerticalScrollDecorator { }

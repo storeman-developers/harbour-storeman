@@ -6,119 +6,21 @@ import "../components"
 Page {
     property bool returnToUser: false
     property alias appId: app.appId
-    property string _prevState
-    readonly property var locale: Qt.locale()
-
-    // Store the previous state to reset it on error
-    function setState(newState) {
-        _prevState = state
-        state = newState
-    }
+    readonly property int _packageStatus: app.packageStatus
 
     id: page
     allowedOrientations: defaultAllowedOrientations
-    state: "notinstalled"
-    states: [
-        State {
-            name: "notinstalled"
-            when: !app.installedVersion
-            PropertyChanges {
-                target: packageInfo.statusLabel
-                running: false
-                icon: ""
-                //% "Not installed"
-                text: qsTrId("orn-not-installed")
-            }
-        },
-        State {
-            name: "installed"
-            when: !app.updateAvailable && app.installedVersion
-            PropertyChanges {
-                target: packageInfo.statusLabel
-                running: false
-                icon: "image://theme/icon-s-installed"
-                //% "Installed"
-                text: qsTrId("orn-installed")
-            }
-        },
-        State {
-            name: "updateavailable"
-            when: app.updateAvailable
-            PropertyChanges {
-                target: packageInfo.statusLabel
-                running: false
-                icon: "image://theme/icon-s-update"
-                //% "Update available"
-                text: qsTrId("orn-update-available")
-            }
-        },
-        State {
-            name: "installing"
-            PropertyChanges {
-                target: packageInfo.statusLabel
-                running: true
-                //% "Installing"
-                text: qsTrId("orn-installing")
-            }
-        },
-        State {
-            name: "updating"
-            PropertyChanges {
-                target: packageInfo.statusLabel
-                running: true
-                //% "Updating"
-                text: qsTrId("orn-updating")
-            }
-        },
-        State {
-            name: "removing"
-            PropertyChanges {
-                target: packageInfo.statusLabel
-                running: true
-                text: qsTrId("orn-removing")
-            }
-        }
-    ]
 
     onStatusChanged: {
         // Wait until page loads to prevent lagging
         if (status === PageStatus.Active) {
-            app.update()
+            app.ornRequest()
         }
-    }
-
-    // NOTE: is it working without filtering errors?
-    Connections {
-        target: OrnZypp
-        onPkError: state = _prevState
     }
 
     OrnApplication {
         id: app
-
-        onUpdated: flickable.visible = true
-
-        onAppNotFound: {
-            notification.showPopup(
-                        //% "An error occured"
-                        qsTrId("orn-error"),
-                        //% "Application with such id was not found"
-                        qsTrId("orn-app-not-found-body"))
-            pageStack.navigateBack()
-        }
-
-        onInstalled: {
-            pageMenu.busy = false
-            //% "Package %0 was successfully installed"
-            notification.show(qsTrId("orn-package-installed").arg(packageName))
-        }
-
-        onRemoved: {
-            state = "notinstalled"
-            pageMenu.busy = false
-            //% "Package %0 was successfully removed"
-            notification.show(qsTrId("orn-package-removed").arg(packageName))
-        }
+        onOrnRequestFinished: flickable.visible = true
     }
 
     BusyIndicator {

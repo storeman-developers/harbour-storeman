@@ -61,6 +61,8 @@ Page {
                 text: qsTrId("orn-search")
                 onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"))
             }
+
+            MenuStatusLabel { }
         }
 
         VerticalScrollDecorator { }

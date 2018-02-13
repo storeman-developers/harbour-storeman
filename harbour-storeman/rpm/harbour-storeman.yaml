@@ -5,8 +5,7 @@ Release: 2
 Group: Qt/Qt
 URL: https://github.com/mentaljam/harbour-storeman
 License: LICENSE
-Sources:
-- '%{name}-%{version}.tar.bz2'
+Sources: '%{name}-%{version}.tar.bz2'
 Description: |
   Unofficial native OpenRepos.net client for Sailfish OS
 Configure: none
@@ -20,15 +19,21 @@ PkgConfigBR:
   - Qt5Core
   - Qt5Qml
   - Qt5Quick
-  - packagekit-qt5 >= 0.8.8
+  - nemodbus
+  - connman-qt5
+  - nemonotifications-qt5
 
 PkgBR:
+  - qt5-qtquickcontrols-layouts
   - libsolv-devel
+  - PackageKit-Qt5-devel
 
 Requires:
-  - sailfishsilica-qt5 >= 0.10.9 
-  - PackageKit >= 0.8.9
-  - PackageKit-Qt5 >= 0.8.8
+  - sailfishsilica-qt5 >= 0.10.9
+  - nemo-qml-plugin-dbus-qt5
+  - nemo-qml-plugin-notifications-qt5
+  - connman-qt5-declarative
+  - qt5-qtquickcontrols-layouts
   - libsolv0
 
 Files:

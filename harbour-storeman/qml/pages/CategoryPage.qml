@@ -30,9 +30,12 @@ Page {
         delegate: AppListDelegate { }
 
         PullDownMenu {
+
             RefreshMenuItem {
                 model: categoryModel
             }
+
+            MenuStatusLabel { }
         }
 
         VerticalScrollDecorator { }

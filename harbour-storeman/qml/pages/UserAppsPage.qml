@@ -40,9 +40,12 @@ Page {
         }
 
         PullDownMenu {
+
             RefreshMenuItem {
                 model: appsModel
             }
+
+            MenuStatusLabel { }
         }
 
         VerticalScrollDecorator {}

@@ -18,7 +18,7 @@ Page {
             PageHeader {
                 //% "This Device"
                 title: qsTrId("orn-thisdevice")
-                description: OrnZypp.deviceModel()
+                description: OrnPm.deviceModel
             }
 
             ListMenuItem {
@@ -51,14 +51,14 @@ Page {
             }
 
             ListMenuItem {
-                enabled: !repoFetching
+                enabled: OrnPm.initialised
                 iconSource: "image://theme/icon-m-document"
                 text: qsTrId("orn-repositories")
                 onClicked: pageStack.push(Qt.resolvedUrl("RepositoriesPage.qml"))
             }
 
             ListMenuItem {
-                enabled: !repoFetching
+                enabled: OrnPm.initialised
                 iconSource: "image://theme/icon-m-sailfish"
                 text: qsTrId("orn-installed-apps")
                 onClicked: pageStack.push(Qt.resolvedUrl("InstalledAppsPage.qml"))
@@ -71,6 +71,7 @@ Page {
             }
 
             ListMenuItem {
+                enabled: false
                 iconSource: "image://theme/icon-m-backup"
                 text: qsTrId("orn-backups")
                 onClicked: pageStack.push(Qt.resolvedUrl("BackupsPage.qml"))

@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import "../models"
+import "../components"
 
 Page {
     allowedOrientations: defaultAllowedOrientations
@@ -54,11 +55,14 @@ Page {
         }
 
         PullDownMenu {
+
             MenuItem {
                 //% "Source Code"
                 text: qsTrId("orn-sources")
                 onClicked: Qt.openUrlExternally("https://github.com/mentaljam/harbour-storeman")
             }
+
+            MenuStatusLabel { }
         }
 
         VerticalScrollDecorator { }

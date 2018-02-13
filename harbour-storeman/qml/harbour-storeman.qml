@@ -1,16 +1,17 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import MeeGo.Connman 0.2
-import org.nemomobile.notifications 1.0
-import org.nemomobile.dbus 2.0
+import Nemo.Notifications 1.0
+import Nemo.DBus 2.0
 import harbour.orn 1.0
 import "pages"
 
 ApplicationWindow
 {
-    property bool repoFetching: true
     property bool _showUpdatesNotification: true
     property string _processingLink
+    readonly property var _locale: Qt.locale()
+    property var _operations: OrnPm.initialised ? OrnPm.operations : null
 
     function openLink(link) {
         if (link === _processingLink) {
@@ -51,8 +52,6 @@ ApplicationWindow
     initialPage: Component { RecentAppsPage { } }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: defaultAllowedOrientations
-
-    Component.onCompleted: OrnZypp.fetchRepos()
 
     Connections {
         target: __quickWindow
@@ -117,6 +116,7 @@ ApplicationWindow
 
     Notification {
         id: updatesNotification
+        category: "x-storeman.updates"
         appIcon: "image://theme/icon-lock-application-update"
         //% "Updates available"
         previewSummary: qsTrId("orn-updates-available-summary")
@@ -132,20 +132,12 @@ ApplicationWindow
                 method: "openPage",
                 arguments: [ "pages/InstalledAppsPage.qml", {} ]
             } ]
-
-        Component.onCompleted: {
-            var uid = OrnClient.value("gui/update_notification_id")
-            if (uid !== undefined) {
-                replacesId = uid
-            }
-        }
-
-        onClosed: OrnClient.setValue("gui/update_notification_id", undefined)
     }
 
     Notification {
         id: errorNotification
         appIcon: "image://theme/icon-lock-warning"
+        //% "An error occured"
         previewSummary: qsTrId("orn-error")
         //% "Click to view details"
         previewBody: qsTrId("orn-view-details")
@@ -204,39 +196,61 @@ ApplicationWindow
     }
 
     Connections {
-        target: OrnZypp
+        target: Storeman
 
-        onUpdatesAvailableChanged: {
-            // Don't show notification if
-            // the app was openned from notification
-            if (OrnZypp.updatesAvailable) {
+        onUpdatesNotification: {
+            if (show) {
+                // Don't show notification if the app was openned from notification
                 if (_showUpdatesNotification) {
+                    updatesNotification.replacesId = replaceId
                     updatesNotification.publish()
-                    OrnClient.setValue("gui/update_notification_id", updatesNotification.replacesId)
                 }
             } else {
                 updatesNotification.close()
             }
             _showUpdatesNotification = true
         }
+    }
 
-        onBeginRepoFetching: {
-            repoFetching = true
-            //% "Reading the repositories data"
-            notification.show(qsTrId("orn-reading-repos-begin"),
-                              "image://theme/icon-s-high-importance")
+    Connections {
+        target: OrnPm
+
+        onRepoModified: {
+            switch (action) {
+            case OrnPm.RemoveRepo:
+                //% "The repository %0 was removed"
+                notification.show(qsTrId("orn-repo-removed").arg(repoAlias))
+                break
+            case OrnPm.AddRepo:
+                //% "The repository %0 was added"
+                notification.show(qsTrId("orn-repo-added").arg(repoAlias))
+                break
+            case OrnPm.DisableRepo:
+                //% "The repository %0 was disabled"
+                notification.show(qsTrId("orn-repo-disabled").arg(repoAlias))
+                break
+            case OrnPm.EnableRepo:
+                //% "The repository %0 was enabled"
+                notification.show(qsTrId("orn-repo-enabled").arg(repoAlias))
+                break
+            default:
+                break
+            }
         }
 
-        onEndRepoFetching: {
-            repoFetching = false
-            //% "Finished reading the repositories data"
-            notification.show(qsTrId("orn-reading-repos-end"),
-                              "image://theme/icon-s-installed")
-        }
+        //% "Package %0 was successfully installed"
+        onPackageInstalled: notification.show(qsTrId("orn-package-installed").arg(packageName))
 
-        onPkError: {
-            switch (error) {
-            case OrnZypp.ErrorDepResolutionFailed:
+        //% "Package %0 was successfully removed"
+        onPackageRemoved: notification.show(qsTrId("orn-package-removed").arg(packageName))
+
+        onError: {
+            switch (code) {
+            case OrnPm.ErrorPackageNotFound:
+                //% "Couldn't find package"
+                details = qsTrId("orn-error-packagenotfound")
+                break
+            case OrnPm.ErrorDepResolutionFailed:
                 var match = details.match(/nothing provides (.*) needed by (.*)/)
                 console.log(match)
                 //: A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.

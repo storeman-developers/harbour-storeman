@@ -1,7 +1,9 @@
 TARGET = harbour-storeman
 
-QT += concurrent
+QT += concurrent dbus
 CONFIG += sailfishapp
+
+PKGCONFIG += nemonotifications-qt5
 
 # Write version file
 VERSION_H = \
@@ -15,17 +17,18 @@ CONFIG(release, debug|release): DEFINES += QT_NO_DEBUG_OUTPUT
 LIBS += -lornplugin -L$$OUT_PWD/../ornplugin -lsolv
 PRE_TARGETDEPS += $$OUT_PWD/../ornplugin/libornplugin.a
 INCLUDEPATH += ../ornplugin/src
-
-PKGCONFIG += packagekit-qt5
+QML_IMPORT_PATH += ../ornplugin
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 256x256
 
 SOURCES += \
     src/harbour-storeman.cpp \
-    src/networkaccessmanagerfactory.cpp
+    src/networkaccessmanagerfactory.cpp \
+    src/storeman.cpp
 
 HEADERS += \
-    src/networkaccessmanagerfactory.h
+    src/networkaccessmanagerfactory.h \
+    src/storeman.h
 
 OTHER_FILES +=  \
     qml/harbour-storeman.qml \
@@ -69,6 +72,7 @@ OTHER_FILES +=  \
     qml/components/HtmlTagButton.qml \
     qml/components/ListMenuItem.qml \
     qml/components/BookmarkButton.qml \
+    qml/components/MenuStatusLabel.qml \
     qml/models/DevelopersModel.qml \
     qml/models/TranslatorsModel.qml
 
