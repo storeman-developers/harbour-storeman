@@ -82,11 +82,11 @@
     </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
-        <translation>Lisää lähde</translation>
+        <translation>Lisää pakettilähde</translation>
     </message>
     <message id="orn-repo-enable">
         <source>Enable repository</source>
-        <translation>Ota lähde käyttöön</translation>
+        <translation>Ota pakettilähde käyttöön</translation>
     </message>
     <message id="orn-install">
         <source>Install</source>
@@ -689,19 +689,19 @@
     </message>
     <message id="orn-pmstate-addingrepo">
         <source>Adding repo %0</source>
-        <translation>Lisätään lähdettä %0</translation>
+        <translation>Lisätään pakettilähdettä %0</translation>
     </message>
     <message id="orn-pmstate-removingrepo">
         <source>Removing repo %0</source>
-        <translation>Poistetaan lähdettä %0</translation>
+        <translation>Poistetaan pakettilähdettä %0</translation>
     </message>
     <message id="orn-pmstate-enablingrepo">
         <source>Enabling repo %0</source>
-        <translation>Otetaan käyttöön lähdettä %0</translation>
+        <translation>Otetaan käyttöön pakettilähdettä %0</translation>
     </message>
     <message id="orn-pmstate-disablingrepo">
         <source>Disabling repo %0</source>
-        <translation>Poistetaan käytöstä lähdettä %0</translation>
+        <translation>Poistetaan käytöstä pakettilähdettä %0</translation>
     </message>
     <message id="orn-pmstate-refreshingrepo">
         <source>Refreshing %0</source>
@@ -721,19 +721,19 @@
     </message>
     <message id="orn-repo-removed">
         <source>The repository %0 was removed</source>
-        <translation>Asennuslähde %0 poistettiin</translation>
+        <translation>Pakettilähde %0 poistettiin</translation>
     </message>
     <message id="orn-repo-added">
         <source>The repository %0 was added</source>
-        <translation>Asennuslähde %0 lisättiin</translation>
+        <translation>Pakettilähde %0 lisättiin</translation>
     </message>
     <message id="orn-repo-disabled">
         <source>The repository %0 was disabled</source>
-        <translation>Asennuslähde %0 poistettiin käytöstä</translation>
+        <translation>Pakettilähde %0 poistettiin käytöstä</translation>
     </message>
     <message id="orn-repo-enabled">
         <source>The repository %0 was enabled</source>
-        <translation>Asennuslähde %0 otettiin käyttöön</translation>
+        <translation>Pakettilähde %0 otettiin käyttöön</translation>
     </message>
     <message id="orn-not-installed">
         <source>Not installed</source>
@@ -749,11 +749,11 @@
     </message>
     <message id="orn-updating">
         <source>Updating</source>
-        <translation type="unfinished"></translation>
+        <translation>Päivitetään</translation>
     </message>
     <message id="orn-version-available-global">
         <source>Available in other repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Saatavana muista pakettilähteistä</translation>
     </message>
     <message id="orn-installed-apps-description">
         <source>Only from enabled repositories</source>
@@ -770,9 +770,9 @@
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Suoritetaan %n operaatiota</numerusform>
+            <numerusform>Suoritetaan %n operaatiota</numerusform>
         </translation>
     </message>
     <message id="orn-version-available">
@@ -781,38 +781,38 @@
     </message>
     <message id="orn-size-kb">
         <source>%0 KB</source>
-        <translation type="unfinished"></translation>
+        <translation>%0 Kt</translation>
     </message>
     <message id="orn-size-mb">
         <source>%0 MB</source>
-        <translation type="unfinished"></translation>
+        <translation>%0 Mt</translation>
     </message>
     <message id="orn-size-gb">
         <source>%0 GB</source>
-        <translation type="unfinished"></translation>
+        <translation>%0 Gt</translation>
     </message>
     <message id="orn-error-packagenotfound">
         <source>Couldn&apos;t find package</source>
-        <translation type="unfinished"></translation>
+        <translation>Pakettia ei löytynyt</translation>
     </message>
     <message id="orn-size-installed">
         <source>Installed size</source>
-        <translation type="unfinished"></translation>
+        <translation>Asennuskoko</translation>
     </message>
     <message id="orn-size-bytes" numerus="yes">
         <source>%n byte(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n tavu</numerusform>
+            <numerusform>%n tavua</numerusform>
         </translation>
     </message>
     <message id="orn-size-download-install">
         <source>Download / install size</source>
-        <translation type="unfinished"></translation>
+        <translation>Lataus- / asennuskoko</translation>
     </message>
     <message id="orn-cat-public-transport">
         <source>Public Transport</source>
-        <translation type="unfinished"></translation>
+        <translation>Julkinen liikenne</translation>
     </message>
 </context>
 </TS>

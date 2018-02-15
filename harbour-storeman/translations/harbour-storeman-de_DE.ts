@@ -749,11 +749,11 @@
     </message>
     <message id="orn-updating">
         <source>Updating</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktualisiere</translation>
     </message>
     <message id="orn-version-available-global">
         <source>Available in other repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Verfügbar in anderen Softwarequellen</translation>
     </message>
     <message id="orn-installed-apps-description">
         <source>Only from enabled repositories</source>
@@ -770,9 +770,9 @@
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n Operation ist in Arbeit</numerusform>
+            <numerusform>%n Operationen sind in Arbeit</numerusform>
         </translation>
     </message>
     <message id="orn-version-available">
@@ -781,38 +781,38 @@
     </message>
     <message id="orn-size-kb">
         <source>%0 KB</source>
-        <translation type="unfinished"></translation>
+        <translation>%0 KB</translation>
     </message>
     <message id="orn-size-mb">
         <source>%0 MB</source>
-        <translation type="unfinished"></translation>
+        <translation>%0 MB</translation>
     </message>
     <message id="orn-size-gb">
         <source>%0 GB</source>
-        <translation type="unfinished"></translation>
+        <translation>%0 GB</translation>
     </message>
     <message id="orn-error-packagenotfound">
         <source>Couldn&apos;t find package</source>
-        <translation type="unfinished"></translation>
+        <translation>Konnte Paket nicht finden</translation>
     </message>
     <message id="orn-size-installed">
         <source>Installed size</source>
-        <translation type="unfinished"></translation>
+        <translation>Installationsgröße</translation>
     </message>
     <message id="orn-size-bytes" numerus="yes">
         <source>%n byte(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n byte</numerusform>
+            <numerusform>%n bytes</numerusform>
         </translation>
     </message>
     <message id="orn-size-download-install">
         <source>Download / install size</source>
-        <translation type="unfinished"></translation>
+        <translation>Download- / Installationsgröße</translation>
     </message>
     <message id="orn-cat-public-transport">
         <source>Public Transport</source>
-        <translation type="unfinished"></translation>
+        <translation>Öffentlicher Verkehr</translation>
     </message>
 </context>
 </TS>
