@@ -81,6 +81,7 @@ void Storeman::setUpdateInterval(const int &value)
 
 void Storeman::resetUpdatesTimer()
 {
+    this->refreshRepos();
     mUpdatesTimer->start();
 }
 
