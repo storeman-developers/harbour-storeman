@@ -36,6 +36,9 @@ MenuLabel {
             case OrnPm.RefreshingRepo:
                 //% "Refreshing %0"
                 return qsTrId("orn-pmstate-refreshingrepo").arg(op.item)
+            case OrnPm.RefreshingAllRepos:
+                //% "Refreshing cache<br />(checking for updates)"
+                return qsTrId("orn-pmstate-refreshingcache")
             case OrnPm.InstallingPackage:
                 //% "Installing package %0"
                 return qsTrId("orn-pmstate-installingpackage").arg(op.item)

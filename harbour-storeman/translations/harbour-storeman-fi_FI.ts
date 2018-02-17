@@ -814,5 +814,9 @@
         <source>Public Transport</source>
         <translation>Julkinen liikenne</translation>
     </message>
+    <message id="orn-pmstate-refreshingcache">
+        <source>Refreshing cache&lt;br /&gt;(checking for updates)</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

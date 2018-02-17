@@ -820,5 +820,9 @@ Storeman не хранит ваш пароль и не передает его �
         <source>Public Transport</source>
         <translation>Общественный транспорт</translation>
     </message>
+    <message id="orn-pmstate-refreshingcache">
+        <source>Refreshing cache&lt;br /&gt;(checking for updates)</source>
+        <translation>Обновление кеша&lt;br /&gt;(проверка обновлений)</translation>
+    </message>
 </context>
 </TS>
