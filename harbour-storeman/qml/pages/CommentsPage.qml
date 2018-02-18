@@ -56,8 +56,9 @@ Page {
 
             header: Loader {
                 width: parent.width
-                source: OrnClient.authorised ? Qt.resolvedUrl("../components/CommentField.qml") :
-                                               Qt.resolvedUrl("../components/CommentLabel.qml")
+                source: OrnClient.authorised && OrnClient.cookieIsValid ?
+                            Qt.resolvedUrl("../components/CommentField.qml") :
+                            Qt.resolvedUrl("../components/CommentLabel.qml")
             }
 
             model: OrnCommentsModel {
