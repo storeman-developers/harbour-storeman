@@ -40,7 +40,9 @@ Dialog {
                 }
                 height: implicitHeight + Theme.paddingLarge
                 verticalAlignment: Qt.AlignVCenter
-                //% "Log in to OpenRepos.net to comment applications and reply to others comments.<br /><br />Storeman does not store your password or send it to third-parties."
+                //% "Log in to OpenRepos.net to comment applications and "
+                //% "reply to others comments.<br /><br />"
+                //% "Storeman does not store your password or send it to third-parties."
                 text: qsTrId("orn-login-help")
                 color: Theme.highlightColor
                 font.pixelSize: Theme.fontSizeSmall
@@ -67,6 +69,8 @@ Dialog {
                 EnterKey.iconSource: "image://theme/icon-m-enter-next"
                 EnterKey.enabled: text && acceptableInput
                 EnterKey.onClicked: passwordField.forceActiveFocus()
+
+                Component.onCompleted: text = OrnClient.userName
             }
 
             PasswordField {
