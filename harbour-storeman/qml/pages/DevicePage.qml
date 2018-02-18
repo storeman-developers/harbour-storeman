@@ -71,7 +71,6 @@ Page {
             }
 
             ListMenuItem {
-                enabled: false
                 iconSource: "image://theme/icon-m-backup"
                 text: qsTrId("orn-backups")
                 onClicked: pageStack.push(Qt.resolvedUrl("BackupsPage.qml"))
