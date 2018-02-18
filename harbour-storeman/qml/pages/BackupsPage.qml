@@ -75,7 +75,7 @@ Page {
                     MenuItem {
                         text: qsTrId("orn-remove")
                         onClicked: Remorse.itemAction(listItem, qsTrId("orn-removing"),
-                                                      function() { backup.removeFile(filePath) })
+                                                      function() { Storeman.removeFile(filePath) })
                     }
                 }
 

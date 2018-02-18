@@ -18,6 +18,7 @@
 #include <QDateTime>
 #include <QTimer>
 #include <QSet>
+#include <QFileInfo>
 #include <QDebug>
 
 #include <ornpm.h>
@@ -77,6 +78,12 @@ void Storeman::setUpdateInterval(const int &value)
         mUpdatesTimer->setInterval(value);
         emit this->updateIntervalChanged();
     }
+}
+
+bool Storeman::removeFile(const QString &filePath)
+{
+    Q_ASSERT_X(!QFileInfo(filePath).isDir(), Q_FUNC_INFO, "Path must be a file");
+    return QFile(filePath).remove();
 }
 
 void Storeman::resetUpdatesTimer()

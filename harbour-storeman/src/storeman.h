@@ -19,6 +19,8 @@ public:
     int updateInterval() const;
     void setUpdateInterval(const int &value);
 
+    Q_INVOKABLE static bool removeFile(const QString &filePath);
+
 public slots:
     void resetUpdatesTimer();
 
