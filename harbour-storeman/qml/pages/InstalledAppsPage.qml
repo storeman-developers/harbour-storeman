@@ -56,7 +56,7 @@ Page {
                 MenuItem {
                     visible: updateAvailable
                     text: qsTrId("orn-update")
-                    onClicked: OrnPm.installPackage(packageName)
+                    onClicked: OrnPm.updatePackage(packageName)
                 }
 
                 MenuItem {
