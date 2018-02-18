@@ -126,34 +126,36 @@ inline Notification *previousNotification()
 void Storeman::onUpdatablePackagesChanged()
 {
     QString key(QStringLiteral("updates/last_packages"));
-    auto ornpm = OrnPm::instance();
+    auto ornpm = OrnPm::instance();    
+    auto prev = previousNotification();
 
     if (ornpm->updatesAvailable())
     {
-        auto current_packages = OrnPm::instance()->updatablePackages();
-        auto newpackages = current_packages.toSet() != mSettings->value(key).toStringList().toSet();
-
-        auto prev = previousNotification();
-
         if (!prev)
         {
             // There is no existing notification: show a new one
             emit this->updatesNotification(true, 0);
+            return;
         }
+
+        auto cur_packages = OrnPm::instance()->updatablePackages();
+        auto cur_packages_set = cur_packages.toSet();
+        auto prev_packages_set = mSettings->value(key).toStringList().toSet();
+        auto newpackages = cur_packages_set == prev_packages_set ?
+                    false : !prev_packages_set.contains(cur_packages_set);
+        qDebug() << (cur_packages_set == prev_packages_set) << !prev_packages_set.contains(cur_packages_set) << newpackages;
+
         // Do not show notification on application start
-        else if (newpackages)
+        if (newpackages)
         {
             emit this->updatesNotification(true, prev->replacesId());
             prev->deleteLater();
-        }
-        if (newpackages)
-        {
-            mSettings->setValue(key, current_packages);
+            mSettings->setValue(key, cur_packages);
         }
     }
     else
     {
-        emit this->updatesNotification(false, 0);
+        emit this->updatesNotification(false, prev ? prev->replacesId() : 0);
         mSettings->remove(key);
     }
 }

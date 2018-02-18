@@ -206,6 +206,7 @@ ApplicationWindow
                     updatesNotification.publish()
                 }
             } else {
+                updatesNotification.replacesId = replaceId
                 updatesNotification.close()
             }
             _showUpdatesNotification = true
