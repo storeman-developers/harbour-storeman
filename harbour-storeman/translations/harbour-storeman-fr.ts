@@ -749,7 +749,7 @@
     </message>
     <message id="orn-updating">
         <source>Updating</source>
-        <translation>Mise à jour en cours</translation>
+        <translation>En cours de MàJ</translation>
     </message>
     <message id="orn-version-available-global">
         <source>Available in other repositories</source>
@@ -816,7 +816,7 @@
     </message>
     <message id="orn-pmstate-refreshingcache">
         <source>Refreshing cache&lt;br /&gt;(checking for updates)</source>
-        <translation type="unfinished"></translation>
+        <translation>Rafraîchissement du cache&lt;br /&gt;(recherche de MàJ)</translation>
     </message>
 </context>
 </TS>

@@ -816,7 +816,7 @@
     </message>
     <message id="orn-pmstate-refreshingcache">
         <source>Refreshing cache&lt;br /&gt;(checking for updates)</source>
-        <translation type="unfinished"></translation>
+        <translation>Cache wordt vernieuwd&lt;br /&gt;(controleren op updates)</translation>
     </message>
 </context>
 </TS>

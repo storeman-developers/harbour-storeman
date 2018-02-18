@@ -820,7 +820,7 @@
     </message>
     <message id="orn-pmstate-refreshingcache">
         <source>Refreshing cache&lt;br /&gt;(checking for updates)</source>
-        <translation type="unfinished"></translation>
+        <translation>Odświeżanie pamięci podręcznej&lt;br /&gt;(szukanie aktualizacji)</translation>
     </message>
 </context>
 </TS>
