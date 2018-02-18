@@ -1,3 +1,20 @@
+* Mon Feb 19 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.16-3
+- Support for Sailfish OS 2.1.4 Lapuanjoki
+- Open links to OpenRepos apps within Storeman
+- Fix comment editing
+- Lose comment field focus on reply/edit dismissed
+- Add search cover action (thanks to inta)
+- Better indication of current processes (pull-down menu label)
+- Add notifications for package and repo operations
+- Better notification on updates
+- Update application page: display installed/download/install size labels, better package status and other
+- Fix authorisation check
+- Authorisation dialog - use the previous user name when reauthorising
+- Disable commenting if authorisation has expired
+- Add the "Public Transport" category
+- Update translations
+- A lot of internal changes
+
 * Tue Sep 26 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.15-1
 - Comments page - show a "Login to comment" button when user isn't authorised
 - Comments page - fix header height
