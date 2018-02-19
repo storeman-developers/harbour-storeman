@@ -1,6 +1,8 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="pt_BR" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="pt_BR">
 <context>
-    <name/>
+    <name></name>
     <message id="orn-storeman">
         <source>Storeman</source>
         <translation>Storeman</translation>
@@ -371,11 +373,17 @@
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%0 minute(s) ago</source>
-        <translation><numerusform>%0 minuto atrás</numerusform><numerusform>%0 minutos atrás</numerusform></translation>
+        <translation>
+            <numerusform>%0 minuto atrás</numerusform>
+            <numerusform>%0 minutos atrás</numerusform>
+        </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%0 hour(s) ago</source>
-        <translation><numerusform>%0 hora atrás</numerusform><numerusform>%0 horas atrás</numerusform></translation>
+        <translation>
+            <numerusform>%0 hora atrás</numerusform>
+            <numerusform>%0 horas atrás</numerusform>
+        </translation>
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
@@ -762,7 +770,10 @@
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
-        <translation><numerusform>%n operações em progresso</numerusform><numerusform>%n operações em progresso</numerusform></translation>
+        <translation>
+            <numerusform>%n operações em progresso</numerusform>
+            <numerusform>%n operações em progresso</numerusform>
+        </translation>
     </message>
     <message id="orn-version-available">
         <source>Available version</source>
@@ -790,7 +801,10 @@
     </message>
     <message id="orn-size-bytes" numerus="yes">
         <source>%n byte(s)</source>
-        <translation><numerusform>%n byte</numerusform><numerusform>%n bytes</numerusform></translation>
+        <translation>
+            <numerusform>%n byte</numerusform>
+            <numerusform>%n bytes</numerusform>
+        </translation>
     </message>
     <message id="orn-size-download-install">
         <source>Download / install size</source>
