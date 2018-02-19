@@ -126,7 +126,12 @@ Page {
                 visible: OrnPm.updatesAvailable
                 //% "Update all"
                 text: qsTrId("orn-update-all")
-                onClicked: OrnPm.updateAll()
+                onClicked: {
+                    var updates = OrnPm.updatablePackages()
+                    for (var i = 0; i < updates.length; ++i) {
+                        OrnPm.updatePackage(updates[i])
+                    }
+                }
             }
 
             MenuStatusLabel { }
