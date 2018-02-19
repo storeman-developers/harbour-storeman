@@ -70,9 +70,11 @@ ListItem {
                     anchors.verticalCenter: parent.verticalCenter
                     width: column.width - ratingBox.width
                     horizontalAlignment: Qt.AlignRight
+                    truncationMode: TruncationMode.Fade
                     font.pixelSize: Theme.fontSizeTiny
                     color: Theme.highlightColor
-                    text: app.userName
+                    text: app.userName + "\u2009\u2022\u2009" +
+                          app.createDate.toLocaleDateString(_locale, Locale.NarrowFormat)
                 }
             }
         }
