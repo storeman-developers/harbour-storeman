@@ -1,3 +1,10 @@
+* Tue Feb 20 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.17-1
+- Add Portuguese (Brazil), thanks to adrianocolvero
+- Update other translations
+- Installed apps page - fix install all action
+- Show the date of the last update in the app lists
+- Application page - add fade effect for long category names
+
 * Mon Feb 19 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.16-3
 - Support for Sailfish OS 2.1.4 Lapuanjoki
 - Open links to OpenRepos apps within Storeman
