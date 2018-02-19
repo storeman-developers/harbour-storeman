@@ -85,22 +85,30 @@ GridLayout {
 
     Row {
         id: categoryPanel
+        anchors {
+            left: parent.left
+            right: parent.right
+        }
         spacing: Theme.paddingMedium
         Layout.columnSpan: 2
+        clip: true
 
         Label {
+            id: categoryLabel
             text: qsTrId("orn-categories") + ':'
             font.pixelSize: Theme.fontSizeExtraSmall
             color: Theme.highlightColor
         }
 
         Repeater {
+            id: categoryRepeater
             model: app.categories
 
             Label {
                 text: modelData.name
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: touchArea.pressed ? Theme.highlightColor : Theme.primaryColor
+                truncationMode: TruncationMode.Fade
 
                 MouseArea {
                     id: touchArea
@@ -112,5 +120,12 @@ GridLayout {
                 }
             }
         }
+    }
+
+    OpacityRampEffect {
+        sourceItem: categoryPanel
+        enabled: categoryPanel.childrenRect.width > categoryPanel.width
+        direction: OpacityRamp.LeftToRight
+        offset: 0.75
     }
 }
