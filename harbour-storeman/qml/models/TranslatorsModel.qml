@@ -111,6 +111,15 @@ ListModel {
     }
 
     ListElement {
+        locale: "pt_BR"
+        coordinators: [
+            ListElement { name: "adrianocolvero" }
+        ]
+        translators: []
+        reviewers: []
+    }
+
+    ListElement {
         locale: "ru"
         coordinators: [
             ListElement { name: "mentaljam" }

@@ -139,7 +139,7 @@
     </message>
     <message id="orn-cat-coding-competition">
         <source>Coding Competition</source>
-        <translation>Coding Compétition</translation>
+        <translation>Coding Competition</translation>
     </message>
     <message id="orn-cat-applications">
         <source>Applications</source>
@@ -288,7 +288,7 @@
     <message id="orn-search">
         <source>Search</source>
         <extracomment>The search menu item and the search page header text - should be a noun</extracomment>
-        <translation>Recherche</translation>
+        <translation>Rechercher</translation>
     </message>
     <message id="orn-searchpage-placeholder-noresults">
         <source>Nothing found</source>
@@ -301,11 +301,11 @@
     <message id="orn-searchfield-placeholder">
         <source>Search</source>
         <extracomment>The search field placeholder text - should be a verb</extracomment>
-        <translation>Rechercher</translation>
+        <translation>Que cherchez-vous ?</translation>
     </message>
     <message id="orn-searchpage-placeholder-default">
         <source>Search results will be shown here</source>
-        <translation>Les résultats de recherche s&apos;affichent ici</translation>
+        <translation>Les résultats de recherche s&apos;afficheront ici</translation>
     </message>
     <message id="orn-searchpage-placeholder-default-hint">
         <source>Type some keywords in the field above</source>
@@ -321,19 +321,19 @@
     </message>
     <message id="orn-coordinators">
         <source>Coordinators</source>
-        <translation>Coordinateurs</translation>
+        <translation>Coordinateur(s)</translation>
     </message>
     <message id="orn-translators">
         <source>Translators</source>
-        <translation>Traducteurs</translation>
+        <translation>Traducteur(s)</translation>
     </message>
     <message id="orn-reviewers">
         <source>Reviewers</source>
-        <translation>Réviseurs</translation>
+        <translation>Réviseur(s)</translation>
     </message>
     <message id="orn-app-description">
         <source>Unofficial native OpenRepos.net client for Sailfish&amp;nbsp;OS</source>
-        <translation>Client OpenRepos.net natif, non-officiel, pour Sailfish&amp;nbsp;OS</translation>
+        <translation>Client OpenRepos natif (non-offic.) pour SFOS</translation>
     </message>
     <message id="orn-report">
         <source>Report an Issue</source>
@@ -341,7 +341,7 @@
     </message>
     <message id="orn-app-licensing">
         <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation>Logiciel open source distribué selon les termes de la&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;Licence MIT&lt;/a&gt;</translation>
+        <translation>Logiciel open source distribué selon les termes et conditions de la licence ci-dessous :&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;Licence MIT&lt;/a&gt;</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
@@ -396,7 +396,7 @@
     </message>
     <message id="orn-category-noapps">
         <source>Currently there are no apps in this category</source>
-        <translation>Il n&apos;y actuellement aucune application dans cette catégorie</translation>
+        <translation>Il n&apos;y pour l&apos;instant aucune application dans cette catégorie</translation>
     </message>
     <message id="orn-cat-unknown2">
         <source>Unknown category</source>
@@ -489,7 +489,7 @@
     </message>
     <message id="orn-authorisation-expires-body">
         <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>L&apos;autorisation à OpenRepos expire. Cliquez pour renouveler l&apos;autorisation.</translation>
+        <translation>L&apos;autorisation d&apos;OpenRepos expire. Cliquez pour renouveler l&apos;autorisation.</translation>
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
@@ -497,11 +497,11 @@
     </message>
     <message id="orn-authorisation-expired-body">
         <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>L&apos;autorisation à OpenRepos a expiré. Cliquez pour renouveler l&apos;autorisation.</translation>
+        <translation>L&apos;autorisation d&apos;OpenRepos a expiré. Cliquez pour renouveler l&apos;autorisation.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
-        <translation>Cliquer pour renouveler l&apos;autorisation</translation>
+        <translation>Cliquer pour renouveler</translation>
     </message>
     <message id="orn-enable-all">
         <source>Enable all</source>
@@ -513,11 +513,11 @@
     </message>
     <message id="orn-enabling-all">
         <source>Enabling all</source>
-        <translation>Active tout </translation>
+        <translation>Activation générale</translation>
     </message>
     <message id="orn-disabling-all">
         <source>Disabling all</source>
-        <translation>Désactive tout</translation>
+        <translation>Désactivation générale</translation>
     </message>
     <message id="orn-installed-apps">
         <source>Installed Applications</source>
@@ -533,7 +533,7 @@
     </message>
     <message id="orn-no-bookmarks">
         <source>Your bookmarked applications will be shown here</source>
-        <translation>Vos applications favorites apparaitront ici</translation>
+        <translation>Vos applications favorites apparaîtront ici</translation>
     </message>
     <message id="orn-bookmarks">
         <source>Bookmarks</source>
@@ -541,7 +541,7 @@
     </message>
     <message id="orn-no-repos">
         <source>No OpenRepos repositories have been added yet</source>
-        <translation>Aucun dépôt OpenRepos n&apos;est ajouté pour le moment</translation>
+        <translation>Aucun dépôt OpenRepos n&apos;a été ajouté pour l&apos;instant</translation>
     </message>
     <message id="orn-add-repo-hint">
         <source>You can add a repository from an application page</source>
@@ -572,15 +572,15 @@
     </message>
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
-        <translation>Cliquez pour voir les mises à jour</translation>
+        <translation>Accéder aux mises à jour</translation>
     </message>
     <message id="orn-updates-available-body">
         <source>Applications updates are available. Click to view details.</source>
-        <translation>Des mises à jour d&apos;applications sont disponibles. Cliquez pour voir les détails.</translation>
+        <translation>Des mises à jour sont disponibles. Cliquez pour afficher les détails.</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>
-        <translation>Cliquez pour voir les détails</translation>
+        <translation>Afficher les détails</translation>
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
@@ -593,7 +593,7 @@
     </message>
     <message id="orn-backup-description">
         <source>Backup and restore repos and installed apps</source>
-        <translation>Dépôts de sauvegarde / de restauration et applications installées</translation>
+        <translation>Sauvegarde et restauration de dépôts/applis</translation>
     </message>
     <message id="orn-create-backup">
         <source>Create a backup</source>
@@ -601,7 +601,7 @@
     </message>
     <message id="orn-backup-error">
         <source>Backup error</source>
-        <translation>Erreur de sauvegarde</translation>
+        <translation>Erreur</translation>
     </message>
     <message id="orn-backup-error-directory">
         <source>Could not create directory</source>
@@ -621,11 +621,11 @@
     </message>
     <message id="orn-created">
         <source>Created</source>
-        <translation>Créé</translation>
+        <translation>Créée</translation>
     </message>
     <message id="orn-total-repos">
         <source>Total repositories</source>
-        <translation>Total des dépôts</translation>
+        <translation>Totalité des dépôts</translation>
     </message>
     <message id="orn-details">
         <source>Details</source>
@@ -633,7 +633,7 @@
     </message>
     <message id="orn-backups-placeholder">
         <source>Backups will be shown here</source>
-        <translation>Les sauvegardes s&apos;affichent ici</translation>
+        <translation>Les sauvegardes s&apos;afficheront ici</translation>
     </message>
     <message id="orn-restoring-repos">
         <source>Restoring repositories</source>
@@ -681,7 +681,7 @@
     </message>
     <message id="orn-backup-hint">
         <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
-        <translation>La sauvegarde vous permet d&apos;enregistrer vos dépôts, vos applications installées ainsi que vos favoris pour les restaurer plus tard (par ex. suite à une réinitialisation de l&apos;appareil). Il s&apos;agit d&apos;un fichier local enregistré sur &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention !&lt;/b&gt; Vous devrez copier vos sauvegardes dans un emplacement sûr avant d&apos;effectuer une réinitialisation de l&apos;appareil. Par ex. une carte SD, un disque externe, un serveur Cloud...</translation>
+        <translation>La sauvegarde vous permet d&apos;enregistrer vos dépôts, vos applications installées ainsi que vos favoris pour une restauration future (en l’occurrence, suite à une réinitialisation de l&apos;appareil). Il s&apos;agit d&apos;un fichier local enregistré sur &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention !&lt;/b&gt; Vous devrez copier la sauvegarde dans un emplacement sûr avant d&apos;entamer une réinitialisation de l&apos;appareil : une carte SD, un disque dur externe, un serveur Cloud...</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -749,7 +749,7 @@
     </message>
     <message id="orn-updating">
         <source>Updating</source>
-        <translation>En cours de MàJ</translation>
+        <translation>MàJ en cours</translation>
     </message>
     <message id="orn-version-available-global">
         <source>Available in other repositories</source>
@@ -765,7 +765,7 @@
     </message>
     <message id="orn-no-installed-apps">
         <source>Could not find any applications installed from OpenRepos</source>
-        <translation>Aucune application OpenRepos installée</translation>
+        <translation>Aucune application OpenRepos d&apos;installée</translation>
     </message>
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
@@ -816,7 +816,7 @@
     </message>
     <message id="orn-pmstate-refreshingcache">
         <source>Refreshing cache&lt;br /&gt;(checking for updates)</source>
-        <translation>Rafraîchissement du cache&lt;br /&gt;(recherche de MàJ)</translation>
+        <translation>Mise à jour du cache</translation>
     </message>
 </context>
 </TS>
