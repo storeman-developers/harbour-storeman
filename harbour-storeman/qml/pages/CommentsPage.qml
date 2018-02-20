@@ -18,6 +18,13 @@ Page {
         onCommentEdited: commentsModel.editComment(cid)
     }
 
+    Timer {
+        id: createdUpdateTimer
+        interval: 30000
+        repeat: true
+        running: true
+    }
+
     SilicaFlickable {
         anchors.fill: parent
 

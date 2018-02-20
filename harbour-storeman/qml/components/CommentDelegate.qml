@@ -6,10 +6,41 @@ ListItem {
     readonly property bool _userComment: OrnClient.userId === commentData.userId
     readonly property bool _authorComment: commentData.userId === userId
 
+    function _setSinceCreated() {
+        var created = commentData.created
+        var mins = Math.round((new Date() / 1000 - created) / 60.0)
+        if (mins < 1) {
+            //% "Just now"
+            createdLabel.text = qsTrId("orn-just-now")
+            return
+        }
+        var hours = Math.round(mins / 60.0)
+        if (hours < 1) {
+            //% "%0 minute(s) ago"
+            createdLabel.text = qsTrId("orn-mins-ago", mins).arg(mins)
+            return
+        }
+        var days = Math.round(hours / 24.0)
+        if (days < 1) {
+            //% "%0 hour(s) ago"
+            createdLabel.text = qsTrId("orn-hours-ago", hours).arg(hours)
+        } else if (days == 1) {
+            //% "Yesterday"
+            createdLabel.text = qsTrId("orn-yesterday")
+        } else {
+            createdLabel.text = new Date(created * 1000).toLocaleDateString(_locale, Locale.LongFormat)
+        }
+    }
+
     contentHeight: content.height + Theme.paddingMedium * 2
     menu: OrnClient.authorised ? contextMenu : null
     highlighted: OrnClient.authorised && down
     _showPress: highlighted
+
+    Connections {
+        target: createdUpdateTimer
+        onTriggered: _setSinceCreated()
+    }
 
     ContextMenu {
         id: contextMenu
@@ -85,11 +116,13 @@ ListItem {
                 }
 
                 Label {
+                    id: createdLabel
                     width: parent.width
                     color: highlighted ? Theme.highlightColor : Theme.secondaryColor
                     font.pixelSize: Theme.fontSizeExtraSmall
                     wrapMode: Text.WordWrap
-                    text: commentData.date
+
+                    Component.onCompleted: _setSinceCreated()
                 }
 
                 Label {
