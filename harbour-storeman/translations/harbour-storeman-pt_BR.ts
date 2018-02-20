@@ -37,7 +37,7 @@
     </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
-        <translation>Recentemente atualizado</translation>
+        <translation>Atualizações recentes</translation>
     </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
@@ -114,7 +114,7 @@
     </message>
     <message id="orn-version-installed">
         <source>Installed version</source>
-        <translation>versão instalada</translation>
+        <translation>Versão instalada</translation>
     </message>
     <message id="orn-version-updated">
         <source>Last updated</source>
@@ -305,7 +305,7 @@
     </message>
     <message id="orn-searchpage-placeholder-default">
         <source>Search results will be shown here</source>
-        <translation>Resultados da busca serão exibidos aqui</translation>
+        <translation>Os resultados da busca serão exibidos aqui</translation>
     </message>
     <message id="orn-searchpage-placeholder-default-hint">
         <source>Type some keywords in the field above</source>
@@ -313,7 +313,7 @@
     </message>
     <message id="orn-about">
         <source>About Storeman</source>
-        <translation>Sobre Storeman</translation>
+        <translation>Sobre o Storeman</translation>
     </message>
     <message id="orn-translations">
         <source>Translations</source>
@@ -417,7 +417,7 @@
     </message>
     <message id="orn-thisdevice">
         <source>This Device</source>
-        <translation>Esse Dispositivo</translation>
+        <translation>Meu Dispositivo</translation>
     </message>
     <message id="orn-login-menu-item">
         <source>Log in to OpenRepos.net</source>
@@ -429,7 +429,7 @@
     </message>
     <message id="orn-username">
         <source>Username</source>
-        <translation>Nome de susário</translation>
+        <translation>Nome de usuário</translation>
     </message>
     <message id="orn-acceptable-username">
         <source>Only letters, numbers, and underscores</source>
@@ -438,7 +438,7 @@
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
-        <translation>Log in no OpenRepos.net para comentar aplicativos e responder aos demais comentários. &lt;br /&gt;&lt;br /&gt;Storeman não armazena sua senha bem como não a envia a terceiros.</translation>
+        <translation>Logue no OpenRepos.net para comentar aplicativos e responder aos demais comentários. &lt;br /&gt;&lt;br /&gt;Storeman não armazena sua senha bem como não a envia a terceiros.</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
@@ -454,7 +454,7 @@
     </message>
     <message id="orn-login-error-message">
         <source>Could not log in the OpenRepos.net - check your credentials and network connection</source>
-        <translation>Não foi possível conectar ao OpenRepos.net - Cheque suas credenciais e conexão com a internet.</translation>
+        <translation>Não foi possível conectar ao OpenRepos.net - Cheque suas credenciais e  a conexão com a internet.</translation>
     </message>
     <message id="orn-loggedin-menu-item">
         <source>Logged in as %0</source>
@@ -513,7 +513,7 @@
     </message>
     <message id="orn-enabling-all">
         <source>Enabling all</source>
-        <translation>Hbailitando tudo</translation>
+        <translation>Habilitando tudo</translation>
     </message>
     <message id="orn-disabling-all">
         <source>Disabling all</source>
@@ -541,7 +541,7 @@
     </message>
     <message id="orn-no-repos">
         <source>No OpenRepos repositories have been added yet</source>
-        <translation>Nenhum repositório do OpenRepos.net foi adicionado ainda</translation>
+        <translation>Nenhum repositório do OpenRepos.net foi adicionado</translation>
     </message>
     <message id="orn-add-repo-hint">
         <source>You can add a repository from an application page</source>
@@ -549,17 +549,17 @@
     </message>
     <message id="orn-refresh-cache">
         <source>Refresh cache</source>
-        <translation>atualizar cache</translation>
+        <translation>Atualizar cache</translation>
     </message>
     <message id="orn-tag-underscore">
         <source>U</source>
         <extracomment>Tag underscore</extracomment>
-        <translation>U</translation>
+        <translation>S</translation>
     </message>
     <message id="orn-tag-strong">
         <source>B</source>
         <extracomment>Tag strong</extracomment>
-        <translation>B</translation>
+        <translation>N</translation>
     </message>
     <message id="orn-tag-emphasize">
         <source>I</source>
@@ -681,7 +681,7 @@
     </message>
     <message id="orn-backup-hint">
         <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
-        <translation>Backup permite que você salve seus repositórios atuais, aplicativos instalados e favoritos para restaurá-los mais tarde (por exemplo após uma Restauração de fábrica). O Backup é um arquivo local que é salvo No &lt;br /&gt;&lt;i&gt;~/Documentos/Storeman&lt;/i&gt; diretório.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Atenção!&lt;/b&gt;Você deve copiar seus backups manualmente para um local seguro antes de executar uma restauração de fábrica. Pode ser no seu cartão SD, dispositivo externo, armazenamento na nuvem ou qualquer outra coisa.</translation>
+        <translation>O backup permite que você salve seus repositórios atuais, aplicativos instalados e favoritos para restaurá-los mais tarde (por exemplo, após uma restauração de fábrica). O Backup é um arquivo local que é salvo em &lt;br /&gt;&lt;i&gt;~/Documentos/Storeman&lt;/i&gt; (diretório).&lt;br /&gt;&lt;br /&gt;&lt;b&gt;  Atenção!&lt;/b&gt;Você deve copiar seus backups manualmente para um local seguro antes de executar uma restauração de fábrica. Pode ser no cartão SD, dispositivo externo, armazenamento na nuvem ou qualquer outro local.</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -808,7 +808,7 @@
     </message>
     <message id="orn-size-download-install">
         <source>Download / install size</source>
-        <translation>Download / tamanho da instalação</translation>
+        <translation>Download / Tamanho instalado</translation>
     </message>
     <message id="orn-cat-public-transport">
         <source>Public Transport</source>
@@ -816,7 +816,7 @@
     </message>
     <message id="orn-pmstate-refreshingcache">
         <source>Refreshing cache&lt;br /&gt;(checking for updates)</source>
-        <translation>Atualizando cache&lt;br /&gt; (checando por atualizações)</translation>
+        <translation>Atualizando cache&lt;br /&gt; (procurando por atualizações)</translation>
     </message>
 </context>
 </TS>

@@ -333,7 +333,7 @@
     </message>
     <message id="orn-app-description">
         <source>Unofficial native OpenRepos.net client for Sailfish&amp;nbsp;OS</source>
-        <translation>Client OpenRepos natif (non-offic.) pour SFOS</translation>
+        <translation>Client OpenRepos natif (non-off.) pour SFOS.</translation>
     </message>
     <message id="orn-report">
         <source>Report an Issue</source>
@@ -396,7 +396,7 @@
     </message>
     <message id="orn-category-noapps">
         <source>Currently there are no apps in this category</source>
-        <translation>Il n&apos;y pour l&apos;instant aucune application dans cette catégorie</translation>
+        <translation>Il n&apos;y a pour l&apos;instant aucune application dans cette catégorie</translation>
     </message>
     <message id="orn-cat-unknown2">
         <source>Unknown category</source>
@@ -541,7 +541,7 @@
     </message>
     <message id="orn-no-repos">
         <source>No OpenRepos repositories have been added yet</source>
-        <translation>Aucun dépôt OpenRepos n&apos;a été ajouté pour l&apos;instant</translation>
+        <translation>Aucun dépôt OpenRepos n&apos;a pour l&apos;instant été ajouté</translation>
     </message>
     <message id="orn-add-repo-hint">
         <source>You can add a repository from an application page</source>
@@ -572,7 +572,7 @@
     </message>
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
-        <translation>Accéder aux mises à jour</translation>
+        <translation>Cliquez pour y accéder</translation>
     </message>
     <message id="orn-updates-available-body">
         <source>Applications updates are available. Click to view details.</source>
@@ -580,7 +580,7 @@
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>
-        <translation>Afficher les détails</translation>
+        <translation>Cliquez pour afficher les détails</translation>
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
@@ -597,7 +597,7 @@
     </message>
     <message id="orn-create-backup">
         <source>Create a backup</source>
-        <translation>Créer un sauvegarde</translation>
+        <translation>Créer une sauvegarde</translation>
     </message>
     <message id="orn-backup-error">
         <source>Backup error</source>
@@ -617,7 +617,7 @@
     </message>
     <message id="orn-restore-hint">
         <source>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</source>
-        <translation>Restaurez les dépôts OpenRepos et les applications à partir du fichier sélectionné. Cette action n&apos;affecte pas vos dépôts actuels et ne supprime pas les applications déjà installées.</translation>
+        <translation>Restaurez les dépôts et applications OpenRepos à partir du fichier sélectionné. Cette action n&apos;affecte ni les dépôts ni les applications actuellement installés sur cet appareil.</translation>
     </message>
     <message id="orn-created">
         <source>Created</source>
@@ -657,11 +657,11 @@
     </message>
     <message id="orn-success-backup">
         <source>Successful backup</source>
-        <translation>Sauvegarde réussie</translation>
+        <translation>Sauvegarde effectuée avec succès</translation>
     </message>
     <message id="orn-success-restore">
         <source>Successful restore</source>
-        <translation>Restauration réussie</translation>
+        <translation>Restauration effectuée avec succès</translation>
     </message>
     <message id="orn-installed-packages">
         <source>Installed packages</source>
@@ -681,7 +681,7 @@
     </message>
     <message id="orn-backup-hint">
         <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
-        <translation>La sauvegarde vous permet d&apos;enregistrer vos dépôts, vos applications installées ainsi que vos favoris pour une restauration future (en l’occurrence, suite à une réinitialisation de l&apos;appareil). Il s&apos;agit d&apos;un fichier local enregistré sur &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention !&lt;/b&gt; Vous devrez copier la sauvegarde dans un emplacement sûr avant d&apos;entamer une réinitialisation de l&apos;appareil : une carte SD, un disque dur externe, un serveur Cloud...</translation>
+        <translation>La sauvegarde permet d&apos;enregistrer dépôts, applications ainsi que favoris dans le cadre d&apos;une restauration future (suite à une réinitialisation de l&apos;appareil, par exemple). Il s&apos;agit d&apos;un fichier local enregistré sur &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention !&lt;/b&gt; Pensez à copier vos sauvegardes dans un emplacement sûr avant d&apos;entamer une réinitialisation de l&apos;appareil : une carte SD, un disque dur externe, un serveur Cloud...</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -749,7 +749,7 @@
     </message>
     <message id="orn-updating">
         <source>Updating</source>
-        <translation>MàJ en cours</translation>
+        <translation>MàJ en cours d’exécution </translation>
     </message>
     <message id="orn-version-available-global">
         <source>Available in other repositories</source>
@@ -765,7 +765,7 @@
     </message>
     <message id="orn-no-installed-apps">
         <source>Could not find any applications installed from OpenRepos</source>
-        <translation>Aucune application OpenRepos d&apos;installée</translation>
+        <translation>Aucune application OpenRepos installée</translation>
     </message>
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
@@ -816,7 +816,7 @@
     </message>
     <message id="orn-pmstate-refreshingcache">
         <source>Refreshing cache&lt;br /&gt;(checking for updates)</source>
-        <translation>Mise à jour du cache</translation>
+        <translation>Mise à jour du cache...</translation>
     </message>
 </context>
 </TS>
