@@ -12,14 +12,13 @@
 #include "storeman.h"
 
 #include <nemonotifications-qt5/notification.h>
+#include <connman-qt5/networkmanager.h>
 
 #include <QSettings>
 #include <QCoreApplication>
 #include <QDateTime>
 #include <QTimer>
-#include <QSet>
 #include <QFileInfo>
-#include <QDebug>
 
 #include <ornpm.h>
 
@@ -39,15 +38,11 @@ Storeman::Storeman(QObject *parent)
     mUpdatesTimer->setSingleShot(false);
     connect(mUpdatesTimer, &QTimer::timeout, this, &Storeman::refreshRepos);
 
-    if (ornpm->initialised())
-    {
-        this->startUpdatesTimer();
-    }
-    else
-    {
-        connect(ornpm, &OrnPm::initialisedChanged,
-                this, &Storeman::startUpdatesTimer);
-    }
+    connect(ornpm, &OrnPm::initialisedChanged,
+            this, &Storeman::startUpdatesTimer);
+    connect(NetworkManager::instance(), &NetworkManager::stateChanged,
+            this, &Storeman::startUpdatesTimer);
+    this->startUpdatesTimer();
 }
 
 QObject *Storeman::qmlInstance(QQmlEngine *engine, QJSEngine *scriptEngine)
@@ -150,7 +145,6 @@ void Storeman::onUpdatablePackagesChanged()
         auto prev_packages_set = mSettings->value(key).toStringList().toSet();
         auto newpackages = cur_packages_set == prev_packages_set ?
                     false : !prev_packages_set.contains(cur_packages_set);
-        qDebug() << (cur_packages_set == prev_packages_set) << !prev_packages_set.contains(cur_packages_set) << newpackages;
 
         // Do not show notification on application start
         if (newpackages)
@@ -169,11 +163,21 @@ void Storeman::onUpdatablePackagesChanged()
 
 void Storeman::startUpdatesTimer()
 {
-    auto delta = QDateTime::currentMSecsSinceEpoch() -
-            mSettings->value(QStringLiteral("updates/last_check")).toLongLong();
-    if (delta >= this->updateInterval())
+    if (OrnPm::instance()->initialised() &&
+        NetworkManager::instance()->state() == QLatin1String("online"))
     {
-        this->refreshRepos();
+        qDebug("Starting updates timer");
+        auto delta = QDateTime::currentMSecsSinceEpoch() -
+                mSettings->value(QStringLiteral("updates/last_check")).toLongLong();
+        if (delta >= this->updateInterval())
+        {
+            this->refreshRepos();
+        }
+        mUpdatesTimer->start();
     }
-    mUpdatesTimer->start();
+    else
+    {
+        qDebug("Stopping updates timer");
+        mUpdatesTimer->stop();
+    }
 }

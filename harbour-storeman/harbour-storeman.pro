@@ -3,7 +3,9 @@ TARGET = harbour-storeman
 QT += concurrent dbus
 CONFIG += sailfishapp
 
-PKGCONFIG += nemonotifications-qt5
+PKGCONFIG += \
+    nemonotifications-qt5 \
+    connman-qt5
 
 # Write version file
 VERSION_H = \
