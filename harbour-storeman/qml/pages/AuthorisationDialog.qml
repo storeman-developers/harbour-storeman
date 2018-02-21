@@ -5,7 +5,8 @@ import harbour.orn 1.0
 Dialog {
     id: dialog
     allowedOrientations: defaultAllowedOrientations
-    canAccept: usernameField.text &&
+    canAccept: networkManager.online &&
+               usernameField.text &&
                usernameField.acceptableInput &&
                passwordField.text
 

@@ -29,6 +29,7 @@ Page {
         anchors.fill: parent
 
         PullDownMenu {
+            id: menu
 
             RefreshMenuItem {
                 model: commentsModel
@@ -63,7 +64,7 @@ Page {
 
             header: Loader {
                 width: parent.width
-                source: OrnClient.authorised && OrnClient.cookieIsValid ?
+                source: networkManager.online && OrnClient.authorised && OrnClient.cookieIsValid ?
                             Qt.resolvedUrl("../components/CommentField.qml") :
                             Qt.resolvedUrl("../components/CommentLabel.qml")
             }
@@ -75,11 +76,42 @@ Page {
             delegate: CommentDelegate { }
 
             VerticalScrollDecorator { }
+        }
 
-            BusyIndicator {
-                size: BusyIndicatorSize.Large
-                anchors.centerIn: parent
-                running: commentsList.count === 0 && hasComments
+        BusyIndicator {
+            size: BusyIndicatorSize.Large
+            anchors.centerIn: parent
+            running: !viewPlaceholder.text &&
+                     commentsList.count === 0 && hasComments &&
+                     !menu.active
+        }
+
+        ViewPlaceholder {
+            id: viewPlaceholder
+            enabled: text
+            text: {
+                hintText = ""
+                if (!networkManager.online) {
+                    return qsTrId("orn-network-idle")
+                }
+                if (commentsModel.apiRequest.networkError) {
+                    hintText = qsTrId("orn-pull-refresh")
+                    return qsTrId("orn-network-error")
+                }
+                if (!hasComments) {
+                    if (OrnClient.userId === userId) {
+                        //: This will be shown to an application author
+                        //% "Wait for users' feedback"
+                        hintText = qsTrId("orn-comments-wait")
+                    } else {
+                        //: This will be shown to a normal user
+                        //% "Be the first to comment"
+                        hintText = qsTrId("orn-comments-bethefirst")
+                    }
+                    //% "There is nothing here yet"
+                    return qsTrId("orn-comments-nocomments")
+                }
+                return ""
             }
         }
     }

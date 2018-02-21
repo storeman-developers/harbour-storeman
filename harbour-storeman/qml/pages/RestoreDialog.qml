@@ -10,6 +10,7 @@ Dialog {
 
     id: dialog
     allowedOrientations: defaultAllowedOrientations
+    canAccept: networkManager.online
 
     onAccepted: backup.restore(filePath)
 

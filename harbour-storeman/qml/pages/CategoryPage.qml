@@ -9,6 +9,16 @@ Page {
 
     allowedOrientations: defaultAllowedOrientations
 
+    OrnCategoryAppsModel {
+        id: categoryModel
+        onReplyProcessed: {
+            if (rowCount() === 0) {
+                //% "Currently there are no apps in this category"
+                viewPlaceholder.text = qsTrId("orn-category-noapps")
+            }
+        }
+    }
+
     SilicaListView {
         id: categoryList
         anchors.fill: parent
@@ -17,19 +27,12 @@ Page {
             title: categoryName
         }
 
-        model: OrnCategoryAppsModel {
-            id: categoryModel
-            onReplyProcessed: {
-                if (rowCount() === 0) {
-                    //% "Currently there are no apps in this category"
-                    viewPlaceholder.text = qsTrId("orn-category-noapps")
-                }
-            }
-        }
+        model: networkManager.online ? categoryModel : null
 
         delegate: AppListDelegate { }
 
         PullDownMenu {
+            id: menu
 
             RefreshMenuItem {
                 model: categoryModel
@@ -43,12 +46,25 @@ Page {
         BusyIndicator {
             size: BusyIndicatorSize.Large
             anchors.centerIn: parent
-            running: categoryList.count === 0 && !viewPlaceholder.enabled
+            running: !viewPlaceholder.enabled &&
+                     categoryList.count === 0 &&
+                     !menu.active
         }
 
         ViewPlaceholder {
             id: viewPlaceholder
             enabled: text
+            text: {
+                hintText = ""
+                if (!networkManager.online) {
+                    return qsTrId("orn-network-idle")
+                }
+                if (categoryModel.apiRequest.networkError) {
+                    hintText = qsTrId("orn-pull-refresh")
+                    return qsTrId("orn-network-error")
+                }
+                return ""
+            }
         }
     }
 }

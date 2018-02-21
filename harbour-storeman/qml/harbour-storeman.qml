@@ -59,6 +59,8 @@ ApplicationWindow
     }
 
     NetworkManager {
+        readonly property bool online: state === "online"
+
         id: networkManager
     }
 

@@ -147,23 +147,23 @@
     </message>
     <message id="orn-cat-application">
         <source>Application</source>
-        <translation>Application</translation>
+        <translation>Appli</translation>
     </message>
     <message id="orn-cat-ambience-themes">
         <source>Ambience &amp; Themes</source>
-        <translation>Ambiances &amp; Thèmes</translation>
+        <translation>Ambiance / Thème</translation>
     </message>
     <message id="orn-cat-business">
         <source>Business</source>
-        <translation>Business</translation>
+        <translation>Travail / Finance</translation>
     </message>
     <message id="orn-cat-city-guides-maps">
         <source>City guides &amp; maps</source>
-        <translation>Guides urbains &amp; Cartes</translation>
+        <translation>Guide / Cartographie</translation>
     </message>
     <message id="orn-cat-education-science">
         <source>Education &amp; Science</source>
-        <translation>Éducation &amp; Science</translation>
+        <translation>Science / Éducation</translation>
     </message>
     <message id="orn-cat-entertainment">
         <source>Entertainment</source>
@@ -179,19 +179,19 @@
     </message>
     <message id="orn-cat-news-info">
         <source>News &amp; info</source>
-        <translation>Actualités &amp; Informations</translation>
+        <translation>Actualité / Info</translation>
     </message>
     <message id="orn-cat-patches">
         <source>Patches</source>
-        <translation>Patchs</translation>
+        <translation>Patch</translation>
     </message>
     <message id="orn-cat-photo-video">
         <source>Photo &amp; video</source>
-        <translation>Photo &amp; Vidéo</translation>
+        <translation>Photo / Vidéo</translation>
     </message>
     <message id="orn-cat-social-networks">
         <source>Social Networks</source>
-        <translation>Réseaux sociaux</translation>
+        <translation>Social</translation>
     </message>
     <message id="orn-cat-sports">
         <source>Sports</source>
@@ -207,7 +207,7 @@
     </message>
     <message id="orn-cat-utilities">
         <source>Utilities</source>
-        <translation>Utilitaires</translation>
+        <translation>Utilitaire</translation>
     </message>
     <message id="orn-cat-games">
         <source>Games</source>
@@ -215,7 +215,7 @@
     </message>
     <message id="orn-cat-game">
         <source>Game</source>
-        <translation>Jeu</translation>
+        <translation>Passe-temps</translation>
     </message>
     <message id="orn-cat-action">
         <source>Action</source>
@@ -231,11 +231,11 @@
     </message>
     <message id="orn-cat-card-casino">
         <source>Card &amp; casino</source>
-        <translation>Cartes &amp; Casino</translation>
+        <translation>Hasard</translation>
     </message>
     <message id="orn-cat-education">
         <source>Education</source>
-        <translation>Éducatif</translation>
+        <translation>Pédagogie</translation>
     </message>
     <message id="orn-cat-puzzle">
         <source>Puzzle</source>
@@ -251,15 +251,15 @@
     </message>
     <message id="orn-cat-translations">
         <source>Translations</source>
-        <translation>Traductions</translation>
+        <translation>Traduction</translation>
     </message>
     <message id="orn-cat-fonts">
         <source>Fonts</source>
-        <translation>Polices</translation>
+        <translation>Police</translation>
     </message>
     <message id="orn-cat-libraries">
         <source>Libraries</source>
-        <translation>Librairies</translation>
+        <translation>Librairie</translation>
     </message>
     <message id="orn-update-available">
         <source>Update available</source>
@@ -333,7 +333,7 @@
     </message>
     <message id="orn-app-description">
         <source>Unofficial native OpenRepos.net client for Sailfish&amp;nbsp;OS</source>
-        <translation>Client OpenRepos natif (non-off.) pour SFOS.</translation>
+        <translation>Un client OpenRepos pour Sailfish OS.</translation>
     </message>
     <message id="orn-report">
         <source>Report an Issue</source>
@@ -812,11 +812,25 @@
     </message>
     <message id="orn-cat-public-transport">
         <source>Public Transport</source>
-        <translation>Transports en commun</translation>
+        <translation>Transport</translation>
     </message>
     <message id="orn-pmstate-refreshingcache">
         <source>Refreshing cache&lt;br /&gt;(checking for updates)</source>
         <translation>Mise à jour du cache...</translation>
+    </message>
+    <message id="orn-comments-wait">
+        <source>Wait for users&apos; feedback</source>
+        <extracomment>This will be shown to an application author</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-comments-bethefirst">
+        <source>Be the first to comment</source>
+        <extracomment>This will be shown to a normal user</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-comments-nocomments">
+        <source>There is nothing here yet</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

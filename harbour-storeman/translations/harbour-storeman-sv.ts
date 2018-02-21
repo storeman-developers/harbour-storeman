@@ -110,7 +110,7 @@
     </message>
     <message id="orn-installed">
         <source>Installed</source>
-        <translation>Installerad</translation>
+        <translation>Installerat</translation>
     </message>
     <message id="orn-version-installed">
         <source>Installed version</source>
@@ -589,7 +589,7 @@
     </message>
     <message id="orn-backups">
         <source>Backups</source>
-        <translation>Säkerhetskopior</translation>
+        <translation>Säkerhetskopiera</translation>
     </message>
     <message id="orn-backup-description">
         <source>Backup and restore repos and installed apps</source>
@@ -817,6 +817,20 @@
     <message id="orn-pmstate-refreshingcache">
         <source>Refreshing cache&lt;br /&gt;(checking for updates)</source>
         <translation>Förnyar cache-lagringen&lt;br /&gt;(söker uppdateringar)</translation>
+    </message>
+    <message id="orn-comments-wait">
+        <source>Wait for users&apos; feedback</source>
+        <extracomment>This will be shown to an application author</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-comments-bethefirst">
+        <source>Be the first to comment</source>
+        <extracomment>This will be shown to a normal user</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-comments-nocomments">
+        <source>There is nothing here yet</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

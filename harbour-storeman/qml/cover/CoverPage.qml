@@ -11,7 +11,7 @@ CoverBackground {
 
     CoverActionList {
         id: coverAction
-        enabled: networkManager.state === "online"
+        enabled: networkManager.online
 
         CoverAction {
             iconSource: "image://theme/icon-cover-search"

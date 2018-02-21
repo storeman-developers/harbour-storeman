@@ -40,6 +40,7 @@ Page {
         }
 
         PullDownMenu {
+            id: menu
 
             RefreshMenuItem {
                 model: appsModel
@@ -53,7 +54,25 @@ Page {
         BusyIndicator {
             size: BusyIndicatorSize.Large
             anchors.centerIn: parent
-            running: appsList.count === 0
+            running: !viewPlaceholder.text &&
+                     appsList.count === 0 &&
+                     !menu.active
+        }
+
+        ViewPlaceholder {
+            id: viewPlaceholder
+            enabled: text
+            text: {
+                hintText = ""
+                if (!networkManager.online) {
+                    return qsTrId("orn-network-idle")
+                }
+                if (appsModel.apiRequest.networkError) {
+                    hintText = qsTrId("orn-pull-refresh")
+                    return qsTrId("orn-network-error")
+                }
+                return ""
+            }
         }
     }
 }

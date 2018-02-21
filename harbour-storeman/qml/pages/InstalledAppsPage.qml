@@ -55,6 +55,7 @@ Page {
 
                 MenuItem {
                     visible: updateAvailable
+                    enabled: networkManager.online
                     text: qsTrId("orn-update")
                     onClicked: OrnPm.updatePackage(packageName)
                 }
@@ -124,6 +125,7 @@ Page {
 
             MenuItem {
                 visible: OrnPm.updatesAvailable
+                enabled: networkManager.online
                 //% "Update all"
                 text: qsTrId("orn-update-all")
                 onClicked: {

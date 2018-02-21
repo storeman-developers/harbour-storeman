@@ -22,7 +22,7 @@ Page {
     SilicaListView {
         id: appsList
         anchors.fill: parent
-        model: networkManager.state === "online" ? appsModel : null
+        model: networkManager.online ? appsModel : null
 
         header: PageHeader {
             //% "Recently updated"
@@ -56,7 +56,7 @@ Page {
             }
 
             MenuItem {
-                visible: networkManager.state === "online" &&
+                visible: networkManager.online &&
                          !appsModel.apiRequest.networkError
                 text: qsTrId("orn-search")
                 onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"))
@@ -80,7 +80,7 @@ Page {
             enabled: text
             text: {
                 hintText = ""
-                if (networkManager.state === "idle") {
+                if (!networkManager.online) {
                     //% "Network is unavailable"
                     return qsTrId("orn-network-idle")
                 }

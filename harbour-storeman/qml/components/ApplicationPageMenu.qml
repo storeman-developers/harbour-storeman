@@ -4,12 +4,12 @@ import harbour.orn 1.0
 
 PullDownMenu {
     id: pullMenu
-    visible: networkManager.state === "online" && OrnPm.initialised
+    visible: OrnPm.initialised
 
     MenuItem {
         id: repoMenuItem
         visible: text
-        enabled: !pullMenu.busy
+        enabled: !pullMenu.busy && networkManager.online
         text: {
             if (!app.repoAlias) {
                 return ""
@@ -47,7 +47,7 @@ PullDownMenu {
     MenuItem {
         id: installMenuItem
         visible: text
-        enabled: !pullMenu.busy
+        enabled: !pullMenu.busy && networkManager.online
         text: {
             switch (_packageStatus) {
             case OrnPm.PackageAvailable:
@@ -79,7 +79,7 @@ PullDownMenu {
     MenuItem {
         id: updateMenuItem
         visible: _packageStatus == OrnPm.PackageUpdateAvailable
-        enabled: !pullMenu.busy
+        enabled: !pullMenu.busy && networkManager.online
         //% "Update"
         text: qsTrId("orn-update")
         onClicked: OrnPm.updatePackage(app.packageName)

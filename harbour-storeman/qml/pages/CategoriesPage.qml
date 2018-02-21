@@ -10,7 +10,7 @@ Page {
         target: networkManager
         onStateChanged: {
             if (categoriesList.count === 0 &&
-                networkManager.state === "online") {
+                networkManager.online) {
                 categoriesModel.reset()
             }
         }
@@ -46,7 +46,14 @@ Page {
         BusyIndicator {
             size: BusyIndicatorSize.Large
             anchors.centerIn: parent
-            running: categoriesList.count === 0
+            running: !viewPlaceholder.text &&
+                     categoriesList.count === 0
+        }
+
+        ViewPlaceholder {
+            id: viewPlaceholder
+            enabled: text
+            text: networkManager.online ? "" : qsTrId("orn-network-idle")
         }
     }
 }

@@ -44,10 +44,13 @@ Page {
                     }
                 }
 
-                onClicked: OrnClient.authorised ?
-                               showMenu() :
-                               pageStack.push(Qt.resolvedUrl("AuthorisationDialog.qml"))
-
+                onClicked: {
+                    if (OrnClient.authorised) {
+                        showMenu()
+                    } else if (networkManager.online) {
+                        pageStack.push(Qt.resolvedUrl("AuthorisationDialog.qml"))
+                    }
+                }
             }
 
             ListMenuItem {
@@ -65,6 +68,7 @@ Page {
             }
 
             ListMenuItem {
+                enabled: networkManager.online
                 iconSource: "image://theme/icon-m-favorite-selected"
                 text: qsTrId("orn-bookmarks")
                 onClicked: pageStack.push(Qt.resolvedUrl("BookmarksPage.qml"))

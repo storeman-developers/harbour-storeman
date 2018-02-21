@@ -747,7 +747,7 @@
     </message>
     <message id="orn-updating">
         <source>Updating</source>
-        <translation type="unfinished"></translation>
+        <translation>Frissítés</translation>
     </message>
     <message id="orn-version-available-global">
         <source>Available in other repositories</source>
@@ -778,23 +778,23 @@
     </message>
     <message id="orn-size-kb">
         <source>%0 KB</source>
-        <translation type="unfinished"></translation>
+        <translation>%0 KB</translation>
     </message>
     <message id="orn-size-mb">
         <source>%0 MB</source>
-        <translation type="unfinished"></translation>
+        <translation>%0 MB</translation>
     </message>
     <message id="orn-size-gb">
         <source>%0 GB</source>
-        <translation type="unfinished"></translation>
+        <translation>%0 GB</translation>
     </message>
     <message id="orn-error-packagenotfound">
         <source>Couldn&apos;t find package</source>
-        <translation type="unfinished"></translation>
+        <translation>A csomag nem található</translation>
     </message>
     <message id="orn-size-installed">
         <source>Installed size</source>
-        <translation type="unfinished"></translation>
+        <translation>Telepített méret</translation>
     </message>
     <message id="orn-size-bytes" numerus="yes">
         <source>%n byte(s)</source>
@@ -808,10 +808,24 @@
     </message>
     <message id="orn-cat-public-transport">
         <source>Public Transport</source>
-        <translation type="unfinished"></translation>
+        <translation>Tömegközlekedés</translation>
     </message>
     <message id="orn-pmstate-refreshingcache">
         <source>Refreshing cache&lt;br /&gt;(checking for updates)</source>
+        <translation>Cache frissítése&lt;br /&gt;(frissítések ellenőrzése)</translation>
+    </message>
+    <message id="orn-comments-wait">
+        <source>Wait for users&apos; feedback</source>
+        <extracomment>This will be shown to an application author</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-comments-bethefirst">
+        <source>Be the first to comment</source>
+        <extracomment>This will be shown to a normal user</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-comments-nocomments">
+        <source>There is nothing here yet</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

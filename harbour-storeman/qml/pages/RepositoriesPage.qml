@@ -52,6 +52,7 @@ Page {
 
                 MenuItem {
                     visible: repoEnabled
+                    enabled: networkManager.online
                     //% "Refresh cache"
                     text: qsTrId("orn-refresh-cache")
                     onClicked: OrnPm.refreshRepo(repoAlias, true)
@@ -63,11 +64,13 @@ Page {
                               qsTrId("orn-disable") :
                               //% "Enable"
                               qsTrId("orn-enable")
+                    enabled: networkManager.online
                     onClicked: OrnPm.modifyRepo(
                                    repoAlias, repoEnabled ? OrnPm.DisableRepo : OrnPm.EnableRepo)
                 }
 
                 MenuItem {
+                    enabled: networkManager.online
                     //% "Remove"
                     text: qsTrId("orb-remove")
                     //% "Removing"
@@ -94,12 +97,14 @@ Page {
             }
 
             MenuItem {
+                enabled: networkManager.online
                 text: qsTrId("orn-refresh-cache")
                 onClicked: Storeman.resetUpdatesTimer()
             }
 
             MenuItem {
                 visible: repoModel.hasDisabledRepos
+                enabled: networkManager.online
                 //% "Enable all"
                 text: qsTrId("orn-enable-all")
                 //% "Enabling all"
@@ -113,6 +118,7 @@ Page {
 
             MenuItem {
                 visible: repoModel.hasEnabledRepos
+                enabled: networkManager.online
                 //% "Disable all"
                 text: qsTrId("orn-disable-all")
                 //% "Disabling all"

@@ -17,7 +17,7 @@
     </message>
     <message id="orn-refresh">
         <source>Refresh</source>
-        <translation>Päivitä</translation>
+        <translation>Virkistä</translation>
     </message>
     <message id="orn-disable">
         <source>Disable</source>
@@ -349,7 +349,7 @@
     </message>
     <message id="orn-pull-refresh">
         <source>Pull down to refresh</source>
-        <translation>Päivitä vetämällä alas</translation>
+        <translation>Virkistä vetämällä alas</translation>
     </message>
     <message id="orn-development">
         <source>Development</source>
@@ -549,7 +549,7 @@
     </message>
     <message id="orn-refresh-cache">
         <source>Refresh cache</source>
-        <translation>Päivitä välimuisti</translation>
+        <translation>Virkistä välimuisti</translation>
     </message>
     <message id="orn-tag-underscore">
         <source>U</source>
@@ -641,7 +641,7 @@
     </message>
     <message id="orn-refreshing-repos">
         <source>Refreshing repositories</source>
-        <translation>Päivitetään pakettilähteitä</translation>
+        <translation>Virkistetään pakettilähteitä</translation>
     </message>
     <message id="orn-searching-packages">
         <source>Searching packages</source>
@@ -705,7 +705,7 @@
     </message>
     <message id="orn-pmstate-refreshingrepo">
         <source>Refreshing %0</source>
-        <translation>Päivitetään %0</translation>
+        <translation>Virkistetään %0</translation>
     </message>
     <message id="orn-pmstate-installingpackage">
         <source>Installing package %0</source>
@@ -816,6 +816,20 @@
     </message>
     <message id="orn-pmstate-refreshingcache">
         <source>Refreshing cache&lt;br /&gt;(checking for updates)</source>
+        <translation>Virkistetään välimuistia&lt;br /&gt;(Tarkistetaan päivityksiä)</translation>
+    </message>
+    <message id="orn-comments-wait">
+        <source>Wait for users&apos; feedback</source>
+        <extracomment>This will be shown to an application author</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-comments-bethefirst">
+        <source>Be the first to comment</source>
+        <extracomment>This will be shown to a normal user</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-comments-nocomments">
+        <source>There is nothing here yet</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

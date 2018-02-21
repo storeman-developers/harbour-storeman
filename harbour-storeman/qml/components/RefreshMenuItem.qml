@@ -4,7 +4,8 @@ import Sailfish.Silica 1.0
 MenuItem {
     property var model
 
-    visible: model && networkManager.state === "online"
+    visible: model
+    enabled: networkManager.online
     //% "Refresh"
     text: qsTrId("orn-refresh")
     onClicked: model.reset()

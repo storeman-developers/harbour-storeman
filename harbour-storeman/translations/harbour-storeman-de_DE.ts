@@ -818,5 +818,19 @@
         <source>Refreshing cache&lt;br /&gt;(checking for updates)</source>
         <translation>Aktualisiere Cache&lt;br /&gt;(nach Updates suchen)</translation>
     </message>
+    <message id="orn-comments-wait">
+        <source>Wait for users&apos; feedback</source>
+        <extracomment>This will be shown to an application author</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-comments-bethefirst">
+        <source>Be the first to comment</source>
+        <extracomment>This will be shown to a normal user</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-comments-nocomments">
+        <source>There is nothing here yet</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>
