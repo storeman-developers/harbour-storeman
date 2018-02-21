@@ -1,3 +1,9 @@
+* Thu Feb 22 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.18-1
+- Update comment datetime label every 30s
+- Don't start the updates timer if network is offline
+- Better handling of network state
+- Update translations
+
 * Tue Feb 20 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.17-1
 - Add Portuguese (Brazil), thanks to adrianocolvero
 - Update other translations
