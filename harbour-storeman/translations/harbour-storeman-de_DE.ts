@@ -821,16 +821,16 @@
     <message id="orn-comments-wait">
         <source>Wait for users&apos; feedback</source>
         <extracomment>This will be shown to an application author</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Warte auf Rückmeldung der Nutzer</translation>
     </message>
     <message id="orn-comments-bethefirst">
         <source>Be the first to comment</source>
         <extracomment>This will be shown to a normal user</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Schreibe den ersten Kommentar</translation>
     </message>
     <message id="orn-comments-nocomments">
         <source>There is nothing here yet</source>
-        <translation type="unfinished"></translation>
+        <translation>Hier ist noch nichts</translation>
     </message>
 </context>
 </TS>

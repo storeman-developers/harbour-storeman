@@ -827,16 +827,16 @@ Storeman не хранит ваш пароль и не передает его �
     <message id="orn-comments-wait">
         <source>Wait for users&apos; feedback</source>
         <extracomment>This will be shown to an application author</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Подождите отзывов пользователей</translation>
     </message>
     <message id="orn-comments-bethefirst">
         <source>Be the first to comment</source>
         <extracomment>This will be shown to a normal user</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Оставьте комментарий первым</translation>
     </message>
     <message id="orn-comments-nocomments">
         <source>There is nothing here yet</source>
-        <translation type="unfinished"></translation>
+        <translation>Здесь пока ничего нет</translation>
     </message>
 </context>
 </TS>

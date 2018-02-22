@@ -825,16 +825,16 @@
     <message id="orn-comments-wait">
         <source>Wait for users&apos; feedback</source>
         <extracomment>This will be shown to an application author</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Poczekaj na odzew użytkowników</translation>
     </message>
     <message id="orn-comments-bethefirst">
         <source>Be the first to comment</source>
         <extracomment>This will be shown to a normal user</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Bądź pierwszy ze swoim komentarzem</translation>
     </message>
     <message id="orn-comments-nocomments">
         <source>There is nothing here yet</source>
-        <translation type="unfinished"></translation>
+        <translation>Tutaj jeszcze nic nie ma</translation>
     </message>
 </context>
 </TS>
