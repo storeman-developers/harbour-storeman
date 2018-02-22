@@ -33,11 +33,11 @@ Column {
     }
 
     function _reset() {
+        body.focus = false
         _editId = ""
         _replyToId = ""
         body.text = ""
         typeLabel.text = ""
-        body.focus = false
     }
 
     width: parent.width
