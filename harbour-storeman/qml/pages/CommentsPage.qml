@@ -14,7 +14,10 @@ Page {
 
     Connections {
         target: OrnClient
-        onCommentAdded: commentsModel.addComment(cid)
+        onCommentAdded: {
+            commentsModel.addComment(cid)
+            hasComments = true
+        }
         onCommentEdited: commentsModel.editComment(cid)
     }
 
@@ -88,7 +91,7 @@ Page {
 
         ViewPlaceholder {
             id: viewPlaceholder
-            enabled: text
+            enabled: text && !commentField.item.isActive
             text: {
                 hintText = ""
                 if (!networkManager.online) {
