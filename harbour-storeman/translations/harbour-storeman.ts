@@ -866,5 +866,10 @@
         <source>The interval must be at least 10 minutes</source>
         <translation>The interval must be at least 10 minutes</translation>
     </message>
+    <message id="orn-tag-strikeout">
+        <source>S</source>
+        <extracomment>Tag strikeout</extracomment>
+        <translation>S</translation>
+    </message>
 </context>
 </TS>

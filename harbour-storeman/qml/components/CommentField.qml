@@ -149,6 +149,13 @@ Column {
             }
 
             HtmlTagButton {
+                //: Tag strikeout
+                //% "S"
+                text: "<s>%0</s>".arg(qsTrId("orn-tag-strikeout"))
+                tag: "s"
+            }
+
+            HtmlTagButton {
                 text: "🙶"
                 tag: "blockquote"
             }
