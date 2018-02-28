@@ -54,6 +54,12 @@ Page {
             }
 
             ListMenuItem {
+                iconSource: "image://theme/icon-m-developer-mode"
+                text: qsTrId("orn-settings")
+                onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
+            }
+
+            ListMenuItem {
                 enabled: OrnPm.initialised
                 iconSource: "image://theme/icon-m-document"
                 text: qsTrId("orn-repositories")

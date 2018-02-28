@@ -75,6 +75,21 @@ void Storeman::setUpdateInterval(const int &value)
     }
 }
 
+bool Storeman::showUpdatesNotification() const
+{
+    return mSettings->value(QStringLiteral("updates/show_notification"), true).toBool();
+}
+
+void Storeman::setShowUpdatesNotification(bool value)
+{
+    if (value != this->showUpdatesNotification())
+    {
+        mSettings->setValue(QStringLiteral("updates/show_notification"), value);
+        emit this->showUpdatesNotificationChanged();
+        this->onUpdatablePackagesChanged();
+    }
+}
+
 bool Storeman::removeFile(const QString &filePath)
 {
     Q_ASSERT_X(!QFileInfo(filePath).isDir(), Q_FUNC_INFO, "Path must be a file");
@@ -131,7 +146,7 @@ void Storeman::onUpdatablePackagesChanged()
     auto ornpm = OrnPm::instance();    
     auto prev = previousNotification();
 
-    if (ornpm->updatesAvailable())
+    if (this->showUpdatesNotification() && ornpm->updatesAvailable())
     {
         if (!prev)
         {

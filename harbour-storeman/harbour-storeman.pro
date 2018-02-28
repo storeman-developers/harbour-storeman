@@ -56,6 +56,7 @@ OTHER_FILES +=  \
     qml/pages/BackupsPage.qml \
     qml/pages/RestoreDialog.qml \
     qml/pages/BackupDialog.qml \
+    qml/pages/SettingsPage.qml \
     qml/components/AppListDelegate.qml \
     qml/components/RatingBox.qml \
     qml/components/IconLabel.qml \
