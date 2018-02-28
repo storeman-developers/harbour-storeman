@@ -109,7 +109,6 @@ Page {
                     enabled: !pageMenu.busy
                     //% "Create a backup"
                     text: qsTrId("orn-create-backup")
-                    //% "Creating a backup"
                     onClicked: pageStack.push(Qt.resolvedUrl("BackupDialog.qml"), {
                                                   backup: backup
                                               })

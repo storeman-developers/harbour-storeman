@@ -372,17 +372,17 @@
         <translation>Just now</translation>
     </message>
     <message id="orn-mins-ago" numerus="yes">
-        <source>%0 minute(s) ago</source>
+        <source>%n minute(s) ago</source>
         <translation>
-            <numerusform>%0 minute ago</numerusform>
-            <numerusform>%0 minutes ago</numerusform>
+            <numerusform>%n minute ago</numerusform>
+            <numerusform>%n minutes ago</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
-        <source>%0 hour(s) ago</source>
+        <source>%n hour(s) ago</source>
         <translation>
-            <numerusform>%0 hour ago</numerusform>
-            <numerusform>%0 hours ago</numerusform>
+            <numerusform>%n hour ago</numerusform>
+            <numerusform>%n hours ago</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
@@ -812,25 +812,59 @@
     </message>
     <message id="orn-cat-public-transport">
         <source>Public Transport</source>
-        <translation type="unfinished"></translation>
+        <translation>Public Transport</translation>
     </message>
     <message id="orn-pmstate-refreshingcache">
         <source>Refreshing cache&lt;br /&gt;(checking for updates)</source>
-        <translation type="unfinished"></translation>
+        <translation>Refreshing cache&lt;br /&gt;(checking for updates)</translation>
     </message>
     <message id="orn-comments-wait">
         <source>Wait for users&apos; feedback</source>
         <extracomment>This will be shown to an application author</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Wait for users&apos; feedback</translation>
     </message>
     <message id="orn-comments-bethefirst">
         <source>Be the first to comment</source>
         <extracomment>This will be shown to a normal user</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Be the first to comment</translation>
     </message>
     <message id="orn-comments-nocomments">
         <source>There is nothing here yet</source>
-        <translation type="unfinished"></translation>
+        <translation>There is nothing here yet</translation>
+    </message>
+    <message id="orn-settings">
+        <source>Settings</source>
+        <translation>Settings</translation>
+    </message>
+    <message id="orn-updates">
+        <source>Updates</source>
+        <translation>Updates</translation>
+    </message>
+    <message id="orn-updates-notification-switch">
+        <source>Show updates notification</source>
+        <translation>Show updates notification</translation>
+    </message>
+    <message id="orn-updates-check-interval">
+        <source>Updates check interval</source>
+        <translation>Updates check interval</translation>
+    </message>
+    <message id="orn-interval-m" numerus="yes">
+        <source>%n minute(s)</source>
+        <translation>
+            <numerusform>%n minute</numerusform>
+            <numerusform>%n minutes</numerusform>
+        </translation>
+    </message>
+    <message id="orn-interval-h" numerus="yes">
+        <source>%n hour(s)</source>
+        <translation>
+            <numerusform>%n hour</numerusform>
+            <numerusform>%n hours</numerusform>
+        </translation>
+    </message>
+    <message id="orn-updates-check-interval-invalid">
+        <source>The interval must be at least 10 minutes</source>
+        <translation>The interval must be at least 10 minutes</translation>
     </message>
 </context>
 </TS>
