@@ -121,6 +121,13 @@ Column {
         opacity: body.activeFocus ? 1.0 : 0.0
         visible: opacity > 0.0
 
+        onVisibleChanged: {
+            if (visible && Storeman.showHint(Storeman.CommentFieldHint)) {
+                Storeman.setHintShowed(Storeman.CommentFieldHint)
+                hintLoader.source = Qt.resolvedUrl("StoremanHint.qml")
+            }
+        }
+
         Behavior on opacity { NumberAnimation { } }
 
         Row {
@@ -175,6 +182,22 @@ Column {
                 tag: "a"
                 attrs: ' href=""'
             }
+        }
+    }
+
+    Loader {
+        id: hintLoader
+        anchors {
+            left: parent.left
+            right: parent.right
+            verticalCenter: tagsPanel.verticalCenter
+        }
+
+        onLoaded: {
+            //% "Swipe to see all the tag buttons"
+            item.text = qsTrId("orn-hint-commentfield")
+            item.hint.direction = TouchInteraction.Left
+            item.hint.start()
         }
     }
 

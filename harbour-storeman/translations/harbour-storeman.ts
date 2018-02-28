@@ -871,5 +871,9 @@
         <extracomment>Tag strikeout</extracomment>
         <translation>S</translation>
     </message>
+    <message id="orn-hint-commentfield">
+        <source>Swipe to see all the tag buttons</source>
+        <translation>Swipe to see all the tag buttons</translation>
+    </message>
 </context>
 </TS>

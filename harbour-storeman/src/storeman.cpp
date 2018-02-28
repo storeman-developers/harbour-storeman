@@ -96,6 +96,22 @@ bool Storeman::removeFile(const QString &filePath)
     return QFile(filePath).remove();
 }
 
+bool Storeman::showHint(const Storeman::Hint &hint) const
+{
+    auto me = QMetaEnum::fromType<Hint>();
+    auto name = me.valueToKey(hint);
+    Q_ASSERT(name);
+    return !mSettings->value(QStringLiteral("hints/").append(name), false).toBool();
+}
+
+void Storeman::setHintShowed(const Storeman::Hint &hint)
+{
+    auto me = QMetaEnum::fromType<Hint>();
+    auto name = me.valueToKey(hint);
+    Q_ASSERT(name);
+    mSettings->setValue(QStringLiteral("hints/").append(name), true);
+}
+
 void Storeman::resetUpdatesTimer()
 {
     this->refreshRepos();

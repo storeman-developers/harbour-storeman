@@ -15,6 +15,12 @@ class Storeman : public QObject
     Q_PROPERTY(bool showUpdatesNotification READ showUpdatesNotification WRITE setShowUpdatesNotification NOTIFY showUpdatesNotificationChanged)
 
 public:
+    enum Hint
+    {
+        CommentFieldHint
+    };
+    Q_ENUM(Hint)
+
     static QObject *qmlInstance(QQmlEngine *engine, QJSEngine *scriptEngine);
 
     int updateInterval() const;
@@ -24,6 +30,9 @@ public:
     void setShowUpdatesNotification(bool value);
 
     Q_INVOKABLE static bool removeFile(const QString &filePath);
+
+    Q_INVOKABLE bool showHint(const Hint &hint) const;
+    Q_INVOKABLE void setHintShowed(const Hint &hint);
 
 public slots:
     void resetUpdatesTimer();
