@@ -9,8 +9,54 @@ Page {
     property int userId
     property string userName
     property bool hasComments: false
+    property bool _hintMode: Storeman.showHint(Storeman.CommentDelegateHint)
 
+    id: page
     allowedOrientations: defaultAllowedOrientations
+
+    onStatusChanged: {
+        // Wait until page loads to prevent lagging
+        if (status === PageStatus.Active) {
+            if (!_hintMode) {
+                commentsList.model = commentsModel
+            } else {
+                var dcmComp = Qt.createComponent(Qt.resolvedUrl("../models/DummyCommentsModel.qml"))
+                commentsList.model = dcmComp.createObject()
+
+                var label = commentsList.currentItem.replyToLabel
+                var halfSize = Theme.itemSizeLarge / 2
+
+                var shComp = Qt.createComponent(Qt.resolvedUrl("../components/StoremanHint.qml"))
+                var shObj = shComp.createObject(label, {
+                                                    distance: 0.0,
+                                                    startX: label.x + label.implicitWidth / 2 - halfSize,
+                                                    startY: label.y + label.height / 2 - halfSize
+                                                })
+
+                var shlComp = Qt.createComponent(Qt.resolvedUrl("../components/StoremanHintLabel.qml"))
+                var shlObj = shlComp.createObject(page, {
+                                                      hint: shObj,
+                                                      //% "Tap to navigate to the replied comment"
+                                                      text: qsTrId("orn-hint-commentdelegate"),
+                                                      invert: true
+                                                  })
+
+                shlObj.finished.connect(function() {
+                    _hintMode = false
+                    Storeman.setHintShowed(Storeman.CommentDelegateHint)
+                    commentsList.model = commentsModel
+                    shlObj.destroy()
+                    shObj.destroy()
+                })
+
+                shObj.start()
+            }
+        }
+    }
+
+    OrnCommentsModel {
+        id: commentsModel
+    }
 
     Connections {
         target: OrnClient
@@ -72,10 +118,6 @@ Page {
                             Qt.resolvedUrl("../components/CommentLabel.qml")
             }
 
-            model: OrnCommentsModel {
-                id: commentsModel
-            }
-
             delegate: CommentDelegate { }
 
             VerticalScrollDecorator { }
@@ -101,7 +143,7 @@ Page {
                     hintText = qsTrId("orn-pull-refresh")
                     return qsTrId("orn-network-error")
                 }
-                if (!hasComments) {
+                if (commentsList.count === 0) {
                     if (OrnClient.userId === userId) {
                         //: This will be shown to an application author
                         //% "Wait for users' feedback"

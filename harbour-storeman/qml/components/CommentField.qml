@@ -40,6 +40,7 @@ Column {
         typeLabel.text = ""
     }
 
+    id: commentField
     width: parent.width
     spacing: Theme.paddingSmall
 
@@ -107,97 +108,101 @@ Column {
         width: parent.width
     }
 
-    Flickable {
+    Item {
         id: tagsPanel
-        anchors {
-            left: parent.left
-            right: parent.right
-            leftMargin: Theme.horizontalPageMargin
-            rightMargin: Theme.horizontalPageMargin
-        }
+        width: parent.width
         height: tagsRow.height + Theme.paddingMedium
-        contentWidth: tagsRow.width
-        clip: true
         opacity: body.activeFocus ? 1.0 : 0.0
         visible: opacity > 0.0
 
-        onVisibleChanged: {
-            if (visible && Storeman.showHint(Storeman.CommentFieldHint)) {
-                Storeman.setHintShowed(Storeman.CommentFieldHint)
-                hintLoader.source = Qt.resolvedUrl("StoremanHint.qml")
-            }
-        }
-
         Behavior on opacity { NumberAnimation { } }
 
-        Row {
-            id: tagsRow
-            spacing: Theme.paddingSmall
+        onVisibleChanged: {
+            if (visible && Storeman.showHint(Storeman.CommentFieldHint)) {
+                var shComp = Qt.createComponent(Qt.resolvedUrl("StoremanHint.qml"))
+                var shObj = shComp.createObject(tagsPanel, {direction: TouchInteraction.Left})
 
-            HtmlTagButton {
-                //: Tag strong
-                //% "B"
-                text: "<b>%0</b>".arg(qsTrId("orn-tag-strong"))
-                tag: "strong"
-            }
+                var shlComp = Qt.createComponent(Qt.resolvedUrl("StoremanHintLabel.qml"))
+                var shlObj = shlComp.createObject(commentField, {
+                                                      hint: shObj,
+                                                      //% "Swipe to see all the tag buttons"
+                                                      text: qsTrId("orn-hint-commentfield")
+                                                  })
 
-            HtmlTagButton {
-                //: Tag emphasize
-                //% "I"
-                text: "<i>%0</i>".arg(qsTrId("orn-tag-emphasize"))
-                tag: "em"
-            }
+                shlObj.finished.connect(function() {
+                    Storeman.setHintShowed(Storeman.CommentFieldHint)
+                    shlObj.destroy()
+                    shObj.destroy()
+                })
 
-            HtmlTagButton {
-                //: Tag underscore
-                //% "U"
-                text: "<u>%0</u>".arg(qsTrId("orn-tag-underscore"))
-                tag: "u"
-            }
-
-            HtmlTagButton {
-                //: Tag strikeout
-                //% "S"
-                text: "<s>%0</s>".arg(qsTrId("orn-tag-strikeout"))
-                tag: "s"
-            }
-
-            HtmlTagButton {
-                text: "🙶"
-                tag: "blockquote"
-            }
-
-            HtmlTagButton {
-                text: '<font face="monospace">‹›</font>'
-                tag: "code"
-            }
-
-            HtmlTagButton {
-                text: '<font face="monospace">pre</font>'
-                tag: "pre"
-            }
-
-            HtmlTagButton {
-                text: "🔗"
-                tag: "a"
-                attrs: ' href=""'
+                shObj.start()
             }
         }
-    }
 
-    Loader {
-        id: hintLoader
-        anchors {
-            left: parent.left
-            right: parent.right
-            verticalCenter: tagsPanel.verticalCenter
-        }
+        Flickable {
+            anchors {
+                left: parent.left
+                right: parent.right
+                leftMargin: Theme.horizontalPageMargin
+                rightMargin: Theme.horizontalPageMargin
+            }
+            height: parent.height
+            contentWidth: tagsRow.width
+            clip: true
 
-        onLoaded: {
-            //% "Swipe to see all the tag buttons"
-            item.text = qsTrId("orn-hint-commentfield")
-            item.hint.direction = TouchInteraction.Left
-            item.hint.start()
+            Row {
+                id: tagsRow
+                spacing: Theme.paddingSmall
+
+                HtmlTagButton {
+                    //: Tag strong
+                    //% "B"
+                    text: "<b>%0</b>".arg(qsTrId("orn-tag-strong"))
+                    tag: "strong"
+                }
+
+                HtmlTagButton {
+                    //: Tag emphasize
+                    //% "I"
+                    text: "<i>%0</i>".arg(qsTrId("orn-tag-emphasize"))
+                    tag: "em"
+                }
+
+                HtmlTagButton {
+                    //: Tag underscore
+                    //% "U"
+                    text: "<u>%0</u>".arg(qsTrId("orn-tag-underscore"))
+                    tag: "u"
+                }
+
+                HtmlTagButton {
+                    //: Tag strikeout
+                    //% "S"
+                    text: "<s>%0</s>".arg(qsTrId("orn-tag-strikeout"))
+                    tag: "s"
+                }
+
+                HtmlTagButton {
+                    text: "🙶"
+                    tag: "blockquote"
+                }
+
+                HtmlTagButton {
+                    text: '<font face="monospace">‹›</font>'
+                    tag: "code"
+                }
+
+                HtmlTagButton {
+                    text: '<font face="monospace">pre</font>'
+                    tag: "pre"
+                }
+
+                HtmlTagButton {
+                    text: "🔗"
+                    tag: "a"
+                    attrs: ' href=""'
+                }
+            }
         }
     }
 

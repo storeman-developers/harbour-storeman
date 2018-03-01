@@ -17,6 +17,7 @@ class Storeman : public QObject
 public:
     enum Hint
     {
+        CommentDelegateHint,
         CommentFieldHint
     };
     Q_ENUM(Hint)

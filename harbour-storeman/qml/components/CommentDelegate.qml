@@ -3,11 +3,18 @@ import Sailfish.Silica 1.0
 import harbour.orn 1.0
 
 ListItem {
-    readonly property bool _userComment: OrnClient.userId === commentData.userId
-    readonly property bool _authorComment: commentData.userId === userId
+    readonly property var comment: commentData
+    readonly property bool _userComment: OrnClient.userId === comment.userId
+    readonly property bool _authorComment: comment.userId === userId
+    // Need for hint mode
+    readonly property alias replyToLabel: replyToLabel
 
     function _setSinceCreated() {
-        var created = commentData.created
+        var created = comment.created
+        if (_hintMode) {
+            createdLabel.text = created
+            return
+        }
         var mins = Math.round((new Date() / 1000 - created) / 60.0)
         if (mins < 1) {
             //% "Just now"
@@ -49,14 +56,14 @@ ListItem {
             //: Menu item to reply for a comment - should be a verb
             //% "Reply"
             text: qsTrId("orn-reply")
-            onClicked: commentField.item.reply(commentData.commentId, commentData.userName, commentData.text)
+            onClicked: commentField.item.reply(comment.commentId, comment.userName, comment.text)
         }
 
         MenuItem {
             //% "Edit"
             text: qsTrId("orn-edit")
             visible: _userComment
-            onClicked: commentField.item.edit(commentData.commentId, commentData.text)
+            onClicked: commentField.item.edit(comment.commentId, comment.text)
         }
 
 //        MenuItem {
@@ -65,7 +72,7 @@ ListItem {
 //            visible: _userComment || OrnClient.userId === userId
 //            //% "Deleting"
 //            onClicked: remorseAction(qsTrId("orn-deleting"), function() {
-//                OrnClient.deleteComment(commentData.commentId)
+//                OrnClient.deleteComment(comment.commentId)
 //                commentsModel.removeRow(index, 1)
 //            })
 //        }
@@ -92,8 +99,8 @@ ListItem {
                 width: Theme.iconSizeMedium
                 height: Theme.iconSizeMedium
                 fillMode: Image.PreserveAspectFit
-                source: commentData.userIconSource ? commentData.userIconSource :
-                                                     "image://theme/icon-m-person?" + Theme.highlightColor
+                source: comment.userIconSource ? comment.userIconSource :
+                                                 "image://theme/icon-m-person?" + Theme.highlightColor
             }
 
             Column {
@@ -112,7 +119,7 @@ ListItem {
                     wrapMode: Text.WordWrap
                     text: (_userComment ? "<img src='image://theme/icon-s-edit'> " :
                                           _authorComment ? "<img src='image://theme/icon-s-developer'> " : "") +
-                          commentData.userName
+                          comment.userName
                 }
 
                 Label {
@@ -126,8 +133,9 @@ ListItem {
                 }
 
                 Label {
-                    readonly property OrnCommentListItem replyTo: commentsModel.findItem(commentData.parentId)
+                    readonly property var replyTo: commentsList.model.findItem(comment.parentId)
 
+                    id: replyToLabel
                     width: parent.width
                     color: highlighted ? Theme.highlightColor : Theme.primaryColor
                     visible: replyTo
@@ -153,7 +161,7 @@ ListItem {
             font.pixelSize: Theme.fontSizeSmall
             wrapMode: Text.WordWrap
             textFormat: Text.RichText
-            text: commentData.text
+            text: comment.text
                 .replace(/<a([^>]*)>([^<]+)<\/a>/g,
                          '<a$1><font color="%0">$2</font></a>'.arg(Theme.primaryColor))
                 .replace(/<pre>([^<]+)<\/pre>/g,

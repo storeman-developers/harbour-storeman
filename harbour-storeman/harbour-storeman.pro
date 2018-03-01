@@ -77,8 +77,10 @@ OTHER_FILES +=  \
     qml/components/BookmarkButton.qml \
     qml/components/MenuStatusLabel.qml \
     qml/components/StoremanHint.qml \
+    qml/components/StoremanHintLabel.qml \
     qml/models/DevelopersModel.qml \
-    qml/models/TranslatorsModel.qml
+    qml/models/TranslatorsModel.qml \
+    qml/models/DummyCommentsModel.qml
 
 OTHER_FILES += \
     rpm/harbour-storeman.changes \
