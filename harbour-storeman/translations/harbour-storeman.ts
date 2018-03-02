@@ -3,10 +3,6 @@
 <TS version="2.1" language="en">
 <context>
     <name></name>
-    <message id="orn-storeman">
-        <source>Storeman</source>
-        <translation>Storeman</translation>
-    </message>
     <message id="orn-notrated">
         <source>Not rated yet</source>
         <translation>Not rated yet</translation>
