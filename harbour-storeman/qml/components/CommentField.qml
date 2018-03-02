@@ -112,7 +112,7 @@ Column {
         id: tagsPanel
         width: parent.width
         height: tagsRow.height + Theme.paddingMedium
-        opacity: body.activeFocus ? 1.0 : 0.0
+        opacity: isActive ? 1.0 : 0.0
         visible: opacity > 0.0
 
         Behavior on opacity { NumberAnimation { } }
@@ -123,10 +123,12 @@ Column {
                 var shObj = shComp.createObject(tagsPanel, {direction: TouchInteraction.Left})
 
                 var shlComp = Qt.createComponent(Qt.resolvedUrl("StoremanHintLabel.qml"))
-                var shlObj = shlComp.createObject(commentField, {
+                var shlObj = shlComp.createObject(page, {
                                                       hint: shObj,
                                                       //% "Swipe to see all the tag buttons"
-                                                      text: qsTrId("orn-hint-commentfield")
+                                                      text: qsTrId("orn-hint-commentfield"),
+                                                      invert: true,
+                                                      height: Screen.height / 2.5
                                                   })
 
                 shlObj.finished.connect(function() {
