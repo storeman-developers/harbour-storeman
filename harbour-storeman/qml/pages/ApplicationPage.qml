@@ -74,7 +74,7 @@ Page {
             }
 
             MoreButton {
-                visible: OrnClient.authorised || app.commentsCount
+                visible: app.commentsOpen && (OrnClient.authorised || app.commentsCount)
                 //% "Comments (%0)"
                 text: app.commentsCount ? qsTrId("orn-comments-withnum").arg(app.commentsCount) :
                                           qsTrId("orn-comments")
