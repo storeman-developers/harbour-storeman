@@ -60,6 +60,7 @@ ListItem {
             }
 
             Row {
+                spacing: Theme.paddingSmall
 
                 RatingBox {
                     id: ratingBox
@@ -68,13 +69,41 @@ ListItem {
                 Label {
                     id: userNameLabel
                     anchors.verticalCenter: parent.verticalCenter
-                    width: column.width - ratingBox.width
+                    width: column.width - ratingBox.width - statusLoader.width - parent.spacing * 2
                     horizontalAlignment: Qt.AlignRight
                     truncationMode: TruncationMode.Fade
                     font.pixelSize: Theme.fontSizeTiny
                     color: Theme.highlightColor
                     text: app.userName + "\u2009\u2022\u2009" +
                           app.createDate.toLocaleDateString(_locale, Locale.NarrowFormat)
+                }
+
+                Loader {
+                    readonly property var _packageStatus: packageStatus
+                    property string _icon
+
+                    id: statusLoader
+                    anchors.verticalCenter: parent.verticalCenter
+                    sourceComponent: _packageStatus < OrnPm.PackageInstalling ?
+                                         iconComponent : busyComponent
+
+                    Component {
+                        id: busyComponent
+                        BusyIndicator {
+                            size: BusyIndicatorSize.ExtraSmall
+                            running: true
+                        }
+                    }
+
+                    Component {
+                        id: iconComponent
+                        Image {
+                            source: _packageStatus === OrnPm.PackageInstalled ?
+                                        "image://theme/icon-s-installed" :
+                                        _packageStatus === OrnPm.PackageUpdateAvailable ?
+                                            "image://theme/icon-s-update" : ""
+                        }
+                    }
                 }
             }
         }
@@ -85,8 +114,7 @@ ListItem {
         anchors {
             right: parent.right
             rightMargin: Theme.paddingSmall
-            bottom: parent.bottom
-            bottomMargin: userNameLabel.height + Theme.paddingSmall
+            topMargin: Theme.paddingSmall
         }
     }
 }
