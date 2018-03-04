@@ -3,10 +3,6 @@
 <TS version="2.1" language="es">
 <context>
     <name></name>
-    <message id="orn-storeman">
-        <source>Storeman</source>
-        <translation>Storeman</translation>
-    </message>
     <message id="orn-notrated">
         <source>Not rated yet</source>
         <translation>No valorado aún</translation>
@@ -372,17 +368,17 @@
         <translation>Justo ahora</translation>
     </message>
     <message id="orn-mins-ago" numerus="yes">
-        <source>%0 minute(s) ago</source>
+        <source>%n minute(s) ago</source>
         <translation>
-            <numerusform>Hace %0 minuto</numerusform>
-            <numerusform>Hace %0 minutos</numerusform>
+            <numerusform>hace %n minuto</numerusform>
+            <numerusform>hace %n minutos</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
-        <source>%0 hour(s) ago</source>
+        <source>%n hour(s) ago</source>
         <translation>
-            <numerusform>Hace %0 hora</numerusform>
-            <numerusform>Hace %0 horas</numerusform>
+            <numerusform>hace %n hora</numerusform>
+            <numerusform>hace %n horas</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
@@ -545,7 +541,7 @@
     </message>
     <message id="orn-add-repo-hint">
         <source>You can add a repository from an application page</source>
-        <translation>Puedes añadir repositorios desde la página de las aplicaciones</translation>
+        <translation>Puedes añadir repositorios desde la página de una aplicación</translation>
     </message>
     <message id="orn-refresh-cache">
         <source>Refresh cache</source>
@@ -576,11 +572,11 @@
     </message>
     <message id="orn-updates-available-body">
         <source>Applications updates are available. Click to view details.</source>
-        <translation>Hay actualizaciones disponibles. Haz clic para ver detalles.</translation>
+        <translation>Hay actualizaciones disponibles. Haz clic para ver los detalles.</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>
-        <translation>Haz clic para ver detalles</translation>
+        <translation>Haz clic para ver los detalles</translation>
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
@@ -593,7 +589,7 @@
     </message>
     <message id="orn-backup-description">
         <source>Backup and restore repos and installed apps</source>
-        <translation>Copia de seguridad y restauración de repositorios y aplicaciones instaladas</translation>
+        <translation>Haz copia/restaura repositorios y aplicaciones</translation>
     </message>
     <message id="orn-create-backup">
         <source>Create a backup</source>
@@ -821,7 +817,7 @@
     <message id="orn-comments-wait">
         <source>Wait for users&apos; feedback</source>
         <extracomment>This will be shown to an application author</extracomment>
-        <translation>Espera los comentarios de los usuarios</translation>
+        <translation>Esperando comentarios de usuarios</translation>
     </message>
     <message id="orn-comments-bethefirst">
         <source>Be the first to comment</source>
@@ -831,6 +827,84 @@
     <message id="orn-comments-nocomments">
         <source>There is nothing here yet</source>
         <translation>No hay nada aquí aún</translation>
+    </message>
+    <message id="orn-settings">
+        <source>Settings</source>
+        <translation>Ajustes</translation>
+    </message>
+    <message id="orn-updates">
+        <source>Updates</source>
+        <translation>Actualizaciones</translation>
+    </message>
+    <message id="orn-updates-notification-switch">
+        <source>Show updates notification</source>
+        <translation>Mostrar notificación de actualización</translation>
+    </message>
+    <message id="orn-updates-check-interval">
+        <source>Updates check interval</source>
+        <translation>Intervalo de actualización</translation>
+    </message>
+    <message id="orn-interval-m" numerus="yes">
+        <source>%n minute(s)</source>
+        <translation>
+            <numerusform>%n minuto</numerusform>
+            <numerusform>%n minutos</numerusform>
+        </translation>
+    </message>
+    <message id="orn-interval-h" numerus="yes">
+        <source>%n hour(s)</source>
+        <translation>
+            <numerusform>%n hora</numerusform>
+            <numerusform>%n horas</numerusform>
+        </translation>
+    </message>
+    <message id="orn-updates-check-interval-invalid">
+        <source>The interval must be at least 10 minutes</source>
+        <translation>El intervalo debe ser al menos 10  minutos</translation>
+    </message>
+    <message id="orn-tag-strikeout">
+        <source>S</source>
+        <extracomment>Tag strikeout</extracomment>
+        <translation>S</translation>
+    </message>
+    <message id="orn-hint-commentfield">
+        <source>Swipe to see all the tag buttons</source>
+        <translation>Desliza para ver todas las etiquetas</translation>
+    </message>
+    <message id="orn-dcm-user2">
+        <source>Deep Thought</source>
+        <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
+        <translation>Pensamiento profundo</translation>
+    </message>
+    <message id="orn-dcm-user1">
+        <source>A little white mice</source>
+        <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
+        <translation>Un pequeño ratón blanco</translation>
+    </message>
+    <message id="orn-dcm-question">
+        <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
+        <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
+        <translation>¿Cuál es la respuesta a la última pregunta sobre la vida, el universo y todo lo demás?</translation>
+    </message>
+    <message id="orn-hint-commentdelegate-created">
+        <source>7.5 million years ago</source>
+        <translation>Hace 7.5 millones de años</translation>
+    </message>
+    <message id="orn-hint-commentdelegate">
+        <source>Tap to navigate to the replied comment</source>
+        <translation>Da un toque para ir a la respuesta</translation>
+    </message>
+    <message id="orn-tags">
+        <source>Tags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-tag-apps">
+        <source>Tagged Applications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-updates-check-interval-descr">
+        <source>Updates are checked only when the Storeman is running</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

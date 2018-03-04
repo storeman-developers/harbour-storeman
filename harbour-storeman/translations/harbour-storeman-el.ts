@@ -3,10 +3,6 @@
 <TS version="2.1" language="el">
 <context>
     <name></name>
-    <message id="orn-storeman">
-        <source>Storeman</source>
-        <translation>Storeman</translation>
-    </message>
     <message id="orn-notrated">
         <source>Not rated yet</source>
         <translation>Χωρίς αξιολόγηση</translation>
@@ -372,17 +368,17 @@
         <translation>Μόλις τώρα</translation>
     </message>
     <message id="orn-mins-ago" numerus="yes">
-        <source>%0 minute(s) ago</source>
-        <translation>
-            <numerusform>Πριν από %0 λεπτό(ά)</numerusform>
-            <numerusform>Πριν από %0 λεπτό(ά)</numerusform>
+        <source>%n minute(s) ago</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
-        <source>%0 hour(s) ago</source>
-        <translation>
-            <numerusform>Πριν από %0 ώρα(ες)</numerusform>
-            <numerusform>Πριν από %0 ώρα(ες)</numerusform>
+        <source>%n hour(s) ago</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
@@ -749,11 +745,11 @@
     </message>
     <message id="orn-updating">
         <source>Updating</source>
-        <translation type="unfinished"></translation>
+        <translation>Ενημερώνεται</translation>
     </message>
     <message id="orn-version-available-global">
         <source>Available in other repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Διαθέσιμο σε άλλα αποθετήρια</translation>
     </message>
     <message id="orn-installed-apps-description">
         <source>Only from enabled repositories</source>
@@ -770,9 +766,9 @@
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n διεργασίες σε εξέλιξη</numerusform>
+            <numerusform>%n διεργασίες σε εξέλιξη</numerusform>
         </translation>
     </message>
     <message id="orn-version-available">
@@ -781,55 +777,133 @@
     </message>
     <message id="orn-size-kb">
         <source>%0 KB</source>
-        <translation type="unfinished"></translation>
+        <translation>%0 KB</translation>
     </message>
     <message id="orn-size-mb">
         <source>%0 MB</source>
-        <translation type="unfinished"></translation>
+        <translation>%0 MB</translation>
     </message>
     <message id="orn-size-gb">
         <source>%0 GB</source>
-        <translation type="unfinished"></translation>
+        <translation>%0 GB</translation>
     </message>
     <message id="orn-error-packagenotfound">
         <source>Couldn&apos;t find package</source>
-        <translation type="unfinished"></translation>
+        <translation>Αδύνατη η εύρεση του πακέτου</translation>
     </message>
     <message id="orn-size-installed">
         <source>Installed size</source>
-        <translation type="unfinished"></translation>
+        <translation>Εγκατεστημένο μέγεθος</translation>
     </message>
     <message id="orn-size-bytes" numerus="yes">
         <source>%n byte(s)</source>
+        <translation>
+            <numerusform>%n byte</numerusform>
+            <numerusform>%n byte</numerusform>
+        </translation>
+    </message>
+    <message id="orn-size-download-install">
+        <source>Download / install size</source>
+        <translation>Μέγεθος λήψης / εγκατάστασης</translation>
+    </message>
+    <message id="orn-cat-public-transport">
+        <source>Public Transport</source>
+        <translation>Δημόσιος μεταφορέας</translation>
+    </message>
+    <message id="orn-pmstate-refreshingcache">
+        <source>Refreshing cache&lt;br /&gt;(checking for updates)</source>
+        <translation>Ανανέωση της κρυφής μνήμης&lt;br /&gt;(έλεγχος ενημερώσεων)</translation>
+    </message>
+    <message id="orn-comments-wait">
+        <source>Wait for users&apos; feedback</source>
+        <extracomment>This will be shown to an application author</extracomment>
+        <translation>Αναμονή ανάδρασης χρηστών</translation>
+    </message>
+    <message id="orn-comments-bethefirst">
+        <source>Be the first to comment</source>
+        <extracomment>This will be shown to a normal user</extracomment>
+        <translation>Σχολιάστε πρώτος-η</translation>
+    </message>
+    <message id="orn-comments-nocomments">
+        <source>There is nothing here yet</source>
+        <translation>Δεν υπάρχει τίποτα ακόμα εδώ</translation>
+    </message>
+    <message id="orn-settings">
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-updates">
+        <source>Updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-updates-notification-switch">
+        <source>Show updates notification</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-updates-check-interval">
+        <source>Updates check interval</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-interval-m" numerus="yes">
+        <source>%n minute(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
-    <message id="orn-size-download-install">
-        <source>Download / install size</source>
+    <message id="orn-interval-h" numerus="yes">
+        <source>%n hour(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message id="orn-updates-check-interval-invalid">
+        <source>The interval must be at least 10 minutes</source>
         <translation type="unfinished"></translation>
     </message>
-    <message id="orn-cat-public-transport">
-        <source>Public Transport</source>
+    <message id="orn-tag-strikeout">
+        <source>S</source>
+        <extracomment>Tag strikeout</extracomment>
         <translation type="unfinished"></translation>
     </message>
-    <message id="orn-pmstate-refreshingcache">
-        <source>Refreshing cache&lt;br /&gt;(checking for updates)</source>
+    <message id="orn-hint-commentfield">
+        <source>Swipe to see all the tag buttons</source>
         <translation type="unfinished"></translation>
     </message>
-    <message id="orn-comments-wait">
-        <source>Wait for users&apos; feedback</source>
-        <extracomment>This will be shown to an application author</extracomment>
+    <message id="orn-dcm-user2">
+        <source>Deep Thought</source>
+        <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
         <translation type="unfinished"></translation>
     </message>
-    <message id="orn-comments-bethefirst">
-        <source>Be the first to comment</source>
-        <extracomment>This will be shown to a normal user</extracomment>
+    <message id="orn-dcm-user1">
+        <source>A little white mice</source>
+        <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
         <translation type="unfinished"></translation>
     </message>
-    <message id="orn-comments-nocomments">
-        <source>There is nothing here yet</source>
+    <message id="orn-dcm-question">
+        <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
+        <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-hint-commentdelegate-created">
+        <source>7.5 million years ago</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-hint-commentdelegate">
+        <source>Tap to navigate to the replied comment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-tags">
+        <source>Tags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-tag-apps">
+        <source>Tagged Applications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-updates-check-interval-descr">
+        <source>Updates are checked only when the Storeman is running</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -3,10 +3,6 @@
 <TS version="2.1" language="ru">
 <context>
     <name></name>
-    <message id="orn-storeman">
-        <source>Storeman</source>
-        <translation>Storeman</translation>
-    </message>
     <message id="orn-notrated">
         <source>Not rated yet</source>
         <translation>Без оценки</translation>
@@ -372,19 +368,19 @@
         <translation>Прямо сейчас</translation>
     </message>
     <message id="orn-mins-ago" numerus="yes">
-        <source>%0 minute(s) ago</source>
+        <source>%n minute(s) ago</source>
         <translation>
-            <numerusform>%0 минуту назад</numerusform>
-            <numerusform>%0 минуты назад</numerusform>
-            <numerusform>%0 минут назад</numerusform>
+            <numerusform>%n минута назад</numerusform>
+            <numerusform>%n минуты назад</numerusform>
+            <numerusform>%n минут назад</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
-        <source>%0 hour(s) ago</source>
+        <source>%n hour(s) ago</source>
         <translation>
-            <numerusform>%0 час назад</numerusform>
-            <numerusform>%0 часа назад</numerusform>
-            <numerusform>%0 часов назад</numerusform>
+            <numerusform>%n час назад</numerusform>
+            <numerusform>%n часа назад</numerusform>
+            <numerusform>%n часов назад</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
@@ -837,6 +833,86 @@ Storeman не хранит ваш пароль и не передает его �
     <message id="orn-comments-nocomments">
         <source>There is nothing here yet</source>
         <translation>Здесь пока ничего нет</translation>
+    </message>
+    <message id="orn-settings">
+        <source>Settings</source>
+        <translation>Настройки</translation>
+    </message>
+    <message id="orn-updates">
+        <source>Updates</source>
+        <translation>Обновления</translation>
+    </message>
+    <message id="orn-updates-notification-switch">
+        <source>Show updates notification</source>
+        <translation>Показывать уведомление об обновлениях</translation>
+    </message>
+    <message id="orn-updates-check-interval">
+        <source>Updates check interval</source>
+        <translation>Интервал проверки обновлений</translation>
+    </message>
+    <message id="orn-interval-m" numerus="yes">
+        <source>%n minute(s)</source>
+        <translation>
+            <numerusform>%n минута</numerusform>
+            <numerusform>%n минуты</numerusform>
+            <numerusform>%n минут</numerusform>
+        </translation>
+    </message>
+    <message id="orn-interval-h" numerus="yes">
+        <source>%n hour(s)</source>
+        <translation>
+            <numerusform>%n час</numerusform>
+            <numerusform>%n часа</numerusform>
+            <numerusform>%n часов</numerusform>
+        </translation>
+    </message>
+    <message id="orn-updates-check-interval-invalid">
+        <source>The interval must be at least 10 minutes</source>
+        <translation>Интервал должен быть не менее 10 минут</translation>
+    </message>
+    <message id="orn-tag-strikeout">
+        <source>S</source>
+        <extracomment>Tag strikeout</extracomment>
+        <translation>S</translation>
+    </message>
+    <message id="orn-hint-commentfield">
+        <source>Swipe to see all the tag buttons</source>
+        <translation>Проведите, чтобы увидеть все теги</translation>
+    </message>
+    <message id="orn-dcm-user2">
+        <source>Deep Thought</source>
+        <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
+        <translation>Думатель</translation>
+    </message>
+    <message id="orn-dcm-user1">
+        <source>A little white mice</source>
+        <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
+        <translation>Белый мышонок</translation>
+    </message>
+    <message id="orn-dcm-question">
+        <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
+        <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
+        <translation>Каков ответ на Главный вопрос жизни, вселенной и всего такого?</translation>
+    </message>
+    <message id="orn-hint-commentdelegate-created">
+        <source>7.5 million years ago</source>
+        <translation>7,5 млн. лет назад</translation>
+    </message>
+    <message id="orn-hint-commentdelegate">
+        <source>Tap to navigate to the replied comment</source>
+        <translation>Коснитесь для навигации к исходному комментарию</translation>
+    </message>
+    <message id="orn-tags">
+        <source>Tags</source>
+        <translation>Ключевые слова</translation>
+    </message>
+    <message id="orn-tag-apps">
+        <source>Tagged Applications</source>
+        <translation>Отмеченные приложения</translation>
+    </message>
+    <message id="orn-updates-check-interval-descr">
+        <source>Updates are checked only when the Storeman is running</source>
+        <translation>Обновления проверяются только когда Storeman запущен</translation>
     </message>
 </context>
 </TS>

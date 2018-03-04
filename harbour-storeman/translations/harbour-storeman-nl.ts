@@ -3,10 +3,6 @@
 <TS version="2.1" language="nl">
 <context>
     <name></name>
-    <message id="orn-storeman">
-        <source>Storeman</source>
-        <translation>Storeman</translation>
-    </message>
     <message id="orn-notrated">
         <source>Not rated yet</source>
         <translation>Nog geen waardering</translation>
@@ -372,17 +368,17 @@
         <translation>Zojuist</translation>
     </message>
     <message id="orn-mins-ago" numerus="yes">
-        <source>%0 minute(s) ago</source>
+        <source>%n minute(s) ago</source>
         <translation>
-            <numerusform>%0 minuut geleden</numerusform>
+            <numerusform>%n minuut geleden</numerusform>
             <numerusform>%0 minuten geleden</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
-        <source>%0 hour(s) ago</source>
+        <source>%n hour(s) ago</source>
         <translation>
-            <numerusform>%0 uur geleden</numerusform>
-            <numerusform>%0 uur geleden</numerusform>
+            <numerusform>%n uur geleden</numerusform>
+            <numerusform>%n uur geleden</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
@@ -821,15 +817,93 @@
     <message id="orn-comments-wait">
         <source>Wait for users&apos; feedback</source>
         <extracomment>This will be shown to an application author</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Wacht op terugkoppeling van gebruikers</translation>
     </message>
     <message id="orn-comments-bethefirst">
         <source>Be the first to comment</source>
         <extracomment>This will be shown to a normal user</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Plaats de eerste reactie</translation>
     </message>
     <message id="orn-comments-nocomments">
         <source>There is nothing here yet</source>
+        <translation>Hier is er nog niets</translation>
+    </message>
+    <message id="orn-settings">
+        <source>Settings</source>
+        <translation>Instellingen</translation>
+    </message>
+    <message id="orn-updates">
+        <source>Updates</source>
+        <translation>Updates</translation>
+    </message>
+    <message id="orn-updates-notification-switch">
+        <source>Show updates notification</source>
+        <translation>Updatemeldingen tonen</translation>
+    </message>
+    <message id="orn-updates-check-interval">
+        <source>Updates check interval</source>
+        <translation>Updatecontrole-interval</translation>
+    </message>
+    <message id="orn-interval-m" numerus="yes">
+        <source>%n minute(s)</source>
+        <translation>
+            <numerusform>%n minuut</numerusform>
+            <numerusform>%n minuten</numerusform>
+        </translation>
+    </message>
+    <message id="orn-interval-h" numerus="yes">
+        <source>%n hour(s)</source>
+        <translation>
+            <numerusform>%n uur</numerusform>
+            <numerusform>%n uur</numerusform>
+        </translation>
+    </message>
+    <message id="orn-updates-check-interval-invalid">
+        <source>The interval must be at least 10 minutes</source>
+        <translation>Het interval moet minstens 10 minuten zijn</translation>
+    </message>
+    <message id="orn-tag-strikeout">
+        <source>S</source>
+        <extracomment>Tag strikeout</extracomment>
+        <translation>S</translation>
+    </message>
+    <message id="orn-hint-commentfield">
+        <source>Swipe to see all the tag buttons</source>
+        <translation>Veeg om alle tagknoppen te zien</translation>
+    </message>
+    <message id="orn-dcm-user2">
+        <source>Deep Thought</source>
+        <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
+        <translation>Deep Thought</translation>
+    </message>
+    <message id="orn-dcm-user1">
+        <source>A little white mice</source>
+        <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
+        <translation>Een kleine witte muis</translation>
+    </message>
+    <message id="orn-dcm-question">
+        <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
+        <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
+        <translation>Wat is het antwoord op de ultieme vraag over het Leven, het Universum, en Alles?</translation>
+    </message>
+    <message id="orn-hint-commentdelegate-created">
+        <source>7.5 million years ago</source>
+        <translation>7,5 miljoen jaar geleden</translation>
+    </message>
+    <message id="orn-hint-commentdelegate">
+        <source>Tap to navigate to the replied comment</source>
+        <translation>Tik om de beantwoorde reactie te bekijken</translation>
+    </message>
+    <message id="orn-tags">
+        <source>Tags</source>
+        <translation>Tags</translation>
+    </message>
+    <message id="orn-tag-apps">
+        <source>Tagged Applications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-updates-check-interval-descr">
+        <source>Updates are checked only when the Storeman is running</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

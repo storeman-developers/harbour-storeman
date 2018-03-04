@@ -3,10 +3,6 @@
 <TS version="2.1" language="hu_HU">
 <context>
     <name></name>
-    <message id="orn-storeman">
-        <source>Storeman</source>
-        <translation>Storeman</translation>
-    </message>
     <message id="orn-notrated">
         <source>Not rated yet</source>
         <translation>Nem értékelt</translation>
@@ -372,15 +368,15 @@
         <translation>Épp most</translation>
     </message>
     <message id="orn-mins-ago" numerus="yes">
-        <source>%0 minute(s) ago</source>
+        <source>%n minute(s) ago</source>
         <translation>
-            <numerusform>%0 perce</numerusform>
+            <numerusform>%n perccel ezelőtt</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
-        <source>%0 hour(s) ago</source>
+        <source>%n hour(s) ago</source>
         <translation>
-            <numerusform>%0 órája</numerusform>
+            <numerusform>%n órája</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
@@ -751,7 +747,7 @@
     </message>
     <message id="orn-version-available-global">
         <source>Available in other repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Másik csomagtárolókon elérhető</translation>
     </message>
     <message id="orn-installed-apps-description">
         <source>Only from enabled repositories</source>
@@ -798,13 +794,13 @@
     </message>
     <message id="orn-size-bytes" numerus="yes">
         <source>%n byte(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n byte</numerusform>
         </translation>
     </message>
     <message id="orn-size-download-install">
         <source>Download / install size</source>
-        <translation type="unfinished"></translation>
+        <translation>Letöltési / telepítési méret</translation>
     </message>
     <message id="orn-cat-public-transport">
         <source>Public Transport</source>
@@ -817,15 +813,91 @@
     <message id="orn-comments-wait">
         <source>Wait for users&apos; feedback</source>
         <extracomment>This will be shown to an application author</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Felhasználói visszajelzésre vár</translation>
     </message>
     <message id="orn-comments-bethefirst">
         <source>Be the first to comment</source>
         <extracomment>This will be shown to a normal user</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Legyél te az első hozzászóló</translation>
     </message>
     <message id="orn-comments-nocomments">
         <source>There is nothing here yet</source>
+        <translation>Még nincs itt semmi</translation>
+    </message>
+    <message id="orn-settings">
+        <source>Settings</source>
+        <translation>Beállítások</translation>
+    </message>
+    <message id="orn-updates">
+        <source>Updates</source>
+        <translation>Frissítések</translation>
+    </message>
+    <message id="orn-updates-notification-switch">
+        <source>Show updates notification</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-updates-check-interval">
+        <source>Updates check interval</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-interval-m" numerus="yes">
+        <source>%n minute(s)</source>
+        <translation>
+            <numerusform>%n perc</numerusform>
+        </translation>
+    </message>
+    <message id="orn-interval-h" numerus="yes">
+        <source>%n hour(s)</source>
+        <translation>
+            <numerusform>%n óra</numerusform>
+        </translation>
+    </message>
+    <message id="orn-updates-check-interval-invalid">
+        <source>The interval must be at least 10 minutes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-tag-strikeout">
+        <source>S</source>
+        <extracomment>Tag strikeout</extracomment>
+        <translation>S</translation>
+    </message>
+    <message id="orn-hint-commentfield">
+        <source>Swipe to see all the tag buttons</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-dcm-user2">
+        <source>Deep Thought</source>
+        <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
+        <translation>Mély gondolat</translation>
+    </message>
+    <message id="orn-dcm-user1">
+        <source>A little white mice</source>
+        <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
+        <translation>Egy kis fehér egér</translation>
+    </message>
+    <message id="orn-dcm-question">
+        <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
+        <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-hint-commentdelegate-created">
+        <source>7.5 million years ago</source>
+        <translation>7.5 millió évvel ezelőtt</translation>
+    </message>
+    <message id="orn-hint-commentdelegate">
+        <source>Tap to navigate to the replied comment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-tags">
+        <source>Tags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-tag-apps">
+        <source>Tagged Applications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-updates-check-interval-descr">
+        <source>Updates are checked only when the Storeman is running</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

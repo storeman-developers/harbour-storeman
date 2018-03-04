@@ -3,10 +3,6 @@
 <TS version="2.1" language="fr">
 <context>
     <name></name>
-    <message id="orn-storeman">
-        <source>Storeman</source>
-        <translation>Storeman</translation>
-    </message>
     <message id="orn-notrated">
         <source>Not rated yet</source>
         <translation>Pas encore évalué</translation>
@@ -147,23 +143,23 @@
     </message>
     <message id="orn-cat-application">
         <source>Application</source>
-        <translation>Appli</translation>
+        <translation>Divers</translation>
     </message>
     <message id="orn-cat-ambience-themes">
         <source>Ambience &amp; Themes</source>
-        <translation>Ambiance / Thème</translation>
+        <translation>Personnalisation</translation>
     </message>
     <message id="orn-cat-business">
         <source>Business</source>
-        <translation>Travail / Finance</translation>
+        <translation>Bureau</translation>
     </message>
     <message id="orn-cat-city-guides-maps">
         <source>City guides &amp; maps</source>
-        <translation>Guide / Cartographie</translation>
+        <translation>Navigation</translation>
     </message>
     <message id="orn-cat-education-science">
         <source>Education &amp; Science</source>
-        <translation>Science / Éducation</translation>
+        <translation>Éducation</translation>
     </message>
     <message id="orn-cat-entertainment">
         <source>Entertainment</source>
@@ -179,7 +175,7 @@
     </message>
     <message id="orn-cat-news-info">
         <source>News &amp; info</source>
-        <translation>Actualité / Info</translation>
+        <translation>Actualité</translation>
     </message>
     <message id="orn-cat-patches">
         <source>Patches</source>
@@ -187,7 +183,7 @@
     </message>
     <message id="orn-cat-photo-video">
         <source>Photo &amp; video</source>
-        <translation>Photo / Vidéo</translation>
+        <translation>Multimédia</translation>
     </message>
     <message id="orn-cat-social-networks">
         <source>Social Networks</source>
@@ -203,7 +199,7 @@
     </message>
     <message id="orn-cat-unknown">
         <source>Unknown</source>
-        <translation>Inconnu</translation>
+        <translation>Non classé</translation>
     </message>
     <message id="orn-cat-utilities">
         <source>Utilities</source>
@@ -215,7 +211,7 @@
     </message>
     <message id="orn-cat-game">
         <source>Game</source>
-        <translation>Passe-temps</translation>
+        <translation>Divers</translation>
     </message>
     <message id="orn-cat-action">
         <source>Action</source>
@@ -235,7 +231,7 @@
     </message>
     <message id="orn-cat-education">
         <source>Education</source>
-        <translation>Pédagogie</translation>
+        <translation>Pédagogique</translation>
     </message>
     <message id="orn-cat-puzzle">
         <source>Puzzle</source>
@@ -247,7 +243,7 @@
     </message>
     <message id="orn-cat-trivia">
         <source>Trivia</source>
-        <translation>Culture G.</translation>
+        <translation>Culture</translation>
     </message>
     <message id="orn-cat-translations">
         <source>Translations</source>
@@ -372,17 +368,17 @@
         <translation>À l&apos;instant</translation>
     </message>
     <message id="orn-mins-ago" numerus="yes">
-        <source>%0 minute(s) ago</source>
+        <source>%n minute(s) ago</source>
         <translation>
-            <numerusform>Il y a %0 minute</numerusform>
-            <numerusform>Il y a %0 minutes</numerusform>
+            <numerusform>il y a %n minute</numerusform>
+            <numerusform>il y a %n minutes</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
-        <source>%0 hour(s) ago</source>
+        <source>%n hour(s) ago</source>
         <translation>
-            <numerusform>Il y a %0 heure</numerusform>
-            <numerusform>Il y a %0 heures</numerusform>
+            <numerusform>il y a %n heure</numerusform>
+            <numerusform>il y a %n heures</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
@@ -489,7 +485,7 @@
     </message>
     <message id="orn-authorisation-expires-body">
         <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>L&apos;autorisation d&apos;OpenRepos expire. Cliquez pour renouveler l&apos;autorisation.</translation>
+        <translation>L&apos;autorisation d&apos;OpenRepos expire. Appuyez pour renouveler l&apos;autorisation.</translation>
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
@@ -497,11 +493,11 @@
     </message>
     <message id="orn-authorisation-expired-body">
         <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>L&apos;autorisation d&apos;OpenRepos a expiré. Cliquez pour renouveler l&apos;autorisation.</translation>
+        <translation>L&apos;autorisation d&apos;OpenRepos a expiré. Appuyez pour renouveler l&apos;autorisation.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
-        <translation>Cliquer pour renouveler</translation>
+        <translation>Appuyer pour renouveler</translation>
     </message>
     <message id="orn-enable-all">
         <source>Enable all</source>
@@ -572,15 +568,15 @@
     </message>
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
-        <translation>Cliquez pour y accéder</translation>
+        <translation>Appuyez pour y accéder</translation>
     </message>
     <message id="orn-updates-available-body">
         <source>Applications updates are available. Click to view details.</source>
-        <translation>Des mises à jour sont disponibles. Cliquez pour afficher les détails.</translation>
+        <translation>Des mises à jour OpenRepos sont disponibles. Appuyez pour en connaître les détails.</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>
-        <translation>Cliquez pour afficher les détails</translation>
+        <translation>Appuyez pour voir les détails</translation>
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
@@ -617,7 +613,7 @@
     </message>
     <message id="orn-restore-hint">
         <source>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</source>
-        <translation>Restaurez les dépôts et applications OpenRepos à partir du fichier sélectionné. Cette action n&apos;affecte ni les dépôts ni les applications actuellement installés sur cet appareil.</translation>
+        <translation>Restaurez les dépôts et applications OpenRepos à partir du fichier sélectionné. Cette action n&apos;affecte ni les dépôts, ni les applications actuellement installés sur cet appareil.</translation>
     </message>
     <message id="orn-created">
         <source>Created</source>
@@ -681,7 +677,7 @@
     </message>
     <message id="orn-backup-hint">
         <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
-        <translation>La sauvegarde permet d&apos;enregistrer dépôts, applications ainsi que favoris dans le cadre d&apos;une restauration future (suite à une réinitialisation de l&apos;appareil, par exemple). Il s&apos;agit d&apos;un fichier local enregistré sur &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention !&lt;/b&gt; Pensez à copier vos sauvegardes dans un emplacement sûr avant d&apos;entamer une réinitialisation de l&apos;appareil : une carte SD, un disque dur externe, un serveur Cloud...</translation>
+        <translation>La sauvegarde permet d&apos;enregistrer les dépôts, applications ainsi que les favoris dans le cadre d&apos;une restauration future (suite à une réinitialisation de l&apos;appareil, par exemple). Il s&apos;agit d&apos;un fichier local enregistré sur &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention !&lt;/b&gt; Pensez à copier vos sauvegardes dans un emplacement sûr avant d&apos;entamer une réinitialisation de l&apos;appareil : une carte SD, un disque dur externe, un serveur Cloud...</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -821,16 +817,94 @@
     <message id="orn-comments-wait">
         <source>Wait for users&apos; feedback</source>
         <extracomment>This will be shown to an application author</extracomment>
-        <translation>En attente de commentaires des utilisateurs</translation>
+        <translation>En attente de retours</translation>
     </message>
     <message id="orn-comments-bethefirst">
         <source>Be the first to comment</source>
         <extracomment>This will be shown to a normal user</extracomment>
-        <translation>Soyez le premier à faire un commentaire</translation>
+        <translation>Soyez le premier à commenter</translation>
     </message>
     <message id="orn-comments-nocomments">
         <source>There is nothing here yet</source>
         <translation>Il n&apos;y a encore rien ici</translation>
+    </message>
+    <message id="orn-settings">
+        <source>Settings</source>
+        <translation>Paramètres</translation>
+    </message>
+    <message id="orn-updates">
+        <source>Updates</source>
+        <translation>Mises à jour</translation>
+    </message>
+    <message id="orn-updates-notification-switch">
+        <source>Show updates notification</source>
+        <translation>Activer les notifications de MàJ</translation>
+    </message>
+    <message id="orn-updates-check-interval">
+        <source>Updates check interval</source>
+        <translation>Intervalle de vérif. de MàJ</translation>
+    </message>
+    <message id="orn-interval-m" numerus="yes">
+        <source>%n minute(s)</source>
+        <translation>
+            <numerusform>%n minute</numerusform>
+            <numerusform>%n minutes</numerusform>
+        </translation>
+    </message>
+    <message id="orn-interval-h" numerus="yes">
+        <source>%n hour(s)</source>
+        <translation>
+            <numerusform>%n heure</numerusform>
+            <numerusform>%n heures</numerusform>
+        </translation>
+    </message>
+    <message id="orn-updates-check-interval-invalid">
+        <source>The interval must be at least 10 minutes</source>
+        <translation>L&apos;intervalle doit être au moins de 10 minutes</translation>
+    </message>
+    <message id="orn-tag-strikeout">
+        <source>S</source>
+        <extracomment>Tag strikeout</extracomment>
+        <translation>S</translation>
+    </message>
+    <message id="orn-hint-commentfield">
+        <source>Swipe to see all the tag buttons</source>
+        <translation>Balayez pour voir l&apos;ensemble des labels</translation>
+    </message>
+    <message id="orn-dcm-user2">
+        <source>Deep Thought</source>
+        <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
+        <translation>Deep Thought</translation>
+    </message>
+    <message id="orn-dcm-user1">
+        <source>A little white mice</source>
+        <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
+        <translation>Une petite souris blanche</translation>
+    </message>
+    <message id="orn-dcm-question">
+        <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
+        <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
+        <translation>La Vie, l&apos;Univers, tout le reste... Quelle est la réponse, la seule réponse à ces questions ?</translation>
+    </message>
+    <message id="orn-hint-commentdelegate-created">
+        <source>7.5 million years ago</source>
+        <translation>Il y a 7,5 millions d&apos;années</translation>
+    </message>
+    <message id="orn-hint-commentdelegate">
+        <source>Tap to navigate to the replied comment</source>
+        <translation>Appuyez pour afficher la réponse au commentaire</translation>
+    </message>
+    <message id="orn-tags">
+        <source>Tags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-tag-apps">
+        <source>Tagged Applications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-updates-check-interval-descr">
+        <source>Updates are checked only when the Storeman is running</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

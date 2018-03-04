@@ -3,10 +3,6 @@
 <TS version="2.1" language="de_DE">
 <context>
     <name></name>
-    <message id="orn-storeman">
-        <source>Storeman</source>
-        <translation>Storeman</translation>
-    </message>
     <message id="orn-notrated">
         <source>Not rated yet</source>
         <translation>Noch nicht bewertet</translation>
@@ -98,7 +94,7 @@
     </message>
     <message id="orn-launch">
         <source>Launch</source>
-        <translation>Ausführen</translation>
+        <translation>Starten</translation>
     </message>
     <message id="orn-package-installed">
         <source>Package %0 was successfully installed</source>
@@ -283,7 +279,7 @@
     </message>
     <message id="orn-version-repo-disabled">
         <source>Enable the repository first</source>
-        <translation>Bitte zuerst die Softwarequelle aktivieren</translation>
+        <translation>Aktiviere zuerst die Softwarequelle</translation>
     </message>
     <message id="orn-search">
         <source>Search</source>
@@ -296,12 +292,12 @@
     </message>
     <message id="orn-searchpage-placeholder-noresults-hint">
         <source>Try to change search keywords</source>
-        <translation>Bitte den Suchbegriff ändern</translation>
+        <translation>Versuche den Suchbegriff zu ändern</translation>
     </message>
     <message id="orn-searchfield-placeholder">
         <source>Search</source>
         <extracomment>The search field placeholder text - should be a verb</extracomment>
-        <translation>Suche</translation>
+        <translation>Suchen</translation>
     </message>
     <message id="orn-searchpage-placeholder-default">
         <source>Search results will be shown here</source>
@@ -372,17 +368,17 @@
         <translation>Gerade</translation>
     </message>
     <message id="orn-mins-ago" numerus="yes">
-        <source>%0 minute(s) ago</source>
+        <source>%n minute(s) ago</source>
         <translation>
-            <numerusform>Vor %0 Minute</numerusform>
-            <numerusform>Vor %0 Minuten</numerusform>
+            <numerusform>vor %n Minute</numerusform>
+            <numerusform>vor %n Minuten</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
-        <source>%0 hour(s) ago</source>
+        <source>%n hour(s) ago</source>
         <translation>
-            <numerusform>Vor %0 Stunde</numerusform>
-            <numerusform>Vor %0 Stunden</numerusform>
+            <numerusform>vor %n Stunde</numerusform>
+            <numerusform>vor %n Stunden</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
@@ -438,7 +434,7 @@
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
-        <translation>Melde dich bei OpenRepos.net an, um Programme zu kommentieren und auf Kommentare zu antworten. &lt;br /&gt;&lt;br /&gt;Storeman speichert weder dein Passwort, noch wird es an dritte weitergegeben.</translation>
+        <translation>Melde dich bei OpenRepos.net an, um Programme zu kommentieren und auf Kommentare zu antworten. &lt;br /&gt;&lt;br /&gt;Dein Passwort wird von Storeman weder gespeichert, noch an dritte weitergegeben.</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
@@ -593,7 +589,7 @@
     </message>
     <message id="orn-backup-description">
         <source>Backup and restore repos and installed apps</source>
-        <translation>Quellen und installierte Programme sichern und wiederherstellen</translation>
+        <translation>Quellen/Apps sichern und wiederherstellen</translation>
     </message>
     <message id="orn-create-backup">
         <source>Create a backup</source>
@@ -605,7 +601,7 @@
     </message>
     <message id="orn-backup-error-directory">
         <source>Could not create directory</source>
-        <translation>Konnte Verzechnis nicht erstellen</translation>
+        <translation>Konnte Verzeichnis nicht erstellen</translation>
     </message>
     <message id="orn-restore-title">
         <source>Restore from a file</source>
@@ -681,7 +677,7 @@
     </message>
     <message id="orn-backup-hint">
         <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
-        <translation>Backup ermöglicht es dir deine OpenRepos-Quellen, installierte Programme und Lesezeichen zu sichern und später wiederherzustellen (zum Beispiel nach dem Zurücksetzen auf Werkseinstellung). Ein Backup ist eine lokale Datei die im Ordner &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;abgelegt wird. &lt;br /&gt;&lt;br /&gt;&lt;b&gt;Achtung!&lt;/b&gt;Du solltest die Backups vor einem Zurücksetzen auf Werkseinstellung an einen sicheren Ort kopieren. Das könnte zum Beispiel die SD-Karte, ein externes Gerät, in der Cloud oder ähnliches sein.</translation>
+        <translation>Ein Backup ermöglicht es dir deine OpenRepos-Quellen, installierte Programme und Lesezeichen zu sichern und später wiederherzustellen (zum Beispiel nach dem Zurücksetzen auf Werkseinstellung). Ein Backup ist eine lokale Datei die im Ordner &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; abgelegt wird. &lt;br /&gt;&lt;br /&gt;&lt;b&gt;Achtung!&lt;/b&gt; Du solltest die Backups vor einem Zurücksetzen auf Werkseinstellung an einen sicheren Ort kopieren. Das könnte zum Beispiel die SD-Karte, ein externes Gerät, Cloud-Speicher oder ähnliches sein.</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -831,6 +827,84 @@
     <message id="orn-comments-nocomments">
         <source>There is nothing here yet</source>
         <translation>Hier ist noch nichts</translation>
+    </message>
+    <message id="orn-settings">
+        <source>Settings</source>
+        <translation>Einstellungen</translation>
+    </message>
+    <message id="orn-updates">
+        <source>Updates</source>
+        <translation>Updates</translation>
+    </message>
+    <message id="orn-updates-notification-switch">
+        <source>Show updates notification</source>
+        <translation>Zeige Update-Benachrichtigungen</translation>
+    </message>
+    <message id="orn-updates-check-interval">
+        <source>Updates check interval</source>
+        <translation>Aktualisierungsintervall</translation>
+    </message>
+    <message id="orn-interval-m" numerus="yes">
+        <source>%n minute(s)</source>
+        <translation>
+            <numerusform>%n Minute</numerusform>
+            <numerusform>%n Minuten</numerusform>
+        </translation>
+    </message>
+    <message id="orn-interval-h" numerus="yes">
+        <source>%n hour(s)</source>
+        <translation>
+            <numerusform>%n Stunde</numerusform>
+            <numerusform>%n Stunden</numerusform>
+        </translation>
+    </message>
+    <message id="orn-updates-check-interval-invalid">
+        <source>The interval must be at least 10 minutes</source>
+        <translation>Der Intervall muss mindestens 10 Minuten betragen</translation>
+    </message>
+    <message id="orn-tag-strikeout">
+        <source>S</source>
+        <extracomment>Tag strikeout</extracomment>
+        <translation>S</translation>
+    </message>
+    <message id="orn-hint-commentfield">
+        <source>Swipe to see all the tag buttons</source>
+        <translation>Wischen um alle Tags zu sehen</translation>
+    </message>
+    <message id="orn-dcm-user2">
+        <source>Deep Thought</source>
+        <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
+        <translation>Deep Thought</translation>
+    </message>
+    <message id="orn-dcm-user1">
+        <source>A little white mice</source>
+        <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
+        <translation>Eine kleine weiße Maus</translation>
+    </message>
+    <message id="orn-dcm-question">
+        <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
+        <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
+        <translation>Was ist die Antwort auf die Frage nach dem Leben, dem Universum und dem ganzen Rest?</translation>
+    </message>
+    <message id="orn-hint-commentdelegate-created">
+        <source>7.5 million years ago</source>
+        <translation>vor 7,5 Millionen Jahren</translation>
+    </message>
+    <message id="orn-hint-commentdelegate">
+        <source>Tap to navigate to the replied comment</source>
+        <translation>Tippen um zu dem beantworteten Kommentar zu gelangen</translation>
+    </message>
+    <message id="orn-tags">
+        <source>Tags</source>
+        <translation>Tags</translation>
+    </message>
+    <message id="orn-tag-apps">
+        <source>Tagged Applications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-updates-check-interval-descr">
+        <source>Updates are checked only when the Storeman is running</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
