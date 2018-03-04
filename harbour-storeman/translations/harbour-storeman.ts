@@ -902,5 +902,9 @@
         <source>Tagged Applications</source>
         <translation>Tagged Applications</translation>
     </message>
+    <message id="orn-updates-check-interval-descr">
+        <source>Updates are checked only when the Storeman is running</source>
+        <translation>Updates are checked only when the Storeman is running</translation>
+    </message>
 </context>
 </TS>

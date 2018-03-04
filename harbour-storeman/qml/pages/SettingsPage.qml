@@ -54,6 +54,8 @@ Page {
                         return res
                     }
                 }
+                //% "Updates are checked only when the Storeman is running"
+                description: qsTrId("orn-updates-check-interval-descr")
 
                 onClicked: {
                     var m = Storeman.updateInterval / 60000
