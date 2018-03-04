@@ -1,3 +1,15 @@
+* Sun Mar 4 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.20-1
+- Add settings page
+- Comment field - add the strikeout tag
+- Comments page - show touch hints on the first usage
+- Cover page - add placeholder
+- Show status for applications in lists (installed, an update is available ...)
+- Application page - check if commenting is enabled
+- Add applications tags
+- Bookmarks page - faster loading
+- Refactoring
+- Update translations
+
 * Fri Feb 23 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.19-1
 - Fix #38
 - Fix comment field clearing
