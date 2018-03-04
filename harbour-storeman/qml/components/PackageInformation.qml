@@ -62,6 +62,7 @@ GridLayout {
     BookmarkButton {
         id: star
         Layout.rowSpan: 2
+        appId: app.appId
     }
 
     Row {
@@ -75,6 +76,8 @@ GridLayout {
 
         RatingBox {
             width: implicitWidth + Theme.paddingLarge
+            ratingCount: app.ratingCount
+            rating: app.rating
         }
 
         IconLabel {

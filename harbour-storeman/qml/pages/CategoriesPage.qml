@@ -31,13 +31,13 @@ Page {
 
         delegate: MoreButton {
             height: Theme.itemSizeExtraSmall
-            text: categoryData.name
-            depth: categoryData.depth
+            text: model.name
+            depth: model.depth
             textAlignment: Text.AlignLeft
 
             onClicked: pageStack.push(Qt.resolvedUrl("CategoryPage.qml"), {
-                                          categoryId: categoryData.tid,
-                                          categoryName: categoryData.name
+                                          categoryId: model.categoryId,
+                                          categoryName: model.name
                                       })
         }
 

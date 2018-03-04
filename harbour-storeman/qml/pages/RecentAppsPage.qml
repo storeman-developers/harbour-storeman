@@ -32,7 +32,7 @@ Page {
         delegate: AppListDelegate { }
 
         section {
-            property: "appData.sinceUpdate"
+            property: "sinceUpdate"
             delegate: SectionHeader {
                 text: section
             }

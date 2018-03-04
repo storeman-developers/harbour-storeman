@@ -12,7 +12,7 @@ Page {
         anchors.fill: parent
         model: OrnProxyModel {
             id: proxyModel
-            sortRole: OrnBookmarksModel.TitleRole
+            sortRole: OrnBookmarksModel.SortRole
             sortCaseSensitivity: Qt.CaseInsensitive
             sourceModel: OrnBookmarksModel {
                 id: bookmarksModel
@@ -26,7 +26,7 @@ Page {
         }
 
         section {
-            property: "appData.title"
+            property: "title"
             criteria: ViewSection.FirstCharacter
             delegate: SectionHeader {
                 text: section.toUpperCase()

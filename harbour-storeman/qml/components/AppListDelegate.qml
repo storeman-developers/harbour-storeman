@@ -6,18 +6,21 @@ ListItem {
     property bool returnToUser: false
     property alias showUser: userNameLabel.visible
     property int previousAppId: -1
-    // To reduce calls of model data() method store item data in a property
-    readonly property var app: appData
 
     contentHeight: Theme.itemSizeExtraLarge
 
-    onClicked: previousAppId === app.appId ?
-                   // Trying to open a page for the previous application, so just go back
-                   pageStack.navigateBack() :
-                   pageStack.push(Qt.resolvedUrl("../pages/ApplicationPage.qml"), {
-                                  appId: app.appId,
-                                  returnToUser: returnToUser
-                              })
+    onClicked: {
+        var appId = model.appId
+        if (previousAppId === appId) {
+            // Trying to open a page for the previous application, so just go back
+            pageStack.navigateBack()
+        } else {
+            pageStack.push(Qt.resolvedUrl("../pages/ApplicationPage.qml"), {
+                               appId: appId,
+                               returnToUser: returnToUser
+                           })
+        }
+    }
 
     Row {
         id: row
@@ -32,7 +35,7 @@ ListItem {
             width: Theme.iconSizeLauncher
             height: Theme.iconSizeLauncher
             fillMode: Image.PreserveAspectFit
-            source: app.iconSource ? app.iconSource : "qrc:/images/appicon.png"
+            source: model.iconSource ? model.iconSource : "qrc:/images/appicon.png"
         }
 
         Column {
@@ -48,7 +51,7 @@ ListItem {
                 verticalAlignment: Qt.AlignVCenter
                 font.pixelSize: Theme.fontSizeExtraSmall
                 wrapMode: Text.WordWrap
-                text: app.title
+                text: model.title
             }
 
             Label {
@@ -56,7 +59,7 @@ ListItem {
                 width: parent.width
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: Theme.secondaryColor
-                text: app.category
+                text: model.category
             }
 
             Row {
@@ -64,6 +67,8 @@ ListItem {
 
                 RatingBox {
                     id: ratingBox
+                    ratingCount: model.ratingCount
+                    rating: model.rating
                 }
 
                 Label {
@@ -74,8 +79,8 @@ ListItem {
                     truncationMode: TruncationMode.Fade
                     font.pixelSize: Theme.fontSizeTiny
                     color: Theme.highlightColor
-                    text: app.userName + "\u2009\u2022\u2009" +
-                          app.createDate.toLocaleDateString(_locale, Locale.NarrowFormat)
+                    text: model.userName + "\u2009\u2022\u2009" +
+                          model.createDate.toLocaleDateString(_locale, Locale.NarrowFormat)
                 }
 
                 Loader {
@@ -116,5 +121,6 @@ ListItem {
             rightMargin: Theme.paddingSmall
             topMargin: Theme.paddingSmall
         }
+        appId: model.appId
     }
 }

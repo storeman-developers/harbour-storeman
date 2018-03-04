@@ -3,14 +3,13 @@ import Sailfish.Silica 1.0
 import harbour.orn 1.0
 
 ListItem {
-    readonly property var comment: commentData
-    readonly property bool _userComment: OrnClient.userId === comment.userId
-    readonly property bool _authorComment: comment.userId === userId
+    readonly property bool _userComment: OrnClient.userId === model.userId
+    readonly property bool _authorComment: model.userId === userId
     // Need for hint mode
     readonly property alias replyToLabel: replyToLabel
 
     function _setSinceCreated() {
-        var created = comment.created
+        var created = model.created
         if (_hintMode) {
             createdLabel.text = created
             return
@@ -56,14 +55,14 @@ ListItem {
             //: Menu item to reply for a comment - should be a verb
             //% "Reply"
             text: qsTrId("orn-reply")
-            onClicked: commentField.item.reply(comment.commentId, comment.userName, comment.text)
+            onClicked: commentField.item.reply(model.commentId, model.userName, model.text)
         }
 
         MenuItem {
             //% "Edit"
             text: qsTrId("orn-edit")
             visible: _userComment
-            onClicked: commentField.item.edit(comment.commentId, comment.text)
+            onClicked: commentField.item.edit(model.commentId, model.text)
         }
 
 //        MenuItem {
@@ -99,8 +98,8 @@ ListItem {
                 width: Theme.iconSizeMedium
                 height: Theme.iconSizeMedium
                 fillMode: Image.PreserveAspectFit
-                source: comment.userIconSource ? comment.userIconSource :
-                                                 "image://theme/icon-m-person?" + Theme.highlightColor
+                source: model.userIconSource ? model.userIconSource :
+                                               "image://theme/icon-m-person?" + Theme.highlightColor
             }
 
             Column {
@@ -119,7 +118,7 @@ ListItem {
                     wrapMode: Text.WordWrap
                     text: (_userComment ? "<img src='image://theme/icon-s-edit'> " :
                                           _authorComment ? "<img src='image://theme/icon-s-developer'> " : "") +
-                          comment.userName
+                          model.userName
                 }
 
                 Label {
@@ -133,22 +132,19 @@ ListItem {
                 }
 
                 Label {
-                    readonly property var replyTo: commentsList.model.findItem(comment.parentId)
-
                     id: replyToLabel
                     width: parent.width
                     color: highlighted ? Theme.highlightColor : Theme.primaryColor
-                    visible: replyTo
+                    visible: model.parentId !== 0
                     font.pixelSize: Theme.fontSizeExtraSmall
                     wrapMode: Text.WordWrap
                     //: Active label to navigate to the original comment - should be a noun
                     //% "Reply to %0"
-                    text: visible ? qsTrId("orn-reply-to").arg(replyTo.userName) : ""
+                    text: visible ? qsTrId("orn-reply-to").arg(model.parentUserName) : ""
 
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: moveAnimation.moveTo(
-                                       commentsModel.findItemRow(parent.replyTo.commentId))
+                        onClicked: moveAnimation.moveTo(commentsList.model.findItemRow(model.parentId))
                     }
                 }
             }
@@ -161,7 +157,7 @@ ListItem {
             font.pixelSize: Theme.fontSizeSmall
             wrapMode: Text.WordWrap
             textFormat: Text.RichText
-            text: comment.text
+            text: model.text
                 .replace(/<a([^>]*)>([^<]+)<\/a>/g,
                          '<a$1><font color="%0">$2</font></a>'.arg(Theme.primaryColor))
                 .replace(/<pre>([^<]+)<\/pre>/g,

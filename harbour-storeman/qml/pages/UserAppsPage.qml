@@ -26,7 +26,7 @@ Page {
 
         model: OrnProxyModel {
             id: proxyModel
-            sortRole: OrnUserAppsModel.TitleRole
+            sortRole: OrnUserAppsModel.SortRole
             sourceModel: OrnUserAppsModel {
                 id: appsModel
                 onRowsInserted: proxyModel.sort(Qt.AscendingOrder)
