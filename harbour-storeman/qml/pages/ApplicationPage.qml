@@ -87,6 +87,17 @@ Page {
             }
 
             MoreButton {
+                visible: app.tagIds.length
+                text: qsTrId("orn-tags")
+                onClicked: pageStack.push(Qt.resolvedUrl("TagsPage.qml"), {
+                                              tagIds: app.tagIds,
+                                              appName: app.title,
+                                              appIconSource: app.iconSource,
+                                              previousAppId: app.appId
+                                          })
+            }
+
+            MoreButton {
                 //% "More by %0"
                 text: qsTrId("orn-author-apps").arg(app.userName)
                 onClicked: returnToUser ?

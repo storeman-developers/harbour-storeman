@@ -42,6 +42,8 @@ OTHER_FILES +=  \
     qml/pages/ChangelogPage.qml \
     qml/pages/UserAppsPage.qml \
     qml/pages/CommentsPage.qml \
+    qml/pages/TagsPage.qml \
+    qml/pages/TagAppsPage.qml \
     qml/pages/SearchPage.qml \
     qml/pages/AboutPage.qml \
     qml/pages/TranslationsPage.qml \
@@ -78,6 +80,7 @@ OTHER_FILES +=  \
     qml/components/MenuStatusLabel.qml \
     qml/components/StoremanHint.qml \
     qml/components/StoremanHintLabel.qml \
+    qml/components/TagDelegate.qml \
     qml/models/DevelopersModel.qml \
     qml/models/TranslatorsModel.qml \
     qml/models/DummyCommentsModel.qml

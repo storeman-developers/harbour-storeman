@@ -894,5 +894,13 @@
         <source>Tap to navigate to the replied comment</source>
         <translation>Tap to navigate to the replied comment</translation>
     </message>
+    <message id="orn-tags">
+        <source>Tags</source>
+        <translation>Tags</translation>
+    </message>
+    <message id="orn-tag-apps">
+        <source>Tagged Applications</source>
+        <translation>Tagged Applications</translation>
+    </message>
 </context>
 </TS>

@@ -6,6 +6,7 @@ ListItem {
     property bool returnToUser: false
     property alias showUser: userNameLabel.visible
     property int previousAppId: -1
+    property int previousStep: 1
 
     contentHeight: Theme.itemSizeExtraLarge
 
@@ -13,7 +14,11 @@ ListItem {
         var appId = model.appId
         if (previousAppId === appId) {
             // Trying to open a page for the previous application, so just go back
-            pageStack.navigateBack()
+            var p = pageStack.previousPage()
+            for (var i = 1; i < previousStep; ++i) {
+                p = pageStack.previousPage(p)
+            }
+            pageStack.pop(p)
         } else {
             pageStack.push(Qt.resolvedUrl("../pages/ApplicationPage.qml"), {
                                appId: appId,
