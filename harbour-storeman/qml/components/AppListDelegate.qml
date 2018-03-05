@@ -90,7 +90,6 @@ ListItem {
 
                 Loader {
                     readonly property var _packageStatus: packageStatus
-                    property string _icon
 
                     id: statusLoader
                     anchors.verticalCenter: parent.verticalCenter

@@ -255,7 +255,6 @@ ApplicationWindow
                 break
             case OrnPm.ErrorDepResolutionFailed:
                 var match = details.match(/nothing provides (.*) needed by (.*)/)
-                console.log(match)
                 //: A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.
                 //% "Nothing provides %1 needed by %2"
                 details = qsTrId("orn-error-depresolution").arg(match[1]).arg(match[2])
