@@ -4,7 +4,7 @@ import harbour.orn 1.0
 
 ListItem {
     readonly property bool _userComment: OrnClient.userId === model.userId
-    readonly property bool _authorComment: model.userId === userId
+    readonly property bool _authorComment: model.userId === page.userId
     // Need for hint mode
     readonly property alias replyToLabel: replyToLabel
 
