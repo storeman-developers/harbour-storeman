@@ -143,7 +143,7 @@ Page {
                     hintText = qsTrId("orn-pull-refresh")
                     return qsTrId("orn-network-error")
                 }
-                if (commentsList.count === 0) {
+                if (commentsList.count === 0 && !hasComments) {
                     if (OrnClient.userId === userId) {
                         //: This will be shown to an application author
                         //% "Wait for users' feedback"
