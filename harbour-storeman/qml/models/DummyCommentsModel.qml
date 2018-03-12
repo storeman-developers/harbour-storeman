@@ -20,7 +20,7 @@ ListModel {
         created: qsTrId("orn-hint-commentdelegate-created")
         commentId: 1
         //: https://simple.wikipedia.org/wiki/42_(answer)
-        //% "A little white mice"
+        //% "A little white mouse"
         userName: qsTrId("orn-dcm-user1")
         //: https://simple.wikipedia.org/wiki/42_(answer)
         //% "What is the Answer to the Ultimate Question of Life, the Universe, and Everything?"
