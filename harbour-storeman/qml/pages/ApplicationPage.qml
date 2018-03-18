@@ -7,20 +7,25 @@ Page {
     property bool returnToUser: false
     property alias appId: app.appId
     readonly property int _packageStatus: app.packageStatus
+    property bool _loaded: false
 
     id: page
     allowedOrientations: defaultAllowedOrientations
 
     onStatusChanged: {
         // Wait until page loads to prevent lagging
-        if (status === PageStatus.Active) {
+        // And don't call ornRequest() if the app was already loaded
+        if (!_loaded && status === PageStatus.Active) {
             app.ornRequest()
         }
     }
 
     OrnApplication {
         id: app
-        onOrnRequestFinished: flickable.visible = true
+        onOrnRequestFinished: {
+            flickable.visible = true
+            _loaded = true
+        }
     }
 
     BusyIndicator {
