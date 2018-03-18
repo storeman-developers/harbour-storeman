@@ -873,9 +873,9 @@
         <translation>Deep Thought</translation>
     </message>
     <message id="orn-dcm-user1">
-        <source>A little white mice</source>
+        <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>A little white mice</translation>
+        <translation>A little white mouse</translation>
     </message>
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
@@ -901,6 +901,22 @@
     <message id="orn-updates-check-interval-descr">
         <source>Updates are checked only when the Storeman is running</source>
         <translation>Updates are checked only when the Storeman is running</translation>
+    </message>
+    <message id="orn-rate-app">
+        <source>Rate the application</source>
+        <translation>Rate the application</translation>
+    </message>
+    <message id="orn-vote-send">
+        <source>Your vote has been sent</source>
+        <translation>Your vote has been sent</translation>
+    </message>
+    <message id="orn-login2rate">
+        <source>Log in to rate the application</source>
+        <translation>Log in to rate the application</translation>
+    </message>
+    <message id="orn-hint-rating">
+        <source>Tap to rate the application</source>
+        <translation>Tap to rate the application</translation>
     </message>
 </context>
 </TS>
