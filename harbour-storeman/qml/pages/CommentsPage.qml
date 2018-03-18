@@ -24,13 +24,10 @@ Page {
                 commentsList.model = dcmComp.createObject()
 
                 var label = commentsList.currentItem.replyToLabel
-                var halfSize = Theme.itemSizeLarge / 2
-
                 var shComp = Qt.createComponent(Qt.resolvedUrl("../components/StoremanHint.qml"))
                 var shObj = shComp.createObject(label, {
                                                     distance: 0.0,
-                                                    startX: label.x + label.implicitWidth / 2 - halfSize,
-                                                    startY: label.y + label.height / 2 - halfSize
+                                                    "anchors.centerIn": label
                                                 })
 
                 var shlComp = Qt.createComponent(Qt.resolvedUrl("../components/StoremanHintLabel.qml"))
