@@ -8,7 +8,7 @@ Dialog {
     canAccept: networkManager.online &&
                usernameField.text &&
                usernameField.acceptableInput &&
-               passwordField.text
+               passwordField.acceptableInput
 
     onAccepted: OrnClient.login(usernameField.text, passwordField.text)
 
@@ -85,6 +85,7 @@ Dialog {
             PasswordField {
                 id: passwordField
                 width: parent.width
+                validator: RegExpValidator { regExp: /^.{1,}$/ }
 
                 EnterKey.iconSource: "image://theme/icon-m-enter-accept"
                 EnterKey.enabled: dialog.canAccept
