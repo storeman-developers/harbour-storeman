@@ -18,7 +18,8 @@ public:
     enum Hint
     {
         CommentDelegateHint,
-        CommentFieldHint
+        CommentFieldHint,
+        ApplicationRatingHint
     };
     Q_ENUM(Hint)
 

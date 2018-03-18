@@ -5,6 +5,7 @@ import harbour.orn 1.0
 
 GridLayout {
     property alias statusLabel: statusLabel
+    property alias ratingBox: ratingBox
 
     anchors {
         left: parent.left
@@ -75,9 +76,20 @@ GridLayout {
         }
 
         RatingBox {
+            id: ratingBox
             width: implicitWidth + Theme.paddingLarge
             ratingCount: app.ratingCount
             rating: app.rating
+
+            MouseArea {
+                width: parent.width
+                height: Theme.itemSizeMedium
+                anchors.verticalCenter: parent.verticalCenter
+                onClicked: pageStack.push(Qt.resolvedUrl("../pages/VotingPage.qml"), {
+                                              appId: app.appId,
+                                              userVote: app.userVote
+                                          }, PageStackAction.Immediate)
+            }
         }
 
         IconLabel {

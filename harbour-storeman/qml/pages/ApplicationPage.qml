@@ -25,6 +25,30 @@ Page {
         onOrnRequestFinished: {
             flickable.visible = true
             _loaded = true
+            // Show rating hint
+            if (Storeman.showHint(Storeman.ApplicationRatingHint)) {
+                var shComp = Qt.createComponent(Qt.resolvedUrl("../components/StoremanHint.qml"))
+                var shObj = shComp.createObject(packageInfo.ratingBox, {
+                    distance: 0.0,
+                    "anchors.centerIn": packageInfo.ratingBox
+                })
+
+                var shlComp = Qt.createComponent(Qt.resolvedUrl("../components/StoremanHintLabel.qml"))
+                var shlObj = shlComp.createObject(page, {
+                    hint: shObj,
+                    //% "Tap to rate the application"
+                    text: qsTrId("orn-hint-rating"),
+                    "anchors.bottom": page.bottom
+                })
+
+                shlObj.finished.connect(function() {
+                    Storeman.setHintShowed(Storeman.ApplicationRatingHint)
+                    shlObj.destroy()
+                    shObj.destroy()
+                })
+
+                shObj.start()
+            }
         }
     }
 
