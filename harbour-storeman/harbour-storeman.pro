@@ -21,6 +21,8 @@ PRE_TARGETDEPS += $$OUT_PWD/../ornplugin/libornplugin.a
 INCLUDEPATH += ../ornplugin/src
 QML_IMPORT_PATH += ../ornplugin
 
+include(../ornplugin/include_packagekit.pri)
+
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 256x256
 
 SOURCES += \
