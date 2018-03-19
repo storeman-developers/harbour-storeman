@@ -424,13 +424,9 @@
         <translation>Aanmelden</translation>
     </message>
     <message id="orn-username">
-        <source>Username</source>
-        <translation>Gebruikersnaam</translation>
-    </message>
-    <message id="orn-acceptable-username">
-        <source>Only letters, numbers, and underscores</source>
+        <source>Username or e-mail address</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation>Enkel letters, cijfers en onderstreepjes</translation>
+        <translation>Gebruikersnaam of e-mailadres</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
@@ -877,7 +873,7 @@
         <translation>Deep Thought</translation>
     </message>
     <message id="orn-dcm-user1">
-        <source>A little white mice</source>
+        <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
         <translation>Een kleine witte muis</translation>
     </message>
@@ -900,11 +896,27 @@
     </message>
     <message id="orn-tag-apps">
         <source>Tagged Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Getagde apps</translation>
     </message>
     <message id="orn-updates-check-interval-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation type="unfinished"></translation>
+        <translation>Storeman controleert enkel op updates wanneer het actief is</translation>
+    </message>
+    <message id="orn-rate-app">
+        <source>Rate the application</source>
+        <translation>Beoordeel de app</translation>
+    </message>
+    <message id="orn-vote-send">
+        <source>Your vote has been sent</source>
+        <translation>Je stem is verzonden</translation>
+    </message>
+    <message id="orn-login2rate">
+        <source>Log in to rate the application</source>
+        <translation>Meld je aan om de app te beoordelen</translation>
+    </message>
+    <message id="orn-hint-rating">
+        <source>Tap to rate the application</source>
+        <translation>Tik om de app te beoordelen</translation>
     </message>
 </context>
 </TS>

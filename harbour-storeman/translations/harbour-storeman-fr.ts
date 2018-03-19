@@ -424,13 +424,9 @@
         <translation>Connexion</translation>
     </message>
     <message id="orn-username">
-        <source>Username</source>
-        <translation>Nom d&apos;utilisateur</translation>
-    </message>
-    <message id="orn-acceptable-username">
-        <source>Only letters, numbers, and underscores</source>
+        <source>Username or e-mail address</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation>Chiffres, lettres et underscores uniquement</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
@@ -877,9 +873,9 @@
         <translation>Deep Thought</translation>
     </message>
     <message id="orn-dcm-user1">
-        <source>A little white mice</source>
+        <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>Une petite souris blanche</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
@@ -896,14 +892,30 @@
     </message>
     <message id="orn-tags">
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Mots-clefs</translation>
     </message>
     <message id="orn-tag-apps">
         <source>Tagged Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Applications marquées</translation>
     </message>
     <message id="orn-updates-check-interval-descr">
         <source>Updates are checked only when the Storeman is running</source>
+        <translation>Les mises à jour sont vérifiées uniquement lorsque le Storeman est en cours d&apos;exécution</translation>
+    </message>
+    <message id="orn-rate-app">
+        <source>Rate the application</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-vote-send">
+        <source>Your vote has been sent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-login2rate">
+        <source>Log in to rate the application</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-hint-rating">
+        <source>Tap to rate the application</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

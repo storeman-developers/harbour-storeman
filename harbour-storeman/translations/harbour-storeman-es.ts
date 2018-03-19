@@ -119,7 +119,7 @@
     <message id="orn-dt-format">
         <source>yyyy-dd-MM hh:mm</source>
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation>dd-MM-yyyy hh:mm</translation>
+        <translation>hh:mm dd-MM-yyyy</translation>
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
@@ -424,13 +424,9 @@
         <translation>Iniciar sesión</translation>
     </message>
     <message id="orn-username">
-        <source>Username</source>
-        <translation>Nombre de usuario</translation>
-    </message>
-    <message id="orn-acceptable-username">
-        <source>Only letters, numbers, and underscores</source>
+        <source>Username or e-mail address</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation>Sólo letras, números y guiones bajos</translation>
+        <translation>Nombre de usuario o correo</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
@@ -677,7 +673,7 @@
     </message>
     <message id="orn-backup-hint">
         <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
-        <translation>La copia de seguridad te permite guardar tus repositorios actuales de OpenRepos, las aplicaciones instaladas y las favoritas y restaurarlas después (por ejemplo, tras un reseteo de fábrica). Una copia de seguridad es un archivo local que se guarda en el directorio&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;¡Atención!&lt;/b&gt; Debes copiar tus copias de seguridad en algún lugar seguro antes de hacer un reseteo de fábrica. Podría ser tu tarjeta SD, dispositivo externo, almacenamiento en la nube o cualquier otro.</translation>
+        <translation>La copia de seguridad te permite guardar tus repositorios actuales de OpenRepos, las aplicaciones instaladas y las favoritas y restaurarlas después (por ejemplo, tras un reseteo de fábrica). Una copia de seguridad es un archivo local que se guarda en el directorio&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;¡Atención!&lt;/b&gt; Debes copiar tus copias de seguridad manualmente en algún lugar seguro antes de hacer un reseteo de fábrica. Podría ser tu tarjeta SD, dispositivo externo, almacenamiento en la nube o cualquier otro.</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -838,7 +834,7 @@
     </message>
     <message id="orn-updates-notification-switch">
         <source>Show updates notification</source>
-        <translation>Mostrar notificación de actualización</translation>
+        <translation>Mostrar notificaciones</translation>
     </message>
     <message id="orn-updates-check-interval">
         <source>Updates check interval</source>
@@ -874,17 +870,17 @@
     <message id="orn-dcm-user2">
         <source>Deep Thought</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>Pensamiento profundo</translation>
+        <translation>Pensamiento Profundo</translation>
     </message>
     <message id="orn-dcm-user1">
-        <source>A little white mice</source>
+        <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
         <translation>Un pequeño ratón blanco</translation>
     </message>
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>¿Cuál es la respuesta a la última pregunta sobre la vida, el universo y todo lo demás?</translation>
+        <translation>¿Cuál es la respuesta al sentido de la vida, el universo y todo lo demás?</translation>
     </message>
     <message id="orn-hint-commentdelegate-created">
         <source>7.5 million years ago</source>
@@ -896,15 +892,31 @@
     </message>
     <message id="orn-tags">
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiquetas</translation>
     </message>
     <message id="orn-tag-apps">
         <source>Tagged Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplicaciones etiquetadas</translation>
     </message>
     <message id="orn-updates-check-interval-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation type="unfinished"></translation>
+        <translation>Las actualizaciones sólo se comprueban cuando Storeman está ejecutándose</translation>
+    </message>
+    <message id="orn-rate-app">
+        <source>Rate the application</source>
+        <translation>Valorar aplicación</translation>
+    </message>
+    <message id="orn-vote-send">
+        <source>Your vote has been sent</source>
+        <translation>Tu voto se ha enviado</translation>
+    </message>
+    <message id="orn-login2rate">
+        <source>Log in to rate the application</source>
+        <translation>Inicia sesión para valorar aplicación</translation>
+    </message>
+    <message id="orn-hint-rating">
+        <source>Tap to rate the application</source>
+        <translation>Da un toque para valorar aplicación</translation>
     </message>
 </context>
 </TS>

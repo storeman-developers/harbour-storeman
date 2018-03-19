@@ -426,13 +426,9 @@
         <translation>Войти</translation>
     </message>
     <message id="orn-username">
-        <source>Username</source>
-        <translation>Имя пользователя</translation>
-    </message>
-    <message id="orn-acceptable-username">
-        <source>Only letters, numbers, and underscores</source>
+        <source>Username or e-mail address</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation>Только буквы, цифры и подчеркивание</translation>
+        <translation>Имя пользователя или email</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
@@ -885,7 +881,7 @@ Storeman не хранит ваш пароль и не передает его �
         <translation>Думатель</translation>
     </message>
     <message id="orn-dcm-user1">
-        <source>A little white mice</source>
+        <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
         <translation>Белый мышонок</translation>
     </message>
@@ -913,6 +909,22 @@ Storeman не хранит ваш пароль и не передает его �
     <message id="orn-updates-check-interval-descr">
         <source>Updates are checked only when the Storeman is running</source>
         <translation>Обновления проверяются только когда Storeman запущен</translation>
+    </message>
+    <message id="orn-rate-app">
+        <source>Rate the application</source>
+        <translation>Оценить приложение</translation>
+    </message>
+    <message id="orn-vote-send">
+        <source>Your vote has been sent</source>
+        <translation>Голос отправлен</translation>
+    </message>
+    <message id="orn-login2rate">
+        <source>Log in to rate the application</source>
+        <translation>Войдите, чтобы оценить приложение</translation>
+    </message>
+    <message id="orn-hint-rating">
+        <source>Tap to rate the application</source>
+        <translation>Коснитесь, чтобы оценить приложение</translation>
     </message>
 </context>
 </TS>

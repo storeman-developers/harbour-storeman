@@ -369,16 +369,16 @@
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%n minute(s) ago</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n minuto atrás</numerusform>
+            <numerusform>%n minutos atrás</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%n hour(s) ago</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n hora atrás</numerusform>
+            <numerusform>%n horas atrás</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
@@ -424,13 +424,9 @@
         <translation>Log in</translation>
     </message>
     <message id="orn-username">
-        <source>Username</source>
-        <translation>Nome de usuário</translation>
-    </message>
-    <message id="orn-acceptable-username">
-        <source>Only letters, numbers, and underscores</source>
+        <source>Username or e-mail address</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation>Apenas letras, números e underlines</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
@@ -830,80 +826,96 @@
     </message>
     <message id="orn-settings">
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Configurações</translation>
     </message>
     <message id="orn-updates">
         <source>Updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Atualizações</translation>
     </message>
     <message id="orn-updates-notification-switch">
         <source>Show updates notification</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar notificações de atualizações</translation>
     </message>
     <message id="orn-updates-check-interval">
         <source>Updates check interval</source>
-        <translation type="unfinished"></translation>
+        <translation>Intervalo entre checagem de atualizações</translation>
     </message>
     <message id="orn-interval-m" numerus="yes">
         <source>%n minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n minuto</numerusform>
+            <numerusform>%n minutos</numerusform>
         </translation>
     </message>
     <message id="orn-interval-h" numerus="yes">
         <source>%n hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n hora</numerusform>
+            <numerusform>%n horas</numerusform>
         </translation>
     </message>
     <message id="orn-updates-check-interval-invalid">
         <source>The interval must be at least 10 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>O intervalo deve ser de ao menos 10 minutos.</translation>
     </message>
     <message id="orn-tag-strikeout">
         <source>S</source>
         <extracomment>Tag strikeout</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>I</translation>
     </message>
     <message id="orn-hint-commentfield">
         <source>Swipe to see all the tag buttons</source>
-        <translation type="unfinished"></translation>
+        <translation>Deslize para ver todas as tags</translation>
     </message>
     <message id="orn-dcm-user2">
         <source>Deep Thought</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Pensador Profundo</translation>
     </message>
     <message id="orn-dcm-user1">
-        <source>A little white mice</source>
+        <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Qual é a Resposta para a vida, o Universo e Tudo Mais?</translation>
     </message>
     <message id="orn-hint-commentdelegate-created">
         <source>7.5 million years ago</source>
-        <translation type="unfinished"></translation>
+        <translation>7.5 milhões de anos atrás</translation>
     </message>
     <message id="orn-hint-commentdelegate">
         <source>Tap to navigate to the replied comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Toque para navegar até o comentário respondido</translation>
     </message>
     <message id="orn-tags">
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Tags</translation>
     </message>
     <message id="orn-tag-apps">
         <source>Tagged Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplicativos com Tags</translation>
     </message>
     <message id="orn-updates-check-interval-descr">
         <source>Updates are checked only when the Storeman is running</source>
+        <translation>A checagem por atualizações só ocorre quando o Storeman está em execução.</translation>
+    </message>
+    <message id="orn-rate-app">
+        <source>Rate the application</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-vote-send">
+        <source>Your vote has been sent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-login2rate">
+        <source>Log in to rate the application</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-hint-rating">
+        <source>Tap to rate the application</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

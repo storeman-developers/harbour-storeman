@@ -424,13 +424,9 @@
         <translation>Lösenord</translation>
     </message>
     <message id="orn-username">
-        <source>Username</source>
-        <translation>Användarnamn</translation>
-    </message>
-    <message id="orn-acceptable-username">
-        <source>Only letters, numbers, and underscores</source>
+        <source>Username or e-mail address</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation>Endast bokstäver, siffror och understreck</translation>
+        <translation>Användarnamn eller e-postadress</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
@@ -865,46 +861,62 @@
     <message id="orn-tag-strikeout">
         <source>S</source>
         <extracomment>Tag strikeout</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>S</translation>
     </message>
     <message id="orn-hint-commentfield">
         <source>Swipe to see all the tag buttons</source>
-        <translation type="unfinished"></translation>
+        <translation>Svep för att se alla taggknappar</translation>
     </message>
     <message id="orn-dcm-user2">
         <source>Deep Thought</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Djup tanke</translation>
     </message>
     <message id="orn-dcm-user1">
-        <source>A little white mice</source>
+        <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>En liten vit mus</translation>
     </message>
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Vad är svaret på den ultimata frågan om livet, universum och allt?</translation>
     </message>
     <message id="orn-hint-commentdelegate-created">
         <source>7.5 million years ago</source>
-        <translation type="unfinished"></translation>
+        <translation>7,5 miljoner år sedan</translation>
     </message>
     <message id="orn-hint-commentdelegate">
         <source>Tap to navigate to the replied comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Tryck för att navigera till svarskommentaren</translation>
     </message>
     <message id="orn-tags">
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Taggar</translation>
     </message>
     <message id="orn-tag-apps">
         <source>Tagged Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Taggade appar</translation>
     </message>
     <message id="orn-updates-check-interval-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation type="unfinished"></translation>
+        <translation>Uppdateringar söks endast när Storeman körs</translation>
+    </message>
+    <message id="orn-rate-app">
+        <source>Rate the application</source>
+        <translation>Betygsätt den här appen</translation>
+    </message>
+    <message id="orn-vote-send">
+        <source>Your vote has been sent</source>
+        <translation>Din röst har skickats</translation>
+    </message>
+    <message id="orn-login2rate">
+        <source>Log in to rate the application</source>
+        <translation>Logga in för att betygsätta appen</translation>
+    </message>
+    <message id="orn-hint-rating">
+        <source>Tap to rate the application</source>
+        <translation>Tryck för att betygsätta appen</translation>
     </message>
 </context>
 </TS>

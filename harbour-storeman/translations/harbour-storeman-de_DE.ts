@@ -259,7 +259,7 @@
     </message>
     <message id="orn-update-available">
         <source>Update available</source>
-        <translation>Aktualisierung verfügbar</translation>
+        <translation>Update verfügbar</translation>
     </message>
     <message id="orn-update">
         <source>Update</source>
@@ -337,7 +337,7 @@
     </message>
     <message id="orn-app-licensing">
         <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation>Dies ist eine Open-Source-Software, die unter den Bedingungen der&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT-Lizenz&lt;/a&gt; erstellt wurde.</translation>
+        <translation>Dies ist eine Open-Source-Software, die unter den Bedingungen der&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT-Lizenz&lt;/a&gt; vertrieben wird.</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
@@ -424,13 +424,9 @@
         <translation>Anmelden</translation>
     </message>
     <message id="orn-username">
-        <source>Username</source>
-        <translation>Benutzername</translation>
-    </message>
-    <message id="orn-acceptable-username">
-        <source>Only letters, numbers, and underscores</source>
+        <source>Username or e-mail address</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation>Nur Buchstaben, Zahlen und Unterstriche</translation>
+        <translation>Benutzername oder E-Mail-Adresse</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
@@ -789,7 +785,7 @@
     </message>
     <message id="orn-error-packagenotfound">
         <source>Couldn&apos;t find package</source>
-        <translation>Konnte Paket nicht finden</translation>
+        <translation>Paket nicht gefunden</translation>
     </message>
     <message id="orn-size-installed">
         <source>Installed size</source>
@@ -838,7 +834,7 @@
     </message>
     <message id="orn-updates-notification-switch">
         <source>Show updates notification</source>
-        <translation>Zeige Update-Benachrichtigungen</translation>
+        <translation>Update-Benachrichtigung anzeigen</translation>
     </message>
     <message id="orn-updates-check-interval">
         <source>Updates check interval</source>
@@ -869,7 +865,7 @@
     </message>
     <message id="orn-hint-commentfield">
         <source>Swipe to see all the tag buttons</source>
-        <translation>Wischen um alle Tags zu sehen</translation>
+        <translation>Wischen, um alle Tags zu sehen</translation>
     </message>
     <message id="orn-dcm-user2">
         <source>Deep Thought</source>
@@ -877,14 +873,14 @@
         <translation>Deep Thought</translation>
     </message>
     <message id="orn-dcm-user1">
-        <source>A little white mice</source>
+        <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
         <translation>Eine kleine weiße Maus</translation>
     </message>
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>Was ist die Antwort auf die Frage nach dem Leben, dem Universum und dem ganzen Rest?</translation>
+        <translation>Was ist die Antwort auf die ultimative Frage nach dem Leben, dem Universum und dem ganzen Rest?</translation>
     </message>
     <message id="orn-hint-commentdelegate-created">
         <source>7.5 million years ago</source>
@@ -892,7 +888,7 @@
     </message>
     <message id="orn-hint-commentdelegate">
         <source>Tap to navigate to the replied comment</source>
-        <translation>Tippen um zu dem beantworteten Kommentar zu gelangen</translation>
+        <translation>Tippen, um zum beantworteten Kommentar zu gelangen</translation>
     </message>
     <message id="orn-tags">
         <source>Tags</source>
@@ -900,11 +896,27 @@
     </message>
     <message id="orn-tag-apps">
         <source>Tagged Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Getaggte Programme</translation>
     </message>
     <message id="orn-updates-check-interval-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation type="unfinished"></translation>
+        <translation>Updates werden nur geprüft, wenn der Storeman läuft</translation>
+    </message>
+    <message id="orn-rate-app">
+        <source>Rate the application</source>
+        <translation>Bewerte dieses Programm</translation>
+    </message>
+    <message id="orn-vote-send">
+        <source>Your vote has been sent</source>
+        <translation>Deine Stimme wurde gesendet</translation>
+    </message>
+    <message id="orn-login2rate">
+        <source>Log in to rate the application</source>
+        <translation>Melde dich an, um das Programm zu bewerten</translation>
+    </message>
+    <message id="orn-hint-rating">
+        <source>Tap to rate the application</source>
+        <translation>Tippen, um das Programm zu bewerten</translation>
     </message>
 </context>
 </TS>

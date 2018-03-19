@@ -422,13 +422,9 @@
         <translation>Bejelentkezés</translation>
     </message>
     <message id="orn-username">
-        <source>Username</source>
-        <translation>Felhasználónév</translation>
-    </message>
-    <message id="orn-acceptable-username">
-        <source>Only letters, numbers, and underscores</source>
+        <source>Username or e-mail address</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation>Csak betűk, számok és alulvonás</translation>
+        <translation>Felhasználónév vagy e-mail cím</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
@@ -764,8 +760,8 @@
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n művelet folyamatban</numerusform>
         </translation>
     </message>
     <message id="orn-version-available">
@@ -834,11 +830,11 @@
     </message>
     <message id="orn-updates-notification-switch">
         <source>Show updates notification</source>
-        <translation type="unfinished"></translation>
+        <translation>Frissítési értesítések megjelenítése</translation>
     </message>
     <message id="orn-updates-check-interval">
         <source>Updates check interval</source>
-        <translation type="unfinished"></translation>
+        <translation>Frissítések keresési időköze</translation>
     </message>
     <message id="orn-interval-m" numerus="yes">
         <source>%n minute(s)</source>
@@ -854,7 +850,7 @@
     </message>
     <message id="orn-updates-check-interval-invalid">
         <source>The interval must be at least 10 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>Az időköznek legalább 10 percnek kell lennie</translation>
     </message>
     <message id="orn-tag-strikeout">
         <source>S</source>
@@ -863,7 +859,7 @@
     </message>
     <message id="orn-hint-commentfield">
         <source>Swipe to see all the tag buttons</source>
-        <translation type="unfinished"></translation>
+        <translation>Lapozz, hogy lásd az összes címke gombját</translation>
     </message>
     <message id="orn-dcm-user2">
         <source>Deep Thought</source>
@@ -871,14 +867,14 @@
         <translation>Mély gondolat</translation>
     </message>
     <message id="orn-dcm-user1">
-        <source>A little white mice</source>
+        <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
         <translation>Egy kis fehér egér</translation>
     </message>
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Mi a válasz az Élet Végső Kérdésére, az Univerzumra és Mindenre?</translation>
     </message>
     <message id="orn-hint-commentdelegate-created">
         <source>7.5 million years ago</source>
@@ -886,19 +882,35 @@
     </message>
     <message id="orn-hint-commentdelegate">
         <source>Tap to navigate to the replied comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Érintsd meg a válasz megtekintéséhez  </translation>
     </message>
     <message id="orn-tags">
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Címkék</translation>
     </message>
     <message id="orn-tag-apps">
         <source>Tagged Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Címkézett alkalmazások</translation>
     </message>
     <message id="orn-updates-check-interval-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation type="unfinished"></translation>
+        <translation>A frissítések ellenőrzése kizárólag a Storeman futtatása közben történik</translation>
+    </message>
+    <message id="orn-rate-app">
+        <source>Rate the application</source>
+        <translation>Értékeld az alkalmazást</translation>
+    </message>
+    <message id="orn-vote-send">
+        <source>Your vote has been sent</source>
+        <translation>Az értékelésed elküldtük</translation>
+    </message>
+    <message id="orn-login2rate">
+        <source>Log in to rate the application</source>
+        <translation>Jelentkezz be az alkalmazás értékeléséhez</translation>
+    </message>
+    <message id="orn-hint-rating">
+        <source>Tap to rate the application</source>
+        <translation>Érintsd meg az alkalmazás értékeléséhez</translation>
     </message>
 </context>
 </TS>

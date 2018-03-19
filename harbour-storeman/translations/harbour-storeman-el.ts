@@ -369,16 +369,16 @@
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%n minute(s) ago</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Πριν από %n λεπτό(ά)</numerusform>
+            <numerusform>Πριν από %n λεπτό(ά)</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%n hour(s) ago</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Πριν από %n ώρα(ες)</numerusform>
+            <numerusform>Πριν από %n ώρα(ες)</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
@@ -424,13 +424,9 @@
         <translation>Σύνδεση</translation>
     </message>
     <message id="orn-username">
-        <source>Username</source>
-        <translation>Όνομα χρήστη</translation>
-    </message>
-    <message id="orn-acceptable-username">
-        <source>Only letters, numbers, and underscores</source>
+        <source>Username or e-mail address</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation>Μόνο γράμματα, αριθμούς και κάτω παύλες</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
@@ -830,46 +826,46 @@
     </message>
     <message id="orn-settings">
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ρυθμίσεις</translation>
     </message>
     <message id="orn-updates">
         <source>Updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Ενημερώσεις</translation>
     </message>
     <message id="orn-updates-notification-switch">
         <source>Show updates notification</source>
-        <translation type="unfinished"></translation>
+        <translation>Εμφάνιση της ειδοποίησης ενημερώσεων</translation>
     </message>
     <message id="orn-updates-check-interval">
         <source>Updates check interval</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρονικό διάστημα ελέγχου ενημερώσεων</translation>
     </message>
     <message id="orn-interval-m" numerus="yes">
         <source>%n minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n λεπτό(ά)</numerusform>
+            <numerusform>%n λεπτό(ά)</numerusform>
         </translation>
     </message>
     <message id="orn-interval-h" numerus="yes">
         <source>%n hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n ώρα(ες)</numerusform>
+            <numerusform>%n ώρα(ες)</numerusform>
         </translation>
     </message>
     <message id="orn-updates-check-interval-invalid">
         <source>The interval must be at least 10 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>Το χρονικό διάστημα πρέπει να είναι τουλάχιστον 10 λεπτών</translation>
     </message>
     <message id="orn-tag-strikeout">
         <source>S</source>
         <extracomment>Tag strikeout</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>S</translation>
     </message>
     <message id="orn-hint-commentfield">
         <source>Swipe to see all the tag buttons</source>
-        <translation type="unfinished"></translation>
+        <translation>Τραβήξτε κάτω για να δείτε όλα τα κουμπιά ετικετών</translation>
     </message>
     <message id="orn-dcm-user2">
         <source>Deep Thought</source>
@@ -877,7 +873,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message id="orn-dcm-user1">
-        <source>A little white mice</source>
+        <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
         <translation type="unfinished"></translation>
     </message>
@@ -892,18 +888,34 @@
     </message>
     <message id="orn-hint-commentdelegate">
         <source>Tap to navigate to the replied comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Χτυπήστε για να πλοηγηθείτε στο σχόλιο απάντησης</translation>
     </message>
     <message id="orn-tags">
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Ετικέτες</translation>
     </message>
     <message id="orn-tag-apps">
         <source>Tagged Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Εφαρμογές με ετικέτες</translation>
     </message>
     <message id="orn-updates-check-interval-descr">
         <source>Updates are checked only when the Storeman is running</source>
+        <translation>Οι ενημερώσεις ελέγχονται μόνον κατά την εκτέλεση του Storeman</translation>
+    </message>
+    <message id="orn-rate-app">
+        <source>Rate the application</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-vote-send">
+        <source>Your vote has been sent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-login2rate">
+        <source>Log in to rate the application</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-hint-rating">
+        <source>Tap to rate the application</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
