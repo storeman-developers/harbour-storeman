@@ -4,12 +4,12 @@ import harbour.orn 1.0
 import "../components"
 
 Page {
-    property alias appId: commentsModel.appId
     property alias commentField: commentsList.headerItem
     property int userId
     property string userName
     property bool hasComments: false
     property bool _hintMode: Storeman.showHint(Storeman.CommentDelegateHint)
+    property OrnCommentsModel commentsModel: null
 
     id: page
     allowedOrientations: defaultAllowedOrientations
@@ -49,10 +49,6 @@ Page {
                 shObj.start()
             }
         }
-    }
-
-    OrnCommentsModel {
-        id: commentsModel
     }
 
     Connections {

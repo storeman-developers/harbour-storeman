@@ -20,6 +20,10 @@ Page {
         }
     }
 
+    OrnCommentsModel {
+        id: commentsModel
+    }
+
     Connections {
         target: app
         onOrnRequestFinished: {
@@ -105,12 +109,15 @@ Page {
                 //% "Comments (%0)"
                 text: app.commentsCount ? qsTrId("orn-comments-withnum").arg(app.commentsCount) :
                                           qsTrId("orn-comments")
-                onClicked: pageStack.push(Qt.resolvedUrl("CommentsPage.qml"), {
-                                              appId: app.appId,
-                                              userId: app.userId,
-                                              userName: app.userName,
-                                              hasComments: app.commentsCount
-                                          })
+                onClicked: {
+                    commentsModel.appId = appId
+                    pageStack.push(Qt.resolvedUrl("CommentsPage.qml"), {
+                                       commentsModel: commentsModel,
+                                       userId: app.userId,
+                                       userName: app.userName,
+                                       hasComments: app.commentsCount
+                                   })
+                }
             }
 
             MoreButton {
