@@ -2,11 +2,14 @@
 #define STOREMAN_H
 
 #include <QObject>
+#include <QCache>
 
 class QQmlEngine;
 class QJSEngine;
 class QSettings;
 class QTimer;
+
+class OrnApplication;
 
 class Storeman : public QObject
 {
@@ -36,6 +39,8 @@ public:
     Q_INVOKABLE bool showHint(const Hint &hint) const;
     Q_INVOKABLE void setHintShowed(const Hint &hint);
 
+    Q_INVOKABLE OrnApplication *cachedApp(const quint32 &appId);
+
 public slots:
     void resetUpdatesTimer();
 
@@ -54,6 +59,7 @@ private:
 
     QSettings *mSettings;
     QTimer *mUpdatesTimer;
+    QCache<quint32, OrnApplication> mAppsCache;
 
     static Storeman *gInstance;
 };

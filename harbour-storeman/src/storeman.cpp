@@ -21,6 +21,7 @@
 #include <QFileInfo>
 
 #include <ornpm.h>
+#include <ornapplication.h>
 
 
 Storeman *Storeman::gInstance = nullptr;
@@ -30,6 +31,8 @@ Storeman::Storeman(QObject *parent)
     , mSettings(new QSettings(this))
     , mUpdatesTimer(new QTimer(this))
 {
+    mAppsCache.setMaxCost(3);
+
     auto ornpm = OrnPm::instance();
     connect(ornpm, &OrnPm::updatablePackagesChanged,
             this, &Storeman::onUpdatablePackagesChanged);
@@ -110,6 +113,24 @@ void Storeman::setHintShowed(const Storeman::Hint &hint)
     auto name = me.valueToKey(hint);
     Q_ASSERT(name);
     mSettings->setValue(QStringLiteral("hints/").append(name), true);
+}
+
+OrnApplication *Storeman::cachedApp(const quint32 &appId)
+{
+    if (appId == 0)
+    {
+        return 0;
+    }
+
+    if (mAppsCache.contains(appId))
+    {
+        return mAppsCache[appId];
+    }
+
+    auto app = new OrnApplication(this);
+    app->setAppId(appId);
+    mAppsCache.insert(appId, app);
+    return app;
 }
 
 void Storeman::resetUpdatesTimer()

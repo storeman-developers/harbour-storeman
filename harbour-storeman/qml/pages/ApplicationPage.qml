@@ -5,9 +5,9 @@ import "../components"
 
 Page {
     property bool returnToUser: false
-    property alias appId: app.appId
+    property int appId: 0
+    property OrnApplication app: Storeman.cachedApp(appId)
     readonly property int _packageStatus: app.packageStatus
-    property bool _loaded: false
 
     id: page
     allowedOrientations: defaultAllowedOrientations
@@ -15,16 +15,14 @@ Page {
     onStatusChanged: {
         // Wait until page loads to prevent lagging
         // And don't call ornRequest() if the app was already loaded
-        if (!_loaded && status === PageStatus.Active) {
+        if (!app.isLoaded && status === PageStatus.Active) {
             app.ornRequest()
         }
     }
 
-    OrnApplication {
-        id: app
+    Connections {
+        target: app
         onOrnRequestFinished: {
-            flickable.visible = true
-            _loaded = true
             // Show rating hint
             if (Storeman.showHint(Storeman.ApplicationRatingHint)) {
                 var shComp = Qt.createComponent(Qt.resolvedUrl("../components/StoremanHint.qml"))
@@ -61,7 +59,7 @@ Page {
     SilicaFlickable {
         id: flickable
         anchors.fill: parent
-        visible: false
+        visible: app.isLoaded
         contentHeight: content.height
 
         ApplicationPageMenu {
