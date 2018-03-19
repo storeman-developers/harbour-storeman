@@ -1,4 +1,18 @@
-* Sun Mar 4 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.20-1
+* Mon Mar 19 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.21-1
+- Better handling of PackageKit errors
+- Fix all comments' authors were developers
+- CommentsPage.qml: fix busy indicator
+- CommentsPage.qml: prevent reloading the model on page reopening
+- Fix building with SDK for 2.1.4.13
+- AuthorisationDialog.qml: allow to log in with email
+- AuthorisationDialog.qml: add validation for length of username and password
+- Allow authorized users to rate applications
+- Show a hint when open the ApplicationPage.qml for the firts time
+- Add caching for loaded application data
+- Update translations
+- Clean code
+
+* Sun Mar  4 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.20-1
 - Add settings page
 - Comment field - add the strikeout tag
 - Comments page - show touch hints on the first usage
