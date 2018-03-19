@@ -255,9 +255,9 @@ Column {
                     if (_editId) {
                         OrnClient.editComment(_editId, body.text)
                     } else if (_replyToId) {
-                        OrnClient.comment(appId, body.text, _replyToId)
+                        OrnClient.comment(commentsModel.appId, body.text, _replyToId)
                     } else {
-                        OrnClient.comment(appId, body.text)
+                        OrnClient.comment(commentsModel.appId, body.text)
                     }
                     _reset()
                 }
