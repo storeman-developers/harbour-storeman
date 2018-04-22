@@ -11,8 +11,8 @@
 
 #include "storeman.h"
 
-#include <nemonotifications-qt5/notification.h>
-#include <connman-qt5/networkmanager.h>
+#include <notification.h>
+#include <networkmanager.h>
 
 #include <QSettings>
 #include <QCoreApplication>
@@ -119,7 +119,7 @@ OrnApplication *Storeman::cachedApp(const quint32 &appId)
 {
     if (appId == 0)
     {
-        return 0;
+        return nullptr;
     }
 
     if (mAppsCache.contains(appId))

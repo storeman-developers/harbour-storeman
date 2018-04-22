@@ -16,9 +16,17 @@ write_file($$$$OUT_PWD/storeman_version.h, VERSION_H)
 
 CONFIG(release, debug|release): DEFINES += QT_NO_DEBUG_OUTPUT
 
-LIBS += -lornplugin -L$$OUT_PWD/../ornplugin -lsolv
+LIBS += \
+    -lornplugin -L$$OUT_PWD/../ornplugin \
+    -lsolv
+
 PRE_TARGETDEPS += $$OUT_PWD/../ornplugin/libornplugin.a
-INCLUDEPATH += ../ornplugin/src
+
+INCLUDEPATH += \
+    ../ornplugin/src \
+    /usr/include/nemonotifications-qt5 \
+    /usr/include/connman-qt5
+
 QML_IMPORT_PATH += ../ornplugin
 
 include(../ornplugin/include_packagekit.pri)
