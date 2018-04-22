@@ -5,10 +5,6 @@
 #include <QStandardPaths>
 #include <QDebug>
 
-NetworkAccessManagerFactory::NetworkAccessManagerFactory()
-{
-
-}
 
 QNetworkAccessManager *NetworkAccessManagerFactory::create(QObject *parent)
 {

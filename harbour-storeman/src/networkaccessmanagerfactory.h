@@ -6,7 +6,7 @@
 class NetworkAccessManagerFactory : public QQmlNetworkAccessManagerFactory
 {
 public:
-    NetworkAccessManagerFactory();
+    NetworkAccessManagerFactory() = default;
 
     // QQmlNetworkAccessManagerFactory interface
 public:
