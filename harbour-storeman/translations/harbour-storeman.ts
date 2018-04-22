@@ -918,5 +918,25 @@
         <source>Tap to rate the application</source>
         <translation>Tap to rate the application</translation>
     </message>
+    <message id="orn-local-rpms">
+        <source>Local RPM files</source>
+        <translation>Local RPM files</translation>
+    </message>
+    <message id="orn-delete">
+        <source>Delete</source>
+        <translation>Delete</translation>
+    </message>
+    <message id="orn-deleting">
+        <source>Deleting</source>
+        <translation>Deleting</translation>
+    </message>
+    <message id="orn-no-local-rpms">
+        <source>No local RPM files were found</source>
+        <translation>No local RPM files were found</translation>
+    </message>
+    <message id="orn-deletion-error">
+        <source>Failed to delete</source>
+        <translation>Failed to delete</translation>
+    </message>
 </context>
 </TS>

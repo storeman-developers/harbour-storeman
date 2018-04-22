@@ -85,6 +85,12 @@ Page {
                 text: qsTrId("orn-backups")
                 onClicked: pageStack.push(Qt.resolvedUrl("BackupsPage.qml"))
             }
+
+            ListMenuItem {
+                iconSource: "image://theme/icon-m-file-rpm"
+                text: qsTrId("orn-local-rpms")
+                onClicked: pageStack.push(Qt.resolvedUrl("LocalRpmsPage.qml"))
+            }
         }
 
         VerticalScrollDecorator { }

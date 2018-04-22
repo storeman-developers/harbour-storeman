@@ -22,6 +22,7 @@ PkgConfigBR:
   - nemodbus
   - connman-qt5
   - nemonotifications-qt5
+  - Qt5Sparql
 
 PkgBR:
   - qt5-qtquickcontrols-layouts
