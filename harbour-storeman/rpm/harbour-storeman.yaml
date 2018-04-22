@@ -41,5 +41,5 @@ Files:
   - '%{_datadir}/%{name}'
   - '%{_datadir}/applications/%{name}.desktop'
   - '%{_datadir}/icons/hicolor/*/apps/%{name}.png'
-  - '%{_sharedstatedir}/polkit-1/localauthority/50-local.d/50-harbour-storeman-packagekit.pkla'
+  - '%{_datadir}/mapplauncherd/privileges.d/%{name}'
   - '%{_datadir}/dbus-1/services/harbour.storeman.service'

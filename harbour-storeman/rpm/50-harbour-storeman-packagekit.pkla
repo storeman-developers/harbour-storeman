@@ -1,6 +1,0 @@
-[Storeman]
-Identity=unix-user:nemo
-Action=org.freedesktop.packagekit.*
-ResultAny=yes
-ResultInactive=yes
-ResultActive=yes

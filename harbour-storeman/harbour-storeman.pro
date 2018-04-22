@@ -99,12 +99,12 @@ OTHER_FILES += \
 RESOURCES += \
     harbour-storeman.qrc
 
-polkit.files = rpm/50-harbour-storeman-packagekit.pkla
-polkit.path = $$INSTALL_ROOT/var/lib/polkit-1/localauthority/50-local.d
+privileges.files = rpm/harbour-storeman
+privileges.path = $$INSTALL_ROOT/usr/share/mapplauncherd/privileges.d/
 
 dbus.files = rpm/harbour.storeman.service
 dbus.path = $$INSTALL_ROOT/usr/share/dbus-1/services
 
-INSTALLS += polkit dbus
+INSTALLS += privileges dbus
 
 include(translations/translations.pri)
