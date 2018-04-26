@@ -1,3 +1,11 @@
+* Thu Apr 26 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.22-1
+- Use mapplauncherd instead of policykit rules
+- Find and manage local RPM files
+- Add Dutch (Belgium)
+- Update translations
+- Update translators model
+- Code refactoring
+
 * Mon Mar 19 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.21-1
 - Better handling of PackageKit errors
 - Fix all comments' authors were developers
