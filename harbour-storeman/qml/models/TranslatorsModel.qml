@@ -30,6 +30,15 @@ ListModel {
     }
 
     ListElement {
+        locale: "nl_BE"
+        coordinators: [
+            ListElement { name: "pljmn" }
+        ]
+        translators: []
+        reviewers: []
+    }
+
+    ListElement {
         locale: "fi_FI"
         coordinators: [
             ListElement { name: "hartzi" }
@@ -49,7 +58,8 @@ ListModel {
             ListElement { name: "LaurentC" }
         ]
         translators: [
-            ListElement { name: "lutinotmalin" }
+            ListElement { name: "lutinotmalin" },
+            ListElement { name: "kylliox" }
         ]
         reviewers: []
     }
@@ -62,7 +72,8 @@ ListModel {
         translators: [
             ListElement { name: "feldbaum" },
             ListElement { name: "chwa" },
-            ListElement { name: "olf" }
+            ListElement { name: "olf" },
+            ListElement { name: "sail_parleur" }
         ]
         reviewers: [
             ListElement { name: "inta" }
@@ -83,7 +94,8 @@ ListModel {
         coordinators: []
         translators: [
             ListElement { name: "Headarias" },
-            ListElement { name: "martonmiklos" }
+            ListElement { name: "martonmiklos" },
+            ListElement { name: "leoka" }
         ]
         reviewers: []
     }
@@ -124,7 +136,9 @@ ListModel {
         coordinators: [
             ListElement { name: "mentaljam" }
         ]
-        translators: []
+        translators: [
+            ListElement { name: "dikonov" }
+        ]
         reviewers: []
     }
 
