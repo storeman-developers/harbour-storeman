@@ -900,7 +900,7 @@
     </message>
     <message id="orn-updates-check-interval-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation>Updates werden nur geprüft, wenn der Storeman läuft</translation>
+        <translation>Aktualisierungen werden nur gesucht während Storeman läuft</translation>
     </message>
     <message id="orn-rate-app">
         <source>Rate the application</source>
@@ -908,7 +908,7 @@
     </message>
     <message id="orn-vote-send">
         <source>Your vote has been sent</source>
-        <translation>Deine Stimme wurde gesendet</translation>
+        <translation>Deine Bewertung wurde gesendet</translation>
     </message>
     <message id="orn-login2rate">
         <source>Log in to rate the application</source>
@@ -917,6 +917,26 @@
     <message id="orn-hint-rating">
         <source>Tap to rate the application</source>
         <translation>Tippen, um das Programm zu bewerten</translation>
+    </message>
+    <message id="orn-local-rpms">
+        <source>Local RPM files</source>
+        <translation>Lokale RPM-Pakete</translation>
+    </message>
+    <message id="orn-delete">
+        <source>Delete</source>
+        <translation>Löschen</translation>
+    </message>
+    <message id="orn-deleting">
+        <source>Deleting</source>
+        <translation>Lösche</translation>
+    </message>
+    <message id="orn-no-local-rpms">
+        <source>No local RPM files were found</source>
+        <translation>Es wurden  keine lokalen RPM-Pakete gefunden.</translation>
+    </message>
+    <message id="orn-deletion-error">
+        <source>Failed to delete</source>
+        <translation>Löschen fehlgeschlagen</translation>
     </message>
 </context>
 </TS>

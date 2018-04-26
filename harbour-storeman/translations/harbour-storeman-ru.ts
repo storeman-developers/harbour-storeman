@@ -926,5 +926,25 @@ Storeman не хранит ваш пароль и не передает его �
         <source>Tap to rate the application</source>
         <translation>Коснитесь, чтобы оценить приложение</translation>
     </message>
+    <message id="orn-local-rpms">
+        <source>Local RPM files</source>
+        <translation>Локальные RPM-файлы</translation>
+    </message>
+    <message id="orn-delete">
+        <source>Delete</source>
+        <translation>Удалить</translation>
+    </message>
+    <message id="orn-deleting">
+        <source>Deleting</source>
+        <translation>Удаление</translation>
+    </message>
+    <message id="orn-no-local-rpms">
+        <source>No local RPM files were found</source>
+        <translation>Локальные RPM-файлы не найдены</translation>
+    </message>
+    <message id="orn-deletion-error">
+        <source>Failed to delete</source>
+        <translation>Ошибка при удалении</translation>
+    </message>
 </context>
 </TS>

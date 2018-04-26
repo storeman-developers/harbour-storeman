@@ -918,5 +918,25 @@
         <source>Tap to rate the application</source>
         <translation>Tryck för att betygsätta appen</translation>
     </message>
+    <message id="orn-local-rpms">
+        <source>Local RPM files</source>
+        <translation>Lokala RPM-filer</translation>
+    </message>
+    <message id="orn-delete">
+        <source>Delete</source>
+        <translation>Ta bort</translation>
+    </message>
+    <message id="orn-deleting">
+        <source>Deleting</source>
+        <translation>Tar bort</translation>
+    </message>
+    <message id="orn-no-local-rpms">
+        <source>No local RPM files were found</source>
+        <translation>Inga lokala RPM-filer hittades</translation>
+    </message>
+    <message id="orn-deletion-error">
+        <source>Failed to delete</source>
+        <translation>Kunde inte ta bort</translation>
+    </message>
 </context>
 </TS>

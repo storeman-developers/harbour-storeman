@@ -5,7 +5,7 @@
     <name></name>
     <message id="orn-notrated">
         <source>Not rated yet</source>
-        <translation>Nem értékelt</translation>
+        <translation>Még nincs értékelve</translation>
     </message>
     <message id="orn-repositories">
         <source>Repositories</source>
@@ -127,7 +127,7 @@
     </message>
     <message id="orn-comments">
         <source>Comments</source>
-        <translation>Kommentek</translation>
+        <translation>Hozzászólások</translation>
     </message>
     <message id="orn-author-apps">
         <source>More by %0</source>
@@ -275,11 +275,11 @@
     </message>
     <message id="orn-comments-withnum">
         <source>Comments (%0)</source>
-        <translation>Kommentek (%0)</translation>
+        <translation>Hozzászólások (%0)</translation>
     </message>
     <message id="orn-version-repo-disabled">
         <source>Enable the repository first</source>
-        <translation>Engedélyezd előbb a csomagtárolót</translation>
+        <translation>Előbb engedélyezd a csomagtárolót</translation>
     </message>
     <message id="orn-search">
         <source>Search</source>
@@ -357,7 +357,7 @@
     </message>
     <message id="orn-appicon">
         <source>Application Icon</source>
-        <translation>Alkalmazás ikon</translation>
+        <translation>Alkalmazásikon</translation>
     </message>
     <message id="orn-sources">
         <source>Source Code</source>
@@ -398,7 +398,7 @@
     </message>
     <message id="orn-comment-body">
         <source>Your comment</source>
-        <translation>A kommented</translation>
+        <translation>A hozzászólásod</translation>
     </message>
     <message id="orn-reply">
         <source>Reply</source>
@@ -428,11 +428,11 @@
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
-        <translation>Kommentek és válaszok írásához jelentkezz be az OpenRepos.net-re. &lt;br /&gt;&lt;br /&gt; Storeman nem tárolja a jelszavadat és nem továbbítja azt harmadik félnek.</translation>
+        <translation>Hozzászólások és válaszok írásához jelentkezz be az OpenRepos.net-re. &lt;br /&gt;&lt;br /&gt; Storeman nem tárolja a jelszavadat és nem továbbítja azt harmadik félnek.</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
-        <translation>A bejelentkezés sikeres az OpenRepos.net-re</translation>
+        <translation>Sikeresen beléptél az OpenRepos.net-re</translation>
     </message>
     <message id="orn-loggedout-message">
         <source>You have logged out from the OpenRepos.net</source>
@@ -462,7 +462,7 @@
     </message>
     <message id="orn-comment-edit-label">
         <source>Edit your comment</source>
-        <translation>Komment szerkesztése</translation>
+        <translation>Hozzászólás szerkesztése</translation>
     </message>
     <message id="orn-comment-update">
         <source>Update</source>
@@ -523,7 +523,7 @@
     </message>
     <message id="orn-no-bookmarks">
         <source>Your bookmarked applications will be shown here</source>
-        <translation>Itt találod a könyvjelzőzött applikációidat</translation>
+        <translation>Itt találod a könyvjelzőzött alkalmazásaidat</translation>
     </message>
     <message id="orn-bookmarks">
         <source>Bookmarks</source>
@@ -535,11 +535,11 @@
     </message>
     <message id="orn-add-repo-hint">
         <source>You can add a repository from an application page</source>
-        <translation>Hozzáadhatsz csomagtárolót az alkalmazás oldaláról</translation>
+        <translation>Csomagtárolót egy alkalmazás oldaláról adhatsz hozzá</translation>
     </message>
     <message id="orn-refresh-cache">
         <source>Refresh cache</source>
-        <translation>Cache frissítése</translation>
+        <translation>Gyorsítótár frissítése</translation>
     </message>
     <message id="orn-tag-underscore">
         <source>U</source>
@@ -659,7 +659,7 @@
     </message>
     <message id="orn-login2comment">
         <source>Login to comment</source>
-        <translation>Jelentkezz be a kommeteléshez</translation>
+        <translation>Hozzászólás írásához jelentkezz be</translation>
     </message>
     <message id="orn-backup-title">
         <source>Backup to a file</source>
@@ -671,7 +671,7 @@
     </message>
     <message id="orn-backup-hint">
         <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
-        <translation>A biztonsági mentés lehetőséget ad kimenteni a jelenlegi OpenRepos csomagtárolóidat, telepített alkalmazásaidat és könyvjelzőket egy későbbi visszaállításhoz. (pl: a készülék alaphelyzetbe állítása után) A biztonsági mentés egy helyileg tárolt fálj ami a &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; könyvtárban található. &lt;br /&gt;&lt;br /&gt;&lt;b&gt;Figyelem!&lt;/b&gt; Mielőtt a készüléket alaphelyzetbe állítanád, a biztonági mentéseket manuálisan kell biztos helyre másolnod. Ez lehet SD kártya, külső eszköz, felhő tárhely vagy bármi más.</translation>
+        <translation>A biztonsági mentés lehetőséget ad kimenteni a jelenlegi OpenRepos csomagtárolóidat, telepített alkalmazásaidat és könyvjelzőket egy későbbi visszaállításhoz (pl: a készülék alaphelyzetbe állítása után). A biztonsági mentés egy helyileg tárolt fájl ami a &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; könyvtárban található. &lt;br /&gt;&lt;br /&gt;&lt;b&gt;Figyelem!&lt;/b&gt; Mielőtt a készüléket alaphelyzetbe állítanád, a biztonsági mentéseket manuálisan kell biztos helyre másolnod. Ez lehet SD kártya, külső eszköz, felhő tárhely vagy bármi más.</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -804,7 +804,7 @@
     </message>
     <message id="orn-pmstate-refreshingcache">
         <source>Refreshing cache&lt;br /&gt;(checking for updates)</source>
-        <translation>Cache frissítése&lt;br /&gt;(frissítések ellenőrzése)</translation>
+        <translation>Gyorsítótár frissítése&lt;br /&gt;(frissítések ellenőrzése)</translation>
     </message>
     <message id="orn-comments-wait">
         <source>Wait for users&apos; feedback</source>
@@ -834,7 +834,7 @@
     </message>
     <message id="orn-updates-check-interval">
         <source>Updates check interval</source>
-        <translation>Frissítések keresési időköze</translation>
+        <translation>Frissítéskeresési időköz</translation>
     </message>
     <message id="orn-interval-m" numerus="yes">
         <source>%n minute(s)</source>
@@ -906,11 +906,31 @@
     </message>
     <message id="orn-login2rate">
         <source>Log in to rate the application</source>
-        <translation>Jelentkezz be az alkalmazás értékeléséhez</translation>
+        <translation>Az alkalmazás értékeléséhez jelentkezz be</translation>
     </message>
     <message id="orn-hint-rating">
         <source>Tap to rate the application</source>
         <translation>Érintsd meg az alkalmazás értékeléséhez</translation>
+    </message>
+    <message id="orn-local-rpms">
+        <source>Local RPM files</source>
+        <translation>Helyi RPM fájlok</translation>
+    </message>
+    <message id="orn-delete">
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-deleting">
+        <source>Deleting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-no-local-rpms">
+        <source>No local RPM files were found</source>
+        <translation>Nem található helyi RPM fájl</translation>
+    </message>
+    <message id="orn-deletion-error">
+        <source>Failed to delete</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -247,15 +247,15 @@
     </message>
     <message id="orn-cat-translations">
         <source>Translations</source>
-        <translation>Traduction</translation>
+        <translation>Traductions</translation>
     </message>
     <message id="orn-cat-fonts">
         <source>Fonts</source>
-        <translation>Police</translation>
+        <translation>Polices</translation>
     </message>
     <message id="orn-cat-libraries">
         <source>Libraries</source>
-        <translation>Librairie</translation>
+        <translation>Librairies</translation>
     </message>
     <message id="orn-update-available">
         <source>Update available</source>
@@ -337,7 +337,7 @@
     </message>
     <message id="orn-app-licensing">
         <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation>Logiciel open source distribué selon les termes et conditions de la licence ci-dessous :&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;Licence MIT&lt;/a&gt;</translation>
+        <translation>Logiciel open source distribué selon les termes et conditions de la Licence MIT :&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;Consultez-la !&lt;/a&gt;</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
@@ -426,7 +426,7 @@
     <message id="orn-username">
         <source>Username or e-mail address</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Nom d&apos;utilisateur ou adresse mail</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
@@ -568,11 +568,11 @@
     </message>
     <message id="orn-updates-available-body">
         <source>Applications updates are available. Click to view details.</source>
-        <translation>Des mises à jour OpenRepos sont disponibles. Appuyez pour en connaître les détails.</translation>
+        <translation>Des mises à jour OpenRepos sont disponibles. Appuyez pour accéder aux différents détails.</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>
-        <translation>Appuyez pour voir les détails</translation>
+        <translation>Appuyez pour consulter les détails</translation>
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
@@ -609,7 +609,7 @@
     </message>
     <message id="orn-restore-hint">
         <source>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</source>
-        <translation>Restaurez les dépôts et applications OpenRepos à partir du fichier sélectionné. Cette action n&apos;affecte ni les dépôts, ni les applications actuellement installés sur cet appareil.</translation>
+        <translation>Restaurez les dépôts et applications OpenRepos à partir du fichier sélectionné. Cette action n&apos;affecte ni les dépôts ni les applications actuellement installés sur cet appareil.</translation>
     </message>
     <message id="orn-created">
         <source>Created</source>
@@ -838,7 +838,7 @@
     </message>
     <message id="orn-updates-check-interval">
         <source>Updates check interval</source>
-        <translation>Intervalle de vérif. de MàJ</translation>
+        <translation>Intervalle de vérification</translation>
     </message>
     <message id="orn-interval-m" numerus="yes">
         <source>%n minute(s)</source>
@@ -875,12 +875,12 @@
     <message id="orn-dcm-user1">
         <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Une petite souris blanche</translation>
     </message>
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>La Vie, l&apos;Univers, tout le reste... Quelle est la réponse, la seule réponse à ces questions ?</translation>
+        <translation>La vie, l&apos;univers, tout le reste... Quelle est la réponse, la seule réponse à nos questions ?</translation>
     </message>
     <message id="orn-hint-commentdelegate-created">
         <source>7.5 million years ago</source>
@@ -892,31 +892,51 @@
     </message>
     <message id="orn-tags">
         <source>Tags</source>
-        <translation>Mots-clefs</translation>
+        <translation>Labels</translation>
     </message>
     <message id="orn-tag-apps">
         <source>Tagged Applications</source>
-        <translation>Applications marquées</translation>
+        <translation>Applications labellisées </translation>
     </message>
     <message id="orn-updates-check-interval-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation>Les mises à jour sont vérifiées uniquement lorsque le Storeman est en cours d&apos;exécution</translation>
+        <translation>Les mises à jour ne seront vérifiées que lorsque Storeman sera en cours d’exécution</translation>
     </message>
     <message id="orn-rate-app">
         <source>Rate the application</source>
-        <translation type="unfinished"></translation>
+        <translation>Évaluer l&apos;application</translation>
     </message>
     <message id="orn-vote-send">
         <source>Your vote has been sent</source>
-        <translation type="unfinished"></translation>
+        <translation>Votre vote a bien été pris en compte</translation>
     </message>
     <message id="orn-login2rate">
         <source>Log in to rate the application</source>
-        <translation type="unfinished"></translation>
+        <translation>Connectez-vous pour évaluer l&apos;application</translation>
     </message>
     <message id="orn-hint-rating">
         <source>Tap to rate the application</source>
-        <translation type="unfinished"></translation>
+        <translation>Appuyez pour évaluer l&apos;application</translation>
+    </message>
+    <message id="orn-local-rpms">
+        <source>Local RPM files</source>
+        <translation>Fichiers RPM en local</translation>
+    </message>
+    <message id="orn-delete">
+        <source>Delete</source>
+        <translation>Supprimer</translation>
+    </message>
+    <message id="orn-deleting">
+        <source>Deleting</source>
+        <translation>Suppression</translation>
+    </message>
+    <message id="orn-no-local-rpms">
+        <source>No local RPM files were found</source>
+        <translation>Aucun fichier RPM trouvé</translation>
+    </message>
+    <message id="orn-deletion-error">
+        <source>Failed to delete</source>
+        <translation>Impossible à supprimer</translation>
     </message>
 </context>
 </TS>

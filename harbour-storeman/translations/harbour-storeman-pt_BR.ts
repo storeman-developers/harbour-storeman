@@ -426,7 +426,7 @@
     <message id="orn-username">
         <source>Username or e-mail address</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Usuário ou e-mail</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
@@ -875,7 +875,7 @@
     <message id="orn-dcm-user1">
         <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Um ratinho branco</translation>
     </message>
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
@@ -904,18 +904,38 @@
     </message>
     <message id="orn-rate-app">
         <source>Rate the application</source>
-        <translation type="unfinished"></translation>
+        <translation>Avalie o aplicativo</translation>
     </message>
     <message id="orn-vote-send">
         <source>Your vote has been sent</source>
-        <translation type="unfinished"></translation>
+        <translation>Seu voto foi enviado</translation>
     </message>
     <message id="orn-login2rate">
         <source>Log in to rate the application</source>
-        <translation type="unfinished"></translation>
+        <translation>Faça login para avaliar o aplicativo</translation>
     </message>
     <message id="orn-hint-rating">
         <source>Tap to rate the application</source>
+        <translation>Toque para avaliar o aplicativo</translation>
+    </message>
+    <message id="orn-local-rpms">
+        <source>Local RPM files</source>
+        <translation>Arquivos RPM locais</translation>
+    </message>
+    <message id="orn-delete">
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-deleting">
+        <source>Deleting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-no-local-rpms">
+        <source>No local RPM files were found</source>
+        <translation>Nenhum arquivo RPM local foi encontrado</translation>
+    </message>
+    <message id="orn-deletion-error">
+        <source>Failed to delete</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

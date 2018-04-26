@@ -78,7 +78,7 @@
     </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
-        <translation>Dodaj repozyorium</translation>
+        <translation>Dodaj repozytorium</translation>
     </message>
     <message id="orn-repo-enable">
         <source>Enable repository</source>
@@ -923,6 +923,26 @@
     <message id="orn-hint-rating">
         <source>Tap to rate the application</source>
         <translation>Dotknij w celu ocenienia aplikacji</translation>
+    </message>
+    <message id="orn-local-rpms">
+        <source>Local RPM files</source>
+        <translation>Lokalne pliki RPM</translation>
+    </message>
+    <message id="orn-delete">
+        <source>Delete</source>
+        <translation>Usuń</translation>
+    </message>
+    <message id="orn-deleting">
+        <source>Deleting</source>
+        <translation>Usuwanie</translation>
+    </message>
+    <message id="orn-no-local-rpms">
+        <source>No local RPM files were found</source>
+        <translation>Nie znaleziono lokalnych plików RPM</translation>
+    </message>
+    <message id="orn-deletion-error">
+        <source>Failed to delete</source>
+        <translation>Usuwanie zakończone niepowodzeniem</translation>
     </message>
 </context>
 </TS>

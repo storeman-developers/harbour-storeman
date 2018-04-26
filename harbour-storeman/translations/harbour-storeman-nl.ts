@@ -918,5 +918,25 @@
         <source>Tap to rate the application</source>
         <translation>Tik om de app te beoordelen</translation>
     </message>
+    <message id="orn-local-rpms">
+        <source>Local RPM files</source>
+        <translation>Lokale RPM-bestanden</translation>
+    </message>
+    <message id="orn-delete">
+        <source>Delete</source>
+        <translation>Verwijderen</translation>
+    </message>
+    <message id="orn-deleting">
+        <source>Deleting</source>
+        <translation>Wordt verwijderd</translation>
+    </message>
+    <message id="orn-no-local-rpms">
+        <source>No local RPM files were found</source>
+        <translation>Geen lokale RPM-bestanden gevonden</translation>
+    </message>
+    <message id="orn-deletion-error">
+        <source>Failed to delete</source>
+        <translation>Verwijderen mislukt</translation>
+    </message>
 </context>
 </TS>

@@ -37,7 +37,7 @@
     </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
-        <translation>La red no está disponible</translation>
+        <translation>No hay conexión de red</translation>
     </message>
     <message id="orn-today">
         <source>Today</source>
@@ -917,6 +917,26 @@
     <message id="orn-hint-rating">
         <source>Tap to rate the application</source>
         <translation>Da un toque para valorar aplicación</translation>
+    </message>
+    <message id="orn-local-rpms">
+        <source>Local RPM files</source>
+        <translation>Archivos RPM locales</translation>
+    </message>
+    <message id="orn-delete">
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-deleting">
+        <source>Deleting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-no-local-rpms">
+        <source>No local RPM files were found</source>
+        <translation>No se han encontrado archivos RPM</translation>
+    </message>
+    <message id="orn-deletion-error">
+        <source>Failed to delete</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
