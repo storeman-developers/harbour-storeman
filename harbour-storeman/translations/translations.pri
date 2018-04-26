@@ -14,6 +14,7 @@ TRANSLATIONS += \
     translations/harbour-storeman-hu_HU.ts \
     translations/harbour-storeman-it.ts \
     translations/harbour-storeman-nl.ts \
+    translations/harbour-storeman-nl_BE.ts \
     translations/harbour-storeman-pl.ts \
     translations/harbour-storeman-pt_BR.ts \
     translations/harbour-storeman-ru.ts \
