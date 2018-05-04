@@ -25,7 +25,6 @@ PkgConfigBR:
   - Qt5Sparql
 
 PkgBR:
-  - qt5-qtquickcontrols-layouts
   - libsolv-devel
   - PackageKit-Qt5-devel
 
@@ -34,7 +33,6 @@ Requires:
   - nemo-qml-plugin-dbus-qt5
   - nemo-qml-plugin-notifications-qt5
   - connman-qt5-declarative
-  - qt5-qtquickcontrols-layouts
   - libsolv0
 
 Files:

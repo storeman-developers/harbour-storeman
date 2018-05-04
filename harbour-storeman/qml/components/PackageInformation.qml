@@ -1,9 +1,8 @@
 import QtQuick 2.0
-import QtQuick.Layouts 1.1
 import Sailfish.Silica 1.0
 import harbour.orn 1.0
 
-GridLayout {
+Item {
     property alias statusLabel: statusLabel
     property alias ratingBox: ratingBox
 
@@ -13,13 +12,21 @@ GridLayout {
         leftMargin: Theme.horizontalPageMargin
         rightMargin: Theme.horizontalPageMargin
     }
-    columns: 2
-    rowSpacing: Theme.paddingMedium
-    columnSpacing: Theme.paddingMedium
+    height: statusLabel.height + stats.height + categoryPanel.height + Theme.paddingLarge
+
+    BookmarkButton {
+        id: star
+        anchors.right: parent.right
+        appId: app.appId
+    }
 
     IconLabel {
         id: statusLabel
-        Layout.fillWidth: true
+        anchors {
+            left: parent.left
+            right: star.left
+            rightMargin: Theme.paddingMedium
+        }
         running: _packageStatus === OrnPm.PackageInstalling ||
                  _packageStatus === OrnPm.PackageRemoving   ||
                  _packageStatus === OrnPm.PackageUpdating
@@ -60,14 +67,15 @@ GridLayout {
         }
     }
 
-    BookmarkButton {
-        id: star
-        Layout.rowSpan: 2
-        appId: app.appId
-    }
-
     Row {
         id: stats
+        anchors {
+            top: statusLabel.bottom
+            topMargin: Theme.paddingMedium
+            left: parent.left
+            right: star.left
+            rightMargin: Theme.paddingMedium
+        }
         spacing: Theme.paddingSmall
 
         IconLabel {
@@ -101,11 +109,12 @@ GridLayout {
     Row {
         id: categoryPanel
         anchors {
+            top: stats.bottom
+            topMargin: Theme.paddingMedium
             left: parent.left
             right: parent.right
         }
         spacing: Theme.paddingMedium
-        Layout.columnSpan: 2
         clip: true
 
         Label {
