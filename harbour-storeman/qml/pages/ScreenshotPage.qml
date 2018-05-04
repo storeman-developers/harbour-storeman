@@ -16,17 +16,18 @@ Page {
             width: slideshow.width
             height: slideshow.height
 
+            BusyIndicator {
+                anchors.centerIn: parent
+                size: BusyIndicatorSize.Large
+                running: image.status === Image.Loading
+            }
+
             Image {
+                id: image
                 anchors.fill: parent
                 source: modelData.url
                 fillMode: Image.PreserveAspectFit
-                opacity: 0.0
-
-                onStatusChanged: {
-                    if (status === Image.Ready) {
-                        opacity = 1.0
-                    }
-                }
+                opacity: status === Image.Ready ? 1.0 : 0.0
 
                 Behavior on opacity { FadeAnimation { } }
             }

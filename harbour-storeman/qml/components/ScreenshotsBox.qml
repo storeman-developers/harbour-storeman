@@ -16,7 +16,7 @@ Row {
 
             BusyIndicator {
                 anchors.centerIn: parent
-                running: parent.imageStatus === Image.Loading
+                running: parent.status === Image.Loading
             }
 
             MouseArea {
