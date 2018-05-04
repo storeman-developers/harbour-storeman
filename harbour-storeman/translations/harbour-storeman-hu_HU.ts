@@ -918,11 +918,11 @@
     </message>
     <message id="orn-delete">
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Törlés</translation>
     </message>
     <message id="orn-deleting">
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation>Törlés folyamatban</translation>
     </message>
     <message id="orn-no-local-rpms">
         <source>No local RPM files were found</source>
@@ -930,7 +930,7 @@
     </message>
     <message id="orn-deletion-error">
         <source>Failed to delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Nem sikerült törölni</translation>
     </message>
 </context>
 </TS>
