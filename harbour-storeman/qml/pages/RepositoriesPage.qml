@@ -97,6 +97,7 @@ Page {
             }
 
             MenuItem {
+                visible: reposList.count
                 enabled: networkManager.online
                 text: qsTrId("orn-refresh-cache")
                 onClicked: Storeman.resetUpdatesTimer()
