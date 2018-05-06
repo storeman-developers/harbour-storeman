@@ -23,6 +23,7 @@ PkgConfigBR:
   - connman-qt5
   - nemonotifications-qt5
   - Qt5Sparql
+  - Qt5Concurrent
 
 PkgBR:
   - libsolv-devel

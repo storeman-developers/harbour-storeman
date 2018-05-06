@@ -33,6 +33,7 @@ BuildRequires:  pkgconfig(nemodbus)
 BuildRequires:  pkgconfig(connman-qt5)
 BuildRequires:  pkgconfig(nemonotifications-qt5)
 BuildRequires:  pkgconfig(Qt5Sparql)
+BuildRequires:  pkgconfig(Qt5Concurrent)
 BuildRequires:  libsolv-devel
 BuildRequires:  PackageKit-Qt5-devel
 BuildRequires:  desktop-file-utils
