@@ -28,6 +28,7 @@ PkgConfigBR:
 PkgBR:
   - libsolv-devel
   - PackageKit-Qt5-devel
+  - qt5-qttools-linguist
 
 Requires:
   - sailfishsilica-qt5 >= 0.10.9

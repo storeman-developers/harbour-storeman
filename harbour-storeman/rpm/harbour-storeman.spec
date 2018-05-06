@@ -36,6 +36,7 @@ BuildRequires:  pkgconfig(Qt5Sparql)
 BuildRequires:  pkgconfig(Qt5Concurrent)
 BuildRequires:  libsolv-devel
 BuildRequires:  PackageKit-Qt5-devel
+BuildRequires:  qt5-qttools-linguist
 BuildRequires:  desktop-file-utils
 
 %description
