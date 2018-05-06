@@ -129,6 +129,18 @@ Page {
                                                })
             }
 
+            MenuItem {
+                visible: reposList.count
+                //% "Remove all"
+                text: qsTrId("orn-remove-all")
+                //% "Removing all"
+                onClicked: Remorse.popupAction(page, qsTrId("orn-removing-all"),
+                                               function() {
+                                                   _working = true
+                                                   OrnPm.removeAllRepos()
+                                               })
+            }
+
             MenuStatusLabel { }
         }
 

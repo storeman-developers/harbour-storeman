@@ -241,6 +241,11 @@ ApplicationWindow
             }
         }
 
+        onRemoveAllReposFinished: {
+            //% "All repositories were removed"
+            notification.show(qsTrId("orn-repo-allremoved"))
+        }
+
         //% "Package %0 was successfully installed"
         onPackageInstalled: notification.show(qsTrId("orn-package-installed").arg(packageName))
 
