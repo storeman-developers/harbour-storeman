@@ -938,5 +938,17 @@
         <source>Failed to delete</source>
         <translation>Löschen fehlgeschlagen</translation>
     </message>
+    <message id="orn-remove-all">
+        <source>Remove all</source>
+        <translation>Alle entfernen</translation>
+    </message>
+    <message id="orn-removing-all">
+        <source>Removing all</source>
+        <translation>Entferne alle</translation>
+    </message>
+    <message id="orn-repo-allremoved">
+        <source>All repositories were removed</source>
+        <translation>Alle Quellen wurden entfernt</translation>
+    </message>
 </context>
 </TS>

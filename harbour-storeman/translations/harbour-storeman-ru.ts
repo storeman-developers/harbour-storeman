@@ -946,5 +946,17 @@ Storeman не хранит ваш пароль и не передает его �
         <source>Failed to delete</source>
         <translation>Ошибка при удалении</translation>
     </message>
+    <message id="orn-remove-all">
+        <source>Remove all</source>
+        <translation>Удалить все</translation>
+    </message>
+    <message id="orn-removing-all">
+        <source>Removing all</source>
+        <translation>Удаление</translation>
+    </message>
+    <message id="orn-repo-allremoved">
+        <source>All repositories were removed</source>
+        <translation>Все репозитории удалены</translation>
+    </message>
 </context>
 </TS>

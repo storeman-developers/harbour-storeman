@@ -938,5 +938,17 @@
         <source>Failed to delete</source>
         <translation>Verwijderen mislukt</translation>
     </message>
+    <message id="orn-remove-all">
+        <source>Remove all</source>
+        <translation>Alles verwijderen</translation>
+    </message>
+    <message id="orn-removing-all">
+        <source>Removing all</source>
+        <translation>Alles word verwijderd</translation>
+    </message>
+    <message id="orn-repo-allremoved">
+        <source>All repositories were removed</source>
+        <translation>Alle pakketbronnen zijn verwijderd</translation>
+    </message>
 </context>
 </TS>

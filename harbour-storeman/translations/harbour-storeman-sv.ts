@@ -938,5 +938,17 @@
         <source>Failed to delete</source>
         <translation>Kunde inte ta bort</translation>
     </message>
+    <message id="orn-remove-all">
+        <source>Remove all</source>
+        <translation>Ta bort alla</translation>
+    </message>
+    <message id="orn-removing-all">
+        <source>Removing all</source>
+        <translation>Tar bort alla</translation>
+    </message>
+    <message id="orn-repo-allremoved">
+        <source>All repositories were removed</source>
+        <translation>Alla förråd togs bort</translation>
+    </message>
 </context>
 </TS>
