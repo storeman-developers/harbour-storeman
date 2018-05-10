@@ -18,6 +18,7 @@ TRANSLATIONS += \
     translations/harbour-storeman-pl.ts \
     translations/harbour-storeman-pt_BR.ts \
     translations/harbour-storeman-ru.ts \
+    translations/harbour-storeman-sl_SI.ts \
     translations/harbour-storeman-sv.ts
 
 OTHER_FILES += \

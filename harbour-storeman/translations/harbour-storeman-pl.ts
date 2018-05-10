@@ -944,5 +944,17 @@
         <source>Failed to delete</source>
         <translation>Usuwanie zakończone niepowodzeniem</translation>
     </message>
+    <message id="orn-remove-all">
+        <source>Remove all</source>
+        <translation>Usuń wszystkie</translation>
+    </message>
+    <message id="orn-removing-all">
+        <source>Removing all</source>
+        <translation>Usuwanie wszystkich</translation>
+    </message>
+    <message id="orn-repo-allremoved">
+        <source>All repositories were removed</source>
+        <translation>Wszystkie repozytoria zostały usunięte</translation>
+    </message>
 </context>
 </TS>

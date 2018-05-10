@@ -906,7 +906,7 @@
     </message>
     <message id="orn-login2rate">
         <source>Log in to rate the application</source>
-        <translation>Az alkalmazás értékeléséhez jelentkezz be</translation>
+        <translation>Jelentkezz be az alkalmazás értékeléséhez</translation>
     </message>
     <message id="orn-hint-rating">
         <source>Tap to rate the application</source>
@@ -930,7 +930,19 @@
     </message>
     <message id="orn-deletion-error">
         <source>Failed to delete</source>
-        <translation>Nem sikerült törölni</translation>
+        <translation>A törlés sikertelen</translation>
+    </message>
+    <message id="orn-remove-all">
+        <source>Remove all</source>
+        <translation>Az összes eltávolítása</translation>
+    </message>
+    <message id="orn-removing-all">
+        <source>Removing all</source>
+        <translation>Az összes eltávolítása</translation>
+    </message>
+    <message id="orn-repo-allremoved">
+        <source>All repositories were removed</source>
+        <translation>Az összes csomagtároló eltávolítva</translation>
     </message>
 </context>
 </TS>

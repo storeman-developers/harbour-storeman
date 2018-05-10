@@ -938,5 +938,17 @@
         <source>Failed to delete</source>
         <translation>Αποτυχία διαγραφής</translation>
     </message>
+    <message id="orn-remove-all">
+        <source>Remove all</source>
+        <translation>Αφαίρεση όλων</translation>
+    </message>
+    <message id="orn-removing-all">
+        <source>Removing all</source>
+        <translation>Αφαίρεση όλων</translation>
+    </message>
+    <message id="orn-repo-allremoved">
+        <source>All repositories were removed</source>
+        <translation>Αφαιρέθηκαν όλα τα αποθετήρια</translation>
+    </message>
 </context>
 </TS>
