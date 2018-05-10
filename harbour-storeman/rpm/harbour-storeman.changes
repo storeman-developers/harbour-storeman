@@ -1,3 +1,8 @@
+* Mon May 10 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.24-1
+- Optimize network requests
+- Fix Slovenian translation was not added
+- Update other translations
+
 * Mon May  7 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.23-1
 - Drop dependency on QtQuick.Layouts
 - Better animations for screenshots of applications
