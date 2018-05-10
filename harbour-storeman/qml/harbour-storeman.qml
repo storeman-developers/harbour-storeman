@@ -12,28 +12,41 @@ ApplicationWindow
     property string _processingLink
     readonly property var _locale: Qt.locale()
     property var _operations: OrnPm.initialised ? OrnPm.operations : null
+    property var _resolvedLinks: new Object
 
     function openLink(link) {
         if (link === _processingLink) {
             return
         }
         // Check if link looks like an OpenRepos application link
-        if (/http[s]:\/\/openrepos\.net\/content\/[a-zA-Z\-_]*\/[a-zA-Z\-_]*/.exec(link)) {
+        var match = /http[s]:\/\/openrepos\.net\/content\/([a-zA-Z\-_]*\/[a-zA-Z\-_]*)/.exec(link)
+        if (match) {
+            var path = match[1]
+            var appid = _resolvedLinks[path]
+            if (appid) {
+                pageStack.push(Qt.resolvedUrl("pages/ApplicationPage.qml"), {
+                                   appId: appid,
+                                   returnToUser: false
+                               })
+                return
+            }
             _processingLink = link
             var req = new XMLHttpRequest()
             // Prepare a http request to get headers
-            req.open("GET", link, true)
+            req.open("HEAD", link, true)
             req.onreadystatechange = function() {
                 if (req.readyState == 4) {
                     if (req.status == 200) {
                         // Check if headers contain an id link
-                        var match = /<\/node\/(\d*)>.*/.exec(req.getResponseHeader("link"))
+                        match = /<\/node\/(\d*)>.*/.exec(req.getResponseHeader("link"))
                         if (match) {
+                            appid = match[1]
                             // Load the application page
                             pageStack.push(Qt.resolvedUrl("pages/ApplicationPage.qml"), {
-                                               appId: match[1],
+                                               appId: appid,
                                                returnToUser: false
                                            })
+                            _resolvedLinks[path] = appid
                             _processingLink = ""
                             return
                         }
