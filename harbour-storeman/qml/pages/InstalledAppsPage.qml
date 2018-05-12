@@ -69,7 +69,6 @@ Page {
                 MenuItem {
                     text: qsTrId("orn-remove")
                     onClicked: Remorse.itemAction(item, qsTrId("orn-removing"), function() {
-                        // FIXME
                         OrnPm.removePackage(packageId)
                     })
                 }
