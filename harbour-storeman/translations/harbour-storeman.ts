@@ -950,5 +950,9 @@
         <source>All repositories were removed</source>
         <translation>All repositories were removed</translation>
     </message>
+    <message id="orn-search-on-openrepos">
+        <source>Search on OpenRepos.net</source>
+        <translation>Search on OpenRepos.net</translation>
+    </message>
 </context>
 </TS>

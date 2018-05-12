@@ -48,10 +48,16 @@ Page {
         delegate: ListItem {
             id: item
             contentHeight: Theme.itemSizeExtraLarge
-            onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
-                                      { initialSearch: packageName })
+            onClicked: showMenu()
 
             menu: ContextMenu {
+
+                MenuItem {
+                    //% "Search on OpenRepos.net"
+                    text: qsTrId("orn-search-on-openrepos")
+                    onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
+                                              { initialSearch: packageName })
+                }
 
                 MenuItem {
                     visible: updateAvailable
