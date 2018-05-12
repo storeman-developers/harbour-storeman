@@ -56,7 +56,7 @@ Page {
                     //% "Search on OpenRepos.net"
                     text: qsTrId("orn-search-on-openrepos")
                     onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
-                                              { initialSearch: packageName })
+                                              { initialSearch: packageTitle })
                 }
 
                 MenuItem {
