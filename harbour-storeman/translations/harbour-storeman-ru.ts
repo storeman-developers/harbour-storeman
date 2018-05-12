@@ -958,5 +958,9 @@ Storeman не хранит ваш пароль и не передает его �
         <source>All repositories were removed</source>
         <translation>Все репозитории удалены</translation>
     </message>
+    <message id="orn-search-on-openrepos">
+        <source>Search on OpenRepos.net</source>
+        <translation>Искать на OpenRepos.net</translation>
+    </message>
 </context>
 </TS>

@@ -950,5 +950,9 @@
         <source>All repositories were removed</source>
         <translation>Alle pakketbronnen zijn verwijderd</translation>
     </message>
+    <message id="orn-search-on-openrepos">
+        <source>Search on OpenRepos.net</source>
+        <translation>Zoeken op OpenRepos.net</translation>
+    </message>
 </context>
 </TS>

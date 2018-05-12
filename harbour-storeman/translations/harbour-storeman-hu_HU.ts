@@ -944,5 +944,9 @@
         <source>All repositories were removed</source>
         <translation>Az összes csomagtároló eltávolítva</translation>
     </message>
+    <message id="orn-search-on-openrepos">
+        <source>Search on OpenRepos.net</source>
+        <translation>Keresés az OpenRepos.net-en</translation>
+    </message>
 </context>
 </TS>
