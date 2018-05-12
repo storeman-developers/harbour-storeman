@@ -924,11 +924,11 @@
     </message>
     <message id="orn-delete">
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Excluir</translation>
     </message>
     <message id="orn-deleting">
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation>Excluindo</translation>
     </message>
     <message id="orn-no-local-rpms">
         <source>No local RPM files were found</source>
@@ -936,7 +936,19 @@
     </message>
     <message id="orn-deletion-error">
         <source>Failed to delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Falha ao excluir</translation>
+    </message>
+    <message id="orn-remove-all">
+        <source>Remove all</source>
+        <translation>Remover tudo</translation>
+    </message>
+    <message id="orn-removing-all">
+        <source>Removing all</source>
+        <translation>Removendo tudo</translation>
+    </message>
+    <message id="orn-repo-allremoved">
+        <source>All repositories were removed</source>
+        <translation>Todos os repositórios foram removidos</translation>
     </message>
 </context>
 </TS>
