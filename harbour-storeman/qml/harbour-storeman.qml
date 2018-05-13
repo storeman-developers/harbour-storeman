@@ -226,6 +226,12 @@ ApplicationWindow
             }
             _showUpdatesNotification = true
         }
+
+        onRepoSuggestion: pageStack.push(
+                              Qt.resolvedUrl("pages/RepoSuggestionPage.qml"), {
+                                  author: author,
+                                  enableOnly: enableOnly
+                              })
     }
 
     Connections {

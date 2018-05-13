@@ -12,6 +12,8 @@ Page {
             if (!pageStack._currentContainer.attachedContainer) {
                 pageStack.pushAttached(Qt.resolvedUrl("CategoriesPage.qml"))
             }
+            // Check if the Storeman repo isn't enabled
+            Storeman.checkRepos()
         }
     }
 

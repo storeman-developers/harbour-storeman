@@ -19,9 +19,13 @@
 #include <QDateTime>
 #include <QTimer>
 #include <QFileInfo>
+#include <QtConcurrentRun>
 
 #include <ornpm.h>
 #include <ornapplication.h>
+#include <ornrepo.h>
+
+#define STOREMAN_AUTHOR QStringLiteral("osetr")
 
 
 Storeman *Storeman::gInstance = nullptr;
@@ -231,5 +235,35 @@ void Storeman::startUpdatesTimer()
     {
         qDebug("Stopping updates timer");
         mUpdatesTimer->stop();
+    }
+}
+
+void Storeman::checkRepos()
+{
+    QString key(QStringLiteral("repo_suggested"));
+    if (!mSettings->contains(key))
+    {
+        QtConcurrent::run(this, &Storeman::checkReposImpl);
+        mSettings->setValue(key, true);
+    }
+}
+
+void Storeman::checkReposImpl()
+{
+    auto repos = OrnPm::instance()->repoList();
+    QString author(STOREMAN_AUTHOR);
+    auto it = std::find_if(repos.begin(), repos.end(), [author](const OrnRepo &repo)
+    {
+        return (repo.author == author);
+    });
+    if (it == repos.end())
+    {
+        // Repo is not added
+        emit this->repoSuggestion(author, false);
+    }
+    else if (!it->enabled)
+    {
+        // Repo is added but disabled
+        emit this->repoSuggestion(author, true);
     }
 }

@@ -41,6 +41,8 @@ public:
 
     Q_INVOKABLE OrnApplication *cachedApp(const quint32 &appId);
 
+    Q_INVOKABLE void checkRepos();
+
 public slots:
     void resetUpdatesTimer();
 
@@ -48,6 +50,7 @@ signals:
     void updateIntervalChanged();
     void showUpdatesNotificationChanged();
     void updatesNotification(bool show, quint32 replaceId);
+    void repoSuggestion(const QString &author, bool enableOnly);
 
 private slots:
     void refreshRepos();
@@ -56,6 +59,7 @@ private slots:
 
 private:
     explicit Storeman(QObject *parent = nullptr);
+    void checkReposImpl();
 
     QSettings *mSettings;
     QTimer *mUpdatesTimer;

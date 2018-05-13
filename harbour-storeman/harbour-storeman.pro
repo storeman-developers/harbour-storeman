@@ -71,6 +71,7 @@ OTHER_FILES +=  \
     qml/pages/BackupDialog.qml \
     qml/pages/SettingsPage.qml \
     qml/pages/LocalRpmsPage.qml \
+    qml/pages/RepoSuggestionPage.qml \
     qml/components/AppListDelegate.qml \
     qml/components/RatingBox.qml \
     qml/components/IconLabel.qml \
