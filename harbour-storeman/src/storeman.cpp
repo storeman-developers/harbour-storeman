@@ -47,7 +47,7 @@ Storeman::Storeman(QObject *parent)
 
     connect(ornpm, &OrnPm::initialisedChanged,
             this, &Storeman::startUpdatesTimer);
-    connect(NetworkManager::instance(), &NetworkManager::stateChanged,
+    connect(NetworkManagerFactory::createInstance(), &NetworkManager::stateChanged,
             this, &Storeman::startUpdatesTimer);
     this->startUpdatesTimer();
 }
@@ -220,7 +220,7 @@ void Storeman::onUpdatablePackagesChanged()
 void Storeman::startUpdatesTimer()
 {
     if (OrnPm::instance()->initialised() &&
-        NetworkManager::instance()->state() == QLatin1String("online"))
+        NetworkManagerFactory::createInstance()->state() == QLatin1String("online"))
     {
         qDebug("Starting updates timer");
         auto delta = QDateTime::currentMSecsSinceEpoch() -
