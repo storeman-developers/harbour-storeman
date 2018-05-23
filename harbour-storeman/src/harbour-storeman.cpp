@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
     NetworkAccessManagerFactory factory;
     view->engine()->setNetworkAccessManagerFactory(&factory);
 
-    view->setSource(SailfishApp::pathToMainQml());
+    view->setSource(SailfishApp::pathTo(QStringLiteral("qml/harbour-storeman.qml")));
     view->show();
 
     return app->exec();
