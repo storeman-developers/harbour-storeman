@@ -2,6 +2,8 @@
 
 Unofficial native OpenRepos.net client for Sailfish OS
 
+:warning: This is a compatibility branch for the Turing Phone.
+
 [![Release](https://img.shields.io/github/release/mentaljam/harbour-storeman.svg)]()
 
 [![](https://openrepos.net/sites/default/files/styles/medium/public/packages/6416/screenshot-screenshot-storeman-01.png)](https://openrepos.net/sites/default/files/packages/6416/screenshot-screenshot-storeman-01.png)
