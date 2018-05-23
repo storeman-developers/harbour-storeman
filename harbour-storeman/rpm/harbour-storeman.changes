@@ -1,3 +1,7 @@
+* Wed May 23 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.26-1
+- Suggest users to enable the Storeman repository
+- Update translations
+
 * Sat May 12 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.25-1
 - An attempt to fix crashing on actions on repos and apps
 - InstalledAppsPage.qml: make the behavior of the installed app delegate more clear for users
