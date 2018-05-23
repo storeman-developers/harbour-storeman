@@ -5,11 +5,11 @@
     <name></name>
     <message id="orn-notrated">
         <source>Not rated yet</source>
-        <translation>Nessun mi piace</translation>
+        <translation>Nessun voto</translation>
     </message>
     <message id="orn-repositories">
         <source>Repositories</source>
-        <translation>Repository</translation>
+        <translation>Repositories</translation>
     </message>
     <message id="orn-refresh">
         <source>Refresh</source>
@@ -33,7 +33,7 @@
     </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
-        <translation>Recenti</translation>
+        <translation>Aggiornati recentemente</translation>
     </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
@@ -143,11 +143,11 @@
     </message>
     <message id="orn-cat-application">
         <source>Application</source>
-        <translation>App</translation>
+        <translation>Applicazione</translation>
     </message>
     <message id="orn-cat-ambience-themes">
         <source>Ambience &amp; Themes</source>
-        <translation>Atmosfere &amp; temi</translation>
+        <translation>Atmosfere &amp; Temi</translation>
     </message>
     <message id="orn-cat-business">
         <source>Business</source>
@@ -155,11 +155,11 @@
     </message>
     <message id="orn-cat-city-guides-maps">
         <source>City guides &amp; maps</source>
-        <translation>Mappe &amp; guide</translation>
+        <translation>Mappe &amp; Guide</translation>
     </message>
     <message id="orn-cat-education-science">
         <source>Education &amp; Science</source>
-        <translation>Scienza &amp; educazione</translation>
+        <translation>Scienza &amp; Educazione</translation>
     </message>
     <message id="orn-cat-entertainment">
         <source>Entertainment</source>
@@ -179,19 +179,19 @@
     </message>
     <message id="orn-cat-patches">
         <source>Patches</source>
-        <translation>Patch</translation>
+        <translation>Patches</translation>
     </message>
     <message id="orn-cat-photo-video">
         <source>Photo &amp; video</source>
-        <translation>Foto &amp; video</translation>
+        <translation>Foto &amp; Video</translation>
     </message>
     <message id="orn-cat-social-networks">
         <source>Social Networks</source>
-        <translation>Social network</translation>
+        <translation>Social Networks</translation>
     </message>
     <message id="orn-cat-sports">
         <source>Sports</source>
-        <translation>Sport</translation>
+        <translation>Sports</translation>
     </message>
     <message id="orn-cat-system">
         <source>System</source>
@@ -203,7 +203,7 @@
     </message>
     <message id="orn-cat-utilities">
         <source>Utilities</source>
-        <translation>Utility</translation>
+        <translation>Utilities</translation>
     </message>
     <message id="orn-cat-games">
         <source>Games</source>
@@ -227,11 +227,11 @@
     </message>
     <message id="orn-cat-card-casino">
         <source>Card &amp; casino</source>
-        <translation>Carte &amp; casino</translation>
+        <translation>Carte &amp; Casino</translation>
     </message>
     <message id="orn-cat-education">
         <source>Education</source>
-        <translation>Istruzione</translation>
+        <translation>Educazione</translation>
     </message>
     <message id="orn-cat-puzzle">
         <source>Puzzle</source>
@@ -251,7 +251,7 @@
     </message>
     <message id="orn-cat-fonts">
         <source>Fonts</source>
-        <translation>Font</translation>
+        <translation>Fonts</translation>
     </message>
     <message id="orn-cat-libraries">
         <source>Libraries</source>
@@ -369,16 +369,16 @@
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%n minute(s) ago</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n minuto fa</numerusform>
+            <numerusform>%n minuti fa</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%n hour(s) ago</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n ora fa</numerusform>
+            <numerusform>%n ore fa</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
@@ -396,7 +396,7 @@
     </message>
     <message id="orn-cat-unknown2">
         <source>Unknown category</source>
-        <translation>Sconosciuto</translation>
+        <translation>Categoria sconosciuta</translation>
     </message>
     <message id="orn-comment-body">
         <source>Your comment</source>
@@ -426,7 +426,7 @@
     <message id="orn-username">
         <source>Username or e-mail address</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Nome utente o indirizzo email</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
@@ -481,7 +481,7 @@
     </message>
     <message id="orn-authorisation-expires-body">
         <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>L&apos;autorizzazione a OpenRepos.net scade. Clicca per riaccedere.</translation>
+        <translation>L&apos;autorizzazione a OpenRepos.net é scaduta. Clicca per riaccedere.</translation>
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
@@ -581,7 +581,7 @@
     </message>
     <message id="orn-backups">
         <source>Backups</source>
-        <translation>Backup</translation>
+        <translation>Backups</translation>
     </message>
     <message id="orn-backup-description">
         <source>Backup and restore repos and installed apps</source>
@@ -617,7 +617,7 @@
     </message>
     <message id="orn-total-repos">
         <source>Total repositories</source>
-        <translation>Repository</translation>
+        <translation>Total repositories</translation>
     </message>
     <message id="orn-details">
         <source>Details</source>
@@ -813,130 +813,150 @@
     <message id="orn-comments-wait">
         <source>Wait for users&apos; feedback</source>
         <extracomment>This will be shown to an application author</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>In attesa di feedback</translation>
     </message>
     <message id="orn-comments-bethefirst">
         <source>Be the first to comment</source>
         <extracomment>This will be shown to a normal user</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Commenta per primo</translation>
     </message>
     <message id="orn-comments-nocomments">
         <source>There is nothing here yet</source>
-        <translation type="unfinished"></translation>
+        <translation>Non c&apos;è ancora niente qui</translation>
     </message>
     <message id="orn-settings">
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Impostazioni</translation>
     </message>
     <message id="orn-updates">
         <source>Updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiornamenti</translation>
     </message>
     <message id="orn-updates-notification-switch">
         <source>Show updates notification</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra notifica aggiornamenti</translation>
     </message>
     <message id="orn-updates-check-interval">
         <source>Updates check interval</source>
-        <translation type="unfinished"></translation>
+        <translation>Intervallo ricerca aggiornamenti</translation>
     </message>
     <message id="orn-interval-m" numerus="yes">
         <source>%n minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n minuto</numerusform>
+            <numerusform>%n minuti</numerusform>
         </translation>
     </message>
     <message id="orn-interval-h" numerus="yes">
         <source>%n hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n ora</numerusform>
+            <numerusform>%n ore</numerusform>
         </translation>
     </message>
     <message id="orn-updates-check-interval-invalid">
         <source>The interval must be at least 10 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;intervallo deve essere almeno di 10 minuti</translation>
     </message>
     <message id="orn-tag-strikeout">
         <source>S</source>
         <extracomment>Tag strikeout</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>S</translation>
     </message>
     <message id="orn-hint-commentfield">
         <source>Swipe to see all the tag buttons</source>
-        <translation type="unfinished"></translation>
+        <translation>Swipe per vedere tutti i tag</translation>
     </message>
     <message id="orn-dcm-user2">
         <source>Deep Thought</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Pensiero Profondo</translation>
     </message>
     <message id="orn-dcm-user1">
         <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Un topolino bianco</translation>
     </message>
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Qual è la risposta alla domanda fondamentale sulla vita, l&apos;universo e tutto quanto?</translation>
     </message>
     <message id="orn-hint-commentdelegate-created">
         <source>7.5 million years ago</source>
-        <translation type="unfinished"></translation>
+        <translation>7.5 milioni di anni fa</translation>
     </message>
     <message id="orn-hint-commentdelegate">
         <source>Tap to navigate to the replied comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Tap per navigare alla risposta al commento</translation>
     </message>
     <message id="orn-tags">
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Tag</translation>
     </message>
     <message id="orn-tag-apps">
         <source>Tagged Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>App taggate</translation>
     </message>
     <message id="orn-updates-check-interval-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation type="unfinished"></translation>
+        <translation>Gli aggiornamenti vengono ricercati solo quando Storeman è in esecuzione</translation>
     </message>
     <message id="orn-rate-app">
         <source>Rate the application</source>
-        <translation type="unfinished"></translation>
+        <translation>Vota l&apos;app</translation>
     </message>
     <message id="orn-vote-send">
         <source>Your vote has been sent</source>
-        <translation type="unfinished"></translation>
+        <translation>Voto inviato</translation>
     </message>
     <message id="orn-login2rate">
         <source>Log in to rate the application</source>
-        <translation type="unfinished"></translation>
+        <translation>Accedi per votare l&apos;app</translation>
     </message>
     <message id="orn-hint-rating">
         <source>Tap to rate the application</source>
-        <translation type="unfinished"></translation>
+        <translation>Tap per votare l&apos;app</translation>
     </message>
     <message id="orn-local-rpms">
         <source>Local RPM files</source>
-        <translation type="unfinished"></translation>
+        <translation>File RPM locali</translation>
     </message>
     <message id="orn-delete">
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Elimina</translation>
     </message>
     <message id="orn-deleting">
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminazione</translation>
     </message>
     <message id="orn-no-local-rpms">
         <source>No local RPM files were found</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessun file RPM trovato</translation>
     </message>
     <message id="orn-deletion-error">
         <source>Failed to delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile eliminare</translation>
+    </message>
+    <message id="orn-remove-all">
+        <source>Remove all</source>
+        <translation>Rimuovi tutti</translation>
+    </message>
+    <message id="orn-removing-all">
+        <source>Removing all</source>
+        <translation>Rimozione</translation>
+    </message>
+    <message id="orn-repo-allremoved">
+        <source>All repositories were removed</source>
+        <translation>Tutti i repo sono stati rimossi</translation>
+    </message>
+    <message id="orn-search-on-openrepos">
+        <source>Search on OpenRepos.net</source>
+        <translation>Cerca su OpenRepos.net</translation>
+    </message>
+    <message id="orn-repo-suggestion">
+        <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
+        <translation>&lt;h3&gt;Attiva il repo di Storeman&lt;/h3&gt;&lt;p&gt;Per ricevere le ultime versioni di Storeman, devi abilitare il suo repo.&lt;/p&gt;&lt;p&gt;Vuoi abilitarlo ora?&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>

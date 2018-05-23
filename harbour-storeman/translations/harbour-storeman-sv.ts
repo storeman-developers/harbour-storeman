@@ -950,5 +950,13 @@
         <source>All repositories were removed</source>
         <translation>Alla förråd togs bort</translation>
     </message>
+    <message id="orn-search-on-openrepos">
+        <source>Search on OpenRepos.net</source>
+        <translation>Sök på OpenRepos.net</translation>
+    </message>
+    <message id="orn-repo-suggestion">
+        <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
+        <translation>&lt;h3&gt;Aktivera Storeman-förrådet&lt;/h3&gt; &lt;p&gt;för att alltid få senaste version av Storeman. Liksom för andra appar, behöver du aktivera detta OpenRepos-förråd.&lt;/p&gt; &lt;p&gt;Vill du göra det nu?&lt;/p&gt;</translation>
+    </message>
 </context>
 </TS>

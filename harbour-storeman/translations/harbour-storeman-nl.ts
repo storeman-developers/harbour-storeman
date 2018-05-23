@@ -954,5 +954,9 @@
         <source>Search on OpenRepos.net</source>
         <translation>Zoeken op OpenRepos.net</translation>
     </message>
+    <message id="orn-repo-suggestion">
+        <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
+        <translation>&lt;h3&gt;Schakel de Storeman-pakketbron in&lt;/h3&gt;&lt;p&gt;Om de laatste nieuwe versies van Storeman te kunnen ontvangen, moet je de OpenRepos-pakketbron ervan inschakelen, net zoals elke andere app.&lt;/p&gt;&lt;p&gt;Wil je dit nu doen?&lt;/p&gt;</translation>
+    </message>
 </context>
 </TS>

@@ -962,5 +962,9 @@ Storeman не хранит ваш пароль и не передает его �
         <source>Search on OpenRepos.net</source>
         <translation>Искать на OpenRepos.net</translation>
     </message>
+    <message id="orn-repo-suggestion">
+        <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
+        <translation>&lt;h3&gt;Включите репозиторий Storeman&lt;/h3&gt;&lt;p&gt;Чтобы получать последние версии Storeman, как и для любого другого приложения, необходимо включить его репозиторий на OpenRepos.&lt;/p&gt;&lt;p&gt;Включить репозиторий сейчас?&lt;/p&gt;</translation>
+    </message>
 </context>
 </TS>

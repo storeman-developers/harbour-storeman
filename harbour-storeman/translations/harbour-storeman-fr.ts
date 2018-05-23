@@ -568,11 +568,11 @@
     </message>
     <message id="orn-updates-available-body">
         <source>Applications updates are available. Click to view details.</source>
-        <translation>Des mises à jour OpenRepos sont disponibles. Appuyez pour accéder aux différents détails.</translation>
+        <translation>Des mises à jour OpenRepos sont disponibles. Appuyez pour en connaître les détails.</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>
-        <translation>Appuyez pour consulter les détails</translation>
+        <translation>Appuyez pour voir les détails</translation>
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
@@ -609,7 +609,7 @@
     </message>
     <message id="orn-restore-hint">
         <source>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</source>
-        <translation>Restaurez les dépôts et applications OpenRepos à partir du fichier sélectionné. Cette action n&apos;affecte ni les dépôts ni les applications actuellement installés sur cet appareil.</translation>
+        <translation>Restaurez les dépôts et applications OpenRepos à partir du fichier sélectionné. Cette action n&apos;affecte ni les dépôts, ni les applications actuellement installés sur cet appareil.</translation>
     </message>
     <message id="orn-created">
         <source>Created</source>
@@ -880,7 +880,7 @@
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>La vie, l&apos;univers, tout le reste... Quelle est la réponse, la seule réponse à nos questions ?</translation>
+        <translation>La vie, l&apos;univers, tout le reste... Quelle est la réponse, la seule réponse ?</translation>
     </message>
     <message id="orn-hint-commentdelegate-created">
         <source>7.5 million years ago</source>
@@ -900,7 +900,7 @@
     </message>
     <message id="orn-updates-check-interval-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation>Les mises à jour ne seront vérifiées que lorsque Storeman sera en cours d’exécution</translation>
+        <translation>Les mises à jour ne seront vérifiées que lorsque l&apos;application sera en cours d’exécution</translation>
     </message>
     <message id="orn-rate-app">
         <source>Rate the application</source>
@@ -944,11 +944,19 @@
     </message>
     <message id="orn-removing-all">
         <source>Removing all</source>
-        <translation>Suppression de tout</translation>
+        <translation>Suppression</translation>
     </message>
     <message id="orn-repo-allremoved">
         <source>All repositories were removed</source>
-        <translation>Tous les répertoires ont été supprimés</translation>
+        <translation>Tous les dépôts ont été supprimés</translation>
+    </message>
+    <message id="orn-search-on-openrepos">
+        <source>Search on OpenRepos.net</source>
+        <translation>Chercher sur OpenRepos.net</translation>
+    </message>
+    <message id="orn-repo-suggestion">
+        <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
+        <translation>&lt;h3&gt;Activer le dépôt de Storeman&lt;/h3&gt;&lt;p&gt;Pour maintenir Storeman à jour, vous devez activer son dépôt sur votre téléphone, comme vous le feriez pour n&apos;importe quelle appli provenant d&apos;OpenRepos.&lt;/p&gt;&lt;p&gt;Souhaitez-vous le faire sans plus attendre ?&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>

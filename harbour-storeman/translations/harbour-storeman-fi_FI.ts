@@ -369,16 +369,16 @@
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%n minute(s) ago</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n minuutti sitten</numerusform>
+            <numerusform>%n minuuttia sitten</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%n hour(s) ago</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n tunti sitten</numerusform>
+            <numerusform>%n tuntia sitten</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
@@ -426,7 +426,7 @@
     <message id="orn-username">
         <source>Username or e-mail address</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Käyttäjänimi tai sähköposti</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
@@ -826,117 +826,137 @@
     </message>
     <message id="orn-settings">
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetukset</translation>
     </message>
     <message id="orn-updates">
         <source>Updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Päivitykset</translation>
     </message>
     <message id="orn-updates-notification-switch">
         <source>Show updates notification</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä ilmoitus päivityksistä</translation>
     </message>
     <message id="orn-updates-check-interval">
         <source>Updates check interval</source>
-        <translation type="unfinished"></translation>
+        <translation>Päivitysten tarkastusväli</translation>
     </message>
     <message id="orn-interval-m" numerus="yes">
         <source>%n minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n minuutti</numerusform>
+            <numerusform>%n minuuttia</numerusform>
         </translation>
     </message>
     <message id="orn-interval-h" numerus="yes">
         <source>%n hour(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n tunti</numerusform>
+            <numerusform>%n tuntia</numerusform>
         </translation>
     </message>
     <message id="orn-updates-check-interval-invalid">
         <source>The interval must be at least 10 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>Tarkastusvälin täytyy olla vähintään 10 minuuttia</translation>
     </message>
     <message id="orn-tag-strikeout">
         <source>S</source>
         <extracomment>Tag strikeout</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>S</translation>
     </message>
     <message id="orn-hint-commentfield">
         <source>Swipe to see all the tag buttons</source>
-        <translation type="unfinished"></translation>
+        <translation>Pyyhkäise nähdäksesi kaikki avainsanapainikkeet</translation>
     </message>
     <message id="orn-dcm-user2">
         <source>Deep Thought</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Syvä miete</translation>
     </message>
     <message id="orn-dcm-user1">
         <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Pieni valkoinen hiiri</translation>
     </message>
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Mikä on vastaus elämään, maailmankaikkeuteen ja kaikkeen muuhun sellaiseen?</translation>
     </message>
     <message id="orn-hint-commentdelegate-created">
         <source>7.5 million years ago</source>
-        <translation type="unfinished"></translation>
+        <translation>7,5 miljoonaa vuotta sitten</translation>
     </message>
     <message id="orn-hint-commentdelegate">
         <source>Tap to navigate to the replied comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Paina siirtyäksesi vastattuun kommenttiin</translation>
     </message>
     <message id="orn-tags">
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Avainsanat</translation>
     </message>
     <message id="orn-tag-apps">
         <source>Tagged Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Merkityt sovellukset</translation>
     </message>
     <message id="orn-updates-check-interval-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation type="unfinished"></translation>
+        <translation>Päivitykset tarkastetaan vain sovelluksen ollessa käynnissä</translation>
     </message>
     <message id="orn-rate-app">
         <source>Rate the application</source>
-        <translation type="unfinished"></translation>
+        <translation>Arvostele sovellus</translation>
     </message>
     <message id="orn-vote-send">
         <source>Your vote has been sent</source>
-        <translation type="unfinished"></translation>
+        <translation>Äänesi on tallennettu</translation>
     </message>
     <message id="orn-login2rate">
         <source>Log in to rate the application</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjaudu arvostelleksesi sovellus</translation>
     </message>
     <message id="orn-hint-rating">
         <source>Tap to rate the application</source>
-        <translation type="unfinished"></translation>
+        <translation>Paina arvostelleksesi sovellus</translation>
     </message>
     <message id="orn-local-rpms">
         <source>Local RPM files</source>
-        <translation type="unfinished"></translation>
+        <translation>Paikalliset RPM-tiedostot</translation>
     </message>
     <message id="orn-delete">
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista</translation>
     </message>
     <message id="orn-deleting">
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation>Poistetaan</translation>
     </message>
     <message id="orn-no-local-rpms">
         <source>No local RPM files were found</source>
-        <translation type="unfinished"></translation>
+        <translation>Paikallisia RPM-tiedostoja ei löytynyt</translation>
     </message>
     <message id="orn-deletion-error">
         <source>Failed to delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Poistaminen ei onnistunut</translation>
+    </message>
+    <message id="orn-remove-all">
+        <source>Remove all</source>
+        <translation>Poista kaikki</translation>
+    </message>
+    <message id="orn-removing-all">
+        <source>Removing all</source>
+        <translation>Poistetaan kaikki</translation>
+    </message>
+    <message id="orn-repo-allremoved">
+        <source>All repositories were removed</source>
+        <translation>Kaikki pakettilähteet poistettiin</translation>
+    </message>
+    <message id="orn-search-on-openrepos">
+        <source>Search on OpenRepos.net</source>
+        <translation>Etsi kohteesta OpenRepos.net</translation>
+    </message>
+    <message id="orn-repo-suggestion">
+        <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
+        <translation>&lt;h3&gt;Ota Storemanin pakettilähde käyttöön&lt;/h3&gt;&lt;p&gt;Saadaksesi viimeisimmän version Storemanista, sen OpenRepos-pakettilähde täytyy ottaa käyttöön, kuten minkä tahansa muun sovelluksen kanssa.&lt;/p&gt;&lt;p&gt;Tahdotko tehdä sen nyt?&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>

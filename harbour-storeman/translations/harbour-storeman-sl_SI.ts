@@ -962,5 +962,13 @@
         <source>All repositories were removed</source>
         <translation type="unfinished"></translation>
     </message>
+    <message id="orn-search-on-openrepos">
+        <source>Search on OpenRepos.net</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-repo-suggestion">
+        <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>
