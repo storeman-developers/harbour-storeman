@@ -3,13 +3,17 @@ import Sailfish.Silica 1.0
 import harbour.orn 1.0
 
 PullDownMenu {
+    readonly property bool _enableMenu: networkManager.online &&
+                                        !itemInProgress(app.repoAlias) &&
+                                        !itemInProgress(app.packageName)
+
     id: pullMenu
     visible: OrnPm.initialised
 
     MenuItem {
         id: repoMenuItem
         visible: text
-        enabled: !pullMenu.busy && networkManager.online
+        enabled: _enableMenu
         text: {
             if (!app.repoAlias) {
                 return ""
@@ -47,7 +51,7 @@ PullDownMenu {
     MenuItem {
         id: installMenuItem
         visible: text
-        enabled: !pullMenu.busy && networkManager.online
+        enabled: _enableMenu
         text: {
             switch (_packageStatus) {
             case OrnPm.PackageAvailable:
@@ -79,7 +83,7 @@ PullDownMenu {
     MenuItem {
         id: updateMenuItem
         visible: _packageStatus == OrnPm.PackageUpdateAvailable
-        enabled: !pullMenu.busy && networkManager.online
+        enabled: _enableMenu
         //% "Update"
         text: qsTrId("orn-update")
         onClicked: OrnPm.updatePackage(app.packageName)
@@ -88,7 +92,6 @@ PullDownMenu {
     MenuItem {
         id: launchMenuItem
         visible: app.canBeLaunched
-        enabled: !pullMenu.busy
         //% "Launch"
         text: qsTrId("orn-launch")
         onClicked: app.launch()

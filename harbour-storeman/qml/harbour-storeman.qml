@@ -14,6 +14,18 @@ ApplicationWindow
     property var _operations: OrnPm.initialised ? OrnPm.operations : null
     property var _resolvedLinks: new Object
 
+    function itemInProgress(item) {
+        if (!_operations) {
+            return true
+        }
+        for (var i in _operations) {
+            if (_operations[i].item === item) {
+                return true
+            }
+        }
+        return false
+    }
+
     function openLink(link) {
         if (link === _processingLink) {
             return

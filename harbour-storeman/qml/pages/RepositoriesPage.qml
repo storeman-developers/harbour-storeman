@@ -45,6 +45,9 @@ Page {
         }
 
         delegate: ListItem {
+            readonly property bool _enableMenu:
+                networkManager.online && !itemInProgress(repoAlias)
+
             id: repoItem
             onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
                                       { initialSearch: repoAuthor })
@@ -52,7 +55,7 @@ Page {
 
                 MenuItem {
                     visible: repoEnabled
-                    enabled: networkManager.online
+                    enabled: _enableMenu
                     //% "Refresh cache"
                     text: qsTrId("orn-refresh-cache")
                     onClicked: OrnPm.refreshRepo(repoAlias, true)
@@ -64,13 +67,13 @@ Page {
                               qsTrId("orn-disable") :
                               //% "Enable"
                               qsTrId("orn-enable")
-                    enabled: networkManager.online
+                    enabled: _enableMenu
                     onClicked: OrnPm.modifyRepo(
                                    repoAlias, repoEnabled ? OrnPm.DisableRepo : OrnPm.EnableRepo)
                 }
 
                 MenuItem {
-                    enabled: networkManager.online
+                    enabled: _enableMenu
                     //% "Remove"
                     text: qsTrId("orb-remove")
                     //% "Removing"
@@ -90,6 +93,9 @@ Page {
         }
 
         PullDownMenu {
+            readonly property bool _enableMenu:
+                networkManager.online && _operations && _operations.length === 0
+
             id: menu
 
             RefreshMenuItem {
@@ -98,14 +104,14 @@ Page {
 
             MenuItem {
                 visible: reposList.count
-                enabled: networkManager.online
+                enabled: _enableMenu
                 text: qsTrId("orn-refresh-cache")
                 onClicked: Storeman.resetUpdatesTimer()
             }
 
             MenuItem {
                 visible: repoModel.hasDisabledRepos
-                enabled: networkManager.online
+                enabled: _enableMenu
                 //% "Enable all"
                 text: qsTrId("orn-enable-all")
                 //% "Enabling all"
@@ -119,7 +125,7 @@ Page {
 
             MenuItem {
                 visible: repoModel.hasEnabledRepos
-                enabled: networkManager.online
+                enabled: _enableMenu
                 //% "Disable all"
                 text: qsTrId("orn-disable-all")
                 //% "Disabling all"
@@ -132,6 +138,7 @@ Page {
 
             MenuItem {
                 visible: reposList.count
+                enabled: _enableMenu
                 //% "Remove all"
                 text: qsTrId("orn-remove-all")
                 //% "Removing all"

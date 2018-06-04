@@ -61,13 +61,14 @@ Page {
 
                 MenuItem {
                     visible: updateAvailable
-                    enabled: networkManager.online
+                    enabled: networkManager.online && !itemInProgress(packageName)
                     text: qsTrId("orn-update")
                     onClicked: OrnPm.updatePackage(packageName)
                 }
 
                 MenuItem {
                     text: qsTrId("orn-remove")
+                    enabled: !itemInProgress(packageName)
                     onClicked: Remorse.itemAction(item, qsTrId("orn-removing"), function() {
                         OrnPm.removePackage(packageId)
                     })
@@ -130,7 +131,7 @@ Page {
 
             MenuItem {
                 visible: OrnPm.updatesAvailable
-                enabled: networkManager.online
+                enabled: networkManager.online && _operations && _operations.length === 0
                 //% "Update all"
                 text: qsTrId("orn-update-all")
                 onClicked: {
