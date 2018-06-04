@@ -806,10 +806,6 @@
         <source>Public Transport</source>
         <translation>Public Transport</translation>
     </message>
-    <message id="orn-pmstate-refreshingcache">
-        <source>Refreshing cache&lt;br /&gt;(checking for updates)</source>
-        <translation>Refreshing cache&lt;br /&gt;(checking for updates)</translation>
-    </message>
     <message id="orn-comments-wait">
         <source>Wait for users&apos; feedback</source>
         <extracomment>This will be shown to an application author</extracomment>
