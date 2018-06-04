@@ -894,10 +894,6 @@
         <source>Tagged Applications</source>
         <translation>Tagged Applications</translation>
     </message>
-    <message id="orn-updates-check-interval-descr">
-        <source>Updates are checked only when the Storeman is running</source>
-        <translation>Updates are checked only when the Storeman is running</translation>
-    </message>
     <message id="orn-rate-app">
         <source>Rate the application</source>
         <translation>Rate the application</translation>
@@ -953,6 +949,26 @@
     <message id="orn-repo-suggestion">
         <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
         <translation>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</translation>
+    </message>
+    <message id="orn-save">
+        <source>Save</source>
+        <translation>Save</translation>
+    </message>
+    <message id="orn-check-for-updates-switch">
+        <source>Check for updates</source>
+        <translation>Check for updates</translation>
+    </message>
+    <message id="orn-check-for-updates-descr">
+        <source>Updates are checked only when the Storeman is running</source>
+        <translation>Updates are checked only when the Storeman is running</translation>
+    </message>
+    <message id="orn-smart-check-switch">
+        <source>Smart check</source>
+        <translation>Smart check</translation>
+    </message>
+    <message id="orn-smart-check-descr">
+        <source>Use the OpenRepos.net API to determine if there are new updates</source>
+        <translation>Use the OpenRepos.net API to determine if there are new updates</translation>
     </message>
 </context>
 </TS>

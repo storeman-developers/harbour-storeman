@@ -15,6 +15,8 @@ class Storeman : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(int updateInterval READ updateInterval WRITE setUpdateInterval NOTIFY updateIntervalChanged)
+    Q_PROPERTY(bool checkForUpdates READ checkForUpdates WRITE setCheckForUpdates NOTIFY checkForUpdatesChanged)
+    Q_PROPERTY(bool smartUpdate READ smartUpdate WRITE setSmartUpdate NOTIFY smartUpdateChanged)
     Q_PROPERTY(bool showUpdatesNotification READ showUpdatesNotification WRITE setShowUpdatesNotification NOTIFY showUpdatesNotificationChanged)
 
 public:
@@ -30,6 +32,12 @@ public:
 
     int updateInterval() const;
     void setUpdateInterval(const int &value);
+
+    bool checkForUpdates() const;
+    void setCheckForUpdates(bool value);
+
+    bool smartUpdate() const;
+    void setSmartUpdate(bool value);
 
     bool showUpdatesNotification() const;
     void setShowUpdatesNotification(bool value);
@@ -48,6 +56,8 @@ public slots:
 
 signals:
     void updateIntervalChanged();
+    void checkForUpdatesChanged();
+    void smartUpdateChanged();
     void showUpdatesNotificationChanged();
     void updatesNotification(bool show, quint32 replaceId);
     void repoSuggestion(const QString &author, bool enableOnly);

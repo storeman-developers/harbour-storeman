@@ -20,10 +20,13 @@
 #include <QTimer>
 #include <QFileInfo>
 #include <QtConcurrentRun>
+#include <QNetworkReply>
 
+#include <orn.h>
 #include <ornpm.h>
 #include <ornapplication.h>
 #include <ornrepo.h>
+#include <ornapirequest.h>
 
 #define STOREMAN_AUTHOR QStringLiteral("osetr")
 
@@ -45,6 +48,8 @@ Storeman::Storeman(QObject *parent)
     mUpdatesTimer->setSingleShot(false);
     connect(mUpdatesTimer, &QTimer::timeout, this, &Storeman::refreshRepos);
 
+    connect(this, &Storeman::checkForUpdatesChanged,
+            this, &Storeman::startUpdatesTimer);
     connect(ornpm, &OrnPm::initialisedChanged,
             this, &Storeman::startUpdatesTimer);
     connect(NetworkManager::instance(), &NetworkManager::stateChanged,
@@ -79,6 +84,34 @@ void Storeman::setUpdateInterval(const int &value)
         mSettings->setValue(QStringLiteral("updates/interval"), value);
         mUpdatesTimer->setInterval(value);
         emit this->updateIntervalChanged();
+    }
+}
+
+bool Storeman::checkForUpdates() const
+{
+    return mSettings->value(QStringLiteral("updates/enabled"), true).toBool();
+}
+
+void Storeman::setCheckForUpdates(bool value)
+{
+    if (value != this->checkForUpdates())
+    {
+        mSettings->setValue(QStringLiteral("updates/enabled"), value);
+        emit this->checkForUpdatesChanged();
+    }
+}
+
+bool Storeman::smartUpdate() const
+{
+    return mSettings->value(QStringLiteral("updates/smart"), true).toBool();
+}
+
+void Storeman::setSmartUpdate(bool value)
+{
+    if (value != this->smartUpdate())
+    {
+        mSettings->setValue(QStringLiteral("updates/smart"), value);
+        emit this->smartUpdateChanged();
     }
 }
 
@@ -145,9 +178,37 @@ void Storeman::resetUpdatesTimer()
 
 void Storeman::refreshRepos()
 {
-    OrnPm::instance()->refreshRepos();
-    mSettings->setValue(QStringLiteral("updates/last_check"),
-                        QDateTime::currentMSecsSinceEpoch());
+    if (this->smartUpdate())
+    {
+        auto url = OrnApiRequest::apiUrl(QStringLiteral("apps"));
+        url.setQuery(QStringLiteral("pagesize=1"));
+        auto reply = Orn::networkAccessManager()->get(OrnApiRequest::networkRequest(url));
+        connect(reply, &QNetworkReply::finished, [this, reply]()
+        {
+            if (reply->error() == QNetworkReply::NoError)
+            {
+                auto json = QJsonDocument::fromJson(reply->readAll()).array();
+                if (!json.isEmpty())
+                {
+                    auto lastUpdate = Orn::toUint(json[0].toObject()[QStringLiteral("updated")]);
+                    auto lastCheck = mSettings->value(QStringLiteral("updates/last_check")).toLongLong();
+                    if (qlonglong(lastUpdate) * 1000 > lastCheck)
+                    {
+                        OrnPm::instance()->refreshRepos();
+                        mSettings->setValue(QStringLiteral("updates/last_check"),
+                                            QDateTime::currentMSecsSinceEpoch());
+                    }
+                }
+            }
+            reply->deleteLater();
+        });
+    }
+    else
+    {
+        OrnPm::instance()->refreshRepos();
+        mSettings->setValue(QStringLiteral("updates/last_check"),
+                            QDateTime::currentMSecsSinceEpoch());
+    }
 }
 
 inline Notification *previousNotification()
@@ -219,7 +280,8 @@ void Storeman::onUpdatablePackagesChanged()
 
 void Storeman::startUpdatesTimer()
 {
-    if (OrnPm::instance()->initialised() &&
+    if (this->checkForUpdates() &&
+        OrnPm::instance()->initialised() &&
         NetworkManager::instance()->state() == QLatin1String("online"))
     {
         qDebug("Starting updates timer");

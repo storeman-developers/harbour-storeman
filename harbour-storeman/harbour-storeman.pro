@@ -94,6 +94,7 @@ OTHER_FILES +=  \
     qml/components/StoremanHint.qml \
     qml/components/StoremanHintLabel.qml \
     qml/components/TagDelegate.qml \
+    qml/components/DisappearAnimation.qml \
     qml/models/DevelopersModel.qml \
     qml/models/TranslatorsModel.qml \
     qml/models/DummyCommentsModel.qml
