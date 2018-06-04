@@ -91,10 +91,10 @@ PullDownMenu {
 
     MenuItem {
         id: launchMenuItem
-        visible: app.canBeLaunched
+        visible: app.desktopFile
         //% "Launch"
         text: qsTrId("orn-launch")
-        onClicked: app.launch()
+        onClicked: Qt.openUrlExternally(app.desktopFile)
     }
 
     MenuStatusLabel { }
