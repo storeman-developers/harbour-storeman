@@ -117,9 +117,9 @@
         <translation>Last updated</translation>
     </message>
     <message id="orn-dt-format">
-        <source>yyyy-dd-MM hh:mm</source>
+        <source>yyyy-MM-dd hh:mm</source>
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation>yyyy-dd-MM hh:mm</translation>
+        <translation>yyyy-MM-dd hh:mm</translation>
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>

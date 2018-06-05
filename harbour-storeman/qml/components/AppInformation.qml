@@ -145,7 +145,7 @@ BackgroundItem {
             //% "Last updated"
             label: qsTrId("orn-version-updated")
             //: Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString
-            //% "yyyy-dd-MM hh:mm"
+            //% "yyyy-MM-dd hh:mm"
             value: app.created.toLocaleString(_locale, qsTrId("orn-dt-format"))
         }
 
