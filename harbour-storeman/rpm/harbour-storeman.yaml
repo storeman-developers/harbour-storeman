@@ -15,7 +15,7 @@ QMakeOptions:
   - VERSION=%{version}
 
 PkgConfigBR:
-  - sailfishapp >= 1.0.2
+  - sailfishapp
   - Qt5Core
   - Qt5Qml
   - Qt5Quick
@@ -31,7 +31,8 @@ PkgBR:
   - qt5-qttools-linguist
 
 Requires:
-  - sailfishsilica-qt5 >= 0.10.9
+  - sailfish-version >= 2.1.4
+  - sailfishsilica-qt5
   - nemo-qml-plugin-dbus-qt5
   - nemo-qml-plugin-notifications-qt5
   - connman-qt5-declarative
