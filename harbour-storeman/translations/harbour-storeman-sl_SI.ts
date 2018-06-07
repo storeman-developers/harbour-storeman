@@ -117,9 +117,9 @@
         <translation>Zadnjič posodobljeno</translation>
     </message>
     <message id="orn-dt-format">
-        <source>yyyy-dd-MM hh:mm</source>
+        <source>yyyy-MM-dd hh:mm</source>
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation>dd-MM-yyyy hh:mm</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
@@ -814,10 +814,6 @@
         <source>Public Transport</source>
         <translation>Javni prevoz</translation>
     </message>
-    <message id="orn-pmstate-refreshingcache">
-        <source>Refreshing cache&lt;br /&gt;(checking for updates)</source>
-        <translation>Posodabljanje predpomnilnika&lt;br /&gt;(preverjanje za posodobitve)</translation>
-    </message>
     <message id="orn-comments-wait">
         <source>Wait for users&apos; feedback</source>
         <extracomment>This will be shown to an application author</extracomment>
@@ -910,10 +906,6 @@
         <source>Tagged Applications</source>
         <translation>Označene aplikacije</translation>
     </message>
-    <message id="orn-updates-check-interval-descr">
-        <source>Updates are checked only when the Storeman is running</source>
-        <translation>Posodobitve delujejo le, ko je aplikacija Storeman zagnana</translation>
-    </message>
     <message id="orn-rate-app">
         <source>Rate the application</source>
         <translation>Ocenite aplikacijo</translation>
@@ -968,6 +960,26 @@
     </message>
     <message id="orn-repo-suggestion">
         <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-save">
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-check-for-updates-switch">
+        <source>Check for updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-check-for-updates-descr">
+        <source>Updates are checked only when the Storeman is running</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-smart-check-switch">
+        <source>Smart check</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-smart-check-descr">
+        <source>Use the OpenRepos.net API to determine if there are new updates</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

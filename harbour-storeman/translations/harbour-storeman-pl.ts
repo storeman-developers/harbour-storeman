@@ -117,9 +117,9 @@
         <translation>Ostatnio zaktualizowane</translation>
     </message>
     <message id="orn-dt-format">
-        <source>yyyy-dd-MM hh:mm</source>
+        <source>yyyy-MM-dd hh:mm</source>
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation>yyyy-MM-dd hh:mm</translation>
+        <translation>dd-MM-yyyy hh:mm</translation>
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
@@ -810,10 +810,6 @@
         <source>Public Transport</source>
         <translation>Transport publiczny</translation>
     </message>
-    <message id="orn-pmstate-refreshingcache">
-        <source>Refreshing cache&lt;br /&gt;(checking for updates)</source>
-        <translation>Odświeżanie pamięci podręcznej&lt;br /&gt;(szukanie aktualizacji)</translation>
-    </message>
     <message id="orn-comments-wait">
         <source>Wait for users&apos; feedback</source>
         <extracomment>This will be shown to an application author</extracomment>
@@ -904,10 +900,6 @@
         <source>Tagged Applications</source>
         <translation>Otagowana aplikacja</translation>
     </message>
-    <message id="orn-updates-check-interval-descr">
-        <source>Updates are checked only when the Storeman is running</source>
-        <translation>Aktualizacje są sprawdzane wyłącznie kiedy Storeman jest uruchomiony</translation>
-    </message>
     <message id="orn-rate-app">
         <source>Rate the application</source>
         <translation>Oceń aplikację</translation>
@@ -963,6 +955,26 @@
     <message id="orn-repo-suggestion">
         <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
         <translation>&lt;h3&gt;Włącz repozytorium Storeman&lt;/h3&gt;&lt;p&gt;Aby otrzymywać najnowszą wersję Storeman, trzeba włączyć repozytorium OpenRepos tak jak w przypadku innych aplikacji.&lt;/p&gt;&lt;p&gt;Czy chcesz to zrobić teraz?&lt;/p&gt;</translation>
+    </message>
+    <message id="orn-save">
+        <source>Save</source>
+        <translation>Zapisz</translation>
+    </message>
+    <message id="orn-check-for-updates-switch">
+        <source>Check for updates</source>
+        <translation>Sprawdź aktualizacje</translation>
+    </message>
+    <message id="orn-check-for-updates-descr">
+        <source>Updates are checked only when the Storeman is running</source>
+        <translation>Aktualizacje sa sprawdzane tylko kiedy Storeman jest uruchomiony</translation>
+    </message>
+    <message id="orn-smart-check-switch">
+        <source>Smart check</source>
+        <translation>Sprytne sprawdzanie</translation>
+    </message>
+    <message id="orn-smart-check-descr">
+        <source>Use the OpenRepos.net API to determine if there are new updates</source>
+        <translation>Użyj OpenRepos.net API, aby sprawdzić czy są nowe aktualizacje</translation>
     </message>
 </context>
 </TS>

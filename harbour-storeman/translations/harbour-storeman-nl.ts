@@ -117,7 +117,7 @@
         <translation>Bijgewerkt</translation>
     </message>
     <message id="orn-dt-format">
-        <source>yyyy-dd-MM hh:mm</source>
+        <source>yyyy-MM-dd hh:mm</source>
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
         <translation>hh:mm dd-MM-yy</translation>
     </message>
@@ -806,10 +806,6 @@
         <source>Public Transport</source>
         <translation>Openbaar vervoer</translation>
     </message>
-    <message id="orn-pmstate-refreshingcache">
-        <source>Refreshing cache&lt;br /&gt;(checking for updates)</source>
-        <translation>Cache wordt vernieuwd&lt;br /&gt;(controleren op updates)</translation>
-    </message>
     <message id="orn-comments-wait">
         <source>Wait for users&apos; feedback</source>
         <extracomment>This will be shown to an application author</extracomment>
@@ -898,10 +894,6 @@
         <source>Tagged Applications</source>
         <translation>Getagde apps</translation>
     </message>
-    <message id="orn-updates-check-interval-descr">
-        <source>Updates are checked only when the Storeman is running</source>
-        <translation>Storeman controleert enkel op updates wanneer het actief is</translation>
-    </message>
     <message id="orn-rate-app">
         <source>Rate the application</source>
         <translation>Beoordeel de app</translation>
@@ -957,6 +949,26 @@
     <message id="orn-repo-suggestion">
         <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
         <translation>&lt;h3&gt;Schakel de Storeman-pakketbron in&lt;/h3&gt;&lt;p&gt;Om de laatste nieuwe versies van Storeman te kunnen ontvangen, moet je de OpenRepos-pakketbron ervan inschakelen, net zoals elke andere app.&lt;/p&gt;&lt;p&gt;Wil je dit nu doen?&lt;/p&gt;</translation>
+    </message>
+    <message id="orn-save">
+        <source>Save</source>
+        <translation>Opslaan</translation>
+    </message>
+    <message id="orn-check-for-updates-switch">
+        <source>Check for updates</source>
+        <translation>Controleren op updates</translation>
+    </message>
+    <message id="orn-check-for-updates-descr">
+        <source>Updates are checked only when the Storeman is running</source>
+        <translation>Storeman controleert enkel op updates wanneer het actief is</translation>
+    </message>
+    <message id="orn-smart-check-switch">
+        <source>Smart check</source>
+        <translation>Slim controleren</translation>
+    </message>
+    <message id="orn-smart-check-descr">
+        <source>Use the OpenRepos.net API to determine if there are new updates</source>
+        <translation>Gebruik de OpenRepos.net-API om te bepalen of er nieuwe updates beschikbaar zijn</translation>
     </message>
 </context>
 </TS>

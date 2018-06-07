@@ -117,9 +117,9 @@
         <translation>Dernière mise à jour</translation>
     </message>
     <message id="orn-dt-format">
-        <source>yyyy-dd-MM hh:mm</source>
+        <source>yyyy-MM-dd hh:mm</source>
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation>yyyy-MM-dd hh:mm</translation>
+        <translation>dd.MM.yyyy hh:mm</translation>
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
@@ -806,10 +806,6 @@
         <source>Public Transport</source>
         <translation>Transport</translation>
     </message>
-    <message id="orn-pmstate-refreshingcache">
-        <source>Refreshing cache&lt;br /&gt;(checking for updates)</source>
-        <translation>Mise à jour du cache...</translation>
-    </message>
     <message id="orn-comments-wait">
         <source>Wait for users&apos; feedback</source>
         <extracomment>This will be shown to an application author</extracomment>
@@ -898,10 +894,6 @@
         <source>Tagged Applications</source>
         <translation>Applications labellisées </translation>
     </message>
-    <message id="orn-updates-check-interval-descr">
-        <source>Updates are checked only when the Storeman is running</source>
-        <translation>Les mises à jour ne seront vérifiées que lorsque l&apos;application sera en cours d’exécution</translation>
-    </message>
     <message id="orn-rate-app">
         <source>Rate the application</source>
         <translation>Évaluer l&apos;application</translation>
@@ -957,6 +949,26 @@
     <message id="orn-repo-suggestion">
         <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
         <translation>&lt;h3&gt;Activer le dépôt de Storeman&lt;/h3&gt;&lt;p&gt;Pour maintenir Storeman à jour, vous devez activer son dépôt sur votre téléphone, comme vous le feriez pour n&apos;importe quelle appli provenant d&apos;OpenRepos.&lt;/p&gt;&lt;p&gt;Souhaitez-vous le faire sans plus attendre ?&lt;/p&gt;</translation>
+    </message>
+    <message id="orn-save">
+        <source>Save</source>
+        <translation>Sauvegarder</translation>
+    </message>
+    <message id="orn-check-for-updates-switch">
+        <source>Check for updates</source>
+        <translation>Rechercher des mises à jour</translation>
+    </message>
+    <message id="orn-check-for-updates-descr">
+        <source>Updates are checked only when the Storeman is running</source>
+        <translation>Les MàJ ne sont vérifiées que lorsque Storeman est actif</translation>
+    </message>
+    <message id="orn-smart-check-switch">
+        <source>Smart check</source>
+        <translation>Smart Check</translation>
+    </message>
+    <message id="orn-smart-check-descr">
+        <source>Use the OpenRepos.net API to determine if there are new updates</source>
+        <translation>Utilise l&apos;API d&apos;OpenRepos.net pour vérifier s&apos;il y a de nouvelles mises à jour</translation>
     </message>
 </context>
 </TS>

@@ -117,9 +117,9 @@
         <translation>Utoljára frissítve</translation>
     </message>
     <message id="orn-dt-format">
-        <source>yyyy-dd-MM hh:mm</source>
+        <source>yyyy-MM-dd hh:mm</source>
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation>yyyy-dd-MM hh:mm</translation>
+        <translation>yyyy.MM.dd. hh:mm</translation>
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
@@ -802,10 +802,6 @@
         <source>Public Transport</source>
         <translation>Tömegközlekedés</translation>
     </message>
-    <message id="orn-pmstate-refreshingcache">
-        <source>Refreshing cache&lt;br /&gt;(checking for updates)</source>
-        <translation>Gyorsítótár frissítése&lt;br /&gt;(frissítések ellenőrzése)</translation>
-    </message>
     <message id="orn-comments-wait">
         <source>Wait for users&apos; feedback</source>
         <extracomment>This will be shown to an application author</extracomment>
@@ -892,10 +888,6 @@
         <source>Tagged Applications</source>
         <translation>Címkézett alkalmazások</translation>
     </message>
-    <message id="orn-updates-check-interval-descr">
-        <source>Updates are checked only when the Storeman is running</source>
-        <translation>A frissítések ellenőrzése kizárólag a Storeman futtatása közben történik</translation>
-    </message>
     <message id="orn-rate-app">
         <source>Rate the application</source>
         <translation>Értékeld az alkalmazást</translation>
@@ -951,6 +943,26 @@
     <message id="orn-repo-suggestion">
         <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
         <translation>&lt;h3&gt;Storeman csomagtároló engedélyezése&lt;/h3&gt;&lt;p&gt;A Storeman legújabb frissítéseinek telepítéséhez szükséges engedélyezned az OpenRepos csomagtárolóját.&lt;/p&gt;&lt;p&gt;Szeretnéd most megtenni?&lt;/p&gt;</translation>
+    </message>
+    <message id="orn-save">
+        <source>Save</source>
+        <translation>Mentés</translation>
+    </message>
+    <message id="orn-check-for-updates-switch">
+        <source>Check for updates</source>
+        <translation>Frissítések keresése</translation>
+    </message>
+    <message id="orn-check-for-updates-descr">
+        <source>Updates are checked only when the Storeman is running</source>
+        <translation>A frissítések ellenőrzése csak a Storeman futásakor történik</translation>
+    </message>
+    <message id="orn-smart-check-switch">
+        <source>Smart check</source>
+        <translation>Okos ellenőrzés</translation>
+    </message>
+    <message id="orn-smart-check-descr">
+        <source>Use the OpenRepos.net API to determine if there are new updates</source>
+        <translation>Használd az OpenRepos.net API-t annak meghatározásához, hogy vannak-e új frissítések</translation>
     </message>
 </context>
 </TS>
