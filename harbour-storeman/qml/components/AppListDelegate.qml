@@ -85,7 +85,7 @@ ListItem {
                     font.pixelSize: Theme.fontSizeTiny
                     color: Theme.highlightColor
                     text: model.userName + "\u2009\u2022\u2009" +
-                          model.createDate.toLocaleDateString(_locale, Locale.NarrowFormat)
+                          model.createDate.toLocaleDateString(_locale, Locale.ShortFormat)
                 }
 
                 Loader {
