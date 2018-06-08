@@ -1,3 +1,13 @@
+* Fri Jun  8 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.27-1
+- Launch Storeman as a single instance
+- Don't block Storeman on cache refreshing
+- Better handling of the operations status
+- Add the smart check for updates
+- AppInformation.qml: fix the date format
+- Set minimum required Sailfish OS version explicitly to 2.1.4
+- Update translations
+- Fallback default locale to en if no translations were loaded
+
 * Wed May 23 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.26-1
 - Suggest users to enable the Storeman repository
 - Update translations
