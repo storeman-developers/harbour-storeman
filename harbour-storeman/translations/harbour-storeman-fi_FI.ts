@@ -235,7 +235,7 @@
     </message>
     <message id="orn-cat-puzzle">
         <source>Puzzle</source>
-        <translation>Palapeli</translation>
+        <translation>Pulmapeli</translation>
     </message>
     <message id="orn-cat-strategy">
         <source>Strategy</source>
