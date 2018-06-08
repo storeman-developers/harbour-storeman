@@ -28,7 +28,9 @@ int main(int argc, char *argv[])
         // Check if translations have been already loaded
         if (!translator->load(QLocale::system(), appName, "-", trPath))
         {
-            // Load default translations if not
+            // Fallback default locale to en
+            QLocale::setDefault(QLocale(QLocale::AnyLanguage));
+            // Load default translations
             translator->load(appName, trPath);
             app->installTranslator(translator);
         }
