@@ -424,7 +424,7 @@
     <message id="orn-username">
         <source>Username or e-mail address</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation>Felhasználónév vagy e-mail cím</translation>
+        <translation>Felhasználónév</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
