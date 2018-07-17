@@ -172,7 +172,9 @@ OrnApplication *Storeman::cachedApp(const quint32 &appId)
 
 void Storeman::resetUpdatesTimer()
 {
-    this->refreshRepos();
+    OrnPm::instance()->refreshRepos();
+    mSettings->setValue(QStringLiteral("updates/last_check"),
+                        QDateTime::currentMSecsSinceEpoch());
     mUpdatesTimer->start();
 }
 
