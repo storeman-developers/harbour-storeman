@@ -104,14 +104,14 @@ Page {
 
             MenuItem {
                 visible: reposList.count
-                enabled: _enableMenu
+                enabled: menu._enableMenu
                 text: qsTrId("orn-refresh-cache")
                 onClicked: Storeman.resetUpdatesTimer()
             }
 
             MenuItem {
                 visible: repoModel.hasDisabledRepos
-                enabled: _enableMenu
+                enabled: menu._enableMenu
                 //% "Enable all"
                 text: qsTrId("orn-enable-all")
                 //% "Enabling all"
@@ -125,7 +125,7 @@ Page {
 
             MenuItem {
                 visible: repoModel.hasEnabledRepos
-                enabled: _enableMenu
+                enabled: menu._enableMenu
                 //% "Disable all"
                 text: qsTrId("orn-disable-all")
                 //% "Disabling all"
@@ -138,7 +138,7 @@ Page {
 
             MenuItem {
                 visible: reposList.count
-                enabled: _enableMenu
+                enabled: menu._enableMenu
                 //% "Remove all"
                 text: qsTrId("orn-remove-all")
                 //% "Removing all"
