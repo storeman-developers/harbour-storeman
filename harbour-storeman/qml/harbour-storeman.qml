@@ -98,11 +98,13 @@ ApplicationWindow
              "  </interface>\n"
 
         function openPage(page, arguments) {
-            if (page === "pages/InstalledAppsPage.qml") {
+            if (page === "InstalledAppsPage") {
                 _showUpdatesNotification = false
             }
             __silica_applicationwindow_instance.activate()
-            pageStack.push(Qt.resolvedUrl(page), arguments)
+            if (page === "ErrorPage" || page !== pageStack.currentPage.objectName) {
+                pageStack.push(Qt.resolvedUrl("pages/%1.qml".arg(page)), arguments)
+            }
         }
     }
 
@@ -137,7 +139,7 @@ ApplicationWindow
                 path: "/harbour/storeman/service",
                 iface: "harbour.storeman.service",
                 method: "openPage",
-                arguments: [ "pages/AuthorisationDialog.qml", {} ]
+                arguments: [ "AuthorisationDialog", {} ]
             } ]
     }
 
@@ -157,7 +159,7 @@ ApplicationWindow
                 path: "/harbour/storeman/service",
                 iface: "harbour.storeman.service",
                 method: "openPage",
-                arguments: [ "pages/InstalledAppsPage.qml", {} ]
+                arguments: [ "InstalledAppsPage", {} ]
             } ]
     }
 
@@ -174,7 +176,7 @@ ApplicationWindow
                 path: "/harbour/storeman/service",
                 iface: "harbour.storeman.service",
                 method: "openPage",
-                arguments: [ "pages/ErrorPage.qml", { message: body } ]
+                arguments: [ "ErrorPage", { message: body } ]
             } ]
     }
 

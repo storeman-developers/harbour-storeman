@@ -7,6 +7,7 @@ Page {
     property bool _working: false
 
     id: page
+    objectName: "InstalledAppsPage"
     allowedOrientations: defaultAllowedOrientations
 
     SilicaListView {

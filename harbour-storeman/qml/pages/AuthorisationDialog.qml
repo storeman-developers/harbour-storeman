@@ -4,6 +4,7 @@ import harbour.orn 1.0
 
 Dialog {
     id: dialog
+    objectName: "AuthorisationDialog"
     allowedOrientations: defaultAllowedOrientations
     canAccept: networkManager.online &&
                usernameField.text &&

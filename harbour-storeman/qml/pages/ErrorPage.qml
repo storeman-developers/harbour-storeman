@@ -4,6 +4,7 @@ import Sailfish.Silica 1.0
 Page {
     property alias message: messageLabel.text
 
+    objectName: "ErrorPage"
     allowedOrientations: defaultAllowedOrientations
 
     SilicaFlickable {
