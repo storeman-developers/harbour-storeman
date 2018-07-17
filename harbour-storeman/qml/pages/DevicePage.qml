@@ -46,7 +46,7 @@ Page {
 
                 onClicked: {
                     if (OrnClient.authorised) {
-                        showMenu()
+                        openMenu()
                     } else if (networkManager.online) {
                         pageStack.push(Qt.resolvedUrl("AuthorisationDialog.qml"))
                     }

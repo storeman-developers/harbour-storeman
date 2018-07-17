@@ -43,7 +43,7 @@ Page {
             id: delegateItem
             width: parent.width
             contentHeight: delegateColumn.height + Theme.paddingSmall * 2
-            onClicked: showMenu()
+            onClicked: openMenu()
 
             menu: ContextMenu {
 

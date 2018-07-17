@@ -49,7 +49,7 @@ Page {
         delegate: ListItem {
             id: item
             contentHeight: Theme.itemSizeExtraLarge
-            onClicked: showMenu()
+            onClicked: openMenu()
 
             menu: ContextMenu {
 
