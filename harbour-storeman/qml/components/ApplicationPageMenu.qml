@@ -11,6 +11,13 @@ PullDownMenu {
     visible: OrnPm.initialised
 
     MenuItem {
+        enabled: !app.running
+        //% "Reload"
+        text:  qsTrId("orn-reload")
+        onClicked: app.ornRequest()
+    }
+
+    MenuItem {
         id: repoMenuItem
         visible: text
         enabled: _enableMenu

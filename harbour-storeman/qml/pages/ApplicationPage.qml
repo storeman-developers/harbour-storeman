@@ -15,7 +15,7 @@ Page {
     onStatusChanged: {
         // Wait until page loads to prevent lagging
         // And don't call ornRequest() if the app was already loaded
-        if (!app.isLoaded && status === PageStatus.Active) {
+        if (!app.packageName && status === PageStatus.Active) {
             app.ornRequest()
         }
     }
@@ -63,7 +63,7 @@ Page {
     SilicaFlickable {
         id: flickable
         anchors.fill: parent
-        visible: app.isLoaded
+        visible: app.packageName && !app.running
         contentHeight: content.height
 
         ApplicationPageMenu {

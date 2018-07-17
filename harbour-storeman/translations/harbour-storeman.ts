@@ -970,5 +970,9 @@
         <source>Use the OpenRepos.net API to determine if there are new updates</source>
         <translation>Use the OpenRepos.net API to determine if there are new updates</translation>
     </message>
+    <message id="orn-reload">
+        <source>Reload</source>
+        <translation>Reload</translation>
+    </message>
 </context>
 </TS>
