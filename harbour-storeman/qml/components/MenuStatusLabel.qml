@@ -52,7 +52,7 @@ MenuLabel {
             __menu.busy = true
             //: There are always more than 1 operations
             //% "%n operations are in progress"
-            return qsTrId("orn-pmstate-multiple", _operations.length).arg(_operations.length)
+            return qsTrId("orn-pmstate-multiple", _operations.length)
         }
     }
 }
