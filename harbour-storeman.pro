@@ -18,7 +18,6 @@ CONFIG(release, debug|release): DEFINES += QT_NO_DEBUG_OUTPUT
 
 MOC_DIR = .moc
 OBJECTS_DIR = .obj
-RCC_DIR = .rcc
 
 LIBS += -lsolv
 
@@ -158,9 +157,6 @@ OTHER_FILES += \
     harbour-storeman.desktop \
     icons/harbour-storeman.svg \
     .gitignore
-
-RESOURCES += \
-    harbour-storeman.qrc
 
 privileges.files = rpm/harbour-storeman
 privileges.path = $$INSTALL_ROOT/usr/share/mapplauncherd/privileges.d/

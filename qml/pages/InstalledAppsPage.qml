@@ -93,7 +93,7 @@ Page {
                     width: Theme.iconSizeLauncher
                     height: Theme.iconSizeLauncher
                     fillMode: Image.PreserveAspectFit
-                    source: packageIcon ? packageIcon : "qrc:/images/appicon.png"
+                    source: packageIcon ? packageIcon : "image://theme/icon-launcher-default"
                 }
 
                 Column {
