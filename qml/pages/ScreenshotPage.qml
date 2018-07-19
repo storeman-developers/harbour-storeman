@@ -1,17 +1,17 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
-Page {
+FullscreenContentPage {
     property alias model: slideshow.model
     property alias currentIndex: slideshow.currentIndex
 
     id: page
-    backNavigation: false
     allowedOrientations: defaultAllowedOrientations
 
     SlideshowView {
         id: slideshow
         anchors.fill: parent
+
         delegate: Item {
             width: slideshow.width
             height: slideshow.height
