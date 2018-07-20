@@ -1,3 +1,12 @@
+* Fri Jul 20 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.28-1
+- Notifications: Don't open a page on tap if it's already openned
+- Force update repos on the update timer reset
+- ApplicationPage.qml: Add the option to reload data
+- ScreenshotPage.qml: use the FullscreenContentPage for screenshots (like in the Store app)
+- Use the system theme icon as a default app icon
+- Update Silica usage (use openMenu in ListItem instead of showMenu)
+- Fix some bugs
+
 * Fri Jun  8 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.27-1
 - Launch Storeman as a single instance
 - Don't block Storeman on cache refreshing
