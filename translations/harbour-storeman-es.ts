@@ -972,7 +972,7 @@
     </message>
     <message id="orn-reload">
         <source>Reload</source>
-        <translation type="unfinished"></translation>
+        <translation>Volver a cargar</translation>
     </message>
 </context>
 </TS>

@@ -337,7 +337,7 @@
     </message>
     <message id="orn-app-licensing">
         <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation>Logiciel open source distribué selon les termes et conditions de la Licence MIT :&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;Consultez-la !&lt;/a&gt;</translation>
+        <translation>Logiciel open source distribué selon les termes et conditions de la Licence MIT. &lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;Consultez-la !&lt;/a&gt;</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
@@ -960,7 +960,7 @@
     </message>
     <message id="orn-check-for-updates-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation>Les MàJ ne sont vérifiées que lorsque Storeman est actif</translation>
+        <translation>Les MàJ ne seront vérifiées que lorsque Storeman sera actif</translation>
     </message>
     <message id="orn-smart-check-switch">
         <source>Smart check</source>
@@ -972,7 +972,7 @@
     </message>
     <message id="orn-reload">
         <source>Reload</source>
-        <translation type="unfinished"></translation>
+        <translation>Recharger</translation>
     </message>
 </context>
 </TS>

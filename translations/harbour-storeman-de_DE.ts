@@ -968,7 +968,7 @@
     </message>
     <message id="orn-smart-check-descr">
         <source>Use the OpenRepos.net API to determine if there are new updates</source>
-        <translation>Verwende die OpenRepos.net-API, um festzustelle, ob neue Updates verfügbar sind</translation>
+        <translation>Verwende die OpenRepos.net-API, um festzustellen, ob neue Updates verfügbar sind</translation>
     </message>
     <message id="orn-reload">
         <source>Reload</source>

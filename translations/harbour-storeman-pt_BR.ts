@@ -119,7 +119,7 @@
     <message id="orn-dt-format">
         <source>yyyy-MM-dd hh:mm</source>
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>yyyy-MM-dd hh:mm</translation>
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
@@ -952,27 +952,27 @@
     </message>
     <message id="orn-save">
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvar</translation>
     </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Procurar atualizações</translation>
     </message>
     <message id="orn-check-for-updates-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation type="unfinished"></translation>
+        <translation>Somente é possível buscar atualizações quando o Storeman está em execução.</translation>
     </message>
     <message id="orn-smart-check-switch">
         <source>Smart check</source>
-        <translation type="unfinished"></translation>
+        <translation>Verificação inteligente</translation>
     </message>
     <message id="orn-smart-check-descr">
         <source>Use the OpenRepos.net API to determine if there are new updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar a API do OpenRepos.net para verificar atualizações</translation>
     </message>
     <message id="orn-reload">
         <source>Reload</source>
-        <translation type="unfinished"></translation>
+        <translation>Recarregar</translation>
     </message>
 </context>
 </TS>
