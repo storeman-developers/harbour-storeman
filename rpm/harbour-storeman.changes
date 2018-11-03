@@ -1,3 +1,7 @@
+* Sat Nov  3 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.29-1
+- Update translations
+- Try to show packages of an author (repository)
+
 * Fri Jul 20 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.28-1
 - Notifications: Don't open a page on tap if it's already openned
 - Force update repos on the update timer reset
