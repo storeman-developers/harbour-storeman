@@ -47,7 +47,7 @@ ApplicationWindow
             // Prepare a http request to get headers
             req.open("HEAD", link, true)
             req.onreadystatechange = function() {
-                if (req.readyState == 4) {
+                if (req.readyState === XMLHttpRequest.DONE) {
                     if (req.status == 200) {
                         // Check if headers contain an id link
                         match = /<\/node\/(\d*)>.*/.exec(req.getResponseHeader("link"))

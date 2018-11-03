@@ -5,6 +5,57 @@ import "../components"
 
 Page {
     property bool _working: false
+    property var _knownAuthors: ({})
+
+    function getAuthorId(name) {
+        if (_working) {
+            return
+        }
+        name = name.replace("_", "")
+        var user = _knownAuthors[name]
+        if (user) {
+            pageStack.push(Qt.resolvedUrl("UserAppsPage.qml"), {
+                               userId: user.id,
+                               userName: name,
+                               userIcon: user.icon,
+                           })
+            return
+        }
+        _working = true
+        var req = new XMLHttpRequest()
+        req.onreadystatechange = function() {
+            if (req.readyState === XMLHttpRequest.DONE) {
+                if (req.status == 200) {
+                    // req.responceXml is null - using ugly regex instead
+                    var match = /<body class=".*page-user-(\d*)" >[\s\S]*<img typeof="foaf:Image" src="(.*)" alt/.exec(req.responseText)
+                    if (match) {
+                        var userId = match[1]
+                        var userIcon = match[2]
+                        // Don't show the placeholder icon
+                        if (userIcon.indexOf("https://openrepos.net/misc/") !== -1) {
+                            userIcon = ""
+                        }
+                        _knownAuthors[name] = {
+                            id: userId,
+                            idcon: userIcon,
+                        }
+                        pageStack.push(Qt.resolvedUrl("UserAppsPage.qml"), {
+                                           userId: userId,
+                                           userName: name,
+                                           userIcon: userIcon,
+                                       })
+                        _working = false
+                        return
+                    }
+                }
+                pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
+                               { initialSearch: name })
+                _working = false
+            }
+        }
+        req.open("GET", "https://openrepos.net/users/" + name)
+        req.send()
+    }
 
     id: page
     allowedOrientations: Orientation.All
@@ -49,8 +100,7 @@ Page {
                 networkManager.online && !itemInProgress(repoAlias)
 
             id: repoItem
-            onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
-                                      { initialSearch: repoAuthor })
+            onClicked: getAuthorId(repoAuthor)
             menu: ContextMenu {
 
                 MenuItem {
