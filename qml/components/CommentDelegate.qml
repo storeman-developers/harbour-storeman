@@ -111,14 +111,33 @@ ListItem {
                     leftMargin: Theme.paddingMedium
                 }
 
-                Label {
+                Item {
                     width: parent.width
-                    color: highlighted ? Theme.highlightColor :
-                                         _userComment ? Theme.primaryColor : Theme.secondaryColor
-                    wrapMode: Text.WordWrap
-                    text: (_userComment ? "<img src='image://theme/icon-s-edit'> " :
-                                          _authorComment ? "<img src='image://theme/icon-s-developer'> " : "") +
-                          model.userName
+                    height: Math.max(userLabelIcon.height, userLabel.height)
+
+                    Image {
+                        id: userLabelIcon
+                        anchors.verticalCenter: parent.verticalCenter
+                        visible: _userComment || _authorComment
+                        source: _userComment   ? "image://theme/icon-s-edit?" + userLabel.color :
+                                _authorComment ? "image://theme/icon-s-developer?" + userLabel.color :
+                                                 ""
+                    }
+
+                    Label {
+                        id: userLabel
+                        anchors {
+                            left: userLabelIcon.right
+                            leftMargin: userLabelIcon.visible ? Theme.paddingSmall : 0
+                            right: parent.right
+                            verticalCenter: parent.verticalCenter
+                        }
+                        color: highlighted  ? Theme.highlightColor :
+                               _userComment ? Theme.primaryColor :
+                                              Theme.secondaryColor
+                        wrapMode: Text.WordWrap
+                        text: model.userName
+                    }
                 }
 
                 Label {
