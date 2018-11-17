@@ -119,7 +119,7 @@
     <message id="orn-dt-format">
         <source>yyyy-MM-dd hh:mm</source>
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>yyyy-MM-dd hh:mm</translation>
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
@@ -944,47 +944,47 @@
     </message>
     <message id="orn-remove-all">
         <source>Remove all</source>
-        <translation type="unfinished"></translation>
+        <translation>Odstrani vse</translation>
     </message>
     <message id="orn-removing-all">
         <source>Removing all</source>
-        <translation type="unfinished"></translation>
+        <translation>Odstranjujem vse</translation>
     </message>
     <message id="orn-repo-allremoved">
         <source>All repositories were removed</source>
-        <translation type="unfinished"></translation>
+        <translation>Vsa skladišča so odstranjena</translation>
     </message>
     <message id="orn-search-on-openrepos">
         <source>Search on OpenRepos.net</source>
-        <translation type="unfinished"></translation>
+        <translation>Išči v OpenRepos.net</translation>
     </message>
     <message id="orn-repo-suggestion">
         <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;h3&gt;Prosimo, omogočite skladišče Storeman&lt;/h3&gt;&lt;p&gt;Za namestitev zadnje različice programa Storeman je potrebno dodati OpenRepos skladišče, enako, kot za katerikoli drug program.&lt;/p&gt;&lt;p&gt;Želite dodati skladišče zdaj?&lt;/p&gt;</translation>
     </message>
     <message id="orn-save">
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Shrani</translation>
     </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Preveri posodobitve</translation>
     </message>
     <message id="orn-check-for-updates-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation type="unfinished"></translation>
+        <translation>Posodobitve delujejo le, ko je aplikacija Storeman zagnana</translation>
     </message>
     <message id="orn-smart-check-switch">
         <source>Smart check</source>
-        <translation type="unfinished"></translation>
+        <translation>Pametno preverjanje</translation>
     </message>
     <message id="orn-smart-check-descr">
         <source>Use the OpenRepos.net API to determine if there are new updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Za preverjenja najnovejših različic uporabite OpenRepos.net API.</translation>
     </message>
     <message id="orn-reload">
         <source>Reload</source>
-        <translation type="unfinished"></translation>
+        <translation>Ponovno naloži</translation>
     </message>
 </context>
 </TS>
