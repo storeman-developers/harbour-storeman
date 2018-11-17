@@ -79,9 +79,12 @@ PullDownMenu {
                 OrnPm.installPackage(app.availableId)
                 break
             case OrnPm.PackageInstalled:
+            case OrnPm.PackageUpdateAvailable:
                 Remorse.popupAction(page, qsTrId("orn-removing"), function() {
                     OrnPm.removePackage(app.installedId)
                 })
+                break
+            default:
                 break
             }
         }
