@@ -60,6 +60,7 @@ signals:
     void cookieIsValidChanged();
     void commentAdded(const quint32 &appId, const quint32 &cid);
     void commentEdited(quint32 cid);
+    void commentError();
     void bookmarkChanged(quint32 appid, bool bookmarked);
     void userVoteFinished(const quint32 &appId, const quint32 &userVote,
                           const quint32 &count, const float &rating);
@@ -67,7 +68,6 @@ signals:
 private slots:
     void setCookieTimer();
     void onLoggedIn();
-    void onCommentEdited();
 
 private:
     explicit OrnClient(QObject *parent = nullptr);

@@ -239,6 +239,11 @@ ApplicationWindow
                                   //% "The app was removed from bookmarks"
                                   qsTrId("orn-bookmarks-removed"))
         }
+
+        onCommentError: {
+            //% "Error sending comment"
+            notification.show(qsTrId("orn-message-error"), "image://theme/icon-lock-warning")
+        }
     }
 
     Connections {

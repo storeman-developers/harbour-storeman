@@ -224,6 +224,10 @@ void OrnClient::comment(const quint32 &appId, const QString &body, const quint32
             emit this->commentAdded(appId, cid);
             qDebug() << "Comment" << cid << "added for app" << appId;
         }
+        else
+        {
+            emit this->commentError();
+        }
         this->reset();
     });
 }
@@ -239,7 +243,21 @@ void OrnClient::editComment(const quint32 &commentId, const QString &body)
 
     mNetworkReply = Orn::networkAccessManager()->put(
                 request, QJsonDocument(commentObject).toJson());
-    connect(mNetworkReply, &QNetworkReply::finished, this, &OrnClient::onCommentEdited);
+    connect(mNetworkReply, &QNetworkReply::finished, [this]()
+    {
+        auto jsonDoc = this->processReply();
+        if (jsonDoc.isArray())
+        {
+            auto cid = Orn::toUint(jsonDoc.array().first());
+            emit this->commentEdited(cid);
+            qDebug() << "Comment edited:" << cid;
+        }
+        else
+        {
+            emit this->commentError();
+        }
+        this->reset();
+    });
 }
 
 void OrnClient::vote(const quint32 &appId, const quint32 &value)
@@ -350,18 +368,6 @@ void OrnClient::onLoggedIn()
         qDebug() << "Successful authorisation";
         emit this->authorisedChanged();
         this->setCookieTimer();
-    }
-    this->reset();
-}
-
-void OrnClient::onCommentEdited()
-{
-    auto jsonDoc = this->processReply();
-    if (jsonDoc.isArray())
-    {
-        auto cid = Orn::toUint(jsonDoc.array().first());
-        emit this->commentEdited(cid);
-        qDebug() << "Comment edited:" << cid;
     }
     this->reset();
 }

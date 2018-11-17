@@ -982,5 +982,9 @@ Storeman не хранит ваш пароль и не передает его �
         <source>Reload</source>
         <translation>Перезагрузить</translation>
     </message>
+    <message id="orn-message-error">
+        <source>Error sending comment</source>
+        <translation>Ошибка отправки комментария</translation>
+    </message>
 </context>
 </TS>
