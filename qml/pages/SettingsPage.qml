@@ -79,11 +79,6 @@ Dialog {
                 checked: Storeman.showUpdatesNotification
                 //% "Show updates notification"
                 text: qsTrId("orn-updates-notification-switch")
-
-                DisappearAnimation {
-                    target: showUpdatesNotificationSwitch
-                    show: checkForUpdatesSwitch.checked
-                }
             }
 
             ValueButton {
