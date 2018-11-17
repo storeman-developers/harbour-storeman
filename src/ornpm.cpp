@@ -173,6 +173,15 @@ QStringList OrnPm::updatablePackages() const
     return d_ptr->updatablePackages.keys();
 }
 
+QString OrnPm::updateVersion(const QString &packageName) const
+{
+    if (d_ptr->updatablePackages.contains(packageName))
+    {
+        return Orn::packageVersion(d_ptr->updatablePackages[packageName]);
+    }
+    return QString();
+}
+
 OrnPm::RepoStatus OrnPm::repoStatus(const QString &alias) const
 {
     if (d_ptr->repos.contains(alias))

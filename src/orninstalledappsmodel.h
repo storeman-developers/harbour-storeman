@@ -20,6 +20,7 @@ public:
         SortRole,
         SectionRole,
         UpdateAvailableRole,
+        UpdateVersionRole,
         IdRole
     };
     Q_ENUM(Roles)

@@ -99,6 +99,7 @@ public:
 
     bool updatesAvailable() const;
     Q_INVOKABLE QStringList updatablePackages() const;
+    QString updateVersion(const QString &packageName) const;
 
     RepoStatus repoStatus(const QString &alias) const;
     PackageStatus packageStatus(const QString &packageName) const;

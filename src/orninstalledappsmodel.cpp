@@ -166,6 +166,8 @@ QVariant OrnInstalledAppsModel::data(const QModelIndex &index, int role) const
     case UpdateAvailableRole:
         // Return int to make it easier to parse
         return int(package.updateAvailable);
+    case UpdateVersionRole:
+        return OrnPm::instance()->updateVersion(package.name);
     case IdRole:
         return package.id;
     default:
@@ -182,6 +184,7 @@ QHash<int, QByteArray> OrnInstalledAppsModel::roleNames() const
         { IconRole,    "packageIcon"    },
         { SectionRole, "section"        },
         { UpdateAvailableRole, "updateAvailable" },
+        { UpdateVersionRole,   "updateVersion" },
         { IdRole,      "packageId"}
     };
 }

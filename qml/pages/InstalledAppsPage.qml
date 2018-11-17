@@ -117,7 +117,9 @@ Page {
                         width: parent.width
                         font.pixelSize: Theme.fontSizeExtraSmall
                         color: Theme.secondaryColor
-                        text: packageVersion
+                        text: updateAvailable ? packageVersion + " ➝ " + updateVersion :
+                                                packageVersion
+
                     }
                 }
             }
