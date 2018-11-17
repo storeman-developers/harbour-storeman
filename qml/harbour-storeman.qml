@@ -93,9 +93,26 @@ ApplicationWindow
         service: "harbour.storeman.service"
         iface: "harbour.storeman.service"
         path: "/harbour/storeman/service"
-        xml: "  <interface name=\"harbour.storeman.service\">\n" +
-             "    <method name=\"openPage\"/>\n" +
-             "  </interface>\n"
+        xml: '\
+  <interface name="harbour.storeman.service">
+    <method name="openPage">
+      <arg name="page" type="s" direction="in">
+        <doc:doc>
+          <doc:summary>
+            Name of the page to open
+            (https://github.com/mentaljam/harbour-storeman/tree/master/qml/pages)
+          </doc:summary>
+        </doc:doc>
+      </arg>
+      <arg name="arguments" type="a{sv}" direction="in">
+        <doc:doc>
+          <doc:summary>
+            Arguments to pass to the page
+          </doc:summary>
+        </doc:doc>
+      </arg>
+    </method>
+  </interface>'
 
         function openPage(page, arguments) {
             if (page === "InstalledAppsPage") {
