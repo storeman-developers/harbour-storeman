@@ -158,10 +158,10 @@ OTHER_FILES += \
     icons/harbour-storeman.svg \
     .gitignore
 
-privileges.files = rpm/harbour-storeman
+privileges.files = data/harbour-storeman
 privileges.path = $$INSTALL_ROOT/usr/share/mapplauncherd/privileges.d/
 
-dbus.files = rpm/harbour.storeman.service
+dbus.files = data/harbour.storeman.service
 dbus.path = $$INSTALL_ROOT/usr/share/dbus-1/services
 
 INSTALLS += privileges dbus
