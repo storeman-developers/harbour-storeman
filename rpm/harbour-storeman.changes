@@ -1,3 +1,11 @@
+* Sun Nov 18 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.30-1
+- Clear the comment field only if comment was successfully sent
+- Fixed a bug due to which it was impossible to remove an application if an update was available
+- Comment delegate: fix the user label icon
+- Settings: always show the "Disable notifications" switcher
+- Installed applications: show both the installed and the available versions for packages with available updates
+- Update translations
+
 * Sat Nov  3 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.29-1
 - Update translations
 - Try to show packages of an author (repository)
