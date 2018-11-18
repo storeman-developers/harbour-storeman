@@ -974,5 +974,9 @@
         <source>Reload</source>
         <translation>Recharger</translation>
     </message>
+    <message id="orn-message-error">
+        <source>Error sending comment</source>
+        <translation>Erreur dans l&apos;envoi du commentaire</translation>
+    </message>
 </context>
 </TS>

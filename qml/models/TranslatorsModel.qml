@@ -7,7 +7,9 @@ ListModel {
         coordinators: [
             ListElement { name: "0312birdzhang" }
         ]
-        translators: []
+        translators: [
+            ListElement { name: "Historyscholar" }
+        ]
         reviewers: []
     }
 
@@ -106,7 +108,7 @@ ListModel {
             ListElement { name: "ghostofasmile" }
         ]
         translators: [
-            ListElement { name: "tichy" }
+            ListElement { name: "claustn" }
         ]
         reviewers: []
     }
@@ -127,7 +129,9 @@ ListModel {
         coordinators: [
             ListElement { name: "adrianocolvero" }
         ]
-        translators: []
+        translators: [
+            ListElement { name: "caio2k" }
+        ]
         reviewers: []
     }
 

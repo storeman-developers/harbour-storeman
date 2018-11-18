@@ -19,7 +19,8 @@ TRANSLATIONS += \
     translations/harbour-storeman-pt_BR.ts \
     translations/harbour-storeman-ru.ts \
     translations/harbour-storeman-sl_SI.ts \
-    translations/harbour-storeman-sv.ts
+    translations/harbour-storeman-sv.ts \
+    translations/harbour-storeman-zh_CN.ts
 
 OTHER_FILES += \
     $$TRANSLATIONS \
