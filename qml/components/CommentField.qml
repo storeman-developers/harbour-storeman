@@ -255,7 +255,7 @@ Column {
                 return qsTrId("orn-comment-send")
             }
 
-            opacity: body.text || body.activeFocus ? 1.0 : 0.0
+            opacity: body.text || isActive ? 1.0 : 0.0
             Behavior on opacity { FadeAnimation { } }
 
             MouseArea {

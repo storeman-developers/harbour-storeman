@@ -93,29 +93,6 @@ Page {
             Behavior on height { NumberAnimation { } }
         }
 
-        SilicaListView {
-            id: commentsList
-            anchors {
-                left: parent.left
-                top: pageHeader.bottom
-                right: parent.right
-                bottom: parent.bottom
-            }
-            clip: true
-            verticalLayoutDirection: ListView.BottomToTop
-
-            header: Loader {
-                width: parent.width
-                source: networkManager.online && OrnClient.authorised && OrnClient.cookieIsValid ?
-                            Qt.resolvedUrl("../components/CommentField.qml") :
-                            Qt.resolvedUrl("../components/CommentLabel.qml")
-            }
-
-            delegate: CommentDelegate { }
-
-            VerticalScrollDecorator { }
-        }
-
         BusyIndicator {
             size: BusyIndicatorSize.Large
             anchors.centerIn: parent
@@ -151,6 +128,29 @@ Page {
                 }
                 return ""
             }
+        }
+
+        SilicaListView {
+            id: commentsList
+            anchors {
+                left: parent.left
+                top: pageHeader.bottom
+                right: parent.right
+                bottom: parent.bottom
+            }
+            clip: true
+            verticalLayoutDirection: ListView.BottomToTop
+
+            header: Loader {
+                width: parent.width
+                source: networkManager.online && OrnClient.authorised && OrnClient.cookieIsValid ?
+                            Qt.resolvedUrl("../components/CommentField.qml") :
+                            Qt.resolvedUrl("../components/CommentLabel.qml")
+            }
+
+            delegate: CommentDelegate { }
+
+            VerticalScrollDecorator { }
         }
     }
 
