@@ -176,12 +176,22 @@ ListItem {
             font.pixelSize: Theme.fontSizeSmall
             wrapMode: Text.WordWrap
             textFormat: Text.RichText
-            text: model.text
-                .replace(/<a([^>]*)>([^<]+)<\/a>/g,
-                         '<a$1><font color="%0">$2</font></a>'.arg(Theme.primaryColor))
-                .replace(/<pre>([^<]+)<\/pre>/g,
-                        '<p style="color:%0;font-family:monospace;font-size:%1px;">$1</p>'
-                            .arg(Theme.secondaryColor).arg(Theme.fontSizeTiny))
+            text: "
+<style>
+  a:link {
+    color: " + Theme.primaryColor + ";
+  }
+  pre {
+    color: " + Theme.secondaryColor + ";
+    font-family: monospace;
+    font-size: " + Theme.fontSizeTiny + "px;
+    white-space: pre-wrap;
+  }
+  blockquote {
+    color: " + Theme.secondaryHighlightColor + ";
+    font-style: italic;
+  }
+</style>" + model.text
             onLinkActivated: {
                 var match = link.match(/https:\/\/openrepos\.net\/.*#comment-(\d*)/)
                 if (match) {
