@@ -986,5 +986,9 @@ Storeman не хранит ваш пароль и не передает его �
         <source>Error sending comment</source>
         <translation>Ошибка отправки комментария</translation>
     </message>
+    <message id="orn-no-packages">
+        <source>No packages available</source>
+        <translation>Нет доступных пакетов</translation>
+    </message>
 </context>
 </TS>

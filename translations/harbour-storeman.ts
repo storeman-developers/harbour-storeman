@@ -978,5 +978,9 @@
         <source>Error sending comment</source>
         <translation>Error sending comment</translation>
     </message>
+    <message id="orn-no-packages">
+        <source>No packages available</source>
+        <translation>No packages available</translation>
+    </message>
 </context>
 </TS>
