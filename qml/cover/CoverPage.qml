@@ -19,6 +19,7 @@ CoverBackground {
                     return page.toString().substr(0, 10) === "SearchPage"
                 })
                 if (searchOnPageStack) {
+                    searchOnPageStack._reset()
                     pageStack.pop(searchOnPageStack, PageStackAction.Immediate)
                 } else {
                     pageStack.push(Qt.resolvedUrl("../pages/SearchPage.qml"), {}, PageStackAction.Immediate)
