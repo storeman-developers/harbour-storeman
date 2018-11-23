@@ -32,10 +32,6 @@ public:
 
     Q_INVOKABLE int findItemRow(const quint32 &cid) const;
 
-public slots:
-    void addComment(const quint32 &cid);
-    void editComment(const quint32 &cid);
-
 signals:
     void appIdChanged();
 
@@ -51,7 +47,6 @@ public:
     QVariant data(const QModelIndex &index, int role) const;
     void fetchMore(const QModelIndex &parent);
     QHash<int, QByteArray> roleNames() const;
-//    Q_INVOKABLE bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex());
 
     // OrnAbstractListModel interface
 protected slots:

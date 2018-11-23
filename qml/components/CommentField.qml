@@ -49,9 +49,17 @@ Column {
 
     Connections {
         target: OrnClient
-        onCommentAdded: _reset()
-        onCommentEdited: _reset()
-        onCommentError: busy = false
+        onCommentActionFinished: _reset()
+        onError: {
+            switch (code) {
+            case OrnClient.CommentSendError:
+            case OrnClient.CommentDeleteError:
+                busy = false
+                break
+            default:
+                break
+            }
+        }
     }
 
     Item {
@@ -264,7 +272,7 @@ Column {
                 onClicked: {
                     busy = true
                     if (_editId) {
-                        OrnClient.editComment(_editId, body.text)
+                        OrnClient.editComment(commentsModel.appId, _editId, body.text)
                     } else if (_replyToId) {
                         OrnClient.comment(commentsModel.appId, body.text, _replyToId)
                     } else {

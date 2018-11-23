@@ -200,18 +200,34 @@ ApplicationWindow
     Connections {
         target: OrnClient
 
+        onError: {
+            switch (code) {
+            case OrnClient.AuthorisationError:
+                notification.showPopup(
+                            //% "Login error"
+                            qsTrId("orn-login-error-title"),
+                            //% "Could not log in the OpenRepos.net - check your credentials and network connection"
+                            qsTrId("orn-login-error-message"),
+                            "image://theme/icon-lock-warning")
+                break
+            case OrnClient.CommentSendError:
+                //% "Error sending comment"
+                notification.show(qsTrId("orn-error-comment-sending"), "image://theme/icon-lock-warning")
+                break
+            case OrnClient.CommentDeleteError:
+                //% "Error deleting comment"
+                notification.show(qsTrId("orn-error-comment-deletion"), "image://theme/icon-lock-warning")
+                break
+            default:
+                break
+            }
+        }
+
         onAuthorisedChanged: OrnClient.authorised ?
                                  //% "You have successfully logged in to the OpenRepos.net"
                                  notification.show(qsTrId("orn-loggedin-message")) :
                                  //% "You have logged out from the OpenRepos.net"
                                  notification.show(qsTrId("orn-loggedout-message"))
-
-        onAuthorisationError: notification.showPopup(
-                                  //% "Login error"
-                                  qsTrId("orn-login-error-title"),
-                                  //% "Could not log in the OpenRepos.net - check your credentials and network connection"
-                                  qsTrId("orn-login-error-message"),
-                                  "image://theme/icon-lock-warning")
 
         onDayToExpiry: {
             //% "Authorisation expires"
@@ -238,11 +254,6 @@ ApplicationWindow
                                   qsTrId("orn-bookmarks-added") :
                                   //% "The app was removed from bookmarks"
                                   qsTrId("orn-bookmarks-removed"))
-        }
-
-        onCommentError: {
-            //% "Error sending comment"
-            notification.show(qsTrId("orn-message-error"), "image://theme/icon-lock-warning")
         }
     }
 

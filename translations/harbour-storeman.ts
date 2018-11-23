@@ -974,13 +974,17 @@
         <source>Reload</source>
         <translation>Reload</translation>
     </message>
-    <message id="orn-message-error">
-        <source>Error sending comment</source>
-        <translation>Error sending comment</translation>
-    </message>
     <message id="orn-no-packages">
         <source>No packages available</source>
         <translation>No packages available</translation>
+    </message>
+    <message id="orn-error-comment-sending">
+        <source>Error sending comment</source>
+        <translation>Error sending comment</translation>
+    </message>
+    <message id="orn-error-comment-deletion">
+        <source>Error deleting comment</source>
+        <translation>Error deleting comment</translation>
     </message>
 </context>
 </TS>

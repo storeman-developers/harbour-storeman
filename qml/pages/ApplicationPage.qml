@@ -8,6 +8,7 @@ Page {
     property int appId: 0
     property OrnApplication app: Storeman.cachedApp(appId)
     readonly property int _packageStatus: app.packageStatus
+    property int _commentsCount: app && app.commentsCount
 
     id: page
     allowedOrientations: defaultAllowedOrientations
@@ -22,6 +23,9 @@ Page {
 
     OrnCommentsModel {
         id: commentsModel
+
+        onRowsInserted: _commentsCount = rowCount()
+        onRowsRemoved: _commentsCount = rowCount()
     }
 
     Connections {
@@ -107,15 +111,16 @@ Page {
             MoreButton {
                 visible: app.commentsOpen && (OrnClient.authorised || app.commentsCount)
                 //% "Comments (%0)"
-                text: app.commentsCount ? qsTrId("orn-comments-withnum").arg(app.commentsCount) :
-                                          qsTrId("orn-comments")
+                text: _commentsCount ? qsTrId("orn-comments-withnum").arg(_commentsCount) :
+                                       qsTrId("orn-comments")
                 onClicked: {
                     commentsModel.appId = appId
                     pageStack.push(Qt.resolvedUrl("CommentsPage.qml"), {
                                        commentsModel: commentsModel,
+                                       appId: app.appId,
                                        userId: app.userId,
                                        userName: app.userName,
-                                       hasComments: app.commentsCount
+                                       hasComments: _commentsCount > 0
                                    })
                 }
             }

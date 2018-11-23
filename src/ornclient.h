@@ -24,6 +24,23 @@ class OrnClient : public OrnApiRequest
     Q_PROPERTY(QString userIconSource READ userIconSource NOTIFY authorisedChanged)
 
 public:
+
+    enum Error
+    {
+        AuthorisationError,
+        CommentSendError,
+        CommentDeleteError,
+    };
+    Q_ENUM(Error)
+
+    enum CommentAction
+    {
+        CommentAdded,
+        CommentEdited,
+        CommentDeleted,
+    };
+    Q_ENUM(CommentAction)
+
     static OrnClient *instance();
     static inline QObject *qmlInstance(QQmlEngine *engine, QJSEngine *scriptEngine)
     {
@@ -48,19 +65,18 @@ public slots:
     void login(const QString &username, const QString &password);
     void logout();
 
-    void comment(const quint32 &appId, const QString &body, const quint32 &parentId = 0);
-    void editComment(const quint32 &commentId, const QString &body);
+    void comment(quint32 appId, const QString &body, quint32 parentId = 0);
+    void editComment(quint32 appId, quint32 commentId, const QString &body);
+    void deleteComment(const quint32 &appId, const quint32 &commentId);
 
     void vote(const quint32 &appId, const quint32 &value);
 
 signals:
+    void error(Error code);
     void authorisedChanged();
-    void authorisationError();
     void dayToExpiry();
     void cookieIsValidChanged();
-    void commentAdded(const quint32 &appId, const quint32 &cid);
-    void commentEdited(quint32 cid);
-    void commentError();
+    void commentActionFinished(CommentAction action, quint32 appId, quint32 cid);
     void bookmarkChanged(quint32 appid, bool bookmarked);
     void userVoteFinished(const quint32 &appId, const quint32 &userVote,
                           const quint32 &count, const float &rating);

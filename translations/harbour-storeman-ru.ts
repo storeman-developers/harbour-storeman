@@ -982,13 +982,17 @@ Storeman не хранит ваш пароль и не передает его �
         <source>Reload</source>
         <translation>Перезагрузить</translation>
     </message>
-    <message id="orn-message-error">
-        <source>Error sending comment</source>
-        <translation>Ошибка отправки комментария</translation>
-    </message>
     <message id="orn-no-packages">
         <source>No packages available</source>
         <translation>Нет доступных пакетов</translation>
+    </message>
+    <message id="orn-error-comment-sending">
+        <source>Error sending comment</source>
+        <translation>Ошибка отправки комментария</translation>
+    </message>
+    <message id="orn-error-comment-deletion">
+        <source>Error deleting comment</source>
+        <translation>Ошибка удаления комментария</translation>
     </message>
 </context>
 </TS>

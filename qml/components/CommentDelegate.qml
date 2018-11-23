@@ -65,16 +65,14 @@ ListItem {
             onClicked: commentField.item.edit(model.commentId, model.text)
         }
 
-//        MenuItem {
-//            //% "Delete"
-//            text: qsTrId("orn-delete")
-//            visible: _userComment || OrnClient.userId === userId
-//            //% "Deleting"
-//            onClicked: remorseAction(qsTrId("orn-deleting"), function() {
-//                OrnClient.deleteComment(comment.commentId)
-//                commentsModel.removeRow(index, 1)
-//            })
-//        }
+        MenuItem {
+            text: qsTrId("orn-delete")
+            visible: _userComment || OrnClient.userId === userId
+            //% "Deleting"
+            onClicked: remorseAction(qsTrId("orn-deleting"), function() {
+                OrnClient.deleteComment(page.appId, model.commentId)
+            })
+        }
     }
 
     Column {

@@ -199,7 +199,7 @@ void OrnClient::logout()
     }
 }
 
-void OrnClient::comment(const quint32 &appId, const QString &body, const quint32 &parentId)
+void OrnClient::comment(quint32 appId, const QString &body, quint32 parentId)
 {
     auto request = this->authorisedRequest();
     request.setHeader(QNetworkRequest::ContentTypeHeader, APPLICATION_JSON);
@@ -221,18 +221,18 @@ void OrnClient::comment(const quint32 &appId, const QString &body, const quint32
         if (jsonDoc.isObject())
         {
             auto cid = Orn::toUint(jsonDoc.object()[QStringLiteral("cid")]);
-            emit this->commentAdded(appId, cid);
+            emit this->commentActionFinished(CommentAdded, appId, cid);
             qDebug() << "Comment" << cid << "added for app" << appId;
         }
         else
         {
-            emit this->commentError();
+            emit this->error(CommentSendError);
         }
         this->reset();
     });
 }
 
-void OrnClient::editComment(const quint32 &commentId, const QString &body)
+void OrnClient::editComment(quint32 appId, quint32 commentId, const QString &body)
 {
     auto request = this->authorisedRequest();
     request.setHeader(QNetworkRequest::ContentTypeHeader, APPLICATION_JSON);
@@ -243,18 +243,47 @@ void OrnClient::editComment(const quint32 &commentId, const QString &body)
 
     mNetworkReply = Orn::networkAccessManager()->put(
                 request, QJsonDocument(commentObject).toJson());
-    connect(mNetworkReply, &QNetworkReply::finished, [this]()
+    connect(mNetworkReply, &QNetworkReply::finished, [this, appId]()
     {
         auto jsonDoc = this->processReply();
         if (jsonDoc.isArray())
         {
             auto cid = Orn::toUint(jsonDoc.array().first());
-            emit this->commentEdited(cid);
+            emit this->commentActionFinished(CommentEdited, appId, cid);
             qDebug() << "Comment edited:" << cid;
         }
         else
         {
-            emit this->commentError();
+            emit this->error(CommentSendError);
+        }
+        this->reset();
+    });
+}
+
+void OrnClient::deleteComment(const quint32 &appId, const quint32 &commentId)
+{
+    auto request = this->authorisedRequest();
+    request.setHeader(QNetworkRequest::ContentTypeHeader, APPLICATION_JSON);
+    request.setUrl(OrnApiRequest::apiUrl(QStringLiteral("comments/%0").arg(commentId)));
+
+    mNetworkReply = Orn::networkAccessManager()->deleteResource(request);
+    connect(mNetworkReply, &QNetworkReply::finished, [this, appId, commentId]()
+    {
+        auto jsonDoc = this->processReply();
+        bool ok = false;
+        if (jsonDoc.isArray())
+        {
+            auto value = jsonDoc.array().first();
+            if (value.isBool() && value.toBool())
+            {
+                emit this->commentActionFinished(CommentDeleted, appId, commentId);
+                qDebug() << "Comment" << commentId << "was deleted";
+                ok = true;
+            }
+        }
+        if (!ok)
+        {
+            emit this->error(CommentDeleteError);
         }
         this->reset();
     });
@@ -331,7 +360,7 @@ void OrnClient::onLoggedIn()
     auto jsonDoc = this->processReply();
     if (jsonDoc.isEmpty())
     {
-        emit this->authorisationError();
+        emit this->error(AuthorisationError);
         return;
     }
     auto cookieVariant = mNetworkReply->header(QNetworkRequest::SetCookieHeader);
@@ -387,7 +416,7 @@ QJsonDocument OrnClient::processReply()
     auto networkError = mNetworkReply->error();
     if (networkError != QNetworkReply::NoError)
     {
-        qDebug() << "Network request error" << mNetworkReply->error()
+        qDebug() << "Network request error" << networkError
                  << "-" << mNetworkReply->errorString();
         if (this->authorised())
         {

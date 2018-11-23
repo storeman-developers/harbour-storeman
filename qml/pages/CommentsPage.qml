@@ -5,6 +5,7 @@ import "../components"
 
 Page {
     property alias commentField: commentsList.headerItem
+    property int appId
     property int userId
     property string userName
     property bool hasComments: false
@@ -52,12 +53,10 @@ Page {
     }
 
     Connections {
-        target: OrnClient
-        onCommentAdded: {
-            commentsModel.addComment(cid)
-            hasComments = true
-        }
-        onCommentEdited: commentsModel.editComment(cid)
+        target: commentsModel
+
+        onRowsInserted: hasComments = commentsModel.rowCount() > 0
+        onRowsRemoved: hasComments = commentsModel.rowCount() > 0
     }
 
     Timer {
