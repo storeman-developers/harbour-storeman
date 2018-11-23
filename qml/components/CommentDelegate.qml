@@ -23,13 +23,13 @@ ListItem {
         var hours = Math.round(mins / 60.0)
         if (hours < 1) {
             //% "%n minute(s) ago"
-            createdLabel.text = qsTrId("orn-mins-ago", mins).arg(mins)
+            createdLabel.text = qsTrId("orn-mins-ago", mins)
             return
         }
         var days = Math.round(hours / 24.0)
         if (days < 1) {
             //% "%n hour(s) ago"
-            createdLabel.text = qsTrId("orn-hours-ago", hours).arg(hours)
+            createdLabel.text = qsTrId("orn-hours-ago", hours)
         } else if (days == 1) {
             //% "Yesterday"
             createdLabel.text = qsTrId("orn-yesterday")
