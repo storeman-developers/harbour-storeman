@@ -30,7 +30,7 @@ Page {
             if (initialSearch) {
                 view.headerItem.searchField.text = initialSearch
                 _search(initialSearch)
-            } else {
+            } else if (!view.headerItem.searchField.text) {
                 _reset()
             }
         }
