@@ -37,4 +37,4 @@ Read [here](harbour-storeman/translations/README.md)
 
 ## Installing Storeman
 
-A changelog, screenshots and installable RPMs are available at [OpenRepos.net](https://github.com/mentaljam/harbour-storeman/edit/master/README.md).
+Sreenshots and installable RPMs are available at [OpenRepos.net](https://openrepos.net/content/osetr/storeman).
