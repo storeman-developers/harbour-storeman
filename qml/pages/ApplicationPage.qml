@@ -67,7 +67,7 @@ Page {
     SilicaFlickable {
         id: flickable
         anchors.fill: parent
-        visible: !app.running
+        visible: app.packageName && !app.running
         contentHeight: content.height
 
         ApplicationPageMenu {

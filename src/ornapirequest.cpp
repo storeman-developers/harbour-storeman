@@ -33,9 +33,9 @@ void OrnApiRequest::run(const QNetworkRequest &request)
         return;
     }
     qDebug() << "Fetching data from" << request.url().toString();
-    emit this->runningChanged(true);
     mNetworkReply = Orn::networkAccessManager()->get(request);
     connect(mNetworkReply, &QNetworkReply::finished, this, &OrnApiRequest::onReplyFinished);
+    emit this->runningChanged(true);
 }
 
 bool OrnApiRequest::running() const
