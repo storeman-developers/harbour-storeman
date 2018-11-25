@@ -6,8 +6,8 @@
 #include <QNetworkReply>
 
 
-OrnTagsModel::OrnTagsModel(QObject *parent) :
-    OrnAbstractAppsModel(false, parent)
+OrnTagsModel::OrnTagsModel(QObject *parent)
+    : OrnAbstractListModel(false, parent)
 {}
 
 QStringList OrnTagsModel::tagIds() const
@@ -31,34 +31,15 @@ void OrnTagsModel::addTag(QString id)
     auto client = OrnClient::instance();
     auto request = client->apiRequest(id.prepend("tags/"));
     auto reply = client->networkAccessManager()->get(request);
-    connect(reply, &QNetworkReply::finished, this, &OrnTagsModel::onReplyFinished);
-}
-
-void OrnTagsModel::onReplyFinished()
-{
-    auto reply = static_cast<QNetworkReply *>(this->sender());
-
-    if (reply->error() == QNetworkReply::NoError)
+    connect(reply, &QNetworkReply::finished, [this, client, reply]()
     {
-        QJsonParseError error;
-        auto jsonDoc = QJsonDocument::fromJson(reply->readAll(), &error);
-        if (error.error == QJsonParseError::NoError)
+        auto doc = client->processReply(reply);
+        if (doc.isObject())
         {
-            QJsonArray arr;
-            arr.append(jsonDoc.object());
-            OrnAbstractListModel::processReply<OrnTagListItem>(QJsonDocument(arr));
+            QJsonArray arr({doc.object()});
+            this->onJsonReady(QJsonDocument(arr));
         }
-        else
-        {
-            qCritical() << "Could not parse reply:" << error.errorString();
-        }
-    }
-    else
-    {
-        qDebug() << "Network request error" << reply->error()
-                 << "-" << reply->errorString();
-    }
-    reply->deleteLater();
+    });
 }
 
 QVariant OrnTagsModel::data(const QModelIndex &index, int role) const
@@ -102,4 +83,9 @@ void OrnTagsModel::fetchMore(const QModelIndex &parent)
     {
         this->addTag(id);
     }
+}
+
+void OrnTagsModel::onJsonReady(const QJsonDocument &jsonDoc)
+{
+    OrnAbstractListModel::processReply<OrnTagListItem>(jsonDoc);
 }

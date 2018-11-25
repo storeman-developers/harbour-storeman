@@ -1,12 +1,11 @@
 #ifndef ORN_TAGSMODEL_H
 #define ORN_TAGSMODEL_H
 
-#include "ornabstractappsmodel.h"
+#include "ornabstractlistmodel.h"
 
-class OrnTagsModel : public OrnAbstractAppsModel
+class OrnTagsModel : public OrnAbstractListModel
 {
     Q_OBJECT
-
     Q_PROPERTY(QStringList tagIds READ tagIds WRITE setTagIds NOTIFY tagIdsChanged)
 
 public:
@@ -28,7 +27,6 @@ signals:
 
 private slots:
     void addTag(QString id);
-    void onReplyFinished();
 
 private:
     QStringList mTagIds;
@@ -38,6 +36,10 @@ public:
     QVariant data(const QModelIndex &index, int role) const;
     QHash<int, QByteArray> roleNames() const;
     void fetchMore(const QModelIndex &parent);
+
+    // OrnAbstractListModel interface
+protected:
+    void onJsonReady(const QJsonDocument &jsonDoc);
 };
 
 #endif // ORN_TAGSMODEL_H
