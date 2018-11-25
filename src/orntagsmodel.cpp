@@ -25,23 +25,6 @@ void OrnTagsModel::setTagIds(const QStringList &ids)
     }
 }
 
-void OrnTagsModel::addTag(QString id)
-{
-    qDebug() << "Adding tag" << id << "to tags model";
-    auto client = OrnClient::instance();
-    auto request = client->apiRequest(id.prepend("tags/"));
-    auto reply = client->networkAccessManager()->get(request);
-    connect(reply, &QNetworkReply::finished, [this, client, reply]()
-    {
-        auto doc = client->processReply(reply);
-        if (doc.isObject())
-        {
-            QJsonArray arr({doc.object()});
-            this->onJsonReady(QJsonDocument(arr));
-        }
-    });
-}
-
 QVariant OrnTagsModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid())
@@ -79,9 +62,33 @@ void OrnTagsModel::fetchMore(const QModelIndex &parent)
         return;
     }
 
+    mFetching = true;
+    emit this->fetchingChanged();
+
+    auto client = OrnClient::instance();
+    auto size = mTagIds.size();
+    QString resourcePrefix(QStringLiteral("tags/"));
+
     for (const auto &id : mTagIds)
     {
-        this->addTag(id);
+        auto request = client->apiRequest(resourcePrefix + id);
+        qDebug() << "Fetching data from" << request.url().toString();
+        auto reply = client->networkAccessManager()->get(request);
+        connect(reply, &QNetworkReply::finished, [this, client, size, reply]()
+        {
+            auto doc = client->processReply(reply);
+            if (doc.isObject())
+            {
+                mFetchedTags.append(doc.object());
+                if (mFetchedTags.size() == size)
+                {
+                    this->onJsonReady(QJsonDocument(mFetchedTags));
+                    mFetchedTags = QJsonArray();                    
+                    mFetching = false;
+                    emit this->fetchingChanged();
+                }
+            }
+        });
     }
 }
 

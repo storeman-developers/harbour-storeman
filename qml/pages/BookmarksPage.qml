@@ -50,16 +50,13 @@ Page {
         BusyIndicator {
             size: BusyIndicatorSize.Large
             anchors.centerIn: parent
-            running: !viewPlaceholder.text &&
-                     bookmarksList.count === 0 &&
-                     !menu.active
+            running: bookmarksModel.fetching && !menu.active
         }
 
         ViewPlaceholder {
-            id: viewPlaceholder
-            enabled: text
+            enabled: !bookmarksModel.fetching && bookmarksList.count === 0
             //% "Your bookmarked applications will be shown here"
-            text: bookmarksList.count ? "" : qsTrId("orn-no-bookmarks")
+            text: qsTrId("orn-no-bookmarks")
         }
     }
 }

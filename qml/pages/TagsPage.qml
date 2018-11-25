@@ -50,13 +50,10 @@ Page {
         BusyIndicator {
             size: BusyIndicatorSize.Large
             anchors.centerIn: parent
-            running: !viewPlaceholder.text &&
-                     tagsList.count === 0 &&
-                     !menu.active
+            running: tagsModel.fetching && !menu.active
         }
 
         ViewPlaceholder {
-            id: viewPlaceholder
             enabled: text
             text: {
                 hintText = ""

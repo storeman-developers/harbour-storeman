@@ -25,11 +25,9 @@ public:
 signals:
     void tagIdsChanged();
 
-private slots:
-    void addTag(QString id);
-
 private:
     QStringList mTagIds;
+    QJsonArray  mFetchedTags;
 
     // QAbstractItemModel interface
 public:

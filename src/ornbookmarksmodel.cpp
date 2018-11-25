@@ -5,51 +5,45 @@
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 
-OrnBookmarksModel::OrnBookmarksModel(QObject *parent) :
-    OrnAbstractAppsModel(false, parent)
+OrnBookmarksModel::OrnBookmarksModel(QObject *parent)
+    : OrnAbstractAppsModel(false, parent)
 {
-    connect(OrnClient::instance(), &OrnClient::bookmarkChanged,
-            this, &OrnBookmarksModel::onBookmarkChanged);
-}
-
-void OrnBookmarksModel::onBookmarkChanged(quint32 appId, bool bookmarked)
-{
-    if (bookmarked)
-    {
-        this->addApp(appId);
-    }
-    else
-    {
-        auto s = mData.size();
-        for (int i = 0; i < s; ++i)
-        {
-            auto app = static_cast<OrnAppListItem *>(mData[i]);
-            if (app->appId == appId)
-            {
-                qDebug() << "Removing app" << appId << "from bookmarks model";
-                this->beginRemoveRows(QModelIndex(), i, i);
-                mData.removeAt(i);
-                this->endRemoveRows();
-                delete app;
-                return;
-            }
-        }
-    }
-}
-
-void OrnBookmarksModel::addApp(quint32 appId)
-{
-    qDebug() << "Fetching app" << appId << "to add to bookmarks model";
     auto client = OrnClient::instance();
-    auto request = client->apiRequest(QStringLiteral("apps/%1/compact").arg(appId));
-    auto reply = client->networkAccessManager()->get(request);
-    connect(reply, &QNetworkReply::finished, [this, client, reply]()
+    connect(OrnClient::instance(), &OrnClient::bookmarkChanged,
+            [this, client](quint32 appId, bool bookmarked)
     {
-        auto doc = client->processReply(reply);
-        if (doc.isObject())
+        if (bookmarked)
         {
-            QJsonArray arr({doc.object()});
-            this->onJsonReady(QJsonDocument(arr));
+            auto request = client->apiRequest(QStringLiteral("apps/%1/compact").arg(appId));
+            qDebug() << "Fetching data from" << request.url().toString();
+            auto reply = client->networkAccessManager()->get(request);
+            connect(reply, &QNetworkReply::finished, [this, client, reply, appId]()
+            {
+                auto doc = client->processReply(reply);
+                if (doc.isObject())
+                {
+                    qDebug() << "Adding app" << appId << "to bookmarks model";
+                    QJsonArray arr({doc.object()});
+                    this->onJsonReady(QJsonDocument(arr));
+                }
+            });
+        }
+        else
+        {
+            auto s = mData.size();
+            for (int i = 0; i < s; ++i)
+            {
+                auto app = static_cast<OrnAppListItem *>(mData[i]);
+                if (app->appId == appId)
+                {
+                    qDebug() << "Removing app" << appId << "from bookmarks model";
+                    this->beginRemoveRows(QModelIndex(), i, i);
+                    mData.removeAt(i);
+                    this->endRemoveRows();
+                    delete app;
+                    return;
+                }
+            }
         }
     });
 }
@@ -61,8 +55,33 @@ void OrnBookmarksModel::fetchMore(const QModelIndex &parent)
         return;
     }
 
-    for (const auto &appid : OrnClient::instance()->bookmarks())
+    mFetching = true;
+    emit this->fetchingChanged();
+
+    auto client = OrnClient::instance();
+    auto bookmarks = client->bookmarks();
+    auto size = bookmarks.size();
+    QString resourceTmpl(QStringLiteral("apps/%1/compact"));
+
+    for (const auto &appid : bookmarks)
     {
-        this->addApp(appid);
+        auto request = client->apiRequest(resourceTmpl.arg(appid));
+        qDebug() << "Fetching data from" << request.url().toString();
+        auto reply = client->networkAccessManager()->get(request);
+        connect(reply, &QNetworkReply::finished, [this, client, size, reply]()
+        {
+            auto doc = client->processReply(reply);
+            if (doc.isObject())
+            {
+                mFetchedApps.append(doc.object());
+                if (mFetchedApps.size() == size)
+                {
+                    this->onJsonReady(QJsonDocument(mFetchedApps));
+                    mFetchedApps = QJsonArray();
+                    mFetching = false;
+                    emit this->fetchingChanged();
+                }
+            }
+        });
     }
 }

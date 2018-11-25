@@ -10,9 +10,8 @@ class OrnBookmarksModel : public OrnAbstractAppsModel
 public:
     explicit OrnBookmarksModel(QObject *parent = nullptr);
 
-private slots:
-    void onBookmarkChanged(quint32 appId, bool bookmarked);
-    void addApp(quint32 appId);
+private:
+    QJsonArray mFetchedApps;
 
     // QAbstractItemModel interface
 public:
