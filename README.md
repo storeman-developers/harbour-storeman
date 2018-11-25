@@ -49,4 +49,4 @@ Current RPMs to install are available at [OpenRepos.net](https://openrepos.net/c
 
 ## Translations
 
-Read [here](harbour-storeman/translations/README.md)
+Read [here](translations/README.md)
