@@ -202,6 +202,10 @@ ApplicationWindow
 
         onError: {
             switch (code) {
+            case OrnClient.NetworkError:
+                //% "Network error"
+                notification.show(qsTrId("orn-error-network"), "image://theme/icon-lock-warning")
+                break
             case OrnClient.AuthorisationError:
                 notification.showPopup(
                             //% "Login error"

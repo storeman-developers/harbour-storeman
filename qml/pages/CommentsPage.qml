@@ -108,7 +108,7 @@ Page {
                 if (!networkManager.online) {
                     return qsTrId("orn-network-idle")
                 }
-                if (commentsModel.apiRequest.networkError) {
+                if (commentsModel.networkError) {
                     hintText = qsTrId("orn-pull-refresh")
                     return qsTrId("orn-network-error")
                 }

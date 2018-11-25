@@ -1,17 +1,17 @@
 #include "orncommentlistitem.h"
-#include "orn.h"
+#include "ornutils.h"
 
 #include <QJsonObject>
 
 
 OrnCommentListItem::OrnCommentListItem(const QJsonObject &jsonObject)
-    : commentId(Orn::toUint(jsonObject[QStringLiteral("cid")]))
-    , parentId(Orn::toUint(jsonObject[QStringLiteral("pid")]))
-    , created(Orn::toUint(jsonObject[QStringLiteral("created")]))
-    , text(Orn::toString(jsonObject[QStringLiteral("text")]))
+    : commentId(OrnUtils::toUint(jsonObject[QStringLiteral("cid")]))
+    , parentId(OrnUtils::toUint(jsonObject[QStringLiteral("pid")]))
+    , created(OrnUtils::toUint(jsonObject[QStringLiteral("created")]))
+    , text(OrnUtils::toString(jsonObject[QStringLiteral("text")]))
 {
     auto user = jsonObject[QStringLiteral("user")].toObject();
-    userId = Orn::toUint(user[QStringLiteral("uid")]);
-    userName = Orn::toString(user[QStringLiteral("name")]);
-    userIconSource = Orn::toString(user[QStringLiteral("picture")].toObject()[QStringLiteral("url")]);
+    userId = OrnUtils::toUint(user[QStringLiteral("uid")]);
+    userName = OrnUtils::toString(user[QStringLiteral("name")]);
+    userIconSource = OrnUtils::toString(user[QStringLiteral("picture")].toObject()[QStringLiteral("url")]);
 }

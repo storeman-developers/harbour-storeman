@@ -42,8 +42,8 @@ Page {
         anchors.fill: parent
         model: OrnSearchAppsModel {
             id: searchModel
-            onResultsUpdated: {
-                if (rowCount() === 0) {
+            onFetchingChanged: {
+                if (!fetching && rowCount() === 0) {
                     //% "Nothing found"
                     viewPlaceholder.text = qsTrId("orn-searchpage-placeholder-noresults")
                     //% "Try to change search keywords"

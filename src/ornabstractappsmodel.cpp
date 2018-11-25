@@ -1,6 +1,5 @@
 #include "ornabstractappsmodel.h"
 #include "ornapplistitem.h"
-#include "ornapirequest.h"
 #include "ornpm.h"
 
 OrnAbstractAppsModel::OrnAbstractAppsModel(bool fetchable, QObject *parent)

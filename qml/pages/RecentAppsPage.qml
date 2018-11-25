@@ -58,8 +58,7 @@ Page {
             }
 
             MenuItem {
-                visible: networkManager.online &&
-                         !appsModel.apiRequest.networkError
+                visible: networkManager.online && !appsModel.networkError
                 text: qsTrId("orn-search")
                 onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"))
             }
@@ -86,7 +85,7 @@ Page {
                     //% "Network is unavailable"
                     return qsTrId("orn-network-idle")
                 }
-                if (appsModel.apiRequest.networkError) {
+                if (appsModel.networkError) {
                     //% "Pull down to refresh"
                     hintText = qsTrId("orn-pull-refresh")
                     //% "A network error occurred"

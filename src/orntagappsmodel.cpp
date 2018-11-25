@@ -27,5 +27,5 @@ void OrnTagAppsModel::fetchMore(const QModelIndex &parent)
         return;
     }
 
-    OrnAbstractListModel::apiCall(QStringLiteral("tags/%1/apps").arg(mTagId));
+    OrnAbstractListModel::fetch(QStringLiteral("tags/%1/apps").arg(mTagId));
 }

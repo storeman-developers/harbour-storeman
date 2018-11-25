@@ -1,15 +1,13 @@
-#include "orn.h"
+#include "ornutils.h"
 
 #include <QJsonArray>
 #include <QJsonObject>
 #include <QStandardPaths>
 #include <QDir>
-#include <QNetworkAccessManager>
-#include <QCoreApplication>
 
 #include <QDebug>
 
-namespace Orn
+namespace OrnUtils
 {
 
 QList<quint32> toIntList(const QJsonValue &value)
@@ -35,15 +33,4 @@ QString locate(const QString &filename)
     return dir.absoluteFilePath(filename);
 }
 
-static QNetworkAccessManager *nam = nullptr;
-
-QNetworkAccessManager *networkAccessManager()
-{
-    if (!nam)
-    {
-        nam = new QNetworkAccessManager(qApp);
-    }
-    return nam;
-}
-
-} // namespace Orn
+} // namespace OrnUtils

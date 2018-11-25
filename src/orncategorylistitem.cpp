@@ -1,6 +1,5 @@
 #include "orncategorylistitem.h"
-#include "orn.h"
-#include "ornapirequest.h"
+#include "ornutils.h"
 
 #include <QJsonObject>
 #include <QJsonArray>
@@ -78,8 +77,8 @@ const QMap<quint32, const char*> OrnCategoryListItem::categories{
 };
 
 OrnCategoryListItem::OrnCategoryListItem(const QJsonObject &jsonObject)
-    : categoryId(Orn::toUint(jsonObject[QStringLiteral("tid")]))
-    , appsCount(Orn::toUint(jsonObject[QStringLiteral("apps_count")]))
+    : categoryId(OrnUtils::toUint(jsonObject[QStringLiteral("tid")]))
+    , appsCount(OrnUtils::toUint(jsonObject[QStringLiteral("apps_count")]))
     , depth(jsonObject[QStringLiteral("depth")].toVariant().toUInt())
     , name(categoryName(categoryId))
 {}

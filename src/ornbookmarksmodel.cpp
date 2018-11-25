@@ -1,7 +1,6 @@
 #include "ornbookmarksmodel.h"
 #include "ornapplistitem.h"
 #include "ornclient.h"
-#include "orn.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
@@ -38,35 +37,20 @@ void OrnBookmarksModel::onBookmarkChanged(quint32 appId, bool bookmarked)
     }
 }
 
-void OrnBookmarksModel::addApp(const quint32 &appId)
+void OrnBookmarksModel::addApp(quint32 appId)
 {
-    qDebug() << "Adding app" << appId << "to bookmarks model";
-    auto url = OrnApiRequest::apiUrl(QStringLiteral("apps/%1/compact").arg(appId));
-    auto request = OrnApiRequest::networkRequest(url);
-    auto reply = Orn::networkAccessManager()->get(request);
-    connect(reply, &QNetworkReply::finished, [this, reply]()
+    qDebug() << "Fetching app" << appId << "to add to bookmarks model";
+    auto client = OrnClient::instance();
+    auto request = client->apiRequest(QStringLiteral("apps/%1/compact").arg(appId));
+    auto reply = client->networkAccessManager()->get(request);
+    connect(reply, &QNetworkReply::finished, [this, client, reply]()
     {
-        if (reply->error() == QNetworkReply::NoError)
+        auto doc = client->processReply(reply);
+        if (doc.isObject())
         {
-            QJsonParseError error;
-            auto jsonDoc = QJsonDocument::fromJson(reply->readAll(), &error);
-            if (error.error == QJsonParseError::NoError)
-            {
-                QJsonArray arr;
-                arr.append(jsonDoc.object());
-                emit mApiRequest->jsonReady(QJsonDocument(arr));
-            }
-            else
-            {
-                qCritical() << "Could not parse reply:" << error.errorString();
-            }
+            QJsonArray arr({doc.object()});
+            this->onJsonReady(QJsonDocument(arr));
         }
-        else
-        {
-            qDebug() << "Network request error" << reply->error()
-                     << "-" << reply->errorString();
-        }
-        reply->deleteLater();
     });
 }
 

@@ -1,13 +1,12 @@
 #ifndef ORNAPPLICATION_H
 #define ORNAPPLICATION_H
 
-#include "ornapirequest.h"
 #include "ornpm.h"
 #include "ornpackageversion.h"
 
 #include <QDateTime>
 
-class OrnApplication : public OrnApiRequest
+class OrnApplication : public QObject
 {
     friend class OrnBookmarksModel;
 
@@ -98,7 +97,6 @@ public slots:
     void ornRequest();
 
 private slots:
-    void onJsonReady(const QJsonDocument &jsonDoc);
     void onRepoListChanged();
     void onPackageStatusChanged(const QString &packageName, const OrnPm::PackageStatus &status);
     void onUpdatablePackagesChanged();

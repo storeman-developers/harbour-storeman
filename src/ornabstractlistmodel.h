@@ -13,27 +13,30 @@
 
 #include <QDebug>
 
-class OrnApiRequest;
+class QNetworkReply;
 
 class OrnAbstractListModel : public QAbstractListModel
 {
     Q_OBJECT
-    Q_PROPERTY(OrnApiRequest* apiRequest READ apiRequest CONSTANT)
+    Q_PROPERTY(bool fetching READ fetching NOTIFY fetchingChanged)
+    Q_PROPERTY(bool networkError READ networkError NOTIFY networkErrorChanged)
 
 public:
     OrnAbstractListModel(bool fetchable, QObject *parent = nullptr);
     ~OrnAbstractListModel();
 
-    OrnApiRequest *apiRequest() const;
+    bool fetching() const;
+    bool networkError() const;
 
 public slots:
     void reset();
 
 signals:
-    void replyProcessed();
+    void fetchingChanged();
+    void networkErrorChanged();
 
 protected:
-    void apiCall(const QString &resource, QUrlQuery query = QUrlQuery());
+    void fetch(const QString &resource, QUrlQuery query = QUrlQuery());
     template<typename T>
     void processReply(const QJsonDocument &jsonDoc)
     {
@@ -77,18 +80,20 @@ protected:
             qDebug() << "Reply is empty, the model has fetched all data";
             mCanFetchMore = false;
         }
-        emit this->replyProcessed();
+        mFetching = false;
+        emit this->fetchingChanged();
     }
 
-protected slots:
     virtual void onJsonReady(const QJsonDocument &jsonDoc) = 0;
 
 protected:
     bool    mFetchable;
     bool    mCanFetchMore;
+    bool    mFetching;
+    bool    mNetworkError;
     quint32 mPage;
     OrnItemList mData;
-    OrnApiRequest *mApiRequest;
+    QNetworkReply *mApiReply;
 
 private:
     QByteArray mPrevReplyHash;

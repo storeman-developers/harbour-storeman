@@ -27,5 +27,5 @@ void OrnCategoryAppsModel::fetchMore(const QModelIndex &parent)
     {
         return;
     }
-    OrnAbstractListModel::apiCall(QStringLiteral("categories/%0/apps").arg(mCategoryId));
+    OrnAbstractListModel::fetch(QStringLiteral("categories/%0/apps").arg(mCategoryId));
 }

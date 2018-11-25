@@ -1,17 +1,19 @@
 #include "ornabstractlistmodel.h"
-#include "ornapirequest.h"
+#include "ornclient.h"
 
 #include <QNetworkReply>
 #include <QDebug>
 
-OrnAbstractListModel::OrnAbstractListModel(bool fetchable, QObject *parent) :
-    QAbstractListModel(parent),
-    mFetchable(fetchable),
-    mCanFetchMore(true),
-    mPage(0),
-    mApiRequest(new OrnApiRequest(this))
+
+OrnAbstractListModel::OrnAbstractListModel(bool fetchable, QObject *parent)
+    : QAbstractListModel(parent)
+    , mFetchable(fetchable)
+    , mCanFetchMore(true)
+    , mFetching(false)
+    , mNetworkError(false)
+    , mPage(0)
+    , mApiReply(nullptr)
 {
-    connect(mApiRequest, &OrnApiRequest::jsonReady, this, &OrnAbstractListModel::onJsonReady);
 }
 
 OrnAbstractListModel::~OrnAbstractListModel()
@@ -19,9 +21,14 @@ OrnAbstractListModel::~OrnAbstractListModel()
     qDeleteAll(mData);
 }
 
-OrnApiRequest *OrnAbstractListModel::apiRequest() const
+bool OrnAbstractListModel::fetching() const
 {
-    return mApiRequest;
+    return mFetching;
+}
+
+bool OrnAbstractListModel::networkError() const
+{
+    return mNetworkError;
 }
 
 void OrnAbstractListModel::reset()
@@ -32,26 +39,60 @@ void OrnAbstractListModel::reset()
     mData.clear();
     mCanFetchMore = true;
     mPage = 0;
-    mApiRequest->reset();
     mPrevReplyHash.clear();
+    if (mApiReply)
+    {
+        mApiReply->deleteLater();
+        mApiReply = nullptr;
+    }
+    if (mFetching)
+    {
+        mFetching = false;
+        emit this->fetchingChanged();
+    }
+    if (mNetworkError)
+    {
+        mNetworkError = false;
+        emit this->networkErrorChanged();
+    }
     this->endResetModel();
     // Delete data only after reset finished
     qDeleteAll(d);
 }
 
-void OrnAbstractListModel::apiCall(const QString &resource, QUrlQuery query)
+void OrnAbstractListModel::fetch(const QString &resource, QUrlQuery query)
 {
-    auto url = OrnApiRequest::apiUrl(resource);
+    if (mFetching)
+    {
+        qWarning() << this << "Model is already fetching data";
+        return;
+    }
+    mFetching = true;
+    emit this->fetchingChanged();
     if (mFetchable)
     {
         query.addQueryItem(QStringLiteral("page"), QString::number(mPage));
     }
-    if (!query.isEmpty())
+    auto client = OrnClient::instance();
+    auto request = client->apiRequest(resource, query);
+    qDebug() << "Fetching data from" << request.url().toString();
+    mApiReply = client->networkAccessManager()->get(request);
+    connect(mApiReply, &QNetworkReply::finished, [this, client]()
     {
-        url.setQuery(query);
-    }
-    auto request = OrnApiRequest::networkRequest(url);
-    mApiRequest->run(request);
+        auto doc = client->processReply(mApiReply);
+        if (doc.isArray())
+        {
+            this->onJsonReady(doc);
+        }
+        else
+        {
+            mCanFetchMore = false;
+            mNetworkError = true;
+            emit this->networkErrorChanged();
+            mFetching = false;
+            emit this->fetchingChanged();
+        }
+    });
 }
 
 int OrnAbstractListModel::rowCount(const QModelIndex &parent) const

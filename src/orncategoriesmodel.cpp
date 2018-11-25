@@ -1,6 +1,5 @@
 #include "orncategoriesmodel.h"
 #include "orncategorylistitem.h"
-#include "ornapirequest.h"
 
 #include <QUrl>
 #include <QNetworkRequest>
@@ -40,7 +39,7 @@ void OrnCategoriesModel::fetchMore(const QModelIndex &parent)
     {
         return;
     }
-    OrnAbstractListModel::apiCall(QStringLiteral("categories"));
+    OrnAbstractListModel::fetch(QStringLiteral("categories"));
 }
 
 QHash<int, QByteArray> OrnCategoriesModel::roleNames() const
@@ -63,14 +62,15 @@ void OrnCategoriesModel::onJsonReady(const QJsonDocument &jsonDoc)
     }
 
     OrnItemList list;
-    for (const QJsonValueRef category: categoriesArray)
+    for (const QJsonValueRef category : categoriesArray)
     {
         list << OrnCategoryListItem::parse(category.toObject());
     }
     this->beginInsertRows(QModelIndex(), 0, list.size() - 1);
     mData = list;
-    qDebug() << list.size() << "items have been added to the model";
     this->endInsertRows();
-    emit this->replyProcessed();
+    qDebug() << list.size() << "items have been added to the model";
+    mFetching = false;
     mCanFetchMore = false;
+    emit this->fetchingChanged();
 }

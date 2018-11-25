@@ -1,7 +1,6 @@
 #include <QtQuick>
 #include <sailfishapp.h>
 
-#include "ornapirequest.h"
 #include "ornclient.h"
 #include "ornpm.h"
 #include "ornapplication.h"
@@ -28,7 +27,6 @@ int main(int argc, char *argv[])
     // Register types
     const char *uri = "harbour.orn";
 
-    qmlRegisterType<OrnApiRequest>        (uri, 1, 0, "OrnApiRequest");
     qmlRegisterType<OrnApplication>       (uri, 1, 0, "OrnApplication");
     qmlRegisterType<OrnRecentAppsModel>   (uri, 1, 0, "OrnRecentAppsModel");
     qmlRegisterType<OrnUserAppsModel>     (uri, 1, 0, "OrnUserAppsModel");

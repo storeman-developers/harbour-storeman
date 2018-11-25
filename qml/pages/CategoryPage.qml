@@ -11,8 +11,8 @@ Page {
 
     OrnCategoryAppsModel {
         id: categoryModel
-        onReplyProcessed: {
-            if (rowCount() === 0) {
+        onFetchingChanged: {
+            if (!fetching && rowCount() === 0) {
                 //% "Currently there are no apps in this category"
                 viewPlaceholder.text = qsTrId("orn-category-noapps")
             }
@@ -59,7 +59,7 @@ Page {
                 if (!networkManager.online) {
                     return qsTrId("orn-network-idle")
                 }
-                if (categoryModel.apiRequest.networkError) {
+                if (categoryModel.networkError) {
                     hintText = qsTrId("orn-pull-refresh")
                     return qsTrId("orn-network-error")
                 }

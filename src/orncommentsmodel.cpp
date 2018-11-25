@@ -1,7 +1,7 @@
 #include "orncommentsmodel.h"
 #include "ornclient.h"
 #include "orncommentlistitem.h"
-#include "orn.h"
+#include "ornutils.h"
 
 #include <QNetworkReply>
 #include <QDebug>
@@ -45,14 +45,14 @@ OrnCommentsModel::OrnCommentsModel(QObject *parent)
                 {
                     return;
                 }
-                auto cid = Orn::toUint(jsonObject[QStringLiteral("cid")]);
+                auto cid = OrnUtils::toUint(jsonObject[QStringLiteral("cid")]);
                 auto size = mData.size();
                 for (int i = 0; i < size; ++i)
                 {
                     auto comment = static_cast<OrnCommentListItem *>(mData[i]);
                     if (comment->commentId == cid)
                     {
-                        comment->text = Orn::toString(jsonObject[QStringLiteral("text")]);
+                        comment->text = OrnUtils::toString(jsonObject[QStringLiteral("text")]);
                         auto index = this->createIndex(i, 0);
                         emit this->dataChanged(index, index);
                         return;
@@ -147,11 +147,10 @@ int OrnCommentsModel::findItemRow(const quint32 &cid) const
 
 QNetworkReply *OrnCommentsModel::fetchComment(const quint32 &cid)
 {
-    // FIXME: need refactoring
-    auto url = OrnApiRequest::apiUrl(QStringLiteral("comments/%0").arg(cid));
-    auto request = OrnApiRequest::networkRequest(url);
-    qDebug() << "Fetching data from" << url.toString();
-    return Orn::networkAccessManager()->get(request);
+    auto client = OrnClient::instance();
+    auto request = client->apiRequest(QStringLiteral("comments/%0").arg(cid));
+    qDebug() << "Fetching data from" << request.url().toString();
+    return client->networkAccessManager()->get(request);
 }
 
 QJsonObject OrnCommentsModel::processReply(QNetworkReply *reply)
@@ -219,7 +218,7 @@ void OrnCommentsModel::fetchMore(const QModelIndex &parent)
     {
         return;
     }
-    OrnAbstractListModel::apiCall(QStringLiteral("apps/%0/comments").arg(mAppId));
+    OrnAbstractListModel::fetch(QStringLiteral("apps/%0/comments").arg(mAppId));
 }
 
 QHash<int, QByteArray> OrnCommentsModel::roleNames() const

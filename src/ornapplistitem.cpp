@@ -1,6 +1,6 @@
 #include "ornapplistitem.h"
-#include "orn.h"
 #include "orncategorylistitem.h"
+#include "ornutils.h"
 
 #include <QJsonObject>
 #include <QJsonArray>
@@ -10,26 +10,26 @@
 
 OrnAppListItem::OrnAppListItem(const QJsonObject &jsonObject)
     : appId(jsonObject[QStringLiteral("appid")].toVariant().toUInt())
-    , created(Orn::toUint(jsonObject[QStringLiteral("created")]))
-    , updated(Orn::toUint(jsonObject[QStringLiteral("updated")]))
-    , title(Orn::toString(jsonObject[QStringLiteral("title")]))
-    , iconSource(Orn::toString(jsonObject[QStringLiteral("icon")].toObject()[QStringLiteral("url")]))
+    , created(OrnUtils::toUint(jsonObject[QStringLiteral("created")]))
+    , updated(OrnUtils::toUint(jsonObject[QStringLiteral("updated")]))
+    , title(OrnUtils::toString(jsonObject[QStringLiteral("title")]))
+    , iconSource(OrnUtils::toString(jsonObject[QStringLiteral("icon")].toObject()[QStringLiteral("url")]))
     , sinceUpdate(sinceLabel(created))
 {
     QString nameKey(QStringLiteral("name"));
 
     QString ratingKey(QStringLiteral("rating"));
     auto ratingObject = jsonObject[ratingKey].toObject();
-    ratingCount = Orn::toUint(ratingObject[QStringLiteral("count")]);
+    ratingCount = OrnUtils::toUint(ratingObject[QStringLiteral("count")]);
     rating = ratingObject[ratingKey].toString().toFloat();
 
-    userName = Orn::toString(jsonObject[QStringLiteral("user")].toObject()[nameKey]);
+    userName = OrnUtils::toString(jsonObject[QStringLiteral("user")].toObject()[nameKey]);
 
     auto categories = jsonObject[QStringLiteral("category")].toArray();
-    auto tid = Orn::toUint(categories.last().toObject()[QStringLiteral("tid")]);
+    auto tid = OrnUtils::toUint(categories.last().toObject()[QStringLiteral("tid")]);
     category = OrnCategoryListItem::categoryName(tid);
 
-    package = Orn::toString(jsonObject[QStringLiteral("package")].toObject()[nameKey]);
+    package = OrnUtils::toString(jsonObject[QStringLiteral("package")].toObject()[nameKey]);
 }
 
 QString OrnAppListItem::sinceLabel(const quint32 &value)

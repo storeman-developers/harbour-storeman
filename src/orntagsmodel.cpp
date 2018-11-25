@@ -1,7 +1,6 @@
 #include "orntagsmodel.h"
 #include "orntaglistitem.h"
-#include "ornapirequest.h"
-#include "orn.h"
+#include "ornclient.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
@@ -29,9 +28,9 @@ void OrnTagsModel::setTagIds(const QStringList &ids)
 void OrnTagsModel::addTag(QString id)
 {
     qDebug() << "Adding tag" << id << "to tags model";
-    auto url = OrnApiRequest::apiUrl(id.prepend("tags/"));
-    auto request = OrnApiRequest::networkRequest(url);
-    auto reply = Orn::networkAccessManager()->get(request);
+    auto client = OrnClient::instance();
+    auto request = client->apiRequest(id.prepend("tags/"));
+    auto reply = client->networkAccessManager()->get(request);
     connect(reply, &QNetworkReply::finished, this, &OrnTagsModel::onReplyFinished);
 }
 

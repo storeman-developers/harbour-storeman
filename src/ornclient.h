@@ -1,17 +1,18 @@
 #ifndef ORNCLIENT_H
 #define ORNCLIENT_H
 
-#include "ornapirequest.h"
+#include <QObject>
+#include <QUrlQuery>
 
-#include <QSet>
-#include <QVariant>
-
-class QSettings;
-class QTimer;
 class QQmlEngine;
 class QJSEngine;
+class QNetworkAccessManager;
+class QNetworkRequest;
+class QNetworkReply;
 
-class OrnClient : public OrnApiRequest
+struct OrnClientPrivate;
+
+class OrnClient : public QObject
 {
     friend class OrnBackup;
     friend class OrnApiRequest;
@@ -27,6 +28,7 @@ public:
 
     enum Error
     {
+        NetworkError,
         AuthorisationError,
         CommentSendError,
         CommentDeleteError,
@@ -50,6 +52,10 @@ public:
         return OrnClient::instance();
     }
 
+    QNetworkRequest apiRequest(const QString &resource, const QUrlQuery &query = QUrlQuery()) const;
+    QNetworkAccessManager *networkAccessManager() const;
+    QJsonDocument processReply(QNetworkReply *reply, Error code = NetworkError);
+
     bool authorised() const;
     bool cookieIsValid() const;
     quint32 userId() const;
@@ -67,9 +73,9 @@ public slots:
 
     void comment(quint32 appId, const QString &body, quint32 parentId = 0);
     void editComment(quint32 appId, quint32 commentId, const QString &body);
-    void deleteComment(const quint32 &appId, const quint32 &commentId);
+    void deleteComment(quint32 appId, quint32 commentId);
 
-    void vote(const quint32 &appId, const quint32 &value);
+    void vote(quint32 appId, quint32 value);
 
 signals:
     void error(Error code);
@@ -78,26 +84,16 @@ signals:
     void cookieIsValidChanged();
     void commentActionFinished(CommentAction action, quint32 appId, quint32 cid);
     void bookmarkChanged(quint32 appid, bool bookmarked);
-    void userVoteFinished(const quint32 &appId, const quint32 &userVote,
-                          const quint32 &count, const float &rating);
+    void userVoteFinished(quint32 appId, quint32 userVote, quint32 count, float rating);
 
 private slots:
     void setCookieTimer();
-    void onLoggedIn();
 
 private:
     explicit OrnClient(QObject *parent = nullptr);
     ~OrnClient();
-    QNetworkRequest authorisedRequest();
-    QJsonDocument processReply();
-    static void prepareComment(QJsonObject &object, const QString &body);
 
-private:
-    QSettings *mSettings;
-    QTimer *mCookieTimer;
-    QSet<quint32> mBookmarks;
-
-    static OrnClient *gInstance;
+    OrnClientPrivate *d_ptr;
 };
 
 #endif // ORNCLIENT_H

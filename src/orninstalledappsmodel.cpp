@@ -1,6 +1,6 @@
 #include "orninstalledappsmodel.h"
 #include "ornpm.h"
-#include "orn.h"
+#include "ornutils.h"
 
 #include <QDebug>
 
@@ -155,7 +155,7 @@ QVariant OrnInstalledAppsModel::data(const QModelIndex &index, int role) const
     case TitleRole:
         return package.title;
     case VersionRole:
-        return Orn::packageVersion(package.id);
+        return OrnUtils::packageVersion(package.id);
     case IconRole:
         return package.icon;
     case SortRole:

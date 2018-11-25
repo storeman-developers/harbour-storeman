@@ -28,5 +28,5 @@ void OrnUserAppsModel::fetchMore(const QModelIndex &parent)
     {
         return;
     }
-    OrnAbstractListModel::apiCall(QStringLiteral("users/%0/apps").arg(mUserId));
+    OrnAbstractListModel::fetch(QStringLiteral("users/%0/apps").arg(mUserId));
 }

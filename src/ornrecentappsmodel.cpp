@@ -12,5 +12,5 @@ void OrnRecentAppsModel::fetchMore(const QModelIndex &parent)
     {
         return;
     }
-    OrnAbstractListModel::apiCall(QStringLiteral("apps"));
+    OrnAbstractListModel::fetch(QStringLiteral("apps"));
 }

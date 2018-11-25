@@ -1,7 +1,7 @@
 #include "ornapplication.h"
-#include "orn.h"
 #include "orncategorylistitem.h"
 #include "ornclient.h"
+#include "ornutils.h"
 
 #include <QNetworkRequest>
 #include <QJsonDocument>
@@ -9,6 +9,8 @@
 #include <QJsonArray>
 #include <QFileInfo>
 #include <QStandardPaths>
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
 
 #include <QDebug>
 
@@ -31,7 +33,7 @@ QDebug operator<<(QDebug dbg, const OrnApplication *app)
 #endif
 
 OrnApplication::OrnApplication(QObject *parent)
-    : OrnApiRequest(parent)
+    : QObject(parent)
     , mRepoStatus(OrnPm::RepoUnknownStatus)
     , mPackageStatus(OrnPm::PackageUnknownStatus)
     , mAppId(0)
@@ -40,8 +42,6 @@ OrnApplication::OrnApplication(QObject *parent)
     , mCommentsCount(0)
     , mRating(0.0)
 {
-    connect(this, &OrnApplication::jsonReady, this, &OrnApplication::onJsonReady);
-
     auto ornPm = OrnPm::instance();
     connect(ornPm, &OrnPm::repoModified, this, &OrnApplication::onRepoListChanged);
     connect(ornPm, &OrnPm::packageStatusChanged, this, &OrnApplication::onPackageStatusChanged);
@@ -155,99 +155,104 @@ QString OrnApplication::category() const
 
 void OrnApplication::ornRequest()
 {
-    auto url = OrnApiRequest::apiUrl(QStringLiteral("apps/%0").arg(mAppId));
-    auto request = OrnApiRequest::networkRequest(url);
-    this->run(request);
-}
-
-void OrnApplication::onJsonReady(const QJsonDocument &jsonDoc)
-{
-    auto jsonObject = jsonDoc.object();
-    QString urlKey(QStringLiteral("url"));
-    QString nameKey(QStringLiteral("name"));
-
-    mCommentsOpen = jsonObject[QStringLiteral("comments_open")].toBool();
-    mCommentsCount = Orn::toUint(jsonObject[QStringLiteral("comments_count")]);
-    mDownloadsCount = Orn::toUint(jsonObject[QStringLiteral("downloads")]);
-    mTitle = Orn::toString(jsonObject[QStringLiteral("title")]);
-    mIconSource = Orn::toString(jsonObject[QStringLiteral("icon")].toObject()[urlKey]);
-    mPackageName = Orn::toString(jsonObject[QStringLiteral("package")].toObject()[nameKey]);
-    mBody = Orn::toString(jsonObject[QStringLiteral("body")]);
-    mChangelog = Orn::toString(jsonObject[QStringLiteral("changelog")]);
-    if (mChangelog == "<p>(none)</p>\n")
+    auto client = OrnClient::instance();
+    auto request = client->apiRequest(QStringLiteral("apps/%0").arg(mAppId));
+    qDebug() << "Fetching" << request.url().toString();
+    auto reply = client->networkAccessManager()->get(request);
+    connect(reply, &QNetworkReply::finished, [this, client, reply]()
     {
-        mChangelog.clear();
-    }
-    mCreated = Orn::toDateTime(jsonObject[QStringLiteral("created")]);
-    mUpdated = Orn::toDateTime(jsonObject[QStringLiteral("updated")]);
+        auto jsonDoc = client->processReply(reply);
+        if (!jsonDoc.isObject())
+        {
+            return;
+        }
+        auto jsonObject = jsonDoc.object();
+        QString urlKey(QStringLiteral("url"));
+        QString nameKey(QStringLiteral("name"));
 
-    auto userObject = jsonObject[QStringLiteral("user")].toObject();
-    mUserId = Orn::toUint(userObject[QStringLiteral("uid")]);
-    mUserName = Orn::toString(userObject[nameKey]);
-    mUserIconSource = Orn::toString(userObject[QStringLiteral("picture")].toObject()[urlKey]);
+        mCommentsOpen = jsonObject[QStringLiteral("comments_open")].toBool();
+        mCommentsCount = OrnUtils::toUint(jsonObject[QStringLiteral("comments_count")]);
+        mDownloadsCount = OrnUtils::toUint(jsonObject[QStringLiteral("downloads")]);
+        mTitle = OrnUtils::toString(jsonObject[QStringLiteral("title")]);
+        mIconSource = OrnUtils::toString(jsonObject[QStringLiteral("icon")].toObject()[urlKey]);
+        mPackageName = OrnUtils::toString(jsonObject[QStringLiteral("package")].toObject()[nameKey]);
+        mBody = OrnUtils::toString(jsonObject[QStringLiteral("body")]);
+        mChangelog = OrnUtils::toString(jsonObject[QStringLiteral("changelog")]);
+        if (mChangelog == "<p>(none)</p>\n")
+        {
+            mChangelog.clear();
+        }
+        mCreated = OrnUtils::toDateTime(jsonObject[QStringLiteral("created")]);
+        mUpdated = OrnUtils::toDateTime(jsonObject[QStringLiteral("updated")]);
 
-    QString ratingKey(QStringLiteral("rating"));
-    auto ratingObject = jsonObject[ratingKey].toObject();
-    mRatingCount = Orn::toUint(ratingObject[QStringLiteral("count")]);
-    mUserVote = Orn::toUint(ratingObject[QStringLiteral("user_vote")]);
-    mRating = ratingObject[ratingKey].toString().toFloat();
+        auto userObject = jsonObject[QStringLiteral("user")].toObject();
+        mUserId = OrnUtils::toUint(userObject[QStringLiteral("uid")]);
+        mUserName = OrnUtils::toString(userObject[nameKey]);
+        mUserIconSource = OrnUtils::toString(userObject[QStringLiteral("picture")].toObject()[urlKey]);
 
-    mTagIds.clear();
-    QString tidKey(QStringLiteral("tid"));
-    for (const QJsonValueRef id : jsonObject[QStringLiteral("tags")].toArray())
-    {
-        mTagIds << Orn::toString(id.toObject()[tidKey]);
-    }
+        QString ratingKey(QStringLiteral("rating"));
+        auto ratingObject = jsonObject[ratingKey].toObject();
+        mRatingCount = OrnUtils::toUint(ratingObject[QStringLiteral("count")]);
+        mUserVote = OrnUtils::toUint(ratingObject[QStringLiteral("user_vote")]);
+        mRating = ratingObject[ratingKey].toString().toFloat();
 
-    auto catIds = Orn::toIntList(jsonObject[QStringLiteral("category")]);
-    mCategories.clear();
-    for (const auto &id : catIds)
-    {
-        mCategories << QVariantMap{
-            { "id",   id },
-            { "name", OrnCategoryListItem::categoryName(id) }
-        };
-    }
+        mTagIds.clear();
+        QString tidKey(QStringLiteral("tid"));
+        for (const QJsonValueRef id : jsonObject[QStringLiteral("tags")].toArray())
+        {
+            mTagIds << OrnUtils::toString(id.toObject()[tidKey]);
+        }
 
-    QString thumbsKey(QStringLiteral("thumbs"));
-    QString largeKey(QStringLiteral("large"));
-    auto jsonArray = jsonObject[QStringLiteral("screenshots")].toArray();
-    mScreenshots.clear();
-    for (const QJsonValueRef v: jsonArray)
-    {
-        auto o = v.toObject();
-        mScreenshots << QVariantMap{
-            { "url",   Orn::toString(o[urlKey]) },
-            { "thumb", Orn::toString(o[thumbsKey].toObject()[largeKey]) }
-        };
-    }
+        auto catIds = OrnUtils::toIntList(jsonObject[QStringLiteral("category")]);
+        mCategories.clear();
+        for (const auto &id : catIds)
+        {
+            mCategories << QVariantMap{
+                { "id",   id },
+                { "name", OrnCategoryListItem::categoryName(id) }
+            };
+        }
 
-    if (!mUserName.isEmpty())
-    {
-        // Generate repository name
-        mRepoAlias = OrnPm::repoNamePrefix + mUserName;
-        // Update the repository and package information
-        this->onRepoListChanged();
-    }
-    else
-    {
-        qCritical() << this << ": no user name in the responce - the repository and "
-                               "package information could not be updated!";
-        mRepoAlias.clear();
-    }
+        QString thumbsKey(QStringLiteral("thumbs"));
+        QString largeKey(QStringLiteral("large"));
+        auto jsonArray = jsonObject[QStringLiteral("screenshots")].toArray();
+        mScreenshots.clear();
+        for (const QJsonValueRef v: jsonArray)
+        {
+            auto o = v.toObject();
+            mScreenshots << QVariantMap{
+                { "url",   OrnUtils::toString(o[urlKey]) },
+                { "thumb", OrnUtils::toString(o[thumbsKey].toObject()[largeKey]) }
+            };
+        }
 
-    if (!mPackageName.isEmpty())
-    {
-        qDebug() << this << ": information updated";
-    }
-    else
-    {
-        qWarning() << this << ": information updated but it doesn't have any package name!";
-    }
+        if (!mUserName.isEmpty())
+        {
+            // Generate repository name
+            mRepoAlias = OrnPm::repoNamePrefix + mUserName;
+            // Update the repository and package information
+            this->onRepoListChanged();
+        }
+        else
+        {
+            qCritical() << this << ": no user name in the responce - the repository and "
+                                   "package information could not be updated!";
+            mRepoAlias.clear();
+        }
 
-    emit this->ornRequestFinished();
-    emit this->commentsCountChanged();
-    emit this->ratingChanged();
+        if (!mPackageName.isEmpty())
+        {
+            qDebug() << this << ": information updated";
+        }
+        else
+        {
+            qWarning() << this << ": information updated but it doesn't have any package name!";
+        }
+
+        emit this->ornRequestFinished();
+        emit this->commentsCountChanged();
+        emit this->ratingChanged();
+    });
 }
 
 void OrnApplication::onRepoListChanged()

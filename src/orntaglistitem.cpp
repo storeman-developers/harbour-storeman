@@ -1,11 +1,11 @@
 #include "orntaglistitem.h"
-#include "orn.h"
+#include "ornutils.h"
 
 #include <QJsonObject>
 
 
 OrnTagListItem::OrnTagListItem(const QJsonObject &jsonObject)
-    : tagId(Orn::toUint(jsonObject[QStringLiteral("tid")]))
-    , appsCount(Orn::toUint(jsonObject[QStringLiteral("apps_count")]))
-    , name(Orn::toString(jsonObject[QStringLiteral("name")]))
+    : tagId(OrnUtils::toUint(jsonObject[QStringLiteral("tid")]))
+    , appsCount(OrnUtils::toUint(jsonObject[QStringLiteral("apps_count")]))
+    , name(OrnUtils::toString(jsonObject[QStringLiteral("name")]))
 {}

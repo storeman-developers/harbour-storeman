@@ -63,7 +63,7 @@ Page {
                 if (!networkManager.online) {
                     return qsTrId("orn-network-idle")
                 }
-                if (tagsModel.apiRequest.networkError) {
+                if (tagsModel.networkError) {
                     hintText = qsTrId("orn-pull-refresh")
                     return qsTrId("orn-network-error")
                 }

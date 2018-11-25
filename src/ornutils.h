@@ -1,12 +1,10 @@
-#ifndef ORN_H
-#define ORN_H
+#ifndef ORNUTILS_H
+#define ORNUTILS_H
 
 #include <QDateTime>
 #include <QJsonValue>
 
-class QNetworkAccessManager;
-
-namespace Orn
+namespace OrnUtils
 {
 
 inline quint32 toUint(const QJsonValue &value)
@@ -48,8 +46,6 @@ inline QString packageRepo(const QString &id)
     return id.section(QChar(';'), 3, 3);
 }
 
-QNetworkAccessManager *networkAccessManager();
+} // namespace OrnUtils
 
-} // namespace Orn
-
-#endif // ORN_H
+#endif // ORNUTILS_H

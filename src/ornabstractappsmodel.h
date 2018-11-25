@@ -36,7 +36,7 @@ public:
     QHash<int, QByteArray> roleNames() const;
 
     // OrnAbstractListModel interface
-protected slots:
+protected:
     void onJsonReady(const QJsonDocument &jsonDoc);
 };
 

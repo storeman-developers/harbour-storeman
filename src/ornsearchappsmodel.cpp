@@ -1,11 +1,10 @@
 #include "ornsearchappsmodel.h"
-#include "ornapirequest.h"
 
-OrnSearchAppsModel::OrnSearchAppsModel(QObject *parent) :
-    OrnAbstractAppsModel(true, parent)
+
+OrnSearchAppsModel::OrnSearchAppsModel(QObject *parent)
+    : OrnAbstractAppsModel(true, parent)
 {
     mCanFetchMore = false;
-    connect(mApiRequest, &OrnApiRequest::jsonReady, this, &OrnSearchAppsModel::resultsUpdated);
 }
 
 QString OrnSearchAppsModel::searchKey() const
@@ -37,5 +36,5 @@ void OrnSearchAppsModel::fetchMore(const QModelIndex &parent)
     }
     QUrlQuery query;
     query.addQueryItem(QStringLiteral("keys"), mSearchKey);
-    OrnAbstractListModel::apiCall(QStringLiteral("search/apps"), query);
+    OrnAbstractListModel::fetch(QStringLiteral("search/apps"), query);
 }

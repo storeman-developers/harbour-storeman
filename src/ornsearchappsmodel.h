@@ -16,7 +16,6 @@ public:
 
 signals:
     void searchKeyChanged();
-    void resultsUpdated();
 
 private:
     QString mSearchKey;

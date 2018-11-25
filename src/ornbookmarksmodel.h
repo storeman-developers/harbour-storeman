@@ -12,7 +12,7 @@ public:
 
 private slots:
     void onBookmarkChanged(quint32 appId, bool bookmarked);
-    void addApp(const quint32 &appId);
+    void addApp(quint32 appId);
 
     // QAbstractItemModel interface
 public:

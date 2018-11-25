@@ -3,7 +3,8 @@
 #include "ornpm_p.h"
 #include "ornpackageversion.h"
 #include "ornclient.h"
-#include "orn.h"
+#include "ornclient_p.h"
+#include "ornutils.h"
 
 #include <QFileInfo>
 #include <QSettings>
@@ -126,10 +127,10 @@ void OrnBackup::pAddPackage(quint32 info, const QString &packageId, const QStrin
 {
     Q_UNUSED(info)
     Q_UNUSED(summary)
-    auto name = Orn::packageName(packageId);
+    auto name = OrnUtils::packageName(packageId);
     if (mNamesToSearch.contains(name))
     {
-        auto repo = Orn::packageRepo(packageId);
+        auto repo = OrnUtils::packageRepo(packageId);
         // Process only packages from OpenRepos
         if (repo.startsWith(OrnPm::repoNamePrefix))
         {
@@ -138,7 +139,7 @@ void OrnBackup::pAddPackage(quint32 info, const QString &packageId, const QStrin
         }
         else if (repo == QStringLiteral("installed"))
         {
-            mInstalled.insert(name, Orn::packageVersion(packageId));
+            mInstalled.insert(name, OrnUtils::packageVersion(packageId));
         }
     }
 }
@@ -156,7 +157,7 @@ void OrnBackup::pInstallPackages()
         OrnPackageVersion newestVersion;
         for (const auto &pid : pids)
         {
-            OrnPackageVersion v(Orn::packageVersion(pid));
+            OrnPackageVersion v(OrnUtils::packageVersion(pid));
             if (newestVersion < v)
             {
                 newestVersion = v;
@@ -227,7 +228,7 @@ void OrnBackup::pBackup()
 
     qDebug() << "Backing up bookmarks";
     QVariantList bookmarks;
-    for (const auto &b : OrnClient::instance()->mBookmarks)
+    for (const auto &b : OrnClient::instance()->d_ptr->bookmarks)
     {
         bookmarks << b;
     }
@@ -249,7 +250,7 @@ void OrnBackup::pRestore()
     auto client = OrnClient::instance();
     for (const auto &b : file.value(BR_BOOKMARKS).toList())
     {
-        client->mBookmarks.insert(b.toUInt());
+        client->d_ptr->bookmarks.insert(b.toUInt());
     }
 
     qDebug() << "Restoring repos";
