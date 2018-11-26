@@ -11,7 +11,7 @@ struct OrnCategoryListItem
 
     OrnCategoryListItem(const QJsonObject &jsonObject);
 
-    static QString categoryName(const quint32 &tid);
+    static QString categoryName(quint32 tid);
 
     quint32 categoryId;
     quint32 appsCount;

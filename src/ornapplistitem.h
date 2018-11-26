@@ -22,7 +22,7 @@ struct OrnAppListItem
     QString package;
 
 private:
-    static QString sinceLabel(const quint32 &value);
+    static QString sinceLabel(quint32 value);
 };
 
 #endif // ORNAPPLISTITEM_H

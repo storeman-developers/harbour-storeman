@@ -12,7 +12,7 @@ public:
     explicit OrnUserAppsModel(QObject *parent = nullptr);
 
     quint32 userId() const;
-    void setUserId(const quint32 &userId);
+    void setUserId(quint32 userId);
 
 signals:
     void userIdChanged();

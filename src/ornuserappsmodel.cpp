@@ -12,7 +12,7 @@ quint32 OrnUserAppsModel::userId() const
     return mUserId;
 }
 
-void OrnUserAppsModel::setUserId(const quint32 &userId)
+void OrnUserAppsModel::setUserId(quint32 userId)
 {
     if (mUserId != userId)
     {

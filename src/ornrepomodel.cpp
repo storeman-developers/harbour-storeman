@@ -57,7 +57,7 @@ void OrnRepoModel::reset()
     this->endResetModel();
 }
 
-void OrnRepoModel::onRepoModified(const QString &alias, const int &action)
+void OrnRepoModel::onRepoModified(const QString &alias, int action)
 {
     QModelIndex parentIndex;
 

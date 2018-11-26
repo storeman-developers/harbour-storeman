@@ -157,12 +157,12 @@ private slots:
 
     // SSU repo actions
 signals:
-    void repoModified(const QString &repoAlias, const RepoAction &action);
+    void repoModified(const QString &repoAlias, RepoAction action);
     void enableReposFinished();
     void removeAllReposFinished();
 public slots:
     void addRepo(const QString &author);
-    void modifyRepo(const QString &repoAlias, const RepoAction &action);
+    void modifyRepo(const QString &repoAlias, RepoAction action);
     void enableRepos(bool enable);
     void removeAllRepos();
 

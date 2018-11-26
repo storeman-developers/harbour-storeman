@@ -122,7 +122,7 @@ quint32 OrnCommentsModel::appId() const
     return mAppId;
 }
 
-void OrnCommentsModel::setAppId(const quint32 &appId)
+void OrnCommentsModel::setAppId(quint32 appId)
 {
     if (mAppId != appId)
     {
@@ -132,7 +132,7 @@ void OrnCommentsModel::setAppId(const quint32 &appId)
     }
 }
 
-int OrnCommentsModel::findItemRow(const quint32 &cid) const
+int OrnCommentsModel::findItemRow(quint32 cid) const
 {
     QObjectList::size_type i = 0;
     for (const auto &c : mData)
@@ -146,7 +146,7 @@ int OrnCommentsModel::findItemRow(const quint32 &cid) const
     return -1;
 }
 
-QNetworkReply *OrnCommentsModel::fetchComment(const quint32 &cid)
+QNetworkReply *OrnCommentsModel::fetchComment(quint32 cid)
 {
     auto client = OrnClient::instance();
     auto request = client->apiRequest(QStringLiteral("comments/%0").arg(cid));

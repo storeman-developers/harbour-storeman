@@ -13,7 +13,7 @@ public:
     OrnTagAppsModel(QObject *parent = nullptr);
 
     quint32 tagId() const;
-    void setTagId(const quint32 &tagId);
+    void setTagId(quint32 tagId);
 
 signals:
     void tagIdChanged();

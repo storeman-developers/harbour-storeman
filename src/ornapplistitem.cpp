@@ -32,7 +32,7 @@ OrnAppListItem::OrnAppListItem(const QJsonObject &jsonObject)
     package = OrnUtils::toString(jsonObject[QStringLiteral("package")].toObject()[nameKey]);
 }
 
-QString OrnAppListItem::sinceLabel(const quint32 &value)
+QString OrnAppListItem::sinceLabel(quint32 value)
 {
     auto curDate = QDate::currentDate();
     auto date = QDateTime::fromMSecsSinceEpoch(qint64(value) * 1000).date();

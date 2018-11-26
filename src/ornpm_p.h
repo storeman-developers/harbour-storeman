@@ -51,7 +51,7 @@ struct OrnPmPrivate
     void preparePackageVersions(const QString &packageName);
     void enableRepos(bool enable);
     void removeAllRepos();
-    void onRepoModified(const QString &repoAlias, const OrnPm::RepoAction &action);
+    void onRepoModified(const QString &repoAlias, OrnPm::RepoAction action);
     OrnInstalledPackageList prepareInstalledPackages(const QString &packageName);
 
     // <alias, enabled>

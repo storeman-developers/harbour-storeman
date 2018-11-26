@@ -11,7 +11,7 @@ quint32 OrnCategoryAppsModel::categoryId() const
     return mCategoryId;
 }
 
-void OrnCategoryAppsModel::setCategoryId(const quint32 &categoryId)
+void OrnCategoryAppsModel::setCategoryId(quint32 categoryId)
 {
     if (mCategoryId != categoryId)
     {

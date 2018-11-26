@@ -237,12 +237,12 @@ QList<quint32> OrnClient::bookmarks() const
     return d_ptr->bookmarks.toList();
 }
 
-bool OrnClient::hasBookmark(const quint32 &appId) const
+bool OrnClient::hasBookmark(quint32 appId) const
 {
     return d_ptr->bookmarks.contains(appId);
 }
 
-bool OrnClient::addBookmark(const quint32 &appId)
+bool OrnClient::addBookmark(quint32 appId)
 {
     auto ok = !d_ptr->bookmarks.contains(appId);
     if (ok)
@@ -254,7 +254,7 @@ bool OrnClient::addBookmark(const quint32 &appId)
     return ok;
 }
 
-bool OrnClient::removeBookmark(const quint32 &appId)
+bool OrnClient::removeBookmark(quint32 appId)
 {
     auto ok = d_ptr->bookmarks.remove(appId);
     if (ok)

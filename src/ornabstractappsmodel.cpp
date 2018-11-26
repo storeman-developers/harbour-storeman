@@ -9,12 +9,12 @@ OrnAbstractAppsModel::OrnAbstractAppsModel(bool fetchable, QObject *parent)
             this, &OrnAbstractAppsModel::onPackageStatusChanged);
 }
 
-void OrnAbstractAppsModel::onPackageStatusChanged(const QString &packageName, const int &status)
+void OrnAbstractAppsModel::onPackageStatusChanged(const QString &packageName, int status)
 {
     Q_UNUSED(status)
 
     auto size = mData.size();
-    for (int i = 0; i < size; ++i)
+    for (size_t i = 0; i < size; ++i)
     {
         if (mData[i].package == packageName)
         {

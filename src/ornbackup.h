@@ -53,7 +53,7 @@ private slots:
     void pFinishRestore();
 
 private:
-    void setStatus(const Status &status);
+    void setStatus(OrnBackup::Status status);
     void pBackup();
     void pRestore();
     void pRefreshRepos();

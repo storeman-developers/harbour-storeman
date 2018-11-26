@@ -14,7 +14,7 @@ struct OrnPackageVersion
 
     OrnPackageVersion();
     OrnPackageVersion(const QString &version);
-    OrnPackageVersion(const quint64 &dsize, const quint64 &isize,
+    OrnPackageVersion(quint64 dsize, quint64 isize,
                       const QString &version, QString arch, QString alias);
 
     QString packageId(const QString &name) const;

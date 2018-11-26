@@ -83,7 +83,7 @@ OrnCategoryListItem::OrnCategoryListItem(const QJsonObject &jsonObject)
     , name(categoryName(categoryId))
 {}
 
-QString OrnCategoryListItem::categoryName(const quint32 &tid)
+QString OrnCategoryListItem::categoryName(quint32 tid)
 {
     if (categories.contains(tid))
     {

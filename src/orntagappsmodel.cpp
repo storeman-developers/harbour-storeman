@@ -10,7 +10,7 @@ quint32 OrnTagAppsModel::tagId() const
     return mTagId;
 }
 
-void OrnTagAppsModel::setTagId(const quint32 &tagId)
+void OrnTagAppsModel::setTagId(quint32 tagId)
 {
     if (mTagId != tagId)
     {

@@ -549,7 +549,7 @@ void OrnPm::addRepo(const QString &author)
     });
 }
 
-void OrnPm::modifyRepo(const QString &repoAlias, const OrnPm::RepoAction &action)
+void OrnPm::modifyRepo(const QString &repoAlias, OrnPm::RepoAction action)
 {
     CHECK_NETWORK();
     Operation op;
@@ -650,7 +650,7 @@ void OrnPmPrivate::removeAllRepos()
     emit q_ptr->removeAllReposFinished();
 }
 
-void OrnPmPrivate::onRepoModified(const QString &repoAlias, const OrnPm::RepoAction &action)
+void OrnPmPrivate::onRepoModified(const QString &repoAlias, OrnPm::RepoAction action)
 {
     bool needRefresh = false;
 

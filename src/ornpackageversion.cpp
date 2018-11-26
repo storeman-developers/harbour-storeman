@@ -28,7 +28,7 @@ OrnPackageVersion::OrnPackageVersion(const QString &version)
     , versionParts(splitVersion(version))
 {}
 
-OrnPackageVersion::OrnPackageVersion(const quint64 &dsize, const quint64 &isize,
+OrnPackageVersion::OrnPackageVersion(quint64 dsize, quint64 isize,
                                      const QString &version, QString arch, QString alias)
     : downloadSize(dsize)
     , installSize(isize)

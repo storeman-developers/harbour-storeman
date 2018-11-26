@@ -31,7 +31,7 @@ public:
     static QObject *qmlInstance(QQmlEngine *engine, QJSEngine *scriptEngine);
 
     int updateInterval() const;
-    void setUpdateInterval(const int &value);
+    void setUpdateInterval(int value);
 
     bool checkForUpdates() const;
     void setCheckForUpdates(bool value);
@@ -44,10 +44,10 @@ public:
 
     Q_INVOKABLE static bool removeFile(const QString &filePath);
 
-    Q_INVOKABLE bool showHint(const Hint &hint) const;
-    Q_INVOKABLE void setHintShowed(const Hint &hint);
+    Q_INVOKABLE bool showHint(Hint hint) const;
+    Q_INVOKABLE void setHintShowed(Hint hint);
 
-    Q_INVOKABLE OrnApplication *cachedApp(const quint32 &appId);
+    Q_INVOKABLE OrnApplication *cachedApp(quint32 appId);
 
     Q_INVOKABLE void checkRepos();
 

@@ -31,7 +31,7 @@ OrnBackup::Status OrnBackup::status() const
     return mStatus;
 }
 
-void OrnBackup::setStatus(const Status &status)
+void OrnBackup::setStatus(Status status)
 {
     if (mStatus != status)
     {

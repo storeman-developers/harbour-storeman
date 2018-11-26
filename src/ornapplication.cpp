@@ -51,8 +51,7 @@ OrnApplication::OrnApplication(QObject *parent)
 
     auto client = OrnClient::instance();
     connect(client, &OrnClient::userVoteFinished,
-            [this](const quint32 &appId, const quint32 &userVote,
-                   const quint32 &count, const float &rating)
+            [this](quint32 appId, quint32 userVote, quint32 count, float rating)
     {
         if (mAppId == appId)
         {
@@ -69,7 +68,7 @@ quint32 OrnApplication::appId() const
     return mAppId;
 }
 
-void OrnApplication::setAppId(const quint32 &appId)
+void OrnApplication::setAppId(quint32 appId)
 {
     if (mAppId != appId)
     {
@@ -291,8 +290,7 @@ void OrnApplication::onRepoListChanged()
     }
 }
 
-void OrnApplication::onPackageStatusChanged(const QString &packageName,
-                                            const OrnPm::PackageStatus &status)
+void OrnApplication::onPackageStatusChanged(const QString &packageName, OrnPm::PackageStatus status)
 {
     if (mPackageName == packageName &&
         mPackageStatus != status)

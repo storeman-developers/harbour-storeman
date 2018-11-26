@@ -63,9 +63,9 @@ public:
     QString userIconSource() const;
 
     Q_INVOKABLE QList<quint32> bookmarks() const;
-    Q_INVOKABLE bool hasBookmark(const quint32 &appId) const;
-    Q_INVOKABLE bool addBookmark(const quint32 &appId);
-    Q_INVOKABLE bool removeBookmark(const quint32 &appId);
+    Q_INVOKABLE bool hasBookmark(quint32 appId) const;
+    Q_INVOKABLE bool addBookmark(quint32 appId);
+    Q_INVOKABLE bool removeBookmark(quint32 appId);
 
 public slots:
     void login(const QString &username, const QString &password);

@@ -60,7 +60,7 @@ public:
     explicit OrnApplication(QObject *parent = nullptr);
 
     quint32 appId() const;
-    void setAppId(const quint32 &appId);
+    void setAppId(quint32 appId);
 
     QString installedVersion() const;
     quint64 installedVersionSize() const;
@@ -98,7 +98,7 @@ public slots:
 
 private slots:
     void onRepoListChanged();
-    void onPackageStatusChanged(const QString &packageName, const OrnPm::PackageStatus &status);
+    void onPackageStatusChanged(const QString &packageName, OrnPm::PackageStatus status);
     void onUpdatablePackagesChanged();
     void onPackageVersions(const QString &packageName, const OrnPackageVersionList &versions);
 

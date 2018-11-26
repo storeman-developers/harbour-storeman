@@ -29,7 +29,7 @@ public:
     OrnAbstractAppsModel(bool fetchable, QObject *parent = nullptr);
 
 private slots:
-    void onPackageStatusChanged(const QString &packageName, const int &status);
+    void onPackageStatusChanged(const QString &packageName, int status);
 
     // QAbstractItemModel interface
 public:

@@ -12,7 +12,7 @@ public:
     explicit OrnCategoryAppsModel(QObject *parent = nullptr);
 
     quint32 categoryId() const;
-    void setCategoryId(const quint32 &categoryId);
+    void setCategoryId(quint32 categoryId);
 
 signals:
     void categoryIdChanged();

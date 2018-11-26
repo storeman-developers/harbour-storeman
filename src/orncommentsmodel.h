@@ -29,15 +29,15 @@ public:
     explicit OrnCommentsModel(QObject *parent = nullptr);
 
     quint32 appId() const;
-    void setAppId(const quint32 &appId);
+    void setAppId(quint32 appId);
 
-    Q_INVOKABLE int findItemRow(const quint32 &cid) const;
+    Q_INVOKABLE int findItemRow(quint32 cid) const;
 
 signals:
     void appIdChanged();
 
 private:
-    QNetworkReply *fetchComment(const quint32 &cid);
+    QNetworkReply *fetchComment(quint32 cid);
     QJsonObject processReply(QNetworkReply *reply);
 
 private:

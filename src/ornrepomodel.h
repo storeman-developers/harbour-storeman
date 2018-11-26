@@ -34,7 +34,7 @@ signals:
     void enabledReposChanged();
 
 private slots:
-    void onRepoModified(const QString &alias, const int &action);
+    void onRepoModified(const QString &alias, int action);
 
 private:
     int mEnabledRepos;
