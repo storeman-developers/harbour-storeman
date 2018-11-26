@@ -97,25 +97,3 @@ QString OrnCategoryListItem::categoryName(const quint32 &tid)
         return qtTrId("orn-cat-unknown2");
     }
 }
-
-QList<OrnCategoryListItem> OrnCategoryListItem::parse(const QJsonObject &jsonObject)
-{
-    QList<OrnCategoryListItem> list;
-    QString childrenKey(QStringLiteral("childrens"));
-    if (jsonObject.contains(childrenKey))
-    {
-        auto childrenArray = jsonObject[childrenKey].toArray();
-        for (const QJsonValueRef child : childrenArray)
-        {
-            list.append(OrnCategoryListItem::parse(child.toObject()));
-        }
-        std::sort(list.begin(), list.end(),
-                  [](const OrnCategoryListItem &a, const OrnCategoryListItem &b)
-        {
-            return a.name < b.name;
-        });
-
-    }
-    list.prepend(jsonObject);
-    return list;
-}

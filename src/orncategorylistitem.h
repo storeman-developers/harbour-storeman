@@ -17,9 +17,6 @@ struct OrnCategoryListItem
     quint32 appsCount;
     quint32 depth;
     QString name;
-
-private:
-    static QList<OrnCategoryListItem> parse(const QJsonObject &jsonObject);
 };
 
 #endif // ORNCATEGORYLISTITEM_H

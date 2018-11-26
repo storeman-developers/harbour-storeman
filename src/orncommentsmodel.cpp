@@ -30,7 +30,7 @@ OrnCommentsModel::OrnCommentsModel(QObject *parent)
                     return;
                 }
                 this->beginInsertRows(QModelIndex(), 0, 0);
-                mData.prepend(jsonObject);
+                mData.emplace_front(jsonObject);
                 this->endInsertRows();
             });
         }
@@ -46,7 +46,7 @@ OrnCommentsModel::OrnCommentsModel(QObject *parent)
                 }
                 auto cid = OrnUtils::toUint(jsonObject[QStringLiteral("cid")]);
                 auto size = mData.size();
-                for (int i = 0; i < size; ++i)
+                for (size_t i = 0; i < size; ++i)
                 {
                     auto &comment = mData[i];
                     if (comment.commentId == cid)
@@ -62,6 +62,7 @@ OrnCommentsModel::OrnCommentsModel(QObject *parent)
         }
         else if (action == OrnClient::CommentDeleted)
         {
+            // FIXME
             // Find all comments from the tree to remove
             std::set<quint32> ids = {cid};
             std::set<int> inds;
@@ -98,7 +99,7 @@ OrnCommentsModel::OrnCommentsModel(QObject *parent)
                     this->beginRemoveRows(invalidIndex, first, last);
                     for (int i = last; i >= first; --i)
                     {
-                        mData.removeAt(i);
+                        mData.erase(mData.begin() + i);
                     }
                     this->endRemoveRows();
                     last  = current;
@@ -108,8 +109,9 @@ OrnCommentsModel::OrnCommentsModel(QObject *parent)
             this->beginRemoveRows(invalidIndex, first, last);
             for (int i = last; i >= first; --i)
             {
-                mData.removeAt(i);
+                mData.erase(mData.begin() + i);
             }
+            mData.shrink_to_fit();
             this->endRemoveRows();
         }
     });

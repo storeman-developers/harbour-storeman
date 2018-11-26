@@ -12,6 +12,8 @@
 
 #include <QDebug>
 
+#include <deque>
+
 
 class OrnAbstractListModelBase : public QAbstractListModel
 {
@@ -141,19 +143,18 @@ protected:
                 }
                 mPrevReplyHash = replyHash;
             }
-            QList<T> list;
+            auto oldSize = mData.size();
+            auto appendSize = jsonArray.size();
+            this->beginInsertRows(QModelIndex(), oldSize, oldSize + appendSize - 1);
             for (const QJsonValueRef jsonValue : jsonArray)
             {
                 // Each class of list item should implement a constructor
                 // SomeListItem(const QJsonObject &)
-                list.append(jsonValue.toObject());
+                mData.emplace_back(jsonValue.toObject());
             }
-            auto row = mData.size();
-            this->beginInsertRows(QModelIndex(), row, row + list.size() - 1);
-            mData.append(list);
             ++mPage;
-            qDebug() << list.size() << "item(s) have been added to the model";
             this->endInsertRows();
+            qDebug() << appendSize << "item(s) have been added to the model";
         }
         else
         {
@@ -168,7 +169,7 @@ protected:
     bool     mFetchable;
     bool     mCanFetchMore;
     quint32  mPage;
-    QList<T> mData;
+    std::deque<T> mData;
     QNetworkReply *mApiReply;
 
 private:

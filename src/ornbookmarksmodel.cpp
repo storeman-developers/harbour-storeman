@@ -31,13 +31,14 @@ OrnBookmarksModel::OrnBookmarksModel(QObject *parent)
         else
         {
             auto s = mData.size();
-            for (int i = 0; i < s; ++i)
+            for (size_t i = 0; i < s; ++i)
             {
                 if (mData[i].appId == appId)
                 {
                     qDebug() << "Removing app" << appId << "from bookmarks model";
                     this->beginRemoveRows(QModelIndex(), i, i);
-                    mData.removeAt(i);
+                    mData.erase(mData.begin() + i);
+                    mData.shrink_to_fit();
                     this->endRemoveRows();
                     return;
                 }
