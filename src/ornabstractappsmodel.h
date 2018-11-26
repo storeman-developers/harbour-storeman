@@ -2,8 +2,9 @@
 #define ORNABSTRACTAPPSMODEL_H
 
 #include "ornabstractlistmodel.h"
+#include "ornapplistitem.h"
 
-class OrnAbstractAppsModel : public OrnAbstractListModel
+class OrnAbstractAppsModel : public OrnAbstractListModel<OrnAppListItem>
 {
     Q_OBJECT
 
@@ -34,10 +35,6 @@ private slots:
 public:
     QVariant data(const QModelIndex &index, int role) const;
     QHash<int, QByteArray> roleNames() const;
-
-    // OrnAbstractListModel interface
-protected:
-    void onJsonReady(const QJsonDocument &jsonDoc);
 };
 
 #endif // ORNABSTRACTAPPSMODEL_H

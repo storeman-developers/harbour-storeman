@@ -1,12 +1,11 @@
 #ifndef ORNAPPLISTITEM_H
 #define ORNAPPLISTITEM_H
 
-#include "ornabstractlistitem.h"
-#include <QDate>
+#include <QString>
 
 class QJsonObject;
 
-struct OrnAppListItem : public OrnAbstractListItem
+struct OrnAppListItem
 {
     OrnAppListItem(const QJsonObject &jsonObject);
 

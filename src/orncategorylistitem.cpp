@@ -7,7 +7,7 @@
 
 #include <QDebug>
 
-const QMap<quint32, const char*> OrnCategoryListItem::categories{
+static const QMap<quint32, const char*> categories{
     //% "Coding Competition"
     { 3092, QT_TRID_NOOP("orn-cat-coding-competition") },
     //% "Applications"
@@ -98,25 +98,24 @@ QString OrnCategoryListItem::categoryName(const quint32 &tid)
     }
 }
 
-OrnItemList OrnCategoryListItem::parse(const QJsonObject &jsonObject)
+QList<OrnCategoryListItem> OrnCategoryListItem::parse(const QJsonObject &jsonObject)
 {
-    OrnItemList list;
+    QList<OrnCategoryListItem> list;
     QString childrenKey(QStringLiteral("childrens"));
     if (jsonObject.contains(childrenKey))
     {
         auto childrenArray = jsonObject[childrenKey].toArray();
         for (const QJsonValueRef child : childrenArray)
         {
-            list << OrnCategoryListItem::parse(child.toObject());
+            list.append(OrnCategoryListItem::parse(child.toObject()));
         }
         std::sort(list.begin(), list.end(),
-                  [](OrnAbstractListItem *a, OrnAbstractListItem *b)
+                  [](const OrnCategoryListItem &a, const OrnCategoryListItem &b)
         {
-            return static_cast<OrnCategoryListItem *>(a)->name <
-                   static_cast<OrnCategoryListItem *>(b)->name;
+            return a.name < b.name;
         });
 
     }
-    list.prepend(new OrnCategoryListItem(jsonObject));
+    list.prepend(jsonObject);
     return list;
 }

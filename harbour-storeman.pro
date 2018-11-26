@@ -35,7 +35,6 @@ SOURCES += \
     src/storeman.cpp \
     src/ornutils.cpp \
     src/ornclient.cpp \
-    src/ornabstractlistmodel.cpp \
     src/ornabstractappsmodel.cpp \
     src/ornrecentappsmodel.cpp \
     src/ornuserappsmodel.cpp \
@@ -65,7 +64,6 @@ HEADERS += \
     src/ornclient.h \
     src/ornclient_p.h \
     src/ornabstractlistmodel.h \
-    src/ornabstractlistitem.h \
     src/ornabstractappsmodel.h \
     src/ornrecentappsmodel.h \
     src/ornuserappsmodel.h \

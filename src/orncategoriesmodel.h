@@ -2,12 +2,13 @@
 #define ORNCATEGORIESMODEL_H
 
 #include "ornabstractlistmodel.h"
+#include "orncategorylistitem.h"
 
 /**
  * @brief The categories model class
  * This will work properly only if api response contains sorted categories
  */
-class OrnCategoriesModel : public OrnAbstractListModel
+class OrnCategoriesModel : public OrnAbstractListModel<OrnCategoryListItem>
 {
     Q_OBJECT
 public:
@@ -30,7 +31,7 @@ public:
 
     // OrnAbstractListModel interface
 protected:
-    void onJsonReady(const QJsonDocument &jsonDoc);
+    void processReply(const QJsonDocument &jsonDoc);
 };
 
 #endif // ORNCATEGORIESMODEL_H

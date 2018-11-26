@@ -1,5 +1,4 @@
 #include "orntagsmodel.h"
-#include "orntaglistitem.h"
 #include "ornclient.h"
 
 #include <QNetworkAccessManager>
@@ -32,15 +31,15 @@ QVariant OrnTagsModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    auto tag = static_cast<OrnTagListItem *>(mData[index.row()]);
+    const auto &tag = mData[index.row()];
     switch (role)
     {
     case TagIdRole:
-        return tag->tagId;
+        return tag.tagId;
     case AppsCountRole:
-        return tag->appsCount;
+        return tag.appsCount;
     case NameRole:
-        return tag->name;
+        return tag.name;
     default:
         return QVariant();
     }
@@ -82,7 +81,7 @@ void OrnTagsModel::fetchMore(const QModelIndex &parent)
                 mFetchedTags.append(doc.object());
                 if (mFetchedTags.size() == size)
                 {
-                    this->onJsonReady(QJsonDocument(mFetchedTags));
+                    this->processReply(QJsonDocument(mFetchedTags));
                     mFetchedTags = QJsonArray();                    
                     mFetching = false;
                     emit this->fetchingChanged();
@@ -90,9 +89,4 @@ void OrnTagsModel::fetchMore(const QModelIndex &parent)
             }
         });
     }
-}
-
-void OrnTagsModel::onJsonReady(const QJsonDocument &jsonDoc)
-{
-    OrnAbstractListModel::processReply<OrnTagListItem>(jsonDoc);
 }

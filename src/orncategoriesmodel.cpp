@@ -1,5 +1,4 @@
 #include "orncategoriesmodel.h"
-#include "orncategorylistitem.h"
 
 #include <QUrl>
 #include <QNetworkRequest>
@@ -18,16 +17,16 @@ QVariant OrnCategoriesModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    auto category = static_cast<OrnCategoryListItem *>(mData[index.row()]);
+    const auto &category = mData[index.row()];
     switch (role) {
     case CategoryIdRole:
-        return category->categoryId;
+        return category.categoryId;
     case AppsCountRole:
-        return category->appsCount;
+        return category.appsCount;
     case DepthRole:
-        return category->depth;
+        return category.depth;
     case NameRole:
-        return category->name;
+        return category.name;
     default:
         return QVariant();
     }
@@ -52,7 +51,7 @@ QHash<int, QByteArray> OrnCategoriesModel::roleNames() const
     };
 }
 
-void OrnCategoriesModel::onJsonReady(const QJsonDocument &jsonDoc)
+void OrnCategoriesModel::processReply(const QJsonDocument &jsonDoc)
 {
     auto categoriesArray = jsonDoc.array();
     if (categoriesArray.isEmpty())
@@ -61,10 +60,10 @@ void OrnCategoriesModel::onJsonReady(const QJsonDocument &jsonDoc)
         return;
     }
 
-    OrnItemList list;
+    QList<OrnCategoryListItem> list;
     for (const QJsonValueRef category : categoriesArray)
     {
-        list << OrnCategoryListItem::parse(category.toObject());
+        list.append(OrnCategoryListItem::parse(category.toObject()));
     }
     this->beginInsertRows(QModelIndex(), 0, list.size() - 1);
     mData = list;

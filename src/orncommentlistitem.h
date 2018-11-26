@@ -1,12 +1,11 @@
 #ifndef ORNCOMMENTLISTITEM_H
 #define ORNCOMMENTLISTITEM_H
 
-
-#include "ornabstractlistitem.h"
+#include <QString>
 
 class QJsonObject;
 
-struct OrnCommentListItem : public OrnAbstractListItem
+struct OrnCommentListItem
 {
     OrnCommentListItem(const QJsonObject &jsonObject);
 

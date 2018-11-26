@@ -24,7 +24,7 @@ OrnBookmarksModel::OrnBookmarksModel(QObject *parent)
                 {
                     qDebug() << "Adding app" << appId << "to bookmarks model";
                     QJsonArray arr({doc.object()});
-                    this->onJsonReady(QJsonDocument(arr));
+                    this->processReply(QJsonDocument(arr));
                 }
             });
         }
@@ -33,14 +33,12 @@ OrnBookmarksModel::OrnBookmarksModel(QObject *parent)
             auto s = mData.size();
             for (int i = 0; i < s; ++i)
             {
-                auto app = static_cast<OrnAppListItem *>(mData[i]);
-                if (app->appId == appId)
+                if (mData[i].appId == appId)
                 {
                     qDebug() << "Removing app" << appId << "from bookmarks model";
                     this->beginRemoveRows(QModelIndex(), i, i);
                     mData.removeAt(i);
                     this->endRemoveRows();
-                    delete app;
                     return;
                 }
             }
@@ -76,7 +74,7 @@ void OrnBookmarksModel::fetchMore(const QModelIndex &parent)
                 mFetchedApps.append(doc.object());
                 if (mFetchedApps.size() == size)
                 {
-                    this->onJsonReady(QJsonDocument(mFetchedApps));
+                    this->processReply(QJsonDocument(mFetchedApps));
                     mFetchedApps = QJsonArray();
                     mFetching = false;
                     emit this->fetchingChanged();

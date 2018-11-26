@@ -2,11 +2,12 @@
 #define ORNCOMMENTSMODEL_H
 
 #include "ornabstractlistmodel.h"
+#include "orncommentlistitem.h"
 
 class OrnCommentListItem;
 class QNetworkReply;
 
-class OrnCommentsModel : public OrnAbstractListModel
+class OrnCommentsModel : public OrnAbstractListModel<OrnCommentListItem>
 {
     Q_OBJECT
     Q_PROPERTY(quint32 appId READ appId WRITE setAppId NOTIFY appIdChanged)
@@ -47,10 +48,6 @@ public:
     QVariant data(const QModelIndex &index, int role) const;
     void fetchMore(const QModelIndex &parent);
     QHash<int, QByteArray> roleNames() const;
-
-    // OrnAbstractListModel interface
-protected:
-    void onJsonReady(const QJsonDocument &jsonDoc);
 };
 
 #endif // ORNCOMMENTSMODEL_H

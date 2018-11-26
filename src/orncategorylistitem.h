@@ -1,14 +1,11 @@
 #ifndef ORNCATEGORYLISTITEM_H
 #define ORNCATEGORYLISTITEM_H
 
-
-#include "ornabstractlistitem.h"
-
-#include <QMap>
+#include <QString>
 
 class QJsonObject;
 
-struct OrnCategoryListItem : public OrnAbstractListItem
+struct OrnCategoryListItem
 {
     friend class OrnCategoriesModel;
 
@@ -22,9 +19,7 @@ struct OrnCategoryListItem : public OrnAbstractListItem
     QString name;
 
 private:
-    static OrnItemList parse(const QJsonObject &jsonObject);
-
-    static const QMap<quint32, const char*> categories;
+    static QList<OrnCategoryListItem> parse(const QJsonObject &jsonObject);
 };
 
 #endif // ORNCATEGORYLISTITEM_H
