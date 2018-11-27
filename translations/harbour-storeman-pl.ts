@@ -980,9 +980,21 @@
         <source>Reload</source>
         <translation>Załaduj ponownie</translation>
     </message>
-    <message id="orn-message-error">
+    <message id="orn-no-packages">
+        <source>No packages available</source>
+        <translation>Brak dostępnych pakietów</translation>
+    </message>
+    <message id="orn-error-comment-sending">
         <source>Error sending comment</source>
         <translation>Błąd wysyłania komentarza</translation>
+    </message>
+    <message id="orn-error-comment-deletion">
+        <source>Error deleting comment</source>
+        <translation>Błąd kasowania komentarza</translation>
+    </message>
+    <message id="orn-error-network">
+        <source>Network error</source>
+        <translation>Błąd sieci</translation>
     </message>
 </context>
 </TS>

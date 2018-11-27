@@ -994,5 +994,9 @@ Storeman не хранит ваш пароль и не передает его �
         <source>Error deleting comment</source>
         <translation>Ошибка удаления комментария</translation>
     </message>
+    <message id="orn-error-network">
+        <source>Network error</source>
+        <translation>Ошибка сети</translation>
+    </message>
 </context>
 </TS>

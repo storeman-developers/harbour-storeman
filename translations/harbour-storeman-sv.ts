@@ -974,9 +974,21 @@
         <source>Reload</source>
         <translation>Uppdatera</translation>
     </message>
-    <message id="orn-message-error">
+    <message id="orn-no-packages">
+        <source>No packages available</source>
+        <translation>Inga paket tillgängliga</translation>
+    </message>
+    <message id="orn-error-comment-sending">
         <source>Error sending comment</source>
         <translation>Kunde inte skicka kommentar</translation>
+    </message>
+    <message id="orn-error-comment-deletion">
+        <source>Error deleting comment</source>
+        <translation>Kunde inte ta bort kommentar</translation>
+    </message>
+    <message id="orn-error-network">
+        <source>Network error</source>
+        <translation>Nätverksfel</translation>
     </message>
 </context>
 </TS>

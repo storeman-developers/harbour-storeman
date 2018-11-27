@@ -972,7 +972,23 @@
     </message>
     <message id="orn-reload">
         <source>Reload</source>
-        <translation type="unfinished"></translation>
+        <translation>Ricarica</translation>
+    </message>
+    <message id="orn-no-packages">
+        <source>No packages available</source>
+        <translation>Nessun pacchetto disponibile</translation>
+    </message>
+    <message id="orn-error-comment-sending">
+        <source>Error sending comment</source>
+        <translation>Errore nell&apos;invio del commento</translation>
+    </message>
+    <message id="orn-error-comment-deletion">
+        <source>Error deleting comment</source>
+        <translation>Errore nell&apos;eliminazione del commento</translation>
+    </message>
+    <message id="orn-error-network">
+        <source>Network error</source>
+        <translation>Errore di rete</translation>
     </message>
 </context>
 </TS>

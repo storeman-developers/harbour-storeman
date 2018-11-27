@@ -986,5 +986,9 @@
         <source>Error deleting comment</source>
         <translation>Error deleting comment</translation>
     </message>
+    <message id="orn-error-network">
+        <source>Network error</source>
+        <translation>Network error</translation>
+    </message>
 </context>
 </TS>
