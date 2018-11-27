@@ -1,3 +1,15 @@
+* Tue Nov 27 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.32-1
+- SearchPage.qml: Force focus on the search field when is activated with the search action from the cover and when is cleared
+- CommentDelegate.qml: Fix strings formatting
+- Add ability to delete own comments
+- Refactoring: Merge OrnApiRequest into OrnClient
+- Refactoring: Use a template base class for models
+- Refactoring: Use std::deque instead of QList as the data container for the models
+- Refactoring: Pass arguments by value for primitive types
+- UI: Better loading for tags and bookmarks pages
+- Update translations
+- Update README.md
+
 * Thu Nov 22 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.31-1
 - Fix comment field was not writable to, if the very first comment and while the device was in landscape orientation
 - Fix hiding of page header of the comments page in landscape orientation
