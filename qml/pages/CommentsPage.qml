@@ -82,8 +82,9 @@ Page {
         PageHeader {
             id: pageHeader
             // Hide header when typing comment
-            height: page.isLandscape && commentField.item.isActive ?
-                        0.0 : _preferredHeight + Theme.paddingMedium
+            height: page.isLandscape && commentField.item.isActive
+                    ? 0.0
+                    : Math.max(_preferredHeight, _titleItem.y + _titleItem.height + (_descriptionLabel ? _descriptionLabel.height : 0) + Theme.paddingMedium)
             visible: height > 0.0
             //% "Comments"
             title: qsTrId("orn-comments")
