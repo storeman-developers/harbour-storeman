@@ -6,14 +6,12 @@ Loader {
     property real rating
     readonly property int _rating: rating / 20.0 + 0.5
 
-    anchors.verticalCenter: parent.verticalCenter
     sourceComponent: ratingCount > 0 ? starBox : notRated
 
     Component {
         id: starBox
 
         Row {
-
             Repeater {
                 id: ratingBox
                 model: 5
@@ -34,6 +32,7 @@ Loader {
         id: notRated
 
         Label {
+            height: Theme.iconSizeExtraSmall
             font.pixelSize: Theme.fontSizeTiny
             color: Theme.secondaryColor
             //% "Not rated yet"
