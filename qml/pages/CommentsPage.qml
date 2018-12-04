@@ -71,6 +71,7 @@ Page {
 
         PullDownMenu {
             id: menu
+            visible: pageHeader.height > 0.0
 
             RefreshMenuItem {
                 model: commentsModel
