@@ -76,16 +76,17 @@ Item {
             right: star.left
             rightMargin: Theme.paddingMedium
         }
-        spacing: Theme.paddingSmall
+        spacing: Theme.paddingLarge
 
         IconLabel {
             icon: "image://theme/icon-s-like"
+            anchors.verticalCenter: parent.verticalCenter
             text: app.ratingCount.toLocaleString(_locale, "f", 0)
         }
 
         RatingBox {
             id: ratingBox
-            width: implicitWidth + Theme.paddingLarge
+            anchors.verticalCenter: parent.verticalCenter
             ratingCount: app.ratingCount
             rating: app.rating
 
@@ -102,6 +103,7 @@ Item {
 
         IconLabel {
             icon: "image://theme/icon-s-cloud-download"
+            anchors.verticalCenter: parent.verticalCenter
             text: app.downloadsCount.toLocaleString(_locale, "f", 0)
         }
     }
