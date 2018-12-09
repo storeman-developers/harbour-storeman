@@ -898,6 +898,10 @@
         <source>Rate the application</source>
         <translation>Rate the application</translation>
     </message>
+    <message id="orn-rate">
+        <source>Rate</source>
+        <translation type="unfinished">Rate</translation>
+    </message>
     <message id="orn-vote-send">
         <source>Your vote has been sent</source>
         <translation>Your vote has been sent</translation>

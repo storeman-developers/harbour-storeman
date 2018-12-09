@@ -89,16 +89,6 @@ Item {
             anchors.verticalCenter: parent.verticalCenter
             ratingCount: app.ratingCount
             rating: app.rating
-
-            MouseArea {
-                width: parent.width
-                height: Theme.itemSizeMedium
-                anchors.verticalCenter: parent.verticalCenter
-                onClicked: pageStack.push(Qt.resolvedUrl("../pages/VotingPage.qml"), {
-                                              appId: app.appId,
-                                              userVote: app.userVote
-                                          }, PageStackAction.Immediate)
-            }
         }
 
         IconLabel {

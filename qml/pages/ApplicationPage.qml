@@ -126,6 +126,15 @@ Page {
             }
 
             MoreButton {
+            	//% "Rate"
+                text: qsTrId("orn-rate")
+                onClicked: pageStack.push(Qt.resolvedUrl("VotingPage.qml"), {
+                                              appId: app.appId,
+                                              userVote: app.userVote,
+                                              appName: app.title})
+            }
+
+            MoreButton {
                 visible: app.tagIds.length
                 text: qsTrId("orn-tags")
                 onClicked: pageStack.push(Qt.resolvedUrl("TagsPage.qml"), {

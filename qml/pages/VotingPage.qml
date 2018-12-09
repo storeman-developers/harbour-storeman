@@ -5,10 +5,10 @@ import harbour.orn 1.0
 Page {
     property int appId: 0
     property int userVote: 0
+    property string appName: ""
 
     id: page
     opacity: 0.0
-    backNavigation: false
     allowedOrientations: defaultAllowedOrientations
 
     onStatusChanged: {
@@ -20,11 +20,6 @@ Page {
     }
 
     Behavior on opacity { FadeAnimation { } }
-
-    MouseArea {
-        anchors.fill: parent
-        onClicked: pageStack.pop()
-    }
 
     Timer {
         id: timer
@@ -50,6 +45,12 @@ Page {
     Connections {
         target: networkManager
         onOnlineChanged: if (!timer.running) animation.start()
+    }
+
+    PageHeader {
+        id: votingPageHeader
+        //% "Rate the application"
+        title: qsTrId("orn-rate-app")
     }
 
     InfoLabel {
@@ -147,8 +148,7 @@ Page {
                     top: starBox.bottom
                     topMargin: Theme.paddingLarge * 2
                 }
-                //% "Rate the application"
-                text: qsTrId("orn-rate-app")
+                text: appName
             }
 
             TouchBlocker {

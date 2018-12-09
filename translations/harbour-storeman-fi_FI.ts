@@ -990,5 +990,9 @@
         <source>Error deleting comment</source>
         <translation>Virhe poistettaessa kommenttia</translation>
     </message>
+    <message id="orn-rate">
+        <source>Rate</source>
+        <translation type="unfinished">Arvostele</translation>
+    </message>
 </context>
 </TS>
