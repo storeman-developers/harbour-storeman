@@ -13,6 +13,15 @@ ApplicationWindow
     readonly property var _locale: Qt.locale()
     property var _operations: OrnPm.initialised ? OrnPm.operations : null
     property var _resolvedLinks: new Object
+    readonly property real _appListDelegatePadding: {
+        if (pageStack._currentOrientation === Orientation.Portrait) {
+            return Screen.sizeCategory >= Screen.Large ?
+                        Theme.paddingLarge + Theme.iconSizeLauncher : Theme.paddingLarge
+        } else {
+            return Screen.sizeCategory >= Screen.Large ?
+                        Theme.paddingLarge + Theme.iconSizeLauncher * 2 : Theme.paddingLarge + Theme.iconSizeLauncher
+        }
+    }
 
     function itemInProgress(item) {
         if (!_operations) {
