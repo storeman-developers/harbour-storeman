@@ -98,7 +98,7 @@
     </message>
     <message id="orn-package-installed">
         <source>Package %0 was successfully installed</source>
-        <translation>Pakiet %0 został pomyślnie zainsalowany</translation>
+        <translation>Pakiet %0 został pomyślnie zainstalowany</translation>
     </message>
     <message id="orn-package-removed">
         <source>Package %0 was successfully removed</source>
