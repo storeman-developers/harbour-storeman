@@ -974,9 +974,21 @@
         <source>Reload</source>
         <translation>Recharger</translation>
     </message>
-    <message id="orn-message-error">
+    <message id="orn-no-packages">
+        <source>No packages available</source>
+        <translation>Aucun paquet disponible</translation>
+    </message>
+    <message id="orn-error-comment-sending">
         <source>Error sending comment</source>
         <translation>Erreur dans l&apos;envoi du commentaire</translation>
+    </message>
+    <message id="orn-error-comment-deletion">
+        <source>Error deleting comment</source>
+        <translation>Erreur lors de la suppression du commentaire</translation>
+    </message>
+    <message id="orn-error-network">
+        <source>Network error</source>
+        <translation>Erreur réseau</translation>
     </message>
 </context>
 </TS>

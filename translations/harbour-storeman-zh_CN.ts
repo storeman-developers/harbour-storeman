@@ -309,7 +309,7 @@
     </message>
     <message id="orn-about">
         <source>About Storeman</source>
-        <translation>关于storeman</translation>
+        <translation>关于Storeman</translation>
     </message>
     <message id="orn-translations">
         <source>Translations</source>
@@ -325,11 +325,11 @@
     </message>
     <message id="orn-reviewers">
         <source>Reviewers</source>
-        <translation>审阅人</translation>
+        <translation>审阅者</translation>
     </message>
     <message id="orn-app-description">
         <source>Unofficial native OpenRepos.net client for Sailfish&amp;nbsp;OS</source>
-        <translation>非官方openrepos.net旗鱼系统客户端</translation>
+        <translation>非官方原生openrepos.net旗鱼系统客户端</translation>
     </message>
     <message id="orn-report">
         <source>Report an Issue</source>
@@ -411,7 +411,7 @@
     </message>
     <message id="orn-thisdevice">
         <source>This Device</source>
-        <translation>这个设备</translation>
+        <translation>本台设备</translation>
     </message>
     <message id="orn-login-menu-item">
         <source>Log in to OpenRepos.net</source>
@@ -890,7 +890,7 @@
     </message>
     <message id="orn-rate-app">
         <source>Rate the application</source>
-        <translation>给应用评级</translation>
+        <translation>给应用评分</translation>
     </message>
     <message id="orn-vote-send">
         <source>Your vote has been sent</source>
@@ -898,11 +898,11 @@
     </message>
     <message id="orn-login2rate">
         <source>Log in to rate the application</source>
-        <translation>登录以评级软件</translation>
+        <translation>登录给应用评分</translation>
     </message>
     <message id="orn-hint-rating">
         <source>Tap to rate the application</source>
-        <translation>点击以评级应用</translation>
+        <translation>点击给应用评分</translation>
     </message>
     <message id="orn-local-rpms">
         <source>Local RPM files</source>
@@ -946,7 +946,7 @@
     </message>
     <message id="orn-save">
         <source>Save</source>
-        <translation>储存</translation>
+        <translation>保存</translation>
     </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
@@ -954,7 +954,7 @@
     </message>
     <message id="orn-check-for-updates-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation>仅当storeman运行的时候检查更新</translation>
+        <translation>仅当Storeman运行的时候检查更新</translation>
     </message>
     <message id="orn-smart-check-switch">
         <source>Smart check</source>
@@ -968,9 +968,21 @@
         <source>Reload</source>
         <translation>重新加载</translation>
     </message>
-    <message id="orn-message-error">
+    <message id="orn-no-packages">
+        <source>No packages available</source>
+        <translation>没有可用的包</translation>
+    </message>
+    <message id="orn-error-comment-sending">
         <source>Error sending comment</source>
         <translation>发送评论出错</translation>
+    </message>
+    <message id="orn-error-comment-deletion">
+        <source>Error deleting comment</source>
+        <translation>删除评论出错</translation>
+    </message>
+    <message id="orn-error-network">
+        <source>Network error</source>
+        <translation>网络错误</translation>
     </message>
 </context>
 </TS>

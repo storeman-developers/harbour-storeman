@@ -119,7 +119,7 @@
     <message id="orn-dt-format">
         <source>yyyy-MM-dd hh:mm</source>
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>yyyy-MM-dd hh:mm</translation>
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
@@ -952,27 +952,43 @@
     </message>
     <message id="orn-save">
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποθήκευση</translation>
     </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Έλεγχος για ενημερώσεις</translation>
     </message>
     <message id="orn-check-for-updates-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation type="unfinished"></translation>
+        <translation>Οι ενημερώσεις ελέγχονται μόνον κατά την εκτέλεση του Storeman</translation>
     </message>
     <message id="orn-smart-check-switch">
         <source>Smart check</source>
-        <translation type="unfinished"></translation>
+        <translation>Έξυπνη επιλογή</translation>
     </message>
     <message id="orn-smart-check-descr">
         <source>Use the OpenRepos.net API to determine if there are new updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρήση του API OpenRepos.net για να προσδιοριστεί αν υπάρχουν ενημερώσεις</translation>
     </message>
     <message id="orn-reload">
         <source>Reload</source>
-        <translation type="unfinished"></translation>
+        <translation>Επαναφόρτωση</translation>
+    </message>
+    <message id="orn-no-packages">
+        <source>No packages available</source>
+        <translation>Δεν υπάρχουν διαθέσιμα πακέτα</translation>
+    </message>
+    <message id="orn-error-comment-sending">
+        <source>Error sending comment</source>
+        <translation>Σφάλμα κατά την αποστολή του σχολίου</translation>
+    </message>
+    <message id="orn-error-comment-deletion">
+        <source>Error deleting comment</source>
+        <translation>Σφάλμα κατά την διαγραφή του σχολίου</translation>
+    </message>
+    <message id="orn-error-network">
+        <source>Network error</source>
+        <translation>Σφάλμα δικτύου</translation>
     </message>
 </context>
 </TS>

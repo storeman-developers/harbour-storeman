@@ -986,5 +986,21 @@
         <source>Reload</source>
         <translation>Ponovno naloži</translation>
     </message>
+    <message id="orn-no-packages">
+        <source>No packages available</source>
+        <translation>Ni razpoložljivih paketov</translation>
+    </message>
+    <message id="orn-error-comment-sending">
+        <source>Error sending comment</source>
+        <translation>Napaka pri pošiljanju komentarja</translation>
+    </message>
+    <message id="orn-error-comment-deletion">
+        <source>Error deleting comment</source>
+        <translation>Napaka pri brisanju komentarja</translation>
+    </message>
+    <message id="orn-error-network">
+        <source>Network error</source>
+        <translation>Omrežna napaka</translation>
+    </message>
 </context>
 </TS>

@@ -33,7 +33,7 @@
     </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
-        <translation>Ostatnio zaktualizowane</translation>
+        <translation>Ostatnio aktualizowane</translation>
     </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
@@ -114,7 +114,7 @@
     </message>
     <message id="orn-version-updated">
         <source>Last updated</source>
-        <translation>Ostatnio zaktualizowane</translation>
+        <translation>Ostatnio aktualizowane</translation>
     </message>
     <message id="orn-dt-format">
         <source>yyyy-MM-dd hh:mm</source>
@@ -263,7 +263,7 @@
     </message>
     <message id="orn-update">
         <source>Update</source>
-        <translation>Zaktualizuj</translation>
+        <translation>Aktualizuj</translation>
     </message>
     <message id="orn-changelog">
         <source>Changelog</source>
@@ -471,7 +471,7 @@
     <message id="orn-comment-update">
         <source>Update</source>
         <extracomment>Update a comment</extracomment>
-        <translation>Zaktualizuj</translation>
+        <translation>Aktualizuj</translation>
     </message>
     <message id="orn-comment-send">
         <source>Send</source>
@@ -755,7 +755,7 @@
     </message>
     <message id="orn-update-all">
         <source>Update all</source>
-        <translation>Zaktualizuj wszystko</translation>
+        <translation>Aktualizuj wszystko</translation>
     </message>
     <message id="orn-no-installed-apps">
         <source>Could not find any applications installed from OpenRepos</source>

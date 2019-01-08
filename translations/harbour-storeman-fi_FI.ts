@@ -49,7 +49,7 @@
     </message>
     <message id="orn-this-week">
         <source>This week</source>
-        <translation>Tällä viikkolla</translation>
+        <translation>Tällä viikolla</translation>
     </message>
     <message id="orn-this-month">
         <source>This month</source>
@@ -972,7 +972,23 @@
     </message>
     <message id="orn-reload">
         <source>Reload</source>
-        <translation type="unfinished"></translation>
+        <translation>Lataa uudelleen</translation>
+    </message>
+    <message id="orn-no-packages">
+        <source>No packages available</source>
+        <translation>Pakettia ei saatavilla</translation>
+    </message>
+    <message id="orn-error-comment-sending">
+        <source>Error sending comment</source>
+        <translation>Kommentin lähettäminen ei onnistu</translation>
+    </message>
+    <message id="orn-error-comment-deletion">
+        <source>Error deleting comment</source>
+        <translation>Kommentin poistaminen ei onnistu</translation>
+    </message>
+    <message id="orn-error-network">
+        <source>Network error</source>
+        <translation>Verkkovirhe</translation>
     </message>
 </context>
 </TS>

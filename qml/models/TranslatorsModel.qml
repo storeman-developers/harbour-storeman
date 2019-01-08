@@ -8,7 +8,8 @@ ListModel {
             ListElement { name: "0312birdzhang" }
         ]
         translators: [
-            ListElement { name: "Historyscholar" }
+            ListElement { name: "Historyscholar" },
+            ListElement { name: "天苯" }
         ]
         reviewers: []
     }
@@ -48,7 +49,8 @@ ListModel {
         translators: [
             ListElement { name: "Ingvix" },
             ListElement { name: "Toxip" },
-            ListElement { name: "LaurentC" }
+            ListElement { name: "LaurentC" },
+            ListElement { name: "Nrde" }
         ]
         reviewers: []
     }
@@ -75,7 +77,8 @@ ListModel {
             ListElement { name: "feldbaum" },
             ListElement { name: "chwa" },
             ListElement { name: "olf" },
-            ListElement { name: "sail_parleur" }
+            ListElement { name: "sail_parleur" },
+            ListElement { name: "Unreasonable_Behaviour" }
         ]
         reviewers: [
             ListElement { name: "inta" }

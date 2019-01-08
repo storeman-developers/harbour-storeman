@@ -968,5 +968,21 @@
         <source>Reload</source>
         <translation>Újratöltés</translation>
     </message>
+    <message id="orn-no-packages">
+        <source>No packages available</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-error-comment-sending">
+        <source>Error sending comment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-error-comment-deletion">
+        <source>Error deleting comment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-error-network">
+        <source>Network error</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>
