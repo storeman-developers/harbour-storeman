@@ -42,8 +42,11 @@ Unofficial native OpenRepos.net client for Sailfish OS
 
 Current RPMs to install are available at [OpenRepos.net](https://openrepos.net/content/osetr/storeman).
 
-## Development
+## Contributors
 
+- [Petr Tsymbarovich](https://github.com/mentaljam)
+- [Christoph](https://github.com/inta)
+- [Matti Viljanen](https://github.com/direc85)
 - OpenRepos service by [Basil Semuonov](https://github.com/custodian)
 - Application icon by [Laurent_C](https://openrepos.net/users/laurentc)
 
