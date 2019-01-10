@@ -16,10 +16,12 @@ ApplicationWindow
     readonly property real _appListDelegatePadding: {
         if (pageStack._currentOrientation === Orientation.Portrait) {
             return Screen.sizeCategory >= Screen.Large ?
-                        Theme.paddingLarge + Theme.iconSizeLauncher : Theme.paddingLarge
+                        Theme.horizontalPageMargin + Theme.iconSizeLauncher :
+                        Theme.horizontalPageMargin
         } else {
             return Screen.sizeCategory >= Screen.Large ?
-                        Theme.paddingLarge + Theme.iconSizeLauncher * 2 : Theme.paddingLarge + Theme.iconSizeLauncher
+                        Theme.horizontalPageMargin + Theme.iconSizeLauncher * 2 :
+                        Theme.horizontalPageMargin + Theme.iconSizeLauncher
         }
     }
 

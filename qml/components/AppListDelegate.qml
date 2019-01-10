@@ -8,7 +8,7 @@ ListItem {
     property int previousAppId: -1
     property int previousStep: 1
 
-    contentHeight: Math.max(appIcon.height, centerRect.height) + Theme.paddingLarge * 1.5
+    contentHeight: Math.max(appIcon.height, appInfo.height) + Theme.paddingLarge * 1.5
 
     onClicked: {
         var appId = model.appId
@@ -41,9 +41,9 @@ ListItem {
         source: model.iconSource ? model.iconSource : "image://theme/icon-launcher-default"
     }
 
-    // Title, category and stars
-    Rectangle {
-        id: centerRect
+    // Title, category, rating and favourite button
+    Item {
+        id: appInfo
         anchors {
             left: appIcon.right
             leftMargin: Theme.paddingMedium
@@ -51,50 +51,65 @@ ListItem {
             rightMargin: _appListDelegatePadding
             verticalCenter: parent.verticalCenter
         }
-        height: ratingStars.y + ratingStars.height
-        color: 'transparent'
+        height: ratingBox.y + ratingBox.height
 
         // Application title
         Label {
             id: titleLabel
-            anchors.top: parent.top
-            width: parent.width - Theme.iconSizeLauncher
+            width: parent.width - bookmarkStar.width - Theme.paddingSmall
             text: model.title
             font.pixelSize: Theme.fontSizeExtraSmall
             wrapMode: Text.WordWrap
             maximumLineCount: 2
+            truncationMode: TruncationMode.Elide
         }
 
         // Category
         Label {
             id: categoryLabel
             anchors.top: titleLabel.bottom
-            width: parent.width - Theme.iconSizeLauncher
+            width: titleLabel.width
             text: model.category
             font.pixelSize: Theme.fontSizeExtraSmall
             color: Theme.secondaryColor
         }
 
-        // Star rating
+        // Current rating
         RatingBox {
-            id: ratingStars
-            anchors.top: categoryLabel.bottom
-            width: parent.width
+            id: ratingBox
+            y: Math.max(categoryLabel.y + categoryLabel.height,
+                        bookmarkStar.y + bookmarkStar.height) +
+               Theme.paddingSmall
             ratingCount: model.ratingCount
             rating: model.rating
+        }
+
+        // Author and date next to star rating
+        Label {
+            id: userNameLabel
+            anchors {
+                left: ratingBox.right
+                leftMargin: Theme.paddingSmall
+                right: statusLoader.left
+                rightMargin: Theme.paddingSmall
+                verticalCenter: ratingBox.verticalCenter
+            }
+            font.pixelSize: Theme.fontSizeTiny
+            horizontalAlignment: Qt.AlignRight
+            truncationMode: TruncationMode.Fade
+            color: Theme.highlightColor
+            text: model.userName + "\u2009\u2022\u2009" +
+                  model.createDate.toLocaleDateString(_locale, Locale.ShortFormat)
         }
 
         // Installed / installing spinner
         Loader {
             id: statusLoader
             anchors {
-                verticalCenter: ratingStars.verticalCenter
+                verticalCenter: ratingBox.verticalCenter
                 right: parent.right
             }
-            width: BusyIndicatorSize.ExtraSmall
-            height: BusyIndicatorSize.ExtraSmall
-            readonly property var _packageStatus: packageStatus
-            sourceComponent: _packageStatus < OrnPm.PackageInstalling ?
+            sourceComponent: packageStatus < OrnPm.PackageInstalling ?
                                  iconComponent : busyComponent
 
             Component {
@@ -108,36 +123,19 @@ ListItem {
             Component {
                 id: iconComponent
                 Image {
-                    source: _packageStatus === OrnPm.PackageInstalled ?
+                    source: packageStatus === OrnPm.PackageInstalled ?
                                 "image://theme/icon-s-installed" :
-                                _packageStatus === OrnPm.PackageUpdateAvailable ?
+                                packageStatus === OrnPm.PackageUpdateAvailable ?
                                     "image://theme/icon-s-update" : ""
                 }
             }
         }
 
-        // Author and date next to star rating
-        Label {
-            id: userNameLabel
-            anchors {
-                right: statusLoader.left
-                verticalCenter: ratingStars.verticalCenter
-            }
-            font.pixelSize: Theme.fontSizeTiny
-            color: Theme.highlightColor
-            text: model.userName + "\u2009\u2022\u2009" +
-                  model.createDate.toLocaleDateString(_locale, Locale.ShortFormat)
-        }
-
         // Bookmark star on the right
         BookmarkButton {
             id: bookmarkStar
-            anchors {
-                top: parent.top
-                right: parent.right
-                bottom: userNameLabel.top
-            }
-            width: Theme.iconSizeLauncher
+            anchors.right: parent.right
+            appId: model.appId
         }
     }
 }
