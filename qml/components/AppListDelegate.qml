@@ -41,7 +41,7 @@ ListItem {
         source: model.iconSource
     }
 
-    // Title, category, rating and favourite button
+    // Title, category, rating and bookmark button
     Item {
         id: appInfo
         anchors {

@@ -990,5 +990,9 @@
         <source>Network error</source>
         <translation>Network error</translation>
     </message>
+    <message id="orn-hint-bookmark">
+        <source>Tap to bookmark the application</source>
+        <translation>Tap to bookmark the application</translation>
+    </message>
 </context>
 </TS>

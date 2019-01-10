@@ -24,7 +24,7 @@ public:
     {
         CommentDelegateHint,
         CommentFieldHint,
-        ApplicationRatingHint
+        ApplicationRateAndBookmarkHint
     };
     Q_ENUM(Hint)
 

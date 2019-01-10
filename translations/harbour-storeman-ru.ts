@@ -998,5 +998,9 @@ Storeman не хранит ваш пароль и не передает его �
         <source>Network error</source>
         <translation>Ошибка сети</translation>
     </message>
+    <message id="orn-hint-bookmark">
+        <source>Tap to bookmark the application</source>
+        <translation>Коснитесь, чтобы добавить приложение в закладки</translation>
+    </message>
 </context>
 </TS>
