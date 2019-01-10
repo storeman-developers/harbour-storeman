@@ -30,6 +30,12 @@ OrnAppListItem::OrnAppListItem(const QJsonObject &jsonObject)
     category = OrnCategoryListItem::categoryName(tid);
 
     package = OrnUtils::toString(jsonObject[QStringLiteral("package")].toObject()[nameKey]);
+
+    if (iconSource.isEmpty() ||
+        iconSource.endsWith(QStringLiteral("icon-defaultpackage.png")))
+    {
+        iconSource = QStringLiteral("image://theme/icon-launcher-default");
+    }
 }
 
 QString OrnAppListItem::sinceLabel(quint32 value)

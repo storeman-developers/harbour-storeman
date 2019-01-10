@@ -38,7 +38,7 @@ ListItem {
         width: Theme.iconSizeLauncher
         height: Theme.iconSizeLauncher
         fillMode: Image.PreserveAspectFit
-        source: model.iconSource ? model.iconSource : "image://theme/icon-launcher-default"
+        source: model.iconSource
     }
 
     // Title, category, rating and favourite button
