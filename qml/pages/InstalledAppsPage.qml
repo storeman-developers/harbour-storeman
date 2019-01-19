@@ -76,6 +76,14 @@ Page {
                 }
             }
 
+            ListView.onAdd: AddAnimation {
+                target: item
+            }
+
+            ListView.onRemove: RemoveAnimation {
+                target: item
+            }
+
             Row {
                 id: row
                 anchors {

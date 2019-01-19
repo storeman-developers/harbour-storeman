@@ -8,6 +8,7 @@ ListItem {
     property int previousAppId: -1
     property int previousStep: 1
 
+    id: appListDelegate
     contentHeight: Math.max(appIcon.height, appInfo.height) + Theme.paddingLarge * 1.5
 
     onClicked: {
@@ -28,6 +29,10 @@ ListItem {
                                returnToUser: returnToUser
                            })
         }
+    }
+
+    ListView.onRemove: RemoveAnimation {
+        target: appListDelegate
     }
 
     // Application icon on the left

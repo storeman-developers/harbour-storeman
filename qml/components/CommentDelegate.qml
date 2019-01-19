@@ -38,6 +38,7 @@ ListItem {
         }
     }
 
+    id: commentDelegate
     contentHeight: content.height + Theme.paddingMedium * 2
     menu: OrnClient.authorised ? contextMenu : null
     highlighted: OrnClient.authorised && down
@@ -73,6 +74,14 @@ ListItem {
                 OrnClient.deleteComment(page.appId, model.commentId)
             })
         }
+    }
+
+    ListView.onAdd: AddAnimation {
+        target: commentDelegate
+    }
+
+    ListView.onRemove: RemoveAnimation {
+        target: commentDelegate
     }
 
     Column {

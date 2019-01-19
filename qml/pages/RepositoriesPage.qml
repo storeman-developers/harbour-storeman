@@ -133,6 +133,14 @@ Page {
                 }
             }
 
+            ListView.onAdd: AddAnimation {
+                target: repoItem
+            }
+
+            ListView.onRemove: RemoveAnimation {
+                target: repoItem
+            }
+
             Label {
                 anchors.verticalCenter: parent.verticalCenter
                 x: Theme.horizontalPageMargin
