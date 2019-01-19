@@ -13,6 +13,7 @@ public:
     enum Role
     {
         SortRole = Qt::UserRole,
+        ValidityRole,
         PackageStatusRole,
         AppIdRole,
         CreateDateRole,
@@ -22,7 +23,7 @@ public:
         UserNameRole,
         IconSourceRole,
         SinceUpdateRole,
-        CategoryRole
+        CategoryRole,
     };
     Q_ENUM(Role)
 

@@ -37,12 +37,15 @@ QVariant OrnAbstractAppsModel::data(const QModelIndex &index, int role) const
     {
     case SortRole:
         return app.title.toLower();
+    case ValidityRole:
+        return !app.package.isEmpty();
     case PackageStatusRole:
         return OrnPm::instance()->packageStatus(app.package);
     case AppIdRole:
         return app.appId;
     case CreateDateRole:
-        return QDateTime::fromMSecsSinceEpoch(qint64(app.created) * 1000).date();
+        return app.created > 0 ? QDateTime::fromMSecsSinceEpoch(qint64(app.created) * 1000).date() :
+                                 QDate();
     case RatingCountRole:
         return app.ratingCount;
     case RatingRole:
@@ -65,6 +68,7 @@ QVariant OrnAbstractAppsModel::data(const QModelIndex &index, int role) const
 QHash<int, QByteArray> OrnAbstractAppsModel::roleNames() const
 {
     return {
+        { ValidityRole,      "isValid" },
         { PackageStatusRole, "packageStatus" },
         { AppIdRole,         "appId" },
         { CreateDateRole,    "createDate" },

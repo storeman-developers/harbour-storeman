@@ -994,5 +994,9 @@
         <source>Tap to bookmark the application</source>
         <translation>Tap to bookmark the application</translation>
     </message>
+    <message id="orn-bad-appid">
+        <source>Invalid package ID %1</source>
+        <translation>Invalid package ID %1</translation>
+    </message>
 </context>
 </TS>

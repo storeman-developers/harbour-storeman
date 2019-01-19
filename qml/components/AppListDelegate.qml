@@ -11,6 +11,9 @@ ListItem {
     contentHeight: Math.max(appIcon.height, appInfo.height) + Theme.paddingLarge * 1.5
 
     onClicked: {
+        if (!model.isValid) {
+            return
+        }
         var appId = model.appId
         if (previousAppId === appId) {
             // Trying to open a page for the previous application, so just go back
@@ -57,7 +60,8 @@ ListItem {
         Label {
             id: titleLabel
             width: parent.width - bookmarkStar.width - Theme.paddingSmall
-            text: model.title
+            //% "Invalid package ID %1"
+            text: model.isValid ? model.title : qsTrId("orn-bad-appid").arg(model.appId)
             font.pixelSize: Theme.fontSizeExtraSmall
             wrapMode: Text.WordWrap
             maximumLineCount: 2
@@ -98,8 +102,15 @@ ListItem {
             horizontalAlignment: Qt.AlignRight
             truncationMode: TruncationMode.Fade
             color: Theme.highlightColor
-            text: model.userName + "\u2009\u2022\u2009" +
-                  model.createDate.toLocaleDateString(_locale, Locale.ShortFormat)
+            text: {
+                var res = model.userName
+                var createDate = model.createDate
+                if (!isNaN(createDate)) {
+                    res += "\u2009\u2022\u2009"
+                    res += createDate.toLocaleDateString(_locale, Locale.ShortFormat)
+                }
+                return res
+            }
         }
 
         // Installed / installing spinner

@@ -67,19 +67,25 @@ void OrnBookmarksModel::fetchMore(const QModelIndex &parent)
         auto request = client->apiRequest(resourceTmpl.arg(appid));
         qDebug() << "Fetching data from" << request.url().toString();
         auto reply = client->networkAccessManager()->get(request);
-        connect(reply, &QNetworkReply::finished, [this, client, size, reply]()
+        connect(reply, &QNetworkReply::finished, [this, client, size, reply, appid]()
         {
             auto doc = client->processReply(reply);
             if (doc.isObject())
             {
                 mFetchedApps.append(doc.object());
-                if (mFetchedApps.size() == size)
-                {
-                    this->processReply(QJsonDocument(mFetchedApps));
-                    mFetchedApps = QJsonArray();
-                    mFetching = false;
-                    emit this->fetchingChanged();
-                }
+            }
+            else
+            {
+                QJsonObject badApp;
+                badApp.insert(QStringLiteral("appid"), QString::number(appid));
+                mFetchedApps.append(badApp);
+            }
+            if (mFetchedApps.size() == size)
+            {
+                this->processReply(QJsonDocument(mFetchedApps));
+                mFetchedApps = QJsonArray();
+                mFetching = false;
+                emit this->fetchingChanged();
             }
         });
     }
