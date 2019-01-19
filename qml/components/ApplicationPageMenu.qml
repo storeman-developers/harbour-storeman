@@ -14,7 +14,10 @@ PullDownMenu {
         enabled: !app.running
         //% "Reload"
         text:  qsTrId("orn-reload")
-        onClicked: app.ornRequest()
+        onClicked: {
+            flickable.visible = false
+            app.ornRequest()
+        }
     }
 
     MenuItem {
@@ -22,7 +25,7 @@ PullDownMenu {
         visible: text
         enabled: _enableMenu
         text: {
-            if (!app.repoAlias) {
+            if (!app.packageName || !app.repoAlias) {
                 return ""
             }
             switch (app.repoStatus) {

@@ -116,7 +116,7 @@ BackgroundItem {
 
         AppInfoLabel {
             id: availableVersion
-            visible: _expanded
+            visible: _expanded && app.packageName
             //% "Available version"
             label: qsTrId("orn-version-available")
             value: {

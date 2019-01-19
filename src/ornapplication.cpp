@@ -305,7 +305,7 @@ void OrnApplication::onPackageStatusChanged(const QString &packageName, OrnPm::P
 
 void OrnApplication::onUpdatablePackagesChanged()
 {
-    if (mPackageName.size())
+    if (!mPackageName.isEmpty())
     {
         OrnPm::instance()->getPackageVersions(mPackageName);
     }
