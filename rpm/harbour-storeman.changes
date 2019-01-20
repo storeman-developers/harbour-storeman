@@ -1,3 +1,13 @@
+* Sun Jan 20 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.33-1
+- Fix layout for various devices, orientations and system font sizes (thanks to Matti Viljanen)
+- Hide pulley menu on the comments page when page header is hidden (thanks to Matti Viljanen)
+- ApplicationPage.qml: Add "like" buttun to make rating applications more clear
+- Fix showing apps with no packages
+- Handle invalid bookmarks
+- Add animations for list view items
+- Update translations
+- Update the list of contributors
+
 * Tue Nov 27 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.32-1
 - SearchPage.qml: Force focus on the search field when is activated with the search action from the cover and when is cleared
 - CommentDelegate.qml: Fix strings formatting
