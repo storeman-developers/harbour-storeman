@@ -9,6 +9,7 @@ struct OrnAppListItem
 {
     OrnAppListItem(const QJsonObject &jsonObject);
 
+    bool valid;
     quint32 appId;
     quint32 created;
     quint32 updated;

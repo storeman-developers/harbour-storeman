@@ -9,7 +9,8 @@
 
 
 OrnAppListItem::OrnAppListItem(const QJsonObject &jsonObject)
-    : appId(jsonObject[QStringLiteral("appid")].toVariant().toUInt())
+    : valid(jsonObject.size() > 1)
+    , appId(jsonObject[QStringLiteral("appid")].toVariant().toUInt())
     , created(OrnUtils::toUint(jsonObject[QStringLiteral("created")]))
     , updated(OrnUtils::toUint(jsonObject[QStringLiteral("updated")]))
     , title(OrnUtils::toString(jsonObject[QStringLiteral("title")]))

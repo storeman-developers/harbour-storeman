@@ -1,4 +1,4 @@
-* Sun Jan 20 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.33-1
+* Sun Jan 20 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.33-3
 - Fix layout for various devices, orientations and system font sizes (thanks to Matti Viljanen)
 - Hide pulley menu on the comments page when page header is hidden (thanks to Matti Viljanen)
 - ApplicationPage.qml: Add "like" buttun to make rating applications more clear

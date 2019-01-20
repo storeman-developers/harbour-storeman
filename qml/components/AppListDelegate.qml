@@ -66,7 +66,7 @@ ListItem {
             id: titleLabel
             width: parent.width - bookmarkStar.width - Theme.paddingSmall
             //% "Invalid package ID %1"
-            text: model.isValid ? model.title : qsTrId("orn-bad-appid").arg(model.appId)
+            text: model.title || qsTrId("orn-bad-appid").arg(model.appId)
             font.pixelSize: Theme.fontSizeExtraSmall
             wrapMode: Text.WordWrap
             maximumLineCount: 2

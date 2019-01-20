@@ -38,7 +38,7 @@ QVariant OrnAbstractAppsModel::data(const QModelIndex &index, int role) const
     case SortRole:
         return app.title.toLower();
     case ValidityRole:
-        return !app.package.isEmpty();
+        return app.valid;
     case PackageStatusRole:
         return OrnPm::instance()->packageStatus(app.package);
     case AppIdRole:
