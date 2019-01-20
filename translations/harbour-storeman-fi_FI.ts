@@ -976,7 +976,7 @@
     </message>
     <message id="orn-no-packages">
         <source>No packages available</source>
-        <translation>Pakettia ei saatavilla</translation>
+        <translation>Paketteja ei saatavilla</translation>
     </message>
     <message id="orn-error-comment-sending">
         <source>Error sending comment</source>
@@ -989,6 +989,14 @@
     <message id="orn-error-network">
         <source>Network error</source>
         <translation>Verkkovirhe</translation>
+    </message>
+    <message id="orn-hint-bookmark">
+        <source>Tap to bookmark the application</source>
+        <translation>Lisää sovellus kirjanmerkkeihin napauttamalla</translation>
+    </message>
+    <message id="orn-bad-appid">
+        <source>Invalid package ID %1</source>
+        <translation>Virheellinen pakettitunniste %1</translation>
     </message>
 </context>
 </TS>

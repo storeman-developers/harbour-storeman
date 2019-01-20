@@ -984,5 +984,13 @@
         <source>Network error</source>
         <translation>网络错误</translation>
     </message>
+    <message id="orn-hint-bookmark">
+        <source>Tap to bookmark the application</source>
+        <translation>点击以收藏此应用</translation>
+    </message>
+    <message id="orn-bad-appid">
+        <source>Invalid package ID %1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

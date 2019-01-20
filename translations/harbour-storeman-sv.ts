@@ -990,5 +990,13 @@
         <source>Network error</source>
         <translation>Nätverksfel</translation>
     </message>
+    <message id="orn-hint-bookmark">
+        <source>Tap to bookmark the application</source>
+        <translation>Tryck för att bokmärka appen</translation>
+    </message>
+    <message id="orn-bad-appid">
+        <source>Invalid package ID %1</source>
+        <translation>Ogiltigt paket-ID %1</translation>
+    </message>
 </context>
 </TS>

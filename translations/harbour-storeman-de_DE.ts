@@ -990,5 +990,13 @@
         <source>Network error</source>
         <translation>Netzwerkfehler</translation>
     </message>
+    <message id="orn-hint-bookmark">
+        <source>Tap to bookmark the application</source>
+        <translation>Tippen, um ein Lesezeichen für dieses Programm anzulegen</translation>
+    </message>
+    <message id="orn-bad-appid">
+        <source>Invalid package ID %1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

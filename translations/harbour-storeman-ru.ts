@@ -1002,5 +1002,9 @@ Storeman не хранит ваш пароль и не передает его �
         <source>Tap to bookmark the application</source>
         <translation>Коснитесь, чтобы добавить приложение в закладки</translation>
     </message>
+    <message id="orn-bad-appid">
+        <source>Invalid package ID %1</source>
+        <translation>Несуществующий пакет %1</translation>
+    </message>
 </context>
 </TS>
