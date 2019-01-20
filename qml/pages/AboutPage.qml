@@ -26,7 +26,7 @@ Page {
                 Image {
                     id: icon
                     anchors.horizontalCenter: parent.horizontalCenter
-                    source: "/usr/share/icons/hicolor/256x256/apps/harbour-storeman.png"
+                    source: "/usr/share/icons/hicolor/172x172/apps/harbour-storeman.png"
                 }
             }
 

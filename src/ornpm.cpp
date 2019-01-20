@@ -850,7 +850,8 @@ OrnInstalledPackageList OrnPmPrivate::prepareInstalledPackages(const QString &pa
         QStringLiteral("/usr/share/icons/hicolor/86x86/apps/%0.png"),
         QStringLiteral("/usr/share/icons/hicolor/108x108/apps/%0.png"),
         QStringLiteral("/usr/share/icons/hicolor/128x128/apps/%0.png"),
-        QStringLiteral("/usr/share/icons/hicolor/256x256/apps/%0.png")
+        QStringLiteral("/usr/share/icons/hicolor/172x172/apps/%0.png"),
+        QStringLiteral("/usr/share/icons/hicolor/256x256/apps/%0.png"),
     };
 
     // Prepare set to filter installed packages to show only those from OpenRepos
