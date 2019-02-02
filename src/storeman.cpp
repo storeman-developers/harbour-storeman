@@ -130,10 +130,16 @@ void Storeman::setShowUpdatesNotification(bool value)
     }
 }
 
+bool Storeman::fileExists(const QString &filePath)
+{
+    Q_ASSERT_X(!filePath.isEmpty(), Q_FUNC_INFO, "An empty string is passed");
+    return QFile::exists(filePath);
+}
+
 bool Storeman::removeFile(const QString &filePath)
 {
     Q_ASSERT_X(!QFileInfo(filePath).isDir(), Q_FUNC_INFO, "Path must be a file");
-    return QFile(filePath).remove();
+    return QFile::remove(filePath);
 }
 
 bool Storeman::showHint(Storeman::Hint hint) const

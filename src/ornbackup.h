@@ -12,6 +12,16 @@ class OrnBackup : public QObject
 
 public:
 
+    enum BackupItem
+    {
+        BackupRepos     = 0x001,
+        BackupInstalled = 0x002,
+        BackupBookmarks = 0x004,
+    };
+    Q_ENUM(BackupItem)
+    Q_DECLARE_FLAGS(BackupItems, BackupItem)
+    Q_FLAGS(BackupItems)
+
     enum Status
     {
         Idle,
@@ -20,23 +30,23 @@ public:
         RestoringRepos,
         RefreshingRepos,
         SearchingPackages,
-        InstallingPackages
+        InstallingPackages,
     };
     Q_ENUM(Status)
 
     enum Error
     {
         NoError,
-        DirectoryError
+        DirectoryError,
     };
-    Q_ENUMS(Error)
+    Q_ENUM(Error)
 
     explicit OrnBackup(QObject *parent = nullptr);
 
     Status status() const;
 
     Q_INVOKABLE static QVariantMap details(const QString &path);
-    Q_INVOKABLE void backup(const QString &filePath);
+    Q_INVOKABLE void backup(const QString &filePath, BackupItems items);
     Q_INVOKABLE void restore(const QString &filePath);
     Q_INVOKABLE QStringList notFound() const;
 
@@ -54,13 +64,12 @@ private slots:
 
 private:
     void setStatus(OrnBackup::Status status);
-    void pBackup();
-    void pRestore();
+    void pBackup(const QString &filePath, BackupItems items);
+    void pRestore(const QString &filePath);
     void pRefreshRepos();
 
 private:
     Status mStatus;
-    QString mFilePath;
     QStringList mNamesToSearch;
     // Name, version
     QHash<QString, QString> mInstalled;

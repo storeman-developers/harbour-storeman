@@ -142,6 +142,8 @@ OTHER_FILES += \
     qml/components/StoremanHintLabel.qml \
     qml/components/TagDelegate.qml \
     qml/components/DisappearAnimation.qml \
+    qml/components/BackupLabel.qml \
+    qml/components/BackupOptions.qml \
     qml/models/DevelopersModel.qml \
     qml/models/TranslatorsModel.qml \
     qml/models/DummyCommentsModel.qml

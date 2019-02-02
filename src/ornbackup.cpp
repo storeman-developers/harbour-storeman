@@ -55,10 +55,11 @@ QVariantMap OrnBackup::details(const QString &path)
     return res;
 }
 
-void OrnBackup::backup(const QString &filePath)
+void OrnBackup::backup(const QString &filePath, BackupItems items)
 {
     Q_ASSERT_X(!filePath.isEmpty(), Q_FUNC_INFO, "A file path must be provided");
     Q_ASSERT_X(!QFileInfo(filePath).isFile(), Q_FUNC_INFO, "Backup file already exists");
+    Q_ASSERT_X(int(items) > 0, Q_FUNC_INFO, "At least one backup item should be provided");
 
     if (mStatus != Idle)
     {
@@ -66,14 +67,13 @@ void OrnBackup::backup(const QString &filePath)
         return;
     }
 
-    mFilePath = filePath;
-    auto dir = QFileInfo(mFilePath).dir();
+    auto dir = QFileInfo(filePath).dir();
     if (!dir.exists() && !dir.mkpath(QChar('.')))
     {
         qCritical() << "Failed to create directory" << dir.absolutePath();
         emit this->backupError(DirectoryError);
     }
-    QtConcurrent::run(this, &OrnBackup::pBackup);
+    QtConcurrent::run(this, &OrnBackup::pBackup, filePath, items);
 }
 
 void OrnBackup::restore(const QString &filePath)
@@ -87,10 +87,9 @@ void OrnBackup::restore(const QString &filePath)
         return;
     }
 
-    mFilePath = filePath;
     auto watcher = new QFutureWatcher<void>();
     connect(watcher, &QFutureWatcher<void>::finished, this, &OrnBackup::pRefreshRepos);
-    watcher->setFuture(QtConcurrent::run(this, &OrnBackup::pRestore));
+    watcher->setFuture(QtConcurrent::run(this, &OrnBackup::pRestore, filePath));
 }
 
 QStringList OrnBackup::notFound() const
@@ -146,9 +145,6 @@ void OrnBackup::pAddPackage(quint32 info, const QString &packageId, const QStrin
 
 void OrnBackup::pInstallPackages()
 {
-    qDebug() << "Installing packages";
-    this->setStatus(InstallingPackages);
-
     QStringList ids;
     for (const auto &pname : mPackagesToInstall.uniqueKeys())
     {
@@ -166,7 +162,7 @@ void OrnBackup::pInstallPackages()
         }
         // Skip packages that are already installed
         if (!mInstalled.contains(pname) ||
-            OrnPackageVersion(mInstalled[pname]) < newestVersion)
+                OrnPackageVersion(mInstalled[pname]) < newestVersion)
         {
             ids << newestId;
         }
@@ -178,6 +174,8 @@ void OrnBackup::pInstallPackages()
     }
     else
     {
+        qDebug() << "Installing packages";
+        this->setStatus(InstallingPackages);
         auto t = OrnPm::instance()->d_ptr->transaction();
         connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(pFinishRestore()));
         qDebug().nospace() << "Calling " << t << "->" PK_METHOD_INSTALLPACKAGES "("
@@ -189,94 +187,118 @@ void OrnBackup::pInstallPackages()
 void OrnBackup::pFinishRestore()
 {
     qDebug() << "Finished restoring";
-    mFilePath.clear();
     this->setStatus(Idle);
     emit this->restored();
 }
 
-void OrnBackup::pBackup()
+void OrnBackup::pBackup(const QString &filePath, BackupItems items)
 {
     qDebug() << "Starting backing up";
     this->setStatus(BackingUp);
-    QSettings file(mFilePath, QSettings::IniFormat);
-    QStringList repos;
-    QStringList disabled;
+    QSettings file(filePath, QSettings::IniFormat);
     auto ornpm_p = OrnPm::instance()->d_ptr;
 
-    auto prefix_size = OrnPm::repoNamePrefix.size();
-    for (auto it = ornpm_p->repos.cbegin(); it != ornpm_p->repos.cend(); ++it)
+    if (items.testFlag(BackupItem::BackupRepos))
     {
-        auto author = it.key().mid(prefix_size);
-        repos << author;
-        if (!it.value())
+        qDebug() << "Backing up repos";
+        QStringList repos;
+        QStringList disabled;
+        auto prefix_size = OrnPm::repoNamePrefix.size();
+        for (auto it = ornpm_p->repos.cbegin(); it != ornpm_p->repos.cend(); ++it)
         {
-            disabled << author;
+            auto author = it.key().mid(prefix_size);
+            repos << author;
+            if (!it.value())
+            {
+                disabled << author;
+            }
         }
+        file.setValue(BR_REPO_ALL, repos);
+        file.setValue(BR_REPO_DISABLED, disabled);
     }
 
-    qDebug() << "Backing up repos";
-    file.setValue(BR_REPO_ALL, repos);
-    file.setValue(BR_REPO_DISABLED, disabled);
-
-    qDebug() << "Backing up installed packages";
-    QStringList installed;
-    for (const auto &p : ornpm_p->prepareInstalledPackages(QString()))
+    if (items.testFlag(BackupItem::BackupInstalled))
     {
-        installed << p.name;
+        qDebug() << "Backing up installed packages";
+        QStringList installed;
+        for (const auto &p : ornpm_p->prepareInstalledPackages(QString()))
+        {
+            installed << p.name;
+        }
+        file.setValue(BR_INSTALLED, installed);
     }
-    file.setValue(BR_INSTALLED, installed);
 
-    qDebug() << "Backing up bookmarks";
-    QVariantList bookmarks;
-    for (const auto &b : OrnClient::instance()->d_ptr->bookmarks)
+    if (items.testFlag(BackupItem::BackupBookmarks))
     {
-        bookmarks << b;
+        qDebug() << "Backing up bookmarks";
+        QVariantList bookmarks;
+        for (const auto &b : OrnClient::instance()->d_ptr->bookmarks)
+        {
+            bookmarks << b;
+        }
+        file.setValue(BR_BOOKMARKS, bookmarks);
     }
-    file.setValue(BR_BOOKMARKS, bookmarks);
 
     file.setValue(BR_CREATED, QDateTime::currentDateTime().toUTC());
+
     qDebug() << "Finished backing up";
-    mFilePath.clear();
     this->setStatus(Idle);
     emit this->backedUp();
 }
 
-void OrnBackup::pRestore()
+void OrnBackup::pRestore(const QString &filePath)
 {
-    QSettings file(mFilePath, QSettings::IniFormat);
+    QSettings file(filePath, QSettings::IniFormat);
 
-    qDebug() << "Restoring bookmarks";
-    this->setStatus(RestoringBookmarks);
-    auto client = OrnClient::instance();
-    for (const auto &b : file.value(BR_BOOKMARKS).toList())
+    qDebug() << "Reading bookmarks";
+    auto bookmarks = file.value(BR_BOOKMARKS).toList();
+    if (!bookmarks.isEmpty())
     {
-        client->d_ptr->bookmarks.insert(b.toUInt());
+        qDebug() << "Restoring bookmarks";
+        this->setStatus(RestoringBookmarks);
+        auto client = OrnClient::instance();
+        for (const auto &b : bookmarks)
+        {
+            client->d_ptr->bookmarks.insert(b.toUInt());
+        }
     }
 
-    qDebug() << "Restoring repos";
-    this->setStatus(RestoringRepos);
-
+    qDebug() << "Reading repos";
     auto repos = file.value(BR_REPO_ALL).toStringList();
-    auto disabled = file.value(BR_REPO_DISABLED).toStringList().toSet();
-    mNamesToSearch = file.value(BR_INSTALLED).toStringList();
-
-    auto ornpm_p = OrnPm::instance()->d_ptr;
-    QString method(SSU_METHOD_ADDREPO);
-    QString repo_tmpl(REPO_URL_TMPL);
-    for (const auto &author : repos)
+    if (!repos.isEmpty())
     {
-        auto alias = OrnPm::repoNamePrefix + author;
-        ornpm_p->ssuInterface->call(QDBus::Block, method, alias, repo_tmpl.arg(author));
-        ornpm_p->repos.insert(alias, !disabled.contains(author));
+        qDebug() << "Restoring repos";
+        this->setStatus(RestoringRepos);
+        auto disabled = file.value(BR_REPO_DISABLED).toStringList().toSet();
+        auto ornpm_p = OrnPm::instance()->d_ptr;
+        QString method(SSU_METHOD_ADDREPO);
+        QString repo_tmpl(REPO_URL_TMPL);
+        for (const auto &author : repos)
+        {
+            auto alias = OrnPm::repoNamePrefix + author;
+            ornpm_p->ssuInterface->call(QDBus::Block, method, alias, repo_tmpl.arg(author));
+            ornpm_p->repos.insert(alias, !disabled.contains(author));
+        }
+
     }
+
+    qDebug("Reading installed apps");
+    mNamesToSearch = file.value(BR_INSTALLED).toStringList();
 }
 
 void OrnBackup::pRefreshRepos()
 {
-    qDebug() << "Refreshing repos";
-    this->setStatus(RefreshingRepos);
-    auto t = OrnPm::instance()->d_ptr->transaction();
-    connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(pSearchPackages()));
-    qDebug().nospace() << "Calling " << t << "->" PK_METHOD_REFRESHCACHE "(false)";
-    t->asyncCall(QStringLiteral(PK_METHOD_REFRESHCACHE), false);
+    if (!mNamesToSearch.isEmpty())
+    {
+        qDebug() << "Refreshing repos";
+        this->setStatus(RefreshingRepos);
+        auto t = OrnPm::instance()->d_ptr->transaction();
+        connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(pSearchPackages()));
+        qDebug().nospace() << "Calling " << t << "->" PK_METHOD_REFRESHCACHE "(false)";
+        t->asyncCall(QStringLiteral(PK_METHOD_REFRESHCACHE), false);
+    }
+    else
+    {
+        this->pFinishRestore();
+    }
 }

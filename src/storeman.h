@@ -42,6 +42,7 @@ public:
     bool showUpdatesNotification() const;
     void setShowUpdatesNotification(bool value);
 
+    Q_INVOKABLE static bool fileExists(const QString &filePath);
     Q_INVOKABLE static bool removeFile(const QString &filePath);
 
     Q_INVOKABLE bool showHint(Hint hint) const;
