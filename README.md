@@ -2,7 +2,7 @@
 
 Unofficial native OpenRepos.net client for Sailfish OS
 
-[![Release](https://img.shields.io/github/release/mentaljam/harbour-storeman.svg)]()
+[![Release](https://img.shields.io/github/release/mentaljam/harbour-storeman.svg)](https://github.com/mentaljam/harbour-storeman/releases/latest)
 
 ## Current features
 
