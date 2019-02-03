@@ -191,7 +191,13 @@ QJsonDocument OrnClient::processReply(QNetworkReply *reply, Error code)
         auto status = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
         if (status == 403 && this->cookieIsValid())
         {
-            d_ptr->settings->remove(USER_COOKIE_EXPIRE);
+            QString usernameKey(USER_NAME);
+            auto username = d_ptr->settings->value(usernameKey);
+            d_ptr->settings->remove(QStringLiteral("user"));
+            // Save the last username to simplify re-login
+            d_ptr->settings->setValue(usernameKey, username);
+            d_ptr->userCookie.clear();
+            d_ptr->userToken.clear();
             this->setCookieTimer();
             emit this->cookieIsValidChanged();
         }
