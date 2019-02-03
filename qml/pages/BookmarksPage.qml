@@ -50,7 +50,7 @@ Page {
         BusyIndicator {
             size: BusyIndicatorSize.Large
             anchors.centerIn: parent
-            running: bookmarksModel.fetching && !menu.active
+            running: bookmarksModel.fetching
         }
 
         ViewPlaceholder {
