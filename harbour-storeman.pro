@@ -91,6 +91,7 @@ HEADERS += \
 
 OTHER_FILES += \
     qml/harbour-storeman.qml \
+    qml/StoremanStyles.qml \
     qml/cover/CoverPage.qml \
     qml/pages/RecentAppsPage.qml \
     qml/pages/ApplicationPage.qml \

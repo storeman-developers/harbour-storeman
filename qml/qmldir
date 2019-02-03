@@ -1,0 +1,2 @@
+module harbour.orn
+singleton StoremanStyles 1.0 StoremanStyles.qml
