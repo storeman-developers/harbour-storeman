@@ -152,6 +152,7 @@ ListItem {
             id: bookmarkStar
             anchors.right: parent.right
             appId: model.appId
+            bookmarked: model.isBookmarked
         }
     }
 }

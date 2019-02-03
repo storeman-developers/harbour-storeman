@@ -1,28 +1,44 @@
 #include "ornabstractappsmodel.h"
 #include "ornapplistitem.h"
 #include "ornpm.h"
+#include "ornclient.h"
+
 
 OrnAbstractAppsModel::OrnAbstractAppsModel(bool fetchable, QObject *parent)
     : OrnAbstractListModel(fetchable, parent)
 {
     connect(OrnPm::instance(), &OrnPm::packageStatusChanged,
-            this, &OrnAbstractAppsModel::onPackageStatusChanged);
-}
-
-void OrnAbstractAppsModel::onPackageStatusChanged(const QString &packageName, int status)
-{
-    Q_UNUSED(status)
-
-    auto size = mData.size();
-    for (size_t i = 0; i < size; ++i)
+            this, [this](const QString &packageName, int status)
     {
-        if (mData[i].package == packageName)
+        Q_UNUSED(status)
+
+        auto size = mData.size();
+        for (size_t i = 0; i < size; ++i)
         {
-            auto ind = this->createIndex(i, 0);
-            emit this->dataChanged(ind, ind, {PackageStatusRole});
-            return;
+            if (mData[i].package == packageName)
+            {
+                auto ind = this->createIndex(i, 0);
+                emit this->dataChanged(ind, ind, {PackageStatusRole});
+                return;
+            }
         }
-    }
+    });
+
+    connect(OrnClient::instance(), &OrnClient::bookmarkChanged,
+            this, [this](quint32 appid, bool bookmarked)
+    {
+        Q_UNUSED(bookmarked)
+
+        for (size_t i = 0, size = mData.size(); i < size; ++i)
+        {
+            if (mData[i].appId == appid)
+            {
+                auto ind = this->createIndex(i, 0);
+                emit this->dataChanged(ind, ind, {BookmarkRole});
+                return;
+            }
+        }
+    });
 }
 
 QVariant OrnAbstractAppsModel::data(const QModelIndex &index, int role) const
@@ -39,6 +55,8 @@ QVariant OrnAbstractAppsModel::data(const QModelIndex &index, int role) const
         return app.title.toLower();
     case ValidityRole:
         return app.valid;
+    case BookmarkRole:
+        return OrnClient::instance()->hasBookmark(app.appId);
     case PackageStatusRole:
         return OrnPm::instance()->packageStatus(app.package);
     case AppIdRole:
@@ -69,6 +87,7 @@ QHash<int, QByteArray> OrnAbstractAppsModel::roleNames() const
 {
     return {
         { ValidityRole,      "isValid" },
+        { BookmarkRole,      "isBookmarked" },
         { PackageStatusRole, "packageStatus" },
         { AppIdRole,         "appId" },
         { CreateDateRole,    "createDate" },

@@ -4,17 +4,25 @@ import harbour.orn 1.0
 
 IconButton {
     property int appId
-    property bool _bookmarked
+    property var bookmarked: undefined
+    property bool _updateState
 
-    icon.source: (_bookmarked ? "image://theme/icon-m-favorite-selected?" :
-                                "image://theme/icon-m-favorite?") +
+    icon.source: (bookmarked ? "image://theme/icon-m-favorite-selected?" :
+                               "image://theme/icon-m-favorite?") +
                  (pressed ? Theme.highlightColor : Theme.primaryColor)
 
     onClicked: {
-        var f = _bookmarked ? OrnClient.removeBookmark : OrnClient.addBookmark
+        var f = bookmarked ? OrnClient.removeBookmark : OrnClient.addBookmark
         f(appId)
-        _bookmarked = !_bookmarked
+        if (_updateState) {
+            bookmarked = !bookmarked
+        }
     }
 
-    Component.onCompleted: _bookmarked = OrnClient.hasBookmark(appId)
+    Component.onCompleted: {
+        _updateState = bookmarked === undefined
+        if (_updateState) {
+            bookmarked = OrnClient.hasBookmark(appId)
+        }
+    }
 }
