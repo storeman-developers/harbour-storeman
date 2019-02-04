@@ -1010,5 +1010,9 @@
         <source>Installed applications</source>
         <translation>Installed applications</translation>
     </message>
+    <message id="orn-myapps">
+        <source>My applications</source>
+        <translation>My applications</translation>
+    </message>
 </context>
 </TS>

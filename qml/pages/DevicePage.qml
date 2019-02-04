@@ -31,6 +31,16 @@ Page {
                           qsTrId("orn-login-menu-item")
                 menu: ContextMenu {
                     MenuItem {
+                        //% "My applications"
+                        text: qsTrId("orn-myapps")
+                        onClicked: pageStack.push(Qt.resolvedUrl("UserAppsPage.qml"), {
+                                                      userId: OrnClient.userId,
+                                                      userName: OrnClient.userName,
+                                                      userIcon: OrnClient.userIconSource
+                                                  })
+                    }
+
+                    MenuItem {
                         //: Menu item
                         //% "Log out"
                         text: qsTrId("orn-logout-action")
