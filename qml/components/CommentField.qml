@@ -137,8 +137,8 @@ Column {
 
         onVisibleChanged: {
             if (visible && Storeman.showHint(Storeman.CommentFieldHint)) {
-                var shComp = Qt.createComponent(Qt.resolvedUrl("StoremanHint.qml"))
-                var shObj = shComp.createObject(tagsPanel, {direction: TouchInteraction.Left})
+                var shObj = Qt.createQmlObject('import Sailfish.Silica 1.0; TouchInteractionHint {direction: TouchInteraction.Left}',
+                                               tagsPanel)
 
                 var shlComp = Qt.createComponent(Qt.resolvedUrl("StoremanHintLabel.qml"))
                 var shlObj = shlComp.createObject(page, {

@@ -139,7 +139,7 @@ OTHER_FILES += \
     qml/components/ListMenuItem.qml \
     qml/components/BookmarkButton.qml \
     qml/components/MenuStatusLabel.qml \
-    qml/components/StoremanHint.qml \
+    qml/components/StoremanTapHint.qml \
     qml/components/StoremanHintLabel.qml \
     qml/components/TagDelegate.qml \
     qml/components/DisappearAnimation.qml \

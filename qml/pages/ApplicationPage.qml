@@ -39,11 +39,8 @@ Page {
 
             // Show rating hint
             if (Storeman.showHint(Storeman.ApplicationRateAndBookmarkHint)) {
-                var shComp = Qt.createComponent(Qt.resolvedUrl("../components/StoremanHint.qml"))
-                var shObj = shComp.createObject(packageInfo.likeButton, {
-                    distance: 0.0,
-                    "anchors.centerIn": packageInfo.likeButton
-                })
+                var shComp = Qt.createComponent(Qt.resolvedUrl("../components/StoremanTapHint.qml"))
+                var shObj = shComp.createObject(packageInfo.likeButton)
 
                 var shlComp = Qt.createComponent(Qt.resolvedUrl("../components/StoremanHintLabel.qml"))
                 var shlObj = shlComp.createObject(page, {
@@ -65,7 +62,6 @@ Page {
                         //% "Tap to bookmark the application"
                         shlObj.text = qsTrId("orn-hint-bookmark")
                         shObj.parent = packageInfo.starButton
-                        shObj.anchors.centerIn = packageInfo.starButton
                         shObj.start()
                     }
                 })

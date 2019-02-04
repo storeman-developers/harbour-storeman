@@ -25,11 +25,8 @@ Page {
                 commentsList.model = dcmComp.createObject()
 
                 var label = commentsList.currentItem.replyToLabel
-                var shComp = Qt.createComponent(Qt.resolvedUrl("../components/StoremanHint.qml"))
-                var shObj = shComp.createObject(label, {
-                                                    distance: 0.0,
-                                                    "anchors.centerIn": label
-                                                })
+                var shComp = Qt.createComponent(Qt.resolvedUrl("../components/StoremanTapHint.qml"))
+                var shObj = shComp.createObject(label)
 
                 var shlComp = Qt.createComponent(Qt.resolvedUrl("../components/StoremanHintLabel.qml"))
                 var shlObj = shlComp.createObject(page, {
