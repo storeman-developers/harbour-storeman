@@ -120,6 +120,17 @@ OrnClient::OrnClient(QObject *parent)
 #endif
         });
     }
+    // NOTE: Remove this code in future
+    else if (d_ptr->settings->contains(USER_UID))
+    {
+        QString usernameKey(USER_NAME);
+        auto username = d_ptr->settings->value(usernameKey);
+        d_ptr->settings->remove(QStringLiteral("user"));
+        // Save the last username to simplify re-login
+        d_ptr->settings->setValue(usernameKey, username);
+        d_ptr->userCookie.clear();
+        d_ptr->userToken.clear();
+    }
 
     // A workaround as qml does not call a destructor
     connect(qApp, &QGuiApplication::aboutToQuit, this, &OrnClient::deleteLater);
