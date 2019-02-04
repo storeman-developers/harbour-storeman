@@ -7,7 +7,6 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 #include <QNetworkReply>
-#include <QNetworkCookie>
 #include <QJsonObject>
 #include <QJsonDocument>
 #include <QJsonArray>
@@ -22,7 +21,6 @@
 #define API_URL_PREFIX      QStringLiteral("https://openrepos.net/api/v1/")
 
 #define USER_COOKIE         QStringLiteral("user/cookie")
-#define USER_COOKIE_EXPIRE  QStringLiteral("user/cookie/expire")
 #define USER_TOKEN          QStringLiteral("user/token")
 #define USER_UID            QStringLiteral("user/uid")
 #define USER_NAME           QStringLiteral("user/name")
@@ -45,7 +43,7 @@ OrnClientPrivate::OrnClientPrivate(OrnClient *q_ptr)
     if (settings->contains(USER_TOKEN) && settings->contains(USER_COOKIE))
     {
         auto cookie = settings->value(USER_COOKIE).toByteArray();
-        userCookie = QVariant::fromValue(QNetworkCookie::parseCookies(cookie).first());
+        userCookie = QNetworkCookie::parseCookies(cookie).first();
         userToken = settings->value(USER_TOKEN).toByteArray();
     }
 
@@ -128,7 +126,7 @@ OrnClient::OrnClient(QObject *parent)
         d_ptr->settings->remove(QStringLiteral("user"));
         // Save the last username to simplify re-login
         d_ptr->settings->setValue(usernameKey, username);
-        d_ptr->userCookie.clear();
+        d_ptr->userCookie = QNetworkCookie();
         d_ptr->userToken.clear();
     }
 
@@ -159,7 +157,7 @@ QNetworkRequest OrnClient::apiRequest(const QString &resource, const QUrlQuery &
     QNetworkRequest request;
     if (this->cookieIsValid())
     {
-        request.setHeader(QNetworkRequest::CookieHeader, d_ptr->userCookie);
+        request.setHeader(QNetworkRequest::CookieHeader, QVariant::fromValue(d_ptr->userCookie));
         request.setRawHeader(QByteArrayLiteral("X-CSRF-Token"), d_ptr->userToken);
     }
     request.setRawHeader(QByteArrayLiteral("Accept-Language"), d_ptr->lang);
@@ -207,7 +205,7 @@ QJsonDocument OrnClient::processReply(QNetworkReply *reply, Error code)
             d_ptr->settings->remove(QStringLiteral("user"));
             // Save the last username to simplify re-login
             d_ptr->settings->setValue(usernameKey, username);
-            d_ptr->userCookie.clear();
+            d_ptr->userCookie = QNetworkCookie();
             d_ptr->userToken.clear();
             this->setCookieTimer();
             emit this->cookieIsValidChanged();
@@ -224,14 +222,13 @@ QJsonDocument OrnClient::processReply(QNetworkReply *reply, Error code)
 
 bool OrnClient::authorised() const
 {
-    return !d_ptr->userToken.isNull() && d_ptr->userCookie.isValid();
+    return !d_ptr->userToken.isNull() && this->cookieIsValid();
 }
 
 bool OrnClient::cookieIsValid() const
 {
-    QString cookieExpireKey(USER_COOKIE_EXPIRE);
-    return d_ptr->settings->contains(cookieExpireKey) &&
-           d_ptr->settings->value(cookieExpireKey).toDateTime() > QDateTime::currentDateTime();
+    auto expirationDate = d_ptr->userCookie.expirationDate();
+    return expirationDate.isValid() && expirationDate > QDateTime::currentDateTime();
 }
 
 quint32 OrnClient::userId() const
@@ -306,11 +303,9 @@ void OrnClient::login(const QString &username, const QString &password)
         {
             auto jsonObject = jsonDoc.object();
 
-            auto cookie = cookieVariant.value<QList<QNetworkCookie>>().first();
+            d_ptr->userCookie = cookieVariant.value<QList<QNetworkCookie>>().first();
             auto settings = d_ptr->settings;
-            d_ptr->userCookie = cookie.toRawForm(QNetworkCookie::NameAndValueOnly);
-            settings->setValue(USER_COOKIE, d_ptr->userCookie);
-            settings->setValue(USER_COOKIE_EXPIRE, cookie.expirationDate());
+            settings->setValue(USER_COOKIE, d_ptr->userCookie.toRawForm());
 
             d_ptr->userToken = OrnUtils::toString(jsonObject[QStringLiteral("token")]).toUtf8();
             settings->setValue(USER_TOKEN, d_ptr->userToken);
@@ -347,7 +342,7 @@ void OrnClient::logout()
     if (this->authorised())
     {
         d_ptr->settings->remove(QStringLiteral("user"));
-        d_ptr->userCookie.clear();
+        d_ptr->userCookie = QNetworkCookie();
         d_ptr->userToken.clear();
         this->setCookieTimer();
         emit this->authorisedChanged();
@@ -465,15 +460,15 @@ void OrnClient::setCookieTimer()
     auto cookieTimer = d_ptr->cookieTimer;
     disconnect(cookieTimer, &QTimer::timeout, 0, 0);
     cookieTimer->stop();
-    QString cookieExpireKey(USER_COOKIE_EXPIRE);
-    if (d_ptr->settings->contains(cookieExpireKey))
+    auto expirationDate = d_ptr->userCookie.expirationDate();
+    if (expirationDate.isValid())
     {
-        auto msec_to_expiry = QDateTime::currentDateTime().msecsTo(
-                    d_ptr->settings->value(cookieExpireKey).toDateTime());
-        if (msec_to_expiry > 86400000)
+        constexpr qint64 msec_day = 24 * 60 * 60 * 1000; // one day
+        auto msec_to_expiry = QDateTime::currentDateTime().msecsTo(expirationDate);
+        if (msec_to_expiry > msec_day)
         {
             connect(cookieTimer, &QTimer::timeout, this, &OrnClient::dayToExpiry);
-            cookieTimer->start(msec_to_expiry - 86400000);
+            cookieTimer->start(msec_to_expiry - msec_day);
         }
         else if (msec_to_expiry > 0)
         {

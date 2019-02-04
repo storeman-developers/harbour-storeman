@@ -3,6 +3,7 @@
 
 #include <QSet>
 #include <QVariant>
+#include <QNetworkCookie>
 
 class QSettings;
 class QTimer;
@@ -19,8 +20,8 @@ struct OrnClientPrivate
     QNetworkAccessManager *nam;
     QSet<quint32> bookmarks;
     QByteArray lang;
-    QVariant userCookie;
     QByteArray userToken;
+    QNetworkCookie userCookie;
 
     static OrnClient *instance;
 
