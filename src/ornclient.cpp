@@ -28,6 +28,7 @@
 #define USER_MAIL           QStringLiteral("user/mail")
 #define USER_CREATED        QStringLiteral("user/created")
 #define USER_PICTURE        QStringLiteral("user/picture/url")
+#define USER_PUBLISHER      QStringLiteral("user/publisher")
 
 #define APPLICATION_JSON    QByteArrayLiteral("application/json")
 
@@ -83,6 +84,11 @@ OrnClientPrivate::~OrnClientPrivate()
     }
 }
 
+void OrnClientPrivate::removeUser()
+{
+    settings->remove(QStringLiteral("user"));
+}
+
 void OrnClientPrivate::prepareComment(QJsonObject &object, const QString &body)
 {
     QJsonObject bodyObject;
@@ -116,6 +122,21 @@ OrnClient::OrnClient(QObject *parent)
 #else
             this->processReply(reply);
 #endif
+            // NOTE: Remove this code in future
+            QString publisherKey(USER_PUBLISHER);
+            if (this->authorised() && !d_ptr->settings->contains(publisherKey))
+            {
+                auto uid = QString::number(this->userId());
+                auto request2 = this->apiRequest(QStringLiteral("users/").append(uid));
+                auto reply2 = d_ptr->nam->get(request2);
+                connect(reply2, &QNetworkReply::finished, this, [this, reply2, publisherKey]
+                {
+                    auto jsonObject = this->processReply(reply2).object();
+                    jsonObject = jsonObject[QStringLiteral("user")].toObject();
+                    jsonObject = jsonObject[QStringLiteral("roles")].toObject();
+                    d_ptr->settings->setValue(publisherKey, jsonObject.contains(QChar('4')));
+                });
+            }
         });
     }
     // NOTE: Remove this code in future
@@ -123,7 +144,7 @@ OrnClient::OrnClient(QObject *parent)
     {
         QString usernameKey(USER_NAME);
         auto username = d_ptr->settings->value(usernameKey);
-        d_ptr->settings->remove(QStringLiteral("user"));
+        d_ptr->removeUser();
         // Save the last username to simplify re-login
         d_ptr->settings->setValue(usernameKey, username);
         d_ptr->userCookie = QNetworkCookie();
@@ -202,7 +223,7 @@ QJsonDocument OrnClient::processReply(QNetworkReply *reply, Error code)
         {
             QString usernameKey(USER_NAME);
             auto username = d_ptr->settings->value(usernameKey);
-            d_ptr->settings->remove(QStringLiteral("user"));
+            d_ptr->removeUser();
             // Save the last username to simplify re-login
             d_ptr->settings->setValue(usernameKey, username);
             d_ptr->userCookie = QNetworkCookie();
@@ -229,6 +250,11 @@ bool OrnClient::cookieIsValid() const
 {
     auto expirationDate = d_ptr->userCookie.expirationDate();
     return expirationDate.isValid() && expirationDate > QDateTime::currentDateTime();
+}
+
+bool OrnClient::isPublisher() const
+{
+    return d_ptr->settings->value(USER_PUBLISHER).toBool();
 }
 
 quint32 OrnClient::userId() const
@@ -282,7 +308,7 @@ bool OrnClient::removeBookmark(quint32 appId)
 void OrnClient::login(const QString &username, const QString &password)
 {
     // Remove old credentials and stop timer
-    d_ptr->settings->remove(QStringLiteral("user"));
+    d_ptr->removeUser();
     this->setCookieTimer();
 
     QNetworkRequest request;
@@ -303,6 +329,7 @@ void OrnClient::login(const QString &username, const QString &password)
         {
             auto jsonObject = jsonDoc.object();
 
+            d_ptr->removeUser();
             d_ptr->userCookie = cookieVariant.value<QList<QNetworkCookie>>().first();
             auto settings = d_ptr->settings;
             settings->setValue(USER_COOKIE, d_ptr->userCookie.toRawForm());
@@ -317,6 +344,9 @@ void OrnClient::login(const QString &username, const QString &password)
             settings->setValue(USER_CREATED, OrnUtils::toDateTime(jsonObject[QStringLiteral("created")]));
             settings->setValue(USER_PICTURE, jsonObject[QStringLiteral("picture")]
                     .toObject()[QStringLiteral("url")].toString());
+            auto roles = jsonObject[QStringLiteral("roles")].toObject();
+            // Role `4` stands for `publisher`
+            settings->setValue(USER_PUBLISHER, roles.contains(QChar('4')));
 
             QString undKey(QStringLiteral("und"));
             QString valueKey(QStringLiteral("value"));

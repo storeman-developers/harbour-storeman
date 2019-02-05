@@ -31,6 +31,7 @@ Page {
                           qsTrId("orn-login-menu-item")
                 menu: ContextMenu {
                     MenuItem {
+                        visible: OrnClient.isPublisher
                         //% "My applications"
                         text: qsTrId("orn-myapps")
                         onClicked: pageStack.push(Qt.resolvedUrl("UserAppsPage.qml"), {

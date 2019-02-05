@@ -15,6 +15,8 @@ struct OrnClientPrivate
     explicit OrnClientPrivate(OrnClient *q_ptr);
     virtual ~OrnClientPrivate();
 
+    void removeUser();
+
     QSettings *settings;
     QTimer *cookieTimer;
     QNetworkAccessManager *nam;
