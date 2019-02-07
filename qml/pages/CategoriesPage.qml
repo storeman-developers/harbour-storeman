@@ -6,6 +6,16 @@ import "../components"
 Page {
     allowedOrientations: defaultAllowedOrientations
 
+    onStatusChanged: {
+        if (status === PageStatus.Active) {
+            categoriesList.model = categoriesModel
+        }
+    }
+
+    OrnCategoriesModel {
+        id: categoriesModel
+    }
+
     Connections {
         target: networkManager
         onStateChanged: {
@@ -25,10 +35,6 @@ Page {
             title: qsTrId("orn-categories")
         }
 
-        model: OrnCategoriesModel {
-            id: categoriesModel
-        }
-
         delegate: MoreButton {
             height: Theme.itemSizeExtraSmall
             text: model.name
@@ -41,7 +47,12 @@ Page {
                                       })
         }
 
-        VerticalScrollDecorator { }
+        PullDownMenu {
+            MenuSearchItem {}
+            MenuStatusLabel {}
+        }
+
+        VerticalScrollDecorator {}
 
         BusyIndicator {
             size: BusyIndicatorSize.Large

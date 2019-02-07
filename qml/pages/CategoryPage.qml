@@ -38,10 +38,12 @@ Page {
                 model: categoryModel
             }
 
-            MenuStatusLabel { }
+            MenuSearchItem {}
+
+            MenuStatusLabel {}
         }
 
-        VerticalScrollDecorator { }
+        VerticalScrollDecorator {}
 
         BusyIndicator {
             size: BusyIndicatorSize.Large

@@ -47,7 +47,7 @@ ApplicationWindow
             var path = match[1]
             var appid = _resolvedLinks[path]
             if (appid) {
-                pageStack.push(Qt.resolvedUrl("pages/ApplicationPage.qml"), {
+                pageStack.push(Qt.resolvedUrl("pages/AppPage.qml"), {
                                    appId: appid,
                                    returnToUser: false
                                })
@@ -65,7 +65,7 @@ ApplicationWindow
                         if (match) {
                             appid = match[1]
                             // Load the application page
-                            pageStack.push(Qt.resolvedUrl("pages/ApplicationPage.qml"), {
+                            pageStack.push(Qt.resolvedUrl("pages/AppPage.qml"), {
                                                appId: appid,
                                                returnToUser: false
                                            })
@@ -85,7 +85,7 @@ ApplicationWindow
         }
     }
 
-    initialPage: Component { RecentAppsPage { } }
+    initialPage: Component { MainPage { } }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: defaultAllowedOrientations
 

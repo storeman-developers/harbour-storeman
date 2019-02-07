@@ -4,8 +4,15 @@ import harbour.orn 1.0
 import "../components"
 
 Page {
+    property OrnBookmarksModel model
+
     id: page
     allowedOrientations: defaultAllowedOrientations
+
+    Connections {
+        target: model
+        onRowsInserted: proxyModel.sort(Qt.AscendingOrder)
+    }
 
     SilicaListView {
         id: bookmarksList
@@ -14,10 +21,7 @@ Page {
             id: proxyModel
             sortRole: OrnBookmarksModel.SortRole
             sortCaseSensitivity: Qt.CaseInsensitive
-            sourceModel: OrnBookmarksModel {
-                id: bookmarksModel
-                onRowsInserted: proxyModel.sort(Qt.AscendingOrder)
-            }
+            sourceModel: page.model
         }
 
         header: PageHeader {
@@ -33,28 +37,30 @@ Page {
             }
         }
 
-        delegate: AppListDelegate { }
+        delegate: AppListDelegate {}
 
         PullDownMenu {
             id: menu
 
             RefreshMenuItem {
-                model: bookmarksModel
+                model: page.model
             }
 
-            MenuStatusLabel { }
+            MenuSearchItem {}
+
+            MenuStatusLabel {}
         }
 
-        VerticalScrollDecorator { }
+        VerticalScrollDecorator {}
 
         BusyIndicator {
             size: BusyIndicatorSize.Large
             anchors.centerIn: parent
-            running: bookmarksModel.fetching
+            running: page.model.fetching
         }
 
         ViewPlaceholder {
-            enabled: !bookmarksModel.fetching && bookmarksList.count === 0
+            enabled: !page.model.fetching && bookmarksList.count === 0
             //% "Your bookmarked applications will be shown here"
             text: qsTrId("orn-no-bookmarks")
         }

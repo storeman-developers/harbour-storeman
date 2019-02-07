@@ -22,7 +22,6 @@ class OrnPm : public QObject
 
     Q_PROPERTY(bool initialised READ initialised NOTIFY initialisedChanged)
     Q_PROPERTY(QVariantList operations READ operations NOTIFY operationsChanged)
-    Q_PROPERTY(QString deviceModel READ deviceModel CONSTANT)
     Q_PROPERTY(bool updatesAvailable READ updatesAvailable NOTIFY updatablePackagesChanged)
 
 public:
@@ -94,8 +93,6 @@ public:
 
     bool initialised() const;
     QVariantList operations() const;
-
-    QString deviceModel() const;
 
     bool updatesAvailable() const;
     Q_INVOKABLE QStringList updatablePackages() const;

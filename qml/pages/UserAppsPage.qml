@@ -46,7 +46,9 @@ Page {
                 model: appsModel
             }
 
-            MenuStatusLabel { }
+            MenuSearchItem {}
+
+            MenuStatusLabel {}
         }
 
         VerticalScrollDecorator {}

@@ -155,14 +155,6 @@ QVariantList OrnPm::operations() const
     return res;
 }
 
-QString OrnPm::deviceModel() const
-{
-    // Ssu::DeviceModel = 1
-    qDebug().nospace() << "Calling " << d_ptr->ssuInterface << "->" SSU_METHOD_DISPLAYNAME "(1)";
-    auto call = d_ptr->ssuInterface->call(QDBus::BlockWithGui, QStringLiteral(SSU_METHOD_DISPLAYNAME), 1);
-    return call.arguments().first().toString();
-}
-
 bool OrnPm::updatesAvailable() const
 {
     return d_ptr->updatablePackages.size();

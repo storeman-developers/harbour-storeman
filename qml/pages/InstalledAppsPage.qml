@@ -28,7 +28,7 @@ Page {
         }
 
         header: PageHeader {
-            //% "Installed Applications"
+            //% "Installed applications"
             title: qsTrId("orn-installed-apps")
             //% "Only from enabled repositories"
             description: qsTrId("orn-installed-apps-description")

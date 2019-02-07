@@ -8,7 +8,6 @@
 
 #define SSU_SERVICE            QStringLiteral("org.nemo.ssu")
 #define SSU_PATH               QStringLiteral("/org/nemo/ssu")
-#define SSU_METHOD_DISPLAYNAME "displayName"
 #define SSU_METHOD_ADDREPO     "addRepo"
 #define SSU_METHOD_MODIFYREPO  "modifyRepo"
 

@@ -24,7 +24,7 @@ ListItem {
             }
             pageStack.pop(p)
         } else {
-            pageStack.push(Qt.resolvedUrl("../pages/ApplicationPage.qml"), {
+            pageStack.push(Qt.resolvedUrl("../pages/AppPage.qml"), {
                                appId: appId,
                                returnToUser: returnToUser
                            })

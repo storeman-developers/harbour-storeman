@@ -4,46 +4,79 @@ import harbour.orn 1.0
 import "../components"
 
 
-Dialog {
+Page {
+    id: page
     allowedOrientations: defaultAllowedOrientations
 
-    onAccepted: {
-        Storeman.smartUpdate = smartUpdateSwitch.checked
-        Storeman.showUpdatesNotification = showUpdatesNotificationSwitch.checked
-        Storeman.updateInterval = checkUpdatesIntervalButton.interval
-        Storeman.checkForUpdates = checkForUpdatesSwitch.checked
-    }
-
-    DialogHeader {
-        id: header
-        //% "Save"
-        acceptText: qsTrId("orn-save")
+    onStatusChanged: {
+        if (status === PageStatus.Deactivating) {
+            Storeman.smartUpdate = smartUpdateSwitch.checked
+            Storeman.showUpdatesNotification = showUpdatesNotificationSwitch.checked
+            Storeman.updateInterval = checkUpdatesIntervalButton.interval
+            Storeman.checkForUpdates = checkForUpdatesSwitch.checked
+        }
     }
 
     SilicaFlickable {
-        anchors {
-            left: parent.left
-            right: parent.right
-            top: header.bottom
-            bottom: parent.bottom
-        }
+        anchors.fill: parent
         contentHeight: content.height
 
         Column {
             id: content
             width: parent.width
 
-            Label {
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                    margins: Theme.horizontalPageMargin
-                }
-                color: Theme.highlightColor
-                font.pixelSize: Theme.fontSizeExtraLarge
-                horizontalAlignment: Qt.AlignRight
+            PageHeader {
                 //% "Settings"
-                text: qsTrId("orn-settings")
+                title: qsTrId("orn-settings")
+            }
+
+            ListMenuItem {
+                iconSource: OrnClient.userIconSource ?
+                                OrnClient.userIconSource : "image://theme/icon-m-person"
+                text: OrnClient.authorised ?
+                          //% "Logged in as %0"
+                          qsTrId("orn-loggedin-menu-item").arg(OrnClient.userName) :
+                          //% "Log in to OpenRepos.net"
+                          qsTrId("orn-login-menu-item")
+                menu: ContextMenu {
+                    MenuItem {
+                        visible: OrnClient.isPublisher
+                        //% "My applications"
+                        text: qsTrId("orn-myapps")
+                        onClicked: pageStack.push(Qt.resolvedUrl("UserAppsPage.qml"), {
+                                                      userId: OrnClient.userId,
+                                                      userName: OrnClient.userName,
+                                                      userIcon: OrnClient.userIconSource
+                                                  })
+                    }
+
+                    MenuItem {
+                        //: Menu item
+                        //% "Log out"
+                        text: qsTrId("orn-logout-action")
+                        onClicked: {
+                            if (OrnClient.authorised) {
+                                //: Remorse text
+                                //% "Logging out"
+                                Remorse.popupAction(page, qsTrId("orn-logout-remorse"), OrnClient.logout)
+                            }
+                        }
+                    }
+                }
+
+                onClicked: {
+                    if (OrnClient.authorised) {
+                        openMenu()
+                    } else if (networkManager.online) {
+                        pageStack.push(Qt.resolvedUrl("AuthorisationDialog.qml"))
+                    }
+                }
+            }
+
+            ListMenuItem {
+                iconSource: "image://theme/icon-m-backup"
+                text: qsTrId("orn-backups")
+                onClicked: pageStack.push(Qt.resolvedUrl("BackupsPage.qml"))
             }
 
             SectionHeader {

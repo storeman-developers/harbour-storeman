@@ -93,8 +93,9 @@ OTHER_FILES += \
     qml/harbour-storeman.qml \
     qml/StoremanStyles.qml \
     qml/cover/CoverPage.qml \
+    qml/pages/MainPage.qml \
     qml/pages/RecentAppsPage.qml \
-    qml/pages/ApplicationPage.qml \
+    qml/pages/AppPage.qml \
     qml/pages/RepositoriesPage.qml \
     qml/pages/ScreenshotPage.qml \
     qml/pages/VotingPage.qml \
@@ -109,7 +110,6 @@ OTHER_FILES += \
     qml/pages/DevelopmentPage.qml \
     qml/pages/CategoriesPage.qml \
     qml/pages/CategoryPage.qml \
-    qml/pages/DevicePage.qml \
     qml/pages/AuthorisationDialog.qml \
     qml/pages/InstalledAppsPage.qml \
     qml/pages/BookmarksPage.qml \
@@ -129,7 +129,9 @@ OTHER_FILES += \
     qml/components/AppInfoLabel.qml \
     qml/components/ScreenshotsBox.qml \
     qml/components/MoreButton.qml \
-    qml/components/ApplicationPageMenu.qml \
+    qml/components/MainPageButton.qml \
+    qml/components/MainPageAppGridDelegate.qml \
+    qml/components/AppPageMenu.qml \
     qml/components/RefreshMenuItem.qml \
     qml/components/ParticipantsDelegate.qml \
     qml/components/CommentDelegate.qml \
@@ -139,6 +141,7 @@ OTHER_FILES += \
     qml/components/ListMenuItem.qml \
     qml/components/BookmarkButton.qml \
     qml/components/MenuStatusLabel.qml \
+    qml/components/MenuSearchItem.qml \
     qml/components/StoremanTapHint.qml \
     qml/components/StoremanHintLabel.qml \
     qml/components/StoremanTouchInteractionHint.qml \

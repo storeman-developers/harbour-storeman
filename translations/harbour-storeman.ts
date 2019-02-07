@@ -411,10 +411,6 @@
         <source>Edit</source>
         <translation>Edit</translation>
     </message>
-    <message id="orn-thisdevice">
-        <source>This Device</source>
-        <translation>This Device</translation>
-    </message>
     <message id="orn-login-menu-item">
         <source>Log in to OpenRepos.net</source>
         <translation>Log in to OpenRepos.net</translation>
@@ -512,8 +508,8 @@
         <translation>Disabling all</translation>
     </message>
     <message id="orn-installed-apps">
-        <source>Installed Applications</source>
-        <translation>Installed Applications</translation>
+        <source>Installed applications</source>
+        <translation>Installed applications</translation>
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
@@ -945,10 +941,6 @@
     <message id="orn-repo-suggestion">
         <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
         <translation>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</translation>
-    </message>
-    <message id="orn-save">
-        <source>Save</source>
-        <translation>Save</translation>
     </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>

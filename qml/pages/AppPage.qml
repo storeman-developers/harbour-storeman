@@ -82,7 +82,7 @@ Page {
         visible: false
         contentHeight: content.height
 
-        ApplicationPageMenu {
+        AppPageMenu {
             id: pageMenu
         }
 
