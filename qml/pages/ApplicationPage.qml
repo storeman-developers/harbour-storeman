@@ -46,8 +46,7 @@ Page {
                 var shlObj = shlComp.createObject(page, {
                     hint: shObj,
                     //% "Tap to rate the application"
-                    text: qsTrId("orn-hint-rating"),
-                    "anchors.bottom": page.bottom
+                    text: qsTrId("orn-hint-rating")
                 })
 
                 var secondHint = false

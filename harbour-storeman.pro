@@ -141,6 +141,7 @@ OTHER_FILES += \
     qml/components/MenuStatusLabel.qml \
     qml/components/StoremanTapHint.qml \
     qml/components/StoremanHintLabel.qml \
+    qml/components/StoremanTouchInteractionHint.qml \
     qml/components/TagDelegate.qml \
     qml/components/DisappearAnimation.qml \
     qml/components/BackupLabel.qml \

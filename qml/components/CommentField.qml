@@ -137,17 +137,16 @@ Column {
 
         onVisibleChanged: {
             if (visible && Storeman.showHint(Storeman.CommentFieldHint)) {
-                var shObj = Qt.createQmlObject('import Sailfish.Silica 1.0; TouchInteractionHint {direction: TouchInteraction.Left}',
-                                               tagsPanel)
+                var shComp = Qt.createComponent(Qt.resolvedUrl("StoremanTouchInteractionHint.qml"))
+                var shObj = shComp.createObject(tagsPanel)
 
                 var shlComp = Qt.createComponent(Qt.resolvedUrl("StoremanHintLabel.qml"))
                 var shlObj = shlComp.createObject(page, {
-                                                      hint: shObj,
-                                                      //% "Swipe to see all the tag buttons"
-                                                      text: qsTrId("orn-hint-commentfield"),
-                                                      invert: true,
-                                                      height: Screen.height / 2.5
-                                                  })
+                    hint: shObj,
+                    //% "Swipe to see all the tag buttons"
+                    text: qsTrId("orn-hint-commentfield"),
+                    invert: true
+                })
 
                 shlObj.finished.connect(function() {
                     Storeman.setHintShowed(Storeman.CommentFieldHint)

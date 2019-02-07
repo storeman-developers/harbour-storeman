@@ -4,20 +4,24 @@ import Sailfish.Silica 1.0
 Image {
     property alias running: blinkAnimation.running
 
+    function start() {
+        blinkAnimation.start()
+    }
+
+    function stop() {
+        blinkAnimation.stop()
+    }
+
     id: root
     anchors.centerIn: parent
     source: "image://theme/graphic-gesture-hint?" + Theme.primaryColor
     opacity: 0.0
 
-    function start() {
-        blinkAnimation.start()
-    }
-
     onRunningChanged: if (!running) opacity = 0.0
 
     SequentialAnimation {
         id: blinkAnimation
-        loops: 3
+        loops: Animation.Infinite
 
         OpacityAnimator {
             target: root

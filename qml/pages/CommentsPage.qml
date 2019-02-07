@@ -30,11 +30,11 @@ Page {
 
                 var shlComp = Qt.createComponent(Qt.resolvedUrl("../components/StoremanHintLabel.qml"))
                 var shlObj = shlComp.createObject(page, {
-                                                      hint: shObj,
-                                                      //% "Tap to navigate to the replied comment"
-                                                      text: qsTrId("orn-hint-commentdelegate"),
-                                                      invert: true
-                                                  })
+                    hint: shObj,
+                    //% "Tap to navigate to the replied comment"
+                    text: qsTrId("orn-hint-commentdelegate"),
+                    invert: true
+                })
 
                 shlObj.finished.connect(function() {
                     _hintMode = false

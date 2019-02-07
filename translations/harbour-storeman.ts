@@ -1014,5 +1014,9 @@
         <source>My applications</source>
         <translation>My applications</translation>
     </message>
+    <message id="orn-hint-close">
+        <source>Tap againt to close the hint</source>
+        <translation>Tap againt to close the hint</translation>
+    </message>
 </context>
 </TS>
