@@ -4,7 +4,7 @@ import harbour.orn 1.0
 import "../components"
 
 Page {
-    property bool _working: false
+    property bool _working: true
     property var _knownAuthors: ({})
 
     function getAuthorId(name) {
