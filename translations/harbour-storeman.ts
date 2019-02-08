@@ -1007,8 +1007,8 @@
         <translation>My applications</translation>
     </message>
     <message id="orn-hint-close">
-        <source>Tap againt to close the hint</source>
-        <translation>Tap againt to close the hint</translation>
+        <source>Tap again to close the hint</source>
+        <translation>Tap again to close the hint</translation>
     </message>
 </context>
 </TS>

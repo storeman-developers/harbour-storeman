@@ -35,7 +35,7 @@ MouseArea {
             bottom: invert ? undefined : parent.bottom
         }
         opacity: hint && hint.running ? 1.0 : 0.0
-        //% "Tap againt to close the hint"
+        //% "Tap again to close the hint"
         text: _doClose ? qsTrId("orn-hint-close") : parent.text
 
         Behavior on opacity {
