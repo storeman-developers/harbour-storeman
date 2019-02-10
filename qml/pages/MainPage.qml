@@ -80,7 +80,7 @@ Page {
             Grid {
                 id: recentGrid
                 width: parent.width
-                height: gridHeight
+                height: networkManager.online ? gridHeight : 0.0
                 columns: gridColumns
                 rows: gridRows
                 opacity: height === gridHeight ? 1.0 : 0.0
