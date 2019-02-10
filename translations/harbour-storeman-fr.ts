@@ -175,7 +175,7 @@
     </message>
     <message id="orn-cat-news-info">
         <source>News &amp; info</source>
-        <translation>Actualité</translation>
+        <translation>Actualités</translation>
     </message>
     <message id="orn-cat-patches">
         <source>Patches</source>
@@ -203,7 +203,7 @@
     </message>
     <message id="orn-cat-utilities">
         <source>Utilities</source>
-        <translation>Utilitaire</translation>
+        <translation>Utilitaires</translation>
     </message>
     <message id="orn-cat-games">
         <source>Games</source>
@@ -411,10 +411,6 @@
         <source>Edit</source>
         <translation>Modifier</translation>
     </message>
-    <message id="orn-thisdevice">
-        <source>This Device</source>
-        <translation>Cet appareil</translation>
-    </message>
     <message id="orn-login-menu-item">
         <source>Log in to OpenRepos.net</source>
         <translation>Se connecter à OpenRepos.net</translation>
@@ -512,7 +508,7 @@
         <translation>Désactivation générale</translation>
     </message>
     <message id="orn-installed-apps">
-        <source>Installed Applications</source>
+        <source>Installed applications</source>
         <translation>Applications installées</translation>
     </message>
     <message id="orn-bookmarks-added">
@@ -663,17 +659,13 @@
         <source>Login to comment</source>
         <translation>Se connecter pour laisser un commentaire</translation>
     </message>
-    <message id="orn-backup-title">
-        <source>Backup to a file</source>
-        <translation>Sauvegarde sur fichier</translation>
-    </message>
     <message id="orn-backup">
         <source>Backup</source>
         <translation>Sauvegarde</translation>
     </message>
     <message id="orn-backup-hint">
-        <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
-        <translation>La sauvegarde permet d&apos;enregistrer les dépôts, applications ainsi que les favoris dans le cadre d&apos;une restauration future (suite à une réinitialisation de l&apos;appareil, par exemple). Il s&apos;agit d&apos;un fichier local enregistré sur &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention !&lt;/b&gt; Pensez à copier vos sauvegardes dans un emplacement sûr avant d&apos;entamer une réinitialisation de l&apos;appareil : une carte SD, un disque dur externe, un serveur Cloud...</translation>
+        <source>&lt;h2&gt;Backup to a file&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.&lt;/p&gt;</source>
+        <translation>&lt;h2&gt;Sauvegarder dans un fichier&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;La sauvegarde vous permet d&apos;enregistrer vos répertoires OpenRepos, les applications installées et les favoris pour les restaurer plus tard (par exemple après un factory reset). Une sauvegarde est un fichier local qui est enregistré dans le répertoire&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention !&lt;/b&gt; Vous devriez copier vos sauvegardes manuellement dans un emplacement sûre avant d&apos;effectuer un factory reset. Il peut s&apos;agir de votre carte SD, d&apos;un périphérique externe, de stockage en nuage ou autre chose.&lt;/p&gt;</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -876,7 +868,7 @@
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>La vie, l&apos;univers, tout le reste... Quelle est la réponse, la seule réponse ?</translation>
+        <translation>La vie, l&apos;univers, tout le reste... Quelle est la réponse, la seule véritable réponse ?</translation>
     </message>
     <message id="orn-hint-commentdelegate-created">
         <source>7.5 million years ago</source>
@@ -950,10 +942,6 @@
         <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
         <translation>&lt;h3&gt;Activer le dépôt de Storeman&lt;/h3&gt;&lt;p&gt;Pour maintenir Storeman à jour, vous devez activer son dépôt sur votre téléphone, comme vous le feriez pour n&apos;importe quelle appli provenant d&apos;OpenRepos.&lt;/p&gt;&lt;p&gt;Souhaitez-vous le faire sans plus attendre ?&lt;/p&gt;</translation>
     </message>
-    <message id="orn-save">
-        <source>Save</source>
-        <translation>Sauvegarder</translation>
-    </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
         <translation>Rechercher des mises à jour</translation>
@@ -996,6 +984,42 @@
     </message>
     <message id="orn-bad-appid">
         <source>Invalid package ID %1</source>
+        <translation>Paquet invalide - ID %1</translation>
+    </message>
+    <message id="orn-backup-filenameph">
+        <source>A file name for backup</source>
+        <translation>Un nom de fichier pour la sauvegarde</translation>
+    </message>
+    <message id="orn-file-exists">
+        <source>File already exists</source>
+        <translation>Le fichier existe déjà</translation>
+    </message>
+    <message id="orn-backup-items">
+        <source>What to backup</source>
+        <translation>Quoi sauvegarder</translation>
+    </message>
+    <message id="orn-backup-apps">
+        <source>Installed applications</source>
+        <translation>Applications installées</translation>
+    </message>
+    <message id="orn-myapps">
+        <source>My applications</source>
+        <translation>Mes applications</translation>
+    </message>
+    <message id="orn-hint-close">
+        <source>Tap again to close the hint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-mainpage">
+        <source>Main page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-show-recent-switch">
+        <source>Show recenty updated on start</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-show-recent-switch-descr">
+        <source>Switch to the page of recently updated packages on start</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

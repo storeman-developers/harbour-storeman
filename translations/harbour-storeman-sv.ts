@@ -411,10 +411,6 @@
         <source>Edit</source>
         <translation>Redigera</translation>
     </message>
-    <message id="orn-thisdevice">
-        <source>This Device</source>
-        <translation>Denna enhet</translation>
-    </message>
     <message id="orn-login-menu-item">
         <source>Log in to OpenRepos.net</source>
         <translation>Logga in på OpenRepos.net</translation>
@@ -512,8 +508,8 @@
         <translation>Inaktiverar alla</translation>
     </message>
     <message id="orn-installed-apps">
-        <source>Installed Applications</source>
-        <translation>Installerade applikationer</translation>
+        <source>Installed applications</source>
+        <translation>Installerade appar</translation>
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
@@ -663,17 +659,13 @@
         <source>Login to comment</source>
         <translation>Logga in för att kommentera</translation>
     </message>
-    <message id="orn-backup-title">
-        <source>Backup to a file</source>
-        <translation>Säkerhetskopiera till en fil</translation>
-    </message>
     <message id="orn-backup">
         <source>Backup</source>
         <translation>Säkerhetskopiera</translation>
     </message>
     <message id="orn-backup-hint">
-        <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
-        <translation>Säkerhetskopiering låter dig spara dina aktuella OpenRepos-förråd, installerade appar, bokmärken och att återställa dem senare (t.ex. efter en fabriksåterställning). Säkerhetskopian är en lokal fil som sparas i&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;. &lt;br /&gt;&lt;br /&gt;&lt;b&gt;OBS!&lt;/b&gt; Du måste kopiera dina säkerhetskopior till en säker plats, innan du utför en fabriksåterställning. Det kan vara ditt SD-kort, en extern enhet, molnlagring eller något annat.</translation>
+        <source>&lt;h2&gt;Backup to a file&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.&lt;/p&gt;</source>
+        <translation>&lt;h2&gt;Säkerhetskopiera till en fil&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Säkerhetskopieringen låter dig spara dina aktuella OpenRepos-förråd, installerade appar, bokmärken och att återställa dem senare (t.ex. efter en fabriksåterställning). Säkerhetskopian är en lokal fil som sparas i&lt;br /&gt;&lt;i&gt;~/Documents/Storeman.&lt;/i&gt;&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;OBS! &lt;/b&gt; Du måste manuellt kopiera dina säkerhetskopior till en säker plats, innan du utför en fabriksåterställning. Det kan vara ditt SD-kort, en extern enhet, molnlagring eller något annat.&lt;/p&gt;</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -950,10 +942,6 @@
         <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
         <translation>&lt;h3&gt;Aktivera Storeman-förrådet&lt;/h3&gt; &lt;p&gt;för att alltid få senaste version av Storeman. Liksom för andra appar, behöver du aktivera detta OpenRepos-förråd.&lt;/p&gt; &lt;p&gt;Vill du göra det nu?&lt;/p&gt;</translation>
     </message>
-    <message id="orn-save">
-        <source>Save</source>
-        <translation>Spara</translation>
-    </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
         <translation>Sök efter uppdateringar</translation>
@@ -997,6 +985,42 @@
     <message id="orn-bad-appid">
         <source>Invalid package ID %1</source>
         <translation>Ogiltigt paket-ID %1</translation>
+    </message>
+    <message id="orn-backup-filenameph">
+        <source>A file name for backup</source>
+        <translation>Ett filnamn för säkerhetskopian</translation>
+    </message>
+    <message id="orn-file-exists">
+        <source>File already exists</source>
+        <translation>Filen finns redan</translation>
+    </message>
+    <message id="orn-backup-items">
+        <source>What to backup</source>
+        <translation>Vad som skall säkerhetskopieras</translation>
+    </message>
+    <message id="orn-backup-apps">
+        <source>Installed applications</source>
+        <translation>Installerade appar</translation>
+    </message>
+    <message id="orn-myapps">
+        <source>My applications</source>
+        <translation>Mina appar</translation>
+    </message>
+    <message id="orn-hint-close">
+        <source>Tap again to close the hint</source>
+        <translation>Tryck igen för att stänga tipset</translation>
+    </message>
+    <message id="orn-mainpage">
+        <source>Main page</source>
+        <translation>Huvudsida</translation>
+    </message>
+    <message id="orn-show-recent-switch">
+        <source>Show recenty updated on start</source>
+        <translation>Visa nyligen uppdaterade vid start</translation>
+    </message>
+    <message id="orn-show-recent-switch-descr">
+        <source>Switch to the page of recently updated packages on start</source>
+        <translation>Växla till sidan med nyligen uppdaterade paket vid start</translation>
     </message>
 </context>
 </TS>

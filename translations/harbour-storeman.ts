@@ -1010,5 +1010,17 @@
         <source>Tap again to close the hint</source>
         <translation>Tap again to close the hint</translation>
     </message>
+    <message id="orn-mainpage">
+        <source>Main page</source>
+        <translation>Main page</translation>
+    </message>
+    <message id="orn-show-recent-switch">
+        <source>Show recenty updated on start</source>
+        <translation>Show recenty updated on start</translation>
+    </message>
+    <message id="orn-show-recent-switch-descr">
+        <source>Switch to the page of recently updated packages on start</source>
+        <translation>Switch to the page of recently updated packages on start</translation>
+    </message>
 </context>
 </TS>

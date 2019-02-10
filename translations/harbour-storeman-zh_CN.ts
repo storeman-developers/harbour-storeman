@@ -98,7 +98,7 @@
     </message>
     <message id="orn-package-installed">
         <source>Package %0 was successfully installed</source>
-        <translation>安装包%0被成功安装</translation>
+        <translation>应用%0安装成功</translation>
     </message>
     <message id="orn-package-removed">
         <source>Package %0 was successfully removed</source>
@@ -409,10 +409,6 @@
         <source>Edit</source>
         <translation>编辑</translation>
     </message>
-    <message id="orn-thisdevice">
-        <source>This Device</source>
-        <translation>本台设备</translation>
-    </message>
     <message id="orn-login-menu-item">
         <source>Log in to OpenRepos.net</source>
         <translation>登录OpenRepos.net</translation>
@@ -510,7 +506,7 @@
         <translation>正在禁用全部</translation>
     </message>
     <message id="orn-installed-apps">
-        <source>Installed Applications</source>
+        <source>Installed applications</source>
         <translation>已安装的应用</translation>
     </message>
     <message id="orn-bookmarks-added">
@@ -661,17 +657,13 @@
         <source>Login to comment</source>
         <translation>登录以评论</translation>
     </message>
-    <message id="orn-backup-title">
-        <source>Backup to a file</source>
-        <translation>备份到一个文件</translation>
-    </message>
     <message id="orn-backup">
         <source>Backup</source>
         <translation>备份</translation>
     </message>
     <message id="orn-backup-hint">
-        <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
-        <translation>备份允许保存你目前的OpenRepos软件源、已安装的应用和收藏夹，以便后面恢复它们（例如恢复出厂设置后）。一个备份是一个储存于&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;目录的文件。&lt;br /&gt;&lt;br /&gt;&lt;b&gt;注意！&lt;/b&gt;在执行恢复重置之前，你应该将你的备份手动复制到一个安全的地方。可能是你的储存卡，外部设备，云储存或其它地方。</translation>
+        <source>&lt;h2&gt;Backup to a file&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.&lt;/p&gt;</source>
+        <translation>&lt;h2&gt;备份到文件&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;备份允许保存你目前的OpenRepos软件源、已安装的应用和收藏夹，以便后面恢复它们（例如恢复出厂设置后）。每个备份是一个储存于&lt;i&gt;~/Documents/Storeman&lt;/i&gt;目录的文件。&lt;br /&gt;&lt;br /&gt;&lt;b&gt;注意！&lt;/b&gt;在执行恢复重置之前，你应该将你的备份手动复制到一个安全的地方。可能是你的储存卡，外部设备，云储存或其它地方。</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -761,7 +753,7 @@
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
         <translation>
-            <numerusform>%n的操作在执行中</numerusform>
+            <numerusform>%n项操作正在执行中</numerusform>
         </translation>
     </message>
     <message id="orn-version-available">
@@ -944,10 +936,6 @@
         <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
         <translation>&lt;h3&gt;启用Storeman仓库&lt;/h3&gt;&lt;p&gt;为使storeman软件源生效以获取最新的storeman版本，你必须像其它软件那样让它的OpenRepos软件源生效&lt;/p&gt;。&lt;p&gt;你想立刻采取行动吗？&lt;/p&gt;</translation>
     </message>
-    <message id="orn-save">
-        <source>Save</source>
-        <translation>保存</translation>
-    </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
         <translation>检查更新</translation>
@@ -986,10 +974,46 @@
     </message>
     <message id="orn-hint-bookmark">
         <source>Tap to bookmark the application</source>
-        <translation>点击以收藏此应用</translation>
+        <translation>点击收藏此应用</translation>
     </message>
     <message id="orn-bad-appid">
         <source>Invalid package ID %1</source>
+        <translation>无效的包ID %1</translation>
+    </message>
+    <message id="orn-backup-filenameph">
+        <source>A file name for backup</source>
+        <translation>一个备份的文件名</translation>
+    </message>
+    <message id="orn-file-exists">
+        <source>File already exists</source>
+        <translation>文件已经存在</translation>
+    </message>
+    <message id="orn-backup-items">
+        <source>What to backup</source>
+        <translation>备份什么</translation>
+    </message>
+    <message id="orn-backup-apps">
+        <source>Installed applications</source>
+        <translation>已安装的应用</translation>
+    </message>
+    <message id="orn-myapps">
+        <source>My applications</source>
+        <translation>我的应用</translation>
+    </message>
+    <message id="orn-hint-close">
+        <source>Tap again to close the hint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-mainpage">
+        <source>Main page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-show-recent-switch">
+        <source>Show recenty updated on start</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-show-recent-switch-descr">
+        <source>Switch to the page of recently updated packages on start</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

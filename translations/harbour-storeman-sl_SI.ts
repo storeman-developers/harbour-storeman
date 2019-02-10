@@ -415,10 +415,6 @@
         <source>Edit</source>
         <translation>Uredi</translation>
     </message>
-    <message id="orn-thisdevice">
-        <source>This Device</source>
-        <translation>Ta naprava</translation>
-    </message>
     <message id="orn-login-menu-item">
         <source>Log in to OpenRepos.net</source>
         <translation>Prijava v OpenRepos.net</translation>
@@ -516,8 +512,8 @@
         <translation>Onemogočam vse</translation>
     </message>
     <message id="orn-installed-apps">
-        <source>Installed Applications</source>
-        <translation>Nameščene aplikacije</translation>
+        <source>Installed applications</source>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
@@ -667,17 +663,13 @@
         <source>Login to comment</source>
         <translation>Za komentiranje se prijavite</translation>
     </message>
-    <message id="orn-backup-title">
-        <source>Backup to a file</source>
-        <translation>Varnostno kopiranje v datoteko</translation>
-    </message>
     <message id="orn-backup">
         <source>Backup</source>
         <translation>Varnostno kopiraj</translation>
     </message>
     <message id="orn-backup-hint">
-        <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
-        <translation>Varnostna kopija vam omogoča shraniti seznam OpenRepos skladišč, nameščene aplikacije in zaznamke v datoteko, iz katere lahko kasneje vse te podatke obnovite (na primer po ponastavitvi naprave). Varnostna kopija je lokalna datoteka, shranjena v mapi&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Pozor!&lt;/b&gt; Pred ponastavljanjem naprave na tovarniške nastavitve  pred tem obvezno shranite vaše varnostne kopije na varno mesto. To je lahko SD kartica, zunanja naprava, oblačna shramba, ali kaj drugega.</translation>
+        <source>&lt;h2&gt;Backup to a file&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -962,10 +954,6 @@
         <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
         <translation>&lt;h3&gt;Prosimo, omogočite skladišče Storeman&lt;/h3&gt;&lt;p&gt;Za namestitev zadnje različice programa Storeman je potrebno dodati OpenRepos skladišče, enako, kot za katerikoli drug program.&lt;/p&gt;&lt;p&gt;Želite dodati skladišče zdaj?&lt;/p&gt;</translation>
     </message>
-    <message id="orn-save">
-        <source>Save</source>
-        <translation>Shrani</translation>
-    </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
         <translation>Preveri posodobitve</translation>
@@ -1001,6 +989,50 @@
     <message id="orn-error-network">
         <source>Network error</source>
         <translation>Omrežna napaka</translation>
+    </message>
+    <message id="orn-hint-bookmark">
+        <source>Tap to bookmark the application</source>
+        <translation>Pritisnite za zaznamek aplikacije</translation>
+    </message>
+    <message id="orn-bad-appid">
+        <source>Invalid package ID %1</source>
+        <translation>Neveljaven ID paketa %1</translation>
+    </message>
+    <message id="orn-backup-filenameph">
+        <source>A file name for backup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-file-exists">
+        <source>File already exists</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-backup-items">
+        <source>What to backup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-backup-apps">
+        <source>Installed applications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-myapps">
+        <source>My applications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-hint-close">
+        <source>Tap again to close the hint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-mainpage">
+        <source>Main page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-show-recent-switch">
+        <source>Show recenty updated on start</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-show-recent-switch-descr">
+        <source>Switch to the page of recently updated packages on start</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

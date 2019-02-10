@@ -413,10 +413,6 @@
         <source>Edit</source>
         <translation>Изменить</translation>
     </message>
-    <message id="orn-thisdevice">
-        <source>This Device</source>
-        <translation>Это устройство</translation>
-    </message>
     <message id="orn-login-menu-item">
         <source>Log in to OpenRepos.net</source>
         <translation>Войти в OpenRepos</translation>
@@ -516,7 +512,7 @@ Storeman не хранит ваш пароль и не передает его �
         <translation>Отключение</translation>
     </message>
     <message id="orn-installed-apps">
-        <source>Installed Applications</source>
+        <source>Installed applications</source>
         <translation>Установленные приложения</translation>
     </message>
     <message id="orn-bookmarks-added">
@@ -667,17 +663,13 @@ Storeman не хранит ваш пароль и не передает его �
         <source>Login to comment</source>
         <translation>Войдите, чтобы комментировать</translation>
     </message>
-    <message id="orn-backup-title">
-        <source>Backup to a file</source>
-        <translation>Сохранить в файл</translation>
-    </message>
     <message id="orn-backup">
         <source>Backup</source>
         <translation>Сохранить</translation>
     </message>
     <message id="orn-backup-hint">
-        <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
-        <translation>Резервное копирование позволяет сохранить текущие репозитории OpenRepos, установленные приложения и закладки, чтобы позже их восстановить (например, после сброса устройства). Резервная копия – это локальный файл, который сохраняется в каталоге&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Внимание!&lt;/b&gt; Перед сбросом устройства необходимо вручную скопировать резервные копии в безопасное место. Это может быть ваша SD-карта, внешнее устройство, облачное хранилище или что-либо еще.</translation>
+        <source>&lt;h2&gt;Backup to a file&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.&lt;/p&gt;</source>
+        <translation>&lt;h2&gt;Сохранить в файл&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Резервное копирование позволяет сохранить текущие репозитории OpenRepos, установленные приложения и закладки, чтобы позже их восстановить (например, после сброса устройства). Резервная копия – это локальный файл, который сохраняется в каталоге&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Внимание!&lt;/b&gt; Перед сбросом устройства необходимо вручную скопировать резервные копии в безопасное место. Это может быть ваша SD-карта, внешнее устройство, облачное хранилище или что-либо еще.&lt;/p&gt;</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -958,10 +950,6 @@ Storeman не хранит ваш пароль и не передает его �
         <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
         <translation>&lt;h3&gt;Включите репозиторий Storeman&lt;/h3&gt;&lt;p&gt;Чтобы получать последние версии Storeman, как и для любого другого приложения, необходимо включить его репозиторий на OpenRepos.&lt;/p&gt;&lt;p&gt;Включить репозиторий сейчас?&lt;/p&gt;</translation>
     </message>
-    <message id="orn-save">
-        <source>Save</source>
-        <translation>Сохранить</translation>
-    </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
         <translation>Проверять обновления</translation>
@@ -1005,6 +993,42 @@ Storeman не хранит ваш пароль и не передает его �
     <message id="orn-bad-appid">
         <source>Invalid package ID %1</source>
         <translation>Несуществующий пакет %1</translation>
+    </message>
+    <message id="orn-backup-filenameph">
+        <source>A file name for backup</source>
+        <translation>Имя файла для сохранения</translation>
+    </message>
+    <message id="orn-file-exists">
+        <source>File already exists</source>
+        <translation>Файл уже существует</translation>
+    </message>
+    <message id="orn-backup-items">
+        <source>What to backup</source>
+        <translation>Что сохранить</translation>
+    </message>
+    <message id="orn-backup-apps">
+        <source>Installed applications</source>
+        <translation>Установленные приложения</translation>
+    </message>
+    <message id="orn-myapps">
+        <source>My applications</source>
+        <translation>Мои приложения</translation>
+    </message>
+    <message id="orn-hint-close">
+        <source>Tap again to close the hint</source>
+        <translation>Коснитесь еще раз, чтобы закрыть подсказку</translation>
+    </message>
+    <message id="orn-mainpage">
+        <source>Main page</source>
+        <translation>Главная страница</translation>
+    </message>
+    <message id="orn-show-recent-switch">
+        <source>Show recenty updated on start</source>
+        <translation>Показывать недавние обновления</translation>
+    </message>
+    <message id="orn-show-recent-switch-descr">
+        <source>Switch to the page of recently updated packages on start</source>
+        <translation>Показывать страницу недавно обновленных пакетов после запуска</translation>
     </message>
 </context>
 </TS>

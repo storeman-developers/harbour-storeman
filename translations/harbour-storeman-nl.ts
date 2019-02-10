@@ -411,10 +411,6 @@
         <source>Edit</source>
         <translation>Bewerken</translation>
     </message>
-    <message id="orn-thisdevice">
-        <source>This Device</source>
-        <translation>Dit apparaat</translation>
-    </message>
     <message id="orn-login-menu-item">
         <source>Log in to OpenRepos.net</source>
         <translation>Meld je aan bij OpenRepos.net</translation>
@@ -512,7 +508,7 @@
         <translation>Alle bronnen worden uitgeschakeld</translation>
     </message>
     <message id="orn-installed-apps">
-        <source>Installed Applications</source>
+        <source>Installed applications</source>
         <translation>Geïnstalleerde apps</translation>
     </message>
     <message id="orn-bookmarks-added">
@@ -663,17 +659,13 @@
         <source>Login to comment</source>
         <translation>Meld je aan om een reactie te plaatsen</translation>
     </message>
-    <message id="orn-backup-title">
-        <source>Backup to a file</source>
-        <translation>Back-up naar bestand</translation>
-    </message>
     <message id="orn-backup">
         <source>Backup</source>
         <translation>Back-up</translation>
     </message>
     <message id="orn-backup-hint">
-        <source>Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.</source>
-        <translation>Back-up laat je toe je huidige OpenRepos-pakketbronnen op te slaan, evenals je geïnstalleerde apps en bladwijzers, om deze later te herstellen (bijvoorbeeld nadat je je apparaat hebt teruggebracht naar de fabrieksinstellingen). Een back-up is een lokaal bestand dat wordt opgeslagen in de &lt;br /&gt;map &lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Opgelet!&lt;/b&gt; Kopieer je back-ups handmatig naar een veilige locatie, zoals je SD-kaart, een extern apparaat of een cloudopslagdienst, vooraleer je je apparaat terugbrengt naar de fabrieksinstellingen.</translation>
+        <source>&lt;h2&gt;Backup to a file&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.&lt;/p&gt;</source>
+        <translation>&lt;h2&gt;Back-up naar een bestand&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Back-up staat je toe je huidige OpenRepos-pakketbronnen op te slaan, evenals je geïnstalleerde apps en bladwijzers, om deze later te herstellen (bijvoorbeeld nadat je je apparaat teruggebracht hebt naar de fabrieksinstellingen). Een back-up is een lokaal bestand dat opgeslagen wordt in de map&lt;br /&gt; &lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Opgelet!&lt;/b&gt; Kopieer je back-ups handmatig naar een veilige locatie, zoals je SD-kaart, een extern apparaat of een cloudopslagdienst, vooraleer je je apparaat terugbrengt naar de fabrieksinstellingen.&lt;/p&gt;</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -950,10 +942,6 @@
         <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
         <translation>&lt;h3&gt;Schakel de Storeman-pakketbron in&lt;/h3&gt;&lt;p&gt;Om de laatste nieuwe versies van Storeman te kunnen ontvangen, moet je de OpenRepos-pakketbron ervan inschakelen, net zoals elke andere app.&lt;/p&gt;&lt;p&gt;Wil je dit nu doen?&lt;/p&gt;</translation>
     </message>
-    <message id="orn-save">
-        <source>Save</source>
-        <translation>Opslaan</translation>
-    </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
         <translation>Controleren op updates</translation>
@@ -976,7 +964,7 @@
     </message>
     <message id="orn-no-packages">
         <source>No packages available</source>
-        <translation type="unfinished"></translation>
+        <translation>Geen pakketten beschikbaar</translation>
     </message>
     <message id="orn-error-comment-sending">
         <source>Error sending comment</source>
@@ -984,11 +972,55 @@
     </message>
     <message id="orn-error-comment-deletion">
         <source>Error deleting comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Fout bij verwijderen van reactie</translation>
     </message>
     <message id="orn-error-network">
         <source>Network error</source>
-        <translation type="unfinished"></translation>
+        <translation>Netwerkfout</translation>
+    </message>
+    <message id="orn-hint-bookmark">
+        <source>Tap to bookmark the application</source>
+        <translation>Tik om de app toe te voegen aan je bladwijzers</translation>
+    </message>
+    <message id="orn-bad-appid">
+        <source>Invalid package ID %1</source>
+        <translation>Ongeldig pakket-ID %1</translation>
+    </message>
+    <message id="orn-backup-filenameph">
+        <source>A file name for backup</source>
+        <translation>Een bestandsnaam voor de back-up</translation>
+    </message>
+    <message id="orn-file-exists">
+        <source>File already exists</source>
+        <translation>Bestand bestaat al</translation>
+    </message>
+    <message id="orn-backup-items">
+        <source>What to backup</source>
+        <translation>Wat moet er worden geback-upt</translation>
+    </message>
+    <message id="orn-backup-apps">
+        <source>Installed applications</source>
+        <translation>Geïnstalleerde apps</translation>
+    </message>
+    <message id="orn-myapps">
+        <source>My applications</source>
+        <translation>Mijn apps</translation>
+    </message>
+    <message id="orn-hint-close">
+        <source>Tap again to close the hint</source>
+        <translation>Tik opnieuw om de tip te sluiten</translation>
+    </message>
+    <message id="orn-mainpage">
+        <source>Main page</source>
+        <translation>Beginpagina</translation>
+    </message>
+    <message id="orn-show-recent-switch">
+        <source>Show recenty updated on start</source>
+        <translation>Recent bijgewerkte apps tonen bij opstarten</translation>
+    </message>
+    <message id="orn-show-recent-switch-descr">
+        <source>Switch to the page of recently updated packages on start</source>
+        <translation>Toon de pagina met recent bijgewerkte apps bij opstarten</translation>
     </message>
 </context>
 </TS>
