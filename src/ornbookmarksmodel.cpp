@@ -12,6 +12,12 @@ OrnBookmarksModel::OrnBookmarksModel(QObject *parent)
     connect(client, &OrnClient::bookmarkChanged, this,
             [this, client](quint32 appId, bool bookmarked)
     {
+        if (this->canFetchMore(QModelIndex()))
+        {
+            // Model was not initialized yet so just ignore the signal
+            return;
+        }
+
         if (bookmarked)
         {
             auto request = client->apiRequest(QStringLiteral("apps/%1/compact").arg(appId));
