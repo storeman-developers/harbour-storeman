@@ -33,8 +33,6 @@
 #define APPLICATION_JSON    QByteArrayLiteral("application/json")
 
 
-OrnClient *OrnClientPrivate::instance = nullptr;
-
 OrnClientPrivate::OrnClientPrivate(OrnClient *q_ptr)
     : settings(new QSettings(q_ptr))
     , cookieTimer(new QTimer(q_ptr))
@@ -166,11 +164,8 @@ OrnClient::~OrnClient()
 
 OrnClient *OrnClient::instance()
 {
-    if(!OrnClientPrivate::instance)
-    {
-        OrnClientPrivate::instance = new OrnClient();
-    }
-    return OrnClientPrivate::instance;
+    static OrnClient instance;
+    return &instance;
 }
 
 QNetworkRequest OrnClient::apiRequest(const QString &resource, const QUrlQuery &query) const

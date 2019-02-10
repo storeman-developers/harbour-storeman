@@ -80,8 +80,6 @@ private:
     QSettings *mSettings;
     QTimer *mUpdatesTimer;
     QCache<quint32, OrnApplication> mAppsCache;
-
-    static Storeman *gInstance;
 };
 
 #endif // STOREMAN_H

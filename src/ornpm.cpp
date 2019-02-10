@@ -32,8 +32,6 @@ using namespace PackageKit;
 
 const QLatin1String OrnPm::repoNamePrefix("openrepos-");
 
-OrnPm *OrnPm::g_instance = nullptr;
-
 OrnPm::OrnPm(QObject *parent)
     : QObject(parent)
     , d_ptr(new OrnPmPrivate(this))
@@ -60,18 +58,18 @@ OrnPm::~OrnPm()
 
 OrnPm *OrnPm::instance()
 {
-    if (!g_instance)
+    static OrnPm instance;
+    if (!instance.d_ptr->initialised)
     {
-        g_instance = new OrnPm(qApp);
-        auto fw = new QFutureWatcher<void>(g_instance);
+        auto fw = new QFutureWatcher<void>();
         connect(fw, &QFutureWatcher<void>::finished, [fw]()
         {
             fw->deleteLater();
             OrnPm::instance()->getUpdates();
         });
-        fw->setFuture(QtConcurrent::run(g_instance->d_ptr, &OrnPmPrivate::initialise));
+        fw->setFuture(QtConcurrent::run(instance.d_ptr, &OrnPmPrivate::initialise));
     }
-    return g_instance;
+    return &instance;
 }
 
 void OrnPmPrivate::initialise()

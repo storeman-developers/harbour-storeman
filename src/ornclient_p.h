@@ -25,8 +25,6 @@ struct OrnClientPrivate
     QByteArray userToken;
     QNetworkCookie userCookie;
 
-    static OrnClient *instance;
-
     static void prepareComment(QJsonObject &object, const QString &body);
 };
 

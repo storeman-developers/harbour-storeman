@@ -15,7 +15,6 @@
 #include <networkmanager.h>
 
 #include <QSettings>
-#include <QCoreApplication>
 #include <QDateTime>
 #include <QTimer>
 #include <QFileInfo>
@@ -38,8 +37,6 @@
 #define UPDATES_LAST_CHECK          QStringLiteral("updates/last_check")
 #define HINTS                       QStringLiteral("hints/")
 
-
-Storeman *Storeman::gInstance = nullptr;
 
 Storeman::Storeman(QObject *parent)
     : QObject(parent)
@@ -70,12 +67,8 @@ QObject *Storeman::qmlInstance(QQmlEngine *engine, QJSEngine *scriptEngine)
     Q_UNUSED(engine)
     Q_UNUSED(scriptEngine)
 
-    if (!gInstance)
-    {
-        gInstance = new Storeman(qApp);
-    }
-
-    return gInstance;
+    static Storeman instance;
+    return &instance;
 }
 
 bool Storeman::showRecentOnStart() const

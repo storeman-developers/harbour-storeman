@@ -185,7 +185,6 @@ private:
     ~OrnPm();
 
     OrnPmPrivate *d_ptr;
-    static OrnPm *g_instance;
 };
 
 #endif // ORNPM_H
