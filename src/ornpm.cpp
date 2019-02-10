@@ -58,18 +58,19 @@ OrnPm::~OrnPm()
 
 OrnPm *OrnPm::instance()
 {
-    static OrnPm instance;
-    if (!instance.d_ptr->initialised)
+    static OrnPm *instance = nullptr;
+    if (!instance)
     {
+        instance = new OrnPm(qApp);
         auto fw = new QFutureWatcher<void>();
-        connect(fw, &QFutureWatcher<void>::finished, [fw]()
+        connect(fw, &QFutureWatcher<void>::finished, fw, [fw]()
         {
             fw->deleteLater();
             OrnPm::instance()->getUpdates();
         });
-        fw->setFuture(QtConcurrent::run(instance.d_ptr, &OrnPmPrivate::initialise));
+        fw->setFuture(QtConcurrent::run(instance->d_ptr, &OrnPmPrivate::initialise));
     }
-    return &instance;
+    return instance;
 }
 
 void OrnPmPrivate::initialise()

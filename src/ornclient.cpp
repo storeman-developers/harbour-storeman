@@ -164,8 +164,8 @@ OrnClient::~OrnClient()
 
 OrnClient *OrnClient::instance()
 {
-    static OrnClient instance;
-    return &instance;
+    static auto instance = new OrnClient(qApp);
+    return instance;
 }
 
 QNetworkRequest OrnClient::apiRequest(const QString &resource, const QUrlQuery &query) const
