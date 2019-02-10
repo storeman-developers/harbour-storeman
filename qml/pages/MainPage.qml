@@ -8,6 +8,7 @@ Page {
     readonly property int gridColumns: isPortrait ? 2 : 4
     readonly property int gridRows: isPortrait ? 3 : 2
     readonly property real gridHeight: repeater.count > 0 ? Theme.itemSizeSmall * gridRows : 0
+    property bool _initialLoad: true
 
     id: page
     allowedOrientations: defaultAllowedOrientations
@@ -15,6 +16,12 @@ Page {
     onStatusChanged: {
         if (status === PageStatus.Active) {
             Storeman.checkRepos()
+            if (_initialLoad && Storeman.showRecentOnStart) {
+                _initialLoad = false
+                pageStack.push(Qt.resolvedUrl("RecentAppsPage.qml"), {
+                                   model: recentAppsModel
+                               }, PageStackAction.Immediate)
+            }
         }
     }
 
@@ -50,10 +57,6 @@ Page {
                 MenuSearchItem {}
 
                 MenuStatusLabel {}
-            }
-
-            PageHeader {
-                title: "Storeman"
             }
 
             MainPageButton {

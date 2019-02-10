@@ -10,6 +10,7 @@ Page {
 
     onStatusChanged: {
         if (status === PageStatus.Deactivating) {
+            Storeman.showRecentOnStart = showRecentOnStartSwitch.checked
             Storeman.smartUpdate = smartUpdateSwitch.checked
             Storeman.showUpdatesNotification = showUpdatesNotificationSwitch.checked
             Storeman.updateInterval = checkUpdatesIntervalButton.interval
@@ -77,6 +78,20 @@ Page {
                 iconSource: "image://theme/icon-m-backup"
                 text: qsTrId("orn-backups")
                 onClicked: pageStack.push(Qt.resolvedUrl("BackupsPage.qml"))
+            }
+
+            SectionHeader {
+                //% "Main page"
+                text: qsTrId("orn-mainpage")
+            }
+
+            TextSwitch {
+                id: showRecentOnStartSwitch
+                //% "Show recenty updated on start"
+                text: qsTrId("orn-show-recent-switch")
+                //% "Switch to the page of recently updated packages on start"
+                description: qsTrId("orn-show-recent-switch-descr")
+                checked: Storeman.showRecentOnStart
             }
 
             SectionHeader {
