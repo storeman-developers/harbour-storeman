@@ -1,3 +1,22 @@
+* Sun Feb 10 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.0-1
+- Better handling of empty and deleted packages
+- Allow to select which items to backup (repos, installed apps, bookmarks)
+- Allow to set a backup filename
+- Fix displaying bookmarks
+- Better handling of network status
+- Fix showing network error after user session expiry
+- Add the ability to open the own applications page for publishers
+- Better tap hints
+- Revamp UI:
+- Add new main page
+- Remove "This device" page
+- Move most entries from this device page to the main page
+- Move the authorization and backups buttons to the settings page
+- Add an option to switch to recently updated packages on start
+- Application page: better handling of an empty changelog
+- Update translations
+- Different small fixes and optimizations
+
 * Sun Jan 20 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.33-3
 - Fix layout for various devices, orientations and system font sizes (thanks to Matti Viljanen)
 - Hide pulley menu on the comments page when page header is hidden (thanks to Matti Viljanen)
