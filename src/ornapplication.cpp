@@ -177,7 +177,7 @@ void OrnApplication::ornRequest()
         mPackageName = OrnUtils::toString(jsonObject[QStringLiteral("package")].toObject()[nameKey]);
         mBody = OrnUtils::toString(jsonObject[QStringLiteral("body")]);
         mChangelog = OrnUtils::toString(jsonObject[QStringLiteral("changelog")]);
-        if (mChangelog == "<p>(none)</p>\n")
+        if (mChangelog == QLatin1String("<p>(none)</p>"))
         {
             mChangelog.clear();
         }
