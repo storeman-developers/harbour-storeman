@@ -34,16 +34,21 @@
 #include "ornpm.h"
 #include "orninstalledpackage.h"
 
+#include <private/qobject_p.h>
 #include <QSet>
-
 #include <QtDBus/QDBusConnection>
 #include <QtDBus/QDBusInterface>
 #include <QtDBus/QDBusPendingCallWatcher>
 
 
-struct OrnPmPrivate
+class OrnPmPrivate : public QObjectPrivate
 {
-    OrnPmPrivate(OrnPm *ornPm);
+    Q_DISABLE_COPY(OrnPmPrivate)
+    Q_DECLARE_PUBLIC(OrnPm)
+
+public:
+    OrnPmPrivate() = default;
+    virtual ~OrnPmPrivate() = default;
 
     void initialise();
     QDBusInterface *transaction(const QString &item = QString());
@@ -73,9 +78,6 @@ struct OrnPmPrivate
 #ifdef QT_DEBUG
     quint64         refreshRuntime;
 #endif
-
-private:
-    OrnPm *q_ptr;
 };
 
 #endif // ORNPM_P_H

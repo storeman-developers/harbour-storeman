@@ -1,6 +1,6 @@
 TARGET = harbour-storeman
 
-QT += concurrent dbus
+QT += concurrent dbus core-private
 CONFIG += sailfishapp
 
 PKGCONFIG += \

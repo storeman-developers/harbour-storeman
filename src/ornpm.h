@@ -11,11 +11,10 @@ class OrnPackageVersion;
 class OrnInstalledPackage;
 class OrnRepo;
 
-struct OrnPmPrivate;
+class OrnPmPrivate;
 
 class OrnPm : public QObject
 {
-    friend struct OrnPmPrivate;
     friend class OrnBackup;
 
     Q_OBJECT
@@ -182,9 +181,8 @@ public slots:
 
 private:
     explicit OrnPm(QObject *parent = nullptr);
-    ~OrnPm();
 
-    OrnPmPrivate *d_ptr;
+    Q_DECLARE_PRIVATE(OrnPm)
 };
 
 #endif // ORNPM_H

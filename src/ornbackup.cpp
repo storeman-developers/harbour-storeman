@@ -114,7 +114,7 @@ void OrnBackup::pSearchPackages()
     this->sender()->deleteLater();
     mPackagesToInstall.clear();
 
-    auto t = OrnPm::instance()->d_ptr->transaction();
+    auto t = OrnPm::instance()->d_func()->transaction();
     connect(t, SIGNAL(Package(quint32,QString,QString)), this, SLOT(pAddPackage(quint32,QString,QString)));
     connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(pInstallPackages()));
     qDebug().nospace() << "Calling " << t << "->" PK_METHOD_RESOLVE "("
@@ -176,7 +176,7 @@ void OrnBackup::pInstallPackages()
     {
         qDebug() << "Installing packages";
         this->setStatus(InstallingPackages);
-        auto t = OrnPm::instance()->d_ptr->transaction();
+        auto t = OrnPm::instance()->d_func()->transaction();
         connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(pFinishRestore()));
         qDebug().nospace() << "Calling " << t << "->" PK_METHOD_INSTALLPACKAGES "("
                            << PK_FLAG_NONE << ", " << ids << ")";
@@ -196,7 +196,7 @@ void OrnBackup::pBackup(const QString &filePath, BackupItems items)
     qDebug() << "Starting backing up";
     this->setStatus(BackingUp);
     QSettings file(filePath, QSettings::IniFormat);
-    auto ornpm_p = OrnPm::instance()->d_ptr;
+    auto ornpm_p = OrnPm::instance()->d_func();
 
     if (items.testFlag(BackupItem::BackupRepos))
     {
@@ -270,7 +270,7 @@ void OrnBackup::pRestore(const QString &filePath)
         qDebug() << "Restoring repos";
         this->setStatus(RestoringRepos);
         auto disabled = file.value(BR_REPO_DISABLED).toStringList().toSet();
-        auto ornpm_p = OrnPm::instance()->d_ptr;
+        auto ornpm_p = OrnPm::instance()->d_func();
         QString method(SSU_METHOD_ADDREPO);
         QString repo_tmpl(REPO_URL_TMPL);
         for (const auto &author : repos)
@@ -292,7 +292,7 @@ void OrnBackup::pRefreshRepos()
     {
         qDebug() << "Refreshing repos";
         this->setStatus(RefreshingRepos);
-        auto t = OrnPm::instance()->d_ptr->transaction();
+        auto t = OrnPm::instance()->d_func()->transaction();
         connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(pSearchPackages()));
         qDebug().nospace() << "Calling " << t << "->" PK_METHOD_REFRESHCACHE "(false)";
         t->asyncCall(QStringLiteral(PK_METHOD_REFRESHCACHE), false);
