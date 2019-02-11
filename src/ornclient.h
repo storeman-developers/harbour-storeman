@@ -87,9 +87,6 @@ signals:
     void bookmarkChanged(quint32 appid, bool bookmarked);
     void userVoteFinished(quint32 appId, quint32 userVote, quint32 count, float rating);
 
-private slots:
-    void setCookieTimer();
-
 private:
     explicit OrnClient(QObject *parent = nullptr);
 

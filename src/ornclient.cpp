@@ -55,6 +55,37 @@ void OrnClientPrivate::removeUser()
     settings->remove(QStringLiteral("user"));
 }
 
+void OrnClientPrivate::setCookieTimer()
+{
+    Q_Q(OrnClient);
+
+    qDebug() << "Setting cookie timer";
+
+    QObject::disconnect(cookieTimer, &QTimer::timeout, 0, 0);
+    cookieTimer->stop();
+    auto expirationDate = userCookie.expirationDate();
+    if (expirationDate.isValid())
+    {
+        constexpr qint64 msec_day = 24 * 60 * 60 * 1000; // one day
+        auto msec_to_expiry = QDateTime::currentDateTime().msecsTo(expirationDate);
+        if (msec_to_expiry > msec_day)
+        {
+            QObject::connect(cookieTimer, &QTimer::timeout, q, &OrnClient::dayToExpiry);
+            cookieTimer->start(msec_to_expiry - msec_day);
+        }
+        else if (msec_to_expiry > 0)
+        {
+            emit q->dayToExpiry();
+            QObject::connect(cookieTimer, &QTimer::timeout, q, &OrnClient::cookieIsValidChanged);
+            cookieTimer->start(msec_to_expiry);
+        }
+        else
+        {
+            emit q->cookieIsValidChanged();
+        }
+    }
+}
+
 void OrnClientPrivate::prepareComment(QJsonObject &object, const QString &body)
 {
     QJsonObject bodyObject;
@@ -154,7 +185,7 @@ OrnClient::OrnClient(QObject *parent)
 
     // Configure cookie timer
     d->cookieTimer->setSingleShot(true);
-    QTimer::singleShot(1000, this, &OrnClient::setCookieTimer);
+    QTimer::singleShot(1000, std::bind(&OrnClientPrivate::setCookieTimer, d));
 }
 
 OrnClient *OrnClient::instance()
@@ -222,7 +253,7 @@ QJsonDocument OrnClient::processReply(QNetworkReply *reply, Error code)
             d->settings->setValue(usernameKey, username);
             d->userCookie = QNetworkCookie();
             d->userToken.clear();
-            this->setCookieTimer();
+            d->setCookieTimer();
             emit this->cookieIsValidChanged();
         }
         else
@@ -307,7 +338,7 @@ void OrnClient::login(const QString &username, const QString &password)
 
     // Remove old credentials and stop timer
     d->removeUser();
-    this->setCookieTimer();
+    d->setCookieTimer();
 
     QNetworkRequest request;
     request.setUrl(API_URL_PREFIX.append(QStringLiteral("user/login")));
@@ -362,7 +393,7 @@ void OrnClient::login(const QString &username, const QString &password)
 
             qDebug() << "Successful authorisation";
             emit this->authorisedChanged();
-            this->setCookieTimer();
+            d->setCookieTimer();
         }
     });
 }
@@ -376,7 +407,7 @@ void OrnClient::logout()
         d->settings->remove(QStringLiteral("user"));
         d->userCookie = QNetworkCookie();
         d->userToken.clear();
-        this->setCookieTimer();
+        d->setCookieTimer();
         emit this->authorisedChanged();
     }
 }
@@ -485,34 +516,4 @@ void OrnClient::vote(quint32 appId, quint32 value)
         }
         reply->deleteLater();
     });
-}
-
-void OrnClient::setCookieTimer()
-{
-    Q_D(OrnClient);
-
-    auto cookieTimer = d->cookieTimer;
-    disconnect(cookieTimer, &QTimer::timeout, 0, 0);
-    cookieTimer->stop();
-    auto expirationDate = d->userCookie.expirationDate();
-    if (expirationDate.isValid())
-    {
-        constexpr qint64 msec_day = 24 * 60 * 60 * 1000; // one day
-        auto msec_to_expiry = QDateTime::currentDateTime().msecsTo(expirationDate);
-        if (msec_to_expiry > msec_day)
-        {
-            connect(cookieTimer, &QTimer::timeout, this, &OrnClient::dayToExpiry);
-            cookieTimer->start(msec_to_expiry - msec_day);
-        }
-        else if (msec_to_expiry > 0)
-        {
-            emit this->dayToExpiry();
-            connect(cookieTimer, &QTimer::timeout, this, &OrnClient::cookieIsValidChanged);
-            cookieTimer->start(msec_to_expiry);
-        }
-        else
-        {
-            emit this->cookieIsValidChanged();
-        }
-    }
 }

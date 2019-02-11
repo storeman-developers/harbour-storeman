@@ -14,12 +14,14 @@ class OrnClient;
 class OrnClientPrivate : public QObjectPrivate
 {
     Q_DISABLE_COPY(OrnClientPrivate)
+    Q_DECLARE_PUBLIC(OrnClient)
 
 public:
     OrnClientPrivate() = default;
     virtual ~OrnClientPrivate();
 
     void removeUser();
+    void setCookieTimer();
 
     QSettings *settings;
     QTimer *cookieTimer;
