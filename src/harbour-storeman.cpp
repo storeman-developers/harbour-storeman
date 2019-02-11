@@ -52,28 +52,6 @@ int main(int argc, char *argv[])
     auto app = SailfishApp::application(argc, argv);
     app->setApplicationVersion(QStringLiteral(STOREMAN_VERSION));
 
-    // SailfishApp does not load default id based translation file
-    // if there is no a translation for the current locale
-    // UPD: the issue was fixed - waiting for a new libsailfishapp version
-    {
-        auto *translator = new QTranslator(app);
-        auto trPath = SailfishApp::pathTo(QStringLiteral("translations")).toLocalFile();
-        auto appName = app->applicationName();
-        // Check if translations have been already loaded
-        if (!translator->load(QLocale::system(), appName, "-", trPath))
-        {
-            // Fallback default locale to en
-            QLocale::setDefault(QLocale(QLocale::AnyLanguage));
-            // Load default translations
-            translator->load(appName, trPath);
-            app->installTranslator(translator);
-        }
-        else
-        {
-            translator->deleteLater();
-        }
-    }
-
     auto view = SailfishApp::createView();
 
     NetworkAccessManagerFactory factory;
