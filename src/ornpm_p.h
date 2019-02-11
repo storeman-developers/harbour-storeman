@@ -58,6 +58,19 @@ public:
     void onRepoModified(const QString &repoAlias, OrnPm::RepoAction action);
     OrnInstalledPackageList prepareInstalledPackages(const QString &packageName);
 
+    // Check for updates
+    void getUpdates();
+    void onPackageUpdate(quint32 info, const QString& packageId, const QString &summary);
+    void onGetUpdatesFinished(quint32 status, quint32 runtime);
+    // Install package
+    void onPackageInstalled(quint32 exit, quint32 runtime);
+    // Remove package
+    void onPackageRemoved(quint32 exit, quint32 runtime);
+    // Update package
+    void onPackageUpdated(quint32 exit, quint32 runtime);
+    // Refresh repos
+    void refreshNextRepo(quint32 exit, quint32 runtime);
+
     // <alias, enabled>
     using RepoHash   = QHash<QString, bool>;
     using StringSet  = QSet<QString>;

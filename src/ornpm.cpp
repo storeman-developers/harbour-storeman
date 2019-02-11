@@ -57,7 +57,7 @@ OrnPm *OrnPm::instance()
         connect(fw, &QFutureWatcher<void>::finished, fw, [fw]()
         {
             fw->deleteLater();
-            OrnPm::instance()->getUpdates();
+            OrnPm::instance()->d_func()->getUpdates();
         });
         fw->setFuture(QtConcurrent::run(instance->d_func(), &OrnPmPrivate::initialise));
     }
@@ -256,72 +256,6 @@ void OrnPm::emitError(quint32 code, const QString& details)
 }
 #endif
 
-void OrnPm::getUpdates()
-{
-    Q_D(OrnPm);
-
-    CHECK_NETWORK();
-    auto t = d->transaction();
-    connect(t, SIGNAL(Package(quint32,QString,QString)), this, SLOT(onPackageUpdate(quint32,QString,QString)));
-    connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(onGetUpdatesFinished(quint32,quint32)));
-    qDebug().nospace() << "Calling " << t << "->" PK_METHOD_GETUPDATES "(" << PK_FLAG_NONE << ")";
-    t->asyncCall(QStringLiteral(PK_METHOD_GETUPDATES), PK_FLAG_NONE);
-}
-
-void OrnPm::onPackageUpdate(quint32 info, const QString& packageId, const QString &summary)
-{
-    Q_UNUSED(summary)
-    Q_ASSERT(info == Transaction::InfoEnhancement);
-    // Filter updates only for ORN packages
-    if (OrnUtils::packageRepo(packageId).startsWith(repoNamePrefix))
-    {
-        this->d_func()->newUpdatablePackages.insert(OrnUtils::packageName(packageId), packageId);
-    }
-}
-
-void OrnPm::onGetUpdatesFinished(quint32 status, quint32 runtime)
-{
-    Q_D(OrnPm);
-
-    Q_UNUSED(runtime)
-    if (status == Transaction::ExitSuccess)
-    {
-        bool newupdates = false;
-        // If some client listen to packageStatusChanged() and want to take a package
-        // update ID we swap two hashes before the checks
-        d->updatablePackages.swap(d->newUpdatablePackages);
-        auto it = d->updatablePackages.begin();
-        while (it != d->updatablePackages.end())
-        {
-            auto &name = it.key();
-            auto &id   = it.value();
-            auto repo  = OrnUtils::packageRepo(id);
-            // A walkaround to skip inactual updates from removed/disabled repos
-            if (!d->repos.contains(repo) || !d->repos[repo])
-            {
-                it = d->updatablePackages.erase(it);
-            }
-            else
-            {
-                // Check if the update is really new
-                if (!d->newUpdatablePackages.contains(name) ||
-                    d->newUpdatablePackages[name] != id)
-                {
-                    emit this->packageStatusChanged(name, OrnPm::PackageUpdateAvailable);
-                    newupdates = true;
-                }
-                ++it;
-            }
-        }
-        if (newupdates ||
-            (d->updatablePackages.size() != d->newUpdatablePackages.size()))
-        {
-            emit this->updatablePackagesChanged();
-        }
-    }
-    d->newUpdatablePackages.clear();
-}
-
 void OrnPm::getPackageVersions(const QString &packageName)
 {
     Q_D(OrnPm);
@@ -441,27 +375,6 @@ void OrnPm::installFile(const QString &packageFile)
     t->asyncCall(QStringLiteral(PK_METHOD_INSTALLFILES), PK_FLAG_NONE, files);
 }
 
-void OrnPm::onPackageInstalled(quint32 exit, quint32 runtime)
-{
-    Q_D(OrnPm);
-
-    Q_UNUSED(runtime)
-    auto id = d->transactionHash.take(this->sender());
-    auto name = OrnUtils::packageName(id);
-    d->operations.remove(name);
-    emit this->operationsChanged();
-    if (exit == Transaction::ExitSuccess)
-    {
-        d->installedPackages[name] = id;
-        emit this->packageInstalled(name);
-        emit this->packageStatusChanged(name, OrnPm::PackageInstalled);
-    }
-    else
-    {
-        emit this->packageStatusChanged(name, OrnPm::PackageUnknownStatus);
-    }
-}
-
 void OrnPm::removePackage(const QString &packageId, bool autoremove)
 {
     Q_D(OrnPm);
@@ -475,27 +388,6 @@ void OrnPm::removePackage(const QString &packageId, bool autoremove)
                        << PK_FLAG_NONE << ", " << ids << ", false, " << autoremove << ")";
     emit this->packageStatusChanged(OrnUtils::packageName(packageId), OrnPm::PackageRemoving);
     t->asyncCall(QStringLiteral(PK_METHOD_REMOVEPACKAGES), PK_FLAG_NONE, ids, false, autoremove);
-}
-
-void OrnPm::onPackageRemoved(quint32 exit, quint32 runtime)
-{
-    Q_D(OrnPm);
-
-    Q_UNUSED(runtime)
-    auto id = d->transactionHash.take(this->sender());
-    auto name = OrnUtils::packageName(id);
-    d->operations.remove(name);
-    emit this->operationsChanged();
-    if (exit == Transaction::ExitSuccess)
-    {
-        d->installedPackages.remove(name);
-        emit this->packageRemoved(name);
-        emit this->packageStatusChanged(name, OrnPm::PackageNotInstalled);
-    }
-    else
-    {
-        emit this->packageStatusChanged(name, OrnPm::PackageUnknownStatus);
-    }
 }
 
 void OrnPm::updatePackage(const QString &packageName)
@@ -517,29 +409,6 @@ void OrnPm::updatePackage(const QString &packageName)
     qDebug().nospace() << "Calling " << t << "->" PK_METHOD_UPDATEPACKAGES "(" << PK_FLAG_NONE << ", " << ids << ")";
     emit this->packageStatusChanged(packageName, OrnPm::PackageUpdating);
     t->asyncCall(QStringLiteral(PK_METHOD_UPDATEPACKAGES), PK_FLAG_NONE, ids);
-}
-
-void OrnPm::onPackageUpdated(quint32 exit, quint32 runtime)
-{
-    Q_D(OrnPm);
-
-    Q_UNUSED(runtime)
-    auto id = d->transactionHash.take(this->sender());
-    auto name = OrnUtils::packageName(id);
-    d->operations.remove(name);
-    emit this->operationsChanged();
-    if (exit == Transaction::ExitSuccess)
-    {
-        d->updatablePackages.remove(name);
-        d->installedPackages[name] = id;
-        emit this->packageUpdated(name);
-        emit this->packageStatusChanged(name, OrnPm::PackageInstalled);
-        emit this->updatablePackagesChanged();
-    }
-    else
-    {
-        emit this->packageStatusChanged(name, OrnPm::PackageUnknownStatus);
-    }
 }
 
 void OrnPm::addRepo(const QString &author)
@@ -720,7 +589,7 @@ void OrnPmPrivate::onRepoModified(const QString &repoAlias, OrnPm::RepoAction ac
         emit q->operationsChanged();
         emit q->repoModified(repoAlias, action);
         qDebug() << "Repo" << repoAlias << "have been modified with" << action;
-        q->getUpdates();
+        this->getUpdates();
     }
 }
 
@@ -770,58 +639,7 @@ void OrnPm::refreshRepos(bool force)
 #ifdef QT_DEBUG
     d->refreshRuntime = 0;
 #endif
-    this->refreshNextRepo(Transaction::ExitSuccess, 0);
-}
-
-void OrnPm::refreshNextRepo(quint32 exit, quint32 runtime)
-{
-    Q_D(OrnPm);
-
-    Q_UNUSED(exit)
-
-#ifdef QT_DEBUG
-    d->refreshRuntime += runtime;
-#else
-    Q_UNUSED(runtime)
-#endif
-
-    bool offline = NetworkManager::instance()->state() != QLatin1String("online");
-    if (offline)
-    {
-        d->reposToRefresh.clear();
-    }
-    if (d->reposToRefresh.isEmpty())
-    {
-#ifdef QT_DEBUG
-        if (offline)
-        {
-            qWarning("Aborting operation due to network gone offline");
-        }
-        else
-        {
-            qDebug() << "Finished refreshing cache for all ORN repositories in"
-                     << d->refreshRuntime << "msec";
-        }
-#endif
-        d->pkInterface->blockSignals(false);
-    }
-    else
-    {
-        auto t = d->transaction();
-        connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(refreshNextRepo(quint32,quint32)));
-        auto alias = d->reposToRefresh.takeFirst();
-        connect(t, &QDBusInterface::destroyed, [this, alias]()
-        {
-            this->d_func()->operations.remove(alias);
-            emit this->operationsChanged();
-        });
-        d->operations.insert(alias, RefreshingRepo);
-        emit this->operationsChanged();
-        qDebug().nospace() << "Calling " << t << "->" PK_METHOD_REPOSETDATA "("
-                           << alias << ", \"refresh-now\", " << d->forceRefresh << ")";
-        t->asyncCall(QStringLiteral(PK_METHOD_REPOSETDATA), alias, QStringLiteral("refresh-now"),
-                     d->forceRefresh);
-    }
+    d->refreshNextRepo(Transaction::ExitSuccess, 0);
 }
 
 QList<OrnRepo> OrnPm::repoList() const
@@ -994,3 +812,186 @@ OrnInstalledPackageList OrnPmPrivate::prepareInstalledPackages(const QString &pa
 
     return packages;
 }
+
+void OrnPmPrivate::getUpdates()
+{
+    Q_Q(OrnPm);
+
+    CHECK_NETWORK();
+    auto t = this->transaction();
+    QObject::connect(t, SIGNAL(Package(quint32,QString,QString)), q, SLOT(onPackageUpdate(quint32,QString,QString)));
+    QObject::connect(t, SIGNAL(Finished(quint32,quint32)), q, SLOT(onGetUpdatesFinished(quint32,quint32)));
+    qDebug().nospace() << "Calling " << t << "->" PK_METHOD_GETUPDATES "(" << PK_FLAG_NONE << ")";
+    t->asyncCall(QStringLiteral(PK_METHOD_GETUPDATES), PK_FLAG_NONE);
+}
+
+void OrnPmPrivate::onPackageUpdate(quint32 info, const QString &packageId, const QString &summary)
+{
+    Q_UNUSED(summary)
+    Q_ASSERT(info == Transaction::InfoEnhancement);
+    // Filter updates only for ORN packages
+    if (OrnUtils::packageRepo(packageId).startsWith(OrnPm::repoNamePrefix))
+    {
+        this->newUpdatablePackages.insert(OrnUtils::packageName(packageId), packageId);
+    }
+}
+
+void OrnPmPrivate::onGetUpdatesFinished(quint32 status, quint32 runtime)
+{
+    Q_UNUSED(runtime)
+    if (status == Transaction::ExitSuccess)
+    {
+        Q_Q(OrnPm);
+
+        bool newupdates = false;
+        // If some client listen to packageStatusChanged() and want to take a package
+        // update ID we swap two hashes before the checks
+        updatablePackages.swap(newUpdatablePackages);
+        auto it = updatablePackages.begin();
+        while (it != updatablePackages.end())
+        {
+            auto &name = it.key();
+            auto &id   = it.value();
+            auto repo  = OrnUtils::packageRepo(id);
+            // A walkaround to skip inactual updates from removed/disabled repos
+            if (!repos.contains(repo) || !repos[repo])
+            {
+                it = updatablePackages.erase(it);
+            }
+            else
+            {
+                // Check if the update is really new
+                if (!newUpdatablePackages.contains(name) ||
+                    newUpdatablePackages[name] != id)
+                {
+                    emit q->packageStatusChanged(name, OrnPm::PackageUpdateAvailable);
+                    newupdates = true;
+                }
+                ++it;
+            }
+        }
+        if (newupdates ||
+            (updatablePackages.size() != newUpdatablePackages.size()))
+        {
+            emit q->updatablePackagesChanged();
+        }
+    }
+    newUpdatablePackages.clear();
+}
+
+void OrnPmPrivate::onPackageInstalled(quint32 exit, quint32 runtime)
+{
+    Q_Q(OrnPm);
+
+    Q_UNUSED(runtime)
+    auto id = transactionHash.take(q->sender());
+    auto name = OrnUtils::packageName(id);
+    operations.remove(name);
+    emit q->operationsChanged();
+    if (exit == Transaction::ExitSuccess)
+    {
+        installedPackages[name] = id;
+        emit q->packageInstalled(name);
+        emit q->packageStatusChanged(name, OrnPm::PackageInstalled);
+    }
+    else
+    {
+        emit q->packageStatusChanged(name, OrnPm::PackageUnknownStatus);
+    }
+}
+
+void OrnPmPrivate::onPackageRemoved(quint32 exit, quint32 runtime)
+{
+    Q_Q(OrnPm);
+
+    Q_UNUSED(runtime)
+    auto id = transactionHash.take(q->sender());
+    auto name = OrnUtils::packageName(id);
+    operations.remove(name);
+    emit q->operationsChanged();
+    if (exit == Transaction::ExitSuccess)
+    {
+        installedPackages.remove(name);
+        emit q->packageRemoved(name);
+        emit q->packageStatusChanged(name, OrnPm::PackageNotInstalled);
+    }
+    else
+    {
+        emit q->packageStatusChanged(name, OrnPm::PackageUnknownStatus);
+    }
+}
+
+void OrnPmPrivate::onPackageUpdated(quint32 exit, quint32 runtime)
+{
+    Q_Q(OrnPm);
+
+    Q_UNUSED(runtime)
+    auto id = transactionHash.take(q->sender());
+    auto name = OrnUtils::packageName(id);
+    operations.remove(name);
+    emit q->operationsChanged();
+    if (exit == Transaction::ExitSuccess)
+    {
+        updatablePackages.remove(name);
+        installedPackages[name] = id;
+        emit q->packageUpdated(name);
+        emit q->packageStatusChanged(name, OrnPm::PackageInstalled);
+        emit q->updatablePackagesChanged();
+    }
+    else
+    {
+        emit q->packageStatusChanged(name, OrnPm::PackageUnknownStatus);
+    }
+}
+
+void OrnPmPrivate::refreshNextRepo(quint32 exit, quint32 runtime)
+{
+    Q_Q(OrnPm);
+
+    Q_UNUSED(exit)
+
+#ifdef QT_DEBUG
+    refreshRuntime += runtime;
+#else
+    Q_UNUSED(runtime)
+#endif
+
+    bool offline = NetworkManager::instance()->state() != QLatin1String("online");
+    if (offline)
+    {
+        reposToRefresh.clear();
+    }
+    if (reposToRefresh.isEmpty())
+    {
+#ifdef QT_DEBUG
+        if (offline)
+        {
+            qWarning("Aborting operation due to network gone offline");
+        }
+        else
+        {
+            qDebug() << "Finished refreshing cache for all ORN repositories in"
+                     << refreshRuntime << "msec";
+        }
+#endif
+        pkInterface->blockSignals(false);
+    }
+    else
+    {
+        auto t = this->transaction();
+        QObject::connect(t, SIGNAL(Finished(quint32,quint32)), q, SLOT(refreshNextRepo(quint32,quint32)));
+        auto alias = reposToRefresh.takeFirst();
+        QObject::connect(t, &QDBusInterface::destroyed, [this, alias]()
+        {
+            operations.remove(alias);
+            emit this->q_func()->operationsChanged();
+        });
+        operations.insert(alias, OrnPm::RefreshingRepo);
+        emit q->operationsChanged();
+        qDebug().nospace() << "Calling " << t << "->" PK_METHOD_REPOSETDATA "("
+                           << alias << ", \"refresh-now\", " << forceRefresh << ")";
+        t->asyncCall(QStringLiteral(PK_METHOD_REPOSETDATA), alias, QStringLiteral("refresh-now"), forceRefresh);
+    }
+}
+
+#include <moc_ornpm.cpp>

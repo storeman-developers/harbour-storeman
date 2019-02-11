@@ -106,8 +106,8 @@ signals:
     void packageStatusChanged(const QString &packageName, const PackageStatus &status);
     void error(quint32 code, const QString &details);
 
-private slots:
 #ifdef QT_DEBUG
+private slots:
     void onTransactionFinished(quint32 exit, quint32 runtime);
     void emitError(quint32 code, const QString& details);
 #endif
@@ -115,10 +115,6 @@ private slots:
     // Check for updates
 signals:
     void updatablePackagesChanged();
-private slots:
-    void getUpdates();
-    void onPackageUpdate(quint32 info, const QString& packageId, const QString &summary);
-    void onGetUpdatesFinished(quint32 status, quint32 runtime);
 
     // Package versions
 signals:
@@ -132,24 +128,18 @@ signals:
 public slots:
     void installPackage(const QString &packageId);
     void installFile(const QString &packageFile);
-private slots:
-    void onPackageInstalled(quint32 exit, quint32 runtime);
 
     // Remove package
 signals:
     void packageRemoved(const QString &packageName);
 public slots:
     void removePackage(const QString &packageId, bool autoremove = false);
-private slots:
-    void onPackageRemoved(quint32 exit, quint32 runtime);
 
     // Update package
 signals:
     void packageUpdated(const QString &packageName);
 public slots:
     void updatePackage(const QString &packageName);
-private slots:
-    void onPackageUpdated(quint32 exit, quint32 runtime);
 
     // SSU repo actions
 signals:
@@ -166,8 +156,6 @@ public slots:
 public slots:
     void refreshRepo(const QString &repoAlias, bool force = false);
     void refreshRepos(bool force = false);
-private slots:
-    void refreshNextRepo(quint32 exit, quint32 runtime);
 
     // Get ORN repositories
 public:
@@ -176,13 +164,28 @@ public:
     // Get installed packages
 signals:
     void installedPackages(const QList<OrnInstalledPackage> &packages);
-public slots:
+public:
     void getInstalledPackages(const QString &packageName = QString());
 
 private:
     explicit OrnPm(QObject *parent = nullptr);
 
     Q_DECLARE_PRIVATE(OrnPm)
+
+// private slots:
+    // Check for updates
+    Q_PRIVATE_SLOT(d_func(), void getUpdates())
+    Q_PRIVATE_SLOT(d_func(), void onPackageUpdate(quint32,QString,QString))
+    Q_PRIVATE_SLOT(d_func(), void onGetUpdatesFinished(quint32,quint32))
+    // Install package
+    Q_PRIVATE_SLOT(d_func(), void onPackageInstalled(quint32,quint32))
+    // Remove package
+    Q_PRIVATE_SLOT(d_func(), void onPackageRemoved(quint32,quint32))
+    // Update package
+    Q_PRIVATE_SLOT(d_func(), void onPackageUpdated(quint32,quint32))
+    // Refresh repos
+    Q_PRIVATE_SLOT(d_func(), void refreshNextRepo(quint32,quint32))
+
 };
 
 #endif // ORNPM_H
