@@ -1,6 +1,7 @@
 #ifndef ORNCLIENT_P_H
 #define ORNCLIENT_P_H
 
+#include <private/qobject_p.h>
 #include <QSet>
 #include <QVariant>
 #include <QNetworkCookie>
@@ -10,9 +11,12 @@ class QTimer;
 class QNetworkAccessManager;
 class OrnClient;
 
-struct OrnClientPrivate
+class OrnClientPrivate : public QObjectPrivate
 {
-    explicit OrnClientPrivate(OrnClient *q_ptr);
+    Q_DISABLE_COPY(OrnClientPrivate)
+
+public:
+    OrnClientPrivate() = default;
     virtual ~OrnClientPrivate();
 
     void removeUser();

@@ -93,9 +93,8 @@ private slots:
 
 private:
     explicit OrnClient(QObject *parent = nullptr);
-    ~OrnClient();
 
-    OrnClientPrivate *d_ptr;
+    Q_DECLARE_PRIVATE(OrnClient)
 };
 
 #endif // ORNCLIENT_H

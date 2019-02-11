@@ -232,7 +232,7 @@ void OrnBackup::pBackup(const QString &filePath, BackupItems items)
     {
         qDebug() << "Backing up bookmarks";
         QVariantList bookmarks;
-        for (const auto &b : OrnClient::instance()->d_ptr->bookmarks)
+        for (const auto &b : OrnClient::instance()->d_func()->bookmarks)
         {
             bookmarks << b;
         }
@@ -259,7 +259,7 @@ void OrnBackup::pRestore(const QString &filePath)
         auto client = OrnClient::instance();
         for (const auto &b : bookmarks)
         {
-            client->d_ptr->bookmarks.insert(b.toUInt());
+            client->d_func()->bookmarks.insert(b.toUInt());
         }
     }
 
