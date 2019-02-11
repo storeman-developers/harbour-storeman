@@ -11,6 +11,6 @@ struct OrnRepo
     QString author;
 };
 
-typedef QList<OrnRepo> OrnRepoList;
+using OrnRepoList = QList<OrnRepo>;
 
 #endif // ORNREPO_H

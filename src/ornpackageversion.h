@@ -29,7 +29,7 @@ private:
     QVariantList versionParts;
 };
 
-typedef QList<OrnPackageVersion> OrnPackageVersionList;
+using OrnPackageVersionList = QList<OrnPackageVersion>;
 
 Q_DECLARE_METATYPE(QList<OrnPackageVersion>)
 

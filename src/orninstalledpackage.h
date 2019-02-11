@@ -13,7 +13,7 @@ struct OrnInstalledPackage
     QString icon;
 };
 
-typedef QList<OrnInstalledPackage> OrnInstalledPackageList;
+using OrnInstalledPackageList = QList<OrnInstalledPackage>;
 
 Q_DECLARE_METATYPE(QList<OrnInstalledPackage>)
 

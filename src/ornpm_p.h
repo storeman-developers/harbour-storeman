@@ -59,9 +59,9 @@ public:
     OrnInstalledPackageList prepareInstalledPackages(const QString &packageName);
 
     // <alias, enabled>
-    typedef QHash<QString, bool>    RepoHash;
-    typedef QSet<QString>           StringSet;
-    typedef QHash<QString, QString> StringHash;
+    using RepoHash   = QHash<QString, bool>;
+    using StringSet  = QSet<QString>;
+    using StringHash = QHash<QString, QString>;
 
     bool            initialised;
     StringSet       archs;
