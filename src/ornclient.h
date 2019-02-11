@@ -15,7 +15,6 @@ struct OrnClientPrivate;
 class OrnClient : public QObject
 {
     friend class OrnBackup;
-    friend class OrnApiRequest;
 
     Q_OBJECT
     Q_PROPERTY(bool authorised READ authorised NOTIFY authorisedChanged)
