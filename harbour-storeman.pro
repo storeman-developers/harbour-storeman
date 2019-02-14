@@ -118,6 +118,7 @@ OTHER_FILES += \
     qml/pages/RestoreDialog.qml \
     qml/pages/BackupDialog.qml \
     qml/pages/SettingsPage.qml \
+    qml/pages/MainPageOrderDialog.qml \
     qml/pages/LocalRpmsPage.qml \
     qml/pages/RepoSuggestionPage.qml \
     qml/components/AppListDelegate.qml \

@@ -30,6 +30,7 @@
 #define STOREMAN_AUTHOR QStringLiteral("osetr")
 
 #define MAINPAGE_SHOW_RECENT        QStringLiteral("mainpage/show_recent")
+#define MAINPAGE_ORDER              QStringLiteral("mainpage/order")
 #define UPDATES_INTERVAL            QStringLiteral("updates/interval")
 #define UPDATES_ENABLED             QStringLiteral("updates/enabled")
 #define UPDATES_SMART               QStringLiteral("updates/smart")
@@ -83,6 +84,33 @@ void Storeman::setShowRecentOnStart(bool value)
         mSettings->setValue(MAINPAGE_SHOW_RECENT, value);
         emit this->showRecentOnStartChanged();
     }
+}
+
+QVariantList Storeman::mainPageOrder() const
+{
+    return mSettings->value(MAINPAGE_ORDER, QVariantList({
+        RecentlyUpdated,
+        Categories,
+        Bookmarks,
+        Repositories,
+        InstalledApps,
+        LocalRpms,
+    })).toList();
+}
+
+void Storeman::setMainPageOrder(const QVariantList &value)
+{
+    if (this->mainPageOrder() != value)
+    {
+        mSettings->setValue(MAINPAGE_ORDER, value);
+        emit this->mainPageOrderChanged();
+    }
+}
+
+void Storeman::resetMainPageOrder()
+{
+    mSettings->remove(MAINPAGE_ORDER);
+    emit this->mainPageOrderChanged();
 }
 
 int Storeman::updateInterval() const

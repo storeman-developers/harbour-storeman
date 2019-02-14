@@ -94,6 +94,12 @@ Page {
                 checked: Storeman.showRecentOnStart
             }
 
+            ListMenuItem {
+                iconSource: "image://theme/icon-m-transfer"
+                text: qsTrId("orn-mainpage-order")
+                onClicked: pageStack.push(Qt.resolvedUrl("MainPageOrderDialog.qml"))
+            }
+
             SectionHeader {
                 //% "Updates"
                 text: qsTrId("orn-updates")
