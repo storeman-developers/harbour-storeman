@@ -1030,5 +1030,17 @@ Storeman не хранит ваш пароль и не передает его �
         <source>Switch to the page of recently updated packages on start</source>
         <translation>Показывать страницу недавно обновленных пакетов после запуска</translation>
     </message>
+    <message id="orn-mainpage-order">
+        <source>Order items</source>
+        <translation>Порядок</translation>
+    </message>
+    <message id="orn-reset">
+        <source>Reset</source>
+        <translation>Сбросить</translation>
+    </message>
+    <message id="orn-mainpage-order-description">
+        <source>Drag items to change their order</source>
+        <translation>Перетаскивайте пункты меню для смены порядка</translation>
+    </message>
 </context>
 </TS>

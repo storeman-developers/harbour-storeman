@@ -1028,5 +1028,17 @@
         <source>Switch to the page of recently updated packages on start</source>
         <translation>Podczas startu przełącz do strony ostatnio aktualizowanych pakietów</translation>
     </message>
+    <message id="orn-mainpage-order">
+        <source>Order items</source>
+        <translation>Kolejność elementów</translation>
+    </message>
+    <message id="orn-reset">
+        <source>Reset</source>
+        <translation>Reset</translation>
+    </message>
+    <message id="orn-mainpage-order-description">
+        <source>Drag items to change their order</source>
+        <translation>Przeciągnij elementy, aby zmienić ich kolejność</translation>
+    </message>
 </context>
 </TS>

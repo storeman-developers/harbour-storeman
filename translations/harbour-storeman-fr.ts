@@ -1008,18 +1008,30 @@
     </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
-        <translation type="unfinished"></translation>
+        <translation>Toucher à nouveau pour fermer l&apos;astuce</translation>
     </message>
     <message id="orn-mainpage">
         <source>Main page</source>
-        <translation type="unfinished"></translation>
+        <translation>Page d&apos;accueil</translation>
     </message>
     <message id="orn-show-recent-switch">
         <source>Show recenty updated on start</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher les dernières mises à jour au démarrage</translation>
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>
+        <translation>Au démarrage, afficher la page des paquets récemment mis à jour</translation>
+    </message>
+    <message id="orn-mainpage-order">
+        <source>Order items</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-reset">
+        <source>Reset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-mainpage-order-description">
+        <source>Drag items to change their order</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -509,7 +509,7 @@
     </message>
     <message id="orn-installed-apps">
         <source>Installed applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Εγκατεστημένες εφαρμογές</translation>
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
@@ -665,7 +665,7 @@
     </message>
     <message id="orn-backup-hint">
         <source>&lt;h2&gt;Backup to a file&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;h2&gt;Εφεδρικό αντίγραφο σε αρχείο&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Τα αντίγραφα ασφαλείας σας επιτρέπουν την αποθήκευση των αποθετηρίων του OpenRepos, τις εγκατεστημένες εφαρμογές και σελιδοδείκτες και να τις επαναφέρετε αργότερα (πχ μετά από μια επαναφορά των ρυθμίσεων εργοστασίου). Ένα εφεδρικό αντίγραφο είναι ένα τοπικό αρχείο αποθηκευμένο στον κατάλογο&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Προσοχή!&lt;/b&gt; Θα πρέπει να αποθηκεύσετε τα αντίγραφα ασφαλείας σε ένα ασφαλές μέρος χειροκίνητα πριν την επαναφορά στις εργοστασιακές ρυθμίσεις. Για παράδειγμα στην κάρτα SD, σε μια εξωτερική συσκευή, μια υπηρεσία αποθήκευσης νέφους ή κάπου αλλού.&lt;/p&gt;</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -980,19 +980,19 @@
     </message>
     <message id="orn-hint-bookmark">
         <source>Tap to bookmark the application</source>
-        <translation type="unfinished"></translation>
+        <translation>Κτυπήστε για να αξιολογήσετε την εφαρμογή</translation>
     </message>
     <message id="orn-bad-appid">
         <source>Invalid package ID %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Μη έγκυρο αναγνωριστικό πακέτου %1</translation>
     </message>
     <message id="orn-backup-filenameph">
         <source>A file name for backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Το όνομα του εφεδρικού αρχείου</translation>
     </message>
     <message id="orn-file-exists">
         <source>File already exists</source>
-        <translation type="unfinished"></translation>
+        <translation>Το αρχείο υπάρχει ήδη</translation>
     </message>
     <message id="orn-backup-items">
         <source>What to backup</source>
@@ -1000,26 +1000,38 @@
     </message>
     <message id="orn-backup-apps">
         <source>Installed applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Εγκατεστημένες εφαρμογές</translation>
     </message>
     <message id="orn-myapps">
         <source>My applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Οι εφαρμογές μου</translation>
     </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
-        <translation type="unfinished"></translation>
+        <translation>Κτυπήστε ξανά για κλείσιμο της υπόδειξης</translation>
     </message>
     <message id="orn-mainpage">
         <source>Main page</source>
-        <translation type="unfinished"></translation>
+        <translation>Κύρια σελίδα</translation>
     </message>
     <message id="orn-show-recent-switch">
         <source>Show recenty updated on start</source>
-        <translation type="unfinished"></translation>
+        <translation>Εμφάνιση των προσφάτως ενημερωμένων κατά την έναρξη</translation>
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-mainpage-order">
+        <source>Order items</source>
+        <translation>Ταξινόμηση των αντικειμένων</translation>
+    </message>
+    <message id="orn-reset">
+        <source>Reset</source>
+        <translation>Επαναφορά</translation>
+    </message>
+    <message id="orn-mainpage-order-description">
+        <source>Drag items to change their order</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

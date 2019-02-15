@@ -1016,5 +1016,17 @@
         <source>Switch to the page of recently updated packages on start</source>
         <translation type="unfinished"></translation>
     </message>
+    <message id="orn-mainpage-order">
+        <source>Order items</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-reset">
+        <source>Reset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-mainpage-order-description">
+        <source>Drag items to change their order</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

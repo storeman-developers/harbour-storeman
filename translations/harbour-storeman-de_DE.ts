@@ -577,7 +577,7 @@
     </message>
     <message id="orn-backups">
         <source>Backups</source>
-        <translation>Backups</translation>
+        <translation>Datensicherung</translation>
     </message>
     <message id="orn-backup-description">
         <source>Backup and restore repos and installed apps</source>
@@ -585,11 +585,11 @@
     </message>
     <message id="orn-create-backup">
         <source>Create a backup</source>
-        <translation>Backup erstellen</translation>
+        <translation>Sicherungskopie erstellen</translation>
     </message>
     <message id="orn-backup-error">
         <source>Backup error</source>
-        <translation>Backup-Fehler</translation>
+        <translation>Fehler bei der Datensicherung</translation>
     </message>
     <message id="orn-backup-error-directory">
         <source>Could not create directory</source>
@@ -621,7 +621,7 @@
     </message>
     <message id="orn-backups-placeholder">
         <source>Backups will be shown here</source>
-        <translation>Hier werden die Backups angezeigt</translation>
+        <translation>Hier werden die Sicherungskopien angezeigt</translation>
     </message>
     <message id="orn-restoring-repos">
         <source>Restoring repositories</source>
@@ -645,7 +645,7 @@
     </message>
     <message id="orn-success-backup">
         <source>Successful backup</source>
-        <translation>Backup erfolgreich</translation>
+        <translation>Datensicherung erfolgreich</translation>
     </message>
     <message id="orn-success-restore">
         <source>Successful restore</source>
@@ -661,11 +661,11 @@
     </message>
     <message id="orn-backup">
         <source>Backup</source>
-        <translation>Backup</translation>
+        <translation>Daten sichern</translation>
     </message>
     <message id="orn-backup-hint">
         <source>&lt;h2&gt;Backup to a file&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.&lt;/p&gt;</source>
-        <translation>&lt;h2&gt;Backup als Datei&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup ermöglicht es dir, deine aktuellen OpenRepos-Quellen, installierten Programme und Lesezeichen zu speichern und später wiederherzustellen (z.B. nach einem Factory-Reset). Ein Backup ist eine lokale Datei, die im Verzeichnis&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; gespeichert wird.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Achtung!&lt;/b&gt; Du solltest deine Backups manuell an einen sicheren Ort kopieren, bevor du einen Factory-Reset durchführst. Es kann sich dabei um deine SD-Karte, ein externes Gerät, einen Cloud-Speicher oder etwas anderes handeln.&lt;/p&gt;</translation>
+        <translation>&lt;h2&gt;Datensicherung als Datei&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Datensicherung ermöglicht es dir, deine aktuellen OpenRepos-Quellen, installierten Programme und Lesezeichen zu speichern und später wiederherzustellen (z.B. nach dem Zurücksetzen in den Werkszustand). Eine Sicherungskopie ist eine lokale Datei, die im Verzeichnis&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; gespeichert wird.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Achtung!&lt;/b&gt; Du solltest deine Sicherungskopien manuell an einen sicheren Ort kopieren, bevor du dein Gerät zurücksetzt. Es kann sich dabei um deine SD-Karte, ein externes Gerät, einen Cloud-Speicher oder etwas anderes handeln.&lt;/p&gt;</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -988,7 +988,7 @@
     </message>
     <message id="orn-backup-filenameph">
         <source>A file name for backup</source>
-        <translation>Ein Dateiname für das Backup</translation>
+        <translation>Ein Dateiname für die Sicherungskopie</translation>
     </message>
     <message id="orn-file-exists">
         <source>File already exists</source>
@@ -1016,11 +1016,23 @@
     </message>
     <message id="orn-show-recent-switch">
         <source>Show recenty updated on start</source>
-        <translation>Beim Start kürzlich aktualisierte Pakete anzeigen</translation>
+        <translation>Kürzlich aktualisierte Pakete anzeigen</translation>
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>
         <translation>Beim Start auf die Seite der zuletzt aktualisierten Pakete wechseln</translation>
+    </message>
+    <message id="orn-mainpage-order">
+        <source>Order items</source>
+        <translation>Reihenfolge festlegen</translation>
+    </message>
+    <message id="orn-reset">
+        <source>Reset</source>
+        <translation>Zurücksetzen</translation>
+    </message>
+    <message id="orn-mainpage-order-description">
+        <source>Drag items to change their order</source>
+        <translation>Ziehe die Einträge, um ihre Reihenfolge zu ändern</translation>
     </message>
 </context>
 </TS>

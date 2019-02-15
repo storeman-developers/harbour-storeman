@@ -1022,5 +1022,17 @@
         <source>Switch to the page of recently updated packages on start</source>
         <translation>Toon de pagina met recent bijgewerkte apps bij opstarten</translation>
     </message>
+    <message id="orn-mainpage-order">
+        <source>Order items</source>
+        <translation>Items rangschikken</translation>
+    </message>
+    <message id="orn-reset">
+        <source>Reset</source>
+        <translation>Opnieuw instellen</translation>
+    </message>
+    <message id="orn-mainpage-order-description">
+        <source>Drag items to change their order</source>
+        <translation>Versleep items om hun volgorde te veranderen</translation>
+    </message>
 </context>
 </TS>

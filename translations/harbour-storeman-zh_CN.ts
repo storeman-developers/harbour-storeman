@@ -1002,19 +1002,31 @@
     </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
-        <translation type="unfinished"></translation>
+        <translation>再次点击以关闭提示</translation>
     </message>
     <message id="orn-mainpage">
         <source>Main page</source>
-        <translation type="unfinished"></translation>
+        <translation>主页</translation>
     </message>
     <message id="orn-show-recent-switch">
         <source>Show recenty updated on start</source>
-        <translation type="unfinished"></translation>
+        <translation>启动时显示最近更新</translation>
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>
-        <translation type="unfinished"></translation>
+        <translation>启动时切换到最近更新的软件页面</translation>
+    </message>
+    <message id="orn-mainpage-order">
+        <source>Order items</source>
+        <translation>排序</translation>
+    </message>
+    <message id="orn-reset">
+        <source>Reset</source>
+        <translation>重置</translation>
+    </message>
+    <message id="orn-mainpage-order-description">
+        <source>Drag items to change their order</source>
+        <translation>拖动来改变他们的顺序</translation>
     </message>
 </context>
 </TS>

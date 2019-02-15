@@ -509,7 +509,7 @@
     </message>
     <message id="orn-installed-apps">
         <source>Installed applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplicaciones instaladas</translation>
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
@@ -665,7 +665,7 @@
     </message>
     <message id="orn-backup-hint">
         <source>&lt;h2&gt;Backup to a file&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;h2&gt;Copia de seguridad en archivo&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Las copias de seguridad permiten guardar tus repositorios actuales de OpenRepos, las aplicaciones instaladas y las favoritas y restaurarlas después (por ejemplo, tras un reseteo de fábrica). Una copia de seguridad es un archivo local que se guarda en el directorio&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; .&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;¡Atención! &lt;/b&gt;Debes copiar tus copias de seguridad manualmente en algún lugar seguro antes de hacer un reseteo de fábrica. Podría ser tu tarjeta SD, dispositivo externo, almacenamiento en la nube o cualquier otro.&lt;/p&gt;</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -876,7 +876,7 @@
     </message>
     <message id="orn-hint-commentdelegate">
         <source>Tap to navigate to the replied comment</source>
-        <translation>Da un toque para ir a la respuesta</translation>
+        <translation>Pulsa para ir a la respuesta</translation>
     </message>
     <message id="orn-tags">
         <source>Tags</source>
@@ -900,7 +900,7 @@
     </message>
     <message id="orn-hint-rating">
         <source>Tap to rate the application</source>
-        <translation>Da un toque para valorar aplicación</translation>
+        <translation>Pulsa para valorar aplicación</translation>
     </message>
     <message id="orn-local-rpms">
         <source>Local RPM files</source>
@@ -988,38 +988,50 @@
     </message>
     <message id="orn-backup-filenameph">
         <source>A file name for backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Un nombre para la copia de seguridad</translation>
     </message>
     <message id="orn-file-exists">
         <source>File already exists</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo ya existe</translation>
     </message>
     <message id="orn-backup-items">
         <source>What to backup</source>
-        <translation type="unfinished"></translation>
+        <translation>De qué hacer copia de seguridad</translation>
     </message>
     <message id="orn-backup-apps">
         <source>Installed applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplicaciones instaladas</translation>
     </message>
     <message id="orn-myapps">
         <source>My applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Mis aplicaciones</translation>
     </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
-        <translation type="unfinished"></translation>
+        <translation>Toca de nuevo para cerrar la ayuda</translation>
     </message>
     <message id="orn-mainpage">
         <source>Main page</source>
-        <translation type="unfinished"></translation>
+        <translation>Página principal</translation>
     </message>
     <message id="orn-show-recent-switch">
         <source>Show recenty updated on start</source>
-        <translation type="unfinished"></translation>
+        <translation>Actualizado recientemente en el inicio</translation>
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>
+        <translation>Cambia a la página de paquetes actualizados recientemente al iniciar la aplicación</translation>
+    </message>
+    <message id="orn-mainpage-order">
+        <source>Order items</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-reset">
+        <source>Reset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-mainpage-order-description">
+        <source>Drag items to change their order</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

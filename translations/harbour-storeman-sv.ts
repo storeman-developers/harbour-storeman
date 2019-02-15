@@ -1022,5 +1022,17 @@
         <source>Switch to the page of recently updated packages on start</source>
         <translation>Växla till sidan med nyligen uppdaterade paket vid start</translation>
     </message>
+    <message id="orn-mainpage-order">
+        <source>Order items</source>
+        <translation>Ordna objekt</translation>
+    </message>
+    <message id="orn-reset">
+        <source>Reset</source>
+        <translation>Återställ</translation>
+    </message>
+    <message id="orn-mainpage-order-description">
+        <source>Drag items to change their order</source>
+        <translation>Dra och släpp för att ändra ordning</translation>
+    </message>
 </context>
 </TS>

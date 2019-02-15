@@ -509,7 +509,7 @@
     </message>
     <message id="orn-installed-apps">
         <source>Installed applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Applicazioni installate</translation>
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
@@ -665,7 +665,7 @@
     </message>
     <message id="orn-backup-hint">
         <source>&lt;h2&gt;Backup to a file&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;h2&gt;File di backup&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Il backup ti permette di salvare i tuoi repository, applicazioni installate e preferiti di OpenRepos e ripristinarli in seguito (ad esempio dopo un ripristino alle impostazioni di fabbrica del dispositivo). Un backup è un file salvato nella cartella &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; &lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attenzione!&lt;/b&gt;Prima di ripristinare il tuo dispositivo alle impostazioni di fabbrica, assicurati di spostare i tuoi backup in un posto sicuro, come la tua scheda SD, dispositivo esterno, cloud o altro.&lt;/p&gt;</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -980,46 +980,58 @@
     </message>
     <message id="orn-hint-bookmark">
         <source>Tap to bookmark the application</source>
-        <translation type="unfinished"></translation>
+        <translation>Tap per aggiungere l&apos;app ai preferiti</translation>
     </message>
     <message id="orn-bad-appid">
         <source>Invalid package ID %1</source>
-        <translation type="unfinished"></translation>
+        <translation>ID pacchetto non valido %1</translation>
     </message>
     <message id="orn-backup-filenameph">
         <source>A file name for backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome file per il backup</translation>
     </message>
     <message id="orn-file-exists">
         <source>File already exists</source>
-        <translation type="unfinished"></translation>
+        <translation>Il file esiste già</translation>
     </message>
     <message id="orn-backup-items">
         <source>What to backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Cosa salvare</translation>
     </message>
     <message id="orn-backup-apps">
         <source>Installed applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Applicazioni installate</translation>
     </message>
     <message id="orn-myapps">
         <source>My applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Mie applicazioni</translation>
     </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
-        <translation type="unfinished"></translation>
+        <translation>Tap di nuovo per chiudere il suggerimento</translation>
     </message>
     <message id="orn-mainpage">
         <source>Main page</source>
-        <translation type="unfinished"></translation>
+        <translation>Pagina principale</translation>
     </message>
     <message id="orn-show-recent-switch">
         <source>Show recenty updated on start</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra aggiornati recentemente all&apos;avvio</translation>
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>
+        <translation>All&apos;avvio passa alla pagina dei pacchetti aggiornati recentemente</translation>
+    </message>
+    <message id="orn-mainpage-order">
+        <source>Order items</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-reset">
+        <source>Reset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-mainpage-order-description">
+        <source>Drag items to change their order</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
