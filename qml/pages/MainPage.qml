@@ -117,7 +117,6 @@ Page {
                 opacity: height === gridHeight ? 1.0 : 0.0
 
                 Behavior on height { NumberAnimation {} }
-                OpacityAnimator on opacity {}
 
                 Repeater {
                     id: repeater
