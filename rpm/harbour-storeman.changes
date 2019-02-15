@@ -1,3 +1,10 @@
+* Sat Feb 16 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.1-1
+- Add an ability to order items of the main page
+- Fix disappearing grid of recent updates
+- Remove old code
+- Refactoring
+- Update translations
+
 * Sun Feb 10 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.0-1
 - Better handling of empty and deleted packages
 - Allow to select which items to backup (repos, installed apps, bookmarks)
