@@ -1026,7 +1026,7 @@
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>
-        <translation>Podczas startu przełącz do strony ostatnio aktualizowanych pakietów</translation>
+        <translation>Podczas startu przejdź do strony ostatnio aktualizowanych pakietów</translation>
     </message>
     <message id="orn-mainpage-order">
         <source>Order items</source>

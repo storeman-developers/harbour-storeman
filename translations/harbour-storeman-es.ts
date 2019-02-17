@@ -1024,15 +1024,15 @@
     </message>
     <message id="orn-mainpage-order">
         <source>Order items</source>
-        <translation type="unfinished"></translation>
+        <translation>Orden de los elementos</translation>
     </message>
     <message id="orn-reset">
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurar</translation>
     </message>
     <message id="orn-mainpage-order-description">
         <source>Drag items to change their order</source>
-        <translation type="unfinished"></translation>
+        <translation>Arrastra los elementos para cambiar el orden</translation>
     </message>
 </context>
 </TS>

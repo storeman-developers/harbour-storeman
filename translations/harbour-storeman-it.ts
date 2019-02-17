@@ -9,7 +9,7 @@
     </message>
     <message id="orn-repositories">
         <source>Repositories</source>
-        <translation>Repositories</translation>
+        <translation>Repository</translation>
     </message>
     <message id="orn-refresh">
         <source>Refresh</source>
@@ -147,7 +147,7 @@
     </message>
     <message id="orn-cat-ambience-themes">
         <source>Ambience &amp; Themes</source>
-        <translation>Atmosfere &amp; Temi</translation>
+        <translation>Atmosfere &amp; temi</translation>
     </message>
     <message id="orn-cat-business">
         <source>Business</source>
@@ -155,11 +155,11 @@
     </message>
     <message id="orn-cat-city-guides-maps">
         <source>City guides &amp; maps</source>
-        <translation>Mappe &amp; Guide</translation>
+        <translation>Mappe &amp; guide</translation>
     </message>
     <message id="orn-cat-education-science">
         <source>Education &amp; Science</source>
-        <translation>Scienza &amp; Educazione</translation>
+        <translation>Scienza &amp; educazione</translation>
     </message>
     <message id="orn-cat-entertainment">
         <source>Entertainment</source>
@@ -179,15 +179,15 @@
     </message>
     <message id="orn-cat-patches">
         <source>Patches</source>
-        <translation>Patches</translation>
+        <translation>Patch</translation>
     </message>
     <message id="orn-cat-photo-video">
         <source>Photo &amp; video</source>
-        <translation>Foto &amp; Video</translation>
+        <translation>Foto &amp; video</translation>
     </message>
     <message id="orn-cat-social-networks">
         <source>Social Networks</source>
-        <translation>Social Networks</translation>
+        <translation>Social network</translation>
     </message>
     <message id="orn-cat-sports">
         <source>Sports</source>
@@ -203,7 +203,7 @@
     </message>
     <message id="orn-cat-utilities">
         <source>Utilities</source>
-        <translation>Utilities</translation>
+        <translation>Utility</translation>
     </message>
     <message id="orn-cat-games">
         <source>Games</source>
@@ -227,7 +227,7 @@
     </message>
     <message id="orn-cat-card-casino">
         <source>Card &amp; casino</source>
-        <translation>Carte &amp; Casino</translation>
+        <translation>Carte &amp; casinò</translation>
     </message>
     <message id="orn-cat-education">
         <source>Education</source>
@@ -577,7 +577,7 @@
     </message>
     <message id="orn-backups">
         <source>Backups</source>
-        <translation>Backups</translation>
+        <translation>Backup</translation>
     </message>
     <message id="orn-backup-description">
         <source>Backup and restore repos and installed apps</source>
@@ -613,7 +613,7 @@
     </message>
     <message id="orn-total-repos">
         <source>Total repositories</source>
-        <translation>Total repositories</translation>
+        <translation>Totale repository</translation>
     </message>
     <message id="orn-details">
         <source>Details</source>
@@ -1024,15 +1024,15 @@
     </message>
     <message id="orn-mainpage-order">
         <source>Order items</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordina elementi</translation>
     </message>
     <message id="orn-reset">
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Resetta</translation>
     </message>
     <message id="orn-mainpage-order-description">
         <source>Drag items to change their order</source>
-        <translation type="unfinished"></translation>
+        <translation>Trascina gli elementi per cambiarne l&apos;ordine</translation>
     </message>
 </context>
 </TS>

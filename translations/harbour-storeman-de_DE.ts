@@ -1032,7 +1032,7 @@
     </message>
     <message id="orn-mainpage-order-description">
         <source>Drag items to change their order</source>
-        <translation>Ziehe die Einträge, um ihre Reihenfolge zu ändern</translation>
+        <translation>Halte und ziehe, um die Reihenfolge zu ändern</translation>
     </message>
 </context>
 </TS>
