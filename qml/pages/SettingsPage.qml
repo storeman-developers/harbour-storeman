@@ -87,7 +87,7 @@ Page {
 
             TextSwitch {
                 id: showRecentOnStartSwitch
-                //% "Show recenty updated on start"
+                //% "Show recently updated on start"
                 text: qsTrId("orn-show-recent-switch")
                 //% "Switch to the page of recently updated packages on start"
                 description: qsTrId("orn-show-recent-switch-descr")
