@@ -13,8 +13,8 @@ Name:       harbour-storeman
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    OpenRepos Client for Sailfish OS
-Version:    0.1.1
-Release:    2
+Version:    0.1.2
+Release:    1
 Group:      Qt/Qt
 License:    MIT
 URL:        https://github.com/mentaljam/harbour-storeman
