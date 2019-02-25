@@ -507,7 +507,7 @@
     </message>
     <message id="orn-installed-apps">
         <source>Installed applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Telepített alkalmazások</translation>
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
@@ -663,7 +663,7 @@
     </message>
     <message id="orn-backup-hint">
         <source>&lt;h2&gt;Backup to a file&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;h2&gt;Biztonsági mentés egy fájlba&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;A biztonsági mentés segítségével elmentheted a jelenlegi OpenRepos csomagtárolóidat, telepített alkalmazásaidat és könyvjelzőidet, hogy majd később visszaállítsd őket. (például gyári beállításokra való visszaállítás esetében). A biztonsági mentés egy helyi fájl a&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; mappában.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Figyelem!&lt;/b&gt; A biztonsági mentéseidet a gyári visszaállítás előtt valamilyen biztonságos helyre kell másolnod. Ez lehet az SD-kártyád, külső tároló, felhőtárhely vagy valami más.&lt;/p&gt;</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -958,58 +958,58 @@
     </message>
     <message id="orn-no-packages">
         <source>No packages available</source>
-        <translation type="unfinished"></translation>
+        <translation>Nincsenek elérhető csomagok</translation>
     </message>
     <message id="orn-error-comment-sending">
         <source>Error sending comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiba a hozzászólás küldésekor</translation>
     </message>
     <message id="orn-error-comment-deletion">
         <source>Error deleting comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiba a hozzászólás törlésekor</translation>
     </message>
     <message id="orn-error-network">
         <source>Network error</source>
-        <translation type="unfinished"></translation>
+        <translation>Hálózati hiba</translation>
     </message>
     <message id="orn-hint-bookmark">
         <source>Tap to bookmark the application</source>
-        <translation type="unfinished"></translation>
+        <translation>Érintsd meg az alkalmazás könyvjelzőzéséhez</translation>
     </message>
     <message id="orn-bad-appid">
         <source>Invalid package ID %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Érvénytelen csomag ID %1</translation>
     </message>
     <message id="orn-backup-filenameph">
         <source>A file name for backup</source>
-        <translation type="unfinished"></translation>
+        <translation>A mentési fájl neve</translation>
     </message>
     <message id="orn-file-exists">
         <source>File already exists</source>
-        <translation type="unfinished"></translation>
+        <translation>A fájl már létezik</translation>
     </message>
     <message id="orn-backup-items">
         <source>What to backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Mit szeretnél menteni?</translation>
     </message>
     <message id="orn-backup-apps">
         <source>Installed applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Telepített alkalmazások</translation>
     </message>
     <message id="orn-myapps">
         <source>My applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Alkalmazásaim</translation>
     </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
-        <translation type="unfinished"></translation>
+        <translation>Érintsd meg még egyszer a tipp bezárásához</translation>
     </message>
     <message id="orn-mainpage">
         <source>Main page</source>
-        <translation type="unfinished"></translation>
+        <translation>Főoldal</translation>
     </message>
     <message id="orn-show-recent-switch">
-        <source>Show recenty updated on start</source>
+        <source>Show recently updated on start</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="orn-show-recent-switch-descr">

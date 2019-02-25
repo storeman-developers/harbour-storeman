@@ -1023,7 +1023,7 @@ Storeman не хранит ваш пароль и не передает его �
         <translation>Главная страница</translation>
     </message>
     <message id="orn-show-recent-switch">
-        <source>Show recenty updated on start</source>
+        <source>Show recently updated on start</source>
         <translation>Показывать недавние обновления</translation>
     </message>
     <message id="orn-show-recent-switch-descr">

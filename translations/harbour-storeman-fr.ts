@@ -25,11 +25,11 @@
     </message>
     <message id="orn-enabled">
         <source>Enabled</source>
-        <translation>Activé</translation>
+        <translation>Activé(s)</translation>
     </message>
     <message id="orn-disabled">
         <source>Disabled</source>
-        <translation>Désactivé</translation>
+        <translation>Désactivé(s)</translation>
     </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
@@ -1015,7 +1015,7 @@
         <translation>Page d&apos;accueil</translation>
     </message>
     <message id="orn-show-recent-switch">
-        <source>Show recenty updated on start</source>
+        <source>Show recently updated on start</source>
         <translation>Afficher les dernières mises à jour au démarrage</translation>
     </message>
     <message id="orn-show-recent-switch-descr">
@@ -1024,15 +1024,15 @@
     </message>
     <message id="orn-mainpage-order">
         <source>Order items</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordonner les éléments</translation>
     </message>
     <message id="orn-reset">
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Réinitialiser</translation>
     </message>
     <message id="orn-mainpage-order-description">
         <source>Drag items to change their order</source>
-        <translation type="unfinished"></translation>
+        <translation>Faites glisser les éléments pour modifier leur ordre</translation>
     </message>
 </context>
 </TS>

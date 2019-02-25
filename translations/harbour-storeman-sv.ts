@@ -1015,7 +1015,7 @@
         <translation>Huvudsida</translation>
     </message>
     <message id="orn-show-recent-switch">
-        <source>Show recenty updated on start</source>
+        <source>Show recently updated on start</source>
         <translation>Visa nyligen uppdaterade vid start</translation>
     </message>
     <message id="orn-show-recent-switch-descr">

@@ -1027,8 +1027,8 @@
         <translation>Prva stran</translation>
     </message>
     <message id="orn-show-recent-switch">
-        <source>Show recenty updated on start</source>
-        <translation>Ob zagonu prikaži nedavno pododobljene</translation>
+        <source>Show recently updated on start</source>
+        <translation>Ob zagonu prikaži nedavno posodobljene</translation>
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>

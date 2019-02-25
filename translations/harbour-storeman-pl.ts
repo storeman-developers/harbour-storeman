@@ -1021,8 +1021,8 @@
         <translation>Strona główna</translation>
     </message>
     <message id="orn-show-recent-switch">
-        <source>Show recenty updated on start</source>
-        <translation>Pokaż ostatnio aktualizowane podczas startu</translation>
+        <source>Show recently updated on start</source>
+        <translation>Pokaż ostatnio zaktualizowane po uruchomieniu</translation>
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>

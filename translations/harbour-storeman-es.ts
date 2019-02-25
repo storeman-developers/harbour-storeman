@@ -13,7 +13,7 @@
     </message>
     <message id="orn-refresh">
         <source>Refresh</source>
-        <translation>Actualizar</translation>
+        <translation>Volver a cargar</translation>
     </message>
     <message id="orn-disable">
         <source>Disable</source>
@@ -1015,7 +1015,7 @@
         <translation>Página principal</translation>
     </message>
     <message id="orn-show-recent-switch">
-        <source>Show recenty updated on start</source>
+        <source>Show recently updated on start</source>
         <translation>Actualizado recientemente en el inicio</translation>
     </message>
     <message id="orn-show-recent-switch-descr">

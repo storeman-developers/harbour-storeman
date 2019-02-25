@@ -1015,8 +1015,8 @@
         <translation>Κύρια σελίδα</translation>
     </message>
     <message id="orn-show-recent-switch">
-        <source>Show recenty updated on start</source>
-        <translation>Εμφάνιση των προσφάτως ενημερωμένων κατά την έναρξη</translation>
+        <source>Show recently updated on start</source>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>

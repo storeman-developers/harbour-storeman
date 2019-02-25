@@ -1009,8 +1009,8 @@
         <translation>主页</translation>
     </message>
     <message id="orn-show-recent-switch">
-        <source>Show recenty updated on start</source>
-        <translation>启动时显示最近更新</translation>
+        <source>Show recently updated on start</source>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>

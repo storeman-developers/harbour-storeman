@@ -1015,7 +1015,7 @@
         <translation>Beginpagina</translation>
     </message>
     <message id="orn-show-recent-switch">
-        <source>Show recenty updated on start</source>
+        <source>Show recently updated on start</source>
         <translation>Recent bijgewerkte apps weergeven bij opstarten</translation>
     </message>
     <message id="orn-show-recent-switch-descr">
