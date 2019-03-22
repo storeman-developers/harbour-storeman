@@ -996,7 +996,7 @@
     </message>
     <message id="orn-backup-items">
         <source>What to backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Προσθήκη στο αντίγραφο ασφαλείας</translation>
     </message>
     <message id="orn-backup-apps">
         <source>Installed applications</source>
@@ -1016,11 +1016,11 @@
     </message>
     <message id="orn-show-recent-switch">
         <source>Show recently updated on start</source>
-        <translation type="unfinished"></translation>
+        <translation>Εμφάνιση των προσφάτως ενημερωμένων κατά την έναρξη</translation>
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>
-        <translation type="unfinished"></translation>
+        <translation>Εναλλαγή στην σελίδα των προσφάτως ενημερωμένων πακέτων κατά την έναρξη</translation>
     </message>
     <message id="orn-mainpage-order">
         <source>Order items</source>
@@ -1032,7 +1032,7 @@
     </message>
     <message id="orn-mainpage-order-description">
         <source>Drag items to change their order</source>
-        <translation type="unfinished"></translation>
+        <translation>Σύρετε τα αντικείμενα για ταξινόμηση</translation>
     </message>
 </context>
 </TS>

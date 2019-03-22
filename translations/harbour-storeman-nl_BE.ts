@@ -477,7 +477,7 @@
     </message>
     <message id="orn-authorisation-expires-body">
         <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>De OpenRepos-autorisatie verloopt binnenkort. Tikt voor u terug te autoriseren.</translation>
+        <translation>De OpenRepos-autorisatie verloopt binnenkort. Tikt voor u te herautoriseren.</translation>
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
@@ -485,11 +485,11 @@
     </message>
     <message id="orn-authorisation-expired-body">
         <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>De OpenRepos-autorisatie is verlopen. Tikt voor u terug te autoriseren.</translation>
+        <translation>De OpenRepos-autorisatie is verlopen. Tikt voor u te herautoriseren.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
-        <translation>Tikt voor terug te autoriseren</translation>
+        <translation>Tikt voor te herautoriseren</translation>
     </message>
     <message id="orn-enable-all">
         <source>Enable all</source>
@@ -1008,7 +1008,7 @@
     </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
-        <translation>Tikt terug voor den tip te sluiten</translation>
+        <translation>Tikt nog ne keer voor den tip te sluiten</translation>
     </message>
     <message id="orn-mainpage">
         <source>Main page</source>
