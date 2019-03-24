@@ -509,7 +509,7 @@
     </message>
     <message id="orn-installed-apps">
         <source>Installed applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Asennetut sovellukset</translation>
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
@@ -665,7 +665,7 @@
     </message>
     <message id="orn-backup-hint">
         <source>&lt;h2&gt;Backup to a file&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;h2&gt;Varmuuskopioi tiedostoon&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Varmuuskopioinnin avulla voit tallentaa nykyiset OpenRepos-pakettilähteesi, asennetut ohjelmat ja kirjanmerkit sekä palauttaa ne myöhemmin (esimerkiksi tehdasasetusten palauttamisen jälkeen). Varmuuskopio on paikallinen tiedosto, joka on tallennettu &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; hakemistoon. &lt;br /&gt;&lt;br /&gt;&lt;b&gt;Huomio!&lt;/b&gt; Varmuuskopiot tulisi kopioida talteen manuaalisesti ennen tehdasasetusten palauttamista. Esimerkiksi SD-kortille, ulkoiseen laitteeseen tai pilvipalveluun.</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -988,51 +988,51 @@
     </message>
     <message id="orn-backup-filenameph">
         <source>A file name for backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedostonimi varmuuskopiolle</translation>
     </message>
     <message id="orn-file-exists">
         <source>File already exists</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedosto on jo olemassa</translation>
     </message>
     <message id="orn-backup-items">
         <source>What to backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Mitä varmuuskopioidaan</translation>
     </message>
     <message id="orn-backup-apps">
         <source>Installed applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Asennetut sovellukset</translation>
     </message>
     <message id="orn-myapps">
         <source>My applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Omat sovellukset</translation>
     </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
-        <translation type="unfinished"></translation>
+        <translation>Napauta uudelleen sulkeaksesi vihjeen</translation>
     </message>
     <message id="orn-mainpage">
         <source>Main page</source>
-        <translation type="unfinished"></translation>
+        <translation>Pääsivu</translation>
     </message>
     <message id="orn-show-recent-switch">
         <source>Show recently updated on start</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä viimeksi päivitetyt avattaessa</translation>
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>
-        <translation type="unfinished"></translation>
+        <translation>Siirty viimeksi päivitettyihin sovelluksiin avattaessa</translation>
     </message>
     <message id="orn-mainpage-order">
         <source>Order items</source>
-        <translation type="unfinished"></translation>
+        <translation>Järjestä</translation>
     </message>
     <message id="orn-reset">
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Palauta oletukset</translation>
     </message>
     <message id="orn-mainpage-order-description">
         <source>Drag items to change their order</source>
-        <translation type="unfinished"></translation>
+        <translation>Raahaa kohteita vaihtaaksesi järjestystä</translation>
     </message>
 </context>
 </TS>
