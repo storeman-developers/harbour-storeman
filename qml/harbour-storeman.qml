@@ -91,7 +91,10 @@ ApplicationWindow
 
     Connections {
         target: __quickWindow
-        onClosing: authorisationWarning.close()
+        onClosing: {
+            pageStack.clear()
+            authorisationWarning.close()
+        }
     }
 
     NetworkManager {
