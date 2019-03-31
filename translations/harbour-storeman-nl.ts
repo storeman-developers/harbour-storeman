@@ -371,7 +371,7 @@
         <source>%n minute(s) ago</source>
         <translation>
             <numerusform>%n minuut geleden</numerusform>
-            <numerusform>%0 minuten geleden</numerusform>
+            <numerusform>%n minuten geleden</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">

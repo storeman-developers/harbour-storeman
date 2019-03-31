@@ -337,7 +337,7 @@
     </message>
     <message id="orn-app-licensing">
         <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation>Dies ist eine Open-Source-Software, die unter den Bedingungen der&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT-Lizenz&lt;/a&gt; vertrieben wird.</translation>
+        <translation>Dies ist eine Open-Source-Software, die unter den Bedingungen der &lt;a href=&apos;%0&apos;&gt;MIT-Lizenz&lt;/a&gt; vertrieben wird.</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
@@ -665,7 +665,7 @@
     </message>
     <message id="orn-backup-hint">
         <source>&lt;h2&gt;Backup to a file&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.&lt;/p&gt;</source>
-        <translation>&lt;h2&gt;Datensicherung als Datei&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Datensicherung ermöglicht es dir, deine aktuellen OpenRepos-Quellen, installierten Programme und Lesezeichen zu speichern und später wiederherzustellen (z.B. nach dem Zurücksetzen in den Werkszustand). Eine Sicherungskopie ist eine lokale Datei, die im Verzeichnis&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; gespeichert wird.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Achtung!&lt;/b&gt; Du solltest deine Sicherungskopien manuell an einen sicheren Ort kopieren, bevor du dein Gerät zurücksetzt. Es kann sich dabei um deine SD-Karte, ein externes Gerät, einen Cloud-Speicher oder etwas anderes handeln.&lt;/p&gt;</translation>
+        <translation>&lt;h2&gt;Datensicherung als Datei&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Die Datensicherung ermöglicht es dir, deine aktuellen OpenRepos-Quellen, installierten Programme und Lesezeichen zu speichern und später wiederherzustellen (z.B. nach dem Zurücksetzen in den Werkszustand). Eine Sicherungskopie ist eine lokale Datei, die im Verzeichnis &lt;i&gt;~/Documents/Storeman&lt;/i&gt; gespeichert wird.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Achtung!&lt;/b&gt; Du solltest deine Sicherungskopien manuell an einen sicheren Ort kopieren, bevor du dein Gerät zurücksetzt. Es kann sich dabei um deine SD-Karte, ein externes Gerät, einen Cloud-Speicher oder etwas anderes handeln.&lt;/p&gt;</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -996,7 +996,7 @@
     </message>
     <message id="orn-backup-items">
         <source>What to backup</source>
-        <translation>Was soll gesichert werden</translation>
+        <translation>Was gesichert werden soll</translation>
     </message>
     <message id="orn-backup-apps">
         <source>Installed applications</source>
