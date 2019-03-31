@@ -406,9 +406,9 @@ void OrnPm::updatePackage(const QString &packageName)
     auto t = d->transaction(packageId);
     connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(onPackageUpdated(quint32,quint32)));
     QStringList ids(packageId);
-    qDebug().nospace() << "Calling " << t << "->" PK_METHOD_UPDATEPACKAGES "(" << PK_FLAG_NONE << ", " << ids << ")";
+    qDebug().nospace() << "Calling " << t << "->" PK_METHOD_INSTALLPACKAGES "(" << PK_FLAG_NONE << ", " << ids << ")";
     emit this->packageStatusChanged(packageName, OrnPm::PackageUpdating);
-    t->asyncCall(QStringLiteral(PK_METHOD_UPDATEPACKAGES), PK_FLAG_NONE, ids);
+    t->asyncCall(QStringLiteral(PK_METHOD_INSTALLPACKAGES), PK_FLAG_NONE, ids);
 }
 
 void OrnPm::addRepo(const QString &author)
