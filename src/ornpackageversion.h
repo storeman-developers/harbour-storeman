@@ -17,6 +17,8 @@ struct OrnPackageVersion
     OrnPackageVersion(quint64 dsize, quint64 isize,
                       const QString &version, QString arch, QString alias);
 
+    void clear();
+
     QString packageId(const QString &name) const;
 
     bool operator ==(const OrnPackageVersion &other) const;

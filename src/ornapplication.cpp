@@ -318,8 +318,16 @@ void OrnApplication::onPackageVersions(const QString &packageName, const OrnPack
         return;
     }
 
-    bool availableNewer = this->availableVersionIsNewer();
-    bool globalNewer    = this->globalVersionIsNewer();
+    auto availableNewer = this->availableVersionIsNewer();
+    auto globalNewer    = this->globalVersionIsNewer();
+
+    auto installedVersion = mInstalledVersion;
+    auto availableVersion = mAvailableVersion;
+    auto globalVersion    = mGlobalVersion;
+
+    mInstalledVersion.clear();
+    mAvailableVersion.clear();
+    mGlobalVersion.clear();
 
     bool seekInstalled = true;
     bool seekAvailable = true;
@@ -328,39 +336,43 @@ void OrnApplication::onPackageVersions(const QString &packageName, const OrnPack
     QLatin1String installed("installed");
     for (const auto &version : versions)
     {
-        if (version.repoAlias == installed)
+        if (seekInstalled && version.repoAlias == installed)
         {
-            if (seekInstalled && mInstalledVersion != version)
-            {
-                mInstalledVersion = version;
-                emit this->installedVersionChanged();
-                seekInstalled = false;
-            }
+            mInstalledVersion = version;
+            seekInstalled = false;
         }
-        else if (version.repoAlias == mRepoAlias)
+        else if (seekAvailable && version.repoAlias == mRepoAlias)
         {
-            if (seekAvailable && mAvailableVersion != version)
-            {
-                mAvailableVersion = version;
-                emit this->availableVersionChanged();
-                if (mPackageStatus < OrnPm::PackageAvailable)
-                {
-                    mPackageStatus = OrnPm::PackageAvailable;
-                    emit this->packageStatusChanged();
-                }
-                seekAvailable = false;
-            }
+            mAvailableVersion = version;
+            seekAvailable = false;
         }
-        else if (seekGlobal && mGlobalVersion != version)
+        else if (seekGlobal)
         {
             mGlobalVersion = version;
-            emit this->globalVersionChanged();
             seekGlobal = false;
         }
         if (!seekInstalled && !seekAvailable && !seekGlobal)
         {
             break;
         }
+    }
+
+    if (mInstalledVersion != installedVersion)
+    {
+        emit this->installedVersionChanged();
+    }
+    if (mAvailableVersion != availableVersion)
+    {
+        emit this->availableVersionChanged();
+        if (mPackageStatus < OrnPm::PackageAvailable)
+        {
+            mPackageStatus = OrnPm::PackageAvailable;
+            emit this->packageStatusChanged();
+        }
+    }
+    if (mGlobalVersion != globalVersion)
+    {
+        emit this->globalVersionChanged();
     }
 
     if (this->availableVersionIsNewer() != availableNewer)

@@ -38,6 +38,16 @@ OrnPackageVersion::OrnPackageVersion(quint64 dsize, quint64 isize,
     , versionParts(splitVersion(version))
 {}
 
+void OrnPackageVersion::clear()
+{
+    downloadSize = 0;
+    installSize = 0;
+    version.clear();
+    arch.clear();
+    repoAlias.clear();
+    versionParts.clear();
+}
+
 QString OrnPackageVersion::packageId(const QString &name) const
 {
     QString id(name);
