@@ -1,3 +1,10 @@
+* Thu Apr 25 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.5-1
+- PackageKit: Use `InstallPackages` instead of `UpdatePackages`
+- Clear page stack on close to prevent some binding errors
+- OrnApplication: Better handling of available versions
+- Update translations
+- A hotfix for SailfishOS 3.0.3 (Hossa)
+
 * Sun Mar 24 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.4-1
 - Update translations
 
