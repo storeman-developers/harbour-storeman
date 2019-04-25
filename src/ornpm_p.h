@@ -26,8 +26,6 @@
 #define PK_FLAG_NONE  quint64(0)
 
 #define REPO_URL_TMPL  QStringLiteral("https://sailfish.openrepos.net/%0/personal/main")
-#define SOLV_PATH_TMPL QStringLiteral("/var/cache/zypp/solv/%0/solv")
-#define SOLV_INSTALLED "/var/cache/zypp/solv/@System/solv"
 
 
 #include "ornpm.h"
@@ -76,6 +74,7 @@ public:
     using StringHash = QHash<QString, QString>;
 
     bool            initialised;
+    QString         solvPathTmpl;
     StringSet       archs;
     QDBusInterface  *ssuInterface;
     QDBusInterface  *pkInterface;

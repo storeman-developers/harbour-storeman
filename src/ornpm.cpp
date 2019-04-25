@@ -66,6 +66,13 @@ OrnPm *OrnPm::instance()
 
 void OrnPmPrivate::initialise()
 {
+    QProcess version;
+    version.start(QStringLiteral("version"));
+    version.waitForFinished();
+    auto hossa = version.readAll().contains(QByteArrayLiteral("Hossa"));
+    solvPathTmpl = hossa ? QStringLiteral("/home/.zypp-cache/solv/%0/solv") :
+                           QStringLiteral("/var/cache/zypp/solv/%0/solv");
+
     qDebug() << "Getting the list of ORN repositories";
 
     // NOTE: A hack for SSU repos. Can break on ssu config changes.
@@ -93,10 +100,11 @@ void OrnPmPrivate::initialise()
     auto spool = pool_create();
     auto srepo = repo_create(spool, "installed");
 
-    auto sfile = fopen(SOLV_INSTALLED, "r");
+    auto systemSolv = solvPathTmpl.arg(QStringLiteral("@System"));
+    auto sfile = fopen(systemSolv.toUtf8().data(), "r");
     if (!sfile)
     {
-        qCritical() << "Could not read " SOLV_INSTALLED;
+        qCritical() << "Could not read" << systemSolv;
         repo_free(srepo, 0);
         pool_free(spool);
         return;
@@ -273,10 +281,11 @@ void OrnPmPrivate::preparePackageVersions(const QString &packageName)
     auto spool = pool_create();
     auto srepo = repo_create(spool, "");
 
-    auto sfile = fopen(SOLV_INSTALLED, "r");
+    auto systemSolv = solvPathTmpl.arg(QStringLiteral("@System"));
+    auto sfile = fopen(systemSolv.toUtf8().data(), "r");
     if (!sfile)
     {
-        qCritical() << "Could not read " SOLV_INSTALLED;
+        qCritical() << "Could not read" << systemSolv;
         repo_free(srepo, 0);
         pool_free(spool);
         return;
@@ -299,13 +308,12 @@ void OrnPmPrivate::preparePackageVersions(const QString &packageName)
     }
     repo_free(srepo, 0);
 
-    QString solvTmpl(SOLV_PATH_TMPL);
     for (auto it = repos.cbegin(); it != repos.cend(); ++it)
     {
         if (it.value())
         {
             auto alias = it.key();
-            auto spath = solvTmpl.arg(alias);
+            auto spath = solvPathTmpl.arg(alias);
             srepo = repo_create(spool, "");
 
             qDebug() << "Reading" << spath;
@@ -706,7 +714,6 @@ OrnInstalledPackageList OrnPmPrivate::prepareInstalledPackages(const QString &pa
     };
 
     // Prepare set to filter installed packages to show only those from OpenRepos
-    QString solvTmpl(SOLV_PATH_TMPL);
     StringSet ornPackages;
     auto spool = pool_create();
     for (auto it = repos.cbegin(); it != repos.cend(); ++it)
@@ -714,7 +721,7 @@ OrnInstalledPackageList OrnPmPrivate::prepareInstalledPackages(const QString &pa
         if (it.value())
         {
             const auto alias = it.key();
-            auto spath = solvTmpl.arg(alias);
+            auto spath = solvPathTmpl.arg(alias);
             qDebug() << "Reading" << spath;
             auto srepo = repo_create(spool, alias.toUtf8().data());
 
