@@ -2,6 +2,7 @@
 #include "ornclient_p.h"
 #include "ornutils.h"
 
+#include <functional>
 #include <QSettings>
 #include <QTimer>
 #include <QNetworkAccessManager>
