@@ -1026,7 +1026,7 @@
     </message>
     <message id="orn-mainpage-order-description">
         <source>Drag items to change their order</source>
-        <translation>拖动来改变他们的顺序</translation>
+        <translation>拖动以改变它们的顺序</translation>
     </message>
 </context>
 </TS>
