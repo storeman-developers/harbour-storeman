@@ -66,12 +66,11 @@ OrnPm *OrnPm::instance()
 
 void OrnPmPrivate::initialise()
 {
-    QProcess version;
-    version.start(QStringLiteral("version"));
-    version.waitForFinished();
-    auto hossa = version.readAll().contains(QByteArrayLiteral("Hossa"));
-    solvPathTmpl = hossa ? QStringLiteral("/home/.zypp-cache/solv/%0/solv") :
-                           QStringLiteral("/var/cache/zypp/solv/%0/solv");
+    QSettings release(QStringLiteral("/etc/sailfish-release"), QSettings::IniFormat);
+    auto version = QVersionNumber::fromString(release.value(QStringLiteral("VERSION_ID")).toString());
+    solvPathTmpl = QVersionNumber::compare(version, QVersionNumber(3, 0, 3)) >= 0 ?
+        QStringLiteral("/home/.zypp-cache/solv/%0/solv") :
+        QStringLiteral("/var/cache/zypp/solv/%0/solv");
 
     qDebug() << "Getting the list of ORN repositories";
 
