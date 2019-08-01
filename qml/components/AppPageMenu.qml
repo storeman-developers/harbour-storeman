@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import org.nemomobile.lipstick 0.1
 import harbour.orn 1.0
 
 PullDownMenu {
@@ -111,7 +112,12 @@ PullDownMenu {
         visible: app.desktopFile
         //% "Launch"
         text: qsTrId("orn-launch")
-        onClicked: Qt.openUrlExternally(app.desktopFile)
+        onClicked: launcher.launchApplication()
+
+        LauncherItem {
+            id: launcher
+            filePath: app.desktopFile
+        }
     }
 
     MenuStatusLabel { }
