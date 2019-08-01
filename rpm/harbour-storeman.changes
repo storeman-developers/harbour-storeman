@@ -1,3 +1,8 @@
+* Thu Aug 1 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.6-1
+- Update harbour-storeman-zh_CN.ts
+- Fix detection of OS version (fix issues with SailfishOS 3.1)
+- Fix launching installed applications
+
 * Thu Apr 25 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.5-1
 - PackageKit: Use `InstallPackages` instead of `UpdatePackages`
 - Clear page stack on close to prevent some binding errors
