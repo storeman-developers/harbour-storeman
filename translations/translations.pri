@@ -5,6 +5,7 @@ CONFIG += \
 
 TRANSLATIONS += \
     translations/harbour-storeman.ts \
+    translations/harbour-storeman-cs.ts \
     translations/harbour-storeman-da.ts \
     translations/harbour-storeman-de_DE.ts \
     translations/harbour-storeman-el.ts \
@@ -15,6 +16,7 @@ TRANSLATIONS += \
     translations/harbour-storeman-it.ts \
     translations/harbour-storeman-nl.ts \
     translations/harbour-storeman-nl_BE.ts \
+    translations/harbour-storeman-no.ts \
     translations/harbour-storeman-pl.ts \
     translations/harbour-storeman-pt_BR.ts \
     translations/harbour-storeman-ru.ts \

@@ -1034,5 +1034,9 @@
         <source>Drag items to change their order</source>
         <translation>Versleept items voor hun volgorde te veranderen</translation>
     </message>
+    <message id="orn-cat-adult-content">
+        <source>Adult Content</source>
+        <translation>Volwassen inhoud</translation>
+    </message>
 </context>
 </TS>

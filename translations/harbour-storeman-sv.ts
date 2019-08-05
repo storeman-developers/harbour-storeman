@@ -1034,5 +1034,9 @@
         <source>Drag items to change their order</source>
         <translation>Dra och släpp för att ändra ordning</translation>
     </message>
+    <message id="orn-cat-adult-content">
+        <source>Adult Content</source>
+        <translation>Vuxeninnehåll</translation>
+    </message>
 </context>
 </TS>

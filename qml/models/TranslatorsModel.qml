@@ -9,7 +9,17 @@ ListModel {
         ]
         translators: [
             ListElement { name: "Historyscholar" },
-            ListElement { name: "天苯" }
+            ListElement { name: "天苯" },
+            ListElement { name: "LSDemo" }
+        ]
+        reviewers: []
+    }
+
+    ListElement {
+        locale: "cs"
+        coordinators: []
+        translators: [
+            ListElement { name: "Malakay" }
         ]
         reviewers: []
     }
@@ -50,7 +60,8 @@ ListModel {
             ListElement { name: "Ingvix" },
             ListElement { name: "Toxip" },
             ListElement { name: "LaurentC" },
-            ListElement { name: "Nrde" }
+            ListElement { name: "Nrde" },
+            ListElement { name: "raketti" }
         ]
         reviewers: []
     }
@@ -112,6 +123,15 @@ ListModel {
         ]
         translators: [
             ListElement { name: "claustn" }
+        ]
+        reviewers: []
+    }
+
+    ListElement {
+        locale: "no"
+        coordinators: []
+        translators: [
+            ListElement { name: "storeslem" }
         ]
         reviewers: []
     }

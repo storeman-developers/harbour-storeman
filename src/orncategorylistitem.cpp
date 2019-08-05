@@ -14,6 +14,8 @@ static const QMap<quint32, const char*> categories{
     {    1, QT_TRID_NOOP("orn-cat-applications") },
     //% "Application"
     {  257, QT_TRID_NOOP("orn-cat-application") },
+    //% "Adult Content"
+    { 4206, QT_TRID_NOOP("orn-cat-adult-content") },
     //% "Ambience & Themes"
     { 1845, QT_TRID_NOOP("orn-cat-ambience-themes") },
     //% "Business"

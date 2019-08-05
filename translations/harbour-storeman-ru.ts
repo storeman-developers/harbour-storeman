@@ -1042,5 +1042,9 @@ Storeman не хранит ваш пароль и не передает его �
         <source>Drag items to change their order</source>
         <translation>Перетаскивайте пункты меню для смены порядка</translation>
     </message>
+    <message id="orn-cat-adult-content">
+        <source>Adult Content</source>
+        <translation>Для взрослых</translation>
+    </message>
 </context>
 </TS>
