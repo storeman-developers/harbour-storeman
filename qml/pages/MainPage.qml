@@ -123,6 +123,8 @@ Page {
                     model: OrnProxyModel {
                         limit: gridColumns * gridRows
                         sourceModel: recentAppsModel
+                        filterRole: OrnRecentAppsModel.CategoryIdRole
+                        filterRegExp: adultCategoryRegex
                     }
                     delegate: MainPageAppGridDelegate {}
 

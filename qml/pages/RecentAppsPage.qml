@@ -12,7 +12,11 @@ Page {
     SilicaListView {
         id: appsList
         anchors.fill: parent
-        model: networkManager.online ? page.model : null
+        model: OrnProxyModel {
+            sourceModel: networkManager.online ? page.model : null
+            filterRole: OrnRecentAppsModel.CategoryIdRole
+            filterRegExp: adultCategoryRegex
+        }
 
         header: PageHeader {
             //% "Recently updated"

@@ -13,6 +13,7 @@ ApplicationWindow
     readonly property var _locale: Qt.locale()
     property var _operations: OrnPm.initialised ? OrnPm.operations : null
     property var _resolvedLinks: new Object
+    property var adultCategoryRegex: /^(?!4206).*$/
     readonly property real _appListDelegatePadding: {
         if (pageStack._currentOrientation === Orientation.Portrait) {
             return Screen.sizeCategory >= Screen.Large ?

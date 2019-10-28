@@ -78,6 +78,8 @@ QVariant OrnAbstractAppsModel::data(const QModelIndex &index, int role) const
         return app.sinceUpdate;
     case CategoryRole:
         return app.category;
+    case CategoryIdRole:
+        return app.categoryId;
     default:
         return QVariant();
     }
@@ -97,6 +99,7 @@ QHash<int, QByteArray> OrnAbstractAppsModel::roleNames() const
         { UserNameRole,      "userName" },
         { IconSourceRole,    "iconSource" },
         { SinceUpdateRole,   "sinceUpdate" },
-        { CategoryRole,      "category" }
+        { CategoryRole,      "category" },
+        { CategoryIdRole,    "categoryId" }
     };
 }

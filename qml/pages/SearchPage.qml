@@ -40,16 +40,21 @@ Page {
     {
         id: view
         anchors.fill: parent
-        model: OrnSearchAppsModel {
-            id: searchModel
-            onFetchingChanged: {
-                if (!fetching && rowCount() === 0) {
-                    //% "Nothing found"
-                    viewPlaceholder.text = qsTrId("orn-searchpage-placeholder-noresults")
-                    //% "Try to change search keywords"
-                    viewPlaceholder.hintText = qsTrId("orn-searchpage-placeholder-noresults-hint")
+        model: OrnProxyModel {
+            id: proxySearchModel
+            sourceModel: OrnSearchAppsModel {
+                id: searchModel
+                onFetchingChanged: {
+                    if (!fetching && proxySearchModel.rowCount() === 0) {
+                        //% "Nothing found"
+                        viewPlaceholder.text = qsTrId("orn-searchpage-placeholder-noresults")
+                        //% "Try to change search keywords"
+                        viewPlaceholder.hintText = qsTrId("orn-searchpage-placeholder-noresults-hint")
+                    }
                 }
             }
+            filterRole: OrnSearchAppsModel.CategoryIdRole
+            filterRegExp: adultCategoryRegex
         }
 
         header: Column {

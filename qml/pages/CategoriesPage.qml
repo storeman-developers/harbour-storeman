@@ -8,12 +8,17 @@ Page {
 
     onStatusChanged: {
         if (status === PageStatus.Active) {
-            categoriesList.model = categoriesModel
+            categoriesList.model = categoriesProxyModel
         }
     }
 
-    OrnCategoriesModel {
-        id: categoriesModel
+    OrnProxyModel {
+        id: categoriesProxyModel
+        sourceModel: OrnCategoriesModel {
+            id: categoriesModel
+        }
+        filterRole: OrnCategoriesModel.CategoryIdRole
+        filterRegExp: adultCategoryRegex
     }
 
     Connections {

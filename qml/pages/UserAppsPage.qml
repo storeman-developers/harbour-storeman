@@ -27,6 +27,8 @@ Page {
         model: OrnProxyModel {
             id: proxyModel
             sortRole: OrnUserAppsModel.SortRole
+            filterRole: OrnUserAppsModel.CategoryRole
+            filterRegExp: adultCategoryRegex
             sourceModel: OrnUserAppsModel {
                 id: appsModel
                 onRowsInserted: proxyModel.sort(Qt.AscendingOrder)
