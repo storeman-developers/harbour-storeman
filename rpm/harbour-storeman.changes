@@ -1,3 +1,8 @@
+* Thu Dec 19 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.7-1
+- Update translations
+- Add an option to hide particular categories
+- Remove old code
+
 * Thu Aug 1 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.6-1
 - Update harbour-storeman-zh_CN.ts
 - Fix detection of OS version (fix issues with SailfishOS 3.1)
