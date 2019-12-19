@@ -170,34 +170,7 @@ OrnClient::OrnClient(QObject *parent)
 #else
             this->processReply(reply);
 #endif
-            // NOTE: Remove this code in future
-            Q_D(OrnClient);
-            QString publisherKey(USER_PUBLISHER);
-            if (this->authorised() && !d->settings->contains(publisherKey))
-            {
-                auto uid = QString::number(this->userId());
-                auto request2 = this->apiRequest(QStringLiteral("users/").append(uid));
-                auto reply2 = d->nam->get(request2);
-                connect(reply2, &QNetworkReply::finished, this, [this, reply2, publisherKey]
-                {
-                    auto jsonObject = this->processReply(reply2).object();
-                    jsonObject = jsonObject[QStringLiteral("user")].toObject();
-                    jsonObject = jsonObject[QStringLiteral("roles")].toObject();
-                    this->d_func()->settings->setValue(publisherKey, jsonObject.contains(QChar('4')));
-                });
-            }
         });
-    }
-    // NOTE: Remove this code in future
-    else if (d->settings->contains(USER_UID))
-    {
-        QString usernameKey(USER_NAME);
-        auto username = d->settings->value(usernameKey);
-        d->removeUser();
-        // Save the last username to simplify re-login
-        d->settings->setValue(usernameKey, username);
-        d->userCookie = QNetworkCookie();
-        d->userToken.clear();
     }
 
     // A workaround as qml does not call a destructor
