@@ -83,7 +83,7 @@ Page {
             ListMenuItem {
                 iconSource: "image://theme/icon-m-certificates"
                 text: qsTrId("orn-categories-filter")
-                onClicked: pageStack.push(Qt.resolvedUrl("HideCategoriesPage.qml"))
+                onClicked: pageStack.push(Qt.resolvedUrl("CategoriesFilterPage.qml"))
             }
 
             SectionHeader {
