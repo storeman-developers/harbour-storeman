@@ -1038,5 +1038,13 @@
         <source>Adult Content</source>
         <translation>Adult Content</translation>
     </message>
+    <message id="orn-categories-filter">
+        <source>Categories filter</source>
+        <translation>Categories filter</translation>
+    </message>
+    <message id="orn-categories-filter-descr">
+        <source>Select which categories to show</source>
+        <translation>Select which categories to show</translation>
+    </message>
 </context>
 </TS>

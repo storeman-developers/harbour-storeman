@@ -4,7 +4,7 @@ import harbour.orn 1.0
 import "../components"
 
 Page {
-    property OrnRecentAppsModel model
+    property OrnProxyModel model
 
     id: page
     allowedOrientations: defaultAllowedOrientations
@@ -59,7 +59,7 @@ Page {
                     //% "Network is unavailable"
                     return qsTrId("orn-network-idle")
                 }
-                if (page.model.networkError) {
+                if (page.model.sourceModel.networkError) {
                     //% "Pull down to refresh"
                     hintText = qsTrId("orn-pull-refresh")
                     //% "A network error occurred"

@@ -29,6 +29,7 @@ OrnAppListItem::OrnAppListItem(const QJsonObject &jsonObject)
     auto categories = jsonObject[QStringLiteral("category")].toArray();
     auto tid = OrnUtils::toUint(categories.last().toObject()[QStringLiteral("tid")]);
     category = OrnCategoryListItem::categoryName(tid);
+    categoryId = tid;
 
     package = OrnUtils::toString(jsonObject[QStringLiteral("package")].toObject()[nameKey]);
 

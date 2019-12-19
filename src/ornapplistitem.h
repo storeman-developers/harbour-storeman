@@ -20,6 +20,7 @@ struct OrnAppListItem
     QString iconSource;
     QString sinceUpdate;
     QString category;
+    quint32 categoryId;
     QString package;
 
 private:

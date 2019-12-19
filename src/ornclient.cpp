@@ -33,22 +33,53 @@
 
 #define APPLICATION_JSON    QByteArrayLiteral("application/json")
 
+#define BOOKMARKS_FILE      QStringLiteral("bookmarks")
+#define CATEGORIES_FILE     QStringLiteral("hidden_categories")
+
+
+void readIds(const QString &filename, QSet<quint32> &store)
+{
+    auto path = QStandardPaths::locate(QStandardPaths::AppLocalDataLocation, filename);
+    if (path.isEmpty())
+    {
+        return;
+    }
+    QFile file(path);
+    if (file.open(QFile::ReadOnly))
+    {
+        qDebug() << "Reading" << filename << "file" << path;
+        QDataStream stream(&file);
+        stream >> store;
+    }
+    else
+    {
+        qWarning() << "Could not read" << filename << "file" << path;
+    }
+}
+
+void writeIds(const QString &filename, QSet<quint32> &store)
+{
+    auto path = OrnUtils::locate(filename);
+    QFile file(path);
+    if (file.open(QFile::WriteOnly))
+    {
+        qDebug() << "Writing" << path;
+        QDataStream stream(&file);
+        stream << store;
+    }
+    else
+    {
+        qWarning() << "Could not write" << path;
+    }
+}
 
 OrnClientPrivate::~OrnClientPrivate()
 {
     // Write ids of bookmarked apps
-    auto path = OrnUtils::locate(QStringLiteral("bookmarks"));
-    QFile file(path);
-    if (file.open(QFile::WriteOnly))
-    {
-        qDebug() << "Writing bookmarks file" << path;
-        QDataStream stream(&file);
-        stream << bookmarks;
-    }
-    else
-    {
-        qWarning() << "Could not write bookmarks file" << path;
-    }
+    writeIds(BOOKMARKS_FILE, bookmarks);
+
+    // Write ids of hidden categories
+    writeIds(CATEGORIES_FILE, hiddenCategories);
 }
 
 void OrnClientPrivate::removeUser()
@@ -118,22 +149,10 @@ OrnClient::OrnClient(QObject *parent)
     }
 
     // Read ids of bookmarked apps
-    auto path = QStandardPaths::locate(
-                QStandardPaths::AppLocalDataLocation, QStringLiteral("bookmarks"));
-    if (!path.isEmpty())
-    {
-        QFile file(path);
-        if (file.open(QFile::ReadOnly))
-        {
-            qDebug() << "Reading bookmarks file" << path;
-            QDataStream stream(&file);
-            stream >> d->bookmarks;
-        }
-        else
-        {
-            qWarning() << "Could not read bookmarks file" << path;
-        }
-    }
+    readIds(BOOKMARKS_FILE, d->bookmarks);
+
+    // Read ids of hidden categories
+    readIds(CATEGORIES_FILE, d->hiddenCategories);
 
     // Check if authorisation has expired
     if (this->authorised())
@@ -331,6 +350,57 @@ bool OrnClient::removeBookmark(quint32 appId)
         emit this->bookmarkChanged(appId, false);
     }
     return ok;
+}
+
+bool OrnClient::categoryVisible(quint32 categoryId) const
+{
+    return !this->d_func()->hiddenCategories.contains(categoryId);
+}
+
+void OrnClient::setCategoryVisibility(quint32 categoryId, bool visible)
+{
+    Q_D(OrnClient);
+
+    auto hidden = d->hiddenCategories.contains(categoryId);
+
+    if (hidden != visible)
+    {
+        return;
+    }
+
+    if (hidden)
+    {
+        qDebug() << "Unhiding app category id" << categoryId;
+        d->hiddenCategories.remove(categoryId);
+    }
+    else
+    {
+        qDebug() << "Hiding app category id" << categoryId;
+        d->hiddenCategories.insert(categoryId);
+    }
+
+    emit this->categoryVisibilityChanged(categoryId, visible);
+
+}
+
+void OrnClient::toggleCategoryVisibility(quint32 categoryId)
+{
+    Q_D(OrnClient);
+
+    auto hidden = d->hiddenCategories.contains(categoryId);
+
+    if (hidden)
+    {
+        qDebug() << "Unhiding app category id" << categoryId;
+        d->hiddenCategories.remove(categoryId);
+    }
+    else
+    {
+        qDebug() << "Hiding app category id" << categoryId;
+        d->hiddenCategories.insert(categoryId);
+    }
+
+    emit this->categoryVisibilityChanged(categoryId, !hidden);
 }
 
 void OrnClient::login(const QString &username, const QString &password)

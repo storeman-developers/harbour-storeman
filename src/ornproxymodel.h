@@ -28,6 +28,10 @@ private:
 public:
     int rowCount(const QModelIndex &parent) const;
     bool canFetchMore(const QModelIndex &parent) const;
+
+    // QSortFilterProxyModel interface
+protected:
+    bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const;
 };
 
 #endif // ORNPROXYMODEL_H

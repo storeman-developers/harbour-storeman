@@ -1,4 +1,5 @@
 #include "orncategoriesmodel.h"
+#include "ornclient.h"
 
 #include <QUrl>
 #include <QNetworkRequest>
@@ -11,7 +12,35 @@
 
 OrnCategoriesModel::OrnCategoriesModel(QObject *parent)
     : OrnAbstractListModel(false, parent)
-{}
+{
+    connect(OrnClient::instance(), &OrnClient::categoryVisibilityChanged,
+            this, [this](quint32 categoryId, bool visible)
+    {
+        Q_UNUSED(visible)
+
+        for (size_t i = 0, size = mData.size(); i < size; ++i)
+        {
+            if (mData[i].categoryId == categoryId)
+            {
+                auto ind = this->createIndex(i, 0);
+                emit this->dataChanged(ind, ind, {VisibilityRole});
+                return;
+            }
+        }
+    });
+}
+
+QVariantList childCategories(const std::deque<OrnCategoryListItem> &data, quint32 parentID)
+{
+    QVariantList res;
+    for (const auto &cat : data)
+    {
+        if (cat.parents.contains(parentID)) {
+            res.append(cat.categoryId);
+        }
+    }
+    return res;
+}
 
 QVariant OrnCategoriesModel::data(const QModelIndex &index, int role) const
 {
@@ -30,6 +59,10 @@ QVariant OrnCategoriesModel::data(const QModelIndex &index, int role) const
         return category.depth;
     case NameRole:
         return category.name;
+    case VisibilityRole:
+        return OrnClient::instance()->categoryVisible(category.categoryId);
+    case ChildrenRole:
+        return childCategories(mData, category.categoryId);
     default:
         return QVariant();
     }
@@ -50,7 +83,9 @@ QHash<int, QByteArray> OrnCategoriesModel::roleNames() const
         { CategoryIdRole, "categoryId" },
         { AppsCountRole,  "appsCount" },
         { DepthRole,      "depth" },
-        { NameRole,       "name" }
+        { NameRole,       "name" },
+        { VisibilityRole, "visible" },
+        { ChildrenRole,   "children" }
     };
 }
 

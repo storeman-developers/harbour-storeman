@@ -39,6 +39,22 @@ OrnAbstractAppsModel::OrnAbstractAppsModel(bool fetchable, QObject *parent)
             }
         }
     });
+
+    connect(OrnClient::instance(), &OrnClient::categoryVisibilityChanged,
+            this, [this](quint32 categoryId, bool visible)
+    {
+        Q_UNUSED(visible)
+
+        for (size_t i = 0, size = mData.size(); i < size; ++i)
+        {
+            if (mData[i].categoryId == categoryId)
+            {
+                auto ind = this->createIndex(i, 0);
+                emit this->dataChanged(ind, ind, {VisibilityRole});
+                return;
+            }
+        }
+    });
 }
 
 QVariant OrnAbstractAppsModel::data(const QModelIndex &index, int role) const
@@ -78,6 +94,10 @@ QVariant OrnAbstractAppsModel::data(const QModelIndex &index, int role) const
         return app.sinceUpdate;
     case CategoryRole:
         return app.category;
+    case CategoryIdRole:
+        return app.categoryId;
+    case VisibilityRole:
+        return OrnClient::instance()->categoryVisible(app.categoryId);
     default:
         return QVariant();
     }
@@ -97,6 +117,8 @@ QHash<int, QByteArray> OrnAbstractAppsModel::roleNames() const
         { UserNameRole,      "userName" },
         { IconSourceRole,    "iconSource" },
         { SinceUpdateRole,   "sinceUpdate" },
-        { CategoryRole,      "category" }
+        { CategoryRole,      "category" },
+        { CategoryIdRole,    "categoryId" },
+        { VisibilityRole,    "visible" }
     };
 }

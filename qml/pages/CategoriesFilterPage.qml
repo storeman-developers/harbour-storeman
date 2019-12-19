@@ -12,10 +12,8 @@ Page {
         }
     }
 
-    OrnProxyModel {
+    OrnCategoriesModel {
         id: categoriesModel
-        sourceModel: OrnCategoriesModel {}
-        filterRole: OrnCategoriesModel.VisibilityRole
     }
 
     Connections {
@@ -33,24 +31,29 @@ Page {
         anchors.fill: parent
 
         header: PageHeader {
-            //% "Categories"
-            title: qsTrId("orn-categories")
+            //% "Categories filter"
+            title: qsTrId("orn-categories-filter")
+            //% "Select which categories to show"
+            description: qsTrId("orn-categories-filter-descr")
         }
 
-        delegate: MoreButton {
+        delegate: CategoriesFilterDelegate {
+            categoryVisible: model.visible
             height: Theme.itemSizeExtraSmall
             text: model.name
             depth: model.depth
             textAlignment: Text.AlignLeft
 
-            onClicked: pageStack.push(Qt.resolvedUrl("CategoryPage.qml"), {
-                                          categoryId: model.categoryId,
-                                          categoryName: model.name
-                                      })
+            onClicked: {
+                const setVisible = !model.visible
+                OrnClient.toggleCategoryVisibility(model.categoryId)
+                for (var i in model.children) {
+                    OrnClient.setCategoryVisibility(model.children[i], setVisible)
+                }
+            }
         }
 
         PullDownMenu {
-            MenuSearchItem {}
             MenuStatusLabel {}
         }
 

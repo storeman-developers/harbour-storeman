@@ -25,6 +25,8 @@ public:
         IconSourceRole,
         SinceUpdateRole,
         CategoryRole,
+        CategoryIdRole,
+        VisibilityRole,
     };
     Q_ENUM(Role)
 

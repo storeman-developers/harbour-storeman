@@ -39,3 +39,24 @@ bool OrnProxyModel::canFetchMore(const QModelIndex &parent) const
                 QSortFilterProxyModel::rowCount(parent) < mLimit && canFetch :
                 canFetch;
 }
+
+bool OrnProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
+{
+    auto role = this->filterRole();
+    // The default value
+    if (role == Qt::DisplayRole)
+    {
+        return true;
+    }
+
+    auto model = this->sourceModel();
+    auto idx = model->index(source_row, 0, source_parent);
+    auto dat = model->data(idx, role);
+#ifdef QT_DEBUG
+    if (dat.type() != QVariant::Bool)
+    {
+        qWarning("The filter role must return boolean!");
+    }
+#endif
+    return dat.toBool();
+}

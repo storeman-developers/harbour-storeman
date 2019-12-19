@@ -18,6 +18,8 @@ public:
         AppsCountRole,
         DepthRole,
         NameRole,
+        VisibilityRole,
+        ChildrenRole,
     };
     Q_ENUM(Role)
 

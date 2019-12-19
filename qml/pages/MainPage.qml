@@ -102,7 +102,7 @@ Page {
                         leftMargin: Theme.horizontalPageMargin
                         verticalCenter: parent.verticalCenter
                     }
-                    running: !repeater.count && recentAppsModel.fetching
+                    running: !repeater.count && recentAppsModel.sourceModel.fetching
                     size: BusyIndicatorSize.Small
                 }
             }
@@ -178,8 +178,10 @@ Page {
         }
     }
 
-    OrnRecentAppsModel {
+    OrnProxyModel {
         id: recentAppsModel
+        sourceModel: OrnRecentAppsModel {}
+        filterRole: OrnRecentAppsModel.VisibilityRole
     }
 
     OrnBookmarksModel {

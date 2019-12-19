@@ -27,6 +27,7 @@ public:
     QTimer *cookieTimer;
     QNetworkAccessManager *nam;
     QSet<quint32> bookmarks;
+    QSet<quint32> hiddenCategories;
     QByteArray lang;
     QByteArray userToken;
     QNetworkCookie userCookie;

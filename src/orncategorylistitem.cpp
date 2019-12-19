@@ -83,7 +83,13 @@ OrnCategoryListItem::OrnCategoryListItem(const QJsonObject &jsonObject)
     , appsCount(OrnUtils::toUint(jsonObject[QStringLiteral("apps_count")]))
     , depth(jsonObject[QStringLiteral("depth")].toVariant().toUInt())
     , name(categoryName(categoryId))
-{}
+{
+    auto array = jsonObject[QStringLiteral("parents")].toArray();
+    for (const QJsonValueRef v : array)
+    {
+        parents << OrnUtils::toUint(v);
+    }
+}
 
 QString OrnCategoryListItem::categoryName(quint32 tid)
 {

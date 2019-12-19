@@ -2,6 +2,7 @@
 #define ORNCATEGORYLISTITEM_H
 
 #include <QString>
+#include <QList>
 
 class QJsonObject;
 
@@ -17,6 +18,7 @@ struct OrnCategoryListItem
     quint32 appsCount;
     quint32 depth;
     QString name;
+    QList<quint32> parents;
 };
 
 #endif // ORNCATEGORYLISTITEM_H

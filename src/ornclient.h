@@ -68,6 +68,10 @@ public:
     Q_INVOKABLE bool addBookmark(quint32 appId);
     Q_INVOKABLE bool removeBookmark(quint32 appId);
 
+    Q_INVOKABLE bool categoryVisible(quint32 categoryId) const;
+    Q_INVOKABLE void setCategoryVisibility(quint32 categoryId, bool visible);
+    Q_INVOKABLE void toggleCategoryVisibility(quint32 categoryId);
+
 public slots:
     void login(const QString &username, const QString &password);
     void logout();
@@ -85,6 +89,7 @@ signals:
     void cookieIsValidChanged();
     void commentActionFinished(CommentAction action, quint32 appId, quint32 cid);
     void bookmarkChanged(quint32 appid, bool bookmarked);
+    void categoryVisibilityChanged(quint32 categoryId, bool visible);
     void userVoteFinished(quint32 appId, quint32 userVote, quint32 count, float rating);
 
 private:

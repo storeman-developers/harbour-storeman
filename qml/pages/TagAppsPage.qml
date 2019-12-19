@@ -18,6 +18,7 @@ Page {
         model: OrnProxyModel {
             id: proxyModel
             sortRole: OrnTagAppsModel.SortRole
+            filterRole: OrnTagAppsModel.VisibilityRole
             sourceModel: OrnTagAppsModel {
                 id: appsModel
                 onRowsInserted: proxyModel.sort(Qt.AscendingOrder)

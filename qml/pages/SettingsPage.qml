@@ -80,6 +80,12 @@ Page {
                 onClicked: pageStack.push(Qt.resolvedUrl("BackupsPage.qml"))
             }
 
+            ListMenuItem {
+                iconSource: "image://theme/icon-m-certificates"
+                text: qsTrId("orn-categories-filter")
+                onClicked: pageStack.push(Qt.resolvedUrl("HideCategoriesPage.qml"))
+            }
+
             SectionHeader {
                 //% "Main page"
                 text: qsTrId("orn-mainpage")
