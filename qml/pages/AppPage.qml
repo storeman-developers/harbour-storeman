@@ -115,9 +115,24 @@ Page {
                 visible: app.changelog
                 //% "Changelog"
                 text: qsTrId("orn-changelog")
-                onClicked: pageStack.push(Qt.resolvedUrl("ChangelogPage.qml"), {
-                                              changelog: app.changelog
-                                          })
+                onClicked: {
+                    // try to extract the url of the first link from the changelog
+                    var regex = /^(.*)\<a href\=\"(http[s]?:\/\/[^\s]*)\"[\>]*\>[^\<]*\<\/a\>(.*)$/g;
+                    var parts = regex.exec(app.changelog);
+                    if (parts !== null
+                            && parts.length === 4
+                            && (parts[1].length + parts[3].length) < 32) {
+                        // if an url link found in the changelog
+                        // and the non-URL part of the changelog is short
+                        // for e.g. "see: <a href="https://github.com/">...
+                        // then open the URL automatically
+                        Qt.openUrlExternally(parts[2])
+                    } else {
+                        pageStack.push(Qt.resolvedUrl("ChangelogPage.qml"), {
+                                            changelog: app.changelog
+                                       })
+                    }
+                }
             }
 
             MoreButton {
