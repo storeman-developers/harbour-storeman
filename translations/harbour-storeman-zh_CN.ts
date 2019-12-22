@@ -1026,7 +1026,19 @@
     </message>
     <message id="orn-mainpage-order-description">
         <source>Drag items to change their order</source>
-        <translation>拖动以改变它们的顺序</translation>
+        <translation>拖动来改变他们的顺序</translation>
+    </message>
+    <message id="orn-cat-adult-content">
+        <source>Adult Content</source>
+        <translation>成人内容</translation>
+    </message>
+    <message id="orn-categories-filter">
+        <source>Categories filter</source>
+        <translation>分类筛选</translation>
+    </message>
+    <message id="orn-categories-filter-descr">
+        <source>Select which categories to show</source>
+        <translation>选择要显示的分类</translation>
     </message>
 </context>
 </TS>

@@ -1046,5 +1046,13 @@ Storeman не хранит ваш пароль и не передает его �
         <source>Adult Content</source>
         <translation>Для взрослых</translation>
     </message>
+    <message id="orn-categories-filter">
+        <source>Categories filter</source>
+        <translation>Фильтр категорий</translation>
+    </message>
+    <message id="orn-categories-filter-descr">
+        <source>Select which categories to show</source>
+        <translation>Скрыть или показать категории</translation>
+    </message>
 </context>
 </TS>

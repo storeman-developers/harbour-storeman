@@ -179,7 +179,7 @@
     </message>
     <message id="orn-cat-patches">
         <source>Patches</source>
-        <translation>Patch&apos;e</translation>
+        <translation>Patche</translation>
     </message>
     <message id="orn-cat-photo-video">
         <source>Photo &amp; video</source>
@@ -1039,6 +1039,18 @@
     <message id="orn-mainpage-order-description">
         <source>Drag items to change their order</source>
         <translation>Przeciągnij elementy, aby zmienić ich kolejność</translation>
+    </message>
+    <message id="orn-cat-adult-content">
+        <source>Adult Content</source>
+        <translation>Zawartość dla dorosłych</translation>
+    </message>
+    <message id="orn-categories-filter">
+        <source>Categories filter</source>
+        <translation>Filtr kategorii</translation>
+    </message>
+    <message id="orn-categories-filter-descr">
+        <source>Select which categories to show</source>
+        <translation>Wybierz kategorie do wyświetlenia</translation>
     </message>
 </context>
 </TS>

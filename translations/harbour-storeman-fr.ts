@@ -98,11 +98,11 @@
     </message>
     <message id="orn-package-installed">
         <source>Package %0 was successfully installed</source>
-        <translation>Le paquet %0 a été installé avec succès</translation>
+        <translation>Le paquet %0 a été installé correctement</translation>
     </message>
     <message id="orn-package-removed">
         <source>Package %0 was successfully removed</source>
-        <translation>Le paquet %0 a été désinstallé avec succès</translation>
+        <translation>Le paquet %0 s&apos;est bien désinstallé</translation>
     </message>
     <message id="orn-installed">
         <source>Installed</source>
@@ -297,7 +297,7 @@
     <message id="orn-searchfield-placeholder">
         <source>Search</source>
         <extracomment>The search field placeholder text - should be a verb</extracomment>
-        <translation>Que cherchez-vous ?</translation>
+        <translation>Que recherchez-vous ?</translation>
     </message>
     <message id="orn-searchpage-placeholder-default">
         <source>Search results will be shown here</source>
@@ -329,7 +329,7 @@
     </message>
     <message id="orn-app-description">
         <source>Unofficial native OpenRepos.net client for Sailfish&amp;nbsp;OS</source>
-        <translation>Un client OpenRepos pour Sailfish OS.</translation>
+        <translation>Un client OpenRepos pour Sailfish OS</translation>
     </message>
     <message id="orn-report">
         <source>Report an Issue</source>
@@ -392,7 +392,7 @@
     </message>
     <message id="orn-category-noapps">
         <source>Currently there are no apps in this category</source>
-        <translation>Il n&apos;y a pour l&apos;instant aucune application dans cette catégorie</translation>
+        <translation>Aucune application dans cette catégorie pour l&apos;instant</translation>
     </message>
     <message id="orn-cat-unknown2">
         <source>Unknown category</source>
@@ -442,7 +442,7 @@
     </message>
     <message id="orn-login-error-message">
         <source>Could not log in the OpenRepos.net - check your credentials and network connection</source>
-        <translation>Connexion à OpenRepos.net impossible - merci de vérifier vos informations et paramètres de connexion</translation>
+        <translation>Connexion à OpenRepos.net impossible; veuillez vérifier vos informations et les paramètres de connexion</translation>
     </message>
     <message id="orn-loggedin-menu-item">
         <source>Logged in as %0</source>
@@ -477,7 +477,7 @@
     </message>
     <message id="orn-authorisation-expires-body">
         <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>L&apos;autorisation d&apos;OpenRepos expire. Appuyez pour renouveler l&apos;autorisation.</translation>
+        <translation>L&apos;autorisation d&apos;OpenRepos expire. Appuyez pour la renouveler.</translation>
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
@@ -529,7 +529,7 @@
     </message>
     <message id="orn-no-repos">
         <source>No OpenRepos repositories have been added yet</source>
-        <translation>Aucun dépôt OpenRepos n&apos;a pour l&apos;instant été ajouté</translation>
+        <translation>Aucun dépôt OpenRepos n&apos;a été ajouté pour l&apos;instant</translation>
     </message>
     <message id="orn-add-repo-hint">
         <source>You can add a repository from an application page</source>
@@ -733,7 +733,7 @@
     </message>
     <message id="orn-updating">
         <source>Updating</source>
-        <translation>MàJ en cours d’exécution </translation>
+        <translation>MàJ en cours</translation>
     </message>
     <message id="orn-version-available-global">
         <source>Available in other repositories</source>
@@ -756,7 +756,7 @@
         <extracomment>There are always more than 1 operations</extracomment>
         <translation>
             <numerusform>%n opération en cours d’exécution </numerusform>
-            <numerusform>%n opérations en cours d’exécution </numerusform>
+            <numerusform>%n opérations en cours</numerusform>
         </translation>
     </message>
     <message id="orn-version-available">
@@ -1037,6 +1037,14 @@
     <message id="orn-cat-adult-content">
         <source>Adult Content</source>
         <translation>Contenu pour adultes</translation>
+    </message>
+    <message id="orn-categories-filter">
+        <source>Categories filter</source>
+        <translation>Filtre par catégories</translation>
+    </message>
+    <message id="orn-categories-filter-descr">
+        <source>Select which categories to show</source>
+        <translation>Choisir les catégories à afficher</translation>
     </message>
 </context>
 </TS>

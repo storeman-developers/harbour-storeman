@@ -1046,5 +1046,17 @@
         <source>Drag items to change their order</source>
         <translation>Povlecite vnose, da spremenite njihov vrstni red</translation>
     </message>
+    <message id="orn-cat-adult-content">
+        <source>Adult Content</source>
+        <translation>Vsebina za odrasle</translation>
+    </message>
+    <message id="orn-categories-filter">
+        <source>Categories filter</source>
+        <translation>Filter kategorij</translation>
+    </message>
+    <message id="orn-categories-filter-descr">
+        <source>Select which categories to show</source>
+        <translation>Izberite kategorije za prikaz</translation>
+    </message>
 </context>
 </TS>
