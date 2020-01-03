@@ -1034,5 +1034,17 @@
         <source>Drag items to change their order</source>
         <translation>Raahaa kohteita vaihtaaksesi järjestystä</translation>
     </message>
+    <message id="orn-cat-adult-content">
+        <source>Adult Content</source>
+        <translation>Aikuisille suunnattu sisältö</translation>
+    </message>
+    <message id="orn-categories-filter">
+        <source>Categories filter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-categories-filter-descr">
+        <source>Select which categories to show</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

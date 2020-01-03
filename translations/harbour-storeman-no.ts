@@ -98,11 +98,11 @@
     </message>
     <message id="orn-package-installed">
         <source>Package %0 was successfully installed</source>
-        <translation type="unfinished"></translation>
+        <translation>Pakken %0 ble installert</translation>
     </message>
     <message id="orn-package-removed">
         <source>Package %0 was successfully removed</source>
-        <translation type="unfinished"></translation>
+        <translation>Pakken %0 ble avinstallert</translation>
     </message>
     <message id="orn-installed">
         <source>Installed</source>
@@ -1032,6 +1032,18 @@
     </message>
     <message id="orn-mainpage-order-description">
         <source>Drag items to change their order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-cat-adult-content">
+        <source>Adult Content</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-categories-filter">
+        <source>Categories filter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-categories-filter-descr">
+        <source>Select which categories to show</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

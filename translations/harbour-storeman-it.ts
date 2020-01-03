@@ -1016,7 +1016,7 @@
     </message>
     <message id="orn-show-recent-switch">
         <source>Show recently updated on start</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra aggiornate recentemente all&apos;avvio</translation>
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>
@@ -1033,6 +1033,18 @@
     <message id="orn-mainpage-order-description">
         <source>Drag items to change their order</source>
         <translation>Trascina gli elementi per cambiarne l&apos;ordine</translation>
+    </message>
+    <message id="orn-cat-adult-content">
+        <source>Adult Content</source>
+        <translation>Contenuto per adulti</translation>
+    </message>
+    <message id="orn-categories-filter">
+        <source>Categories filter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-categories-filter-descr">
+        <source>Select which categories to show</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

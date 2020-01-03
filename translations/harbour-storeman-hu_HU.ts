@@ -475,7 +475,7 @@
     </message>
     <message id="orn-authorisation-expires-body">
         <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>Az OpenRepos engedélyezése lejár. Kattints az újraengedélyezéshez.</translation>
+        <translation>Az OpenRepos bejelentkezésed lejárt. Koppints ide az újraengedélyezéshez.</translation>
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
@@ -483,11 +483,11 @@
     </message>
     <message id="orn-authorisation-expired-body">
         <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>Az OpenRepos engedélyezése lejárt. Kattints az újraengedélyezéshez.</translation>
+        <translation>Az OpenRepos bejelentkezésed lejárt. Koppints ide az újraengedélyezéshez.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
-        <translation>Kattints az újraengedélyezéshez</translation>
+        <translation>Koppints az újraengedélyezéshez</translation>
     </message>
     <message id="orn-enable-all">
         <source>Enable all</source>
@@ -558,20 +558,20 @@
     </message>
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
-        <translation>Kattints a frissítések megtekintéséhez</translation>
+        <translation>Koppints a frissítések megtekintéséhez</translation>
     </message>
     <message id="orn-updates-available-body">
         <source>Applications updates are available. Click to view details.</source>
-        <translation>Alkalmazás frissítései elérhetőek. Kattints a részletek megtekintéséhez.</translation>
+        <translation>Frissítések érhetőek el a telepített alkalmazásokhoz. Koppints ide a részletek megtekintéséhez.</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>
-        <translation>Kattints a részletek megtekintéséhez</translation>
+        <translation>Koppints a részletek megtekintéséhez</translation>
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
         <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
-        <translation>A(z) %2 által igényelt %1 függőség nem beszerezhető</translation>
+        <translation>A(z) %2 által igényelt %1 függőség nem telepíthető</translation>
     </message>
     <message id="orn-backups">
         <source>Backups</source>
@@ -1027,6 +1027,18 @@
     <message id="orn-mainpage-order-description">
         <source>Drag items to change their order</source>
         <translation>Húzd az elemeket a sorrend megváltoztatásához</translation>
+    </message>
+    <message id="orn-cat-adult-content">
+        <source>Adult Content</source>
+        <translation>Felnőtt tartalom</translation>
+    </message>
+    <message id="orn-categories-filter">
+        <source>Categories filter</source>
+        <translation>Kategória szűrő</translation>
+    </message>
+    <message id="orn-categories-filter-descr">
+        <source>Select which categories to show</source>
+        <translation>Válaszd ki milyen kategóriák legyenek megjelenítve</translation>
     </message>
 </context>
 </TS>

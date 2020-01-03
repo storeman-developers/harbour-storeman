@@ -1034,5 +1034,17 @@
         <source>Drag items to change their order</source>
         <translation>Σύρετε τα αντικείμενα για ταξινόμηση</translation>
     </message>
+    <message id="orn-cat-adult-content">
+        <source>Adult Content</source>
+        <translation>Περιεχόμενο για ενήλικες</translation>
+    </message>
+    <message id="orn-categories-filter">
+        <source>Categories filter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-categories-filter-descr">
+        <source>Select which categories to show</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

@@ -1034,5 +1034,17 @@
         <source>Drag items to change their order</source>
         <translation>Halte und ziehe, um die Reihenfolge zu ändern</translation>
     </message>
+    <message id="orn-cat-adult-content">
+        <source>Adult Content</source>
+        <translation>Inhalt für Erwachsene</translation>
+    </message>
+    <message id="orn-categories-filter">
+        <source>Categories filter</source>
+        <translation>Kategorien-Filter</translation>
+    </message>
+    <message id="orn-categories-filter-descr">
+        <source>Select which categories to show</source>
+        <translation>Wähle aus, welche Kategorien angezeigt werden sollen</translation>
+    </message>
 </context>
 </TS>
