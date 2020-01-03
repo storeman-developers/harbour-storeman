@@ -1,4 +1,6 @@
 #include "ornproxymodel.h"
+#include "ornabstractlistmodel.h"
+
 
 OrnProxyModel::OrnProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
@@ -24,6 +26,11 @@ void OrnProxyModel::setLimit(int limit)
 void OrnProxyModel::sort(Qt::SortOrder order)
 {
     QSortFilterProxyModel::sort(0, order);
+}
+
+void OrnProxyModel::reset()
+{
+    static_cast<OrnAbstractListModelBase*>(this->sourceModel())->reset();
 }
 
 int OrnProxyModel::rowCount(const QModelIndex &parent) const

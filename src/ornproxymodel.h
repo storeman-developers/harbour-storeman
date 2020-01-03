@@ -21,6 +21,9 @@ public:
     // Why QSortFilterProxyModel has no sort slot?
     Q_INVOKABLE void sort(Qt::SortOrder order = Qt::AscendingOrder);
 
+public slots:
+    void reset();
+
 private:
     int mLimit;
 
