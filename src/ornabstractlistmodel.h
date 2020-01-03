@@ -184,7 +184,7 @@ public:
     virtual void fetchMore(const QModelIndex &parent) = 0;
     bool canFetchMore(const QModelIndex &parent) const
     {
-        return !parent.isValid() ? mCanFetchMore : false;
+        return !parent.isValid() ? !mFetching && mCanFetchMore : false;
     }
 };
 
