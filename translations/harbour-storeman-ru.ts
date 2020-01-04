@@ -1054,5 +1054,17 @@ Storeman не хранит ваш пароль и не передает его �
         <source>Select which categories to show</source>
         <translation>Скрыть или показать категории</translation>
     </message>
+    <message id="orn-pmstate-refreshingcache">
+        <source>Refreshing of cache</source>
+        <translation>Обновление кэша</translation>
+    </message>
+    <message id="orn-refresh-cache-switch">
+        <source>Refresh cache after system upgrade</source>
+        <translation>Обновлять кэш после обновления ОС</translation>
+    </message>
+    <message id="orn-refresh-cache-switch-descr">
+        <source>Force refreshing of cache of all repositories after system upgrade</source>
+        <translation>Принудительное обновление кэша всех репозиториев после обновления ОС</translation>
+    </message>
 </context>
 </TS>

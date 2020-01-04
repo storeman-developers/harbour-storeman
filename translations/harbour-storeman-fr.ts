@@ -1046,5 +1046,17 @@
         <source>Select which categories to show</source>
         <translation>Choisir les catégories à afficher</translation>
     </message>
+    <message id="orn-pmstate-refreshingcache">
+        <source>Refreshing of cache</source>
+        <translation>Rafraîchissement du cache</translation>
+    </message>
+    <message id="orn-refresh-cache-switch">
+        <source>Refresh cache after system upgrade</source>
+        <translation>Rafraîchir le cache après la mise à niveau du système</translation>
+    </message>
+    <message id="orn-refresh-cache-switch-descr">
+        <source>Force refreshing of cache of all repositories after system upgrade</source>
+        <translation>Forcer le rafraîchissement du cache de tous les dépôts après la mise à niveau du système</translation>
+    </message>
 </context>
 </TS>
