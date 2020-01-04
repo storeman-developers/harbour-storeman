@@ -89,7 +89,8 @@ ListModel {
             ListElement { name: "chwa" },
             ListElement { name: "olf" },
             ListElement { name: "sail_parleur" },
-            ListElement { name: "Unreasonable_Behaviour" }
+            ListElement { name: "Unreasonable_Behaviour" },
+            ListElement { name: "Mausschubser" }
         ]
         reviewers: [
             ListElement { name: "inta" }
