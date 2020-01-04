@@ -1,3 +1,10 @@
+* Sat Jan  4 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.8-1
+- Open changelog directly in a browser if only contains a link (thanks to Miklós Márton)
+- Add the OrnProxyModel::reset() slot
+- OrnAbstractListModel: Better fetching status
+- Refresh cache after system upgrade
+- Update translations
+
 * Thu Dec 19 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.7-1
 - Update translations
 - Add an option to hide particular categories
