@@ -21,6 +21,7 @@ class Storeman : public QObject
     Q_PROPERTY(bool checkForUpdates READ checkForUpdates WRITE setCheckForUpdates NOTIFY checkForUpdatesChanged)
     Q_PROPERTY(bool smartUpdate READ smartUpdate WRITE setSmartUpdate NOTIFY smartUpdateChanged)
     Q_PROPERTY(bool showUpdatesNotification READ showUpdatesNotification WRITE setShowUpdatesNotification NOTIFY showUpdatesNotificationChanged)
+    Q_PROPERTY(bool refreshOnSystemUpgrade READ refreshOnSystemUpgrade WRITE setRefreshOnSystemUpgrade NOTIFY refreshOnSystemUpgradeChanged)
 
 public:
     enum Hint
@@ -63,6 +64,9 @@ public:
     bool showUpdatesNotification() const;
     void setShowUpdatesNotification(bool value);
 
+    bool refreshOnSystemUpgrade() const;
+    void setRefreshOnSystemUpgrade(bool value);
+
     Q_INVOKABLE static bool fileExists(const QString &filePath);
     Q_INVOKABLE static bool removeFile(const QString &filePath);
 
@@ -83,6 +87,7 @@ signals:
     void checkForUpdatesChanged();
     void smartUpdateChanged();
     void showUpdatesNotificationChanged();
+    void refreshOnSystemUpgradeChanged();
     void updatesNotification(bool show, quint32 replaceId);
     void repoSuggestion(const QString &author, bool enableOnly);
 
@@ -90,6 +95,7 @@ private slots:
     void refreshRepos();
     void onUpdatablePackagesChanged();
     void startUpdatesTimer();
+    void checkSystemVersion();
 
 private:
     explicit Storeman(QObject *parent = nullptr);

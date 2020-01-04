@@ -4,6 +4,8 @@
 #include <QDateTime>
 #include <QJsonValue>
 
+class QVersionNumber;
+
 namespace OrnUtils
 {
 
@@ -44,6 +46,13 @@ inline QString packageArch(const QString &id)
 inline QString packageRepo(const QString &id)
 {
     return id.section(QChar(';'), 3, 3);
+}
+
+QVersionNumber systemVersion();
+
+inline QString stringify(bool value)
+{
+    return value ? QStringLiteral("true") : QStringLiteral("false");
 }
 
 } // namespace OrnUtils

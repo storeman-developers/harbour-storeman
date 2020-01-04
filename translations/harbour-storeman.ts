@@ -1046,5 +1046,17 @@
         <source>Select which categories to show</source>
         <translation>Select which categories to show</translation>
     </message>
+    <message id="orn-pmstate-refreshingcache">
+        <source>Refreshing of cache</source>
+        <translation>Refreshing of cache</translation>
+    </message>
+    <message id="orn-refresh-cache-switch">
+        <source>Refresh cache after system upgrade</source>
+        <translation>Refresh cache after system upgrade</translation>
+    </message>
+    <message id="orn-refresh-cache-switch-descr">
+        <source>Force refreshing of cache of all repositories after system upgrade</source>
+        <translation>Force refreshing of cache of all repositories after system upgrade</translation>
+    </message>
 </context>
 </TS>

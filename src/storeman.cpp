@@ -20,6 +20,7 @@
 #include <QFileInfo>
 #include <QtConcurrentRun>
 #include <QNetworkReply>
+#include <QVersionNumber>
 
 #include "ornutils.h"
 #include "ornpm.h"
@@ -36,6 +37,7 @@
 #define UPDATES_SMART               QStringLiteral("updates/smart")
 #define UPDATES_SHOW_NOTIFICATION   QStringLiteral("updates/show_notification")
 #define UPDATES_LAST_CHECK          QStringLiteral("updates/last_check")
+#define REFRESH_CACHE_ENABLE        QStringLiteral("refresh_cache/enable")
 #define HINTS                       QStringLiteral("hints/")
 
 
@@ -61,6 +63,11 @@ Storeman::Storeman(QObject *parent)
     connect(NetworkManager::instance(), &NetworkManager::stateChanged,
             this, &Storeman::startUpdatesTimer);
     this->startUpdatesTimer();
+
+    if (this->refreshOnSystemUpgrade())
+    {
+        QTimer::singleShot(1000, this, &Storeman::checkSystemVersion);
+    }
 }
 
 QObject *Storeman::qmlInstance(QQmlEngine *engine, QJSEngine *scriptEngine)
@@ -171,6 +178,22 @@ void Storeman::setShowUpdatesNotification(bool value)
         emit this->showUpdatesNotificationChanged();
         this->onUpdatablePackagesChanged();
     }
+}
+
+bool Storeman::refreshOnSystemUpgrade() const
+{
+    return mSettings->value(REFRESH_CACHE_ENABLE, true).toBool();
+}
+
+void Storeman::setRefreshOnSystemUpgrade(bool value)
+{
+    if (this->refreshOnSystemUpgrade() == value)
+    {
+        return;
+    }
+
+    mSettings->setValue(REFRESH_CACHE_ENABLE, value);
+    emit this->refreshOnSystemUpgradeChanged();
 }
 
 bool Storeman::fileExists(const QString &filePath)
@@ -346,6 +369,24 @@ void Storeman::startUpdatesTimer()
         qDebug("Stopping updates timer");
         mUpdatesTimer->stop();
     }
+}
+
+void Storeman::checkSystemVersion()
+{
+    QString key(QStringLiteral("refresh_cache/os_version"));
+
+    auto lastVersion = QVersionNumber::fromString(mSettings->value(key).toString());
+    auto version     = OrnUtils::systemVersion();
+
+    mSettings->setValue(key, version.toString());
+
+    if (lastVersion.isNull() || version == lastVersion)
+    {
+        return;
+    }
+
+    qDebug() << "Repo refresh is required due to OS upgrade";
+    OrnPm::instance()->refreshCache(true);
 }
 
 void Storeman::checkRepos()

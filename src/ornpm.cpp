@@ -66,9 +66,7 @@ OrnPm *OrnPm::instance()
 
 void OrnPmPrivate::initialise()
 {
-    QSettings release(QStringLiteral("/etc/sailfish-release"), QSettings::IniFormat);
-    auto version = QVersionNumber::fromString(release.value(QStringLiteral("VERSION_ID")).toString());
-    solvPathTmpl = QVersionNumber::compare(version, QVersionNumber(3, 0, 3)) >= 0 ?
+    solvPathTmpl = OrnUtils::systemVersion() >= QVersionNumber(3, 0, 3) ?
         QStringLiteral("/home/.zypp-cache/solv/%0/solv") :
         QStringLiteral("/var/cache/zypp/solv/%0/solv");
 
@@ -614,8 +612,7 @@ void OrnPm::refreshRepo(const QString &repoAlias, bool force)
     });
     qDebug().nospace() << "Calling " << t << "->RepoSetData(" << repoAlias
                        << ", \"refresh-now\", " << (force ? "true" : "false") << ")";
-    t->asyncCall(QStringLiteral("RepoSetData"), repoAlias, QStringLiteral("refresh-now"),
-                 force ? QStringLiteral("true") : QStringLiteral("false"));
+    t->asyncCall(QStringLiteral("RepoSetData"), repoAlias, QStringLiteral("refresh-now"), OrnUtils::stringify(force));
 }
 
 void OrnPm::refreshRepos(bool force)
@@ -642,11 +639,31 @@ void OrnPm::refreshRepos(bool force)
     qDebug() << "Starting refresh cache for all ORN repositories";
 
     d->pkInterface->blockSignals(true);
-    d->forceRefresh = force ? QStringLiteral("true") : QStringLiteral("false");
+    d->forceRefresh = OrnUtils::stringify(force);
 #ifdef QT_DEBUG
     d->refreshRuntime = 0;
 #endif
     d->refreshNextRepo(Transaction::ExitSuccess, 0);
+}
+
+void OrnPm::refreshCache(bool force)
+{
+    Q_D(OrnPm);
+
+    CHECK_NETWORK();
+
+    QString name(QStringLiteral("__orn_refreshing_cache"));
+
+    SET_OPERATION_ITEM(OrnPm::RefreshingCache, name);
+
+    auto t = d->transaction();
+    connect(t, &QDBusInterface::destroyed, [this, name]()
+    {
+        this->d_func()->operations.remove(name);
+        emit this->operationsChanged();
+    });
+    qDebug().nospace() << "Calling " << t << "->" PK_METHOD_REFRESHCACHE "(" << (force ? "true" : "false") << ")";
+    t->asyncCall(QStringLiteral(PK_METHOD_REFRESHCACHE), force);
 }
 
 QList<OrnRepo> OrnPm::repoList() const

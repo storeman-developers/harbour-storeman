@@ -35,7 +35,8 @@ public:
         RefreshingRepo,
         InstallingPackage,
         RemovingPackage,
-        UpdatingPackage
+        UpdatingPackage,
+        RefreshingCache
     };
     Q_ENUM(Operation)
 
@@ -156,6 +157,7 @@ public slots:
 public slots:
     void refreshRepo(const QString &repoAlias, bool force = false);
     void refreshRepos(bool force = false);
+    void refreshCache(bool force = false);
 
     // Get ORN repositories
 public:

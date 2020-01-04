@@ -4,6 +4,8 @@
 #include <QJsonObject>
 #include <QStandardPaths>
 #include <QDir>
+#include <QSettings>
+#include <QVersionNumber>
 
 #include <QDebug>
 
@@ -31,6 +33,12 @@ QString locate(const QString &filename)
         return QString();
     }
     return dir.absoluteFilePath(filename);
+}
+
+QVersionNumber systemVersion()
+{
+    QSettings release(QStringLiteral("/etc/sailfish-release"), QSettings::IniFormat);
+    return QVersionNumber::fromString(release.value(QStringLiteral("VERSION_ID")).toString());
 }
 
 } // namespace OrnUtils

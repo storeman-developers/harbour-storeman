@@ -15,6 +15,7 @@ Page {
             Storeman.showUpdatesNotification = showUpdatesNotificationSwitch.checked
             Storeman.updateInterval = checkUpdatesIntervalButton.interval
             Storeman.checkForUpdates = checkForUpdatesSwitch.checked
+            Storeman.refreshOnSystemUpgrade = resfreshCacheSwitch.checked
         }
     }
 
@@ -84,6 +85,15 @@ Page {
                 iconSource: "image://theme/icon-m-certificates"
                 text: qsTrId("orn-categories-filter")
                 onClicked: pageStack.push(Qt.resolvedUrl("CategoriesFilterPage.qml"))
+            }
+
+            TextSwitch {
+                id: resfreshCacheSwitch
+                //% "Refresh cache after system upgrade"
+                text: qsTrId("orn-refresh-cache-switch")
+                //% "Force refreshing of cache of all repositories after system upgrade"
+                description: qsTrId("orn-refresh-cache-switch-descr")
+                checked: Storeman.refreshOnSystemUpgrade
             }
 
             SectionHeader {
