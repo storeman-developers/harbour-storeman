@@ -28,7 +28,7 @@
 * Fri Mar 22 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.3-1
 - Update translations
 
-* Tue Feb 25 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.2-1
+* Mon Feb 25 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.2-1
 - Update translations
 
 * Sat Feb 16 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.1-1
@@ -129,7 +129,7 @@
 - Fix opening Storeman from notifications
 - Update translations
 
-* Mon May 10 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.24-1
+* Thu May 10 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.24-1
 - Optimize network requests
 - Fix Slovenian translation was not added
 - Update other translations
