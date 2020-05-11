@@ -1,5 +1,4 @@
-#ifndef ORNUTILS_H
-#define ORNUTILS_H
+#pragma once
 
 #include <QDateTime>
 #include <QJsonValue>
@@ -56,5 +55,3 @@ inline QString stringify(bool value)
 }
 
 } // namespace OrnUtils
-
-#endif // ORNUTILS_H

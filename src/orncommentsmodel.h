@@ -1,10 +1,9 @@
-#ifndef ORNCOMMENTSMODEL_H
-#define ORNCOMMENTSMODEL_H
+#pragma once
 
 #include "ornabstractlistmodel.h"
 #include "orncommentlistitem.h"
 
-class OrnCommentListItem;
+struct OrnCommentListItem;
 class QNetworkReply;
 
 class OrnCommentsModel : public OrnAbstractListModel<OrnCommentListItem>
@@ -49,5 +48,3 @@ public:
     void fetchMore(const QModelIndex &parent) override;
     QHash<int, QByteArray> roleNames() const override;
 };
-
-#endif // ORNCOMMENTSMODEL_H

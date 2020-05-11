@@ -1,5 +1,4 @@
-#ifndef ORNTAGLISTITEM_H
-#define ORNTAGLISTITEM_H
+#pragma once
 
 #include <QString>
 
@@ -13,5 +12,3 @@ struct OrnTagListItem
     quint32 appsCount;
     QString name;
 };
-
-#endif // ORNTAGLISTITEM_H

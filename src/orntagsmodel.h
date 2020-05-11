@@ -1,5 +1,4 @@
-#ifndef ORN_TAGSMODEL_H
-#define ORN_TAGSMODEL_H
+#pragma once
 
 #include "ornabstractlistmodel.h"
 #include "orntaglistitem.h"
@@ -36,5 +35,3 @@ public:
     QHash<int, QByteArray> roleNames() const override;
     void fetchMore(const QModelIndex &parent) override;
 };
-
-#endif // ORN_TAGSMODEL_H

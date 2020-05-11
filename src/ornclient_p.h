@@ -1,5 +1,4 @@
-#ifndef ORNCLIENT_P_H
-#define ORNCLIENT_P_H
+#pragma once
 
 #include <private/qobject_p.h>
 #include <QSet>
@@ -34,5 +33,3 @@ public:
 
     static void prepareComment(QJsonObject &object, const QString &body);
 };
-
-#endif // ORNCLIENT_P_H

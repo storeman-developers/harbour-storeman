@@ -1,5 +1,4 @@
-#ifndef STOREMAN_H
-#define STOREMAN_H
+#pragma once
 
 #include <QObject>
 #include <QCache>
@@ -105,5 +104,3 @@ private:
     QTimer *mUpdatesTimer;
     QCache<quint32, OrnApplication> mAppsCache;
 };
-
-#endif // STOREMAN_H

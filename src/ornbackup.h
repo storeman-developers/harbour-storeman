@@ -1,5 +1,4 @@
-#ifndef ORNBACKUP_H
-#define ORNBACKUP_H
+#pragma once
 
 #include <QObject>
 #include <QHash>
@@ -75,5 +74,3 @@ private:
     QHash<QString, QString> mInstalled;
     QMultiHash<QString, QString> mPackagesToInstall;
 };
-
-#endif // ORNBACKUP_H

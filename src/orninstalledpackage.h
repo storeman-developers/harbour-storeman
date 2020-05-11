@@ -1,6 +1,4 @@
-#ifndef ORNINSTALLEDPACKAGE_H
-#define ORNINSTALLEDPACKAGE_H
-
+#pragma once
 
 #include <QMetaType>
 #include <QString>
@@ -17,5 +15,3 @@ struct OrnInstalledPackage
 using OrnInstalledPackageList = QList<OrnInstalledPackage>;
 
 Q_DECLARE_METATYPE(QList<OrnInstalledPackage>)
-
-#endif // ORNINSTALLEDPACKAGE_H

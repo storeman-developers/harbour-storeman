@@ -1,5 +1,4 @@
-#ifndef ORNPM_H
-#define ORNPM_H
+#pragma once
 
 #include <QObject>
 
@@ -189,5 +188,3 @@ private:
     Q_PRIVATE_SLOT(d_func(), void refreshNextRepo(quint32,quint32))
 
 };
-
-#endif // ORNPM_H

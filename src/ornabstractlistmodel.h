@@ -1,5 +1,4 @@
-#ifndef ORNABSTRACTLISTMODEL_H
-#define ORNABSTRACTLISTMODEL_H
+#pragma once
 
 #include "ornclient.h"
 
@@ -182,5 +181,3 @@ public:
         return !parent.isValid() ? !mFetching && mCanFetchMore : false;
     }
 };
-
-#endif // ORNABSTRACTLISTMODEL_H

@@ -1,5 +1,4 @@
-#ifndef NETWORKACCESSMANAGERFACTORY_H
-#define NETWORKACCESSMANAGERFACTORY_H
+#pragma once
 
 #include <QQmlNetworkAccessManagerFactory>
 
@@ -12,5 +11,3 @@ public:
 public:
     QNetworkAccessManager *create(QObject *parent) override;
 };
-
-#endif // NETWORKACCESSMANAGERFACTORY_H

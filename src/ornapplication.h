@@ -1,5 +1,4 @@
-#ifndef ORNAPPLICATION_H
-#define ORNAPPLICATION_H
+#pragma once
 
 #include "ornpm.h"
 #include "ornpackageversion.h"
@@ -140,5 +139,3 @@ private:
     /// A list of maps with keys [ url, thumb ]
     QVariantList mScreenshots;
 };
-
-#endif // ORNAPPLICATION_H

@@ -1,6 +1,4 @@
-#ifndef ORNPACKAGEVERSION_H
-#define ORNPACKAGEVERSION_H
-
+#pragma once
 
 #include <QVariantList>
 
@@ -34,5 +32,3 @@ private:
 using OrnPackageVersionList = QList<OrnPackageVersion>;
 
 Q_DECLARE_METATYPE(QList<OrnPackageVersion>)
-
-#endif // ORNPACKAGEVERSION_H

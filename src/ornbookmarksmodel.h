@@ -1,5 +1,4 @@
-#ifndef ORNBOOKMARKSMODEL_H
-#define ORNBOOKMARKSMODEL_H
+#pragma once
 
 #include "ornabstractappsmodel.h"
 
@@ -17,5 +16,3 @@ private:
 public:
     void fetchMore(const QModelIndex &parent) override;
 };
-
-#endif // ORNBOOKMARKSMODEL_H

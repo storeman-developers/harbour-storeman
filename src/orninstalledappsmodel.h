@@ -1,5 +1,4 @@
-#ifndef ORNINSTALLEDAPPSMODEL_H
-#define ORNINSTALLEDAPPSMODEL_H
+#pragma once
 
 #include <QAbstractListModel>
 
@@ -46,5 +45,3 @@ public:
     QVariant data(const QModelIndex &index, int role) const override;
     QHash<int, QByteArray> roleNames() const override;
 };
-
-#endif // ORNINSTALLEDAPPSMODEL_H

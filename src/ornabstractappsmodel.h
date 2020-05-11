@@ -1,5 +1,4 @@
-#ifndef ORNABSTRACTAPPSMODEL_H
-#define ORNABSTRACTAPPSMODEL_H
+#pragma once
 
 #include "ornabstractlistmodel.h"
 #include "ornapplistitem.h"
@@ -37,5 +36,3 @@ public:
     QVariant data(const QModelIndex &index, int role) const override;
     QHash<int, QByteArray> roleNames() const override;
 };
-
-#endif // ORNABSTRACTAPPSMODEL_H

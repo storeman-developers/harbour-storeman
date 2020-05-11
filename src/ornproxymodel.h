@@ -1,5 +1,4 @@
-#ifndef ORNPROXYMODEL_H
-#define ORNPROXYMODEL_H
+#pragma once
 
 #include <QSortFilterProxyModel>
 
@@ -36,5 +35,3 @@ public:
 protected:
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 };
-
-#endif // ORNPROXYMODEL_H

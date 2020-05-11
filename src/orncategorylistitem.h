@@ -1,5 +1,4 @@
-#ifndef ORNCATEGORYLISTITEM_H
-#define ORNCATEGORYLISTITEM_H
+#pragma once
 
 #include <QString>
 #include <QList>
@@ -20,5 +19,3 @@ struct OrnCategoryListItem
     QString name;
     QList<quint32> parents;
 };
-
-#endif // ORNCATEGORYLISTITEM_H

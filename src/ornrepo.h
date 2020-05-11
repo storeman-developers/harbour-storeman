@@ -1,6 +1,4 @@
-#ifndef ORNREPO_H
-#define ORNREPO_H
-
+#pragma once
 
 #include <QString>
 
@@ -12,5 +10,3 @@ struct OrnRepo
 };
 
 using OrnRepoList = QList<OrnRepo>;
-
-#endif // ORNREPO_H

@@ -1,5 +1,4 @@
-#ifndef ORNAPPLISTITEM_H
-#define ORNAPPLISTITEM_H
+#pragma once
 
 #include <QString>
 
@@ -26,5 +25,3 @@ struct OrnAppListItem
 private:
     static QString sinceLabel(quint32 value);
 };
-
-#endif // ORNAPPLISTITEM_H

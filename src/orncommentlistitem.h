@@ -1,5 +1,4 @@
-#ifndef ORNCOMMENTLISTITEM_H
-#define ORNCOMMENTLISTITEM_H
+#pragma once
 
 #include <QString>
 
@@ -17,5 +16,3 @@ struct OrnCommentListItem
     QString userIconSource;
     QString text;
 };
-
-#endif // ORNCOMMENTLISTITEM_H

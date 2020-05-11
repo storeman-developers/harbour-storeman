@@ -1,6 +1,4 @@
-#ifndef ORNPM_P_H
-#define ORNPM_P_H
-
+#pragma once
 
 #define SSU_CONFIG_PATH        QStringLiteral("/etc/ssu/ssu.ini")
 #define SSU_REPOS_GROUP        QStringLiteral("repository-urls")
@@ -90,5 +88,3 @@ public:
     QStringList     reposToRefresh;
     QString         forceRefresh;
 };
-
-#endif // ORNPM_P_H

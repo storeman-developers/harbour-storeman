@@ -1,6 +1,4 @@
-#ifndef ORNTAGAPPSMODEL_H
-#define ORNTAGAPPSMODEL_H
-
+#pragma once
 
 #include "ornabstractappsmodel.h"
 
@@ -25,5 +23,3 @@ private:
 public:
     void fetchMore(const QModelIndex &parent) override;
 };
-
-#endif // ORNTAGAPPSMODEL_H

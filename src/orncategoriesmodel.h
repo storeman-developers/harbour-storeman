@@ -1,5 +1,4 @@
-#ifndef ORNCATEGORIESMODEL_H
-#define ORNCATEGORIESMODEL_H
+#pragma once
 
 #include "ornabstractlistmodel.h"
 #include "orncategorylistitem.h"
@@ -35,5 +34,3 @@ public:
 protected:
     void processReply(const QJsonDocument &jsonDoc) override;
 };
-
-#endif // ORNCATEGORIESMODEL_H

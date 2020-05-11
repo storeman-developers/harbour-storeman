@@ -1,5 +1,4 @@
-#ifndef ORNCLIENT_H
-#define ORNCLIENT_H
+#pragma once
 
 #include <QObject>
 #include <QUrlQuery>
@@ -97,5 +96,3 @@ private:
 
     Q_DECLARE_PRIVATE(OrnClient)
 };
-
-#endif // ORNCLIENT_H

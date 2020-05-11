@@ -1,5 +1,4 @@
-#ifndef ORNCATEGORYAPPSMODEL_H
-#define ORNCATEGORYAPPSMODEL_H
+#pragma once
 
 #include "ornabstractappsmodel.h"
 
@@ -24,5 +23,3 @@ private:
 public:
     void fetchMore(const QModelIndex &parent) override;
 };
-
-#endif // ORNCATEGORYAPPSMODEL_H
