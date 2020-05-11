@@ -24,7 +24,7 @@ using namespace PackageKit;
 #define SET_OPERATION_ITEM(operation, item) \
     CHECK_INITIALISED(); \
     if (d->operations.contains(item)) { \
-        qWarning() << item << "is already being processed!"; \
+        qWarning() << (item) << "is already being processed!"; \
         return; \
     } \
     d->operations.insert(item, operation); \
@@ -154,7 +154,7 @@ QVariantList OrnPm::operations() const
 
 bool OrnPm::updatesAvailable() const
 {
-    return this->d_func()->updatablePackages.size();
+    return !this->d_func()->updatablePackages.empty();
 }
 
 QStringList OrnPm::updatablePackages() const
@@ -309,7 +309,7 @@ void OrnPmPrivate::preparePackageVersions(const QString &packageName)
     {
         if (it.value())
         {
-            auto alias = it.key();
+            const auto &alias = it.key();
             auto spath = solvPathTmpl.arg(alias);
             srepo = repo_create(spool, "");
 
@@ -674,7 +674,7 @@ QList<OrnRepo> OrnPm::repoList() const
     auto pos = repoNamePrefix.size();
     for (auto it = d->repos.cbegin(); it != d->repos.cend(); ++it)
     {
-        auto alias = it.key();
+        const auto &alias = it.key();
         repos << OrnRepo{ it.value(), alias, alias.mid(pos) };
     }
     return repos;
@@ -736,7 +736,7 @@ OrnInstalledPackageList OrnPmPrivate::prepareInstalledPackages(const QString &pa
     {
         if (it.value())
         {
-            const auto alias = it.key();
+            const auto &alias = it.key();
             auto spath = solvPathTmpl.arg(alias);
             qDebug() << "Reading" << spath;
             auto srepo = repo_create(spool, alias.toUtf8().data());
@@ -823,7 +823,7 @@ OrnInstalledPackageList OrnPmPrivate::prepareInstalledPackages(const QString &pa
                 }
             }
         }
-        auto id = it.value();
+        const auto &id = it.value();
         packages << OrnInstalledPackage {
             updatablePackages.contains(name),
             id,

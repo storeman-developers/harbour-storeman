@@ -41,13 +41,13 @@ private:
     QJsonObject processReply(QNetworkReply *reply);
 
 private:
-    quint32 mAppId;
+    quint32 mAppId{0};
 
     // QAbstractItemModel interface
 public:
-    QVariant data(const QModelIndex &index, int role) const;
-    void fetchMore(const QModelIndex &parent);
-    QHash<int, QByteArray> roleNames() const;
+    QVariant data(const QModelIndex &index, int role) const override;
+    void fetchMore(const QModelIndex &parent) override;
+    QHash<int, QByteArray> roleNames() const override;
 };
 
 #endif // ORNCOMMENTSMODEL_H

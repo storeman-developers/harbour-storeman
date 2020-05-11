@@ -12,7 +12,7 @@ public:
 
     // QAbstractItemModel interface
 public:
-    void fetchMore(const QModelIndex &parent);
+    void fetchMore(const QModelIndex &parent) override;
 };
 
 #endif // ORNRECENTAPPSMODEL_H

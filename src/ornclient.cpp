@@ -221,7 +221,7 @@ QJsonDocument OrnClient::processReply(QNetworkReply *reply, Error code)
     if (reply->error() == QNetworkReply::NoError)
     {
 #ifdef QT_DEBUG
-        QJsonParseError error;
+        QJsonParseError error{0, QJsonParseError::NoError};
         doc = QJsonDocument::fromJson(reply->readAll(), &error);
         if (error.error != QJsonParseError::NoError)
         {

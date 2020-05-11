@@ -25,16 +25,16 @@ public slots:
     void reset();
 
 private:
-    int mLimit;
+    int mLimit{-1};
 
     // QAbstractItemModel interface
 public:
-    int rowCount(const QModelIndex &parent) const;
-    bool canFetchMore(const QModelIndex &parent) const;
+    int rowCount(const QModelIndex &parent) const override;
+    bool canFetchMore(const QModelIndex &parent) const override;
 
     // QSortFilterProxyModel interface
 protected:
-    bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const;
+    bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 };
 
 #endif // ORNPROXYMODEL_H

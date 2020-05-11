@@ -10,7 +10,6 @@
 
 OrnCommentsModel::OrnCommentsModel(QObject *parent)
     : OrnAbstractListModel(false, parent)
-    , mAppId(0)
 {
     connect(OrnClient::instance(), &OrnClient::commentActionFinished,
             [this](OrnClient::CommentAction action, quint32 appId, quint32 cid)
@@ -65,7 +64,7 @@ OrnCommentsModel::OrnCommentsModel(QObject *parent)
             // FIXME
             // Find all comments from the tree to remove
             std::set<quint32> ids = {cid};
-            std::set<int> inds;
+            std::set<int> inds;            
             for (int i = mData.size() - 1; i >= 0; --i)
             {
                 const auto &comment = mData[i];
@@ -165,17 +164,16 @@ QJsonObject OrnCommentsModel::processReply(QNetworkReply *reply)
         return QJsonObject();
     }
 
-    QJsonParseError error;
+    QJsonParseError error{};
     auto jsonDoc = QJsonDocument::fromJson(reply->readAll(), &error);
+    reply->deleteLater();
+
     if (error.error == QJsonParseError::NoError)
     {
         return jsonDoc.object();
     }
-    else
-    {
-        qCritical() << "Could not parse reply:" << error.errorString();
-    }
-    reply->deleteLater();
+
+    qCritical() << "Could not parse reply:" << error.errorString();
     return QJsonObject();
 }
 

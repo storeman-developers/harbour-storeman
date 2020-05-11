@@ -49,8 +49,8 @@ int main(int argc, char *argv[])
     qRegisterMetaType<QList<OrnInstalledPackage>>();
     qRegisterMetaType<QList<OrnPackageVersion>>();
 
-    auto app = SailfishApp::application(argc, argv);
-    app->setApplicationVersion(QStringLiteral(STOREMAN_VERSION));
+    SailfishApp::application(argc, argv);
+    QGuiApplication::setApplicationVersion(QStringLiteral(STOREMAN_VERSION));
 
     auto view = SailfishApp::createView();
 
@@ -60,5 +60,5 @@ int main(int argc, char *argv[])
     view->setSource(SailfishApp::pathToMainQml());
     view->show();
 
-    return app->exec();
+    return QGuiApplication::exec();
 }

@@ -1,4 +1,4 @@
-﻿#ifndef ORNINSTALLEDAPPSMODEL_H
+#ifndef ORNINSTALLEDAPPSMODEL_H
 #define ORNINSTALLEDAPPSMODEL_H
 
 #include <QAbstractListModel>
@@ -37,14 +37,14 @@ private slots:
     void onUpdatablePackagesChanged();
 
 private:
-    bool mResetting;
+    bool mResetting{false};
     OrnInstalledPackageList mData;
 
     // QAbstractItemModel interface
 public:
-    int rowCount(const QModelIndex &parent) const;
-    QVariant data(const QModelIndex &index, int role) const;
-    QHash<int, QByteArray> roleNames() const;
+    int rowCount(const QModelIndex &parent) const override;
+    QVariant data(const QModelIndex &index, int role) const override;
+    QHash<int, QByteArray> roleNames() const override;
 };
 
 #endif // ORNINSTALLEDAPPSMODEL_H

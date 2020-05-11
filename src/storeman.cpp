@@ -288,7 +288,7 @@ inline Notification *previousNotification()
     QLatin1String category("x-storeman.updates");
     for (auto o : Notification::notifications())
     {
-        auto n = static_cast<Notification *>(o);
+        auto n = dynamic_cast<Notification *>(o);
         if (n->category() == category)
         {
 #ifdef QT_DEBUG

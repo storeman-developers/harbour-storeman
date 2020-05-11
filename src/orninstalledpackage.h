@@ -3,10 +3,11 @@
 
 
 #include <QMetaType>
+#include <QString>
 
 struct OrnInstalledPackage
 {
-    bool updateAvailable;
+    bool updateAvailable{false};
     QString id;
     QString name;
     QString title;

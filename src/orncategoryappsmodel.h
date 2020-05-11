@@ -18,11 +18,11 @@ signals:
     void categoryIdChanged();
 
 private:
-    quint32 mCategoryId;
+    quint32 mCategoryId{0};
 
     // QAbstractItemModel interface
 public:
-    void fetchMore(const QModelIndex &parent);
+    void fetchMore(const QModelIndex &parent) override;
 };
 
 #endif // ORNCATEGORYAPPSMODEL_H

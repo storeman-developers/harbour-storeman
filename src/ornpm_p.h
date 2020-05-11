@@ -45,7 +45,7 @@ class OrnPmPrivate : public QObjectPrivate
 
 public:
     OrnPmPrivate() = default;
-    virtual ~OrnPmPrivate() = default;
+    ~OrnPmPrivate() override = default;
 
     void initialise();
     QDBusInterface *transaction(const QString &item = QString());
@@ -73,11 +73,14 @@ public:
     using StringSet  = QSet<QString>;
     using StringHash = QHash<QString, QString>;
 
-    bool            initialised;
+    bool            initialised{false};
+#ifdef QT_DEBUG
+    quint64         refreshRuntime{0};
+#endif
     QString         solvPathTmpl;
     StringSet       archs;
-    QDBusInterface  *ssuInterface;
-    QDBusInterface  *pkInterface;
+    QDBusInterface  *ssuInterface{nullptr};
+    QDBusInterface  *pkInterface{nullptr};
     RepoHash        repos;
     StringHash      installedPackages;
     StringHash      updatablePackages;
@@ -86,9 +89,6 @@ public:
     QHash<QObject *, QString> transactionHash;
     QStringList     reposToRefresh;
     QString         forceRefresh;
-#ifdef QT_DEBUG
-    quint64         refreshRuntime;
-#endif
 };
 
 #endif // ORNPM_P_H

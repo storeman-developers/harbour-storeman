@@ -6,7 +6,6 @@
 
 OrnInstalledAppsModel::OrnInstalledAppsModel(QObject *parent)
     : QAbstractListModel(parent)
-    , mResetting(false)
 {
     auto ornPm = OrnPm::instance();
     connect(ornPm, &OrnPm::installedPackages,

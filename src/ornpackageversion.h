@@ -6,13 +6,13 @@
 
 struct OrnPackageVersion
 {
-    quint64 downloadSize;
-    quint64 installSize;
+    quint64 downloadSize{0};
+    quint64 installSize{0};
     QString version;
     QString arch;
     QString repoAlias;
 
-    OrnPackageVersion();
+    OrnPackageVersion() = default;
     OrnPackageVersion(const QString &version);
     OrnPackageVersion(quint64 dsize, quint64 isize,
                       const QString &version, QString arch, QString alias);

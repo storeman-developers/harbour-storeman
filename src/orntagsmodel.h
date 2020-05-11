@@ -32,9 +32,9 @@ private:
 
     // QAbstractItemModel interface
 public:
-    QVariant data(const QModelIndex &index, int role) const;
-    QHash<int, QByteArray> roleNames() const;
-    void fetchMore(const QModelIndex &parent);
+    QVariant data(const QModelIndex &index, int role) const override;
+    QHash<int, QByteArray> roleNames() const override;
+    void fetchMore(const QModelIndex &parent) override;
 };
 
 #endif // ORN_TAGSMODEL_H

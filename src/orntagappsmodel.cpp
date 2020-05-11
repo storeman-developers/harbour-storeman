@@ -2,7 +2,6 @@
 
 OrnTagAppsModel::OrnTagAppsModel(QObject *parent)
     : OrnAbstractAppsModel(true, parent)
-    , mTagId(0)
 {}
 
 quint32 OrnTagAppsModel::tagId() const

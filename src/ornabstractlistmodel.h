@@ -24,11 +24,9 @@ class OrnAbstractListModelBase : public QAbstractListModel
 public:
     OrnAbstractListModelBase(QObject *parent = nullptr)
         : QAbstractListModel(parent)
-        , mFetching(false)
-        , mNetworkError(false)
     {}
 
-    inline bool fetching() const { return mFetching; }
+    bool fetching() const { return mFetching; }
     bool networkError() const { return mNetworkError; }
 
 public slots:
@@ -42,8 +40,8 @@ protected:
     virtual void resetImpl() = 0;
 
 protected:
-    bool mFetching;
-    bool mNetworkError;
+    bool mFetching{false};
+    bool mNetworkError{false};
 };
 
 template<typename T>
@@ -53,9 +51,6 @@ public:
     OrnAbstractListModel(bool fetchable, QObject *parent = nullptr)
         : OrnAbstractListModelBase(parent)
         , mFetchable(fetchable)
-        , mCanFetchMore(true)
-        , mPage(0)
-        , mApiReply(nullptr)
     {}
 
 protected:
@@ -123,7 +118,7 @@ protected:
     virtual void processReply(const QJsonDocument &jsonDoc)
     {
         auto jsonArray = jsonDoc.array();
-        if (jsonArray.size() > 0)
+        if (!jsonArray.empty())
         {
             if (!mFetchable)
             {
@@ -166,23 +161,23 @@ protected:
     }
 
 protected:
-    bool     mFetchable;
-    bool     mCanFetchMore;
-    quint32  mPage;
+    bool     mFetchable{false};
+    bool     mCanFetchMore{false};
+    quint32  mPage{0};
     std::deque<T> mData;
-    QNetworkReply *mApiReply;
+    QNetworkReply *mApiReply{nullptr};
 
 private:
     QByteArray mPrevReplyHash;
 
     // QAbstractItemModel interface
 public:
-    int rowCount(const QModelIndex &parent) const
+    int rowCount(const QModelIndex &parent) const override
     {
         return !parent.isValid() ? mData.size() : 0;
     }
-    virtual void fetchMore(const QModelIndex &parent) = 0;
-    bool canFetchMore(const QModelIndex &parent) const
+    void fetchMore(const QModelIndex &parent) override = 0;
+    bool canFetchMore(const QModelIndex &parent) const override
     {
         return !parent.isValid() ? !mFetching && mCanFetchMore : false;
     }

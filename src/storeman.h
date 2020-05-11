@@ -70,8 +70,8 @@ public:
     Q_INVOKABLE static bool fileExists(const QString &filePath);
     Q_INVOKABLE static bool removeFile(const QString &filePath);
 
-    Q_INVOKABLE bool showHint(Hint hint) const;
-    Q_INVOKABLE void setHintShowed(Hint hint);
+    Q_INVOKABLE bool showHint(Storeman::Hint hint) const;
+    Q_INVOKABLE void setHintShowed(Storeman::Hint hint);
 
     Q_INVOKABLE OrnApplication *cachedApp(quint32 appId);
 

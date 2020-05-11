@@ -17,7 +17,7 @@ OrnAbstractAppsModel::OrnAbstractAppsModel(bool fetchable, QObject *parent)
         {
             if (mData[i].package == packageName)
             {
-                auto ind = this->createIndex(i, 0);
+                auto ind = this->createIndex(int(i), 0);
                 emit this->dataChanged(ind, ind, {PackageStatusRole});
                 return;
             }
@@ -33,7 +33,7 @@ OrnAbstractAppsModel::OrnAbstractAppsModel(bool fetchable, QObject *parent)
         {
             if (mData[i].appId == appid)
             {
-                auto ind = this->createIndex(i, 0);
+                auto ind = this->createIndex(int(i), 0);
                 emit this->dataChanged(ind, ind, {BookmarkRole});
                 return;
             }
@@ -49,7 +49,7 @@ OrnAbstractAppsModel::OrnAbstractAppsModel(bool fetchable, QObject *parent)
         {
             if (mData[i].categoryId == categoryId)
             {
-                auto ind = this->createIndex(i, 0);
+                auto ind = this->createIndex(int(i), 0);
                 emit this->dataChanged(ind, ind, {VisibilityRole});
                 return;
             }
@@ -64,7 +64,7 @@ QVariant OrnAbstractAppsModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    const auto &app = mData[index.row()];
+    const auto &app = mData[size_t(index.row())];
     switch (role)
     {
     case SortRole:

@@ -22,7 +22,7 @@ private:
 
     // QAbstractItemModel interface
 public:
-    void fetchMore(const QModelIndex &parent);
+    void fetchMore(const QModelIndex &parent) override;
 };
 
 #endif // ORNSEARCHAPPSMODEL_H

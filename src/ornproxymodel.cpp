@@ -4,7 +4,6 @@
 
 OrnProxyModel::OrnProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
-    , mLimit(-1)
 {
 }
 

@@ -19,11 +19,11 @@ signals:
     void tagIdChanged();
 
 private:
-    quint32 mTagId;
+    quint32 mTagId{0};
 
     // QAbstractItemModel interface
 public:
-    void fetchMore(const QModelIndex &parent);
+    void fetchMore(const QModelIndex &parent) override;
 };
 
 #endif // ORNTAGAPPSMODEL_H

@@ -1,8 +1,7 @@
 #include "ornuserappsmodel.h"
 
-OrnUserAppsModel::OrnUserAppsModel(QObject *parent) :
-    OrnAbstractAppsModel(false, parent),
-    mUserId(0)
+OrnUserAppsModel::OrnUserAppsModel(QObject *parent)
+    : OrnAbstractAppsModel(false, parent)
 {
 
 }

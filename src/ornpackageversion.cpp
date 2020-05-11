@@ -16,15 +16,8 @@ QVariantList splitVersion(const QString &version)
     return parts;
 }
 
-OrnPackageVersion::OrnPackageVersion()
-    : downloadSize(0)
-    , installSize(0)
-{}
-
 OrnPackageVersion::OrnPackageVersion(const QString &version)
-    : downloadSize(0)
-    , installSize(0)
-    , version(version)
+    : version(version)
     , versionParts(splitVersion(version))
 {}
 

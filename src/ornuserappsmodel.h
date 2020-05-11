@@ -18,11 +18,11 @@ signals:
     void userIdChanged();
 
 private:
-    quint32 mUserId;
+    quint32 mUserId{0};
 
     // QAbstractItemModel interface
 public:
-    void fetchMore(const QModelIndex &parent);
+    void fetchMore(const QModelIndex &parent) override;
 };
 
 #endif // ORNUSERAPPSMODEL_H

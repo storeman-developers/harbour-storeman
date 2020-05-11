@@ -105,18 +105,18 @@ private slots:
 private:
     void updateDesktopFile();
 
-    OrnPm::RepoStatus mRepoStatus;
-    OrnPm::PackageStatus mPackageStatus;
+    OrnPm::RepoStatus mRepoStatus{OrnPm::RepoUnknownStatus};
+    OrnPm::PackageStatus mPackageStatus{OrnPm::PackageUnknownStatus};
 
-    bool mCommentsOpen;
-    quint32 mAppId;
-    quint32 mUserId;
-    quint32 mRatingCount;
-    quint32 mUserVote;
-    quint32 mCommentsCount;
-    quint32 mDownloadsCount;
+    bool mCommentsOpen{false};
+    quint32 mAppId{0};
+    quint32 mUserId{0};
+    quint32 mRatingCount{0};
+    quint32 mUserVote{0};
+    quint32 mCommentsCount{0};
+    quint32 mDownloadsCount{0};
 
-    float mRating;
+    float mRating{0.0f};
 
     OrnPackageVersion mInstalledVersion;
     OrnPackageVersion mAvailableVersion;

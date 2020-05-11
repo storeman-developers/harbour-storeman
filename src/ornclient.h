@@ -10,7 +10,7 @@ class QNetworkAccessManager;
 class QNetworkRequest;
 class QNetworkReply;
 
-struct OrnClientPrivate;
+class OrnClientPrivate;
 
 class OrnClient : public QObject
 {
@@ -83,11 +83,11 @@ public slots:
     void vote(quint32 appId, quint32 value);
 
 signals:
-    void error(Error code);
+    void error(OrnClient::Error code);
     void authorisedChanged();
     void dayToExpiry();
     void cookieIsValidChanged();
-    void commentActionFinished(CommentAction action, quint32 appId, quint32 cid);
+    void commentActionFinished(OrnClient::CommentAction action, quint32 appId, quint32 cid);
     void bookmarkChanged(quint32 appid, bool bookmarked);
     void categoryVisibilityChanged(quint32 categoryId, bool visible);
     void userVoteFinished(quint32 appId, quint32 userVote, quint32 count, float rating);

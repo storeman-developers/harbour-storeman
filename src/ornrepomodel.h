@@ -37,14 +37,14 @@ private slots:
     void onRepoModified(const QString &alias, int action);
 
 private:
-    int mEnabledRepos;
+    int mEnabledRepos{0};
     OrnRepoList mData;
 
     // QAbstractItemModel interface
 public:
-    int rowCount(const QModelIndex &parent) const;
-    QVariant data(const QModelIndex &index, int role) const;
-    QHash<int, QByteArray> roleNames() const;
+    int rowCount(const QModelIndex &parent) const override;
+    QVariant data(const QModelIndex &index, int role) const override;
+    QHash<int, QByteArray> roleNames() const override;
 };
 
 #endif // ORNREPOMODEL_H

@@ -6,7 +6,6 @@
 
 OrnRepoModel::OrnRepoModel(QObject *parent)
     : QAbstractListModel(parent)
-    , mEnabledRepos(0)
 {
     auto ornPm = OrnPm::instance();
 

@@ -97,11 +97,8 @@ QString OrnCategoryListItem::categoryName(quint32 tid)
     {
         return qtTrId(categories[tid]);
     }
-    else
-    {
-        qWarning() << "Categories dictionary does not contain tid"
-                   << tid << "- dictionary update can be required";
-        //% "Unknown category"
-        return qtTrId("orn-cat-unknown2");
-    }
+    qWarning() << "Categories dictionary does not contain tid"
+               << tid << "- dictionary update can be required";
+    //% "Unknown category"
+    return qtTrId("orn-cat-unknown2");
 }

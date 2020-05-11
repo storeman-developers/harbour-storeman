@@ -104,7 +104,7 @@ public:
 signals:
     void initialisedChanged();
     void operationsChanged();
-    void packageStatusChanged(const QString &packageName, const PackageStatus &status);
+    void packageStatusChanged(const QString &packageName, OrnPm::PackageStatus status);
     void error(quint32 code, const QString &details);
 
 #ifdef QT_DEBUG
@@ -144,12 +144,12 @@ public slots:
 
     // SSU repo actions
 signals:
-    void repoModified(const QString &repoAlias, RepoAction action);
+    void repoModified(const QString &repoAlias, OrnPm::RepoAction action);
     void enableReposFinished();
     void removeAllReposFinished();
 public slots:
     void addRepo(const QString &author);
-    void modifyRepo(const QString &repoAlias, RepoAction action);
+    void modifyRepo(const QString &repoAlias, OrnPm::RepoAction action);
     void enableRepos(bool enable);
     void removeAllRepos();
 

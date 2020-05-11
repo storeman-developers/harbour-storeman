@@ -34,13 +34,6 @@ QDebug operator<<(QDebug dbg, const OrnApplication *app)
 
 OrnApplication::OrnApplication(QObject *parent)
     : QObject(parent)
-    , mRepoStatus(OrnPm::RepoUnknownStatus)
-    , mPackageStatus(OrnPm::PackageUnknownStatus)
-    , mAppId(0)
-    , mUserId(0)
-    , mRatingCount(0)
-    , mCommentsCount(0)
-    , mRating(0.0)
 {
     auto ornPm = OrnPm::instance();
     connect(ornPm, &OrnPm::repoModified, this, &OrnApplication::onRepoListChanged);

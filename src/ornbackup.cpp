@@ -23,7 +23,6 @@
 
 OrnBackup::OrnBackup(QObject *parent)
     : QObject(parent)
-    , mStatus(Idle)
 {}
 
 OrnBackup::Status OrnBackup::status() const
@@ -95,7 +94,7 @@ void OrnBackup::restore(const QString &filePath)
 QStringList OrnBackup::notFound() const
 {
     QStringList names;
-    for (const auto &name : mPackagesToInstall.keys())
+    for (const auto &name : mPackagesToInstall)
     {
         if (!mNamesToSearch.contains(name))
         {
@@ -239,7 +238,7 @@ void OrnBackup::pBackup(const QString &filePath, BackupItems items)
         file.setValue(BR_BOOKMARKS, bookmarks);
     }
 
-    file.setValue(BR_CREATED, QDateTime::currentDateTime().toUTC());
+    file.setValue(BR_CREATED, QDateTime::currentDateTimeUtc());
 
     qDebug() << "Finished backing up";
     this->setStatus(Idle);

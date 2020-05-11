@@ -34,8 +34,8 @@ public:
 
     // QAbstractItemModel interface
 public:
-    QVariant data(const QModelIndex &index, int role) const;
-    QHash<int, QByteArray> roleNames() const;
+    QVariant data(const QModelIndex &index, int role) const override;
+    QHash<int, QByteArray> roleNames() const override;
 };
 
 #endif // ORNABSTRACTAPPSMODEL_H

@@ -27,13 +27,13 @@ public:
 
     // QAbstractItemModel interface
 public:
-    QVariant data(const QModelIndex &index, int role) const;
-    void fetchMore(const QModelIndex &parent);
-    QHash<int, QByteArray> roleNames() const;
+    QVariant data(const QModelIndex &index, int role) const override;
+    void fetchMore(const QModelIndex &parent) override;
+    QHash<int, QByteArray> roleNames() const override;
 
     // OrnAbstractListModel interface
 protected:
-    void processReply(const QJsonDocument &jsonDoc);
+    void processReply(const QJsonDocument &jsonDoc) override;
 };
 
 #endif // ORNCATEGORIESMODEL_H

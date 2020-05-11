@@ -18,14 +18,14 @@ class OrnClientPrivate : public QObjectPrivate
 
 public:
     OrnClientPrivate() = default;
-    virtual ~OrnClientPrivate();
+    ~OrnClientPrivate() override;
 
     void removeUser();
     void setCookieTimer();
 
-    QSettings *settings;
-    QTimer *cookieTimer;
-    QNetworkAccessManager *nam;
+    QSettings *settings{nullptr};
+    QTimer *cookieTimer{nullptr};
+    QNetworkAccessManager *nam{nullptr};
     QSet<quint32> bookmarks;
     QSet<quint32> hiddenCategories;
     QByteArray lang;

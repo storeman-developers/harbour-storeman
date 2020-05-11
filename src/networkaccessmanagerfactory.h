@@ -10,7 +10,7 @@ public:
 
     // QQmlNetworkAccessManagerFactory interface
 public:
-    QNetworkAccessManager *create(QObject *parent);
+    QNetworkAccessManager *create(QObject *parent) override;
 };
 
 #endif // NETWORKACCESSMANAGERFACTORY_H

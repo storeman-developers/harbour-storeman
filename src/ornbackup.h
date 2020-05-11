@@ -46,13 +46,13 @@ public:
     Status status() const;
 
     Q_INVOKABLE static QVariantMap details(const QString &path);
-    Q_INVOKABLE void backup(const QString &filePath, BackupItems items);
+    Q_INVOKABLE void backup(const QString &filePath, OrnBackup::BackupItems items);
     Q_INVOKABLE void restore(const QString &filePath);
     Q_INVOKABLE QStringList notFound() const;
 
 signals:
     void statusChanged();
-    void backupError(Error err);
+    void backupError(OrnBackup::Error err);
     void backedUp();
     void restored();
 
@@ -69,7 +69,7 @@ private:
     void pRefreshRepos();
 
 private:
-    Status mStatus;
+    Status mStatus{Idle};
     QStringList mNamesToSearch;
     // Name, version
     QHash<QString, QString> mInstalled;
