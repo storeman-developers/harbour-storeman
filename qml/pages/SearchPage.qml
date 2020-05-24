@@ -89,14 +89,6 @@ Page {
         ViewPlaceholder {
             id: viewPlaceholder
             enabled: text
-            verticalOffset: {
-                var h = Qt.inputMethod.keyboardRectangle.height
-                return h ? (parent.height - h) * 0.5 : 0
-            }
-
-            Behavior on verticalOffset {
-                NumberAnimation { duration: 200; easing.type: Easing.InOutQuad }
-            }
         }
 
         BusyIndicator {
