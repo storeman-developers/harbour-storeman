@@ -1,3 +1,12 @@
+* Thu Jun 18 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.9-1
+- Fix dates in changelog
+- Fix some Clang static analyzer warnings
+- Use #pragma once as include guard
+- SearchPage.qml: Fix placeholder placing
+- ScreenshotPage.qml: Fix busy indicator color
+- AppPage.qml: Fix changelog URL handling
+- Update translations
+
 * Sat Jan  4 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.8-1
 - Open changelog directly in a browser if only contains a link (thanks to Miklós Márton)
 - Add the OrnProxyModel::reset() slot
