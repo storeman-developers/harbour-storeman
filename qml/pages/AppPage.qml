@@ -117,9 +117,9 @@ Page {
                 text: qsTrId("orn-changelog")
                 onClicked: {
                     // try to extract the url of the first link from the changelog
-                    var regex = /^(.*)\<a href\=\"(http[s]?:\/\/[^\s]*)\"[\>]*\>[^\<]*\<\/a\>(.*)$/g;
-                    var parts = regex.exec(app.changelog);
-                    if (parts !== null
+                    var regex = /^(.*)<a href="(http[s]?:\/\/[^\s]*)"[>]*>[^<]*<\/a>(.*)$/
+                    var parts = regex.exec(app.changelog)
+                    if (parts
                             && parts.length === 4
                             && (parts[1].length + parts[3].length) < 32) {
                         // if an url link found in the changelog
