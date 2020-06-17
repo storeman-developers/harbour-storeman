@@ -161,7 +161,7 @@ protected:
 
 protected:
     bool     mFetchable{false};
-    bool     mCanFetchMore{false};
+    bool     mCanFetchMore{true};
     quint32  mPage{0};
     std::deque<T> mData;
     QNetworkReply *mApiReply{nullptr};
