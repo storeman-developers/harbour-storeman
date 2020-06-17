@@ -62,11 +62,11 @@
     </message>
     <message id="orn-adding-repo">
         <source>Adding</source>
-        <translation>加入</translation>
+        <translation>正在添加软件源`</translation>
     </message>
     <message id="orb-remove">
         <source>Remove</source>
-        <translation>移除</translation>
+        <translation>正在移除软件源</translation>
     </message>
     <message id="orn-removing">
         <source>Removing</source>
@@ -74,7 +74,7 @@
     </message>
     <message id="orn-error">
         <source>An error occured</source>
-        <translation>出错</translation>
+        <translation>发生了一个出错</translation>
     </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
@@ -1039,6 +1039,18 @@
     <message id="orn-categories-filter-descr">
         <source>Select which categories to show</source>
         <translation>选择要显示的分类</translation>
+    </message>
+    <message id="orn-pmstate-refreshingcache">
+        <source>Refreshing of cache</source>
+        <translation>刷新缓存</translation>
+    </message>
+    <message id="orn-refresh-cache-switch">
+        <source>Refresh cache after system upgrade</source>
+        <translation>系统升级之后刷新缓存</translation>
+    </message>
+    <message id="orn-refresh-cache-switch-descr">
+        <source>Force refreshing of cache of all repositories after system upgrade</source>
+        <translation>系统更新之后，强制刷新所有软件源的缓存数据</translation>
     </message>
 </context>
 </TS>

@@ -537,7 +537,7 @@
     </message>
     <message id="orn-refresh-cache">
         <source>Refresh cache</source>
-        <translation>Cache aktualisieren</translation>
+        <translation>Cache auffrischen</translation>
     </message>
     <message id="orn-tag-underscore">
         <source>U</source>
@@ -1044,7 +1044,19 @@
     </message>
     <message id="orn-categories-filter-descr">
         <source>Select which categories to show</source>
-        <translation>Wähle aus, welche Kategorien angezeigt werden sollen</translation>
+        <translation>Kategorien die angezeigt werden sollen</translation>
+    </message>
+    <message id="orn-pmstate-refreshingcache">
+        <source>Refreshing of cache</source>
+        <translation>Auffrischen des Caches</translation>
+    </message>
+    <message id="orn-refresh-cache-switch">
+        <source>Refresh cache after system upgrade</source>
+        <translation>Cache nach System-Upgrade auffrischen</translation>
+    </message>
+    <message id="orn-refresh-cache-switch-descr">
+        <source>Force refreshing of cache of all repositories after system upgrade</source>
+        <translation>Auffrischen des Caches aller Repositories nach dem System-Upgrade erzwingen</translation>
     </message>
 </context>
 </TS>

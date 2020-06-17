@@ -1052,5 +1052,17 @@
         <source>Select which categories to show</source>
         <translation>Wybierz kategorie do wyświetlenia</translation>
     </message>
+    <message id="orn-pmstate-refreshingcache">
+        <source>Refreshing of cache</source>
+        <translation>Odświeżanie pamięci podręcznej</translation>
+    </message>
+    <message id="orn-refresh-cache-switch">
+        <source>Refresh cache after system upgrade</source>
+        <translation>Odśwież pamięć podręczną po aktualizacji systemu</translation>
+    </message>
+    <message id="orn-refresh-cache-switch-descr">
+        <source>Force refreshing of cache of all repositories after system upgrade</source>
+        <translation>Wymuś odświeżanie pamięci podręcznej wszystkich repozytoriów po aktualizacji systemu</translation>
+    </message>
 </context>
 </TS>

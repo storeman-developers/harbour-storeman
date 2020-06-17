@@ -1058,5 +1058,17 @@
         <source>Select which categories to show</source>
         <translation>Izberite kategorije za prikaz</translation>
     </message>
+    <message id="orn-pmstate-refreshingcache">
+        <source>Refreshing of cache</source>
+        <translation>Osveževanje predpomnilnika</translation>
+    </message>
+    <message id="orn-refresh-cache-switch">
+        <source>Refresh cache after system upgrade</source>
+        <translation>Osvežite predpomnilnik po nadgradnji sistema</translation>
+    </message>
+    <message id="orn-refresh-cache-switch-descr">
+        <source>Force refreshing of cache of all repositories after system upgrade</source>
+        <translation>Vsilite osvežitev predpomnilnika po nadgradnji sistema</translation>
+    </message>
 </context>
 </TS>

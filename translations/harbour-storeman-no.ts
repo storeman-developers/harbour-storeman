@@ -430,7 +430,7 @@
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
-        <translation type="unfinished"></translation>
+        <translation>Du er pålogget openrepos.net</translation>
     </message>
     <message id="orn-loggedout-message">
         <source>You have logged out from the OpenRepos.net</source>
@@ -442,7 +442,7 @@
     </message>
     <message id="orn-login-error-message">
         <source>Could not log in the OpenRepos.net - check your credentials and network connection</source>
-        <translation type="unfinished"></translation>
+        <translation>Kunne ikke logge på openrepos.net. Kontroller brukernavn og passord. Sjekk internett forbindelsen din.</translation>
     </message>
     <message id="orn-loggedin-menu-item">
         <source>Logged in as %0</source>
@@ -473,7 +473,7 @@
     </message>
     <message id="orn-authorisation-expires-summary">
         <source>Authorisation expires</source>
-        <translation type="unfinished"></translation>
+        <translation>Autorisasjon utgått </translation>
     </message>
     <message id="orn-authorisation-expires-body">
         <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
@@ -489,7 +489,7 @@
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
-        <translation type="unfinished"></translation>
+        <translation>Reautorisere</translation>
     </message>
     <message id="orn-enable-all">
         <source>Enable all</source>
@@ -509,19 +509,19 @@
     </message>
     <message id="orn-installed-apps">
         <source>Installed applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Installerte programmer</translation>
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Program  lagt til </translation>
     </message>
     <message id="orn-bookmarks-removed">
         <source>The app was removed from bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Programmet ble fjernet fra bookmarks</translation>
     </message>
     <message id="orn-no-bookmarks">
         <source>Your bookmarked applications will be shown here</source>
-        <translation type="unfinished"></translation>
+        <translation>Dine bokmerkede programmer vil  vises her</translation>
     </message>
     <message id="orn-bookmarks">
         <source>Bookmarks</source>
@@ -542,17 +542,17 @@
     <message id="orn-tag-underscore">
         <source>U</source>
         <extracomment>Tag underscore</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>U</translation>
     </message>
     <message id="orn-tag-strong">
         <source>B</source>
         <extracomment>Tag strong</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>B</translation>
     </message>
     <message id="orn-tag-emphasize">
         <source>I</source>
         <extracomment>Tag emphasize</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>I</translation>
     </message>
     <message id="orn-updates-available-summary">
         <source>Updates available</source>
@@ -560,11 +560,11 @@
     </message>
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Klikk for å vise oppdateringer</translation>
     </message>
     <message id="orn-updates-available-body">
         <source>Applications updates are available. Click to view details.</source>
-        <translation type="unfinished"></translation>
+        <translation>Programoppdateringer er tilgjengelige. Klikk for å se detaljer.</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>
@@ -669,7 +669,7 @@
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
-        <translation type="unfinished"></translation>
+        <translation>Oppstart pågår</translation>
     </message>
     <message id="orn-pmstate-addingrepo">
         <source>Adding repo %0</source>
@@ -721,35 +721,35 @@
     </message>
     <message id="orn-not-installed">
         <source>Not installed</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikke innstallert</translation>
     </message>
     <message id="orn-installing">
         <source>Installing</source>
-        <translation type="unfinished"></translation>
+        <translation>Innstallerer</translation>
     </message>
     <message id="orn-unknown">
         <source>Unknown</source>
-        <translation type="unfinished">Ukjent</translation>
+        <translation>Ukjent</translation>
     </message>
     <message id="orn-updating">
         <source>Updating</source>
-        <translation type="unfinished"></translation>
+        <translation>Oppdaterer</translation>
     </message>
     <message id="orn-version-available-global">
         <source>Available in other repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Tilgjengelig i  andre pakkebrønner</translation>
     </message>
     <message id="orn-installed-apps-description">
         <source>Only from enabled repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Kun tilgjengelig fra påskrudde pakkebrønner</translation>
     </message>
     <message id="orn-update-all">
         <source>Update all</source>
-        <translation type="unfinished"></translation>
+        <translation>Oppdater alt</translation>
     </message>
     <message id="orn-no-installed-apps">
         <source>Could not find any applications installed from OpenRepos</source>
-        <translation type="unfinished"></translation>
+        <translation>Kunne ikke finne innstallerte programmer fra OpenRepos</translation>
     </message>
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
@@ -761,7 +761,7 @@
     </message>
     <message id="orn-version-available">
         <source>Available version</source>
-        <translation type="unfinished"></translation>
+        <translation>Tilgjengengelig versjon</translation>
     </message>
     <message id="orn-size-kb">
         <source>%0 KB</source>
@@ -777,11 +777,11 @@
     </message>
     <message id="orn-error-packagenotfound">
         <source>Couldn&apos;t find package</source>
-        <translation type="unfinished"></translation>
+        <translation>Finner ikke pakke</translation>
     </message>
     <message id="orn-size-installed">
         <source>Installed size</source>
-        <translation type="unfinished"></translation>
+        <translation>Installasjonens størrelse</translation>
     </message>
     <message id="orn-size-bytes" numerus="yes">
         <source>%n byte(s)</source>
@@ -792,33 +792,33 @@
     </message>
     <message id="orn-size-download-install">
         <source>Download / install size</source>
-        <translation type="unfinished"></translation>
+        <translation>Nedlasting/innstallasjonsstørrelse</translation>
     </message>
     <message id="orn-cat-public-transport">
         <source>Public Transport</source>
-        <translation type="unfinished"></translation>
+        <translation>Offentlig transport</translation>
     </message>
     <message id="orn-comments-wait">
         <source>Wait for users&apos; feedback</source>
         <extracomment>This will be shown to an application author</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Vent på brukernes tilbakemelding</translation>
     </message>
     <message id="orn-comments-bethefirst">
         <source>Be the first to comment</source>
         <extracomment>This will be shown to a normal user</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Fyr inn kommentar nummer en!</translation>
     </message>
     <message id="orn-comments-nocomments">
         <source>There is nothing here yet</source>
-        <translation type="unfinished"></translation>
+        <translation>Intet her for,</translation>
     </message>
     <message id="orn-settings">
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Innstillinger</translation>
     </message>
     <message id="orn-updates">
         <source>Updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Oppdateringer</translation>
     </message>
     <message id="orn-updates-notification-switch">
         <source>Show updates notification</source>
@@ -844,12 +844,12 @@
     </message>
     <message id="orn-updates-check-interval-invalid">
         <source>The interval must be at least 10 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>Intervallet må være minimum 10 minutter</translation>
     </message>
     <message id="orn-tag-strikeout">
         <source>S</source>
         <extracomment>Tag strikeout</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>S</translation>
     </message>
     <message id="orn-hint-commentfield">
         <source>Swipe to see all the tag buttons</source>
@@ -858,12 +858,12 @@
     <message id="orn-dcm-user2">
         <source>Deep Thought</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Tenkjar dypt</translation>
     </message>
     <message id="orn-dcm-user1">
         <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>En liten hvit mus</translation>
     </message>
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
@@ -1000,7 +1000,7 @@
     </message>
     <message id="orn-backup-apps">
         <source>Installed applications</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Installerte programmer</translation>
     </message>
     <message id="orn-myapps">
         <source>My applications</source>
@@ -1024,11 +1024,11 @@
     </message>
     <message id="orn-mainpage-order">
         <source>Order items</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestill gjenstander</translation>
     </message>
     <message id="orn-reset">
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Tilbakestill</translation>
     </message>
     <message id="orn-mainpage-order-description">
         <source>Drag items to change their order</source>
@@ -1036,11 +1036,11 @@
     </message>
     <message id="orn-cat-adult-content">
         <source>Adult Content</source>
-        <translation type="unfinished"></translation>
+        <translation>Kun for de voksne</translation>
     </message>
     <message id="orn-categories-filter">
         <source>Categories filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Kategorifilter</translation>
     </message>
     <message id="orn-categories-filter-descr">
         <source>Select which categories to show</source>

@@ -1040,11 +1040,23 @@
     </message>
     <message id="orn-categories-filter">
         <source>Categories filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Kategorioiden suodattimet</translation>
     </message>
     <message id="orn-categories-filter-descr">
         <source>Select which categories to show</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse näytettävät kategoriat</translation>
+    </message>
+    <message id="orn-pmstate-refreshingcache">
+        <source>Refreshing of cache</source>
+        <translation>Päivitetään välimuistia</translation>
+    </message>
+    <message id="orn-refresh-cache-switch">
+        <source>Refresh cache after system upgrade</source>
+        <translation>Päivitä välimuisti järjestelmäpäivityksen jälkeen</translation>
+    </message>
+    <message id="orn-refresh-cache-switch-descr">
+        <source>Force refreshing of cache of all repositories after system upgrade</source>
+        <translation>Pakota välimuistin ja pakettilähteiden päivitys järjestelmäpäivityksen jälkeen</translation>
     </message>
 </context>
 </TS>

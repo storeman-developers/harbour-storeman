@@ -1046,5 +1046,17 @@
         <source>Select which categories to show</source>
         <translation>Välj vilka kategorier som skall visas</translation>
     </message>
+    <message id="orn-pmstate-refreshingcache">
+        <source>Refreshing of cache</source>
+        <translation>Uppdatering av cache-lagring</translation>
+    </message>
+    <message id="orn-refresh-cache-switch">
+        <source>Refresh cache after system upgrade</source>
+        <translation>Uppdatera cache-lagringen efter systemuppgradering</translation>
+    </message>
+    <message id="orn-refresh-cache-switch-descr">
+        <source>Force refreshing of cache of all repositories after system upgrade</source>
+        <translation>Uppdatera alla cache-lagrade förråd efter systemuppgradering</translation>
+    </message>
 </context>
 </TS>
