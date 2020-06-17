@@ -20,6 +20,7 @@ FullscreenContentPage {
                 anchors.centerIn: parent
                 size: BusyIndicatorSize.Large
                 running: image.status === Image.Loading
+                color: Theme.highlightColor
             }
 
             Image {
