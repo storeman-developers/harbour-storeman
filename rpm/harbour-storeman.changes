@@ -1,3 +1,8 @@
+* Mon Jun 29 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.10-1
+- Store user authorization data with Sailfish Secrets
+- Add an option to store user password with Sailfish Secrets to automatic re-login
+- OrnCommentsModel: Fix some warnings
+
 * Thu Jun 18 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.9-1
 - Fix dates in changelog
 - Fix some Clang static analyzer warnings
