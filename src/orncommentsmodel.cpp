@@ -11,7 +11,7 @@
 OrnCommentsModel::OrnCommentsModel(QObject *parent)
     : OrnAbstractListModel(false, parent)
 {
-    connect(OrnClient::instance(), &OrnClient::commentActionFinished,
+    connect(OrnClient::instance(), &OrnClient::commentActionFinished, this,
             [this](OrnClient::CommentAction action, quint32 appId, quint32 cid)
     {
         if (mAppId == 0 && mAppId != appId)
@@ -21,7 +21,7 @@ OrnCommentsModel::OrnCommentsModel(QObject *parent)
         if (action == OrnClient::CommentAdded)
         {
             auto reply = this->fetchComment(cid);
-            connect(reply, &QNetworkReply::finished, [this, reply]()
+            connect(reply, &QNetworkReply::finished, this, [this, reply]()
             {
                 auto jsonObject = this->processReply(reply);
                 if (jsonObject.isEmpty())
@@ -36,7 +36,7 @@ OrnCommentsModel::OrnCommentsModel(QObject *parent)
         else if (action == OrnClient::CommentEdited)
         {
             auto reply = this->fetchComment(cid);
-            connect(reply, &QNetworkReply::finished, [this, reply]()
+            connect(reply, &QNetworkReply::finished, this, [this, reply]()
             {
                 auto jsonObject = this->processReply(reply);
                 if (jsonObject.isEmpty())
@@ -51,7 +51,7 @@ OrnCommentsModel::OrnCommentsModel(QObject *parent)
                     if (comment.commentId == cid)
                     {
                         comment.text = OrnUtils::toString(jsonObject[QStringLiteral("text")]);
-                        auto index = this->createIndex(i, 0);
+                        auto index = this->createIndex(int(i), 0);
                         emit this->dataChanged(index, index);
                         return;
                     }
@@ -63,11 +63,11 @@ OrnCommentsModel::OrnCommentsModel(QObject *parent)
         {
             // FIXME
             // Find all comments from the tree to remove
-            std::set<quint32> ids = {cid};
+            std::set<quint32> ids{cid};
             std::set<int> inds;            
-            for (int i = mData.size() - 1; i >= 0; --i)
+            for (int i = int(mData.size()) - 1; i >= 0; --i)
             {
-                const auto &comment = mData[i];
+                const auto &comment = mData[size_t(i)];
                 if (ids.find(comment.parentId) != ids.end())
                 {
                     ids.insert(comment.commentId);
@@ -133,7 +133,7 @@ void OrnCommentsModel::setAppId(quint32 appId)
 
 int OrnCommentsModel::findItemRow(quint32 cid) const
 {
-    QObjectList::size_type i = 0;
+    int i = 0;
     for (const auto &c : mData)
     {
         if (c.commentId == cid)
@@ -184,7 +184,7 @@ QVariant OrnCommentsModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    const auto &comment = mData[index.row()];
+    const auto &comment = mData[size_t(index.row())];
     switch (role)
     {
     case CommentIdRole:
@@ -200,7 +200,7 @@ QVariant OrnCommentsModel::data(const QModelIndex &index, int role) const
     case ParentUserNameRole:
     {
         auto row = this->findItemRow(comment.parentId);
-        return row == -1 ? QString() : mData[row].userName;
+        return row == -1 ? QString() : mData[size_t(row)].userName;
     }
     case UserIconSourceRole:
         return comment.userIconSource;
