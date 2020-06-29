@@ -21,8 +21,6 @@
 
 #define API_URL_PREFIX      QStringLiteral("https://openrepos.net/api/v1/")
 
-#define USER_COOKIE         QStringLiteral("user/cookie")
-#define USER_TOKEN          QStringLiteral("user/token")
 #define USER_UID            QStringLiteral("user/uid")
 #define USER_NAME           QStringLiteral("user/name")
 #define USER_REALNAME       QStringLiteral("user/realname")
@@ -30,6 +28,10 @@
 #define USER_CREATED        QStringLiteral("user/created")
 #define USER_PICTURE        QStringLiteral("user/picture/url")
 #define USER_PUBLISHER      QStringLiteral("user/publisher")
+
+#define SECRET_COOKIE       QStringLiteral("cookie")
+#define SECRET_TOKEN        QStringLiteral("token")
+#define SECRET_PASSWORD     QStringLiteral("password")
 
 #define APPLICATION_JSON    QByteArrayLiteral("application/json")
 
@@ -85,6 +87,28 @@ OrnClientPrivate::~OrnClientPrivate()
 void OrnClientPrivate::removeUser()
 {
     settings->remove(QStringLiteral("user"));
+    if (secrets.isValid())
+    {
+        secrets.reset();
+    }
+    userCookie = QNetworkCookie();
+    userToken.clear();
+}
+
+bool OrnClientPrivate::relogin()
+{
+    if (!secrets.isValid())
+    {
+        return false;
+    }
+    auto password = secrets.data(SECRET_PASSWORD);
+    if (password.isEmpty())
+    {
+        return false;
+    }
+    auto username = settings->value(USER_NAME).toString();
+    q_func()->login(username, QString::fromUtf8(password), true);
+    return true;
 }
 
 void OrnClientPrivate::setCookieTimer()
@@ -93,28 +117,42 @@ void OrnClientPrivate::setCookieTimer()
 
     qDebug() << "Setting cookie timer";
 
-    QObject::disconnect(cookieTimer, &QTimer::timeout, 0, 0);
-    cookieTimer->stop();
-    auto expirationDate = userCookie.expirationDate();
-    if (expirationDate.isValid())
+    if (cookieTimer->isActive())
     {
-        constexpr qint64 msec_day = 24 * 60 * 60 * 1000; // one day
-        auto msec_to_expiry = QDateTime::currentDateTime().msecsTo(expirationDate);
-        if (msec_to_expiry > msec_day)
-        {
-            QObject::connect(cookieTimer, &QTimer::timeout, q, &OrnClient::dayToExpiry);
-            cookieTimer->start(msec_to_expiry - msec_day);
-        }
-        else if (msec_to_expiry > 0)
-        {
-            emit q->dayToExpiry();
-            QObject::connect(cookieTimer, &QTimer::timeout, q, &OrnClient::cookieIsValidChanged);
-            cookieTimer->start(msec_to_expiry);
-        }
-        else
-        {
-            emit q->cookieIsValidChanged();
-        }
+        QObject::disconnect(cookieTimer, &QTimer::timeout, 0, 0);
+        cookieTimer->stop();
+    }
+
+    auto expirationDate = userCookie.expirationDate();
+    if (!expirationDate.isValid())
+    {
+        return;
+    }
+
+    constexpr qint64 msec_day = 24 * 60 * 60 * 1000; // one day
+    auto msec_to_expiry = QDateTime::currentDateTime().msecsTo(expirationDate);
+
+    // Try to re-login if password is stored
+    if (msec_to_expiry <= msec_day && relogin())
+    {
+        return;
+    }
+
+    // Otherwise send authorization notifications to user
+    if (msec_to_expiry > msec_day)
+    {
+        QObject::connect(cookieTimer, &QTimer::timeout, q, &OrnClient::dayToExpiry);
+        cookieTimer->start(msec_to_expiry - msec_day);
+    }
+    else if (msec_to_expiry > 0)
+    {
+        emit q->dayToExpiry();
+        QObject::connect(cookieTimer, &QTimer::timeout, q, &OrnClient::cookieIsValidChanged);
+        cookieTimer->start(msec_to_expiry);
+    }
+    else
+    {
+        emit q->cookieIsValidChanged();
     }
 }
 
@@ -141,18 +179,15 @@ OrnClient::OrnClient(QObject *parent)
     d->nam = new QNetworkAccessManager(this);
     d->lang = QLocale::system().name().left(2).toUtf8();
 
-    if (d->settings->contains(USER_TOKEN) && d->settings->contains(USER_COOKIE))
+    if (d->secrets.isValid())
     {
-        auto cookie = d->settings->value(USER_COOKIE).toByteArray();
-        d->userCookie = QNetworkCookie::parseCookies(cookie).first();
-        d->userToken = d->settings->value(USER_TOKEN).toByteArray();
+        auto cookie = d->secrets.data(SECRET_COOKIE);
+        if (!cookie.isEmpty())
+        {
+            d->userCookie = QNetworkCookie::parseCookies(cookie).first();
+        }
+        d->userToken = d->secrets.data(SECRET_TOKEN);
     }
-
-    // Read ids of bookmarked apps
-    readIds(BOOKMARKS_FILE, d->bookmarks);
-
-    // Read ids of hidden categories
-    readIds(CATEGORIES_FILE, d->hiddenCategories);
 
     // Check if authorisation has expired
     if (this->authorised())
@@ -160,18 +195,24 @@ OrnClient::OrnClient(QObject *parent)
         qDebug() << "Checking authorisation status";
         auto request = this->apiRequest(QStringLiteral("session"));
         auto reply = d->nam->get(request);
-        connect(reply, &QNetworkReply::finished, [this, reply]()
+        connect(reply, &QNetworkReply::finished, this, [this, reply]()
         {
-#ifdef QT_DEBUG
+    #ifdef QT_DEBUG
             if (this->processReply(reply).object().contains(QStringLiteral("token")))
             {
                 qDebug() << "Client is authorised";
             }
-#else
+    #else
             this->processReply(reply);
-#endif
+    #endif
         });
     }
+
+    // Read ids of bookmarked apps
+    readIds(BOOKMARKS_FILE, d->bookmarks);
+
+    // Read ids of hidden categories
+    readIds(CATEGORIES_FILE, d->hiddenCategories);
 
     // A workaround as qml does not call a destructor
     connect(qApp, &QGuiApplication::aboutToQuit, this, &OrnClient::deleteLater);
@@ -239,15 +280,18 @@ QJsonDocument OrnClient::processReply(QNetworkReply *reply, Error code)
         auto status = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
         if (status == 403 && this->cookieIsValid())
         {
-            QString usernameKey(USER_NAME);
-            auto username = d->settings->value(usernameKey);
-            d->removeUser();
-            // Save the last username to simplify re-login
-            d->settings->setValue(usernameKey, username);
-            d->userCookie = QNetworkCookie();
-            d->userToken.clear();
-            d->setCookieTimer();
-            emit this->cookieIsValidChanged();
+            // Try to re-login if password is stored
+            if (!d->relogin())
+            {
+                // Otherwise remove user data
+                QString usernameKey(USER_NAME);
+                auto username = d->settings->value(usernameKey);
+                d->removeUser();
+                // Save the last username to simplify manual re-login
+                d->settings->setValue(usernameKey, username);
+                d->setCookieTimer();
+                emit this->cookieIsValidChanged();
+            }
         }
         else
         {
@@ -376,7 +420,7 @@ void OrnClient::toggleCategoryVisibility(quint32 categoryId)
     emit this->categoryVisibilityChanged(categoryId, !hidden);
 }
 
-void OrnClient::login(const QString &username, const QString &password)
+void OrnClient::login(const QString &username, QString password, bool savePassword)
 {
     Q_D(OrnClient);
 
@@ -394,66 +438,82 @@ void OrnClient::login(const QString &username, const QString &password)
     QJsonDocument jsonDoc(jsonObject);
 
     auto reply = d->nam->post(request, jsonDoc.toJson());
-    connect(reply, &QNetworkReply::finished, [this, reply]()
+    connect(reply, &QNetworkReply::finished, this, [this, reply, savePassword, password]()
     {
         auto cookieVariant = reply->header(QNetworkRequest::SetCookieHeader);
         auto jsonDoc = this->processReply(reply, AuthorisationError);
-        if (cookieVariant.isValid() && jsonDoc.isObject())
+        if (!cookieVariant.isValid() || !jsonDoc.isObject())
         {
-            Q_D(OrnClient);
-
-            auto jsonObject = jsonDoc.object();
-
-            d->removeUser();
-            d->userCookie = cookieVariant.value<QList<QNetworkCookie>>().first();
-            auto settings = d->settings;
-            settings->setValue(USER_COOKIE, d->userCookie.toRawForm());
-
-            d->userToken = OrnUtils::toString(jsonObject[QStringLiteral("token")]).toUtf8();
-            settings->setValue(USER_TOKEN, d->userToken);
-
-            jsonObject = jsonObject[QStringLiteral("user")].toObject();
-            settings->setValue(USER_UID, OrnUtils::toUint(jsonObject[QStringLiteral("uid")]));
-            settings->setValue(USER_NAME, OrnUtils::toString(jsonObject[QStringLiteral("name")]));
-            settings->setValue(USER_MAIL, OrnUtils::toString(jsonObject[QStringLiteral("mail")]));
-            settings->setValue(USER_CREATED, OrnUtils::toDateTime(jsonObject[QStringLiteral("created")]));
-            settings->setValue(USER_PICTURE, jsonObject[QStringLiteral("picture")]
-                    .toObject()[QStringLiteral("url")].toString());
-            auto roles = jsonObject[QStringLiteral("roles")].toObject();
-            // Role `4` stands for `publisher`
-            settings->setValue(USER_PUBLISHER, roles.contains(QChar('4')));
-
-            QString undKey(QStringLiteral("und"));
-            QString valueKey(QStringLiteral("value"));
-            auto name = jsonObject[QStringLiteral("field_name")].toObject()[undKey]
-                    .toArray().first().toObject()[valueKey].toString();
-            auto surname = jsonObject[QStringLiteral("field_surname")].toObject()[undKey]
-                    .toArray().first().toObject()[valueKey].toString();
-            auto hasName = !name.isEmpty();
-            auto hasSurname = !surname.isEmpty();
-            auto fullname = hasName && hasSurname ? name.append(" ").append(surname) :
-                                                    hasName ? name : hasSurname ? surname : QString();
-            settings->setValue(USER_REALNAME, fullname);
-
-            qDebug() << "Successful authorisation";
-            emit this->authorisedChanged();
-            d->setCookieTimer();
+            return;
         }
+
+        Q_D(OrnClient);
+
+        auto jsonObject = jsonDoc.object();
+
+        d->userCookie = cookieVariant.value<QList<QNetworkCookie>>().first();
+        d->userToken = OrnUtils::toString(jsonObject[QStringLiteral("token")]).toUtf8();
+
+        if (d->secrets.isValid())
+        {
+            if (savePassword)
+            {
+                d->secrets.storeData(SECRET_PASSWORD, password.toUtf8());
+            }
+            d->secrets.storeData(SECRET_COOKIE, d->userCookie.toRawForm());
+            d->secrets.storeData(SECRET_TOKEN, d->userToken);
+        }
+
+        auto settings = d->settings;
+
+        jsonObject = jsonObject[QStringLiteral("user")].toObject();
+        settings->setValue(USER_UID, OrnUtils::toUint(jsonObject[QStringLiteral("uid")]));
+        settings->setValue(USER_NAME, OrnUtils::toString(jsonObject[QStringLiteral("name")]));
+        settings->setValue(USER_MAIL, OrnUtils::toString(jsonObject[QStringLiteral("mail")]));
+        settings->setValue(USER_CREATED, OrnUtils::toDateTime(jsonObject[QStringLiteral("created")]));
+        settings->setValue(USER_PICTURE, jsonObject[QStringLiteral("picture")]
+                .toObject()[QStringLiteral("url")].toString());
+        auto roles = jsonObject[QStringLiteral("roles")].toObject();
+        // Role `4` stands for `publisher`
+        settings->setValue(USER_PUBLISHER, roles.contains(QChar('4')));
+
+        QString undKey(QStringLiteral("und"));
+        QString valueKey(QStringLiteral("value"));
+        auto namePart = [&jsonObject, &undKey, &valueKey](const QString &partKey)
+        { return jsonObject[partKey].toObject()[undKey].toArray().first().toObject()[valueKey].toString(); };
+        auto name = namePart(QStringLiteral("field_name"));
+        auto surname = namePart(QStringLiteral("field_surname"));
+        if (!surname.isEmpty())
+        {
+            if (!name.isEmpty())
+            {
+                name.append(" ").append(surname);
+            }
+            else
+            {
+                name = surname;
+            }
+        }
+        settings->setValue(USER_REALNAME, name);
+
+        qDebug() << "Successful authorisation";
+        emit this->authorisedChanged();
+        d->setCookieTimer();
     });
 }
 
 void OrnClient::logout()
 {
-    if (this->authorised())
+    if (!this->authorised())
     {
-        Q_D(OrnClient);
-
-        d->settings->remove(QStringLiteral("user"));
-        d->userCookie = QNetworkCookie();
-        d->userToken.clear();
-        d->setCookieTimer();
-        emit this->authorisedChanged();
+        return;
     }
+
+    Q_D(OrnClient);
+
+    d->removeUser();
+    d->setCookieTimer();
+    emit this->authorisedChanged();
 }
 
 void OrnClient::comment(quint32 appId, const QString &body, quint32 parentId)
@@ -470,7 +530,7 @@ void OrnClient::comment(quint32 appId, const QString &body, quint32 parentId)
     }
 
     auto reply = this->d_func()->nam->post(request, QJsonDocument(commentObject).toJson());
-    connect(reply, &QNetworkReply::finished, [this, reply, appId]()
+    connect(reply, &QNetworkReply::finished, this, [this, reply, appId]()
     {
         auto jsonDoc = this->processReply(reply, CommentSendError);
         if (jsonDoc.isObject())
@@ -491,7 +551,7 @@ void OrnClient::editComment(quint32 appId, quint32 commentId, const QString &bod
     OrnClientPrivate::prepareComment(commentObject, body);
 
     auto reply = this->d_func()->nam->put(request, QJsonDocument(commentObject).toJson());
-    connect(reply, &QNetworkReply::finished, [this, reply, appId]()
+    connect(reply, &QNetworkReply::finished, this, [this, reply, appId]()
     {
         auto jsonDoc = this->processReply(reply, CommentSendError);
         if (jsonDoc.isArray())
@@ -509,7 +569,7 @@ void OrnClient::deleteComment(quint32 appId, quint32 commentId)
     request.setHeader(QNetworkRequest::ContentTypeHeader, APPLICATION_JSON);
 
     auto reply = this->d_func()->nam->deleteResource(request);
-    connect(reply, &QNetworkReply::finished, [this, reply, appId, commentId]()
+    connect(reply, &QNetworkReply::finished, this, [this, reply, appId, commentId]()
     {
         auto jsonDoc = this->processReply(reply, CommentDeleteError);
         if (jsonDoc.isArray())
@@ -542,7 +602,7 @@ void OrnClient::vote(quint32 appId, quint32 value)
 
     qDebug() << "Posting user vote" << value << "for app" << appId;
     auto reply = this->d_func()->nam->post(request, QJsonDocument(voteObject).toJson());
-    connect(reply, &QNetworkReply::finished, [this, reply, appId, value]()
+    connect(reply, &QNetworkReply::finished, this, [this, reply, appId, value]()
     {
         if (reply->error() == QNetworkReply::NoError)
         {

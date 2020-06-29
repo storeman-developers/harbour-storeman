@@ -1,5 +1,7 @@
 #pragma once
 
+#include "ornsecrets.h"
+
 #include <private/qobject_p.h>
 #include <QSet>
 #include <QVariant>
@@ -20,6 +22,7 @@ public:
     ~OrnClientPrivate() override;
 
     void removeUser();
+    bool relogin();
     void setCookieTimer();
 
     QSettings *settings{nullptr};
@@ -30,6 +33,7 @@ public:
     QByteArray lang;
     QByteArray userToken;
     QNetworkCookie userCookie;
+    OrnSecrets secrets;
 
     static void prepareComment(QJsonObject &object, const QString &body);
 };

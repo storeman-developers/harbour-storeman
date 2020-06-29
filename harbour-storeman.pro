@@ -5,7 +5,8 @@ CONFIG += sailfishapp silent
 
 PKGCONFIG += \
     nemonotifications-qt5 \
-    connman-qt5
+    connman-qt5 \
+    sailfishsecrets
 
 # Write version file
 VERSION_H = \
@@ -32,6 +33,7 @@ SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 SOURCES += \
     src/harbour-storeman.cpp \
     src/networkaccessmanagerfactory.cpp \
+    src/ornsecrets.cpp \
     src/storeman.cpp \
     src/ornutils.cpp \
     src/ornclient.cpp \
@@ -59,6 +61,8 @@ SOURCES += \
 
 HEADERS += \
     src/networkaccessmanagerfactory.h \
+    src/ornsecrets.h \
+    src/ornsecrets_p.h \
     src/storeman.h \
     src/ornutils.h \
     src/ornclient.h \

@@ -427,10 +427,10 @@
         <translation>Имя пользователя или email</translation>
     </message>
     <message id="orn-login-help">
-        <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
+        <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not send your password to third-parties.</source>
         <translation>Авторизуйтесь на OpenRepos.net, чтобы комментировать приложения и отвечать на комментарии других пользователей.
 
-Storeman не хранит ваш пароль и не передает его третьим лицам.</translation>
+Storeman не передает ваш пароль третьим лицам.</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
@@ -1065,6 +1065,14 @@ Storeman не хранит ваш пароль и не передает его �
     <message id="orn-refresh-cache-switch-descr">
         <source>Force refreshing of cache of all repositories after system upgrade</source>
         <translation>Принудительное обновление кэша всех репозиториев после обновления ОС</translation>
+    </message>
+    <message id="orn-save-password">
+        <source>Save password</source>
+        <translation>Сохранить пароль</translation>
+    </message>
+    <message id="orn-save-password-help">
+        <source>Save password to the encrypted device storage to perform automatic re-login.</source>
+        <translation>Сохранить пароль в устройстве в зашифрованном виде для автоматического повторного входа в систему.</translation>
     </message>
 </context>
 </TS>

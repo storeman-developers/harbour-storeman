@@ -37,6 +37,7 @@ Requires:
   - nemo-qml-plugin-notifications-qt5
   - connman-qt5-declarative
   - libsolv0
+  - sailfishsecretsdaemon-secretsplugins-default
 
 Files:
   - '%{_bindir}'

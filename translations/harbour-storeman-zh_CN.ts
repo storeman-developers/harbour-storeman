@@ -423,8 +423,8 @@
         <translation>用户名称或邮箱地址</translation>
     </message>
     <message id="orn-login-help">
-        <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
-        <translation>登录OpenRepos.net以评论应用和回复其它评论。&lt;br /&gt;&lt;br /&gt;Storeman不会储存你的密码或泄露给第三方 。</translation>
+        <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not send your password to third-parties.</source>
+        <translation>登录 OpenRepos.net 以评论软件或回复他人评论。&lt;br /&gt;&lt;br /&gt;Storeman 不会将你的密码保存到第三方。</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
@@ -1051,6 +1051,14 @@
     <message id="orn-refresh-cache-switch-descr">
         <source>Force refreshing of cache of all repositories after system upgrade</source>
         <translation>系统更新之后，强制刷新所有软件源的缓存数据</translation>
+    </message>
+    <message id="orn-save-password">
+        <source>Save password</source>
+        <translation>保存密码</translation>
+    </message>
+    <message id="orn-save-password-help">
+        <source>Save password to the encrypted device storage to perform automatic re-login.</source>
+        <translation>保存密码到加密设备存储以执行自动登录。</translation>
     </message>
 </context>
 </TS>

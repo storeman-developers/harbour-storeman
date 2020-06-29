@@ -429,8 +429,8 @@
         <translation>Uporabniško ime ali e-poštni naslov</translation>
     </message>
     <message id="orn-login-help">
-        <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
-        <translation>Za komentiranje in odgovore na druge komentarje je potrebna prijava v OpeRepos.net &lt;br /&gt;&lt;br /&gt;Aplikacija Storeman ne hrani gesel niti jih ne deli s kom drugim.</translation>
+        <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not send your password to third-parties.</source>
+        <translation>Z kometniranje in odgovore se prijavite v OpenRepos.net.&lt;br /&gt;&lt;br /&gt;Storeman ne deli gesla s tretjimi osebami.</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
@@ -1069,6 +1069,14 @@
     <message id="orn-refresh-cache-switch-descr">
         <source>Force refreshing of cache of all repositories after system upgrade</source>
         <translation>Vsilite osvežitev predpomnilnika po nadgradnji sistema</translation>
+    </message>
+    <message id="orn-save-password">
+        <source>Save password</source>
+        <translation>Shrani geslo</translation>
+    </message>
+    <message id="orn-save-password-help">
+        <source>Save password to the encrypted device storage to perform automatic re-login.</source>
+        <translation>Shrani šifirano geslo za samodejno prijavo.</translation>
     </message>
 </context>
 </TS>

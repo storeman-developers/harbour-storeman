@@ -425,8 +425,8 @@
         <translation>Gebruikersnaam of e-mailadres</translation>
     </message>
     <message id="orn-login-help">
-        <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
-        <translation>Meld je aan bij OpenRepos.net om reacties te plaatsen op applicaties en de reacties van anderen te beantwoorden.&lt;br /&gt;&lt;br /&gt;Storeman slaat je wachtwoord niet op en stuurt het niet naar derde partijen.</translation>
+        <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not send your password to third-parties.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
@@ -1037,6 +1037,34 @@
     <message id="orn-cat-adult-content">
         <source>Adult Content</source>
         <translation>Volwassen inhoud</translation>
+    </message>
+    <message id="orn-categories-filter">
+        <source>Categories filter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-categories-filter-descr">
+        <source>Select which categories to show</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-pmstate-refreshingcache">
+        <source>Refreshing of cache</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-refresh-cache-switch">
+        <source>Refresh cache after system upgrade</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-refresh-cache-switch-descr">
+        <source>Force refreshing of cache of all repositories after system upgrade</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-save-password">
+        <source>Save password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-save-password-help">
+        <source>Save password to the encrypted device storage to perform automatic re-login.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

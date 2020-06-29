@@ -72,7 +72,7 @@ public:
     Q_INVOKABLE void toggleCategoryVisibility(quint32 categoryId);
 
 public slots:
-    void login(const QString &username, const QString &password);
+    void login(const QString &username, QString password, bool savePassword = false);
     void logout();
 
     void comment(quint32 appId, const QString &body, quint32 parentId = 0);

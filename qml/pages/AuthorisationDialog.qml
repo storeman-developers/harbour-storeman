@@ -11,7 +11,7 @@ Dialog {
                usernameField.acceptableInput &&
                passwordField.acceptableInput
 
-    onAccepted: OrnClient.login(usernameField.text, passwordField.text)
+    onAccepted: OrnClient.login(usernameField.text, passwordField.text, savePasswordSwitch.checked)
 
     DialogHeader {
         id: header
@@ -44,7 +44,7 @@ Dialog {
                 verticalAlignment: Qt.AlignVCenter
                 //% "Log in to OpenRepos.net to comment applications and "
                 //% "reply to others comments.<br /><br />"
-                //% "Storeman does not store your password or send it to third-parties."
+                //% "Storeman does not send your password to third-parties."
                 text: qsTrId("orn-login-help")
                 color: Theme.highlightColor
                 font.pixelSize: Theme.fontSizeSmall
@@ -88,9 +88,17 @@ Dialog {
                 width: parent.width
                 validator: RegExpValidator { regExp: /^.{1,}$/ }
 
-                EnterKey.iconSource: "image://theme/icon-m-enter-accept"
-                EnterKey.enabled: dialog.canAccept
-                EnterKey.onClicked: dialog.accept()
+                EnterKey.iconSource: "image://theme/icon-m-enter-close"
+                EnterKey.onClicked: focus = false
+            }
+
+            TextSwitch {
+                id: savePasswordSwitch
+                width: parent.width
+                //% "Save password"
+                text: qsTrId("orn-save-password")
+                //% "Save password to the encrypted device storage to perform automatic re-login."
+                description: qsTrId("orn-save-password-help")
             }
         }
 

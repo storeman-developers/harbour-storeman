@@ -425,8 +425,8 @@
         <translation>Nom d&apos;utilisateur ou adresse mail</translation>
     </message>
     <message id="orn-login-help">
-        <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not store your password or send it to third-parties.</source>
-        <translation>Connectez-vous à OpenRepos.net pour commenter les applications.&lt;br /&gt;&lt;br /&gt;Storeman ne conserve pas votre mot de passe, pas plus qu&apos;il ne le transmet à des tiers.</translation>
+        <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not send your password to third-parties.</source>
+        <translation>Connectez-vous à OpenRepos.net pour commenter les applications et répondre aux commentaires.&lt;br /&gt;&lt;br /&gt;Storeman n&apos;envoie pas votre mot de passe à des tiers.</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
@@ -1057,6 +1057,14 @@
     <message id="orn-refresh-cache-switch-descr">
         <source>Force refreshing of cache of all repositories after system upgrade</source>
         <translation>Forcer le rafraîchissement du cache de tous les dépôts après la mise à niveau du système</translation>
+    </message>
+    <message id="orn-save-password">
+        <source>Save password</source>
+        <translation>Enregistrer le mot de passe</translation>
+    </message>
+    <message id="orn-save-password-help">
+        <source>Save password to the encrypted device storage to perform automatic re-login.</source>
+        <translation>Enregistrez le mot de passe sur le support de stockage crypté pour effectuer une reconnexion automatique.</translation>
     </message>
 </context>
 </TS>
