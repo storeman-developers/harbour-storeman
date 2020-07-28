@@ -25,7 +25,7 @@ Page {
         var req = new XMLHttpRequest()
         req.onreadystatechange = function() {
             if (req.readyState === XMLHttpRequest.DONE) {
-                if (req.status == 200) {
+                if (req.status === 200) {
                     // req.responceXml is null - using ugly regex instead
                     var match = /<body class=".*page-user-(\d*)" >[\s\S]*<img typeof="foaf:Image" src="(.*)" alt/.exec(req.responseText)
                     if (match) {

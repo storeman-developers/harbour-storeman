@@ -31,7 +31,7 @@ ListItem {
         if (days < 1) {
             //% "%n hour(s) ago"
             createdLabel.text = qsTrId("orn-hours-ago", hours)
-        } else if (days == 1) {
+        } else if (days === 1) {
             //% "Yesterday"
             createdLabel.text = qsTrId("orn-yesterday")
         } else {
