@@ -22,10 +22,13 @@
 #include <storeman_version.h>
 
 
-int main(int argc, char *argv[])
+void registerTypes()
 {
-    // Register types
-    const char *uri = "harbour.orn";
+#ifndef QT_DEBUG
+    auto uri = "harbour.orn";
+#else
+#   define uri "harbour.orn"
+#endif
 
     qmlRegisterType<OrnApplication>       (uri, 1, 0, "OrnApplication");
     qmlRegisterType<OrnRecentAppsModel>   (uri, 1, 0, "OrnRecentAppsModel");
@@ -48,6 +51,11 @@ int main(int argc, char *argv[])
 
     qRegisterMetaType<QList<OrnInstalledPackage>>();
     qRegisterMetaType<QList<OrnPackageVersion>>();
+}
+
+int main(int argc, char *argv[])
+{
+    registerTypes();
 
     SailfishApp::application(argc, argv);
     QGuiApplication::setApplicationVersion(QStringLiteral(STOREMAN_VERSION));
