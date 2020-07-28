@@ -86,6 +86,13 @@ Page {
             id: pageMenu
         }
 
+        PushUpMenu {
+            ShareMenuItem {
+                link: "https://openrepos.net/node/" + app.appId
+                linkTitle: app.title
+            }
+        }
+
         Column {
             id: content
             width: parent.width

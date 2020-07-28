@@ -41,40 +41,42 @@ ListItem {
 
     id: commentDelegate
     contentHeight: content.height + Theme.paddingMedium * 2
-    menu: OrnClient.authorised ? contextMenu : null
-    highlighted: OrnClient.authorised && down
-    _showPress: highlighted
 
-    Connections {
-        target: createdUpdateTimer
-        onTriggered: _setSinceCreated()
-    }
-
-    ContextMenu {
+    menu: ContextMenu {
         id: contextMenu
 
         MenuItem {
             //: Menu item to reply for a comment - should be a verb
             //% "Reply"
             text: qsTrId("orn-reply")
+            visible: OrnClient.authorised
             onClicked: commentField.item.reply(model.commentId, model.userName, model.text)
         }
 
         MenuItem {
             //% "Edit"
             text: qsTrId("orn-edit")
-            visible: _userComment
+            visible: OrnClient.authorised && _userComment
             onClicked: commentField.item.edit(model.commentId, model.text)
         }
 
         MenuItem {
             text: qsTrId("orn-delete")
-            visible: _userComment || OrnClient.userId === userId
+            visible: OrnClient.authorised && (_userComment || OrnClient.userId === userId)
             //% "Deleting"
             onClicked: remorseAction(qsTrId("orn-deleting"), function() {
                 OrnClient.deleteComment(page.appId, model.commentId)
             })
         }
+
+        ShareMenuItem {
+            link: "https://openrepos.net/comment/%1#comment-%1".arg(model.commentId)
+        }
+    }
+
+    Connections {
+        target: createdUpdateTimer
+        onTriggered: _setSinceCreated()
     }
 
     ListView.onAdd: AddAnimation {
