@@ -87,10 +87,7 @@ OrnClientPrivate::~OrnClientPrivate()
 void OrnClientPrivate::removeUser()
 {
     settings->remove(QStringLiteral("user"));
-    if (secrets.isValid())
-    {
-        secrets.reset();
-    }
+    secrets.removeCollection();
     userCookie = QNetworkCookie();
     userToken.clear();
 }
@@ -454,15 +451,12 @@ void OrnClient::login(const QString &username, QString password, bool savePasswo
         d->userCookie = cookieVariant.value<QList<QNetworkCookie>>().first();
         d->userToken = OrnUtils::toString(jsonObject[QStringLiteral("token")]).toUtf8();
 
-        if (d->secrets.isValid())
+        if (savePassword)
         {
-            if (savePassword)
-            {
-                d->secrets.storeData(SECRET_PASSWORD, password.toUtf8());
-            }
-            d->secrets.storeData(SECRET_COOKIE, d->userCookie.toRawForm());
-            d->secrets.storeData(SECRET_TOKEN, d->userToken);
+            d->secrets.storeData(SECRET_PASSWORD, password.toUtf8());
         }
+        d->secrets.storeData(SECRET_COOKIE, d->userCookie.toRawForm());
+        d->secrets.storeData(SECRET_TOKEN, d->userToken);
 
         auto settings = d->settings;
 

@@ -15,7 +15,7 @@
 using namespace Sailfish::Secrets;
 
 
-const QString OrnSecretsPrivate::collectionName(QStringLiteral("storeman"));
+static const QString collectionName(QStringLiteral("storeman"));
 
 bool checkResult(const Request &req)
 {
@@ -29,23 +29,13 @@ bool checkResult(const Request &req)
 
 Secret::Identifier makeIdent(const QString &name)
 {
-    return Secret::Identifier(name, OrnSecretsPrivate::collectionName, SecretManager::DefaultEncryptedStoragePluginName);
+    return Secret::Identifier(name, collectionName, SecretManager::DefaultEncryptedStoragePluginName);
 }
 
-void OrnSecretsPrivate::checkCollection()
-{
-    CollectionNamesRequest cnr;
-    cnr.setManager(secretManager.get());
-    cnr.setStoragePluginName(SecretManager::DefaultEncryptedStoragePluginName);
-    cnr.startRequest();
-    cnr.waitForFinished();
-    valid = checkResult(cnr) && cnr.collectionNames().contains(collectionName);
-}
-
-void OrnSecretsPrivate::createCollection()
+bool createCollection(SecretManager *manager)
 {
     CreateCollectionRequest ccr;
-    ccr.setManager(secretManager.get());
+    ccr.setManager(manager);
     ccr.setCollectionName(collectionName);
     ccr.setAccessControlMode(SecretManager::OwnerOnlyMode);
     ccr.setCollectionLockType(CreateCollectionRequest::DeviceLock);
@@ -54,29 +44,18 @@ void OrnSecretsPrivate::createCollection()
     ccr.setEncryptionPluginName(SecretManager::DefaultEncryptedStoragePluginName);
     ccr.startRequest();
     ccr.waitForFinished();
-    valid = checkResult(ccr);
-}
-
-bool OrnSecretsPrivate::removeCollection()
-{
-    DeleteCollectionRequest dcr;
-    dcr.setManager(secretManager.get());
-    dcr.setCollectionName(collectionName);
-    dcr.setStoragePluginName(SecretManager::DefaultEncryptedStoragePluginName);
-    dcr.setUserInteractionMode(Sailfish::Secrets::SecretManager::SystemInteraction);
-    dcr.startRequest();
-    dcr.waitForFinished();
-    return checkResult(dcr);
+    return checkResult(ccr);
 }
 
 OrnSecrets::OrnSecrets()
     : d_ptr{new OrnSecretsPrivate()}
 {
-    d_ptr->checkCollection();
-    if (!d_ptr->valid)
-    {
-        d_ptr->createCollection();
-    }
+    CollectionNamesRequest cnr;
+    cnr.setManager(d_ptr->secretManager.get());
+    cnr.setStoragePluginName(SecretManager::DefaultEncryptedStoragePluginName);
+    cnr.startRequest();
+    cnr.waitForFinished();
+    d_ptr->valid = checkResult(cnr) && cnr.collectionNames().contains(collectionName);
 }
 
 OrnSecrets::~OrnSecrets()
@@ -91,7 +70,9 @@ bool OrnSecrets::isValid() const
 
 bool OrnSecrets::storeData(const QString &name, const QByteArray &data)
 {
-    Q_ASSERT(d_ptr->valid);
+    if (!d_ptr->valid) {
+        d_ptr->valid = createCollection(d_ptr->secretManager.get());
+    }
 
     Secret secret(makeIdent(name));
     secret.setData(data);
@@ -109,7 +90,9 @@ bool OrnSecrets::storeData(const QString &name, const QByteArray &data)
 
 QByteArray OrnSecrets::data(const QString &name)
 {
-    Q_ASSERT(d_ptr->valid);
+    if (!d_ptr->valid) {
+        return QByteArray();
+    }
 
     StoredSecretRequest ssr;
     ssr.setManager(d_ptr->secretManager.get());
@@ -127,12 +110,18 @@ QByteArray OrnSecrets::data(const QString &name)
     return QByteArray();
 }
 
-void OrnSecrets::reset()
+bool OrnSecrets::removeCollection()
 {
-    Q_ASSERT(d_ptr->valid);
-
-    if (d_ptr->removeCollection())
-    {
-        d_ptr->createCollection();
+    if (!d_ptr->valid) {
+        return false;
     }
+
+    DeleteCollectionRequest dcr;
+    dcr.setManager(d_ptr->secretManager.get());
+    dcr.setCollectionName(collectionName);
+    dcr.setStoragePluginName(SecretManager::DefaultEncryptedStoragePluginName);
+    dcr.setUserInteractionMode(Sailfish::Secrets::SecretManager::SystemInteraction);
+    dcr.startRequest();
+    dcr.waitForFinished();
+    return checkResult(dcr);
 }

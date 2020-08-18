@@ -3,7 +3,7 @@
 #include <memory>
 #include <QByteArray>
 
-class OrnSecretsPrivate;
+struct OrnSecretsPrivate;
 
 class OrnSecrets
 {
@@ -15,7 +15,7 @@ public:
 
     bool storeData(const QString &name, const QByteArray &data);
     QByteArray data(const QString &name);
-    void reset();
+    bool removeCollection();
 
 private:
     std::unique_ptr<OrnSecretsPrivate> d_ptr;
