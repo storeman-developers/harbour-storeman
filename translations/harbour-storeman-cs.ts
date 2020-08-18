@@ -428,7 +428,7 @@
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not send your password to third-parties.</source>
-        <translation type="unfinished"></translation>
+        <translation>Přihlašte se k OpenRepos.net abyste mohli komentovat aplikace a odpovídat na komentáře ostatních.&lt;br /&gt;&lt;br /&gt;Storeman nepředává vaše heslo třetím stranám.</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
@@ -1040,37 +1040,41 @@
         <source>Drag items to change their order</source>
         <translation>Podržte položku a přesuňte jí jinam</translation>
     </message>
-    <message id="orn-pmstate-refreshingcache">
-        <source>Refreshing of cache</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="orn-save-password">
-        <source>Save password</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="orn-save-password-help">
-        <source>Save password to the encrypted device storage to perform automatic re-login.</source>
-        <translation type="unfinished"></translation>
+    <message id="orn-cat-adult-content">
+        <source>Adult Content</source>
+        <translation>18+</translation>
     </message>
     <message id="orn-categories-filter">
         <source>Categories filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtr kategorií</translation>
     </message>
     <message id="orn-categories-filter-descr">
         <source>Select which categories to show</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte kategorie k zobrazení</translation>
+    </message>
+    <message id="orn-pmstate-refreshingcache">
+        <source>Refreshing of cache</source>
+        <translation>Obnovuji cache</translation>
     </message>
     <message id="orn-refresh-cache-switch">
         <source>Refresh cache after system upgrade</source>
-        <translation type="unfinished"></translation>
+        <translation>Obnovit cache po aktualizaci systému</translation>
     </message>
     <message id="orn-refresh-cache-switch-descr">
         <source>Force refreshing of cache of all repositories after system upgrade</source>
-        <translation type="unfinished"></translation>
+        <translation>Vynutit obnovení cache všech repozitářů po aktualizaci</translation>
     </message>
-    <message id="orn-cat-adult-content">
-        <source>Adult Content</source>
-        <translation type="unfinished"></translation>
+    <message id="orn-save-password">
+        <source>Save password</source>
+        <translation>Uložit heslo</translation>
+    </message>
+    <message id="orn-save-password-help">
+        <source>Save password to the encrypted device storage to perform automatic re-login.</source>
+        <translation>Uložit heslo do šifrovaného úložiště pro opětovný login</translation>
+    </message>
+    <message id="orn-share-link">
+        <source>Share link</source>
+        <translation>Sdílet odkaz</translation>
     </message>
 </context>
 </TS>

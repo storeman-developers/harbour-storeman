@@ -1078,5 +1078,9 @@
         <source>Save password to the encrypted device storage to perform automatic re-login.</source>
         <translation>Shrani šifirano geslo za samodejno prijavo.</translation>
     </message>
+    <message id="orn-share-link">
+        <source>Share link</source>
+        <translation>Deli povezavo</translation>
+    </message>
 </context>
 </TS>

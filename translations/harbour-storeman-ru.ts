@@ -1074,5 +1074,9 @@ Storeman не передает ваш пароль третьим лицам.</t
         <source>Save password to the encrypted device storage to perform automatic re-login.</source>
         <translation>Сохранить пароль в устройстве в зашифрованном виде для автоматического повторного входа в систему.</translation>
     </message>
+    <message id="orn-share-link">
+        <source>Share link</source>
+        <translation>Поделиться</translation>
+    </message>
 </context>
 </TS>

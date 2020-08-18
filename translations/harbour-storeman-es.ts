@@ -1066,5 +1066,9 @@
         <source>Save password to the encrypted device storage to perform automatic re-login.</source>
         <translation>Guarda la contraseña de manera cifrada en el dispositivo para reiniciar la sesión automáticamente.</translation>
     </message>
+    <message id="orn-share-link">
+        <source>Share link</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

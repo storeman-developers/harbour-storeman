@@ -1034,16 +1034,8 @@
         <source>Drag items to change their order</source>
         <translation type="unfinished"></translation>
     </message>
-    <message id="orn-pmstate-refreshingcache">
-        <source>Refreshing of cache</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="orn-save-password">
-        <source>Save password</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="orn-save-password-help">
-        <source>Save password to the encrypted device storage to perform automatic re-login.</source>
+    <message id="orn-cat-adult-content">
+        <source>Adult Content</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="orn-categories-filter">
@@ -1054,6 +1046,10 @@
         <source>Select which categories to show</source>
         <translation type="unfinished"></translation>
     </message>
+    <message id="orn-pmstate-refreshingcache">
+        <source>Refreshing of cache</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message id="orn-refresh-cache-switch">
         <source>Refresh cache after system upgrade</source>
         <translation type="unfinished"></translation>
@@ -1062,8 +1058,16 @@
         <source>Force refreshing of cache of all repositories after system upgrade</source>
         <translation type="unfinished"></translation>
     </message>
-    <message id="orn-cat-adult-content">
-        <source>Adult Content</source>
+    <message id="orn-save-password">
+        <source>Save password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-save-password-help">
+        <source>Save password to the encrypted device storage to perform automatic re-login.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-share-link">
+        <source>Share link</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -426,7 +426,7 @@
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not send your password to third-parties.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjaudu kohteeseen OpenRepos.net jättääksesi kommentteja. &lt;br /&gt;&lt;br /&gt; Storeman ei tallenna eikä luovuta salasanaasi kolmansille osapuolille.</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
@@ -1065,6 +1065,10 @@
     <message id="orn-save-password-help">
         <source>Save password to the encrypted device storage to perform automatic re-login.</source>
         <translation>Tallenna salasana laitteen suojattuun tallennustilaan suorittaaksesi automaattinen sisäänkirjautuminen.</translation>
+    </message>
+    <message id="orn-share-link">
+        <source>Share link</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

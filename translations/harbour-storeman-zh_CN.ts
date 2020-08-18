@@ -62,7 +62,7 @@
     </message>
     <message id="orn-adding-repo">
         <source>Adding</source>
-        <translation>正在添加软件源`</translation>
+        <translation>正在添加软件源</translation>
     </message>
     <message id="orb-remove">
         <source>Remove</source>
@@ -1059,6 +1059,10 @@
     <message id="orn-save-password-help">
         <source>Save password to the encrypted device storage to perform automatic re-login.</source>
         <translation>保存密码到加密设备存储以执行自动登录。</translation>
+    </message>
+    <message id="orn-share-link">
+        <source>Share link</source>
+        <translation>分享链接</translation>
     </message>
 </context>
 </TS>
