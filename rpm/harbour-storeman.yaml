@@ -24,6 +24,7 @@ PkgConfigBR:
   - nemonotifications-qt5
   - Qt5Sparql
   - Qt5Concurrent
+  - sailfishsecrets
 
 PkgBR:
   - libsolv-devel
