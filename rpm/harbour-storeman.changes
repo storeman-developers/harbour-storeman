@@ -1,3 +1,8 @@
+* Wed Aug 19 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.11-1
+- Add share menu to apps and comments
+- Use Secrets only if user logged in (don't show secret access pop-up for users who are not logged in)
+- Update translations
+
 * Mon Jun 29 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.10-1
 - Store user authorization data with Sailfish Secrets
 - Add an option to store user password with Sailfish Secrets to automatic re-login
