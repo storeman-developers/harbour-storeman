@@ -15,10 +15,10 @@ using namespace PackageKit;
 #define CHECK_INITIALISED() \
     Q_ASSERT_X(d->initialised, Q_FUNC_INFO, "Call only after OrnPm was initialised!")
 
-#define CHECK_NETWORK() \
+#define CHECK_NETWORK(RET) \
     if (NetworkManager::instance()->state() != QLatin1String("online")) { \
         qWarning("Network is unavailable!"); \
-        return; \
+        return RET; \
     }
 
 #define SET_OPERATION_ITEM(operation, item) \
@@ -476,7 +476,16 @@ void OrnPm::enableRepos(bool enable)
 
     CHECK_INITIALISED();
 
-    QtConcurrent::run(d, &OrnPmPrivate::enableRepos, enable);
+    auto watcher = new QFutureWatcher<bool>();
+    auto future  = QtConcurrent::run(d, &OrnPmPrivate::enableRepos, enable);
+    watcher->setFuture(future);
+    connect(watcher, &QFutureWatcher<bool>::finished, this, [watcher, this]() {
+        if (watcher->result())
+        {
+            this->refreshRepos();
+        }
+        watcher->deleteLater();
+    });
 }
 
 void OrnPm::removeAllRepos()
@@ -484,47 +493,37 @@ void OrnPm::removeAllRepos()
     QtConcurrent::run(this->d_func(), &OrnPmPrivate::removeAllRepos);
 }
 
-void OrnPmPrivate::enableRepos(bool enable)
+bool OrnPmPrivate::enableRepos(bool enable)
 {
     Q_Q(OrnPm);
 
-    CHECK_NETWORK();
+    CHECK_NETWORK(false);
     qDebug() << (enable ? "Enabling" : "Disabling") << "all repositories";
     QString method(QStringLiteral(SSU_METHOD_MODIFYREPO));
 
-    if (enable)
+    auto action  = enable ? OrnPm::EnableRepo : OrnPm::DisableRepo;
+    bool refresh = false;
+
+    for (auto it = repos.begin(); it != repos.end(); ++it)
     {
-        bool needRefresh = false;
-        for (auto it = repos.begin(); it != repos.end(); ++it)
+        if (*it != enable)
         {
-            if (!it.value())
-            {
-                ssuInterface->call(method, OrnPm::EnableRepo, it.key());
-                *it = true;
-                needRefresh = true;
-            }
-        }
-        if (needRefresh)
-        {
-            q->refreshRepos();
+            ssuInterface->call(method, action, it.key());
+            *it = enable;
+            refresh = true;
         }
     }
-    else
+
+    if (!enable && !updatablePackages.empty())
     {
-        for (auto it = repos.begin(); it != repos.end(); ++it)
-        {
-            if (it.value())
-            {
-                ssuInterface->call(method, OrnPm::DisableRepo, it.key());
-                *it = false;
-            }
-        }
         updatablePackages.clear();
         emit q->updatablePackagesChanged();
     }
 
     qDebug() << "Finished" << (enable ? "enabling" : "disabling") << "all repositories";
     emit q->enableReposFinished();
+
+    return refresh;
 }
 
 void OrnPmPrivate::removeAllRepos()
@@ -1004,7 +1003,7 @@ void OrnPmPrivate::refreshNextRepo(quint32 exit, quint32 runtime)
         auto t = this->transaction();
         QObject::connect(t, SIGNAL(Finished(quint32,quint32)), q, SLOT(refreshNextRepo(quint32,quint32)));
         auto alias = reposToRefresh.takeFirst();
-        QObject::connect(t, &QDBusInterface::destroyed, [this, alias]()
+        QObject::connect(t, &QDBusInterface::destroyed, q, [this, alias]()
         {
             operations.remove(alias);
             emit this->q_func()->operationsChanged();
