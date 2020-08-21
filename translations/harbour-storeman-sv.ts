@@ -269,10 +269,6 @@
         <source>Changelog</source>
         <translation>Ändringslogg</translation>
     </message>
-    <message id="orn-user-apps">
-        <source>User applications</source>
-        <translation>Användarapplikationer</translation>
-    </message>
     <message id="orn-comments-withnum">
         <source>Comments (%0)</source>
         <translation>Kommentarer (%0)</translation>
@@ -1002,10 +998,6 @@
         <source>Installed applications</source>
         <translation>Installerade appar</translation>
     </message>
-    <message id="orn-myapps">
-        <source>My applications</source>
-        <translation>Mina appar</translation>
-    </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
         <translation>Tryck igen för att stänga tipset</translation>
@@ -1069,6 +1061,14 @@
     <message id="orn-share-link">
         <source>Share link</source>
         <translation>Dela länk</translation>
+    </message>
+    <message id="orn-repository">
+        <source>Repository</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-myrepository">
+        <source>My repository</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -269,10 +269,6 @@
         <source>Changelog</source>
         <translation>Historie změn</translation>
     </message>
-    <message id="orn-user-apps">
-        <source>User applications</source>
-        <translation>Aplikace uživatele</translation>
-    </message>
     <message id="orn-comments-withnum">
         <source>Comments (%0)</source>
         <translation>Komentáře (%0)</translation>
@@ -1008,10 +1004,6 @@
         <source>Installed applications</source>
         <translation>Instalované aplikace</translation>
     </message>
-    <message id="orn-myapps">
-        <source>My applications</source>
-        <translation>Moje aplikace</translation>
-    </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
         <translation>Pro skrytí hintu znovu klikněte</translation>
@@ -1075,6 +1067,14 @@
     <message id="orn-share-link">
         <source>Share link</source>
         <translation>Sdílet odkaz</translation>
+    </message>
+    <message id="orn-repository">
+        <source>Repository</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-myrepository">
+        <source>My repository</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

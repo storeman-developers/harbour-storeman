@@ -14,7 +14,7 @@ Page {
         name = name.replace("_", "")
         var user = _knownAuthors[name]
         if (user) {
-            pageStack.push(Qt.resolvedUrl("UserAppsPage.qml"), {
+            pageStack.push(Qt.resolvedUrl("RepositoryPage.qml"), {
                                userId: user.id,
                                userName: name,
                                userIcon: user.icon,
@@ -39,7 +39,7 @@ Page {
                             id: userId,
                             idcon: userIcon,
                         }
-                        pageStack.push(Qt.resolvedUrl("UserAppsPage.qml"), {
+                        pageStack.push(Qt.resolvedUrl("RepositoryPage.qml"), {
                                            userId: userId,
                                            userName: name,
                                            userIcon: userIcon,

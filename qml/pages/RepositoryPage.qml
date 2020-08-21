@@ -18,8 +18,8 @@ Page {
 
         header: FancyPageHeader {
             id: header
-            //% "User applications"
-            title: qsTrId("orn-user-apps")
+            //% "Repository"
+            title: qsTrId("orn-repository")
             description: userName
             iconSource: userIcon
         }

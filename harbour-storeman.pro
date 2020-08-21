@@ -104,7 +104,7 @@ OTHER_FILES += \
     qml/pages/ScreenshotPage.qml \
     qml/pages/VotingPage.qml \
     qml/pages/ChangelogPage.qml \
-    qml/pages/UserAppsPage.qml \
+    qml/pages/RepositoryPage.qml \
     qml/pages/CommentsPage.qml \
     qml/pages/TagsPage.qml \
     qml/pages/TagAppsPage.qml \

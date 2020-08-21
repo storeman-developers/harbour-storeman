@@ -269,10 +269,6 @@
         <source>Changelog</source>
         <translation>更新日志</translation>
     </message>
-    <message id="orn-user-apps">
-        <source>User applications</source>
-        <translation>用户软件</translation>
-    </message>
     <message id="orn-comments-withnum">
         <source>Comments (%0)</source>
         <translation>评论(%0)</translation>
@@ -996,10 +992,6 @@
         <source>Installed applications</source>
         <translation>已安装的应用</translation>
     </message>
-    <message id="orn-myapps">
-        <source>My applications</source>
-        <translation>我的应用</translation>
-    </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
         <translation>再次点击以关闭提示</translation>
@@ -1063,6 +1055,14 @@
     <message id="orn-share-link">
         <source>Share link</source>
         <translation>分享链接</translation>
+    </message>
+    <message id="orn-repository">
+        <source>Repository</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-myrepository">
+        <source>My repository</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

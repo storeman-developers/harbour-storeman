@@ -177,7 +177,7 @@ Page {
                                // This page was openned from user page so just go back
                                pageStack.navigateBack():
                                // Open a new user page
-                               pageStack.push(Qt.resolvedUrl("UserAppsPage.qml"), {
+                               pageStack.push(Qt.resolvedUrl("RepositoryPage.qml"), {
                                                   userId: app.userId,
                                                   userName: app.userName,
                                                   userIcon: app.userIconSource,

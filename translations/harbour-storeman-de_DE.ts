@@ -269,10 +269,6 @@
         <source>Changelog</source>
         <translation>Änderungsprotokoll</translation>
     </message>
-    <message id="orn-user-apps">
-        <source>User applications</source>
-        <translation>Programme von</translation>
-    </message>
     <message id="orn-comments-withnum">
         <source>Comments (%0)</source>
         <translation>Kommentare (%0)</translation>
@@ -1002,10 +998,6 @@
         <source>Installed applications</source>
         <translation>Installierte Programme</translation>
     </message>
-    <message id="orn-myapps">
-        <source>My applications</source>
-        <translation>Meine Programme</translation>
-    </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
         <translation>Tippe erneut, um den Hinweis zu schließen</translation>
@@ -1069,6 +1061,14 @@
     <message id="orn-share-link">
         <source>Share link</source>
         <translation>Link zum Teilen</translation>
+    </message>
+    <message id="orn-repository">
+        <source>Repository</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-myrepository">
+        <source>My repository</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

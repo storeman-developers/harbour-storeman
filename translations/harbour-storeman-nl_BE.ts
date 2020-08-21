@@ -269,10 +269,6 @@
         <source>Changelog</source>
         <translation>Wijzigingslog</translation>
     </message>
-    <message id="orn-user-apps">
-        <source>User applications</source>
-        <translation>Gebruikersapps</translation>
-    </message>
     <message id="orn-comments-withnum">
         <source>Comments (%0)</source>
         <translation>Commentaren (%0)</translation>
@@ -1002,10 +998,6 @@
         <source>Installed applications</source>
         <translation>Geïnstalleerde apps</translation>
     </message>
-    <message id="orn-myapps">
-        <source>My applications</source>
-        <translation>Mijn apps</translation>
-    </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
         <translation>Tikt nog ne keer voor den tip te sluiten</translation>
@@ -1068,6 +1060,14 @@
     </message>
     <message id="orn-share-link">
         <source>Share link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-repository">
+        <source>Repository</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-myrepository">
+        <source>My repository</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

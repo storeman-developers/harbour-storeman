@@ -269,10 +269,6 @@
         <source>Changelog</source>
         <translation>Muutokset</translation>
     </message>
-    <message id="orn-user-apps">
-        <source>User applications</source>
-        <translation>Sovellukset</translation>
-    </message>
     <message id="orn-comments-withnum">
         <source>Comments (%0)</source>
         <translation>Kommentit (%0)</translation>
@@ -1002,10 +998,6 @@
         <source>Installed applications</source>
         <translation>Asennetut sovellukset</translation>
     </message>
-    <message id="orn-myapps">
-        <source>My applications</source>
-        <translation>Omat sovellukset</translation>
-    </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
         <translation>Napauta uudelleen sulkeaksesi vihjeen</translation>
@@ -1068,6 +1060,14 @@
     </message>
     <message id="orn-share-link">
         <source>Share link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-repository">
+        <source>Repository</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-myrepository">
+        <source>My repository</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

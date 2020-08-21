@@ -269,10 +269,6 @@
         <source>Changelog</source>
         <translation>Список изменений</translation>
     </message>
-    <message id="orn-user-apps">
-        <source>User applications</source>
-        <translation>Приложения пользователя</translation>
-    </message>
     <message id="orn-comments-withnum">
         <source>Comments (%0)</source>
         <translation>Комментарии (%0)</translation>
@@ -1010,10 +1006,6 @@ Storeman не передает ваш пароль третьим лицам.</t
         <source>Installed applications</source>
         <translation>Установленные приложения</translation>
     </message>
-    <message id="orn-myapps">
-        <source>My applications</source>
-        <translation>Мои приложения</translation>
-    </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
         <translation>Коснитесь еще раз, чтобы закрыть подсказку</translation>
@@ -1077,6 +1069,14 @@ Storeman не передает ваш пароль третьим лицам.</t
     <message id="orn-share-link">
         <source>Share link</source>
         <translation>Поделиться</translation>
+    </message>
+    <message id="orn-repository">
+        <source>Repository</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-myrepository">
+        <source>My repository</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

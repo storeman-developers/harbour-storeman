@@ -43,9 +43,9 @@ Page {
                 menu: ContextMenu {
                     MenuItem {
                         visible: OrnClient.isPublisher
-                        //% "My applications"
-                        text: qsTrId("orn-myapps")
-                        onClicked: pageStack.push(Qt.resolvedUrl("UserAppsPage.qml"), {
+                        //% "My repository"
+                        text: qsTrId("orn-myrepository")
+                        onClicked: pageStack.push(Qt.resolvedUrl("RepositoryPage.qml"), {
                                                       userId: OrnClient.userId,
                                                       userName: OrnClient.userName,
                                                       userIcon: OrnClient.userIconSource

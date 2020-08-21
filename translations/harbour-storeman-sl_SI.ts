@@ -269,10 +269,6 @@
         <source>Changelog</source>
         <translation>Dnevnik sprememb</translation>
     </message>
-    <message id="orn-user-apps">
-        <source>User applications</source>
-        <translation>Uporabniške aplikacije</translation>
-    </message>
     <message id="orn-comments-withnum">
         <source>Comments (%0)</source>
         <translation>Komentarji (%0)</translation>
@@ -1014,10 +1010,6 @@
         <source>Installed applications</source>
         <translation>Nameščene aplikacije</translation>
     </message>
-    <message id="orn-myapps">
-        <source>My applications</source>
-        <translation>Moje aplikacije</translation>
-    </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
         <translation>Pritisnite znova da skrijete namig</translation>
@@ -1081,6 +1073,14 @@
     <message id="orn-share-link">
         <source>Share link</source>
         <translation>Deli povezavo</translation>
+    </message>
+    <message id="orn-repository">
+        <source>Repository</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-myrepository">
+        <source>My repository</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
