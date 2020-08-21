@@ -77,6 +77,11 @@ desktop-file-install --delete-original       \
   --dir %{buildroot}%{_datadir}/applications             \
    %{buildroot}%{_datadir}/applications/*.desktop
 
+%postun
+# >> postun
+rm -rf %{_datadir}/%{name}
+# << postun
+
 %files
 %defattr(-,root,root,-)
 %{_bindir}
