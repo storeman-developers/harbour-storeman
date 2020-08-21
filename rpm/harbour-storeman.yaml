@@ -5,7 +5,8 @@ Release: 1
 Group: Qt/Qt
 URL: https://github.com/mentaljam/harbour-storeman
 License: MIT
-Sources: '%{name}-%{version}.tar.bz2'
+Sources:
+  - '%{name}-%{version}.tar.bz2'
 Description: |
   Unofficial native OpenRepos.net client for Sailfish OS
 Configure: none
