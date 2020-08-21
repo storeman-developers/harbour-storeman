@@ -42,17 +42,6 @@ Page {
                           qsTrId("orn-login-menu-item")
                 menu: ContextMenu {
                     MenuItem {
-                        visible: OrnClient.isPublisher
-                        //% "My repository"
-                        text: qsTrId("orn-myrepository")
-                        onClicked: pageStack.push(Qt.resolvedUrl("RepositoryPage.qml"), {
-                                                      userId: OrnClient.userId,
-                                                      userName: OrnClient.userName,
-                                                      userIcon: OrnClient.userIconSource
-                                                  })
-                    }
-
-                    MenuItem {
                         //: Menu item
                         //% "Log out"
                         text: qsTrId("orn-logout-action")

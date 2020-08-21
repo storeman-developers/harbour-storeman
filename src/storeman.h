@@ -37,6 +37,7 @@ public:
         Categories,
         Bookmarks,
         Repositories,
+        MyRepository,
         InstalledApps,
         LocalRpms,
     };

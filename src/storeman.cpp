@@ -95,14 +95,23 @@ void Storeman::setShowRecentOnStart(bool value)
 
 QVariantList Storeman::mainPageOrder() const
 {
-    return mSettings->value(MAINPAGE_ORDER, QVariantList({
+    auto res = mSettings->value(MAINPAGE_ORDER, QVariantList({
         RecentlyUpdated,
         Categories,
         Bookmarks,
         Repositories,
+        MyRepository,
         InstalledApps,
         LocalRpms,
     })).toList();
+
+    // TODO: Remove later
+    if (!res.contains(MyRepository))
+    {
+        res.insert(res.indexOf(Repositories) + 1, MyRepository);
+    }
+
+    return res;
 }
 
 void Storeman::setMainPageOrder(const QVariantList &value)

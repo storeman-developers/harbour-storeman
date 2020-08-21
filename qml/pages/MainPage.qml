@@ -20,6 +20,8 @@ Page {
             return bookmarksComponent
         case Storeman.Repositories:
             return repositoriesComponent
+        case Storeman.MyRepository:
+            return myRepositoryComponent
         case Storeman.InstalledApps:
             return installedAppsComponent
         case Storeman.LocalRpms:
@@ -158,6 +160,21 @@ Page {
             enabled: OrnPm.initialised
             text: qsTrId("orn-repositories")
             onClicked: pageStack.push(Qt.resolvedUrl("RepositoriesPage.qml"))
+        }
+    }
+
+    Component {
+        id: myRepositoryComponent
+        MainPageButton {
+            visible: OrnClient.isPublisher
+            enabled: OrnPm.initialised
+            //% "My repository"
+            text: qsTrId("orn-myrepository")
+            onClicked: pageStack.push(Qt.resolvedUrl("RepositoryPage.qml"), {
+                                          userId: OrnClient.userId,
+                                          userName: OrnClient.userName,
+                                          userIcon: OrnClient.userIconSource
+                                      })
         }
     }
 

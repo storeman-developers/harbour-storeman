@@ -16,6 +16,8 @@ Page {
             return qsTrId("orn-bookmarks")
         case Storeman.Repositories:
             return qsTrId("orn-repositories")
+        case Storeman.MyRepository:
+            return qsTrId("orn-myrepository")
         case Storeman.InstalledApps:
             return qsTrId("orn-installed-apps")
         case Storeman.LocalRpms:
