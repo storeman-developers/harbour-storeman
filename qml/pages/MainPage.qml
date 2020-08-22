@@ -59,6 +59,7 @@ Page {
     Connections {
         target: Storeman
         onMainPageOrderChanged: _render()
+        onRecentAppsChanged: recentAppsModel.reset()
     }
 
     Component {

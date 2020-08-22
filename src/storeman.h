@@ -90,6 +90,7 @@ signals:
     void refreshOnSystemUpgradeChanged();
     void updatesNotification(bool show, quint32 replaceId);
     void repoSuggestion(const QString &author, bool enableOnly);
+    void recentAppsChanged();
 
 private slots:
     void refreshRepos();
@@ -100,6 +101,7 @@ private slots:
 private:
     explicit Storeman(QObject *parent = nullptr);
     void checkReposImpl();
+    void refreshReposImpl();
 
     QSettings *mSettings;
     QTimer *mUpdatesTimer;

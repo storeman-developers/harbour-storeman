@@ -276,8 +276,7 @@ void Storeman::refreshRepos()
                     auto lastCheck = mSettings->value(UPDATES_LAST_CHECK).toLongLong();
                     if (qlonglong(lastUpdate) * 1000 > lastCheck)
                     {
-                        OrnPm::instance()->refreshRepos();
-                        mSettings->setValue(UPDATES_LAST_CHECK, QDateTime::currentMSecsSinceEpoch());
+                        this->refreshReposImpl();
                     }
                 }
             }
@@ -286,9 +285,15 @@ void Storeman::refreshRepos()
     }
     else
     {
-        OrnPm::instance()->refreshRepos();
-        mSettings->setValue(UPDATES_LAST_CHECK, QDateTime::currentMSecsSinceEpoch());
+        this->refreshReposImpl();
     }
+}
+
+void Storeman::refreshReposImpl()
+{
+    OrnPm::instance()->refreshRepos();
+    mSettings->setValue(UPDATES_LAST_CHECK, QDateTime::currentMSecsSinceEpoch());
+    emit this->recentAppsChanged();
 }
 
 inline Notification *previousNotification()
