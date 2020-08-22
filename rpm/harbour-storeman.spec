@@ -15,7 +15,7 @@ Name:       harbour-storeman
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    OpenRepos Client for Sailfish OS
 Version:    0.1.12
-Release:    1
+Release:    2
 Group:      Qt/Qt
 License:    MIT
 URL:        https://github.com/mentaljam/harbour-storeman
@@ -84,11 +84,6 @@ test -d %{_datadir}/%{name}/lib || mkdir -p %{_datadir}/%{name}/lib
 test -f /usr/lib/libsolv.so.1 && ln -sf /usr/lib/libsolv.so.1 %{_datadir}/%{name}/lib/libsolv.so.0
 test -f /usr/lib/libsolvext.so.1 && ln -sf /usr/lib/libsolvext.so.1 %{_datadir}/%{name}/lib/libsolvext.so.0
 # << post
-
-%postun
-# >> postun
-rm -rf %{_datadir}/%{name}
-# << postun
 
 %files
 %defattr(-,root,root,-)

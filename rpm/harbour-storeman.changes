@@ -1,3 +1,6 @@
+* Sat Aug 22 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.12-2
+ - RPM: remove postuninstall scriplet as it breaks upgrading
+
 * Sat Aug 22 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.12-1
  - Fix "update cache" hangs after "enable all" sources
  - Rename "User applications" page to "Repository"
