@@ -1060,7 +1060,7 @@
     </message>
     <message id="orn-share-link">
         <source>Share link</source>
-        <translation type="unfinished"></translation>
+        <translation>Compartir enlace</translation>
     </message>
     <message id="orn-repository">
         <source>Repository</source>

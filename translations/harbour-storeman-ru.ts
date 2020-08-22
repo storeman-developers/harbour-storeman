@@ -1072,11 +1072,11 @@ Storeman не передает ваш пароль третьим лицам.</t
     </message>
     <message id="orn-repository">
         <source>Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Репозиторий</translation>
     </message>
     <message id="orn-myrepository">
         <source>My repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Мой репозиторий</translation>
     </message>
 </context>
 </TS>

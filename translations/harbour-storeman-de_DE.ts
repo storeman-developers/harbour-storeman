@@ -1060,15 +1060,15 @@
     </message>
     <message id="orn-share-link">
         <source>Share link</source>
-        <translation>Link zum Teilen</translation>
+        <translation>Link versenden</translation>
     </message>
     <message id="orn-repository">
         <source>Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Softwarequelle</translation>
     </message>
     <message id="orn-myrepository">
         <source>My repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Meine Softwarequelle</translation>
     </message>
 </context>
 </TS>

@@ -1064,11 +1064,11 @@
     </message>
     <message id="orn-repository">
         <source>Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Datakatalog</translation>
     </message>
     <message id="orn-myrepository">
         <source>My repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Min datakatalog</translation>
     </message>
 </context>
 </TS>
