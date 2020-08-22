@@ -6,6 +6,7 @@
 Name:       harbour-storeman
 
 # >> macros
+%define __requires_exclude ^libsolv.*$
 # << macros
 
 %{!?qtc_qmake:%define qtc_qmake %qmake}
@@ -76,6 +77,13 @@ rm -rf %{buildroot}
 desktop-file-install --delete-original       \
   --dir %{buildroot}%{_datadir}/applications             \
    %{buildroot}%{_datadir}/applications/*.desktop
+
+%post
+# >> post
+test -d %{_datadir}/%{name}/lib || mkdir -p %{_datadir}/%{name}/lib
+test -f /usr/lib/libsolv.so.1 && ln -sf /usr/lib/libsolv.so.1 %{_datadir}/%{name}/lib/libsolv.so.0
+test -f /usr/lib/libsolvext.so.1 && ln -sf /usr/lib/libsolvext.so.1 %{_datadir}/%{name}/lib/libsolvext.so.0
+# << post
 
 %postun
 # >> postun
