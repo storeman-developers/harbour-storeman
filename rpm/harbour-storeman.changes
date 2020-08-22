@@ -1,3 +1,12 @@
+* Sat Aug 22 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.12-1
+ - Fix "update cache" hangs after "enable all" sources
+ - Rename "User applications" page to "Repository"
+ - For publishers: rename "My applications" menu item to "My repository" and move it to main page
+ - RPM: add postuninstall scriplet to remove lost QML files on uninstallation
+ - Fix Storeman on SFOS ^3.4 when built with earlier SDK (big thanks ExPLIT for help and testing)
+ - Reset recent apps model automatically on refresh timer
+ - Update translations
+
 * Wed Aug 19 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.11-1
 - Add share menu to apps and comments
 - Use Secrets only if user logged in (don't show secret access pop-up for users who are not logged in)
