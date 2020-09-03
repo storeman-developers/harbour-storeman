@@ -157,7 +157,6 @@ OTHER_FILES += \
     qml/components/BackupLabel.qml \
     qml/components/BackupOptions.qml \
     qml/components/CategoriesFilterDelegate.qml \
-    qml/components/ShareMenuItem.qml \
     qml/models/DevelopersModel.qml \
     qml/models/TranslatorsModel.qml \
     qml/models/DummyCommentsModel.qml

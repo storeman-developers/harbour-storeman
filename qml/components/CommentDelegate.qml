@@ -69,8 +69,11 @@ ListItem {
             })
         }
 
-        ShareMenuItem {
-            link: "https://openrepos.net/comment/%1#comment-%1".arg(model.commentId)
+        MenuItem {
+            text: qsTrId("orn-share-link")
+            onClicked: pageStack.push(Qt.resolvedUrl("../pages/SharePage.qml"), {
+                                          link: "https://openrepos.net/comment/%1#comment-%1".arg(model.commentId),
+                                      })
         }
     }
 

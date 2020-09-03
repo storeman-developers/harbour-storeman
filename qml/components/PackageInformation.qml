@@ -16,6 +16,20 @@ Item {
     height: statusLabel.height + stats.height + categoryPanel.height + Theme.paddingLarge
 
     IconButton {
+        id: shareButton
+        anchors {
+            right: likeButton.left
+            verticalCenter: starButton.verticalCenter
+        }
+        icon.source: "image://theme/icon-m-share?" +
+                     (pressed ? Theme.highlightColor : Theme.primaryColor)
+        onClicked: pageStack.push(Qt.resolvedUrl("../pages/SharePage.qml"), {
+                                      link: "https://openrepos.net/node/" + app.appId,
+                                      linkTitle: app.title,
+                                  })
+    }
+
+    IconButton {
         id: likeButton
         anchors {
             right: starButton.left
