@@ -11,7 +11,6 @@ Item {
         left: parent.left
         right: parent.right
         leftMargin: Theme.horizontalPageMargin
-        rightMargin: Theme.horizontalPageMargin
     }
     height: statusLabel.height + stats.height + categoryPanel.height + Theme.paddingLarge
 
@@ -134,6 +133,7 @@ Item {
             topMargin: Theme.paddingMedium
             left: parent.left
             right: parent.right
+            rightMargin: Theme.horizontalPageMargin
         }
         spacing: Theme.paddingMedium
         clip: true
