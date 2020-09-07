@@ -8,6 +8,9 @@ PKGCONFIG += \
     connman-qt5 \
     sailfishsecrets
 
+DEFINES += \
+    QT_RESTRICTED_CAST_FROM_ASCII
+
 # Write version file
 VERSION_H = \
 "$${LITERAL_HASH}ifndef STOREMAN_VERSION" \
@@ -35,6 +38,7 @@ SOURCES += \
     src/networkaccessmanagerfactory.cpp \
     src/ornsecrets.cpp \
     src/storeman.cpp \
+    src/ornconst.cpp \
     src/ornutils.cpp \
     src/ornclient.cpp \
     src/ornabstractappsmodel.cpp \
@@ -64,6 +68,7 @@ HEADERS += \
     src/ornsecrets.h \
     src/ornsecrets_p.h \
     src/storeman.h \
+    src/ornconst.h \
     src/ornutils.h \
     src/ornclient.h \
     src/ornclient_p.h \

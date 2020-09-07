@@ -6,7 +6,7 @@ class QJsonObject;
 
 struct OrnAppListItem
 {
-    OrnAppListItem(const QJsonObject &jsonObject);
+    OrnAppListItem(const QJsonObject &data);
 
     bool valid;
     quint32 appId;

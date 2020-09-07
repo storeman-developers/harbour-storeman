@@ -9,7 +9,6 @@
 
 #include <functional>
 
-
 OrnCategoriesModel::OrnCategoriesModel(QObject *parent)
     : OrnAbstractListModel(false, parent)
 {
@@ -98,7 +97,7 @@ void OrnCategoriesModel::processReply(const QJsonDocument &jsonDoc)
         return;
     }
 
-    QString childrenKey(QStringLiteral("childrens"));
+    QString childrenKey{QStringLiteral("childrens")};
     std::function<bool(const OrnCategoryListItem &a, const OrnCategoryListItem &b)> compare =
             [](const OrnCategoryListItem &a, const OrnCategoryListItem &b) -> bool
     {

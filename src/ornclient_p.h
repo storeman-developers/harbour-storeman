@@ -24,6 +24,7 @@ public:
     void removeUser();
     bool relogin();
     void setCookieTimer();
+    QVariant userProperty(const QString &key) const;
 
     QSettings *settings{nullptr};
     QTimer *cookieTimer{nullptr};

@@ -1,6 +1,7 @@
 #include "ornclient.h"
 #include "ornclient_p.h"
 #include "ornutils.h"
+#include "ornconst.h"
 
 #include <functional>
 #include <QSettings>
@@ -19,24 +20,15 @@
 
 #include <QDebug>
 
-#define API_URL_PREFIX      QStringLiteral("https://openrepos.net/api/v1/")
+static const QString API_URL_PREFIX      {QStringLiteral("https://openrepos.net/api/v1/")};
 
-#define USER_UID            QStringLiteral("user/uid")
-#define USER_NAME           QStringLiteral("user/name")
-#define USER_REALNAME       QStringLiteral("user/realname")
-#define USER_MAIL           QStringLiteral("user/mail")
-#define USER_CREATED        QStringLiteral("user/created")
-#define USER_PICTURE        QStringLiteral("user/picture/url")
-#define USER_PUBLISHER      QStringLiteral("user/publisher")
+static const QString SECRET_COOKIE       {QStringLiteral("cookie")};
+static const QString SECRET_TOKEN        {QStringLiteral("token")};
+static const QString SECRET_PASSWORD     {QStringLiteral("password")};
 
-#define SECRET_COOKIE       QStringLiteral("cookie")
-#define SECRET_TOKEN        QStringLiteral("token")
-#define SECRET_PASSWORD     QStringLiteral("password")
+static const QByteArray APPLICATION_JSON {QByteArrayLiteral("application/json")};
 
-#define APPLICATION_JSON    QByteArrayLiteral("application/json")
-
-#define BOOKMARKS_FILE      QStringLiteral("bookmarks")
-#define CATEGORIES_FILE     QStringLiteral("hidden_categories")
+static const QString CATEGORIES_FILE     {QStringLiteral("hidden_categories")};
 
 
 void readIds(const QString &filename, QSet<quint32> &store)
@@ -78,7 +70,7 @@ void writeIds(const QString &filename, QSet<quint32> &store)
 OrnClientPrivate::~OrnClientPrivate()
 {
     // Write ids of bookmarked apps
-    writeIds(BOOKMARKS_FILE, bookmarks);
+    writeIds(OrnConst::bookmarks, bookmarks);
 
     // Write ids of hidden categories
     writeIds(CATEGORIES_FILE, hiddenCategories);
@@ -86,7 +78,7 @@ OrnClientPrivate::~OrnClientPrivate()
 
 void OrnClientPrivate::removeUser()
 {
-    settings->remove(QStringLiteral("user"));
+    settings->remove(OrnConst::user);
     secrets.removeCollection();
     userCookie = QNetworkCookie();
     userToken.clear();
@@ -103,7 +95,9 @@ bool OrnClientPrivate::relogin()
     {
         return false;
     }
-    auto username = settings->value(USER_NAME).toString();
+    settings->beginGroup(OrnConst::user);
+    auto username = settings->value(OrnConst::name).toString();
+    settings->endGroup();
     q_func()->login(username, QString::fromUtf8(password), true);
     return true;
 }
@@ -153,17 +147,25 @@ void OrnClientPrivate::setCookieTimer()
     }
 }
 
+QVariant OrnClientPrivate::userProperty(const QString &key) const
+{
+    settings->beginGroup(OrnConst::user);
+    auto value = settings->value(key);
+    settings->endGroup();
+    return value;
+}
+
 void OrnClientPrivate::prepareComment(QJsonObject &object, const QString &body)
 {
-    QJsonObject bodyObject;
-    bodyObject.insert(QStringLiteral("value"), body);
-    bodyObject.insert(QStringLiteral("format"), QStringLiteral("filtered_html"));
-    QJsonArray undArray;
-    undArray.append(bodyObject);
-    QJsonObject undObject;
-    undObject.insert(QStringLiteral("und"), undArray);
-
-    object.insert(QStringLiteral("comment_body"), undObject);
+    object.insert(QStringLiteral("comment_body"), QJsonObject{
+        {OrnConst::und, QJsonArray{
+                QJsonObject{
+                    {OrnConst::value,                body},
+                    {QStringLiteral("format"), QStringLiteral("filtered_html")},
+                }
+            }
+        },
+    });
 }
 
 OrnClient::OrnClient(QObject *parent)
@@ -190,7 +192,7 @@ OrnClient::OrnClient(QObject *parent)
     if (this->authorised())
     {
         qDebug() << "Checking authorisation status";
-        auto request = this->apiRequest(QStringLiteral("session"));
+        auto request = this->apiRequest("session");
         auto reply = d->nam->get(request);
         connect(reply, &QNetworkReply::finished, this, [this, reply]()
         {
@@ -206,7 +208,7 @@ OrnClient::OrnClient(QObject *parent)
     }
 
     // Read ids of bookmarked apps
-    readIds(BOOKMARKS_FILE, d->bookmarks);
+    readIds(OrnConst::bookmarks, d->bookmarks);
 
     // Read ids of hidden categories
     readIds(CATEGORIES_FILE, d->hiddenCategories);
@@ -238,7 +240,7 @@ QNetworkRequest OrnClient::apiRequest(const QString &resource, const QUrlQuery &
     request.setRawHeader(QByteArrayLiteral("Accept-Language"), d->lang);
     request.setRawHeader(QByteArrayLiteral("Warehouse-Platform"),
                          QByteArrayLiteral("SailfishOS"));
-    QUrl url(API_URL_PREFIX.append(resource));
+    QUrl url(API_URL_PREFIX + resource);
     if (!query.isEmpty())
     {
         url.setQuery(query);
@@ -280,12 +282,13 @@ QJsonDocument OrnClient::processReply(QNetworkReply *reply, Error code)
             // Try to re-login if password is stored
             if (!d->relogin())
             {
+                d->settings->beginGroup(OrnConst::user);
                 // Otherwise remove user data
-                QString usernameKey(USER_NAME);
-                auto username = d->settings->value(usernameKey);
+                auto username = d->settings->value(OrnConst::name);
                 d->removeUser();
                 // Save the last username to simplify manual re-login
-                d->settings->setValue(usernameKey, username);
+                d->settings->setValue(OrnConst::name, username);
+                d->settings->endGroup();
                 d->setCookieTimer();
                 emit this->cookieIsValidChanged();
             }
@@ -313,22 +316,35 @@ bool OrnClient::cookieIsValid() const
 
 bool OrnClient::isPublisher() const
 {
-    return this->d_func()->settings->value(USER_PUBLISHER).toBool();
+    return this->d_func()->userProperty(OrnConst::publisher).toBool();
 }
 
 quint32 OrnClient::userId() const
 {
-    return this->d_func()->settings->value(USER_UID).toUInt();
+    return this->d_func()->userProperty(OrnConst::uid).toUInt();
 }
 
 QString OrnClient::userName() const
 {
-    return this->d_func()->settings->value(USER_NAME).toString();
+    return this->d_func()->userProperty(OrnConst::name).toString();
 }
 
-QString OrnClient::userIconSource() const
+QString OrnClient::userIconSource()
 {
-    return this->d_func()->settings->value(USER_PICTURE).toString();
+    Q_D(OrnClient);
+    // TODO: Remove later
+    QString oldkey{QStringLiteral("user/picture/url")};
+    if (d->settings->contains(oldkey))
+    {
+        auto value = d->settings->value(oldkey);
+        d->settings->remove(oldkey);
+        d->settings->beginGroup(OrnConst::user);
+        d->settings->setValue(OrnConst::picture, value);
+        d->settings->sync();
+        d->settings->endGroup();
+        return value.toString();
+    }
+    return d->userProperty(OrnConst::picture).toString();
 }
 
 QList<quint32> OrnClient::bookmarks() const
@@ -417,6 +433,32 @@ void OrnClient::toggleCategoryVisibility(quint32 categoryId)
     emit this->categoryVisibilityChanged(categoryId, !hidden);
 }
 
+bool checkPublisher(const QJsonObject &data)
+{
+    // Role `4` stands for `publisher`
+    return data[OrnConst::roles].toObject().contains(QChar('4'));
+}
+
+QString namePart(const QJsonValue &data)
+{
+    return data.toObject()[OrnConst::und].toArray().first().toObject()[OrnConst::value].toString();;
+}
+
+QString realname(const QJsonObject &data)
+{
+    auto name    = namePart(data[QStringLiteral("field_name")]);
+    auto surname = namePart(data[QStringLiteral("field_surname")]);
+    if (surname.isEmpty())
+    {
+        return name;
+    }
+    if (name.isEmpty())
+    {
+        return surname;
+    }
+    return name.append(" ").append(surname);
+}
+
 void OrnClient::login(const QString &username, QString password, bool savePassword)
 {
     Q_D(OrnClient);
@@ -426,7 +468,7 @@ void OrnClient::login(const QString &username, QString password, bool savePasswo
     d->setCookieTimer();
 
     QNetworkRequest request;
-    request.setUrl(API_URL_PREFIX.append(QStringLiteral("user/login")));
+    request.setUrl(QStringLiteral("user/login").prepend(API_URL_PREFIX));
     request.setHeader(QNetworkRequest::ContentTypeHeader, APPLICATION_JSON);
 
     QJsonObject jsonObject;
@@ -446,10 +488,10 @@ void OrnClient::login(const QString &username, QString password, bool savePasswo
 
         Q_D(OrnClient);
 
-        auto jsonObject = jsonDoc.object();
+        auto data = jsonDoc.object();
 
         d->userCookie = cookieVariant.value<QList<QNetworkCookie>>().first();
-        d->userToken = OrnUtils::toString(jsonObject[QStringLiteral("token")]).toUtf8();
+        d->userToken = OrnUtils::toString(data[QStringLiteral("token")]).toUtf8();
 
         if (savePassword)
         {
@@ -460,35 +502,16 @@ void OrnClient::login(const QString &username, QString password, bool savePasswo
 
         auto settings = d->settings;
 
-        jsonObject = jsonObject[QStringLiteral("user")].toObject();
-        settings->setValue(USER_UID, OrnUtils::toUint(jsonObject[QStringLiteral("uid")]));
-        settings->setValue(USER_NAME, OrnUtils::toString(jsonObject[QStringLiteral("name")]));
-        settings->setValue(USER_MAIL, OrnUtils::toString(jsonObject[QStringLiteral("mail")]));
-        settings->setValue(USER_CREATED, OrnUtils::toDateTime(jsonObject[QStringLiteral("created")]));
-        settings->setValue(USER_PICTURE, jsonObject[QStringLiteral("picture")]
-                .toObject()[QStringLiteral("url")].toString());
-        auto roles = jsonObject[QStringLiteral("roles")].toObject();
-        // Role `4` stands for `publisher`
-        settings->setValue(USER_PUBLISHER, roles.contains(QChar('4')));
-
-        QString undKey(QStringLiteral("und"));
-        QString valueKey(QStringLiteral("value"));
-        auto namePart = [&jsonObject, &undKey, &valueKey](const QString &partKey)
-        { return jsonObject[partKey].toObject()[undKey].toArray().first().toObject()[valueKey].toString(); };
-        auto name = namePart(QStringLiteral("field_name"));
-        auto surname = namePart(QStringLiteral("field_surname"));
-        if (!surname.isEmpty())
-        {
-            if (!name.isEmpty())
-            {
-                name.append(" ").append(surname);
-            }
-            else
-            {
-                name = surname;
-            }
-        }
-        settings->setValue(USER_REALNAME, name);
+        settings->beginGroup(OrnConst::user);
+        data = data[OrnConst::user].toObject();
+        settings->setValue(OrnConst::uid,       OrnUtils::toUint(data[OrnConst::uid]));
+        settings->setValue(OrnConst::name,      OrnUtils::toString(data[OrnConst::name]));
+        settings->setValue(OrnConst::mail,      OrnUtils::toString(data[OrnConst::mail]));
+        settings->setValue(OrnConst::created,   OrnUtils::toDateTime(data[OrnConst::created]));
+        settings->setValue(OrnConst::picture,   data[OrnConst::picture].toObject()[OrnConst::url].toString());
+        settings->setValue(OrnConst::publisher, checkPublisher(data));
+        settings->setValue(OrnConst::realname,  realname(data));
+        settings->endGroup();
 
         qDebug() << "Successful authorisation";
         emit this->authorisedChanged();
@@ -512,15 +535,15 @@ void OrnClient::logout()
 
 void OrnClient::comment(quint32 appId, const QString &body, quint32 parentId)
 {
-    auto request = this->apiRequest(QStringLiteral("comments"));
+    auto request = this->apiRequest(OrnConst::comments);
     request.setHeader(QNetworkRequest::ContentTypeHeader, APPLICATION_JSON);
 
     QJsonObject commentObject;
     OrnClientPrivate::prepareComment(commentObject, body);
-    commentObject.insert(QStringLiteral("appid"), QString::number(appId));
+    commentObject.insert(OrnConst::appid, QString::number(appId));
     if (parentId != 0)
     {
-        commentObject.insert(QStringLiteral("pid"), QString::number(parentId));
+        commentObject.insert(OrnConst::pid, QString::number(parentId));
     }
 
     auto reply = this->d_func()->nam->post(request, QJsonDocument(commentObject).toJson());
@@ -529,7 +552,7 @@ void OrnClient::comment(quint32 appId, const QString &body, quint32 parentId)
         auto jsonDoc = this->processReply(reply, CommentSendError);
         if (jsonDoc.isObject())
         {
-            auto cid = OrnUtils::toUint(jsonDoc.object()[QStringLiteral("cid")]);
+            auto cid = OrnUtils::toUint(jsonDoc.object()[OrnConst::cid]);
             emit this->commentActionFinished(CommentAdded, appId, cid);
             qDebug() << "Comment" << cid << "added for app" << appId;
         }
@@ -590,8 +613,8 @@ void OrnClient::vote(quint32 appId, quint32 value)
     request.setHeader(QNetworkRequest::ContentTypeHeader, APPLICATION_JSON);
 
     QJsonObject voteObject = {
-        {QStringLiteral("appid"), QString::number(appId)},
-        {QStringLiteral("value"), QString::number(value)}
+        {OrnConst::appid, QString::number(appId)},
+        {OrnConst::value, QString::number(value)}
     };
 
     qDebug() << "Posting user vote" << value << "for app" << appId;
@@ -601,11 +624,11 @@ void OrnClient::vote(quint32 appId, quint32 value)
         if (reply->error() == QNetworkReply::NoError)
         {
             auto replyObject = QJsonDocument::fromJson(reply->readAll()).object();
-            QString ratingKey(QStringLiteral("rating"));
+            QString ratingKey(OrnConst::rating);
             auto ratingObject = replyObject[ratingKey].toObject();
             qDebug() << "Received vote reply for app" << appId << ratingObject;
             emit this->userVoteFinished(appId, value,
-                                        OrnUtils::toUint(ratingObject[QStringLiteral("count")]),
+                                        OrnUtils::toUint(ratingObject[OrnConst::count]),
                                         ratingObject[ratingKey].toString().toFloat());
         }
         else

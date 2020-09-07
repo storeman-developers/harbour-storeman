@@ -2,6 +2,7 @@
 #include "orncategorylistitem.h"
 #include "ornclient.h"
 #include "ornutils.h"
+#include "ornconst.h"
 
 #include <QNetworkRequest>
 #include <QJsonDocument>
@@ -36,11 +37,10 @@ OrnApplication::OrnApplication(QObject *parent)
     : QObject(parent)
 {
     auto ornPm = OrnPm::instance();
-    connect(ornPm, &OrnPm::repoModified, this, &OrnApplication::onRepoListChanged);
-    connect(ornPm, &OrnPm::packageStatusChanged, this, &OrnApplication::onPackageStatusChanged);
+    connect(ornPm, &OrnPm::repoModified,             this, &OrnApplication::onRepoListChanged);
+    connect(ornPm, &OrnPm::packageStatusChanged,     this, &OrnApplication::onPackageStatusChanged);
     connect(ornPm, &OrnPm::updatablePackagesChanged, this, &OrnApplication::onUpdatablePackagesChanged);
-
-    connect(ornPm, &OrnPm::packageVersions, this, &OrnApplication::onPackageVersions);
+    connect(ornPm, &OrnPm::packageVersions,          this, &OrnApplication::onPackageVersions);
 
     auto client = OrnClient::instance();
     connect(client, &OrnClient::userVoteFinished,
@@ -141,14 +141,16 @@ quint64 OrnApplication::globalVersionInstallSize() const
 
 QString OrnApplication::category() const
 {
-    return mCategories.empty() ? QString() :
-                                 mCategories.last().toMap().value("name").toString();
+    return mCategories.empty()
+            ? QString()
+            : mCategories.last().toMap().value(OrnConst::name).toString();
 }
 
 void OrnApplication::ornRequest()
 {
-    auto client = OrnClient::instance();
-    auto request = client->apiRequest(QStringLiteral("apps/%0").arg(mAppId));
+    auto client   = OrnClient::instance();
+    auto resource = QString::number(mAppId).prepend("apps/");
+    auto request  = client->apiRequest(resource);
     qDebug() << "Fetching" << request.url().toString();
     auto reply = client->networkAccessManager()->get(request);
     connect(reply, &QNetworkReply::finished, [this, client, reply]()
@@ -158,63 +160,57 @@ void OrnApplication::ornRequest()
         {
             return;
         }
-        auto jsonObject = jsonDoc.object();
-        QString urlKey(QStringLiteral("url"));
-        QString nameKey(QStringLiteral("name"));
 
-        mCommentsOpen = jsonObject[QStringLiteral("comments_open")].toBool();
-        mCommentsCount = OrnUtils::toUint(jsonObject[QStringLiteral("comments_count")]);
-        mDownloadsCount = OrnUtils::toUint(jsonObject[QStringLiteral("downloads")]);
-        mTitle = OrnUtils::toString(jsonObject[QStringLiteral("title")]);
-        mIconSource = OrnUtils::toString(jsonObject[QStringLiteral("icon")].toObject()[urlKey]);
-        mPackageName = OrnUtils::toString(jsonObject[QStringLiteral("package")].toObject()[nameKey]);
-        mBody = OrnUtils::toString(jsonObject[QStringLiteral("body")]);
-        mChangelog = OrnUtils::toString(jsonObject[QStringLiteral("changelog")]);
-        if (mChangelog == QLatin1String("<p>(none)</p>"))
+        auto data       = jsonDoc.object();
+        mCommentsOpen   = data[OrnConst::commentsOpen].toBool();
+        mCommentsCount  = OrnUtils::toUint(data[OrnConst::commentsCount]);
+        mDownloadsCount = OrnUtils::toUint(data[OrnConst::downloads]);
+        mTitle          = OrnUtils::toString(data[OrnConst::title]);
+        mIconSource     = OrnUtils::toString(data[OrnConst::icon].toObject()[OrnConst::url]);
+        mPackageName    = OrnUtils::toString(data[OrnConst::package].toObject()[OrnConst::name]);
+        mBody           = OrnUtils::toString(data[OrnConst::body]);
+        mCreated        = OrnUtils::toDateTime(data[OrnConst::created]);
+        mUpdated        = OrnUtils::toDateTime(data[OrnConst::updated]);
+        mChangelog      = OrnUtils::toString(data[OrnConst::changelog]);
+        if (mChangelog == QLatin1String{"<p>(none)</p>"})
         {
             mChangelog.clear();
         }
-        mCreated = OrnUtils::toDateTime(jsonObject[QStringLiteral("created")]);
-        mUpdated = OrnUtils::toDateTime(jsonObject[QStringLiteral("updated")]);
 
-        auto userObject = jsonObject[QStringLiteral("user")].toObject();
-        mUserId = OrnUtils::toUint(userObject[QStringLiteral("uid")]);
-        mUserName = OrnUtils::toString(userObject[nameKey]);
-        mUserIconSource = OrnUtils::toString(userObject[QStringLiteral("picture")].toObject()[urlKey]);
+        auto user       = data[OrnConst::user].toObject();
+        mUserId         = OrnUtils::toUint(user[OrnConst::uid]);
+        mUserName       = OrnUtils::toString(user[OrnConst::name]);
+        mUserIconSource = OrnUtils::toString(user[OrnConst::picture].toObject()[OrnConst::url]);
 
-        QString ratingKey(QStringLiteral("rating"));
-        auto ratingObject = jsonObject[ratingKey].toObject();
-        mRatingCount = OrnUtils::toUint(ratingObject[QStringLiteral("count")]);
-        mUserVote = OrnUtils::toUint(ratingObject[QStringLiteral("user_vote")]);
-        mRating = ratingObject[ratingKey].toString().toFloat();
+        auto rating     = data[OrnConst::rating].toObject();
+        mRatingCount    = OrnUtils::toUint(rating[OrnConst::count]);
+        mUserVote       = OrnUtils::toUint(rating[OrnConst::userVote]);
+        mRating         = rating[OrnConst::rating].toString().toFloat();
 
         mTagIds.clear();
-        QString tidKey(QStringLiteral("tid"));
-        for (const QJsonValueRef id : jsonObject[QStringLiteral("tags")].toArray())
+        for (const QJsonValueRef id : data[OrnConst::tags].toArray())
         {
-            mTagIds << OrnUtils::toString(id.toObject()[tidKey]);
+            mTagIds << OrnUtils::toString(id.toObject()[OrnConst::tid]);
         }
 
-        auto catIds = OrnUtils::toIntList(jsonObject[QStringLiteral("category")]);
+        auto catIds     = OrnUtils::toIntList(data[OrnConst::category]);
         mCategories.clear();
         for (const auto &id : catIds)
         {
             mCategories << QVariantMap{
-                { "id",   id },
-                { "name", OrnCategoryListItem::categoryName(id) }
+                { OrnConst::id,   id },
+                { OrnConst::name, OrnCategoryListItem::categoryName(id) },
             };
         }
 
-        QString thumbsKey(QStringLiteral("thumbs"));
-        QString largeKey(QStringLiteral("large"));
-        auto jsonArray = jsonObject[QStringLiteral("screenshots")].toArray();
+        auto screenshots = data[OrnConst::screenshots].toArray();
         mScreenshots.clear();
-        for (const QJsonValueRef v: jsonArray)
+        for (const QJsonValueRef v: screenshots)
         {
             auto o = v.toObject();
             mScreenshots << QVariantMap{
-                { "url",   OrnUtils::toString(o[urlKey]) },
-                { "thumb", OrnUtils::toString(o[thumbsKey].toObject()[largeKey]) }
+                { OrnConst::url,   OrnUtils::toString(o[OrnConst::url]) },
+                { OrnConst::thumb, OrnUtils::toString(o[OrnConst::thumbs].toObject()[OrnConst::large]) }
             };
         }
 
@@ -326,10 +322,9 @@ void OrnApplication::onPackageVersions(const QString &packageName, const OrnPack
     bool seekAvailable = true;
     bool seekGlobal    = true;
 
-    QLatin1String installed("installed");
     for (const auto &version : versions)
     {
-        if (seekInstalled && version.repoAlias == installed)
+        if (seekInstalled && version.repoAlias == OrnConst::installed)
         {
             mInstalledVersion = version;
             seekInstalled = false;

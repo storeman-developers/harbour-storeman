@@ -1,5 +1,6 @@
 #include "orncategorylistitem.h"
 #include "ornutils.h"
+#include "ornconst.h"
 
 #include <QJsonObject>
 #include <QJsonArray>
@@ -78,13 +79,16 @@ static const QMap<quint32, const char*> categories{
     {  247, QT_TRID_NOOP("orn-cat-libraries") }
 };
 
-OrnCategoryListItem::OrnCategoryListItem(const QJsonObject &jsonObject)
-    : categoryId(OrnUtils::toUint(jsonObject[QStringLiteral("tid")]))
-    , appsCount(OrnUtils::toUint(jsonObject[QStringLiteral("apps_count")]))
-    , depth(jsonObject[QStringLiteral("depth")].toVariant().toUInt())
+static const QString KEY_DEPTH     {QStringLiteral("depth")};
+static const QString KEY_PARENTS   {QStringLiteral("parents")};
+
+OrnCategoryListItem::OrnCategoryListItem(const QJsonObject &data)
+    : categoryId(OrnUtils::toUint(data[OrnConst::tid]))
+    , appsCount(OrnUtils::toUint(data[OrnConst::appsCount]))
+    , depth(data[KEY_DEPTH].toVariant().toUInt())
     , name(categoryName(categoryId))
 {
-    auto array = jsonObject[QStringLiteral("parents")].toArray();
+    auto array = data[KEY_PARENTS].toArray();
     for (const QJsonValueRef v : array)
     {
         parents << OrnUtils::toUint(v);

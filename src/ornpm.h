@@ -81,6 +81,8 @@ public:
 
     static const QLatin1String repoNamePrefix;
 
+    static QString repoUrl(const QString &author);
+
     static OrnPm *instance();
     static inline QObject *qmlInstance(QQmlEngine *engine, QJSEngine *scriptEngine)
     {

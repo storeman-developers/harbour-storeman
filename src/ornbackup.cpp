@@ -5,6 +5,7 @@
 #include "ornclient.h"
 #include "ornclient_p.h"
 #include "ornutils.h"
+#include "ornconst.h"
 
 #include <QFileInfo>
 #include <QSettings>
@@ -15,11 +16,12 @@
 
 #include <QDebug>
 
-#define BR_CREATED       QStringLiteral("created")
-#define BR_REPO_ALL      QStringLiteral("repos/all")
-#define BR_REPO_DISABLED QStringLiteral("repos/disabled")
-#define BR_INSTALLED     QStringLiteral("packages/installed")
-#define BR_BOOKMARKS     QStringLiteral("packages/bookmarks")
+static const QString GROUP_REPOS    {QStringLiteral("repos")};
+static const QString GROUP_PACKAGES {QStringLiteral("packages")};
+
+static const QString KEY_ALL        {QStringLiteral("all")};
+static const QString KEY_DISABLED   {QStringLiteral("disabled")};
+
 
 OrnBackup::OrnBackup(QObject *parent)
     : QObject(parent)
@@ -46,10 +48,19 @@ QVariantMap OrnBackup::details(const QString &path)
     QVariantMap res;
     QSettings file(path, QSettings::IniFormat);
 
-    res.insert(QLatin1String("created"),   file.value(BR_CREATED).toDateTime().toLocalTime());
-    res.insert(QLatin1String("repos"),     file.value(BR_REPO_ALL).toStringList().size());
-    res.insert(QLatin1String("packages"),  file.value(BR_INSTALLED).toStringList().size());
-    res.insert(QLatin1String("bookmarks"), file.value(BR_BOOKMARKS).toStringList().size());
+    file.beginGroup(GROUP_REPOS);
+    auto repos     = file.value(KEY_ALL).toStringList().size();
+    file.endGroup();
+
+    file.beginGroup(GROUP_PACKAGES);
+    auto packages  = file.value(OrnConst::installed).toStringList().size();
+    auto bookmarks = file.value(OrnConst::bookmarks).toStringList().size();
+    file.endGroup();
+
+    res.insert(OrnConst::created,    file.value(OrnConst::created).toDateTime().toLocalTime());
+    res.insert(GROUP_REPOS,    repos);
+    res.insert(GROUP_PACKAGES, packages);
+    res.insert(OrnConst::bookmarks,  bookmarks);
 
     return res;
 }
@@ -116,9 +127,11 @@ void OrnBackup::pSearchPackages()
     auto t = OrnPm::instance()->d_func()->transaction();
     connect(t, SIGNAL(Package(quint32,QString,QString)), this, SLOT(pAddPackage(quint32,QString,QString)));
     connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(pInstallPackages()));
-    qDebug().nospace() << "Calling " << t << "->" PK_METHOD_RESOLVE "("
-                       << PK_FLAG_NONE << ", " << mNamesToSearch << ")";
-    t->asyncCall(QStringLiteral(PK_METHOD_RESOLVE), PK_FLAG_NONE, mNamesToSearch);
+    QString method{QStringLiteral("Resolve")};
+    qDebug().nospace().noquote()
+            << "Calling " << t << "->" << method << "("
+            << PK_FLAG_NONE << ", " << mNamesToSearch << ")";
+    t->asyncCall(method, PK_FLAG_NONE, mNamesToSearch);
 }
 
 void OrnBackup::pAddPackage(quint32 info, const QString &packageId, const QString &summary)
@@ -135,7 +148,7 @@ void OrnBackup::pAddPackage(quint32 info, const QString &packageId, const QStrin
             // We will filter the newest versions later
             mPackagesToInstall.insert(name, packageId);
         }
-        else if (repo == QStringLiteral("installed"))
+        else if (repo == OrnConst::installed)
         {
             mInstalled.insert(name, OrnUtils::packageVersion(packageId));
         }
@@ -177,9 +190,10 @@ void OrnBackup::pInstallPackages()
         this->setStatus(InstallingPackages);
         auto t = OrnPm::instance()->d_func()->transaction();
         connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(pFinishRestore()));
-        qDebug().nospace() << "Calling " << t << "->" PK_METHOD_INSTALLPACKAGES "("
-                           << PK_FLAG_NONE << ", " << ids << ")";
-        t->call(QStringLiteral(PK_METHOD_INSTALLPACKAGES), PK_FLAG_NONE, ids);
+        qDebug().nospace().noquote()
+                << "Calling " << t << "->" << OrnConst::pkInstallPackages << "("
+                << PK_FLAG_NONE << ", " << ids << ")";
+        t->call(OrnConst::pkInstallPackages, PK_FLAG_NONE, ids);
     }
 }
 
@@ -212,9 +226,13 @@ void OrnBackup::pBackup(const QString &filePath, BackupItems items)
                 disabled << author;
             }
         }
-        file.setValue(BR_REPO_ALL, repos);
-        file.setValue(BR_REPO_DISABLED, disabled);
+        file.beginGroup(GROUP_REPOS);
+        file.setValue(KEY_ALL,      repos);
+        file.setValue(KEY_DISABLED, disabled);
+        file.endGroup();
     }
+
+    file.beginGroup(GROUP_PACKAGES);
 
     if (items.testFlag(BackupItem::BackupInstalled))
     {
@@ -224,7 +242,7 @@ void OrnBackup::pBackup(const QString &filePath, BackupItems items)
         {
             installed << p.name;
         }
-        file.setValue(BR_INSTALLED, installed);
+        file.setValue(OrnConst::installed, installed);
     }
 
     if (items.testFlag(BackupItem::BackupBookmarks))
@@ -235,10 +253,11 @@ void OrnBackup::pBackup(const QString &filePath, BackupItems items)
         {
             bookmarks << b;
         }
-        file.setValue(BR_BOOKMARKS, bookmarks);
+        file.setValue(OrnConst::bookmarks, bookmarks);
     }
 
-    file.setValue(BR_CREATED, QDateTime::currentDateTimeUtc());
+    file.endGroup();
+    file.setValue(OrnConst::created, QDateTime::currentDateTimeUtc());
 
     qDebug() << "Finished backing up";
     this->setStatus(Idle);
@@ -249,8 +268,13 @@ void OrnBackup::pRestore(const QString &filePath)
 {
     QSettings file(filePath, QSettings::IniFormat);
 
+    file.beginGroup(GROUP_PACKAGES);
+
+    qDebug("Reading installed apps");
+    mNamesToSearch = file.value(OrnConst::installed).toStringList();
+
     qDebug() << "Reading bookmarks";
-    auto bookmarks = file.value(BR_BOOKMARKS).toList();
+    auto bookmarks = file.value(OrnConst::bookmarks).toList();
     if (!bookmarks.isEmpty())
     {
         qDebug() << "Restoring bookmarks";
@@ -262,27 +286,25 @@ void OrnBackup::pRestore(const QString &filePath)
         }
     }
 
+    file.endGroup();
+
     qDebug() << "Reading repos";
-    auto repos = file.value(BR_REPO_ALL).toStringList();
+    file.beginGroup(GROUP_REPOS);
+    auto repos = file.value(KEY_ALL).toStringList();
     if (!repos.isEmpty())
     {
         qDebug() << "Restoring repos";
         this->setStatus(RestoringRepos);
-        auto disabled = file.value(BR_REPO_DISABLED).toStringList().toSet();
+        auto disabled = file.value(KEY_DISABLED).toStringList().toSet();
         auto ornpm_p = OrnPm::instance()->d_func();
-        QString method(SSU_METHOD_ADDREPO);
-        QString repo_tmpl(REPO_URL_TMPL);
         for (const auto &author : repos)
         {
             auto alias = OrnPm::repoNamePrefix + author;
-            ornpm_p->ssuInterface->call(QDBus::Block, method, alias, repo_tmpl.arg(author));
+            ornpm_p->ssuInterface->call(QDBus::Block, OrnConst::ssuAddRepo, alias, OrnPm::repoUrl(author));
             ornpm_p->repos.insert(alias, !disabled.contains(author));
         }
-
     }
-
-    qDebug("Reading installed apps");
-    mNamesToSearch = file.value(BR_INSTALLED).toStringList();
+    file.endGroup();
 }
 
 void OrnBackup::pRefreshRepos()
@@ -293,8 +315,9 @@ void OrnBackup::pRefreshRepos()
         this->setStatus(RefreshingRepos);
         auto t = OrnPm::instance()->d_func()->transaction();
         connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(pSearchPackages()));
-        qDebug().nospace() << "Calling " << t << "->" PK_METHOD_REFRESHCACHE "(false)";
-        t->asyncCall(QStringLiteral(PK_METHOD_REFRESHCACHE), false);
+        qDebug().nospace().noquote()
+                << "Calling " << t << "->" << OrnConst::pkRefreshCache << "(false)";
+        t->asyncCall(OrnConst::pkRefreshCache, false);
     }
     else
     {

@@ -1,6 +1,7 @@
 #include "ornapplistitem.h"
 #include "orncategorylistitem.h"
 #include "ornutils.h"
+#include "ornconst.h"
 
 #include <QJsonObject>
 #include <QJsonArray>
@@ -8,30 +9,27 @@
 #include <QVariant>
 
 
-OrnAppListItem::OrnAppListItem(const QJsonObject &jsonObject)
-    : valid(jsonObject.size() > 1)
-    , appId(jsonObject[QStringLiteral("appid")].toVariant().toUInt())
-    , created(OrnUtils::toUint(jsonObject[QStringLiteral("created")]))
-    , updated(OrnUtils::toUint(jsonObject[QStringLiteral("updated")]))
-    , title(OrnUtils::toString(jsonObject[QStringLiteral("title")]))
-    , iconSource(OrnUtils::toString(jsonObject[QStringLiteral("icon")].toObject()[QStringLiteral("url")]))
+OrnAppListItem::OrnAppListItem(const QJsonObject &data)
+    : valid(data.size() > 1)
+    , appId(data[OrnConst::appid].toVariant().toUInt())
+    , created(OrnUtils::toUint(data[OrnConst::created]))
+    , updated(OrnUtils::toUint(data[OrnConst::updated]))
+    , title(OrnUtils::toString(data[OrnConst::title]))
+    , iconSource(OrnUtils::toString(data[OrnConst::icon].toObject()[OrnConst::url]))
     , sinceUpdate(sinceLabel(created))
 {
-    QString nameKey(QStringLiteral("name"));
+    auto ratingobj = data[OrnConst::rating].toObject();
+    ratingCount    = OrnUtils::toUint(ratingobj[OrnConst::count]);
+    rating         = ratingobj[OrnConst::rating].toString().toFloat();
 
-    QString ratingKey(QStringLiteral("rating"));
-    auto ratingObject = jsonObject[ratingKey].toObject();
-    ratingCount = OrnUtils::toUint(ratingObject[QStringLiteral("count")]);
-    rating = ratingObject[ratingKey].toString().toFloat();
+    userName = OrnUtils::toString(data[OrnConst::user].toObject()[OrnConst::name]);
 
-    userName = OrnUtils::toString(jsonObject[QStringLiteral("user")].toObject()[nameKey]);
-
-    auto categories = jsonObject[QStringLiteral("category")].toArray();
-    auto tid = OrnUtils::toUint(categories.last().toObject()[QStringLiteral("tid")]);
+    auto categories = data[OrnConst::category].toArray();
+    auto tid = OrnUtils::toUint(categories.last().toObject()[OrnConst::tid]);
     category = OrnCategoryListItem::categoryName(tid);
     categoryId = tid;
 
-    package = OrnUtils::toString(jsonObject[QStringLiteral("package")].toObject()[nameKey]);
+    package = OrnUtils::toString(data[OrnConst::package].toObject()[OrnConst::name]);
 
     if (iconSource.isEmpty() ||
         iconSource.endsWith(QStringLiteral("icon-defaultpackage.png")))

@@ -1,0 +1,50 @@
+#include "ornconst.h"
+
+const QString OrnConst::appid          {QStringLiteral("appid")};
+const QString OrnConst::appsCount      {QStringLiteral("apps_count")};
+const QString OrnConst::body           {QStringLiteral("body")};
+const QString OrnConst::bookmarks      {QStringLiteral("bookmarks")};
+const QString OrnConst::category       {QStringLiteral("category")};
+const QString OrnConst::changelog      {QStringLiteral("changelog")};
+const QString OrnConst::cid            {QStringLiteral("cid")};
+const QString OrnConst::comments       {QStringLiteral("comments")};
+const QString OrnConst::commentsCount  {QStringLiteral("comments_count")};
+const QString OrnConst::commentsOpen   {QStringLiteral("comments_open")};
+const QString OrnConst::count          {QStringLiteral("count")};
+const QString OrnConst::created        {QStringLiteral("created")};
+const QString OrnConst::downloads      {QStringLiteral("downloads")};
+const QString OrnConst::icon           {QStringLiteral("icon")};
+const QString OrnConst::id             {QStringLiteral("id")};
+const QString OrnConst::installed      {QStringLiteral("installed")};
+const QString OrnConst::large          {QStringLiteral("large")};
+const QString OrnConst::mail           {QStringLiteral("mail")};
+const QString OrnConst::name           {QStringLiteral("name")};
+const QString OrnConst::package        {QStringLiteral("package")};
+const QString OrnConst::picture        {QStringLiteral("picture")};
+const QString OrnConst::pid            {QStringLiteral("pid")};
+const QString OrnConst::publisher      {QStringLiteral("publisher")};
+const QString OrnConst::rating         {QStringLiteral("rating")};
+const QString OrnConst::realname       {QStringLiteral("realname")};
+const QString OrnConst::roles          {QStringLiteral("roles")};
+const QString OrnConst::screenshots    {QStringLiteral("screenshots")};
+const QString OrnConst::tags           {QStringLiteral("tags")};
+const QString OrnConst::text           {QStringLiteral("text")};
+const QString OrnConst::thumb          {QStringLiteral("thumb")};
+const QString OrnConst::thumbs         {QStringLiteral("thumbs")};
+const QString OrnConst::tid            {QStringLiteral("tid")};
+const QString OrnConst::title          {QStringLiteral("title")};
+const QString OrnConst::uid            {QStringLiteral("uid")};
+const QString OrnConst::und            {QStringLiteral("und")};
+const QString OrnConst::updated        {QStringLiteral("updated")};
+const QString OrnConst::url            {QStringLiteral("url")};
+const QString OrnConst::user           {QStringLiteral("user")};
+const QString OrnConst::userVote       {QStringLiteral("user_vote")};
+const QString OrnConst::value          {QStringLiteral("value")};
+
+const QString OrnConst::ssuAddRepo     {QStringLiteral("addRepo")};
+const QString OrnConst::ssuModifyRepo  {QStringLiteral("modifyRepo")};
+
+const QString OrnConst::pkService        {QStringLiteral("org.freedesktop.PackageKit")};
+const QString OrnConst::pkInstallPackages{QStringLiteral("InstallPackages")};
+const QString OrnConst::pkRepoSetData    {QStringLiteral("RepoSetData")};
+const QString OrnConst::pkRefreshCache   {QStringLiteral("RefreshCache")};

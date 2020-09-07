@@ -1,6 +1,7 @@
 #include "orncommentsmodel.h"
 #include "ornclient.h"
 #include "ornutils.h"
+#include "ornconst.h"
 
 #include <QNetworkReply>
 #include <QDebug>
@@ -43,14 +44,14 @@ OrnCommentsModel::OrnCommentsModel(QObject *parent)
                 {
                     return;
                 }
-                auto cid = OrnUtils::toUint(jsonObject[QStringLiteral("cid")]);
+                auto cid = OrnUtils::toUint(jsonObject[OrnConst::cid]);
                 auto size = mData.size();
                 for (size_t i = 0; i < size; ++i)
                 {
                     auto &comment = mData[i];
                     if (comment.commentId == cid)
                     {
-                        comment.text = OrnUtils::toString(jsonObject[QStringLiteral("text")]);
+                        comment.text = OrnUtils::toString(jsonObject[OrnConst::text]);
                         auto index = this->createIndex(int(i), 0);
                         emit this->dataChanged(index, index);
                         return;

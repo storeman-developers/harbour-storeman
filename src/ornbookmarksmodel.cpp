@@ -1,9 +1,15 @@
 #include "ornbookmarksmodel.h"
 #include "ornapplistitem.h"
 #include "ornclient.h"
+#include "ornconst.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
+
+QString compactResource(quint32 appid)
+{
+    return QStringLiteral("apps/%0/compact").arg(appid);
+}
 
 OrnBookmarksModel::OrnBookmarksModel(QObject *parent)
     : OrnAbstractAppsModel(false, parent)
@@ -20,7 +26,7 @@ OrnBookmarksModel::OrnBookmarksModel(QObject *parent)
 
         if (bookmarked)
         {
-            auto request = client->apiRequest(QStringLiteral("apps/%1/compact").arg(appId));
+            auto request = client->apiRequest(compactResource(appId));
             qDebug() << "Fetching data from" << request.url().toString();
             auto reply = client->networkAccessManager()->get(request);
             connect(reply, &QNetworkReply::finished, [this, client, reply, appId]()
@@ -71,11 +77,9 @@ void OrnBookmarksModel::fetchMore(const QModelIndex &parent)
     mFetching = true;
     emit this->fetchingChanged();
 
-    QString resourceTmpl(QStringLiteral("apps/%1/compact"));
-
     for (const auto &appid : bookmarks)
     {
-        auto request = client->apiRequest(resourceTmpl.arg(appid));
+        auto request = client->apiRequest(compactResource(appid));
         qDebug() << "Fetching data from" << request.url().toString();
         auto reply = client->networkAccessManager()->get(request);
         connect(reply, &QNetworkReply::finished, this,
@@ -89,7 +93,7 @@ void OrnBookmarksModel::fetchMore(const QModelIndex &parent)
             else
             {
                 QJsonObject badApp;
-                badApp.insert(QStringLiteral("appid"), QString::number(appid));
+                badApp.insert(OrnConst::appid, QString::number(appid));
                 mFetchedApps.append(badApp);
             }
             if (mFetchedApps.size() == size)

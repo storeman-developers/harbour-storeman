@@ -10,6 +10,12 @@
  */
 
 #include "storeman.h"
+#include "ornutils.h"
+#include "ornpm.h"
+#include "ornapplication.h"
+#include "ornrepo.h"
+#include "ornclient.h"
+#include "ornconst.h"
 
 #include <notification.h>
 #include <networkmanager.h>
@@ -22,23 +28,15 @@
 #include <QNetworkReply>
 #include <QVersionNumber>
 
-#include "ornutils.h"
-#include "ornpm.h"
-#include "ornapplication.h"
-#include "ornrepo.h"
-#include "ornclient.h"
-
-#define STOREMAN_AUTHOR QStringLiteral("osetr")
-
-#define MAINPAGE_SHOW_RECENT        QStringLiteral("mainpage/show_recent")
-#define MAINPAGE_ORDER              QStringLiteral("mainpage/order")
-#define UPDATES_INTERVAL            QStringLiteral("updates/interval")
-#define UPDATES_ENABLED             QStringLiteral("updates/enabled")
-#define UPDATES_SMART               QStringLiteral("updates/smart")
-#define UPDATES_SHOW_NOTIFICATION   QStringLiteral("updates/show_notification")
-#define UPDATES_LAST_CHECK          QStringLiteral("updates/last_check")
-#define REFRESH_CACHE_ENABLE        QStringLiteral("refresh_cache/enable")
-#define HINTS                       QStringLiteral("hints/")
+static const QString MAINPAGE_SHOW_RECENT     {QStringLiteral("mainpage/show_recent")};
+static const QString MAINPAGE_ORDER           {QStringLiteral("mainpage/order")};
+static const QString UPDATES_INTERVAL         {QStringLiteral("updates/interval")};
+static const QString UPDATES_ENABLED          {QStringLiteral("updates/enabled")};
+static const QString UPDATES_SMART            {QStringLiteral("updates/smart")};
+static const QString UPDATES_SHOW_NOTIFICATION{QStringLiteral("updates/show_notification")};
+static const QString UPDATES_LAST_CHECK       {QStringLiteral("updates/last_check")};
+static const QString REFRESH_CACHE_ENABLE     {QStringLiteral("refresh_cache/enable")};
+static const QString GROUP_HINTS              {QStringLiteral("hints")};
 
 
 Storeman::Storeman(QObject *parent)
@@ -217,20 +215,27 @@ bool Storeman::removeFile(const QString &filePath)
     return QFile::remove(filePath);
 }
 
-bool Storeman::showHint(Storeman::Hint hint) const
+QString hintKey(Storeman::Hint hint)
 {
-    auto me = QMetaEnum::fromType<Hint>();
+    auto me   = QMetaEnum::fromType<Storeman::Hint>();
     auto name = me.valueToKey(hint);
     Q_ASSERT(name);
-    return !mSettings->value(HINTS.append(name), false).toBool();
+    return QString::fromLatin1(name);
+}
+
+bool Storeman::showHint(Storeman::Hint hint) const
+{
+    mSettings->beginGroup(GROUP_HINTS);
+    auto value = mSettings->value(hintKey(hint), false).toBool();
+    mSettings->endGroup();
+    return !value;
 }
 
 void Storeman::setHintShowed(Storeman::Hint hint)
 {
-    auto me = QMetaEnum::fromType<Hint>();
-    auto name = me.valueToKey(hint);
-    Q_ASSERT(name);
-    mSettings->setValue(HINTS.append(name), true);
+    mSettings->beginGroup(GROUP_HINTS);
+    mSettings->setValue(hintKey(hint), true);
+    mSettings->endGroup();
 }
 
 OrnApplication *Storeman::cachedApp(quint32 appId)
@@ -272,7 +277,7 @@ void Storeman::refreshRepos()
                 auto json = QJsonDocument::fromJson(reply->readAll()).array();
                 if (!json.isEmpty())
                 {
-                    auto lastUpdate = OrnUtils::toUint(json[0].toObject()[QStringLiteral("updated")]);
+                    auto lastUpdate = OrnUtils::toUint(json[0].toObject()[OrnConst::updated]);
                     auto lastCheck = mSettings->value(UPDATES_LAST_CHECK).toLongLong();
                     if (qlonglong(lastUpdate) * 1000 > lastCheck)
                     {
@@ -329,7 +334,7 @@ inline Notification *previousNotification()
 
 void Storeman::onUpdatablePackagesChanged()
 {
-    QString key(QStringLiteral("updates/last_packages"));
+    QString key{QStringLiteral("updates/last_packages")};
     auto ornpm = OrnPm::instance();    
     auto prev = previousNotification();
 
@@ -387,7 +392,7 @@ void Storeman::startUpdatesTimer()
 
 void Storeman::checkSystemVersion()
 {
-    QString key(QStringLiteral("refresh_cache/os_version"));
+    QString key{QStringLiteral("refresh_cache/os_version")};
 
     auto lastVersion = QVersionNumber::fromString(mSettings->value(key).toString());
     auto version     = OrnUtils::systemVersion();
@@ -416,7 +421,7 @@ void Storeman::checkRepos()
 void Storeman::checkReposImpl()
 {
     auto repos = OrnPm::instance()->repoList();
-    QString author(STOREMAN_AUTHOR);
+    QString author{QStringLiteral("osetr")};
     auto it = std::find_if(repos.begin(), repos.end(), [author](const OrnRepo &repo)
     {
         return (repo.author == author);

@@ -1,31 +1,5 @@
 #pragma once
 
-#define SSU_CONFIG_PATH        QStringLiteral("/etc/ssu/ssu.ini")
-#define SSU_REPOS_GROUP        QStringLiteral("repository-urls")
-#define SSU_DISABLED_KEY       QStringLiteral("disabled-repos")
-
-#define SSU_SERVICE            QStringLiteral("org.nemo.ssu")
-#define SSU_PATH               QStringLiteral("/org/nemo/ssu")
-#define SSU_METHOD_ADDREPO     "addRepo"
-#define SSU_METHOD_MODIFYREPO  "modifyRepo"
-
-#define PK_SERVICE      QStringLiteral("org.freedesktop.PackageKit")
-#define PK_PATH         QStringLiteral("/org/freedesktop/PackageKit")
-#define PK_TR_INTERFACE QStringLiteral("org.freedesktop.PackageKit.Transaction")
-
-#define PK_METHOD_GETUPDATES        "GetUpdates"
-#define PK_METHOD_INSTALLPACKAGES   "InstallPackages"
-#define PK_METHOD_INSTALLFILES      "InstallFiles"
-#define PK_METHOD_REMOVEPACKAGES    "RemovePackages"
-#define PK_METHOD_REPOSETDATA       "RepoSetData"
-#define PK_METHOD_RESOLVE           "Resolve"
-#define PK_METHOD_REFRESHCACHE      "RefreshCache"
-
-#define PK_FLAG_NONE  quint64(0)
-
-#define REPO_URL_TMPL  QStringLiteral("https://sailfish.openrepos.net/%0/personal/main")
-
-
 #include "ornpm.h"
 #include "orninstalledpackage.h"
 
@@ -35,6 +9,8 @@
 #include <QtDBus/QDBusInterface>
 #include <QtDBus/QDBusPendingCallWatcher>
 
+
+#define PK_FLAG_NONE  quint64(0)
 
 class OrnPmPrivate : public QObjectPrivate
 {

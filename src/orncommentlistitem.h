@@ -6,7 +6,7 @@ class QJsonObject;
 
 struct OrnCommentListItem
 {
-    OrnCommentListItem(const QJsonObject &jsonObject);
+    OrnCommentListItem(const QJsonObject &data);
 
     quint32 commentId;
     quint32 parentId;

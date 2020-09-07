@@ -60,7 +60,7 @@ public:
     bool isPublisher() const;
     quint32 userId() const;
     QString userName() const;
-    QString userIconSource() const;
+    QString userIconSource();
 
     Q_INVOKABLE QList<quint32> bookmarks() const;
     Q_INVOKABLE bool hasBookmark(quint32 appId) const;

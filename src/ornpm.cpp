@@ -2,6 +2,7 @@
 #include "ornpackageversion.h"
 #include "ornrepo.h"
 #include "ornutils.h"
+#include "ornconst.h"
 
 #include <solv/repo_solv.h>
 #include <connman-qt5/networkmanager.h>
@@ -39,12 +40,16 @@ OrnPm::OrnPm(QObject *parent)
 
     auto bus = QDBusConnection::systemBus();
 
-    QString service(SSU_SERVICE);
-    d->ssuInterface = new QDBusInterface(service, SSU_PATH, service, bus, this);
+    QString service{QStringLiteral("org.nemo.ssu")};
+    d->ssuInterface = new QDBusInterface(service, QStringLiteral("/org/nemo/ssu"), service, bus, this);
 
-    service = PK_SERVICE;
-    d->pkInterface = new QDBusInterface(service, PK_PATH, service, bus, this);
+    d->pkInterface = new QDBusInterface(OrnConst::pkService, QStringLiteral("/org/freedesktop/PackageKit"), OrnConst::pkService, bus, this);
     QObject::connect(d->pkInterface, SIGNAL(UpdatesChanged()), this, SLOT(getUpdates()));
+}
+
+QString OrnPm::repoUrl(const QString &author)
+{
+    return QStringLiteral("https://sailfish.openrepos.net/%0/personal/main").arg(author);
 }
 
 OrnPm *OrnPm::instance()
@@ -73,13 +78,13 @@ void OrnPmPrivate::initialise()
     qDebug() << "Getting the list of ORN repositories";
 
     // NOTE: A hack for SSU repos. Can break on ssu config changes.
-    QSettings ssuSettings(SSU_CONFIG_PATH, QSettings::IniFormat);
+    QSettings ssuSettings(QStringLiteral("/etc/ssu/ssu.ini"), QSettings::IniFormat);
 
     archs << ssuSettings.value(QStringLiteral("arch")).toString()
           << QStringLiteral("noarch");
 
-    auto disabled = ssuSettings.value(SSU_DISABLED_KEY).toStringList().toSet();
-    ssuSettings.beginGroup(SSU_REPOS_GROUP);
+    auto disabled = ssuSettings.value(QStringLiteral("disabled-repos")).toStringList().toSet();
+    ssuSettings.beginGroup(QStringLiteral("repository-urls"));
     auto aliases = ssuSettings.childKeys();
 
     for (const auto &alias : aliases)
@@ -95,7 +100,7 @@ void OrnPmPrivate::initialise()
 
     qDebug() << "Getting the list of installed packages";
     auto spool = pool_create();
-    auto srepo = repo_create(spool, "installed");
+    auto srepo = repo_create(spool, OrnConst::installed.toLatin1().data());
 
     auto systemSolv = solvPathTmpl.arg(QStringLiteral("@System"));
     auto sfile = fopen(systemSolv.toUtf8().data(), "r");
@@ -113,11 +118,13 @@ void OrnPmPrivate::initialise()
     for (int i = 0; i < spool->nsolvables; ++i)
     {
         auto s = &spool->solvables[i];
-        QString name(solvable_lookup_str(s, SOLVABLE_NAME));
+        auto name = QString::fromLatin1(solvable_lookup_str(s, SOLVABLE_NAME));
         if (name.size() > 0)
         {
             auto id = QStringLiteral("%1;%2;%3;installed").arg(
-                        name, solvable_lookup_str(s, SOLVABLE_EVR), solvable_lookup_str(s, SOLVABLE_ARCH));
+                        name,
+                        QLatin1String{solvable_lookup_str(s, SOLVABLE_EVR)},
+                        QLatin1String{solvable_lookup_str(s, SOLVABLE_ARCH)});
             installedPackages.insert(name, id);
         }
     }
@@ -141,12 +148,14 @@ QVariantList OrnPm::operations() const
 {
     Q_D(const OrnPm);
 
+    QString item     {QStringLiteral("item")};
+    QString operation{QStringLiteral("operation")};
     QVariantList res;
     for (auto op = d->operations.cbegin(); op != d->operations.cend(); ++op)
     {
         res << QVariantMap{
-            { QStringLiteral("item"),      op.key() },
-            { QStringLiteral("operation"), op.value() }
+            {item,      op.key()},
+            {operation, op.value()}
         };
     }
     return res;
@@ -225,9 +234,9 @@ QDBusInterface *OrnPmPrivate::transaction(const QString &item)
     Q_ASSERT_X(reply.type() != QDBusMessage::ErrorMessage, Q_FUNC_INFO,
                qPrintable(reply.errorName().append(": ").append(reply.errorMessage())));
 
-    auto t = new QDBusInterface(PK_SERVICE,
+    auto t = new QDBusInterface(OrnConst::pkService,
                                 qvariant_cast<QDBusObjectPath>(reply.arguments().first()).path(),
-                                PK_TR_INTERFACE,
+                                QStringLiteral("org.freedesktop.PackageKit.Transaction"),
                                 QDBusConnection::systemBus(),
                                 q);
     Q_ASSERT(t->isValid());
@@ -292,15 +301,14 @@ void OrnPmPrivate::preparePackageVersions(const QString &packageName)
     for (int i = 0; i < spool->nsolvables && versions.isEmpty(); ++i)
     {
         auto s = &spool->solvables[i];
-        QString name(solvable_lookup_str(s, SOLVABLE_NAME));
-        if (name == packageName)
+        if (packageName == QLatin1String(solvable_lookup_str(s, SOLVABLE_NAME)))
         {
             versions << OrnPackageVersion(
                             0,
                             solvable_lookup_num(s, SOLVABLE_INSTALLSIZE, 0),
-                            solvable_lookup_str(s, SOLVABLE_EVR),
-                            solvable_lookup_str(s, SOLVABLE_ARCH),
-                            QStringLiteral("installed"));
+                            QString::fromLatin1(solvable_lookup_str(s, SOLVABLE_EVR)),
+                            QString::fromLatin1(solvable_lookup_str(s, SOLVABLE_ARCH)),
+                            OrnConst::installed);
         }
     }
     repo_free(srepo, 0);
@@ -327,15 +335,15 @@ void OrnPmPrivate::preparePackageVersions(const QString &packageName)
             for (int i = 0; i < spool->nsolvables; ++i)
             {
                 auto s = &spool->solvables[i];
-                if (packageName == solvable_lookup_str(s, SOLVABLE_NAME))
+                if (packageName == QLatin1String(solvable_lookup_str(s, SOLVABLE_NAME)))
                 {
-                    QString arch = solvable_lookup_str(s, SOLVABLE_ARCH);
+                    auto arch = QString::fromLatin1(solvable_lookup_str(s, SOLVABLE_ARCH));
                     if (archs.contains(arch))
                     {
                         versions << OrnPackageVersion(
                                         solvable_lookup_num(s, SOLVABLE_DOWNLOADSIZE, 0),
                                         solvable_lookup_num(s, SOLVABLE_INSTALLSIZE, 0),
-                                        solvable_lookup_str(s, SOLVABLE_EVR),
+                                        QString::fromLatin1(solvable_lookup_str(s, SOLVABLE_EVR)),
                                         arch,
                                         alias);
                     }
@@ -362,9 +370,10 @@ void OrnPm::installPackage(const QString &packageId)
     auto t = d->transaction(packageId);
     connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(onPackageInstalled(quint32,quint32)));
     QStringList ids(packageId);
-    qDebug().nospace() << "Calling " << t << "->" PK_METHOD_INSTALLPACKAGES "(" << PK_FLAG_NONE << ", " << ids << ")";
+    qDebug().nospace().noquote()
+            << "Calling " << t << "->" << OrnConst::pkInstallPackages << "(" << PK_FLAG_NONE << ", " << ids << ")";
     emit this->packageStatusChanged(OrnUtils::packageName(packageId), OrnPm::PackageInstalling);
-    t->asyncCall(QStringLiteral(PK_METHOD_INSTALLPACKAGES), PK_FLAG_NONE, ids);
+    t->asyncCall(OrnConst::pkInstallPackages, PK_FLAG_NONE, ids);
 }
 
 void OrnPm::installFile(const QString &packageFile)
@@ -375,9 +384,10 @@ void OrnPm::installFile(const QString &packageFile)
 
     auto t = d->transaction();
     connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(onPackageInstalled(quint32,quint32)));
-    QStringList files(packageFile);
-    qDebug().nospace() << "Calling " << t << "->" PK_METHOD_INSTALLFILES "(" << PK_FLAG_NONE << ", " << files << ")";
-    t->asyncCall(QStringLiteral(PK_METHOD_INSTALLFILES), PK_FLAG_NONE, files);
+    QString method{QStringLiteral("InstallFiles")};
+    QStringList files(packageFile);    
+    qDebug().nospace().noquote() << "Calling " << t << "->" << method << "(" << PK_FLAG_NONE << ", " << files << ")";
+    t->asyncCall(method, PK_FLAG_NONE, files);
 }
 
 void OrnPm::removePackage(const QString &packageId, bool autoremove)
@@ -388,11 +398,13 @@ void OrnPm::removePackage(const QString &packageId, bool autoremove)
 
     auto t = d->transaction(packageId);
     connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(onPackageRemoved(quint32,quint32)));
+    QString method{QStringLiteral("RemovePackages")};
     QStringList ids(packageId);
-    qDebug().nospace() << "Calling " << t << "->" PK_METHOD_REMOVEPACKAGES "("
-                       << PK_FLAG_NONE << ", " << ids << ", false, " << autoremove << ")";
+    qDebug().nospace().noquote()
+            << "Calling " << t << "->" << method << "("
+            << PK_FLAG_NONE << ", " << ids << ", false, " << autoremove << ")";
     emit this->packageStatusChanged(OrnUtils::packageName(packageId), OrnPm::PackageRemoving);
-    t->asyncCall(QStringLiteral(PK_METHOD_REMOVEPACKAGES), PK_FLAG_NONE, ids, false, autoremove);
+    t->asyncCall(method, PK_FLAG_NONE, ids, false, autoremove);
 }
 
 void OrnPm::updatePackage(const QString &packageName)
@@ -411,9 +423,10 @@ void OrnPm::updatePackage(const QString &packageName)
     auto t = d->transaction(packageId);
     connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(onPackageUpdated(quint32,quint32)));
     QStringList ids(packageId);
-    qDebug().nospace() << "Calling " << t << "->" PK_METHOD_INSTALLPACKAGES "(" << PK_FLAG_NONE << ", " << ids << ")";
+    qDebug().nospace().noquote()
+            << "Calling " << t << "->" << OrnConst::pkInstallPackages << "(" << PK_FLAG_NONE << ", " << ids << ")";
     emit this->packageStatusChanged(packageName, OrnPm::PackageUpdating);
-    t->asyncCall(QStringLiteral(PK_METHOD_INSTALLPACKAGES), PK_FLAG_NONE, ids);
+    t->asyncCall(OrnConst::pkInstallPackages, PK_FLAG_NONE, ids);
 }
 
 void OrnPm::addRepo(const QString &author)
@@ -425,11 +438,12 @@ void OrnPm::addRepo(const QString &author)
 
     auto repoAlias = repoNamePrefix + author;
     SET_OPERATION_ITEM(AddingRepo, repoAlias);
-    auto url = REPO_URL_TMPL.arg(author);
-    qDebug().nospace() << "Calling " << d->ssuInterface << "->" SSU_METHOD_ADDREPO "("
-                       << repoAlias << ", " << url << ")";
+    auto url = OrnPm::repoUrl(author);
+    qDebug().nospace().noquote()
+            << "Calling " << d->ssuInterface << "->" << OrnConst::ssuAddRepo
+            << "(\"" << repoAlias << "\", \"" << url << "\")";
     auto watcher = new QDBusPendingCallWatcher(
-                d->ssuInterface->asyncCall(QStringLiteral(SSU_METHOD_ADDREPO), repoAlias, url));
+                d->ssuInterface->asyncCall(OrnConst::ssuAddRepo, repoAlias, url));
     connect(watcher, &QDBusPendingCallWatcher::finished, [this, watcher, repoAlias]()
     {
         this->d_func()->onRepoModified(repoAlias, AddRepo);
@@ -459,10 +473,11 @@ void OrnPm::modifyRepo(const QString &repoAlias, OrnPm::RepoAction action)
     }
     SET_OPERATION_ITEM(op, repoAlias);
 
-    qDebug().nospace() << "Calling " << d->ssuInterface << "->" SSU_METHOD_MODIFYREPO "("
-                       << action << ", " << repoAlias << ")";
+    qDebug().nospace().noquote()
+            << "Calling " << d->ssuInterface << "->" << OrnConst::ssuModifyRepo
+            << "(" << action << ", \"" << repoAlias << "\")";
     auto watcher = new QDBusPendingCallWatcher(
-                d->ssuInterface->asyncCall(QStringLiteral(SSU_METHOD_MODIFYREPO), action, repoAlias));
+                d->ssuInterface->asyncCall(OrnConst::ssuModifyRepo, action, repoAlias));
     connect(watcher, &QDBusPendingCallWatcher::finished, [this, watcher, repoAlias, action]()
     {
         this->d_func()->onRepoModified(repoAlias, action);
@@ -499,7 +514,6 @@ bool OrnPmPrivate::enableRepos(bool enable)
 
     CHECK_NETWORK(false);
     qDebug() << (enable ? "Enabling" : "Disabling") << "all repositories";
-    QString method(QStringLiteral(SSU_METHOD_MODIFYREPO));
 
     auto action  = enable ? OrnPm::EnableRepo : OrnPm::DisableRepo;
     bool refresh = false;
@@ -508,7 +522,7 @@ bool OrnPmPrivate::enableRepos(bool enable)
     {
         if (*it != enable)
         {
-            ssuInterface->call(method, action, it.key());
+            ssuInterface->call(OrnConst::ssuModifyRepo, action, it.key());
             *it = enable;
             refresh = true;
         }
@@ -531,11 +545,10 @@ void OrnPmPrivate::removeAllRepos()
     Q_Q(OrnPm);
 
     qDebug() <<"Removing all repositories";
-    QString method(QStringLiteral(SSU_METHOD_MODIFYREPO));
 
     for (auto it = repos.begin(); it != repos.end(); ++it)
     {
-        ssuInterface->call(method, OrnPm::RemoveRepo, it.key());
+        ssuInterface->call(OrnConst::ssuModifyRepo, OrnPm::RemoveRepo, it.key());
     }
     repos.clear();
     updatablePackages.clear();
@@ -574,10 +587,10 @@ void OrnPmPrivate::onRepoModified(const QString &repoAlias, OrnPm::RepoAction ac
         operations[repoAlias] = OrnPm::RefreshingRepo;
         emit q->operationsChanged();
         auto t = this->transaction();
-        qDebug().nospace() << "Calling " << t << "->" PK_METHOD_REPOSETDATA "("
-                           << repoAlias << ", \"refresh-now\", false)";
-        t->asyncCall(QStringLiteral(PK_METHOD_REPOSETDATA), repoAlias,
-                     QStringLiteral("refresh-now"), QStringLiteral("false"));
+        qDebug().nospace().noquote()
+                << "Calling " << t << "->" << OrnConst::pkRepoSetData
+                << "(\"" << repoAlias << "\", \"refresh-now\", false)";
+        t->asyncCall(OrnConst::pkRepoSetData, repoAlias, "refresh-now", "false");
         QObject::connect(t, &QDBusInterface::destroyed, [this, repoAlias, action]()
         {
             Q_Q(OrnPm);
@@ -611,7 +624,7 @@ void OrnPm::refreshRepo(const QString &repoAlias, bool force)
     });
     qDebug().nospace() << "Calling " << t << "->RepoSetData(" << repoAlias
                        << ", \"refresh-now\", " << (force ? "true" : "false") << ")";
-    t->asyncCall(QStringLiteral("RepoSetData"), repoAlias, QStringLiteral("refresh-now"), OrnUtils::stringify(force));
+    t->asyncCall("RepoSetData", repoAlias, "refresh-now", OrnUtils::stringify(force));
 }
 
 void OrnPm::refreshRepos(bool force)
@@ -651,7 +664,7 @@ void OrnPm::refreshCache(bool force)
 
     CHECK_NETWORK();
 
-    QString name(QStringLiteral("__orn_refreshing_cache"));
+    QString name{QStringLiteral("__orn_refreshing_cache")};
 
     SET_OPERATION_ITEM(OrnPm::RefreshingCache, name);
 
@@ -661,8 +674,9 @@ void OrnPm::refreshCache(bool force)
         this->d_func()->operations.remove(name);
         emit this->operationsChanged();
     });
-    qDebug().nospace() << "Calling " << t << "->" PK_METHOD_REFRESHCACHE "(" << (force ? "true" : "false") << ")";
-    t->asyncCall(QStringLiteral(PK_METHOD_REFRESHCACHE), force);
+    qDebug().nospace().noquote()
+            << "Calling " << t << "->" << OrnConst::pkRefreshCache << "(" << OrnUtils::stringify(force) << ")";
+    t->asyncCall(OrnConst::pkRefreshCache, force);
 }
 
 QList<OrnRepo> OrnPm::repoList() const
@@ -710,7 +724,7 @@ OrnInstalledPackageList OrnPmPrivate::prepareInstalledPackages(const QString &pa
     qDebug() << "Preparing installed packages list";
 
     // Prepare vars for parsing desktop files
-    QString nameKey(QStringLiteral("Desktop Entry/Name"));
+    QString nameKey{QStringLiteral("Desktop Entry/Name")};
     auto trNameKey = QString(nameKey).append("[%0]");
     auto localeName = QLocale::system().name();
     auto localeNameKey = trNameKey.arg(localeName);
@@ -719,7 +733,7 @@ OrnInstalledPackageList OrnPmPrivate::prepareInstalledPackages(const QString &pa
     {
         langNameKey = trNameKey.arg(localeName.left(2));
     }
-    QString iconKey(QStringLiteral("Desktop Entry/Icon"));
+    QString iconKey{QStringLiteral("Desktop Entry/Icon")};
     QStringList iconPaths = {
         QStringLiteral("/usr/share/icons/hicolor/86x86/apps/%0.png"),
         QStringLiteral("/usr/share/icons/hicolor/108x108/apps/%0.png"),
@@ -752,7 +766,7 @@ OrnInstalledPackageList OrnPmPrivate::prepareInstalledPackages(const QString &pa
             for (int i = 0; i < spool->nsolvables; ++i)
             {
                 auto s = &spool->solvables[i];
-                ornPackages.insert(solvable_lookup_str(s, SOLVABLE_NAME));
+                ornPackages.insert(QString::fromLatin1(solvable_lookup_str(s, SOLVABLE_NAME)));
             }
             fclose(sfile);
             repo_free(srepo, 0);
@@ -843,8 +857,9 @@ void OrnPmPrivate::getUpdates()
     auto t = this->transaction();
     QObject::connect(t, SIGNAL(Package(quint32,QString,QString)), q, SLOT(onPackageUpdate(quint32,QString,QString)));
     QObject::connect(t, SIGNAL(Finished(quint32,quint32)), q, SLOT(onGetUpdatesFinished(quint32,quint32)));
-    qDebug().nospace() << "Calling " << t << "->" PK_METHOD_GETUPDATES "(" << PK_FLAG_NONE << ")";
-    t->asyncCall(QStringLiteral(PK_METHOD_GETUPDATES), PK_FLAG_NONE);
+    QString method{QStringLiteral("GetUpdates")};
+    qDebug().nospace().noquote() << "Calling " << t << "->" << method << "(" << PK_FLAG_NONE << ")";
+    t->asyncCall(method, PK_FLAG_NONE);
 }
 
 void OrnPmPrivate::onPackageUpdate(quint32 info, const QString &packageId, const QString &summary)
@@ -1010,9 +1025,10 @@ void OrnPmPrivate::refreshNextRepo(quint32 exit, quint32 runtime)
         });
         operations.insert(alias, OrnPm::RefreshingRepo);
         emit q->operationsChanged();
-        qDebug().nospace() << "Calling " << t << "->" PK_METHOD_REPOSETDATA "("
-                           << alias << ", \"refresh-now\", " << forceRefresh << ")";
-        t->asyncCall(QStringLiteral(PK_METHOD_REPOSETDATA), alias, QStringLiteral("refresh-now"), forceRefresh);
+        qDebug().nospace().noquote()
+                << "Calling " << t << "->" << OrnConst::pkRepoSetData
+                << "(\"" << alias << "\", \"refresh-now\", " << forceRefresh << ")";
+        t->asyncCall(OrnConst::pkRepoSetData, alias, "refresh-now", forceRefresh);
     }
 }
 

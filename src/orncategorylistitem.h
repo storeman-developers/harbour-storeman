@@ -9,7 +9,7 @@ struct OrnCategoryListItem
 {
     friend class OrnCategoriesModel;
 
-    OrnCategoryListItem(const QJsonObject &jsonObject);
+    OrnCategoryListItem(const QJsonObject &data);
 
     static QString categoryName(quint32 tid);
 
