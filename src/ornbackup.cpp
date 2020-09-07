@@ -300,7 +300,7 @@ void OrnBackup::pRestore(const QString &filePath)
         for (const auto &author : repos)
         {
             auto alias = OrnPm::repoNamePrefix + author;
-            ornpm_p->ssuInterface->call(QDBus::Block, OrnConst::ssuAddRepo, alias, OrnPm::repoUrl(author));
+            ornpm_p->ssuInterface->addRepo(alias, OrnPm::repoUrl(author));
             ornpm_p->repos.insert(alias, !disabled.contains(author));
         }
     }

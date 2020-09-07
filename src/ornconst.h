@@ -42,10 +42,7 @@ struct OrnConst {
     static const QString url;
     static const QString user;
     static const QString userVote;
-    static const QString value;    
-
-    static const QString ssuAddRepo;
-    static const QString ssuModifyRepo;
+    static const QString value;
 
     static const QString pkService;
     static const QString pkInstallPackages;

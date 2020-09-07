@@ -40,8 +40,7 @@ OrnPm::OrnPm(QObject *parent)
 
     auto bus = QDBusConnection::systemBus();
 
-    QString service{QStringLiteral("org.nemo.ssu")};
-    d->ssuInterface = new QDBusInterface(service, QStringLiteral("/org/nemo/ssu"), service, bus, this);
+    d->ssuInterface = new SsuInterface(this);
 
     d->pkInterface = new QDBusInterface(OrnConst::pkService, QStringLiteral("/org/freedesktop/PackageKit"), OrnConst::pkService, bus, this);
     QObject::connect(d->pkInterface, SIGNAL(UpdatesChanged()), this, SLOT(getUpdates()));
@@ -436,22 +435,18 @@ void OrnPm::addRepo(const QString &author)
     CHECK_NETWORK();
     CHECK_INITIALISED();
 
-    auto repoAlias = repoNamePrefix + author;
-    SET_OPERATION_ITEM(AddingRepo, repoAlias);
-    auto url = OrnPm::repoUrl(author);
-    qDebug().nospace().noquote()
-            << "Calling " << d->ssuInterface << "->" << OrnConst::ssuAddRepo
-            << "(\"" << repoAlias << "\", \"" << url << "\")";
-    auto watcher = new QDBusPendingCallWatcher(
-                d->ssuInterface->asyncCall(OrnConst::ssuAddRepo, repoAlias, url));
-    connect(watcher, &QDBusPendingCallWatcher::finished, [this, watcher, repoAlias]()
+    auto alias   = repoNamePrefix + author;
+    SET_OPERATION_ITEM(AddingRepo, alias);
+    auto url     = OrnPm::repoUrl(author);
+    auto watcher = d->ssuInterface->addRepoAsync(alias, url);
+    connect(watcher, &QDBusPendingCallWatcher::finished, [this, watcher, alias]()
     {
-        this->d_func()->onRepoModified(repoAlias, AddRepo);
+        this->d_func()->onRepoModified(alias, AddRepo);
         watcher->deleteLater();
     });
 }
 
-void OrnPm::modifyRepo(const QString &repoAlias, OrnPm::RepoAction action)
+void OrnPm::modifyRepo(const QString &alias, OrnPm::RepoAction action)
 {
     Q_D(OrnPm);
 
@@ -471,16 +466,12 @@ void OrnPm::modifyRepo(const QString &repoAlias, OrnPm::RepoAction action)
     default:
         Q_UNREACHABLE();
     }
-    SET_OPERATION_ITEM(op, repoAlias);
+    SET_OPERATION_ITEM(op, alias);
 
-    qDebug().nospace().noquote()
-            << "Calling " << d->ssuInterface << "->" << OrnConst::ssuModifyRepo
-            << "(" << action << ", \"" << repoAlias << "\")";
-    auto watcher = new QDBusPendingCallWatcher(
-                d->ssuInterface->asyncCall(OrnConst::ssuModifyRepo, action, repoAlias));
-    connect(watcher, &QDBusPendingCallWatcher::finished, [this, watcher, repoAlias, action]()
+    auto watcher = d->ssuInterface->modifyRepoAsync(action, alias);
+    connect(watcher, &QDBusPendingCallWatcher::finished, [this, watcher, alias, action]()
     {
-        this->d_func()->onRepoModified(repoAlias, action);
+        this->d_func()->onRepoModified(alias, action);
         watcher->deleteLater();
     });
 }
@@ -522,7 +513,7 @@ bool OrnPmPrivate::enableRepos(bool enable)
     {
         if (*it != enable)
         {
-            ssuInterface->call(OrnConst::ssuModifyRepo, action, it.key());
+            ssuInterface->modifyRepo(action, it.key());
             *it = enable;
             refresh = true;
         }
@@ -548,7 +539,7 @@ void OrnPmPrivate::removeAllRepos()
 
     for (auto it = repos.begin(); it != repos.end(); ++it)
     {
-        ssuInterface->call(OrnConst::ssuModifyRepo, OrnPm::RemoveRepo, it.key());
+        ssuInterface->modifyRepo(OrnPm::RemoveRepo, it.key());
     }
     repos.clear();
     updatablePackages.clear();
@@ -610,21 +601,21 @@ void OrnPmPrivate::onRepoModified(const QString &repoAlias, OrnPm::RepoAction ac
     }
 }
 
-void OrnPm::refreshRepo(const QString &repoAlias, bool force)
+void OrnPm::refreshRepo(const QString &alias, bool force)
 {
     Q_D(OrnPm);
 
     CHECK_NETWORK();
-    SET_OPERATION_ITEM(RefreshingRepo, repoAlias);
+    SET_OPERATION_ITEM(RefreshingRepo, alias);
     auto t = d->transaction();
-    connect(t, &QDBusInterface::destroyed, [this, repoAlias]()
+    connect(t, &QDBusInterface::destroyed, [this, alias]()
     {
-        this->d_func()->operations.remove(repoAlias);
+        this->d_func()->operations.remove(alias);
         emit this->operationsChanged();
     });
-    qDebug().nospace() << "Calling " << t << "->RepoSetData(" << repoAlias
+    qDebug().nospace() << "Calling " << t << "->RepoSetData(" << alias
                        << ", \"refresh-now\", " << (force ? "true" : "false") << ")";
-    t->asyncCall("RepoSetData", repoAlias, "refresh-now", OrnUtils::stringify(force));
+    t->asyncCall("RepoSetData", alias, "refresh-now", OrnUtils::stringify(force));
 }
 
 void OrnPm::refreshRepos(bool force)

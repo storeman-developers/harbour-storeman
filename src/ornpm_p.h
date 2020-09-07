@@ -2,6 +2,7 @@
 
 #include "ornpm.h"
 #include "orninstalledpackage.h"
+#include "ssuinterface.h"
 
 #include <private/qobject_p.h>
 #include <QSet>
@@ -53,7 +54,7 @@ public:
 #endif
     QString         solvPathTmpl;
     StringSet       archs;
-    QDBusInterface  *ssuInterface{nullptr};
+    SsuInterface    *ssuInterface{nullptr};
     QDBusInterface  *pkInterface{nullptr};
     RepoHash        repos;
     StringHash      installedPackages;

@@ -41,9 +41,6 @@ const QString OrnConst::user           {QStringLiteral("user")};
 const QString OrnConst::userVote       {QStringLiteral("user_vote")};
 const QString OrnConst::value          {QStringLiteral("value")};
 
-const QString OrnConst::ssuAddRepo     {QStringLiteral("addRepo")};
-const QString OrnConst::ssuModifyRepo  {QStringLiteral("modifyRepo")};
-
 const QString OrnConst::pkService        {QStringLiteral("org.freedesktop.PackageKit")};
 const QString OrnConst::pkInstallPackages{QStringLiteral("InstallPackages")};
 const QString OrnConst::pkRepoSetData    {QStringLiteral("RepoSetData")};

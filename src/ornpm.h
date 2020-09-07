@@ -145,18 +145,18 @@ public slots:
 
     // SSU repo actions
 signals:
-    void repoModified(const QString &repoAlias, OrnPm::RepoAction action);
+    void repoModified(const QString &alias, OrnPm::RepoAction action);
     void enableReposFinished();
     void removeAllReposFinished();
 public slots:
     void addRepo(const QString &author);
-    void modifyRepo(const QString &repoAlias, OrnPm::RepoAction action);
+    void modifyRepo(const QString &alias, OrnPm::RepoAction action);
     void enableRepos(bool enable);
     void removeAllRepos();
 
     // Refresh repos
 public slots:
-    void refreshRepo(const QString &repoAlias, bool force = false);
+    void refreshRepo(const QString &alias, bool force = false);
     void refreshRepos(bool force = false);
     void refreshCache(bool force = false);
 
