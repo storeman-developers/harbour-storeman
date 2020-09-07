@@ -40,8 +40,3 @@ const QString OrnConst::url            {QStringLiteral("url")};
 const QString OrnConst::user           {QStringLiteral("user")};
 const QString OrnConst::userVote       {QStringLiteral("user_vote")};
 const QString OrnConst::value          {QStringLiteral("value")};
-
-const QString OrnConst::pkService        {QStringLiteral("org.freedesktop.PackageKit")};
-const QString OrnConst::pkInstallPackages{QStringLiteral("InstallPackages")};
-const QString OrnConst::pkRepoSetData    {QStringLiteral("RepoSetData")};
-const QString OrnConst::pkRefreshCache   {QStringLiteral("RefreshCache")};

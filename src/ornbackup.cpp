@@ -1,11 +1,11 @@
 #include "ornbackup.h"
+#include "ornconst.h"
 #include "ornpm.h"
 #include "ornpm_p.h"
+#include "ornutils.h"
 #include "ornpackageversion.h"
 #include "ornclient.h"
 #include "ornclient_p.h"
-#include "ornutils.h"
-#include "ornconst.h"
 
 #include <QFileInfo>
 #include <QSettings>
@@ -126,12 +126,8 @@ void OrnBackup::pSearchPackages()
 
     auto t = OrnPm::instance()->d_func()->transaction();
     connect(t, SIGNAL(Package(quint32,QString,QString)), this, SLOT(pAddPackage(quint32,QString,QString)));
-    connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(pInstallPackages()));
-    QString method{QStringLiteral("Resolve")};
-    qDebug().nospace().noquote()
-            << "Calling " << t << "->" << method << "("
-            << PK_FLAG_NONE << ", " << mNamesToSearch << ")";
-    t->asyncCall(method, PK_FLAG_NONE, mNamesToSearch);
+    connect(t, SIGNAL(Finished(quint32,quint32)),        this, SLOT(pInstallPackages()));
+    t->resolve(mNamesToSearch);
 }
 
 void OrnBackup::pAddPackage(quint32 info, const QString &packageId, const QString &summary)
@@ -190,10 +186,7 @@ void OrnBackup::pInstallPackages()
         this->setStatus(InstallingPackages);
         auto t = OrnPm::instance()->d_func()->transaction();
         connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(pFinishRestore()));
-        qDebug().nospace().noquote()
-                << "Calling " << t << "->" << OrnConst::pkInstallPackages << "("
-                << PK_FLAG_NONE << ", " << ids << ")";
-        t->call(OrnConst::pkInstallPackages, PK_FLAG_NONE, ids);
+        t->installPackages(ids);
     }
 }
 
@@ -315,9 +308,7 @@ void OrnBackup::pRefreshRepos()
         this->setStatus(RefreshingRepos);
         auto t = OrnPm::instance()->d_func()->transaction();
         connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(pSearchPackages()));
-        qDebug().nospace().noquote()
-                << "Calling " << t << "->" << OrnConst::pkRefreshCache << "(false)";
-        t->asyncCall(OrnConst::pkRefreshCache, false);
+        t->refreshCache();
     }
     else
     {

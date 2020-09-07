@@ -2,13 +2,12 @@
 
 #include "ornpm.h"
 #include "orninstalledpackage.h"
+#include "pkinterface.h"
+#include "pktransactioninterface.h"
 #include "ssuinterface.h"
 
 #include <private/qobject_p.h>
 #include <QSet>
-#include <QtDBus/QDBusConnection>
-#include <QtDBus/QDBusInterface>
-#include <QtDBus/QDBusPendingCallWatcher>
 
 
 #define PK_FLAG_NONE  quint64(0)
@@ -23,11 +22,11 @@ public:
     ~OrnPmPrivate() override = default;
 
     void initialise();
-    QDBusInterface *transaction(const QString &item = QString());
+    PkTransactionInterface *transaction(const QString &item = QString());
     void preparePackageVersions(const QString &packageName);
     bool enableRepos(bool enable);
     void removeAllRepos();
-    void onRepoModified(const QString &repoAlias, OrnPm::RepoAction action);
+    void onRepoModified(const QString &alias, OrnPm::RepoAction action);
     OrnInstalledPackageList prepareInstalledPackages(const QString &packageName);
 
     // Check for updates
@@ -55,7 +54,7 @@ public:
     QString         solvPathTmpl;
     StringSet       archs;
     SsuInterface    *ssuInterface{nullptr};
-    QDBusInterface  *pkInterface{nullptr};
+    PkInterface     *pkInterface{nullptr};
     RepoHash        repos;
     StringHash      installedPackages;
     StringHash      updatablePackages;

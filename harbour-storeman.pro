@@ -37,6 +37,8 @@ SOURCES += \
     src/harbour-storeman.cpp \
     src/networkaccessmanagerfactory.cpp \
     src/ornsecrets.cpp \
+    src/pkinterface.cpp \
+    src/pktransactioninterface.cpp \
     src/ssuinterface.cpp \
     src/storeman.cpp \
     src/ornconst.cpp \
@@ -68,6 +70,8 @@ HEADERS += \
     src/networkaccessmanagerfactory.h \
     src/ornsecrets.h \
     src/ornsecrets_p.h \
+    src/pkinterface.h \
+    src/pktransactioninterface.h \
     src/ssuinterface.h \
     src/storeman.h \
     src/ornconst.h \

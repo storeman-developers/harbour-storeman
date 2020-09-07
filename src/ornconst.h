@@ -43,9 +43,4 @@ struct OrnConst {
     static const QString user;
     static const QString userVote;
     static const QString value;
-
-    static const QString pkService;
-    static const QString pkInstallPackages;
-    static const QString pkRepoSetData;
-    static const QString pkRefreshCache;
 };

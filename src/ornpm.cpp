@@ -7,7 +7,8 @@
 #include <solv/repo_solv.h>
 #include <connman-qt5/networkmanager.h>
 
-#include <QtConcurrent/QtConcurrent>
+#include <QDBusPendingCallWatcher>
+#include <QtConcurrent>
 
 #include <QDebug>
 
@@ -38,11 +39,9 @@ OrnPm::OrnPm(QObject *parent)
 {
     Q_D(OrnPm);
 
-    auto bus = QDBusConnection::systemBus();
-
     d->ssuInterface = new SsuInterface(this);
 
-    d->pkInterface = new QDBusInterface(OrnConst::pkService, QStringLiteral("/org/freedesktop/PackageKit"), OrnConst::pkService, bus, this);
+    d->pkInterface = new PkInterface(this);
     QObject::connect(d->pkInterface, SIGNAL(UpdatesChanged()), this, SLOT(getUpdates()));
 }
 
@@ -225,20 +224,11 @@ OrnPm::PackageStatus OrnPm::packageStatus(const QString &packageName) const
     return PackageNotInstalled;
 }
 
-QDBusInterface *OrnPmPrivate::transaction(const QString &item)
+PkTransactionInterface *OrnPmPrivate::transaction(const QString &item)
 {
     Q_Q(OrnPm);
 
-    auto reply = pkInterface->call(QStringLiteral("CreateTransaction"));
-    Q_ASSERT_X(reply.type() != QDBusMessage::ErrorMessage, Q_FUNC_INFO,
-               qPrintable(reply.errorName().append(": ").append(reply.errorMessage())));
-
-    auto t = new QDBusInterface(OrnConst::pkService,
-                                qvariant_cast<QDBusObjectPath>(reply.arguments().first()).path(),
-                                QStringLiteral("org.freedesktop.PackageKit.Transaction"),
-                                QDBusConnection::systemBus(),
-                                q);
-    Q_ASSERT(t->isValid());
+    auto t = pkInterface->transaction();
 #ifdef QT_DEBUG
     QObject::connect(t, SIGNAL(Finished(quint32,quint32)),  q, SLOT(onTransactionFinished(quint32,quint32)));
     QObject::connect(t, SIGNAL(ErrorCode(quint32,QString)), q, SLOT(emitError(quint32,QString)));
@@ -368,11 +358,8 @@ void OrnPm::installPackage(const QString &packageId)
 
     auto t = d->transaction(packageId);
     connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(onPackageInstalled(quint32,quint32)));
-    QStringList ids(packageId);
-    qDebug().nospace().noquote()
-            << "Calling " << t << "->" << OrnConst::pkInstallPackages << "(" << PK_FLAG_NONE << ", " << ids << ")";
     emit this->packageStatusChanged(OrnUtils::packageName(packageId), OrnPm::PackageInstalling);
-    t->asyncCall(OrnConst::pkInstallPackages, PK_FLAG_NONE, ids);
+    t->installPackages(QStringList{packageId});
 }
 
 void OrnPm::installFile(const QString &packageFile)
@@ -383,10 +370,7 @@ void OrnPm::installFile(const QString &packageFile)
 
     auto t = d->transaction();
     connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(onPackageInstalled(quint32,quint32)));
-    QString method{QStringLiteral("InstallFiles")};
-    QStringList files(packageFile);    
-    qDebug().nospace().noquote() << "Calling " << t << "->" << method << "(" << PK_FLAG_NONE << ", " << files << ")";
-    t->asyncCall(method, PK_FLAG_NONE, files);
+    t->installFiles(QStringList{packageFile});
 }
 
 void OrnPm::removePackage(const QString &packageId, bool autoremove)
@@ -397,13 +381,8 @@ void OrnPm::removePackage(const QString &packageId, bool autoremove)
 
     auto t = d->transaction(packageId);
     connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(onPackageRemoved(quint32,quint32)));
-    QString method{QStringLiteral("RemovePackages")};
-    QStringList ids(packageId);
-    qDebug().nospace().noquote()
-            << "Calling " << t << "->" << method << "("
-            << PK_FLAG_NONE << ", " << ids << ", false, " << autoremove << ")";
     emit this->packageStatusChanged(OrnUtils::packageName(packageId), OrnPm::PackageRemoving);
-    t->asyncCall(method, PK_FLAG_NONE, ids, false, autoremove);
+    t->removePackages(QStringList{packageId}, autoremove);
 }
 
 void OrnPm::updatePackage(const QString &packageName)
@@ -421,11 +400,8 @@ void OrnPm::updatePackage(const QString &packageName)
     auto packageId = d->updatablePackages[packageName];
     auto t = d->transaction(packageId);
     connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(onPackageUpdated(quint32,quint32)));
-    QStringList ids(packageId);
-    qDebug().nospace().noquote()
-            << "Calling " << t << "->" << OrnConst::pkInstallPackages << "(" << PK_FLAG_NONE << ", " << ids << ")";
     emit this->packageStatusChanged(packageName, OrnPm::PackageUpdating);
-    t->asyncCall(OrnConst::pkInstallPackages, PK_FLAG_NONE, ids);
+    t->installPackages(QStringList{packageId});
 }
 
 void OrnPm::addRepo(const QString &author)
@@ -549,7 +525,7 @@ void OrnPmPrivate::removeAllRepos()
     emit q->removeAllReposFinished();
 }
 
-void OrnPmPrivate::onRepoModified(const QString &repoAlias, OrnPm::RepoAction action)
+void OrnPmPrivate::onRepoModified(const QString &alias, OrnPm::RepoAction action)
 {
     Q_Q(OrnPm);
 
@@ -558,45 +534,42 @@ void OrnPmPrivate::onRepoModified(const QString &repoAlias, OrnPm::RepoAction ac
     switch (action)
     {
     case OrnPm::RemoveRepo:
-        repos.remove(repoAlias);
+        repos.remove(alias);
         break;
     case OrnPm::AddRepo:
-        repos.insert(repoAlias, true);
+        repos.insert(alias, true);
         needRefresh = true;
         break;
     case OrnPm::DisableRepo:
-        repos[repoAlias] = false;
+        repos[alias] = false;
         break;
     case OrnPm::EnableRepo:
-        repos[repoAlias] = true;
+        repos[alias] = true;
         needRefresh = true;
         break;
     }
 
     if (needRefresh)
     {
-        operations[repoAlias] = OrnPm::RefreshingRepo;
+        operations[alias] = OrnPm::RefreshingRepo;
         emit q->operationsChanged();
         auto t = this->transaction();
-        qDebug().nospace().noquote()
-                << "Calling " << t << "->" << OrnConst::pkRepoSetData
-                << "(\"" << repoAlias << "\", \"refresh-now\", false)";
-        t->asyncCall(OrnConst::pkRepoSetData, repoAlias, "refresh-now", "false");
-        QObject::connect(t, &QDBusInterface::destroyed, [this, repoAlias, action]()
+        QObject::connect(t, &QDBusInterface::destroyed, [this, alias, action]()
         {
             Q_Q(OrnPm);
-            operations.remove(repoAlias);
+            operations.remove(alias);
             emit q->operationsChanged();
-            emit q->repoModified(repoAlias, action);
-            qDebug() << "Repo" << repoAlias << "have been modified with" << action;
+            emit q->repoModified(alias, action);
+            qDebug() << "Repo" << alias << "have been modified with" << action;
         });
+        t->repoRefreshNow(alias);
     }
     else
     {
-        operations.remove(repoAlias);
+        operations.remove(alias);
         emit q->operationsChanged();
-        emit q->repoModified(repoAlias, action);
-        qDebug() << "Repo" << repoAlias << "have been modified with" << action;
+        emit q->repoModified(alias, action);
+        qDebug() << "Repo" << alias << "have been modified with" << action;
         this->getUpdates();
     }
 }
@@ -613,9 +586,7 @@ void OrnPm::refreshRepo(const QString &alias, bool force)
         this->d_func()->operations.remove(alias);
         emit this->operationsChanged();
     });
-    qDebug().nospace() << "Calling " << t << "->RepoSetData(" << alias
-                       << ", \"refresh-now\", " << (force ? "true" : "false") << ")";
-    t->asyncCall("RepoSetData", alias, "refresh-now", OrnUtils::stringify(force));
+    t->repoRefreshNow(alias, force);
 }
 
 void OrnPm::refreshRepos(bool force)
@@ -665,9 +636,7 @@ void OrnPm::refreshCache(bool force)
         this->d_func()->operations.remove(name);
         emit this->operationsChanged();
     });
-    qDebug().nospace().noquote()
-            << "Calling " << t << "->" << OrnConst::pkRefreshCache << "(" << OrnUtils::stringify(force) << ")";
-    t->asyncCall(OrnConst::pkRefreshCache, force);
+    t->refreshCache(force);
 }
 
 QList<OrnRepo> OrnPm::repoList() const
@@ -848,9 +817,7 @@ void OrnPmPrivate::getUpdates()
     auto t = this->transaction();
     QObject::connect(t, SIGNAL(Package(quint32,QString,QString)), q, SLOT(onPackageUpdate(quint32,QString,QString)));
     QObject::connect(t, SIGNAL(Finished(quint32,quint32)), q, SLOT(onGetUpdatesFinished(quint32,quint32)));
-    QString method{QStringLiteral("GetUpdates")};
-    qDebug().nospace().noquote() << "Calling " << t << "->" << method << "(" << PK_FLAG_NONE << ")";
-    t->asyncCall(method, PK_FLAG_NONE);
+    t->getUpdates();
 }
 
 void OrnPmPrivate::onPackageUpdate(quint32 info, const QString &packageId, const QString &summary)
@@ -1016,10 +983,7 @@ void OrnPmPrivate::refreshNextRepo(quint32 exit, quint32 runtime)
         });
         operations.insert(alias, OrnPm::RefreshingRepo);
         emit q->operationsChanged();
-        qDebug().nospace().noquote()
-                << "Calling " << t << "->" << OrnConst::pkRepoSetData
-                << "(\"" << alias << "\", \"refresh-now\", " << forceRefresh << ")";
-        t->asyncCall(OrnConst::pkRepoSetData, alias, "refresh-now", forceRefresh);
+        t->repoRefreshNow(alias, forceRefresh);
     }
 }
 
