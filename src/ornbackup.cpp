@@ -125,8 +125,8 @@ void OrnBackup::pSearchPackages()
     mPackagesToInstall.clear();
 
     auto t = OrnPm::instance()->d_func()->transaction();
-    connect(t, SIGNAL(Package(quint32,QString,QString)), this, SLOT(pAddPackage(quint32,QString,QString)));
-    connect(t, SIGNAL(Finished(quint32,quint32)),        this, SLOT(pInstallPackages()));
+    connect(t, &PkTransactionInterface::Package,  this, &OrnBackup::pAddPackage);
+    connect(t, &PkTransactionInterface::Finished, this, &OrnBackup::pInstallPackages);
     t->resolve(mNamesToSearch);
 }
 
@@ -185,7 +185,7 @@ void OrnBackup::pInstallPackages()
         qDebug() << "Installing packages";
         this->setStatus(InstallingPackages);
         auto t = OrnPm::instance()->d_func()->transaction();
-        connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(pFinishRestore()));
+        connect(t, &PkTransactionInterface::Finished, this, &OrnBackup::pFinishRestore);
         t->installPackages(ids);
     }
 }
@@ -307,7 +307,7 @@ void OrnBackup::pRefreshRepos()
         qDebug() << "Refreshing repos";
         this->setStatus(RefreshingRepos);
         auto t = OrnPm::instance()->d_func()->transaction();
-        connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(pSearchPackages()));
+        connect(t, &PkTransactionInterface::Finished, this, &OrnBackup::pSearchPackages);
         t->refreshCache();
     }
     else

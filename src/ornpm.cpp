@@ -42,7 +42,7 @@ OrnPm::OrnPm(QObject *parent)
     d->ssuInterface = new SsuInterface(this);
 
     d->pkInterface = new PkInterface(this);
-    QObject::connect(d->pkInterface, SIGNAL(UpdatesChanged()), this, SLOT(getUpdates()));
+    connect_priv(d->pkInterface, &PkInterface::UpdatesChanged, this, &OrnPmPrivate::getUpdates);
 }
 
 QString OrnPm::repoUrl(const QString &author)
@@ -230,11 +230,11 @@ PkTransactionInterface *OrnPmPrivate::transaction(const QString &item)
 
     auto t = pkInterface->transaction();
 #ifdef QT_DEBUG
-    QObject::connect(t, SIGNAL(Finished(quint32,quint32)),  q, SLOT(onTransactionFinished(quint32,quint32)));
-    QObject::connect(t, SIGNAL(ErrorCode(quint32,QString)), q, SLOT(emitError(quint32,QString)));
+    QObject::connect(t, &PkTransactionInterface::Finished,  q, &OrnPm::onTransactionFinished);
+    QObject::connect(t, &PkTransactionInterface::ErrorCode, q, &OrnPm::emitError);
 #else
-    QObject::connect(t, SIGNAL(Finished(quint32, quint32)), t, SLOT(deleteLater()));
-    QObject::connect(t, SIGNAL(ErrorCode(quint32,QString)), q, SIGNAL(error(quint32,QString)));
+    QObject::connect(t, &PkTransactionInterface::Finished,  t, &OrnPm::deleteLater);
+    QObject::connect(t, &PkTransactionInterface::ErrorCode, q, &OrnPm::error);
 #endif
     if (!item.isEmpty())
     {
@@ -246,10 +246,11 @@ PkTransactionInterface *OrnPmPrivate::transaction(const QString &item)
 #ifdef QT_DEBUG
 void OrnPm::onTransactionFinished(quint32 exit, quint32 runtime)
 {
-    qDebug() << this->sender()
+    auto t = this->sender();
+    qDebug() << t
              << (exit == Transaction::ExitSuccess ? "finished in" : "failed after")
              << runtime << "msec";
-    this->sender()->deleteLater();
+    t->deleteLater();
 }
 
 void OrnPm::emitError(quint32 code, const QString& details)
@@ -357,7 +358,7 @@ void OrnPm::installPackage(const QString &packageId)
     SET_OPERATION_ITEM(InstallingPackage, OrnUtils::packageName(packageId));
 
     auto t = d->transaction(packageId);
-    connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(onPackageInstalled(quint32,quint32)));
+    connect_priv(t, &PkTransactionInterface::Finished, this, &OrnPmPrivate::onPackageInstalled);
     emit this->packageStatusChanged(OrnUtils::packageName(packageId), OrnPm::PackageInstalling);
     t->installPackages(QStringList{packageId});
 }
@@ -369,7 +370,7 @@ void OrnPm::installFile(const QString &packageFile)
     CHECK_NETWORK();
 
     auto t = d->transaction();
-    connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(onPackageInstalled(quint32,quint32)));
+    connect_priv(t, &PkTransactionInterface::Finished, this, &OrnPmPrivate::onPackageInstalled);
     t->installFiles(QStringList{packageFile});
 }
 
@@ -380,7 +381,7 @@ void OrnPm::removePackage(const QString &packageId, bool autoremove)
     SET_OPERATION_ITEM(RemovingPackage, OrnUtils::packageName(packageId));
 
     auto t = d->transaction(packageId);
-    connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(onPackageRemoved(quint32,quint32)));
+    connect_priv(t, &PkTransactionInterface::Finished, this, &OrnPmPrivate::onPackageRemoved);
     emit this->packageStatusChanged(OrnUtils::packageName(packageId), OrnPm::PackageRemoving);
     t->removePackages(QStringList{packageId}, autoremove);
 }
@@ -399,7 +400,7 @@ void OrnPm::updatePackage(const QString &packageName)
 
     auto packageId = d->updatablePackages[packageName];
     auto t = d->transaction(packageId);
-    connect(t, SIGNAL(Finished(quint32,quint32)), this, SLOT(onPackageUpdated(quint32,quint32)));
+    connect_priv(t, &PkTransactionInterface::Finished, this, &OrnPmPrivate::onPackageUpdated);
     emit this->packageStatusChanged(packageName, OrnPm::PackageUpdating);
     t->installPackages(QStringList{packageId});
 }
@@ -554,7 +555,7 @@ void OrnPmPrivate::onRepoModified(const QString &alias, OrnPm::RepoAction action
         operations[alias] = OrnPm::RefreshingRepo;
         emit q->operationsChanged();
         auto t = this->transaction();
-        QObject::connect(t, &QDBusInterface::destroyed, [this, alias, action]()
+        QObject::connect(t, &QObject::destroyed, [this, alias, action]()
         {
             Q_Q(OrnPm);
             operations.remove(alias);
@@ -581,7 +582,7 @@ void OrnPm::refreshRepo(const QString &alias, bool force)
     CHECK_NETWORK();
     SET_OPERATION_ITEM(RefreshingRepo, alias);
     auto t = d->transaction();
-    connect(t, &QDBusInterface::destroyed, [this, alias]()
+    connect(t, &QObject::destroyed, [this, alias]()
     {
         this->d_func()->operations.remove(alias);
         emit this->operationsChanged();
@@ -631,7 +632,7 @@ void OrnPm::refreshCache(bool force)
     SET_OPERATION_ITEM(OrnPm::RefreshingCache, name);
 
     auto t = d->transaction();
-    connect(t, &QDBusInterface::destroyed, [this, name]()
+    connect(t, &QObject::destroyed, [this, name]()
     {
         this->d_func()->operations.remove(name);
         emit this->operationsChanged();
@@ -815,8 +816,8 @@ void OrnPmPrivate::getUpdates()
 
     CHECK_NETWORK();
     auto t = this->transaction();
-    QObject::connect(t, SIGNAL(Package(quint32,QString,QString)), q, SLOT(onPackageUpdate(quint32,QString,QString)));
-    QObject::connect(t, SIGNAL(Finished(quint32,quint32)), q, SLOT(onGetUpdatesFinished(quint32,quint32)));
+    connect_priv(t, &PkTransactionInterface::Package,  q, &OrnPmPrivate::onPackageUpdate);
+    connect_priv(t, &PkTransactionInterface::Finished, q, &OrnPmPrivate::onGetUpdatesFinished);
     t->getUpdates();
 }
 
@@ -974,9 +975,9 @@ void OrnPmPrivate::refreshNextRepo(quint32 exit, quint32 runtime)
     else
     {
         auto t = this->transaction();
-        QObject::connect(t, SIGNAL(Finished(quint32,quint32)), q, SLOT(refreshNextRepo(quint32,quint32)));
+        connect_priv(t, &PkTransactionInterface::Finished, q, &OrnPmPrivate::refreshNextRepo);
         auto alias = reposToRefresh.takeFirst();
-        QObject::connect(t, &QDBusInterface::destroyed, q, [this, alias]()
+        QObject::connect(t, &QObject::destroyed, q, [this, alias]()
         {
             operations.remove(alias);
             emit this->q_func()->operationsChanged();
@@ -986,5 +987,3 @@ void OrnPmPrivate::refreshNextRepo(quint32 exit, quint32 runtime)
         t->repoRefreshNow(alias, forceRefresh);
     }
 }
-
-#include <moc_ornpm.cpp>

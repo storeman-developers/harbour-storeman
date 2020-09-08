@@ -4,6 +4,8 @@
 
 #include <Transaction>
 
+#include <utility>
+
 class QQmlEngine;
 class QJSEngine;
 class OrnPackageVersion;
@@ -175,18 +177,16 @@ private:
 
     Q_DECLARE_PRIVATE(OrnPm)
 
-// private slots:
-    // Check for updates
-    Q_PRIVATE_SLOT(d_func(), void getUpdates())
-    Q_PRIVATE_SLOT(d_func(), void onPackageUpdate(quint32,QString,QString))
-    Q_PRIVATE_SLOT(d_func(), void onGetUpdatesFinished(quint32,quint32))
-    // Install package
-    Q_PRIVATE_SLOT(d_func(), void onPackageInstalled(quint32,quint32))
-    // Remove package
-    Q_PRIVATE_SLOT(d_func(), void onPackageRemoved(quint32,quint32))
-    // Update package
-    Q_PRIVATE_SLOT(d_func(), void onPackageUpdated(quint32,quint32))
-    // Refresh repos
-    Q_PRIVATE_SLOT(d_func(), void refreshNextRepo(quint32,quint32))
-
+    template<
+        typename Sender,
+        typename ...Args,
+        typename Signal = void (Sender::*)(Args...),
+        typename Slot   = void (OrnPmPrivate::*)(Args...)
+    >
+    friend void connect_priv(Sender *sender, Signal signal, OrnPm *ptr, Slot slot)
+    {
+        QObject::connect(sender, signal, ptr, [ptr, slot](auto && ...args) {
+            (ptr->d_func()->*slot)(std::forward<decltype(args)>(args)...);
+        });
+    }
 };
