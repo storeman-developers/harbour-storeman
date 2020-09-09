@@ -1,5 +1,7 @@
 #include "ornsearchappsmodel.h"
 
+#include <QCryptographicHash>
+
 
 OrnSearchAppsModel::OrnSearchAppsModel(QObject *parent)
     : OrnAppsModel(true, parent)
@@ -23,6 +25,12 @@ void OrnSearchAppsModel::setSearchKey(const QString &searchKey)
     }
 }
 
+void OrnSearchAppsModel::resetImpl()
+{
+    mPrevReplyHash.clear();
+    OrnAbstractListModel::resetImpl();
+}
+
 void OrnSearchAppsModel::fetchMore(const QModelIndex &parent)
 {
     if (parent.isValid())
@@ -37,4 +45,22 @@ void OrnSearchAppsModel::fetchMore(const QModelIndex &parent)
     QUrlQuery query;
     query.addQueryItem(QStringLiteral("keys"), mSearchKey);
     OrnAbstractListModel::fetch(QStringLiteral("search/apps"), query);
+}
+
+void OrnSearchAppsModel::processReply(const QJsonDocument &jsonDoc)
+{
+    // An ugly patch for srepeating data
+    auto replyHash = QCryptographicHash::hash(
+                jsonDoc.toJson(), QCryptographicHash::Md5);
+    if (mPrevReplyHash == replyHash)
+    {
+        qDebug() << "Current reply is equal to the previous one. "
+                    "Considering the model has fetched all data";
+        mCanFetchMore = false;
+    }
+    else
+    {
+        mPrevReplyHash = replyHash;
+    }
+    OrnAbstractListModel::processReply(jsonDoc);
 }

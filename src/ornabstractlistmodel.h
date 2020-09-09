@@ -6,7 +6,6 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QJsonArray>
-#include <QCryptographicHash>
 #include <QNetworkReply>
 
 #include <QDebug>
@@ -65,14 +64,13 @@ public:
     }
 
 protected:
-    void resetImpl() final
+    void resetImpl() override
     {
         qDebug() << "Resetting model";
         this->beginResetModel();
         mData.clear();
         mCanFetchMore = true;
         mPage = 0;
-        mPrevReplyHash.clear();
         if (mApiReply)
         {
             mApiReply->deleteLater();
@@ -135,20 +133,6 @@ protected:
             {
                 mCanFetchMore = false;
             }
-            else
-            {
-                // An ugly patch for some models with repeating data (search model)
-                auto replyHash = QCryptographicHash::hash(
-                            jsonDoc.toJson(), QCryptographicHash::Md5);
-                if (mPrevReplyHash == replyHash)
-                {
-                    qDebug() << "Current reply is equal to the previous one. "
-                                "Considering the model has fetched all data";
-                    mCanFetchMore = false;
-                    return;
-                }
-                mPrevReplyHash = replyHash;
-            }
             auto oldSize = mData.size();
             auto appendSize = jsonArray.size();
             this->beginInsertRows(QModelIndex(), oldSize, oldSize + appendSize - 1);
@@ -173,9 +157,6 @@ protected:
 
 protected:
     std::deque<T> mData;
-
-private:
-    QByteArray    mPrevReplyHash;
 
     // QAbstractItemModel interface
 public:

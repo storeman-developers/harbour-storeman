@@ -17,9 +17,15 @@ signals:
     void searchKeyChanged();
 
 private:
-    QString mSearchKey;
+    QString    mSearchKey;
+    QByteArray mPrevReplyHash;
+
+    // OrnAbstractListModelBase interface
+protected:
+    void resetImpl() override;
 
     // QAbstractItemModel interface
 public:
     void fetchMore(const QModelIndex &parent) override;
+    void processReply(const QJsonDocument &jsonDoc) override;
 };
