@@ -9,36 +9,7 @@
 #include <QVariant>
 
 
-OrnAppListItem::OrnAppListItem(const QJsonObject &data)
-    : valid(data.size() > 1)
-    , appId(data[OrnConst::appid].toVariant().toUInt())
-    , created(OrnUtils::toUint(data[OrnConst::created]))
-    , updated(OrnUtils::toUint(data[OrnConst::updated]))
-    , title(OrnUtils::toString(data[OrnConst::title]))
-    , iconSource(OrnUtils::toString(data[OrnConst::icon].toObject()[OrnConst::url]))
-    , sinceUpdate(sinceLabel(created))
-{
-    auto ratingobj = data[OrnConst::rating].toObject();
-    ratingCount    = OrnUtils::toUint(ratingobj[OrnConst::count]);
-    rating         = ratingobj[OrnConst::rating].toString().toFloat();
-
-    userName = OrnUtils::toString(data[OrnConst::user].toObject()[OrnConst::name]);
-
-    auto categories = data[OrnConst::category].toArray();
-    auto tid = OrnUtils::toUint(categories.last().toObject()[OrnConst::tid]);
-    category = OrnCategoryListItem::categoryName(tid);
-    categoryId = tid;
-
-    package = OrnUtils::toString(data[OrnConst::package].toObject()[OrnConst::name]);
-
-    if (iconSource.isEmpty() ||
-        iconSource.endsWith(QStringLiteral("icon-defaultpackage.png")))
-    {
-        iconSource = QStringLiteral("image://theme/icon-launcher-default");
-    }
-}
-
-QString OrnAppListItem::sinceLabel(quint32 value)
+QString sinceLabel(quint32 value)
 {
     auto curDate = QDate::currentDate();
     auto date = QDateTime::fromMSecsSinceEpoch(qint64(value) * 1000).date();
@@ -67,4 +38,37 @@ QString OrnAppListItem::sinceLabel(quint32 value)
     //% "%0 %1"
     return qtTrId("orn-month-format").arg(
                 QDate::longMonthName(date.month(), QDate::StandaloneFormat)).arg(date.year());
+}
+
+OrnAppListItem::OrnAppListItem(const QJsonObject &data)
+    : valid(data.size() > 1)
+    , appId(data[OrnConst::appid].toVariant().toUInt())
+    , title(OrnUtils::toString(data[OrnConst::title]))
+    , iconSource(OrnUtils::toString(data[OrnConst::icon].toObject()[OrnConst::url]))
+{
+    auto created = OrnUtils::toUint(data[OrnConst::created]);
+    if (created > 0)
+    {
+        createDate.setMSecsSinceEpoch(qint64(created) * 1000);
+        sinceUpdate = sinceLabel(created);
+    }
+
+    auto ratingobj = data[OrnConst::rating].toObject();
+    ratingCount    = OrnUtils::toUint(ratingobj[OrnConst::count]);
+    rating         = ratingobj[OrnConst::rating].toString().toFloat();
+
+    userName = OrnUtils::toString(data[OrnConst::user].toObject()[OrnConst::name]);
+
+    auto categories = data[OrnConst::category].toArray();
+    auto tid = OrnUtils::toUint(categories.last().toObject()[OrnConst::tid]);
+    category = OrnCategoryListItem::categoryName(tid);
+    categoryId = tid;
+
+    package = OrnUtils::toString(data[OrnConst::package].toObject()[OrnConst::name]);
+
+    if (iconSource.isEmpty() ||
+        iconSource.endsWith(QStringLiteral("icon-defaultpackage.png")))
+    {
+        iconSource = QStringLiteral("image://theme/icon-launcher-default");
+    }
 }

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QString>
+#include <QDateTime>
 
 class QJsonObject;
 
@@ -10,8 +11,6 @@ struct OrnAppListItem
 
     bool valid;
     quint32 appId;
-    quint32 created;
-    quint32 updated;
     quint32 ratingCount;
     float rating;
     QString title;
@@ -21,7 +20,5 @@ struct OrnAppListItem
     QString category;
     quint32 categoryId;
     QString package;
-
-private:
-    static QString sinceLabel(quint32 value);
+    QDateTime createDate;
 };

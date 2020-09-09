@@ -98,8 +98,7 @@ QVariant OrnAppsModel::data(const QModelIndex &index, int role) const
     case AppIdRole:
         return app.appId;
     case CreateDateRole:
-        return app.created > 0 ? QDateTime::fromMSecsSinceEpoch(qint64(app.created) * 1000).date() :
-                                 QDate();
+        return app.createDate;
     case RatingCountRole:
         return app.ratingCount;
     case RatingRole:
