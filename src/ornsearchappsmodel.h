@@ -1,8 +1,8 @@
 #pragma once
 
-#include "ornabstractappsmodel.h"
+#include "ornappsmodel.h"
 
-class OrnSearchAppsModel : public OrnAbstractAppsModel
+class OrnSearchAppsModel : public OrnAppsModel
 {
     Q_OBJECT
     Q_PROPERTY(QString searchKey READ searchKey WRITE setSearchKey NOTIFY searchKeyChanged)

@@ -4,7 +4,7 @@ import harbour.orn 1.0
 import "../components"
 
 Page {
-    property alias userId: appsModel.userId
+    property int userId
     property string userName
     property string userIcon
     property int previousAppId: -1
@@ -26,10 +26,12 @@ Page {
 
         model: OrnProxyModel {
             id: proxyModel
-            sortRole: OrnUserAppsModel.SortRole
-            filterRole: OrnUserAppsModel.VisibilityRole
-            sourceModel: OrnUserAppsModel {
+            sortRole: OrnAppsModel.SortRole
+            filterRole: OrnAppsModel.VisibilityRole
+            sourceModel: OrnAppsModel {
                 id: appsModel
+                fetchable: false
+                resource: "users/%0/apps".arg(userId)
                 onRowsInserted: proxyModel.sort(Qt.AscendingOrder)
             }
         }

@@ -4,7 +4,7 @@ import harbour.orn 1.0
 import "../components"
 
 Page {
-    property alias tagId: appsModel.tagId
+    property int tagId
     property string tagName
     property int previousAppId: -1
 
@@ -17,10 +17,11 @@ Page {
 
         model: OrnProxyModel {
             id: proxyModel
-            sortRole: OrnTagAppsModel.SortRole
-            filterRole: OrnTagAppsModel.VisibilityRole
-            sourceModel: OrnTagAppsModel {
+            sortRole: OrnAppsModel.SortRole
+            filterRole: OrnAppsModel.VisibilityRole
+            sourceModel: OrnAppsModel {
                 id: appsModel
+                resource: tagId !== 0 ? "tags/%0/apps".arg(tagId) : ""
                 onRowsInserted: proxyModel.sort(Qt.AscendingOrder)
             }
         }

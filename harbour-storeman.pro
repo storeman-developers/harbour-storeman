@@ -36,6 +36,7 @@ SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 SOURCES += \
     src/harbour-storeman.cpp \
     src/networkaccessmanagerfactory.cpp \
+    src/ornappsmodel.cpp \
     src/ornsecrets.cpp \
     src/pkinterface.cpp \
     src/pktransactioninterface.cpp \
@@ -44,9 +45,6 @@ SOURCES += \
     src/ornconst.cpp \
     src/ornutils.cpp \
     src/ornclient.cpp \
-    src/ornabstractappsmodel.cpp \
-    src/ornrecentappsmodel.cpp \
-    src/ornuserappsmodel.cpp \
     src/orncommentsmodel.cpp \
     src/ornrepomodel.cpp \
     src/ornproxymodel.cpp \
@@ -56,18 +54,17 @@ SOURCES += \
     src/ornsearchappsmodel.cpp \
     src/orncategoriesmodel.cpp \
     src/orncategorylistitem.cpp \
-    src/orncategoryappsmodel.cpp \
     src/orninstalledappsmodel.cpp \
     src/ornbookmarksmodel.cpp \
     src/ornbackup.cpp \
     src/ornpm.cpp \
     src/ornpackageversion.cpp \
     src/orntagsmodel.cpp \
-    src/orntaglistitem.cpp \
-    src/orntagappsmodel.cpp
+    src/orntaglistitem.cpp
 
 HEADERS += \
     src/networkaccessmanagerfactory.h \
+    src/ornappsmodel.h \
     src/ornsecrets.h \
     src/ornsecrets_p.h \
     src/pkinterface.h \
@@ -79,9 +76,6 @@ HEADERS += \
     src/ornclient.h \
     src/ornclient_p.h \
     src/ornabstractlistmodel.h \
-    src/ornabstractappsmodel.h \
-    src/ornrecentappsmodel.h \
-    src/ornuserappsmodel.h \
     src/orncommentsmodel.h \
     src/ornrepomodel.h \
     src/ornproxymodel.h \
@@ -91,7 +85,6 @@ HEADERS += \
     src/ornsearchappsmodel.h \
     src/orncategoriesmodel.h \
     src/orncategorylistitem.h \
-    src/orncategoryappsmodel.h \
     src/orninstalledappsmodel.h \
     src/ornbookmarksmodel.h \
     src/ornbackup.h \
@@ -101,8 +94,7 @@ HEADERS += \
     src/orninstalledpackage.h \
     src/ornrepo.h \
     src/orntagsmodel.h \
-    src/orntaglistitem.h \
-    src/orntagappsmodel.h
+    src/orntaglistitem.h
 
 OTHER_FILES += \
     qml/harbour-storeman.qml \

@@ -2,7 +2,7 @@
 
 
 OrnSearchAppsModel::OrnSearchAppsModel(QObject *parent)
-    : OrnAbstractAppsModel(true, parent)
+    : OrnAppsModel(true, parent)
 {
     mCanFetchMore = false;
 }

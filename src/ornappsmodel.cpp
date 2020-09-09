@@ -1,10 +1,10 @@
-#include "ornabstractappsmodel.h"
+#include "ornappsmodel.h"
 #include "ornapplistitem.h"
 #include "ornpm.h"
 #include "ornclient.h"
 
 
-OrnAbstractAppsModel::OrnAbstractAppsModel(bool fetchable, QObject *parent)
+OrnAppsModel::OrnAppsModel(bool fetchable, QObject *parent)
     : OrnAbstractListModel(fetchable, parent)
 {
     connect(OrnPm::instance(), &OrnPm::packageStatusChanged,
@@ -57,7 +57,27 @@ OrnAbstractAppsModel::OrnAbstractAppsModel(bool fetchable, QObject *parent)
     });
 }
 
-QVariant OrnAbstractAppsModel::data(const QModelIndex &index, int role) const
+void OrnAppsModel::setFetchable(bool fetchable)
+{
+    if (mFetchable != fetchable)
+    {
+        mFetchable = fetchable;
+        emit this->fetchableChanged();
+        this->reset();
+    }
+}
+
+void OrnAppsModel::setResource(const QString &resource)
+{
+    if (mResource != resource)
+    {
+        mResource = resource;
+        emit this->resourceChanged();
+        this->reset();
+    }
+}
+
+QVariant OrnAppsModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid())
     {
@@ -103,7 +123,7 @@ QVariant OrnAbstractAppsModel::data(const QModelIndex &index, int role) const
     }
 }
 
-QHash<int, QByteArray> OrnAbstractAppsModel::roleNames() const
+QHash<int, QByteArray> OrnAppsModel::roleNames() const
 {
     return {
         { ValidityRole,      "isValid" },
@@ -121,4 +141,13 @@ QHash<int, QByteArray> OrnAbstractAppsModel::roleNames() const
         { CategoryIdRole,    "categoryId" },
         { VisibilityRole,    "visible" }
     };
+}
+
+void OrnAppsModel::fetchMore(const QModelIndex &parent)
+{
+    if (parent.isValid() || mResource.isEmpty())
+    {
+        return;
+    }
+    OrnAbstractListModel::fetch(mResource);
 }

@@ -4,13 +4,14 @@ import harbour.orn 1.0
 import "../components"
 
 Page {
-    property alias categoryId: categoryModel.categoryId
+    property int categoryId
     property string categoryName
 
     allowedOrientations: defaultAllowedOrientations
 
-    OrnCategoryAppsModel {
+    OrnAppsModel {
         id: categoryModel
+        resource: "categories/%0/apps".arg(categoryId)
         onFetchingChanged: {
             if (!fetching && rowCount() === 0) {
                 //% "Currently there are no apps in this category"

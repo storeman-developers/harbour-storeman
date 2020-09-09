@@ -198,8 +198,10 @@ Page {
 
     OrnProxyModel {
         id: recentAppsModel
-        sourceModel: OrnRecentAppsModel {}
-        filterRole: OrnRecentAppsModel.VisibilityRole
+        sourceModel: OrnAppsModel {
+            resource: "apps"
+        }
+        filterRole: OrnAppsModel.VisibilityRole
     }
 
     OrnBookmarksModel {

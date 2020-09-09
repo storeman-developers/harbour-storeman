@@ -12,7 +12,7 @@ QString compactResource(quint32 appid)
 }
 
 OrnBookmarksModel::OrnBookmarksModel(QObject *parent)
-    : OrnAbstractAppsModel(false, parent)
+    : OrnAppsModel(false, parent)
 {
     auto client = OrnClient::instance();
     connect(client, &OrnClient::bookmarkChanged, this,

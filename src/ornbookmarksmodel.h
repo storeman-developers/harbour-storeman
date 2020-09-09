@@ -1,8 +1,8 @@
 #pragma once
 
-#include "ornabstractappsmodel.h"
+#include "ornappsmodel.h"
 
-class OrnBookmarksModel : public OrnAbstractAppsModel
+class OrnBookmarksModel : public OrnAppsModel
 {
     Q_OBJECT
 
