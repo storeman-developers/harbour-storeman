@@ -39,8 +39,19 @@ protected:
     virtual void resetImpl() = 0;
 
 protected:
-    bool mFetching{false};
-    bool mNetworkError{false};
+    bool           mFetchable{false};
+    bool           mCanFetchMore{true};
+    bool           mFetching{false};
+    bool           mNetworkError{false};
+    quint32        mPage{0};
+    QNetworkReply *mApiReply{nullptr};
+
+    // QAbstractItemModel interface
+public:
+    bool canFetchMore(const QModelIndex &parent) const override
+    {
+        return !parent.isValid() ? !mFetching && mCanFetchMore : false;
+    }
 };
 
 template<typename T>
@@ -49,8 +60,9 @@ class OrnAbstractListModel : public OrnAbstractListModelBase
 public:
     OrnAbstractListModel(bool fetchable, QObject *parent = nullptr)
         : OrnAbstractListModelBase(parent)
-        , mFetchable(fetchable)
-    {}
+    {
+        mFetchable = fetchable;
+    }
 
 protected:
     void resetImpl() final
@@ -160,14 +172,10 @@ protected:
     }
 
 protected:
-    bool     mFetchable{false};
-    bool     mCanFetchMore{true};
-    quint32  mPage{0};
     std::deque<T> mData;
-    QNetworkReply *mApiReply{nullptr};
 
 private:
-    QByteArray mPrevReplyHash;
+    QByteArray    mPrevReplyHash;
 
     // QAbstractItemModel interface
 public:
@@ -176,8 +184,4 @@ public:
         return !parent.isValid() ? mData.size() : 0;
     }
     void fetchMore(const QModelIndex &parent) override = 0;
-    bool canFetchMore(const QModelIndex &parent) const override
-    {
-        return !parent.isValid() ? !mFetching && mCanFetchMore : false;
-    }
 };
