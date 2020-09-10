@@ -1,4 +1,7 @@
-#include <QtQuick>
+#include <qqml.h>
+#include <QGuiApplication>
+#include <QQuickView>
+#include <QQmlEngine>
 #include <sailfishapp.h>
 
 #include "ornclient.h"
