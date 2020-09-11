@@ -1,19 +1,19 @@
 #pragma once
 
 #include <QObject>
-#include <QCache>
 #include <QVariant>
 
 class QQmlEngine;
 class QJSEngine;
-class QSettings;
-class QTimer;
 
 class OrnApplication;
+class StoremanPrivate;
 
 class Storeman : public QObject
 {
     Q_OBJECT
+    Q_DECLARE_PRIVATE(Storeman)
+
     Q_PROPERTY(bool showRecentOnStart READ showRecentOnStart WRITE setShowRecentOnStart NOTIFY showRecentOnStartChanged)
     Q_PROPERTY(QVariantList mainPageOrder READ mainPageOrder WRITE setMainPageOrder RESET resetMainPageOrder NOTIFY mainPageOrderChanged)
     Q_PROPERTY(int updateInterval READ updateInterval WRITE setUpdateInterval NOTIFY updateIntervalChanged)
@@ -70,7 +70,7 @@ public:
     Q_INVOKABLE static bool fileExists(const QString &filePath);
     Q_INVOKABLE static bool removeFile(const QString &filePath);
 
-    Q_INVOKABLE bool showHint(Storeman::Hint hint) const;
+    Q_INVOKABLE bool showHint(Storeman::Hint hint);
     Q_INVOKABLE void setHintShowed(Storeman::Hint hint);
 
     Q_INVOKABLE OrnApplication *cachedApp(quint32 appId);
@@ -100,10 +100,4 @@ private slots:
 
 private:
     explicit Storeman(QObject *parent = nullptr);
-    void checkReposImpl();
-    void refreshReposImpl();
-
-    QSettings *mSettings;
-    QTimer *mUpdatesTimer;
-    QCache<quint32, OrnApplication> mAppsCache;
 };

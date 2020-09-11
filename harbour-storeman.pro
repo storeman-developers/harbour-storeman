@@ -71,6 +71,7 @@ HEADERS += \
     src/pktransactioninterface.h \
     src/ssuinterface.h \
     src/storeman.h \
+    src/storeman_p.h \
     src/ornconst.h \
     src/ornutils.h \
     src/ornclient.h \

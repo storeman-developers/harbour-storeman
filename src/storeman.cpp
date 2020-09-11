@@ -9,7 +9,7 @@
     0 if a new notification shuld be published.
  */
 
-#include "storeman.h"
+#include "storeman_p.h"
 #include "ornutils.h"
 #include "ornpm.h"
 #include "ornapplication.h"
@@ -20,9 +20,7 @@
 #include <notification.h>
 #include <networkmanager.h>
 
-#include <QSettings>
 #include <QDateTime>
-#include <QTimer>
 #include <QFileInfo>
 #include <QtConcurrentRun>
 #include <QNetworkReply>
@@ -40,19 +38,19 @@ static const QString GROUP_HINTS              {QStringLiteral("hints")};
 
 
 Storeman::Storeman(QObject *parent)
-    : QObject(parent)
-    , mSettings(new QSettings(this))
-    , mUpdatesTimer(new QTimer(this))
+    : QObject(*new StoremanPrivate(), parent)
 {
-    mAppsCache.setMaxCost(3);
+    Q_D(Storeman);
+
+    d->appsCache.setMaxCost(3);
 
     auto ornpm = OrnPm::instance();
     connect(ornpm, &OrnPm::updatablePackagesChanged,
             this, &Storeman::onUpdatablePackagesChanged);
 
-    mUpdatesTimer->setInterval(this->updateInterval());
-    mUpdatesTimer->setSingleShot(false);
-    connect(mUpdatesTimer, &QTimer::timeout, this, &Storeman::refreshRepos);
+    d->updatesTimer.setInterval(this->updateInterval());
+    d->updatesTimer.setSingleShot(false);
+    connect(&d->updatesTimer, &QTimer::timeout, this, &Storeman::refreshRepos);
 
     connect(this, &Storeman::checkForUpdatesChanged,
             this, &Storeman::startUpdatesTimer);
@@ -79,21 +77,21 @@ QObject *Storeman::qmlInstance(QQmlEngine *engine, QJSEngine *scriptEngine)
 
 bool Storeman::showRecentOnStart() const
 {
-    return mSettings->value(MAINPAGE_SHOW_RECENT).toBool();
+    return d_func()->settings.value(MAINPAGE_SHOW_RECENT).toBool();
 }
 
 void Storeman::setShowRecentOnStart(bool value)
 {
     if (value != this->showRecentOnStart())
     {
-        mSettings->setValue(MAINPAGE_SHOW_RECENT, value);
+        d_func()->settings.setValue(MAINPAGE_SHOW_RECENT, value);
         emit this->showRecentOnStartChanged();
     }
 }
 
 QVariantList Storeman::mainPageOrder() const
 {
-    auto res = mSettings->value(MAINPAGE_ORDER, QVariantList({
+    auto res = d_func()->settings.value(MAINPAGE_ORDER, QVariantList({
         RecentlyUpdated,
         Categories,
         Bookmarks,
@@ -116,21 +114,21 @@ void Storeman::setMainPageOrder(const QVariantList &value)
 {
     if (this->mainPageOrder() != value)
     {
-        mSettings->setValue(MAINPAGE_ORDER, value);
+        d_func()->settings.setValue(MAINPAGE_ORDER, value);
         emit this->mainPageOrderChanged();
     }
 }
 
 void Storeman::resetMainPageOrder()
 {
-    mSettings->remove(MAINPAGE_ORDER);
+    d_func()->settings.remove(MAINPAGE_ORDER);
     emit this->mainPageOrderChanged();
 }
 
 int Storeman::updateInterval() const
 {
     // Default update interval is 10 minutes
-    return mSettings->value(UPDATES_INTERVAL, 600000).toInt();
+    return d_func()->settings.value(UPDATES_INTERVAL, 600000).toInt();
 }
 
 void Storeman::setUpdateInterval(int value)
@@ -138,50 +136,51 @@ void Storeman::setUpdateInterval(int value)
     Q_ASSERT(value > 0);
     if (this->updateInterval() != value)
     {
-        mSettings->setValue(UPDATES_INTERVAL, value);
-        mUpdatesTimer->setInterval(value);
+        Q_D(Storeman);
+        d->settings.setValue(UPDATES_INTERVAL, value);
+        d->updatesTimer.setInterval(value);
         emit this->updateIntervalChanged();
     }
 }
 
 bool Storeman::checkForUpdates() const
 {
-    return mSettings->value(UPDATES_ENABLED, true).toBool();
+    return d_func()->settings.value(UPDATES_ENABLED, true).toBool();
 }
 
 void Storeman::setCheckForUpdates(bool value)
 {
     if (value != this->checkForUpdates())
     {
-        mSettings->setValue(UPDATES_ENABLED, value);
+        d_func()->settings.setValue(UPDATES_ENABLED, value);
         emit this->checkForUpdatesChanged();
     }
 }
 
 bool Storeman::smartUpdate() const
 {
-    return mSettings->value(UPDATES_SMART, true).toBool();
+    return d_func()->settings.value(UPDATES_SMART, true).toBool();
 }
 
 void Storeman::setSmartUpdate(bool value)
 {
     if (value != this->smartUpdate())
     {
-        mSettings->setValue(UPDATES_SMART, value);
+        d_func()->settings.setValue(UPDATES_SMART, value);
         emit this->smartUpdateChanged();
     }
 }
 
 bool Storeman::showUpdatesNotification() const
 {
-    return mSettings->value(UPDATES_SHOW_NOTIFICATION, true).toBool();
+    return d_func()->settings.value(UPDATES_SHOW_NOTIFICATION, true).toBool();
 }
 
 void Storeman::setShowUpdatesNotification(bool value)
 {
     if (value != this->showUpdatesNotification())
     {
-        mSettings->setValue(UPDATES_SHOW_NOTIFICATION, value);
+        d_func()->settings.setValue(UPDATES_SHOW_NOTIFICATION, value);
         emit this->showUpdatesNotificationChanged();
         this->onUpdatablePackagesChanged();
     }
@@ -189,7 +188,7 @@ void Storeman::setShowUpdatesNotification(bool value)
 
 bool Storeman::refreshOnSystemUpgrade() const
 {
-    return mSettings->value(REFRESH_CACHE_ENABLE, true).toBool();
+    return d_func()->settings.value(REFRESH_CACHE_ENABLE, true).toBool();
 }
 
 void Storeman::setRefreshOnSystemUpgrade(bool value)
@@ -199,7 +198,7 @@ void Storeman::setRefreshOnSystemUpgrade(bool value)
         return;
     }
 
-    mSettings->setValue(REFRESH_CACHE_ENABLE, value);
+    d_func()->settings.setValue(REFRESH_CACHE_ENABLE, value);
     emit this->refreshOnSystemUpgradeChanged();
 }
 
@@ -223,19 +222,23 @@ QString hintKey(Storeman::Hint hint)
     return QString::fromLatin1(name);
 }
 
-bool Storeman::showHint(Storeman::Hint hint) const
+bool Storeman::showHint(Storeman::Hint hint)
 {
-    mSettings->beginGroup(GROUP_HINTS);
-    auto value = mSettings->value(hintKey(hint), false).toBool();
-    mSettings->endGroup();
+    Q_D(Storeman);
+
+    d->settings.beginGroup(GROUP_HINTS);
+    auto value = d->settings.value(hintKey(hint), false).toBool();
+    d->settings.endGroup();
     return !value;
 }
 
 void Storeman::setHintShowed(Storeman::Hint hint)
 {
-    mSettings->beginGroup(GROUP_HINTS);
-    mSettings->setValue(hintKey(hint), true);
-    mSettings->endGroup();
+    Q_D(Storeman);
+
+    d->settings.beginGroup(GROUP_HINTS);
+    d->settings.setValue(hintKey(hint), true);
+    d->settings.endGroup();
 }
 
 OrnApplication *Storeman::cachedApp(quint32 appId)
@@ -245,22 +248,26 @@ OrnApplication *Storeman::cachedApp(quint32 appId)
         return nullptr;
     }
 
-    if (mAppsCache.contains(appId))
+    Q_D(Storeman);
+
+    if (d->appsCache.contains(appId))
     {
-        return mAppsCache[appId];
+        return d->appsCache[appId];
     }
 
     auto app = new OrnApplication(this);
     app->setAppId(appId);
-    mAppsCache.insert(appId, app);
+    d->appsCache.insert(appId, app);
     return app;
 }
 
 void Storeman::resetUpdatesTimer()
 {
+    Q_D(Storeman);
+
     OrnPm::instance()->refreshRepos();
-    mSettings->setValue(UPDATES_LAST_CHECK, QDateTime::currentMSecsSinceEpoch());
-    mUpdatesTimer->start();
+    d->settings.setValue(UPDATES_LAST_CHECK, QDateTime::currentMSecsSinceEpoch());
+    d->updatesTimer.start();
 }
 
 void Storeman::refreshRepos()
@@ -277,11 +284,12 @@ void Storeman::refreshRepos()
                 auto json = QJsonDocument::fromJson(reply->readAll()).array();
                 if (!json.isEmpty())
                 {
+                    Q_D(Storeman);
                     auto lastUpdate = OrnUtils::toUint(json[0].toObject()[OrnConst::updated]);
-                    auto lastCheck = mSettings->value(UPDATES_LAST_CHECK).toLongLong();
+                    auto lastCheck = d->settings.value(UPDATES_LAST_CHECK).toLongLong();
                     if (qlonglong(lastUpdate) * 1000 > lastCheck)
                     {
-                        this->refreshReposImpl();
+                        d->refreshRepos();
                     }
                 }
             }
@@ -290,15 +298,8 @@ void Storeman::refreshRepos()
     }
     else
     {
-        this->refreshReposImpl();
+        d_func()->refreshRepos();
     }
-}
-
-void Storeman::refreshReposImpl()
-{
-    OrnPm::instance()->refreshRepos();
-    mSettings->setValue(UPDATES_LAST_CHECK, QDateTime::currentMSecsSinceEpoch());
-    emit this->recentAppsChanged();
 }
 
 inline Notification *previousNotification()
@@ -334,6 +335,8 @@ inline Notification *previousNotification()
 
 void Storeman::onUpdatablePackagesChanged()
 {
+    Q_D(Storeman);
+
     QString key{QStringLiteral("updates/last_packages")};
     auto ornpm = OrnPm::instance();    
     auto prev = previousNotification();
@@ -349,7 +352,7 @@ void Storeman::onUpdatablePackagesChanged()
 
         auto cur_packages = OrnPm::instance()->updatablePackages();
         auto cur_packages_set = cur_packages.toSet();
-        auto prev_packages_set = mSettings->value(key).toStringList().toSet();
+        auto prev_packages_set = d->settings.value(key).toStringList().toSet();
         auto newpackages = cur_packages_set == prev_packages_set ?
                     false : !prev_packages_set.contains(cur_packages_set);
 
@@ -358,46 +361,50 @@ void Storeman::onUpdatablePackagesChanged()
         {
             emit this->updatesNotification(true, prev->replacesId());
             prev->deleteLater();
-            mSettings->setValue(key, cur_packages);
+            d->settings.setValue(key, cur_packages);
         }
     }
     else
     {
         emit this->updatesNotification(false, prev ? prev->replacesId() : 0);
-        mSettings->remove(key);
+        d->settings.remove(key);
     }
 }
 
 void Storeman::startUpdatesTimer()
 {
+    Q_D(Storeman);
+
     if (this->checkForUpdates() &&
         OrnPm::instance()->initialised() &&
         NetworkManager::instance()->state() == QLatin1String("online"))
     {
         qDebug("Starting updates timer");
         auto delta = QDateTime::currentMSecsSinceEpoch() -
-                mSettings->value(UPDATES_LAST_CHECK).toLongLong();
+                d->settings.value(UPDATES_LAST_CHECK).toLongLong();
         if (delta >= this->updateInterval())
         {
             this->refreshRepos();
         }
-        mUpdatesTimer->start();
+        d->updatesTimer.start();
     }
     else
     {
         qDebug("Stopping updates timer");
-        mUpdatesTimer->stop();
+        d->updatesTimer.stop();
     }
 }
 
 void Storeman::checkSystemVersion()
 {
+    Q_D(Storeman);
+
     QString key{QStringLiteral("refresh_cache/os_version")};
 
-    auto lastVersion = QVersionNumber::fromString(mSettings->value(key).toString());
+    auto lastVersion = QVersionNumber::fromString(d->settings.value(key).toString());
     auto version     = OrnUtils::systemVersion();
 
-    mSettings->setValue(key, version.toString());
+    d->settings.setValue(key, version.toString());
 
     if (lastVersion.isNull() || version == lastVersion)
     {
@@ -410,15 +417,17 @@ void Storeman::checkSystemVersion()
 
 void Storeman::checkRepos()
 {
-    QString key(QStringLiteral("repo_suggested"));
-    if (!mSettings->contains(key))
+    Q_D(Storeman);
+
+    QString key{QStringLiteral("repo_suggested")};
+    if (!d->settings.contains(key))
     {
-        QtConcurrent::run(this, &Storeman::checkReposImpl);
-        mSettings->setValue(key, true);
+        QtConcurrent::run(d, &StoremanPrivate::checkRepos);
+        d->settings.setValue(key, true);
     }
 }
 
-void Storeman::checkReposImpl()
+void StoremanPrivate::checkRepos()
 {
     auto repos = OrnPm::instance()->repoList();
     QString author{QStringLiteral("osetr")};
@@ -426,14 +435,23 @@ void Storeman::checkReposImpl()
     {
         return (repo.author == author);
     });
+
+    Q_Q(Storeman);
     if (it == repos.end())
     {
         // Repo is not added
-        emit this->repoSuggestion(author, false);
+        emit q->repoSuggestion(author, false);
     }
     else if (!it->enabled)
     {
         // Repo is added but disabled
-        emit this->repoSuggestion(author, true);
+        emit q->repoSuggestion(author, true);
     }
+}
+
+void StoremanPrivate::refreshRepos()
+{
+    OrnPm::instance()->refreshRepos();
+    settings.setValue(UPDATES_LAST_CHECK, QDateTime::currentMSecsSinceEpoch());
+    emit q_func()->recentAppsChanged();
 }
