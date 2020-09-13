@@ -759,18 +759,6 @@
         <source>Available version</source>
         <translation>Saatavilla oleva versio</translation>
     </message>
-    <message id="orn-size-kb">
-        <source>%0 KB</source>
-        <translation>%0 Kt</translation>
-    </message>
-    <message id="orn-size-mb">
-        <source>%0 MB</source>
-        <translation>%0 Mt</translation>
-    </message>
-    <message id="orn-size-gb">
-        <source>%0 GB</source>
-        <translation>%0 Gt</translation>
-    </message>
     <message id="orn-error-packagenotfound">
         <source>Couldn&apos;t find package</source>
         <translation>Pakettia ei löytynyt</translation>
@@ -778,13 +766,6 @@
     <message id="orn-size-installed">
         <source>Installed size</source>
         <translation>Asennuskoko</translation>
-    </message>
-    <message id="orn-size-bytes" numerus="yes">
-        <source>%n byte(s)</source>
-        <translation>
-            <numerusform>%n tavu</numerusform>
-            <numerusform>%n tavua</numerusform>
-        </translation>
     </message>
     <message id="orn-size-download-install">
         <source>Download / install size</source>

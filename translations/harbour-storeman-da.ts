@@ -759,18 +759,6 @@
         <source>Available version</source>
         <translation>Tilgængelig version</translation>
     </message>
-    <message id="orn-size-kb">
-        <source>%0 KB</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="orn-size-mb">
-        <source>%0 MB</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="orn-size-gb">
-        <source>%0 GB</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message id="orn-error-packagenotfound">
         <source>Couldn&apos;t find package</source>
         <translation type="unfinished"></translation>
@@ -778,13 +766,6 @@
     <message id="orn-size-installed">
         <source>Installed size</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message id="orn-size-bytes" numerus="yes">
-        <source>%n byte(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
     </message>
     <message id="orn-size-download-install">
         <source>Download / install size</source>
