@@ -37,7 +37,7 @@ OrnPkTransaction::OrnPkTransaction(const QString &path, bool conn, QObject *pare
             qDebug().noquote().nospace() << this << " error code " << code << ": " << details;
         });
 #else
-        connect(this, &PkTransactionInterface::Finished, this, &PkTransactionInterface::deleteLater);
+        connect(this, &OrnPkTransaction::Finished, this, &OrnPkTransaction::deleteLater);
 #endif
     }
 }
