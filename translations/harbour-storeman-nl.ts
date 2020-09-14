@@ -422,7 +422,7 @@
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not send your password to third-parties.</source>
-        <translation type="unfinished"></translation>
+        <translation>Meld je aan bij OpenRepos.net om reacties te plaatsen bij apps, en te reageren op de reacties van anderen.&lt;br /&gt;&lt;br /&gt;Storeman stuurt je wachtwoord niet door naar derde partijen.</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
@@ -1013,43 +1013,43 @@
     </message>
     <message id="orn-categories-filter">
         <source>Categories filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Categoriefilter</translation>
     </message>
     <message id="orn-categories-filter-descr">
         <source>Select which categories to show</source>
-        <translation type="unfinished"></translation>
+        <translation>Kies welke categorieën je wil tonen</translation>
     </message>
     <message id="orn-pmstate-refreshingcache">
         <source>Refreshing of cache</source>
-        <translation type="unfinished"></translation>
+        <translation>Vernieuwen van cache</translation>
     </message>
     <message id="orn-refresh-cache-switch">
         <source>Refresh cache after system upgrade</source>
-        <translation type="unfinished"></translation>
+        <translation>Cache vernieuwen na systeemupdate</translation>
     </message>
     <message id="orn-refresh-cache-switch-descr">
         <source>Force refreshing of cache of all repositories after system upgrade</source>
-        <translation type="unfinished"></translation>
+        <translation>Cache van alle pakketbronnen gedwongen vernieuwen na systeemupdate</translation>
     </message>
     <message id="orn-save-password">
         <source>Save password</source>
-        <translation type="unfinished"></translation>
+        <translation>Wachtwoord opslaan</translation>
     </message>
     <message id="orn-save-password-help">
         <source>Save password to the encrypted device storage to perform automatic re-login.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sla het wachtwoord op naar de versleutelde apparaatopslag om automatisch opnieuw aan te melden.</translation>
     </message>
     <message id="orn-share-link">
         <source>Share link</source>
-        <translation type="unfinished"></translation>
+        <translation>Koppeling delen</translation>
     </message>
     <message id="orn-repository">
         <source>Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Pakketbron</translation>
     </message>
     <message id="orn-myrepository">
         <source>My repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Mijn pakketbron</translation>
     </message>
 </context>
 </TS>

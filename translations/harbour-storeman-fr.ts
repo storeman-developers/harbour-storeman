@@ -1045,11 +1045,11 @@
     </message>
     <message id="orn-repository">
         <source>Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Dépôt</translation>
     </message>
     <message id="orn-myrepository">
         <source>My repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Mon dépôt</translation>
     </message>
 </context>
 </TS>

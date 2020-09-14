@@ -1040,11 +1040,11 @@
     </message>
     <message id="orn-repository">
         <source>Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>软件源</translation>
     </message>
     <message id="orn-myrepository">
         <source>My repository</source>
-        <translation type="unfinished"></translation>
+        <translation>我的软件库</translation>
     </message>
 </context>
 </TS>

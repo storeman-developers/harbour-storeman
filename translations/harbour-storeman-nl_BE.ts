@@ -5,7 +5,7 @@
     <name></name>
     <message id="orn-notrated">
         <source>Not rated yet</source>
-        <translation>Nog geen waardering</translation>
+        <translation>Nog geên waardering</translation>
     </message>
     <message id="orn-repositories">
         <source>Repositories</source>
@@ -33,11 +33,11 @@
     </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
-        <translation>Recent bijgewerkt</translation>
+        <translation>Recent bijgewèrkt</translation>
     </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
-        <translation>Netwerk niet beschikbaar</translation>
+        <translation>Netwèrk ni beschikbaar</translation>
     </message>
     <message id="orn-today">
         <source>Today</source>
@@ -114,7 +114,7 @@
     </message>
     <message id="orn-version-updated">
         <source>Last updated</source>
-        <translation>Bijgewerkt</translation>
+        <translation>Bijgewèrkt</translation>
     </message>
     <message id="orn-dt-format">
         <source>yyyy-MM-dd hh:mm</source>
@@ -123,7 +123,7 @@
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
-        <translation>Geen versies beschikbaar</translation>
+        <translation>Geên versies beschikbaar</translation>
     </message>
     <message id="orn-comments">
         <source>Comments</source>
@@ -131,7 +131,7 @@
     </message>
     <message id="orn-author-apps">
         <source>More by %0</source>
-        <translation>Ook van %0</translation>
+        <translation>Oòk van %0</translation>
     </message>
     <message id="orn-cat-coding-competition">
         <source>Coding Competition</source>
@@ -171,7 +171,7 @@
     </message>
     <message id="orn-cat-network">
         <source>Network</source>
-        <translation>Netwerk</translation>
+        <translation>Netwèrk</translation>
     </message>
     <message id="orn-cat-news-info">
         <source>News &amp; info</source>
@@ -187,7 +187,7 @@
     </message>
     <message id="orn-cat-social-networks">
         <source>Social Networks</source>
-        <translation>Sociale netwerken</translation>
+        <translation>Sociale netwèrken</translation>
     </message>
     <message id="orn-cat-sports">
         <source>Sports</source>
@@ -263,7 +263,7 @@
     </message>
     <message id="orn-update">
         <source>Update</source>
-        <translation>Bijwerken</translation>
+        <translation>Bijwèrken</translation>
     </message>
     <message id="orn-changelog">
         <source>Changelog</source>
@@ -275,7 +275,7 @@
     </message>
     <message id="orn-version-repo-disabled">
         <source>Enable the repository first</source>
-        <translation>Schakelt eerst de pakketbron in</translation>
+        <translation>Schakelt eèrst de pakketbron in</translation>
     </message>
     <message id="orn-search">
         <source>Search</source>
@@ -321,27 +321,27 @@
     </message>
     <message id="orn-reviewers">
         <source>Reviewers</source>
-        <translation>Beoordelaars</translation>
+        <translation>Beoôrdêlers</translation>
     </message>
     <message id="orn-app-description">
         <source>Unofficial native OpenRepos.net client for Sailfish&amp;nbsp;OS</source>
-        <translation>Onofficiëlen OpenRepos.net-cliënt voor Sailfish&amp;nbsp;OS</translation>
+        <translation>Onofficiëlen OpenRepos.net-cliënt voôr Sailfish&amp;nbsp;OS</translation>
     </message>
     <message id="orn-report">
         <source>Report an Issue</source>
-        <translation>Meldt een probleem</translation>
+        <translation>Meldt e probleem</translation>
     </message>
     <message id="orn-app-licensing">
         <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation>Dit is vrije software, uitgebracht onder de voorwaarden van de&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT-licentie&lt;/a&gt;</translation>
+        <translation>Dit is vrije software, uitgebracht onder de voôrwaarden van d’&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT-licentie&lt;/a&gt;</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
-        <translation>Der is een netwerkfout opgetreden</translation>
+        <translation>Der is een netwèrkfout opgetreden</translation>
     </message>
     <message id="orn-pull-refresh">
         <source>Pull down to refresh</source>
-        <translation>Trekt omlaag voor te vernieuwen</translation>
+        <translation>Trekt omleêg voôr te vernieuwen</translation>
     </message>
     <message id="orn-development">
         <source>Development</source>
@@ -361,19 +361,19 @@
     </message>
     <message id="orn-just-now">
         <source>Just now</source>
-        <translation>Zojuist</translation>
+        <translation>Nu just</translation>
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%n minute(s) ago</source>
         <translation>
-            <numerusform>%n minuut geleden</numerusform>
+            <numerusform>Êne minuut geleden</numerusform>
             <numerusform>%n minuten geleden</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%n hour(s) ago</source>
         <translation>
-            <numerusform>%n uur geleden</numerusform>
+            <numerusform>Eên uur geleden</numerusform>
             <numerusform>%n uur geleden</numerusform>
         </translation>
     </message>
@@ -388,11 +388,11 @@
     </message>
     <message id="orn-category-noapps">
         <source>Currently there are no apps in this category</source>
-        <translation>Der zijn momenteel geen apps in deze categorie</translation>
+        <translation>Der zijn momenteel geên apps in deze categorie</translation>
     </message>
     <message id="orn-cat-unknown2">
         <source>Unknown category</source>
-        <translation>Onbekende categorie</translation>
+        <translation>Ongekende categorie</translation>
     </message>
     <message id="orn-comment-body">
         <source>Your comment</source>
@@ -405,7 +405,7 @@
     </message>
     <message id="orn-edit">
         <source>Edit</source>
-        <translation>Bewerken</translation>
+        <translation>Bewèrken</translation>
     </message>
     <message id="orn-login-menu-item">
         <source>Log in to OpenRepos.net</source>
@@ -422,7 +422,7 @@
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not send your password to third-parties.</source>
-        <translation type="unfinished"></translation>
+        <translation>Meldt u aan bij OpenRepos.net voôr commentaren te plaatsen bij apps en te reageren op de commentaren van andere mensen.&lt;br /&gt;&lt;br /&gt;Storeman speelt u paswoord ni&apos; deur aan derde partijen.</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
@@ -434,11 +434,11 @@
     </message>
     <message id="orn-login-error-title">
         <source>Login error</source>
-        <translation>Fout bij aanmelden</translation>
+        <translation>Fout bij ’t aanmelden</translation>
     </message>
     <message id="orn-login-error-message">
         <source>Could not log in the OpenRepos.net - check your credentials and network connection</source>
-        <translation>Kon niet aanmelden bij OpenRepos.net - controleert uw(e) gebruikersnaam en paswoord en uw netwerkverbinding</translation>
+        <translation>Kost ni aanmelden bij OpenRepos.net - controleert uwe gebruikersnaam, u paswoord en u netwerkverbinding</translation>
     </message>
     <message id="orn-loggedin-menu-item">
         <source>Logged in as %0</source>
@@ -452,16 +452,16 @@
     <message id="orn-logout-remorse">
         <source>Logging out</source>
         <extracomment>Remorse text</extracomment>
-        <translation>Bezig met afmelden</translation>
+        <translation>Bezig med afmelden</translation>
     </message>
     <message id="orn-comment-edit-label">
         <source>Edit your comment</source>
-        <translation>Uwe commentaar bewerken</translation>
+        <translation>Uwe commentaar bewèrken</translation>
     </message>
     <message id="orn-comment-update">
         <source>Update</source>
         <extracomment>Update a comment</extracomment>
-        <translation>Bijwerken</translation>
+        <translation>Bijwèrken</translation>
     </message>
     <message id="orn-comment-send">
         <source>Send</source>
@@ -469,23 +469,23 @@
     </message>
     <message id="orn-authorisation-expires-summary">
         <source>Authorisation expires</source>
-        <translation>Autorisatie verloopt</translation>
+        <translation>Autorisatie verloôpt</translation>
     </message>
     <message id="orn-authorisation-expires-body">
         <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>De OpenRepos-autorisatie verloopt binnenkort. Tikt voor u te herautoriseren.</translation>
+        <translation>D’OpenRepos-autorisatie verloôpt kortelings. Tikt voôr u t’herautoriseren.</translation>
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
-        <translation>Autorisatie verlopen</translation>
+        <translation>Autorisatie verlôpen</translation>
     </message>
     <message id="orn-authorisation-expired-body">
         <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>De OpenRepos-autorisatie is verlopen. Tikt voor u te herautoriseren.</translation>
+        <translation>D’OpenRepos-autorisatie is verlôpen. Tikt voôr u t’herautoriseren.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
-        <translation>Tikt voor te herautoriseren</translation>
+        <translation>Tikt voôr t’herautoriseren</translation>
     </message>
     <message id="orn-enable-all">
         <source>Enable all</source>
@@ -509,11 +509,11 @@
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
-        <translation>Den app is toegevoegd aan uw bladwijzers</translation>
+        <translation>Den app is toegevoegd aan u bladwijzers</translation>
     </message>
     <message id="orn-bookmarks-removed">
         <source>The app was removed from bookmarks</source>
-        <translation>Den app is verwijderd uit uw bladwijzers</translation>
+        <translation>Den app is verwijderd uit u bladwijzers</translation>
     </message>
     <message id="orn-no-bookmarks">
         <source>Your bookmarked applications will be shown here</source>
@@ -525,11 +525,11 @@
     </message>
     <message id="orn-no-repos">
         <source>No OpenRepos repositories have been added yet</source>
-        <translation>Der zijn nog geen pakketbronnen van OpenRepos toegevoegd</translation>
+        <translation>Der hebben nog geên pakketbronnen van OpenRepos toegevoegd geweest</translation>
     </message>
     <message id="orn-add-repo-hint">
         <source>You can add a repository from an application page</source>
-        <translation>Ge kunt een pakketbron toevoegen via de app-pagina</translation>
+        <translation>Ge kunt een pakketbron toevoegen via ’t appblad</translation>
     </message>
     <message id="orn-refresh-cache">
         <source>Refresh cache</source>
@@ -556,20 +556,20 @@
     </message>
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
-        <translation>Tikt voor de updates te bekijken</translation>
+        <translation>Tikt voôr d’updates te bekijken</translation>
     </message>
     <message id="orn-updates-available-body">
         <source>Applications updates are available. Click to view details.</source>
-        <translation>Der zijn updates voor uw apps beschikbaar. Tikt voor meer info.</translation>
+        <translation>Der zijn updates voôr uw apps beschikbaar. Tikt voôr meêr info.</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>
-        <translation>Tikt voor meer info</translation>
+        <translation>Tikt voôr meêr info</translation>
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
         <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
-        <translation>Niks biedt %1, vereist voor %2, aan</translation>
+        <translation>Der is niks da(d) %1, vereist voôr %2, aanbiedt</translation>
     </message>
     <message id="orn-backups">
         <source>Backups</source>
@@ -589,7 +589,7 @@
     </message>
     <message id="orn-backup-error-directory">
         <source>Could not create directory</source>
-        <translation>Kon map niet aanmaken</translation>
+        <translation>Kost map ni aanmaken</translation>
     </message>
     <message id="orn-restore-title">
         <source>Restore from a file</source>
@@ -601,11 +601,11 @@
     </message>
     <message id="orn-restore-hint">
         <source>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</source>
-        <translation>Herstelt OpenRepos-pakketbronnen en geïnstalleerde apps uit het geselecteerd bestand. Deze handeling heeft genen invloed op uw huidige pakketbronnen, en gaat geïnstalleerde apps niet verwijderen.</translation>
+        <translation>Herstelt OpenRepos-pakketbronnen en geïnstalleerde apps uit ’t geselecteerd bestand. Deze handeling heeft gênen invloed op uw huidige pakketbronnen, en ga’ geïnstalleerde apps ni’ verwijderen.</translation>
     </message>
     <message id="orn-created">
         <source>Created</source>
-        <translation>Aangemaakte</translation>
+        <translation>Aangemaakt</translation>
     </message>
     <message id="orn-total-repos">
         <source>Total repositories</source>
@@ -637,15 +637,15 @@
     </message>
     <message id="orn-restoring-title">
         <source>Restoring</source>
-        <translation>Bezig met herstellen</translation>
+        <translation>Bezig me t’herstellen</translation>
     </message>
     <message id="orn-success-backup">
         <source>Successful backup</source>
-        <translation>Back-up voltooid</translation>
+        <translation>Back-up gereêd</translation>
     </message>
     <message id="orn-success-restore">
         <source>Successful restore</source>
-        <translation>Herstel voltooid</translation>
+        <translation>Back-up hersteld</translation>
     </message>
     <message id="orn-installed-packages">
         <source>Installed packages</source>
@@ -653,7 +653,7 @@
     </message>
     <message id="orn-login2comment">
         <source>Login to comment</source>
-        <translation>Meldt u aan voor ne commentaar te plaatsen</translation>
+        <translation>Meldt u aan voôr ne commentaar te plaatsen</translation>
     </message>
     <message id="orn-backup">
         <source>Backup</source>
@@ -661,7 +661,7 @@
     </message>
     <message id="orn-backup-hint">
         <source>&lt;h2&gt;Backup to a file&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.&lt;/p&gt;</source>
-        <translation>&lt;h2&gt;Back-up naar een bestand&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Back-up laat u toe van uw huidige OpenRepos-pakketbronnen op te slaan, evenals uw geïnstalleerde apps en bladwijzers, voor deze later te herstellen (bijvoorbeeld nadat ge uw toestel hebt teruggebracht naar de fabrieksinstellingen). Nen back-up is een lokaal bestand dat wordt opgeslagen in de map &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Opgelet!&lt;/b&gt; Kopieert uw back-ups handmatig naar een veilige locatie, gelijk uw SD-kaart, een extern toestel of ne cloudopslagdienst, vooraleer dat ge uw toestel terugbrengt naar de fabrieksinstellingen.&lt;/p&gt;</translation>
+        <translation>&lt;h2&gt;Back-up naar een bestand&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Back-up laat u toe van uw huidige OpenRepos-pakketbronnen op te slaan, evenals u geïnstalleerde apps en bladwijzers, voôr ze later t’herstellen (bijvoorbeeld nada’ g’u toestel hed teruggebracht naar de fabrieksinstellingen). Nen back-up is e lokaal bestand da wordt opgeslagen in de map &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Past op!&lt;/b&gt; Kopieert u back-ups handmatig naar een veilige locatie, gelijk u SD-kaart, een extern toestel of ne cloudopslagdienst, voôraleêr da’ g’u toestel terugbrengt naar de fabrieksinstellingen.&lt;/p&gt;</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -697,7 +697,7 @@
     </message>
     <message id="orn-pmstate-updatingpackage">
         <source>Updating package %0</source>
-        <translation>Pakket %0 wordt bijgewerkt</translation>
+        <translation>Pakket %0 wordt bijgewèrkt</translation>
     </message>
     <message id="orn-repo-removed">
         <source>The repository %0 was removed</source>
@@ -717,7 +717,7 @@
     </message>
     <message id="orn-not-installed">
         <source>Not installed</source>
-        <translation>Niet geïnstalleerd</translation>
+        <translation>Ni’ geïnstalleerd</translation>
     </message>
     <message id="orn-installing">
         <source>Installing</source>
@@ -725,11 +725,11 @@
     </message>
     <message id="orn-unknown">
         <source>Unknown</source>
-        <translation>Onbekend</translation>
+        <translation>Ongekend</translation>
     </message>
     <message id="orn-updating">
         <source>Updating</source>
-        <translation>Wordt bijgewerkt</translation>
+        <translation>Wordt bijgewèrkt</translation>
     </message>
     <message id="orn-version-available-global">
         <source>Available in other repositories</source>
@@ -741,17 +741,17 @@
     </message>
     <message id="orn-update-all">
         <source>Update all</source>
-        <translation>Alles bijwerken</translation>
+        <translation>Alles bijwèrken</translation>
     </message>
     <message id="orn-no-installed-apps">
         <source>Could not find any applications installed from OpenRepos</source>
-        <translation>Geen apps geïnstalleerd van OpenRepos gevonden</translation>
+        <translation>Geên apps geïnstalleerd van OpenRepos gevonden</translation>
     </message>
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
         <translation>
-            <numerusform>%n actie wordt uitgevoerd</numerusform>
+            <numerusform>Eên actie wordt uitgevoerd</numerusform>
             <numerusform>%n acties worden uitgevoerd</numerusform>
         </translation>
     </message>
@@ -761,15 +761,15 @@
     </message>
     <message id="orn-error-packagenotfound">
         <source>Couldn&apos;t find package</source>
-        <translation>Kon pakket niet vinden</translation>
+        <translation>Kost ’t pakket ni’ vinden</translation>
     </message>
     <message id="orn-size-installed">
         <source>Installed size</source>
-        <translation>Geïnstalleerde grootte</translation>
+        <translation>Geïnstalleerde groôtte</translation>
     </message>
     <message id="orn-size-download-install">
         <source>Download / install size</source>
-        <translation>Download-/installatiegrootte</translation>
+        <translation>Download-/installatiegroôtte</translation>
     </message>
     <message id="orn-cat-public-transport">
         <source>Public Transport</source>
@@ -783,7 +783,7 @@
     <message id="orn-comments-bethefirst">
         <source>Be the first to comment</source>
         <extracomment>This will be shown to a normal user</extracomment>
-        <translation>Plaatst den eerste commentaar</translation>
+        <translation>Plaatst den eêrste commentaar</translation>
     </message>
     <message id="orn-comments-nocomments">
         <source>There is nothing here yet</source>
@@ -799,7 +799,7 @@
     </message>
     <message id="orn-updates-notification-switch">
         <source>Show updates notification</source>
-        <translation>Updatemeldingen tonen</translation>
+        <translation>Updatemeldingen tônen</translation>
     </message>
     <message id="orn-updates-check-interval">
         <source>Updates check interval</source>
@@ -808,20 +808,20 @@
     <message id="orn-interval-m" numerus="yes">
         <source>%n minute(s)</source>
         <translation>
-            <numerusform>%n minuut</numerusform>
+            <numerusform>Êne minuut</numerusform>
             <numerusform>%n minuten</numerusform>
         </translation>
     </message>
     <message id="orn-interval-h" numerus="yes">
         <source>%n hour(s)</source>
         <translation>
-            <numerusform>%n uur</numerusform>
+            <numerusform>Eên uur</numerusform>
             <numerusform>%n uur</numerusform>
         </translation>
     </message>
     <message id="orn-updates-check-interval-invalid">
         <source>The interval must be at least 10 minutes</source>
-        <translation>Het interval moet minstens 10 minuten zijn</translation>
+        <translation>’t Interval moet minimum 10 minuten zijn</translation>
     </message>
     <message id="orn-tag-strikeout">
         <source>S</source>
@@ -830,7 +830,7 @@
     </message>
     <message id="orn-hint-commentfield">
         <source>Swipe to see all the tag buttons</source>
-        <translation>Veegt voor alle tagknoppen te zien</translation>
+        <translation>Veegt voôr alle tagknoppen te zien</translation>
     </message>
     <message id="orn-dcm-user2">
         <source>Deep Thought</source>
@@ -840,20 +840,20 @@
     <message id="orn-dcm-user1">
         <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>Een klein wit muiske</translation>
+        <translation>E klei wit muisken</translation>
     </message>
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>Wat is het antwoord op de ultieme vraag over het Leven, het Universum, en Alles?</translation>
+        <translation>Wad is ’t antwoord op d’ultieme vraag over ’t Leven, ’t Universum, en Al?</translation>
     </message>
     <message id="orn-hint-commentdelegate-created">
         <source>7.5 million years ago</source>
-        <translation>7,5 miljoen jaar geleden</translation>
+        <translation>Over 7,5 miljoen jaar</translation>
     </message>
     <message id="orn-hint-commentdelegate">
         <source>Tap to navigate to the replied comment</source>
-        <translation>Tikt voor den beantwoorde commentaar te bekijken</translation>
+        <translation>Tikt voôr den beantwoorde commentaar te bekijken</translation>
     </message>
     <message id="orn-tags">
         <source>Tags</source>
@@ -865,19 +865,19 @@
     </message>
     <message id="orn-rate-app">
         <source>Rate the application</source>
-        <translation>Beoordeelt den app</translation>
+        <translation>Beoôrdeêlt den app</translation>
     </message>
     <message id="orn-vote-send">
         <source>Your vote has been sent</source>
-        <translation>Uw stem is verzonden</translation>
+        <translation>U stem heeft verzonden geweest</translation>
     </message>
     <message id="orn-login2rate">
         <source>Log in to rate the application</source>
-        <translation>Meldt u aan voor den app te beoordelen</translation>
+        <translation>Meldt u aan voôr den app te beoôrdêlen</translation>
     </message>
     <message id="orn-hint-rating">
         <source>Tap to rate the application</source>
-        <translation>Tikt voor den app te beoordelen</translation>
+        <translation>Tikt voôr den app te beoôrdêlen</translation>
     </message>
     <message id="orn-local-rpms">
         <source>Local RPM files</source>
@@ -893,7 +893,7 @@
     </message>
     <message id="orn-no-local-rpms">
         <source>No local RPM files were found</source>
-        <translation>Geen lokale RPM-bestanden gevonden</translation>
+        <translation>Geên lokale RPM-bestanden gevonden</translation>
     </message>
     <message id="orn-deletion-error">
         <source>Failed to delete</source>
@@ -909,7 +909,7 @@
     </message>
     <message id="orn-repo-allremoved">
         <source>All repositories were removed</source>
-        <translation>Alle pakketbronnen zijn verwijderd</translation>
+        <translation>Alle pakketbronnen hebben verwijderd geweest</translation>
     </message>
     <message id="orn-search-on-openrepos">
         <source>Search on OpenRepos.net</source>
@@ -917,7 +917,7 @@
     </message>
     <message id="orn-repo-suggestion">
         <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
-        <translation>&lt;h3&gt;Schakelt de Storeman-pakketbron in&lt;/h3&gt;&lt;p&gt;Voor de laatste nieuwe versies van Storeman te kunnen ontvangen, moet ge den OpenRepos-pakketbron dervan inschakelen, just gelijk voor iederen anderen app.&lt;/p&gt;&lt;p&gt;Wilt ge dit nu doen?&lt;/p&gt;</translation>
+        <translation>&lt;h3&gt;Schakelt de Storeman-pakketbron in&lt;/h3&gt;&lt;p&gt;Voôr de laatste nieuwe versies van Storeman te kunnen ontvangen, moete d’OpenRepos-pakketbron dervan inschakelen, just gelijk voôr iederen anderen app.&lt;/p&gt;&lt;p&gt;Wilde da nu doen?&lt;/p&gt;</translation>
     </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
@@ -925,7 +925,7 @@
     </message>
     <message id="orn-check-for-updates-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation>Storeman controleert alleen maar op updates wanneer dat het actief is</translation>
+        <translation>Storeman controleert alleên maar op updates als ’t actief is</translation>
     </message>
     <message id="orn-smart-check-switch">
         <source>Smart check</source>
@@ -933,7 +933,7 @@
     </message>
     <message id="orn-smart-check-descr">
         <source>Use the OpenRepos.net API to determine if there are new updates</source>
-        <translation>Gebruikt den OpenRepos.net-API voor te bepalen of dat der nieuwe updates beschikbaar zijn</translation>
+        <translation>Gebruikt den OpenRepos.net-API voôr te bepalen of da’ der nieuwe updates beschikbaar zijn</translation>
     </message>
     <message id="orn-reload">
         <source>Reload</source>
@@ -941,23 +941,23 @@
     </message>
     <message id="orn-no-packages">
         <source>No packages available</source>
-        <translation>Geen pakketten beschikbaar</translation>
+        <translation>Geên pakketten beschikbaar</translation>
     </message>
     <message id="orn-error-comment-sending">
         <source>Error sending comment</source>
-        <translation>Fout bij verzenden van commentaar</translation>
+        <translation>Fout bij ’t verzenden van de commentaar</translation>
     </message>
     <message id="orn-error-comment-deletion">
         <source>Error deleting comment</source>
-        <translation>Fout bij verwijderen van commentaar</translation>
+        <translation>Fout bij ’t verwijderen van de commentaar</translation>
     </message>
     <message id="orn-error-network">
         <source>Network error</source>
-        <translation>Netwerkfout</translation>
+        <translation>Netwèrkfout</translation>
     </message>
     <message id="orn-hint-bookmark">
         <source>Tap to bookmark the application</source>
-        <translation>Tikt voor den app toe te voegen aan uw bladwijzers</translation>
+        <translation>Tikt voôr den app toe te voegen aan u bladwijzers</translation>
     </message>
     <message id="orn-bad-appid">
         <source>Invalid package ID %1</source>
@@ -965,15 +965,15 @@
     </message>
     <message id="orn-backup-filenameph">
         <source>A file name for backup</source>
-        <translation>Nen bestandsnaam voor den back-up</translation>
+        <translation>Nen bestandsnaam voôr den back-up</translation>
     </message>
     <message id="orn-file-exists">
         <source>File already exists</source>
-        <translation>Bestand bestaat al</translation>
+        <translation>’t Bestand bestaat al</translation>
     </message>
     <message id="orn-backup-items">
         <source>What to backup</source>
-        <translation>Wat moet der geback-upt worden</translation>
+        <translation>Wa moet der geback-upt worden</translation>
     </message>
     <message id="orn-backup-apps">
         <source>Installed applications</source>
@@ -981,19 +981,19 @@
     </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
-        <translation>Tikt nog ne keer voor den tip te sluiten</translation>
+        <translation>Tikt nog ne keêr voôr den tip te sluiten</translation>
     </message>
     <message id="orn-mainpage">
         <source>Main page</source>
-        <translation>Beginpagina</translation>
+        <translation>Hoôfdblad</translation>
     </message>
     <message id="orn-show-recent-switch">
         <source>Show recently updated on start</source>
-        <translation>Recent bijgewerkte apps weergeven bij opstarten</translation>
+        <translation>Recent bijgewèrkte apps weergeven bij ’t opstarten</translation>
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>
-        <translation>Toont de pagina met recent bijgewerkte apps bij opstarten</translation>
+        <translation>Toônt ’t blad me recent bijgewèrkte apps bij ’t opstarten</translation>
     </message>
     <message id="orn-mainpage-order">
         <source>Order items</source>
@@ -1005,7 +1005,7 @@
     </message>
     <message id="orn-mainpage-order-description">
         <source>Drag items to change their order</source>
-        <translation>Versleept items voor hun volgorde te veranderen</translation>
+        <translation>Versleept items voôr hun volgorde te veranderen</translation>
     </message>
     <message id="orn-cat-adult-content">
         <source>Adult Content</source>
@@ -1013,43 +1013,43 @@
     </message>
     <message id="orn-categories-filter">
         <source>Categories filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Categoriefilter</translation>
     </message>
     <message id="orn-categories-filter-descr">
         <source>Select which categories to show</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiest welke categorieën da’ ge wilt zien</translation>
     </message>
     <message id="orn-pmstate-refreshingcache">
         <source>Refreshing of cache</source>
-        <translation type="unfinished"></translation>
+        <translation>Vernieuwen van cache</translation>
     </message>
     <message id="orn-refresh-cache-switch">
         <source>Refresh cache after system upgrade</source>
-        <translation type="unfinished"></translation>
+        <translation>Cache vernieuwen achter systeemupdate</translation>
     </message>
     <message id="orn-refresh-cache-switch-descr">
         <source>Force refreshing of cache of all repositories after system upgrade</source>
-        <translation type="unfinished"></translation>
+        <translation>Cache van alle pakketbronnen gedwongen vernieuwen achter systeemupdate</translation>
     </message>
     <message id="orn-save-password">
         <source>Save password</source>
-        <translation type="unfinished"></translation>
+        <translation>Paswoord opslaan</translation>
     </message>
     <message id="orn-save-password-help">
         <source>Save password to the encrypted device storage to perform automatic re-login.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sla ’t paswoord op naar de versleutelde geheimen opslag voôr automatisch heraan te melden.</translation>
     </message>
     <message id="orn-share-link">
         <source>Share link</source>
-        <translation type="unfinished"></translation>
+        <translation>Koppeling dêlen</translation>
     </message>
     <message id="orn-repository">
         <source>Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Pakketbron</translation>
     </message>
     <message id="orn-myrepository">
         <source>My repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Mijn pakketbron</translation>
     </message>
 </context>
 </TS>
