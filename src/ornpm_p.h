@@ -22,30 +22,35 @@ public:
     ~OrnPmPrivate() override = default;
 
     void initialise();
-    PkTransactionInterface *transaction(const QString &item = QString());
+    PkTransactionInterface *transaction();
+    PkTransactionInterface *currentTransaction();
     void preparePackageVersions(const QString &packageName);
     bool enableRepos(bool enable);
     void removeAllRepos();
     void onRepoModified(const QString &alias, OrnPm::RepoAction action);
     OrnInstalledPackageList prepareInstalledPackages(const QString &packageName);
 
+    void onPackage(quint32 info, const QString& packageId, const QString &summary);
+    void onTransactionFinished(quint32 status, quint32 runtime);
+
     // Check for updates
     void getUpdates();
-    void onPackageUpdate(quint32 info, const QString& packageId, const QString &summary);
-    void onGetUpdatesFinished(quint32 status, quint32 runtime);
+    void onPackageUpdate(quint32 info, const QString& packageId);
+    void onGetUpdatesFinished(quint32 status);
     // Install package
-    void onPackageInstalled(quint32 exit, quint32 runtime);
+    void onPackageInstalled(const QString& packageId);
     // Remove package
-    void onPackageRemoved(quint32 exit, quint32 runtime);
+    void onPackageRemoved(const QString& packageId);
     // Update package
-    void onPackageUpdated(quint32 exit, quint32 runtime);
+    void onPackageUpdated(const QString& packageId);
     // Refresh repos
     void refreshNextRepo(quint32 exit, quint32 runtime);
 
     // <alias, enabled>
-    using RepoHash   = QHash<QString, bool>;
-    using StringSet  = QSet<QString>;
-    using StringHash = QHash<QString, QString>;
+    using RepoHash      = QHash<QString, bool>;
+    using StringSet     = QSet<QString>;
+    using StringHash    = QHash<QString, QString>;
+    using OperationHash = QHash<QString, OrnPm::Operation>;
 
     bool            initialised{false};
 #ifdef QT_DEBUG
@@ -59,8 +64,7 @@ public:
     StringHash      installedPackages;
     StringHash      updatablePackages;
     StringHash      newUpdatablePackages;
-    QHash<QString, OrnPm::Operation> operations;
-    QHash<QObject *, QString> transactionHash;
+    OperationHash   operations;
     QStringList     reposToRefresh;
     QString         forceRefresh;
 };

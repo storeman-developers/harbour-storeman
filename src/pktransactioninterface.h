@@ -8,11 +8,16 @@ class PkTransactionInterface : public QDBusAbstractInterface
 {
     Q_OBJECT
 
+#ifdef QT_DEBUG
+    friend QDebug operator<<(QDebug dbg, const PkTransactionInterface *t);
+#endif
+
 public:
-    explicit PkTransactionInterface(const QString &service, const QString &path, QObject *parent = nullptr);
+    PkTransactionInterface(const QString &path, bool conn, QObject *parent = nullptr);
 
     void resolve(const QStringList &names);
     void installPackages(const QStringList &ids);
+    void updatePackages(const QStringList &ids);
     void removePackages(const QStringList &ids, bool autoremove = false);
 
     void installFiles(const QStringList &files);
@@ -24,6 +29,11 @@ public:
 
     void refreshCache(bool force = false);    
     void getUpdates();
+
+    Q_PROPERTY(uint Role READ role)
+    uint role() const {
+        return property("Role").toUInt();
+    }
 
 signals:
     void ErrorCode(quint32 code, const QString &details);

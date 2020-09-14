@@ -1,9 +1,13 @@
 #include "pkinterface.h"
 #include "pktransactioninterface.h"
 
+#include <QDebug>
+
+const QString PkInterface::serviceName{QStringLiteral("org.freedesktop.PackageKit")};
+
 PkInterface::PkInterface(QObject *parent)
     : QDBusAbstractInterface(
-          QStringLiteral("org.freedesktop.PackageKit"),
+          serviceName,
           QStringLiteral("/org/freedesktop/PackageKit"),
           "org.freedesktop.PackageKit",
           QDBusConnection::systemBus(),
@@ -19,8 +23,8 @@ PkTransactionInterface *PkInterface::transaction() {
                qPrintable(reply.errorName().append(": ").append(reply.errorMessage())));
 
     auto t = new PkTransactionInterface(
-        service(),
         qvariant_cast<QDBusObjectPath>(reply.arguments().first()).path(),
+        false,
         parent()
     );
     Q_ASSERT(t->isValid());

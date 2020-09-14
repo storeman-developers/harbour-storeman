@@ -110,12 +110,6 @@ signals:
     void packageStatusChanged(const QString &packageName, OrnPm::PackageStatus status);
     void error(quint32 code, const QString &details);
 
-#ifdef QT_DEBUG
-private slots:
-    void onTransactionFinished(quint32 exit, quint32 runtime);
-    void emitError(quint32 code, const QString& details);
-#endif
-
     // Check for updates
 signals:
     void updatablePackagesChanged();
