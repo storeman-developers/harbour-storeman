@@ -2,18 +2,18 @@
 
 #include <QDBusAbstractInterface>
 
-class PkTransactionInterface;
+class OrnPkTransaction;
 
-class PkInterface : public QDBusAbstractInterface
+class OrnPkDaemon : public QDBusAbstractInterface
 {
     Q_OBJECT
 
 public:
     static const QString serviceName;
 
-    explicit PkInterface(QObject *parent = nullptr);
+    explicit OrnPkDaemon(QObject *parent = nullptr);
 
-    PkTransactionInterface *transaction();
+    OrnPkTransaction *transaction();
 
 signals:
     void UpdatesChanged();

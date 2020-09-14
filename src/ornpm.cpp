@@ -33,18 +33,18 @@ OrnPm::OrnPm(QObject *parent)
 
     d->ssuInterface = new SsuInterface(this);
 
-    d->pkInterface = new PkInterface(this);
-    connect_priv(d->pkInterface, &PkInterface::UpdatesChanged, this, &OrnPmPrivate::getUpdates);
-    connect(d->pkInterface, &PkInterface::TransactionListChanged, this, [this](const QStringList &transactions) {
+    d->pkDaemon = new OrnPkDaemon(this);
+    connect_priv(d->pkDaemon, &OrnPkDaemon::UpdatesChanged, this, &OrnPmPrivate::getUpdates);
+    connect(d->pkDaemon, &OrnPkDaemon::TransactionListChanged, this, [this](const QStringList &transactions) {
         static QSet<QString> active;
         for (const auto &path : transactions)
         {
             if (!active.contains(path))
             {
                 active.insert(path);
-                auto t = new PkTransactionInterface(path, true, this);
-                connect_priv(t, &PkTransactionInterface::Package,  this, &OrnPmPrivate::onPackage);
-                connect_priv(t, &PkTransactionInterface::Finished, this, &OrnPmPrivate::onTransactionFinished);
+                auto t = new OrnPkTransaction(path, true, this);
+                connect_priv(t, &OrnPkTransaction::Package,  this, &OrnPmPrivate::onPackage);
+                connect_priv(t, &OrnPkTransaction::Finished, this, &OrnPmPrivate::onTransactionFinished);
             }
         }
         active = transactions.toSet();
@@ -230,16 +230,16 @@ OrnPm::PackageStatus OrnPm::packageStatus(const QString &packageName) const
     return PackageNotInstalled;
 }
 
-PkTransactionInterface *OrnPmPrivate::transaction()
+OrnPkTransaction *OrnPmPrivate::transaction()
 {
-    auto t = pkInterface->transaction();
-    QObject::connect(t, &PkTransactionInterface::ErrorCode, q_func(), &OrnPm::error);
+    auto t = pkDaemon->transaction();
+    QObject::connect(t, &OrnPkTransaction::ErrorCode, q_func(), &OrnPm::error);
     return t;
 }
 
-PkTransactionInterface *OrnPmPrivate::currentTransaction()
+OrnPkTransaction *OrnPmPrivate::currentTransaction()
 {
-    return qobject_cast<PkTransactionInterface *>(currentSender->sender);
+    return qobject_cast<OrnPkTransaction *>(currentSender->sender);
 }
 
 void OrnPm::getPackageVersions(const QString &packageName)
@@ -612,7 +612,7 @@ void OrnPm::refreshRepos(bool force)
 
     qDebug() << "Starting refresh cache for all ORN repositories";
 
-    d->pkInterface->blockSignals(true);
+    d->pkDaemon->blockSignals(true);
     d->forceRefresh = OrnUtils::stringify(force);
 #ifdef QT_DEBUG
     d->refreshRuntime = 0;
@@ -1004,13 +1004,13 @@ void OrnPmPrivate::refreshNextRepo(quint32 exit, quint32 runtime)
                      << refreshRuntime << "msec";
         }
 #endif
-        pkInterface->blockSignals(false);
+        pkDaemon->blockSignals(false);
     }
     else
     {
         auto alias = reposToRefresh.takeFirst();
         auto t = this->transaction();
-        QObject::connect(t, &PkTransactionInterface::Finished, q, [this, alias](quint32 exit, quint32 runtime) {
+        QObject::connect(t, &OrnPkTransaction::Finished, q, [this, alias](quint32 exit, quint32 runtime) {
             refreshNextRepo(exit, runtime);
             finishOperation(alias);
         });

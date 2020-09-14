@@ -38,8 +38,8 @@ SOURCES += \
     src/networkaccessmanagerfactory.cpp \
     src/ornappsmodel.cpp \
     src/ornsecrets.cpp \
-    src/pkinterface.cpp \
-    src/pktransactioninterface.cpp \
+    src/ornpkdaemon.cpp \
+    src/ornpktransaction.cpp \
     src/ssuinterface.cpp \
     src/storeman.cpp \
     src/ornconst.cpp \
@@ -67,8 +67,8 @@ HEADERS += \
     src/ornappsmodel.h \
     src/ornsecrets.h \
     src/ornsecrets_p.h \
-    src/pkinterface.h \
-    src/pktransactioninterface.h \
+    src/ornpkdaemon.h \
+    src/ornpktransaction.h \
     src/ssuinterface.h \
     src/storeman.h \
     src/storeman_p.h \

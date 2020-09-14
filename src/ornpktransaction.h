@@ -4,16 +4,16 @@
 
 #include <QDBusAbstractInterface>
 
-class PkTransactionInterface : public QDBusAbstractInterface
+class OrnPkTransaction : public QDBusAbstractInterface
 {
     Q_OBJECT
 
 #ifdef QT_DEBUG
-    friend QDebug operator<<(QDebug dbg, const PkTransactionInterface *t);
+    friend QDebug operator<<(QDebug dbg, const OrnPkTransaction *t);
 #endif
 
 public:
-    PkTransactionInterface(const QString &path, bool conn, QObject *parent = nullptr);
+    OrnPkTransaction(const QString &path, bool conn, QObject *parent = nullptr);
 
     void resolve(const QStringList &names);
     void installPackages(const QStringList &ids);

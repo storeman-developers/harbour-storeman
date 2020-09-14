@@ -1,6 +1,5 @@
-#include "pktransactioninterface.h"
-#include "pkinterface.h"
-#include "pktransactioninterface.h"
+#include "ornpktransaction.h"
+#include "ornpkdaemon.h"
 
 #include <Transaction>
 
@@ -10,16 +9,16 @@
 static constexpr quint64 PK_FLAG_NONE{0};
 
 #ifdef QT_DEBUG
-QDebug operator<<(QDebug dbg, const PkTransactionInterface *t) {
+QDebug operator<<(QDebug dbg, const OrnPkTransaction *t) {
     QDebugStateSaver state{dbg};
     dbg.quote().nospace() << "PackageKit::Transaction(" << t->path() << ")";
     return dbg;
 }
 #endif
 
-PkTransactionInterface::PkTransactionInterface(const QString &path, bool conn, QObject *parent)
+OrnPkTransaction::OrnPkTransaction(const QString &path, bool conn, QObject *parent)
     : QDBusAbstractInterface(
-          PkInterface::serviceName,
+          OrnPkDaemon::serviceName,
           path,
           "org.freedesktop.PackageKit.Transaction",
           QDBusConnection::systemBus(),
@@ -28,13 +27,13 @@ PkTransactionInterface::PkTransactionInterface(const QString &path, bool conn, Q
 {
     if (conn) {
 #ifdef QT_DEBUG
-        connect(this, &PkTransactionInterface::Finished, this, [this](quint32 exit, quint32 runtime) {
+        connect(this, &OrnPkTransaction::Finished, this, [this](quint32 exit, quint32 runtime) {
             qDebug() << this
                      << (exit == PackageKit::Transaction::ExitSuccess ? "finished in" : "failed after")
                      << runtime << " msec";
             this->deleteLater();
         });
-        connect(this, &PkTransactionInterface::ErrorCode, this, [this](quint32 code, const QString &details) {
+        connect(this, &OrnPkTransaction::ErrorCode, this, [this](quint32 code, const QString &details) {
             qDebug().noquote().nospace() << this << " error code " << code << ": " << details;
         });
 #else
@@ -43,7 +42,7 @@ PkTransactionInterface::PkTransactionInterface(const QString &path, bool conn, Q
     }
 }
 
-void PkTransactionInterface::resolve(const QStringList &names) {
+void OrnPkTransaction::resolve(const QStringList &names) {
     QString method{QStringLiteral("Resolve")};
     qDebug().nospace()
             << "Calling " << this << "->" << method.toLatin1().data()
@@ -51,7 +50,7 @@ void PkTransactionInterface::resolve(const QStringList &names) {
     asyncCall(method, PK_FLAG_NONE, names);
 }
 
-void PkTransactionInterface::installPackages(const QStringList &ids) {
+void OrnPkTransaction::installPackages(const QStringList &ids) {
     QString method{QStringLiteral("InstallPackages")};
     qDebug().nospace()
             << "Calling " << this << "->" << method.toLatin1().data()
@@ -59,7 +58,7 @@ void PkTransactionInterface::installPackages(const QStringList &ids) {
     asyncCall(method, PK_FLAG_NONE, ids);
 }
 
-void PkTransactionInterface::updatePackages(const QStringList &ids) {
+void OrnPkTransaction::updatePackages(const QStringList &ids) {
     QString method{QStringLiteral("UpdatePackages")};
     qDebug().nospace()
             << "Calling " << this << "->" << method.toLatin1().data()
@@ -67,7 +66,7 @@ void PkTransactionInterface::updatePackages(const QStringList &ids) {
     asyncCall(method, PK_FLAG_NONE, ids);
 }
 
-void PkTransactionInterface::removePackages(const QStringList &ids, bool autoremove) {
+void OrnPkTransaction::removePackages(const QStringList &ids, bool autoremove) {
     QString method{QStringLiteral("RemovePackages")};
     qDebug().nospace()
             << "Calling " << this << "->" << method.toLatin1().data()
@@ -75,7 +74,7 @@ void PkTransactionInterface::removePackages(const QStringList &ids, bool autorem
     asyncCall(method, PK_FLAG_NONE, ids, false, autoremove);
 }
 
-void PkTransactionInterface::installFiles(const QStringList &files) {
+void OrnPkTransaction::installFiles(const QStringList &files) {
     QString method{QStringLiteral("InstallFiles")};
     qDebug().nospace()
             << "Calling " << this << "->" << method.toLatin1().data()
@@ -83,7 +82,7 @@ void PkTransactionInterface::installFiles(const QStringList &files) {
     asyncCall(method, PK_FLAG_NONE, files);
 }
 
-void PkTransactionInterface::repoRefreshNow(const QString &alias, const QString &force) {
+void OrnPkTransaction::repoRefreshNow(const QString &alias, const QString &force) {
     QString method{QStringLiteral("RepoSetData")};
     qDebug().nospace().noquote()
             << "Calling " << this << "->" << method
@@ -91,14 +90,14 @@ void PkTransactionInterface::repoRefreshNow(const QString &alias, const QString 
     asyncCall(method, alias, "refresh-now", force);
 }
 
-void PkTransactionInterface::refreshCache(bool force) {
+void OrnPkTransaction::refreshCache(bool force) {
     QString method{QStringLiteral("RefreshCache")};
     qDebug().nospace().noquote()
             << "Calling " << this << "->" << method << "(" << force << ")";
     asyncCall(method, force);
 }
 
-void PkTransactionInterface::getUpdates() {
+void OrnPkTransaction::getUpdates() {
     QString method{QStringLiteral("GetUpdates")};
     qDebug().nospace().noquote()
             << "Calling " << this << "->" << method << "(" << PK_FLAG_NONE << ")";

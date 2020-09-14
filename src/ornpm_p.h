@@ -2,8 +2,8 @@
 
 #include "ornpm.h"
 #include "orninstalledpackage.h"
-#include "pkinterface.h"
-#include "pktransactioninterface.h"
+#include "ornpkdaemon.h"
+#include "ornpktransaction.h"
 #include "ssuinterface.h"
 
 #include <private/qobject_p.h>
@@ -22,8 +22,8 @@ public:
     ~OrnPmPrivate() override = default;
 
     void initialise();
-    PkTransactionInterface *transaction();
-    PkTransactionInterface *currentTransaction();
+    OrnPkTransaction *transaction();
+    OrnPkTransaction *currentTransaction();
     void preparePackageVersions(const QString &packageName);
     bool enableRepos(bool enable);
     void removeAllRepos();
@@ -62,7 +62,7 @@ public:
     QString         solvPathTmpl;
     StringSet       archs;
     SsuInterface    *ssuInterface{nullptr};
-    PkInterface     *pkInterface{nullptr};
+    OrnPkDaemon     *pkDaemon{nullptr};
     RepoHash        repos;
     StringHash      installedPackages;
     StringHash      updatablePackages;
