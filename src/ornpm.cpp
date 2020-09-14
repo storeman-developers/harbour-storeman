@@ -15,23 +15,14 @@
 
 using namespace PackageKit;
 
-#define CHECK_INITIALISED() \
-    Q_ASSERT_X(d->initialised, Q_FUNC_INFO, "Call only after OrnPm was initialised!")
+#define CHECK_INITIALISED(d) \
+    Q_ASSERT_X((d)->initialised, Q_FUNC_INFO, "Call only after OrnPm was initialised!")
 
 #define CHECK_NETWORK(RET) \
     if (NetworkManager::instance()->state() != QLatin1String("online")) { \
         qWarning("Network is unavailable!"); \
         return RET; \
     }
-
-#define SET_OPERATION_ITEM(operation, item) \
-    CHECK_INITIALISED(); \
-    if (d->operations.contains(item)) { \
-        qWarning() << (item) << "is already being processed!"; \
-        return; \
-    } \
-    d->operations.insert(item, operation); \
-    emit this->operationsChanged();
 
 const QLatin1String OrnPm::repoNamePrefix("openrepos-");
 
@@ -256,7 +247,7 @@ void OrnPm::getPackageVersions(const QString &packageName)
     Q_D(OrnPm);
 
     Q_ASSERT(!packageName.isEmpty());
-    CHECK_INITIALISED();
+    CHECK_INITIALISED(d);
     qDebug() << "Resolving package versions for" << packageName;
 
     QtConcurrent::run(d, &OrnPmPrivate::preparePackageVersions, packageName);
@@ -348,10 +339,11 @@ void OrnPm::installPackage(const QString &packageId)
     CHECK_NETWORK();
 
     auto name = OrnUtils::packageName(packageId);
-    SET_OPERATION_ITEM(InstallingPackage, name);
-    emit this->packageStatusChanged(name, OrnPm::PackageInstalling);
-
-    d->transaction()->installPackages(QStringList{packageId});
+    if (d->startOperation(name, InstallingPackage))
+    {
+        emit this->packageStatusChanged(name, OrnPm::PackageInstalling);
+        d->transaction()->installPackages(QStringList{packageId});
+    }
 }
 
 QString rmpPackageName(const QString &packageFile)
@@ -377,9 +369,11 @@ void OrnPm::installFile(const QString &packageFile)
     // GetDetailsLocal is not supported for libzypp
     auto name = rmpPackageName(packageFile);
 
-    SET_OPERATION_ITEM(InstallingPackage, name);
+    if (d->startOperation(name, InstallingPackage))
+    {
+        d->transaction()->installFiles(QStringList{packageFile});
+    }
 
-    d->transaction()->installFiles(QStringList{packageFile});
 }
 
 void OrnPm::removePackage(const QString &packageId, bool autoremove)
@@ -387,28 +381,31 @@ void OrnPm::removePackage(const QString &packageId, bool autoremove)
     Q_D(OrnPm);
 
     auto name = OrnUtils::packageName(packageId);
-    SET_OPERATION_ITEM(RemovingPackage, name);
-    emit this->packageStatusChanged(name, OrnPm::PackageRemoving);
-
-    d->transaction()->removePackages(QStringList{packageId}, autoremove);
+    if (d->startOperation(name, RemovingPackage))
+    {
+        emit this->packageStatusChanged(name, OrnPm::PackageRemoving);
+        d->transaction()->removePackages(QStringList{packageId}, autoremove);
+    }
 }
 
 void OrnPm::updatePackage(const QString &packageName)
 {
     Q_D(OrnPm);
 
+    CHECK_NETWORK();
+
     if (!d->updatablePackages.contains(packageName))
     {
         qWarning() << "The package" << packageName << "has no updates!";
         return;
     }
-    CHECK_NETWORK();
-    SET_OPERATION_ITEM(UpdatingPackage, packageName);
 
-    emit this->packageStatusChanged(packageName, OrnPm::PackageUpdating);
-
-    auto packageId = d->updatablePackages[packageName];
-    d->transaction()->updatePackages(QStringList{packageId});
+    if (d->startOperation(packageName, UpdatingPackage))
+    {
+        emit this->packageStatusChanged(packageName, OrnPm::PackageUpdating);
+        auto packageId = d->updatablePackages[packageName];
+        d->transaction()->updatePackages(QStringList{packageId});
+    }
 }
 
 void OrnPm::addRepo(const QString &author)
@@ -416,17 +413,31 @@ void OrnPm::addRepo(const QString &author)
     Q_D(OrnPm);
 
     CHECK_NETWORK();
-    CHECK_INITIALISED();
 
-    auto alias   = repoNamePrefix + author;
-    SET_OPERATION_ITEM(AddingRepo, alias);
-    auto url     = OrnPm::repoUrl(author);
-    auto watcher = d->ssuInterface->addRepoAsync(alias, url);
-    connect(watcher, &QDBusPendingCallWatcher::finished, [this, watcher, alias]()
+    auto alias = repoNamePrefix + author;
+
+    if (d->startOperation(alias, AddingRepo))
     {
+        auto url = OrnPm::repoUrl(author);
+        d->ssuInterface->addRepo(alias, url);
         this->d_func()->onRepoModified(alias, AddRepo);
-        watcher->deleteLater();
-    });
+        d->finishOperation(alias);
+    }
+}
+
+OrnPm::Operation actionOperation(OrnPm::RepoAction action)
+{
+    switch (action)
+    {
+    case OrnPm::RemoveRepo:
+        return OrnPm::RemovingRepo;
+    case OrnPm::DisableRepo:
+        return OrnPm::DisablingRepo;
+    case OrnPm::EnableRepo:
+        return OrnPm::EnablingRepo;
+    default:
+        Q_UNREACHABLE();
+    }
 }
 
 void OrnPm::modifyRepo(const QString &alias, OrnPm::RepoAction action)
@@ -434,36 +445,19 @@ void OrnPm::modifyRepo(const QString &alias, OrnPm::RepoAction action)
     Q_D(OrnPm);
 
     CHECK_NETWORK();
-    Operation op;
-    switch (action)
-    {
-    case RemoveRepo:
-        op = RemovingRepo;
-        break;
-    case DisableRepo:
-        op = DisablingRepo;
-        break;
-    case EnableRepo:
-        op = EnablingRepo;
-        break;
-    default:
-        Q_UNREACHABLE();
-    }
-    SET_OPERATION_ITEM(op, alias);
 
-    auto watcher = d->ssuInterface->modifyRepoAsync(action, alias);
-    connect(watcher, &QDBusPendingCallWatcher::finished, [this, watcher, alias, action]()
+    if (d->startOperation(alias, actionOperation(action)))
     {
-        this->d_func()->onRepoModified(alias, action);
-        watcher->deleteLater();
-    });
+        d->ssuInterface->modifyRepo(action, alias);
+        d->finishOperation(alias);
+    }
 }
 
 void OrnPm::enableRepos(bool enable)
 {
     Q_D(OrnPm);
 
-    CHECK_INITIALISED();
+    CHECK_INITIALISED(d);
 
     auto watcher = new QFutureWatcher<bool>();
     auto future  = QtConcurrent::run(d, &OrnPmPrivate::enableRepos, enable);
@@ -556,27 +550,24 @@ void OrnPmPrivate::onRepoModified(const QString &alias, OrnPm::RepoAction action
         break;
     }
 
+    auto onFinish = [this, alias, action]() {
+        Q_Q(OrnPm);
+        qDebug() << "Repo" << alias << "have been modified with" << action;
+        emit q->repoModified(alias, action);
+        finishOperation(alias);
+    };
+
     if (needRefresh)
     {
         operations[alias] = OrnPm::RefreshingRepo;
         emit q->operationsChanged();
         auto t = this->transaction();
-        QObject::connect(t, &QObject::destroyed, [this, alias, action]()
-        {
-            Q_Q(OrnPm);
-            operations.remove(alias);
-            emit q->operationsChanged();
-            emit q->repoModified(alias, action);
-            qDebug() << "Repo" << alias << "have been modified with" << action;
-        });
+        QObject::connect(t, &QObject::destroyed, onFinish);
         t->repoRefreshNow(alias);
     }
     else
     {
-        operations.remove(alias);
-        emit q->operationsChanged();
-        emit q->repoModified(alias, action);
-        qDebug() << "Repo" << alias << "have been modified with" << action;
+        onFinish();
         this->getUpdates();
     }
 }
@@ -586,14 +577,16 @@ void OrnPm::refreshRepo(const QString &alias, bool force)
     Q_D(OrnPm);
 
     CHECK_NETWORK();
-    SET_OPERATION_ITEM(RefreshingRepo, alias);
-    auto t = d->transaction();
-    connect(t, &QObject::destroyed, [this, alias]()
+
+    if (d->startOperation(alias, RefreshingRepo))
     {
-        this->d_func()->operations.remove(alias);
-        emit this->operationsChanged();
-    });
-    t->repoRefreshNow(alias, force);
+        auto t = d->transaction();
+        connect(t, &QObject::destroyed, [this, alias]()
+        {
+            this->d_func()->finishOperation(alias);
+        });
+        t->repoRefreshNow(alias, force);
+    }
 }
 
 void OrnPm::refreshRepos(bool force)
@@ -635,15 +628,15 @@ void OrnPm::refreshCache(bool force)
 
     QString name{QStringLiteral("__orn_refreshing_cache")};
 
-    SET_OPERATION_ITEM(OrnPm::RefreshingCache, name);
-
-    auto t = d->transaction();
-    connect(t, &QObject::destroyed, [this, name]()
+    if (d->startOperation(name, OrnPm::RefreshingCache))
     {
-        this->d_func()->operations.remove(name);
-        emit this->operationsChanged();
-    });
-    t->refreshCache(force);
+        auto t = d->transaction();
+        connect(t, &QObject::destroyed, [this, name]()
+        {
+            this->d_func()->finishOperation(name);
+        });
+        t->refreshCache(force);
+    }
 }
 
 QList<OrnRepo> OrnPm::repoList() const
@@ -673,6 +666,27 @@ void OrnPm::getInstalledPackages(const QString &packageName)
         watcher->deleteLater();
     });
     watcher->setFuture(QtConcurrent::run(this->d_func(), &OrnPmPrivate::prepareInstalledPackages, packageName));
+}
+
+bool OrnPmPrivate::startOperation(const QString &name, OrnPm::Operation operation)
+{
+    CHECK_INITIALISED(this);
+    if (operations.contains(name))
+    {
+        qWarning() << name << "is already being processed!";
+        return false;
+    }
+    operations.insert(name, operation);
+    emit this->q_func()->operationsChanged();
+    return true;
+}
+
+void OrnPmPrivate::finishOperation(const QString &name)
+{
+    if (operations.remove(name))
+    {
+        emit q_func()->operationsChanged();
+    }
 }
 
 OrnInstalledPackageList OrnPmPrivate::prepareInstalledPackages(const QString &packageName)
@@ -994,16 +1008,13 @@ void OrnPmPrivate::refreshNextRepo(quint32 exit, quint32 runtime)
     }
     else
     {
-        auto t = this->transaction();
-        connect_priv(t, &PkTransactionInterface::Finished, q, &OrnPmPrivate::refreshNextRepo);
         auto alias = reposToRefresh.takeFirst();
-        QObject::connect(t, &QObject::destroyed, q, [this, alias]()
-        {
-            operations.remove(alias);
-            emit this->q_func()->operationsChanged();
+        auto t = this->transaction();
+        QObject::connect(t, &PkTransactionInterface::Finished, q, [this, alias](quint32 exit, quint32 runtime) {
+            refreshNextRepo(exit, runtime);
+            finishOperation(alias);
         });
-        operations.insert(alias, OrnPm::RefreshingRepo);
-        emit q->operationsChanged();
+        startOperation(alias, OrnPm::RefreshingRepo);
         t->repoRefreshNow(alias, forceRefresh);
     }
 }

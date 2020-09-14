@@ -30,6 +30,9 @@ public:
     void onRepoModified(const QString &alias, OrnPm::RepoAction action);
     OrnInstalledPackageList prepareInstalledPackages(const QString &packageName);
 
+    bool startOperation(const QString &name, OrnPm::Operation operation);
+    void finishOperation(const QString &name);
+
     void onPackage(quint32 info, const QString& packageId, const QString &summary);
     void onTransactionFinished(quint32 status, quint32 runtime);
 
