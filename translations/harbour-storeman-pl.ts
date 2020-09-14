@@ -762,18 +762,6 @@
         <source>Available version</source>
         <translation>Dostępna wersja</translation>
     </message>
-    <message id="orn-size-kb">
-        <source>%0 KB</source>
-        <translation>%0 KB</translation>
-    </message>
-    <message id="orn-size-mb">
-        <source>%0 MB</source>
-        <translation>%0 MB</translation>
-    </message>
-    <message id="orn-size-gb">
-        <source>%0 GB</source>
-        <translation>%0 GB</translation>
-    </message>
     <message id="orn-error-packagenotfound">
         <source>Couldn&apos;t find package</source>
         <translation>Nie udało się odnaleźć pakietu</translation>
@@ -781,14 +769,6 @@
     <message id="orn-size-installed">
         <source>Installed size</source>
         <translation>Rozmiar zainstalowanej aplikacji</translation>
-    </message>
-    <message id="orn-size-bytes" numerus="yes">
-        <source>%n byte(s)</source>
-        <translation>
-            <numerusform>%n bajt</numerusform>
-            <numerusform>%n bajty</numerusform>
-            <numerusform>%n bajtów</numerusform>
-        </translation>
     </message>
     <message id="orn-size-download-install">
         <source>Download / install size</source>

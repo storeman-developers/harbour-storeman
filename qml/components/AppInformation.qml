@@ -4,38 +4,6 @@ import harbour.orn 1.0
 
 BackgroundItem {
     property bool _expanded: false
-    readonly property var _sizeTmpls: [
-        //% "%0 KB"
-        QT_TRID_NOOP("orn-size-kb"),
-        //% "%0 MB"
-        QT_TRID_NOOP("orn-size-mb"),
-        //% "%0 GB"
-        QT_TRID_NOOP("orn-size-gb")
-    ]
-
-    function prettySize(size) {
-
-        // Undefined
-        if (!size) {
-            return ""
-        }
-
-        // Bytes
-        var s = size
-        if (s < 1024) {
-            //% "%n byte(s)"
-            return qsTrId("orn-size-bytes", s).arg(Number(s).toLocaleString(_locale))
-        }
-
-        // KB, MB, GB
-        var i = -1
-        while (i < 3 && s >= 1024) {
-            s /= 1024
-            ++i
-        }
-
-        return qsTrId(_sizeTmpls[i]).arg(Number(s).toLocaleString(_locale, 'f', 1))
-    }
 
     id: infoItem
     width: parent.width
@@ -111,7 +79,7 @@ BackgroundItem {
             //% "Installed size"
             label: qsTrId("orn-size-installed")
             visible: installedVersion.visible
-            value: prettySize(app.installedVersionSize)
+            value: Format.formatFileSize(app.installedVersionSize)
         }
 
         AppInfoLabel {
@@ -136,8 +104,8 @@ BackgroundItem {
             //% "Download / install size"
             label: qsTrId("orn-size-download-install")
             visible: _expanded && app.availableVersionIsNewer
-            value: prettySize(app.availableVersionDownloadSize) + " / " +
-                   prettySize(app.availableVersionInstallSize)
+            value: Format.formatFileSize(app.availableVersionDownloadSize) + " / " +
+                   Format.formatFileSize(app.availableVersionInstallSize)
         }
 
         AppInfoLabel {
@@ -160,8 +128,8 @@ BackgroundItem {
         AppInfoLabel {
             label: qsTrId("orn-size-download-install")
             visible: globalVersion.visible
-            value: prettySize(app.globalVersionDownloadSize) + " / " +
-                   prettySize(app.globalVersionInstallSize)
+            value: Format.formatFileSize(app.globalVersionDownloadSize) + " / " +
+                   Format.formatFileSize(app.globalVersionInstallSize)
         }
 
         Image {

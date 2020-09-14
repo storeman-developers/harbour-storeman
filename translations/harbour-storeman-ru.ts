@@ -764,18 +764,6 @@ Storeman не передает ваш пароль третьим лицам.</t
         <source>Available version</source>
         <translation>Доступная версия</translation>
     </message>
-    <message id="orn-size-kb">
-        <source>%0 KB</source>
-        <translation>%0 КБ</translation>
-    </message>
-    <message id="orn-size-mb">
-        <source>%0 MB</source>
-        <translation>%0 МБ</translation>
-    </message>
-    <message id="orn-size-gb">
-        <source>%0 GB</source>
-        <translation>%0 ГБ</translation>
-    </message>
     <message id="orn-error-packagenotfound">
         <source>Couldn&apos;t find package</source>
         <translation>Пакет не найден</translation>
@@ -783,14 +771,6 @@ Storeman не передает ваш пароль третьим лицам.</t
     <message id="orn-size-installed">
         <source>Installed size</source>
         <translation>Установленный размер</translation>
-    </message>
-    <message id="orn-size-bytes" numerus="yes">
-        <source>%n byte(s)</source>
-        <translation>
-            <numerusform>%n байт</numerusform>
-            <numerusform>%n байта</numerusform>
-            <numerusform>%n байтов</numerusform>
-        </translation>
     </message>
     <message id="orn-size-download-install">
         <source>Download / install size</source>

@@ -759,18 +759,6 @@
         <source>Available version</source>
         <translation>Version disponible</translation>
     </message>
-    <message id="orn-size-kb">
-        <source>%0 KB</source>
-        <translation>%0 Ko</translation>
-    </message>
-    <message id="orn-size-mb">
-        <source>%0 MB</source>
-        <translation>%0 Mo</translation>
-    </message>
-    <message id="orn-size-gb">
-        <source>%0 GB</source>
-        <translation>%0 Go</translation>
-    </message>
     <message id="orn-error-packagenotfound">
         <source>Couldn&apos;t find package</source>
         <translation>Paquet introuvable</translation>
@@ -778,13 +766,6 @@
     <message id="orn-size-installed">
         <source>Installed size</source>
         <translation>Taille installée</translation>
-    </message>
-    <message id="orn-size-bytes" numerus="yes">
-        <source>%n byte(s)</source>
-        <translation>
-            <numerusform>%n octet</numerusform>
-            <numerusform>%n octets</numerusform>
-        </translation>
     </message>
     <message id="orn-size-download-install">
         <source>Download / install size</source>
