@@ -6,7 +6,7 @@
 #include <QDBusPendingCall>
 #include <QDebug>
 
-static constexpr quint64 PK_FLAG_NONE{0};
+constexpr quint64 FlagNone{PackageKit::Transaction::TransactionFlagNone};
 
 #ifdef QT_DEBUG
 QDebug operator<<(QDebug dbg, const OrnPkTransaction *t) {
@@ -46,40 +46,40 @@ void OrnPkTransaction::resolve(const QStringList &names) {
     QString method{QStringLiteral("Resolve")};
     qDebug().nospace()
             << "Calling " << this << "->" << method.toLatin1().data()
-            << "(" << PK_FLAG_NONE << ", " << names << ")";
-    asyncCall(method, PK_FLAG_NONE, names);
+            << "(" << FlagNone << ", " << names << ")";
+    asyncCall(method, FlagNone, names);
 }
 
 void OrnPkTransaction::installPackages(const QStringList &ids) {
     QString method{QStringLiteral("InstallPackages")};
     qDebug().nospace()
             << "Calling " << this << "->" << method.toLatin1().data()
-            << "(" << PK_FLAG_NONE << ", " << ids << ")";
-    asyncCall(method, PK_FLAG_NONE, ids);
+            << "(" << FlagNone << ", " << ids << ")";
+    asyncCall(method, FlagNone, ids);
 }
 
 void OrnPkTransaction::updatePackages(const QStringList &ids) {
     QString method{QStringLiteral("UpdatePackages")};
     qDebug().nospace()
             << "Calling " << this << "->" << method.toLatin1().data()
-            << "(" << PK_FLAG_NONE << ", " << ids << ")";
-    asyncCall(method, PK_FLAG_NONE, ids);
+            << "(" << FlagNone << ", " << ids << ")";
+    asyncCall(method, FlagNone, ids);
 }
 
 void OrnPkTransaction::removePackages(const QStringList &ids, bool autoremove) {
     QString method{QStringLiteral("RemovePackages")};
     qDebug().nospace()
             << "Calling " << this << "->" << method.toLatin1().data()
-            << "(" << PK_FLAG_NONE << ", " << ids << ", false, " << autoremove << ")";
-    asyncCall(method, PK_FLAG_NONE, ids, false, autoremove);
+            << "(" << FlagNone << ", " << ids << ", false, " << autoremove << ")";
+    asyncCall(method, FlagNone, ids, false, autoremove);
 }
 
 void OrnPkTransaction::installFiles(const QStringList &files) {
     QString method{QStringLiteral("InstallFiles")};
     qDebug().nospace()
             << "Calling " << this << "->" << method.toLatin1().data()
-            << "(" << PK_FLAG_NONE << ", " << files << ")";
-    asyncCall(method, PK_FLAG_NONE, files);
+            << "(" << FlagNone << ", " << files << ")";
+    asyncCall(method, FlagNone, files);
 }
 
 void OrnPkTransaction::repoRefreshNow(const QString &alias, const QString &force) {
@@ -100,6 +100,6 @@ void OrnPkTransaction::refreshCache(bool force) {
 void OrnPkTransaction::getUpdates() {
     QString method{QStringLiteral("GetUpdates")};
     qDebug().nospace().noquote()
-            << "Calling " << this << "->" << method << "(" << PK_FLAG_NONE << ")";
-    asyncCall(method, PK_FLAG_NONE);
+            << "Calling " << this << "->" << method << "(" << FlagNone << ")";
+    asyncCall(method, FlagNone);
 }
