@@ -1,9 +1,9 @@
-#include "ssuinterface.h"
+#include "ornssu.h"
 
 #include <QDBusPendingCallWatcher>
 #include <QDebug>
 
-SsuInterface::SsuInterface(QObject *parent)
+OrnSsu::OrnSsu(QObject *parent)
     : QDBusAbstractInterface(
           QStringLiteral("org.nemo.ssu"),
           QStringLiteral("/org/nemo/ssu"),
@@ -15,7 +15,7 @@ SsuInterface::SsuInterface(QObject *parent)
 
 }
 
-void SsuInterface::addRepo(const QString &alias, const QString &url) {
+void OrnSsu::addRepo(const QString &alias, const QString &url) {
     QString method{QStringLiteral("addRepo")};
     qDebug().nospace()
             << "Calling " << this << "->" << method.toLatin1().data()
@@ -23,7 +23,7 @@ void SsuInterface::addRepo(const QString &alias, const QString &url) {
     callWithArgumentList(QDBus::BlockWithGui, method, QVariantList{alias, url});
 }
 
-void SsuInterface::modifyRepo(int action, const QString &alias) {
+void OrnSsu::modifyRepo(int action, const QString &alias) {
     QString method{QStringLiteral("modifyRepo")};
     qDebug().nospace()
             << "Calling " << this << "->" << method.toLatin1().data()

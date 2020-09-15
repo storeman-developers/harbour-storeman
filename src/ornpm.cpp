@@ -31,7 +31,7 @@ OrnPm::OrnPm(QObject *parent)
 {
     Q_D(OrnPm);
 
-    d->ssuInterface = new SsuInterface(this);
+    d->ssuInterface = new OrnSsu(this);
 
     d->pkDaemon = new OrnPkDaemon(this);
     connect_priv(d->pkDaemon, &OrnPkDaemon::UpdatesChanged, this, &OrnPmPrivate::getUpdates);

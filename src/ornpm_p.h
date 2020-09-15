@@ -4,7 +4,7 @@
 #include "orninstalledpackage.h"
 #include "ornpkdaemon.h"
 #include "ornpktransaction.h"
-#include "ssuinterface.h"
+#include "ornssu.h"
 
 #include <private/qobject_p.h>
 #include <QSet>
@@ -61,7 +61,7 @@ public:
 #endif
     QString         solvPathTmpl;
     StringSet       archs;
-    SsuInterface    *ssuInterface{nullptr};
+    OrnSsu          *ssuInterface{nullptr};
     OrnPkDaemon     *pkDaemon{nullptr};
     RepoHash        repos;
     StringHash      installedPackages;

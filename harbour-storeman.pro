@@ -40,7 +40,7 @@ SOURCES += \
     src/ornsecrets.cpp \
     src/ornpkdaemon.cpp \
     src/ornpktransaction.cpp \
-    src/ssuinterface.cpp \
+    src/ornssu.cpp \
     src/storeman.cpp \
     src/ornconst.cpp \
     src/ornutils.cpp \
@@ -69,7 +69,7 @@ HEADERS += \
     src/ornsecrets_p.h \
     src/ornpkdaemon.h \
     src/ornpktransaction.h \
-    src/ssuinterface.h \
+    src/ornssu.h \
     src/storeman.h \
     src/storeman_p.h \
     src/ornconst.h \
