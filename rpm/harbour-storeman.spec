@@ -38,6 +38,7 @@ BuildRequires:  pkgconfig(nemonotifications-qt5)
 BuildRequires:  pkgconfig(Qt5Sparql)
 BuildRequires:  pkgconfig(Qt5Concurrent)
 BuildRequires:  pkgconfig(sailfishsecrets)
+BuildRequires:  pkgconfig(mlite5)
 BuildRequires:  libsolv-devel
 BuildRequires:  PackageKit-Qt5-devel
 BuildRequires:  qt5-qttools-linguist

@@ -26,6 +26,7 @@ PkgConfigBR:
   - Qt5Sparql
   - Qt5Concurrent
   - sailfishsecrets
+  - mlite5
 
 PkgBR:
   - libsolv-devel

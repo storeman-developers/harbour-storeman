@@ -6,7 +6,8 @@ CONFIG += sailfishapp silent
 PKGCONFIG += \
     nemonotifications-qt5 \
     connman-qt5 \
-    sailfishsecrets
+    sailfishsecrets \
+    mlite5
 
 DEFINES += \
     QT_RESTRICTED_CAST_FROM_ASCII

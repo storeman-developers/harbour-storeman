@@ -6,6 +6,7 @@
 
 #include <solv/repo_solv.h>
 #include <connman-qt5/networkmanager.h>
+#include <mlite5/MDesktopEntry>
 
 #include <QDBusPendingCallWatcher>
 #include <QtConcurrent>
@@ -704,18 +705,7 @@ OrnInstalledPackageList OrnPmPrivate::prepareInstalledPackages(const QString &pa
     }
     qDebug() << "Preparing installed packages list";
 
-    // Prepare vars for parsing desktop files
-    QString nameKey{QStringLiteral("Desktop Entry/Name")};
-    auto trNameKey = QString(nameKey).append("[%0]");
-    auto localeName = QLocale::system().name();
-    auto localeNameKey = trNameKey.arg(localeName);
-    QString langNameKey;
-    if (localeName.length() > 2)
-    {
-        langNameKey = trNameKey.arg(localeName.left(2));
-    }
-    QString iconKey{QStringLiteral("Desktop Entry/Icon")};
-    QStringList iconPaths = {
+    QStringList iconPaths{
         QStringLiteral("/usr/share/icons/hicolor/86x86/apps/%0.png"),
         QStringLiteral("/usr/share/icons/hicolor/108x108/apps/%0.png"),
         QStringLiteral("/usr/share/icons/hicolor/128x128/apps/%0.png"),
@@ -777,34 +767,21 @@ OrnInstalledPackageList OrnPmPrivate::prepareInstalledPackages(const QString &pa
 
         qDebug() << "Adding installed package" << name;
 
-        auto title = name;
+        QString title{name};
         QString icon;
-        auto desktopFile = QStandardPaths::locate(
-                    QStandardPaths::ApplicationsLocation, name + ".desktop");
+        MDesktopEntry desktop{
+            QStandardPaths::locate(
+                        QStandardPaths::ApplicationsLocation, name + ".desktop")};
 
-        if (!desktopFile.isEmpty())
+        if (desktop.isValid())
         {
-            qDebug() << "Parsing desktop file" << desktopFile;
-            QSettings desktop(desktopFile, QSettings::IniFormat);
-            desktop.setIniCodec("UTF-8");
             // Read pretty name
-            if (desktop.contains(localeNameKey))
-            {
-                title = desktop.value(localeNameKey).toString();
-            }
-            else if (!langNameKey.isEmpty() && desktop.contains(langNameKey))
-            {
-                title = desktop.value(langNameKey).toString();
-            }
-            else if (desktop.contains(nameKey))
-            {
-                title = desktop.value(nameKey).toString();
-            }
+            title = desktop.name();
             qDebug() << "Using name" << title << "for package" << name;
             // Find icon
-            if (desktop.contains(iconKey))
+            auto iconName = desktop.icon();
+            if (!iconName.isEmpty())
             {
-                auto iconName = desktop.value(iconKey).toString();
                 for (const auto &path : iconPaths)
                 {
                     auto iconPath = path.arg(iconName);
@@ -817,11 +794,10 @@ OrnInstalledPackageList OrnPmPrivate::prepareInstalledPackages(const QString &pa
                 }
             }
         }
-        const auto &id = it.value();
         packages << OrnInstalledPackage {
             updatablePackages.contains(name),
-            id,
-            OrnUtils::packageName(id),
+            it.value(),
+            name,
             title,
             icon
         };
