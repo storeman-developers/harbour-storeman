@@ -6,8 +6,8 @@
 Name:       harbour-storeman
 
 # >> macros
-%define __requires_exclude ^libsolv.*$
 # << macros
+%define __requires_exclude ^libsolv.*$
 
 %{!?qtc_qmake:%define qtc_qmake %qmake}
 %{!?qtc_qmake5:%define qtc_qmake5 %qmake5}
@@ -45,7 +45,7 @@ BuildRequires:  qt5-qttools-linguist
 BuildRequires:  desktop-file-utils
 
 %description
-Unofficial native OpenRepos.net client for Sailfish OS
+Manage repositories and apps from OpenRepos.net on your Sailfish OS device.
 
 
 %prep
