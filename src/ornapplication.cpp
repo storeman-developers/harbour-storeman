@@ -12,6 +12,7 @@
 #include <QStandardPaths>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
+#include <QTimer>
 
 #include <QDebug>
 
@@ -287,8 +288,15 @@ void OrnApplication::onPackageStatusChanged(const QString &packageName, OrnPm::P
         qDebug() << this << ": status changed to" << status;
         mPackageStatus = status;
         emit this->packageStatusChanged();
-        OrnPm::instance()->getPackageVersions(mPackageName);
-        this->updateDesktopFile();
+        // Pass continuous actions
+        if (status < OrnPm::PackageInstalling)
+        {
+            // TODO: Try to avoid using QTimer here
+            QTimer::singleShot(500, [this]() {
+                OrnPm::instance()->getPackageVersions(mPackageName);
+                this->updateDesktopFile();
+            });
+        }
     }
 }
 
@@ -352,15 +360,16 @@ void OrnApplication::onPackageVersions(const QString &packageName, const OrnPack
     if (mAvailableVersion != availableVersion)
     {
         emit this->availableVersionChanged();
-        if (mPackageStatus < OrnPm::PackageAvailable)
-        {
-            mPackageStatus = OrnPm::PackageAvailable;
-            emit this->packageStatusChanged();
-        }
     }
     if (mGlobalVersion != globalVersion)
     {
         emit this->globalVersionChanged();
+    }
+
+    if (!mAvailableVersion.version.isEmpty() && mPackageStatus < OrnPm::PackageAvailable)
+    {
+        mPackageStatus = OrnPm::PackageAvailable;
+        emit this->packageStatusChanged();
     }
 
     if (this->availableVersionIsNewer() != availableNewer)

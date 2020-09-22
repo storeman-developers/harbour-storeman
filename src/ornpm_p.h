@@ -33,13 +33,10 @@ public:
     bool startOperation(const QString &name, OrnPm::Operation operation);
     void finishOperation(const QString &name);
 
-    void onPackage(quint32 info, const QString& packageId, const QString &summary);
-    void onTransactionFinished(quint32 status, quint32 runtime);
+    void onItemProgress(const QString &id, uint status, uint percentage);
 
     // Check for updates
     void getUpdates();
-    void onPackageUpdate(quint32 info, const QString& packageId);
-    void onGetUpdatesFinished(quint32 status);
     // Install package
     void onPackageInstalled(const QString& packageId);
     // Remove package

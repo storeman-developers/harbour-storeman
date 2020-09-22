@@ -44,8 +44,7 @@ OrnPm::OrnPm(QObject *parent)
             {
                 active.insert(path);
                 auto t = new OrnPkTransaction(path, true, this);
-                connect_priv(t, &OrnPkTransaction::Package,  this, &OrnPmPrivate::onPackage);
-                connect_priv(t, &OrnPkTransaction::Finished, this, &OrnPmPrivate::onTransactionFinished);
+                connect_priv(t, &OrnPkTransaction::ItemProgress, this, &OrnPmPrivate::onItemProgress);
             }
         }
         active = transactions.toSet();
@@ -421,8 +420,7 @@ void OrnPm::addRepo(const QString &author)
     {
         auto url = OrnPm::repoUrl(author);
         d->ssuInterface->addRepo(alias, url);
-        this->d_func()->onRepoModified(alias, AddRepo);
-        d->finishOperation(alias);
+        d->onRepoModified(alias, AddRepo);
     }
 }
 
@@ -450,7 +448,7 @@ void OrnPm::modifyRepo(const QString &alias, OrnPm::RepoAction action)
     if (d->startOperation(alias, actionOperation(action)))
     {
         d->ssuInterface->modifyRepo(action, alias);
-        d->finishOperation(alias);
+        d->onRepoModified(alias, action);
     }
 }
 
@@ -552,9 +550,8 @@ void OrnPmPrivate::onRepoModified(const QString &alias, OrnPm::RepoAction action
     }
 
     auto onFinish = [this, alias, action]() {
-        Q_Q(OrnPm);
         qDebug() << "Repo" << alias << "have been modified with" << action;
-        emit q->repoModified(alias, action);
+        emit q_func()->repoModified(alias, action);
         finishOperation(alias);
     };
 
@@ -563,7 +560,7 @@ void OrnPmPrivate::onRepoModified(const QString &alias, OrnPm::RepoAction action
         operations[alias] = OrnPm::RefreshingRepo;
         emit q->operationsChanged();
         auto t = this->transaction();
-        QObject::connect(t, &QObject::destroyed, onFinish);
+        QObject::connect(t, &OrnPkTransaction::Finished, onFinish);
         t->repoRefreshNow(alias);
     }
     else
@@ -582,7 +579,7 @@ void OrnPm::refreshRepo(const QString &alias, bool force)
     if (d->startOperation(alias, RefreshingRepo))
     {
         auto t = d->transaction();
-        connect(t, &QObject::destroyed, [this, alias]()
+        connect(t, &OrnPkTransaction::Finished, [this, alias]()
         {
             this->d_func()->finishOperation(alias);
         });
@@ -700,7 +697,6 @@ OrnInstalledPackageList OrnPmPrivate::prepareInstalledPackages(const QString &pa
     if (installedPackages.isEmpty() || repos.isEmpty())
     {
         qWarning() << "Installed packages or repositories list is empty";
-        emit this->q_func()->installedPackages(packages);
         return packages;
     }
     qDebug() << "Preparing installed packages list";
@@ -804,33 +800,22 @@ OrnInstalledPackageList OrnPmPrivate::prepareInstalledPackages(const QString &pa
     return packages;
 }
 
-void OrnPmPrivate::onPackage(quint32 info, const QString &packageId, [[maybe_unused]] const QString &summary)
+void OrnPmPrivate::onItemProgress(const QString &id, uint status, uint percentage)
 {
-    switch (currentTransaction()->role()) {
-    case Transaction::RoleGetUpdates:
-        onPackageUpdate(info, packageId);
-        break;
-    case Transaction::RoleInstallFiles:
-    case Transaction::RoleInstallPackages:
-        onPackageInstalled(packageId);
-        break;
-    case Transaction::RoleRemovePackages:
-        onPackageRemoved(packageId);
-        break;
-    case Transaction::RoleUpdatePackages:
-        onPackageUpdated(packageId);
-        break;
-    default:
-        break;
+    if (percentage < 100)
+    {
+        return;
     }
-}
 
-void OrnPmPrivate::onTransactionFinished(quint32 status, [[maybe_unused]] quint32 runtime)
-{
-    auto t = currentTransaction();
-    switch (t->role()) {
-    case Transaction::RoleGetUpdates:
-        onGetUpdatesFinished(status);
+    switch (status) {
+    case Transaction::StatusInstall:
+        onPackageInstalled(id);
+        break;
+    case Transaction::StatusRemove:
+        onPackageRemoved(id);
+        break;
+    case Transaction::StatusUpdate:
+        onPackageUpdated(id);
         break;
     default:
         break;
@@ -840,23 +825,27 @@ void OrnPmPrivate::onTransactionFinished(quint32 status, [[maybe_unused]] quint3
 void OrnPmPrivate::getUpdates()
 {
     CHECK_NETWORK();
-    this->transaction()->getUpdates();
-}
 
-void OrnPmPrivate::onPackageUpdate(quint32 info, const QString &packageId)
-{
-    Q_ASSERT(info == Transaction::InfoEnhancement);
-    // Filter updates only for ORN packages
-    if (OrnUtils::packageRepo(packageId).startsWith(OrnPm::repoNamePrefix))
-    {
-        this->newUpdatablePackages.insert(OrnUtils::packageName(packageId), packageId);
-    }
-}
+    Q_Q(OrnPm);
 
-void OrnPmPrivate::onGetUpdatesFinished(quint32 status)
-{
-    if (status == Transaction::ExitSuccess)
-    {
+    auto t = this->transaction();
+
+    QObject::connect(t, &OrnPkTransaction::Package, q, [this](quint32 info, const QString &packageId, [[maybe_unused]] const QString &summary) {
+        Q_ASSERT(info == Transaction::InfoEnhancement);
+        // Filter updates only for ORN packages
+        if (OrnUtils::packageRepo(packageId).startsWith(OrnPm::repoNamePrefix))
+        {
+            newUpdatablePackages.insert(OrnUtils::packageName(packageId), packageId);
+        }
+    });
+
+    QObject::connect(t, &OrnPkTransaction::Finished, q, [this](quint32 status, [[maybe_unused]] quint32 runtime) {
+        if (status != Transaction::ExitSuccess)
+        {
+            newUpdatablePackages.clear();
+            return;
+        }
+
         Q_Q(OrnPm);
 
         bool newupdates = false;
@@ -891,8 +880,10 @@ void OrnPmPrivate::onGetUpdatesFinished(quint32 status)
         {
             emit q->updatablePackagesChanged();
         }
-    }
-    newUpdatablePackages.clear();
+        newUpdatablePackages.clear();
+    });
+
+    t->getUpdates();
 }
 
 void OrnPmPrivate::onPackageInstalled(const QString &packageId)

@@ -39,4 +39,5 @@ signals:
     void ErrorCode(quint32 code, const QString &details);
     void Finished(quint32 exit, quint32 runtime);
     void Package(quint32 info, const QString &packageId, const QString &summary);
+    void ItemProgress(const QString &id, uint status, uint percentage);
 };
