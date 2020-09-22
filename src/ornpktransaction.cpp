@@ -30,7 +30,7 @@ OrnPkTransaction::OrnPkTransaction(const QString &path, bool conn, QObject *pare
         connect(this, &OrnPkTransaction::Finished, this, [this](quint32 exit, quint32 runtime) {
             qDebug() << this
                      << (exit == PackageKit::Transaction::ExitSuccess ? "finished in" : "failed after")
-                     << runtime << " msec";
+                     << runtime << "msec";
             this->deleteLater();
         });
         connect(this, &OrnPkTransaction::ErrorCode, this, [this](quint32 code, const QString &details) {

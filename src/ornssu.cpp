@@ -27,6 +27,6 @@ void OrnSsu::modifyRepo(int action, const QString &alias) {
     QString method{QStringLiteral("modifyRepo")};
     qDebug().nospace()
             << "Calling " << this << "->" << method.toLatin1().data()
-            << "(" << action << ", \"" << alias << "\")";
+            << "(" << action << ", " << alias << ")";
     callWithArgumentList(QDBus::BlockWithGui, method, QVariantList{action, alias});
 }
