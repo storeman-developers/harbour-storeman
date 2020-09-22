@@ -1055,11 +1055,11 @@
     </message>
     <message id="orn-repository">
         <source>Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Skladišče</translation>
     </message>
     <message id="orn-myrepository">
         <source>My repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Moje skladišče</translation>
     </message>
 </context>
 </TS>
