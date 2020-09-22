@@ -1,3 +1,13 @@
+* Tue Sep 22 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.0-1
+ - Use IconButton instead of PushUpMenu to share an app link
+ - App page: Move share, thumb-up and star icons to the right
+ - Use Silica-provided size formatter (thanks Dmitry Gerasimov)
+ - Track all PackageKit transactions to commit installations, removals and updates of packages that are come not from Storeman
+ - Use mlite5 for reading desktop files
+ - Update RMP description
+ - Update Slovenian (Slovenia)
+ - Many internal changes and refactoring of C++/Qt part
+
 * Sat Aug 22 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.12-2
  - RPM: remove postuninstall scriplet as it breaks upgrading
 
