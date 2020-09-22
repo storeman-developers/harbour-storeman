@@ -41,4 +41,12 @@ QVersionNumber systemVersion()
     return QVersionNumber::fromString(release.value(QStringLiteral("VERSION_ID")).toString());
 }
 
+QString desktopFile(const QString &name)
+{
+    return QStandardPaths::locate(
+        QStandardPaths::ApplicationsLocation,
+        QStringLiteral(".desktop").prepend(name)
+    );
+}
+
 } // namespace OrnUtils

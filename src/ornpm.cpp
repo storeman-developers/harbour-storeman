@@ -769,9 +769,7 @@ OrnInstalledPackageList OrnPmPrivate::prepareInstalledPackages(const QString &pa
 
         QString title{name};
         QString icon;
-        MDesktopEntry desktop{
-            QStandardPaths::locate(
-                        QStandardPaths::ApplicationsLocation, name + ".desktop")};
+        MDesktopEntry desktop{OrnUtils::desktopFile(name)};
 
         if (desktop.isValid())
         {

@@ -27,6 +27,8 @@ QList<quint32> toIntList(const QJsonValue &value);
 
 QString locate(const QString &filename);
 
+QString desktopFile(const QString &name);
+
 inline QString packageName(const QString &id)
 {
     return id.section(QChar(';'), 0, 0);

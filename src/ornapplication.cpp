@@ -375,19 +375,13 @@ void OrnApplication::onPackageVersions(const QString &packageName, const OrnPack
 
 void OrnApplication::updateDesktopFile()
 {
-    auto desktopFile = mDesktopFile;
-    if (mPackageStatus == OrnPm::PackageInstalled)
-    {
-        desktopFile = QStandardPaths::locate(
-                    QStandardPaths::ApplicationsLocation, mPackageName + ".desktop");
-    }
-    else
-    {
-        desktopFile.clear();
-    }
+    auto desktopFile = mPackageStatus == OrnPm::PackageInstalled
+        ? OrnUtils::desktopFile(mPackageName)
+        : QString();
+
     if (mDesktopFile != desktopFile)
     {
-        if (desktopFile.size())
+        if (!desktopFile.isEmpty())
         {
             qDebug() << this << ": using desktop file" << desktopFile;
         }
