@@ -1,55 +1,56 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
-import os.path
+from os import path
 import sys
 import configparser
+from getpass import getpass
 import requests
 import json
 
 URL = 'http://www.transifex.com/api/2/project/harbour-storeman/languages/'
-TRC_PATH = os.path.join(os.path.expanduser('~'), '.transifexrc')
-TEMPL = '''\
-ListElement {{
-    locale: "{}"
-    coordinators: [{}]
-    translators: [{}]
-    reviewers: [{}]
-}}
-'''
 
-def get_participants(array):
-    res = ','.join([ '\n        ListElement {{ name: "{}" }}'.format(p) for p in array ])
-    return '{}\n    '.format(res) if len(res) else ''
-
-def main():
-    # Getting Transifex user name and password
-    if len(sys.argv) >= 3:
-        tlogin = sys.argv[1]
-        tpassword = sys.argv[2]
-    elif os.path.isfile(TRC_PATH):
-        print('Fetching credentials from {}'.format(TRC_PATH))
+def credentials():
+    '''Get Transifex user name and password'''
+    trc_path = path.join(path.expanduser('~'), '.transifexrc')
+    if path.isfile(trc_path):
+        print('Fetching credentials from', trc_path)
         trc = configparser.ConfigParser()
         try:
-            trc.read(TRC_PATH)
-            section = trc['https://www.transifex.com']
-            tlogin = section['username']
-            tpassword = section['password']
+            trc.read(trc_path)
+            section  = trc['https://www.transifex.com']
+            return section['username'], section['password']
         except Exception as e:
-            print('Error reading .transifexrc: {}'.format(e))
+            print('Error reading .transifexrc:', e)
             sys.exit(1)
     else:
-        print('\n    Usage: update_translations.py <user> <password>\n')
-    # Getting data
-    print('Fetching {}\n'.format(URL))
-    reply = requests.get(URL, auth=(tlogin, tpassword)).content
-    data = json.loads(reply.decode('UTF-8'))
-    for tr in data:
-        print(TEMPL.format(
-            tr['language_code'],
-            get_participants(tr['coordinators']),
-            get_participants(tr['translators']),
-            get_participants(tr['reviewers'])))
+        return (
+            input('Transifex username: '),
+            getpass(prompt='Transifex password: ')
+        )
+
+def participants(writer, name, tr):
+    writer.write(f'        {name}: [')
+    arr    = tr[name]
+    last_i = len(arr) - 1
+    for i, p in enumerate(arr):
+        writer.write(f'\n            ListElement {{ name: "{p}" }}')
+        writer.write(',' if i < last_i else '\n        ')
+    writer.write(']\n')
 
 if __name__ == '__main__':
-    main()
+    auth  = credentials()
+    print('Fetching', URL)
+    data = requests.get(URL, auth=auth).content
+    data = json.loads(data.decode('UTF-8'))
+    model_file = path.normpath(path.dirname(__file__) + '/../qml/models/TranslatorsModel.qml')
+    print('Writing', model_file)
+    with open(model_file, 'w', encoding='UTF-8') as writer:
+        writer.write('import QtQuick 2.0\n\nListModel {')
+        for tr in data:
+            writer.write('\n    ListElement {\n')
+            writer.write(f'        locale: "{tr["language_code"]}"\n')
+            participants(writer, 'coordinators', tr)
+            participants(writer, 'translators',  tr)
+            participants(writer, 'reviewers',    tr)
+            writer.write('    }\n')
+        writer.write('}\n')
