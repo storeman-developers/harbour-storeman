@@ -1061,5 +1061,9 @@
         <source>My repository</source>
         <translation>Moje skladišče</translation>
     </message>
+    <message id="orn-donate-with">
+        <source>Donate with %1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

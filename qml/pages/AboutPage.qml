@@ -74,6 +74,17 @@ Page {
                     text: qsTrId("orn-report")
                     onClicked: Qt.openUrlExternally("https://github.com/mentaljam/harbour-storeman/issues/new")
                 }
+
+                Button {
+                    //% "Donate with %1"
+                    text: qsTrId("orn-donate-with").arg("PayPal")
+                    onClicked: Qt.openUrlExternally("https://www.paypal.me/osetr")
+                }
+
+                Button {
+                    text: qsTrId("orn-donate-with").arg("Yandex.Money")
+                    onClicked: Qt.openUrlExternally("https://money.yandex.ru/to/410012535782304")
+                }
             }
         }
     }

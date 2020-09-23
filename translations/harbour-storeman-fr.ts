@@ -1051,5 +1051,9 @@
         <source>My repository</source>
         <translation>Mon dépôt</translation>
     </message>
+    <message id="orn-donate-with">
+        <source>Donate with %1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>
