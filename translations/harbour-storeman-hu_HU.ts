@@ -1050,5 +1050,9 @@
         <source>Donate with %1</source>
         <translation type="unfinished"></translation>
     </message>
+    <message id="orn-cover-updates-available">
+        <source>Updates available</source>
+        <translation type="unfinished">Elérhető frissítések</translation>
+    </message>
 </context>
 </TS>

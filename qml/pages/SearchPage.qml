@@ -6,7 +6,7 @@ import "../components"
 Page {
     property string initialSearch
 
-    function _reset() {
+    function reset() {
         searchModel.searchKey = ""
         //% "Search results will be shown here"
         viewPlaceholder.text = qsTrId("orn-searchpage-placeholder-default")
@@ -31,7 +31,7 @@ Page {
                 view.headerItem.searchField.text = initialSearch
                 _search(initialSearch)
             } else if (!view.headerItem.searchField.text) {
-                _reset()
+                reset()
             }
         }
     }
@@ -78,7 +78,7 @@ Page {
                 EnterKey.iconSource: "image://theme/icon-m-enter-accept"
                 EnterKey.onClicked: _search(text)
 
-                onTextChanged: if (!text) _reset()
+                onTextChanged: if (!text) reset()
             }
         }
 

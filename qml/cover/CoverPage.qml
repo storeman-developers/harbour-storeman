@@ -1,11 +1,57 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import harbour.orn 1.0
 
 CoverBackground {
 
-    CoverPlaceholder {
-        icon.source: "/usr/share/icons/hicolor/86x86/apps/harbour-storeman.png"
+    function _activatePage(name, callback) {
+        var namelength = name.length
+        const pageOnStack = pageStack.find(function(p) {
+            return p.toString().substr(0, namelength) === name
+        })
+        if (pageOnStack) {
+            if (callback) {
+                callback(pageOnStack)
+            }
+            pageStack.pop(pageOnStack, PageStackAction.Immediate)
+        } else {
+            pageStack.push(Qt.resolvedUrl("../pages/%1.qml".arg(name)), {}, PageStackAction.Immediate)
+        }
+        __silica_applicationwindow_instance.activate()
+    }
+
+    Image {
+        anchors.fill: parent
+        source: Qt.resolvedUrl("./background.svg")
+        fillMode: Image.PreserveAspectFit
+        opacity: 0.15
+    }
+
+    Label {
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            top: parent.top
+            topMargin: Theme.paddingMedium
+        }
+        color: networkManager.online
+            ? Theme.highlightColor
+            : Theme.highlightDimmerColor
+        horizontalAlignment: Text.AlignHCenter
+        font.pixelSize: Theme.fontSizeLarge
         text: "Storeman"
+    }
+
+    Label {
+        visible: OrnPm.updatesAvailable
+        anchors.centerIn: parent
+        width: parent.width - 2 * (Screen.sizeCategory > Screen.Medium
+                                       ? Theme.paddingMedium
+                                       : Theme.paddingLarge)
+        color: Theme.primaryColor
+        horizontalAlignment: Text.AlignHCenter
+        wrapMode: Text.Wrap
+        //% "Updates available"
+        text: qsTrId("orn-cover-updates-available")
     }
 
     CoverActionList {
@@ -14,20 +60,17 @@ CoverBackground {
 
         CoverAction {
             iconSource: "image://theme/icon-cover-search"
-            onTriggered: {
-                const searchOnPageStack = pageStack.find(function(page) {
-                    return page.toString().substr(0, 10) === "SearchPage"
-                })
-                if (searchOnPageStack) {
-                    searchOnPageStack._reset()
-                    pageStack.pop(searchOnPageStack, PageStackAction.Immediate)
-                } else {
-                    pageStack.push(Qt.resolvedUrl("../pages/SearchPage.qml"), {}, PageStackAction.Immediate)
-                }
-                __silica_applicationwindow_instance.activate()
-            }
+            onTriggered: _activatePage("SearchPage", function(p) {
+                p.reset()
+            })
         }
 
+        CoverAction {
+            iconSource: "image://theme/icon-cover-" + (OrnPm.updatesAvailable ? "next" : "sync")
+            onTriggered: OrnPm.updatesAvailable
+                ? _activatePage("InstalledAppsPage")
+                : OrnPm.refreshRepos()
+        }
     }
 }
 

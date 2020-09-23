@@ -102,6 +102,7 @@ OTHER_FILES += \
     qml/harbour-storeman.qml \
     qml/StoremanStyles.qml \
     qml/cover/CoverPage.qml \
+    qml/cover/background.svg \
     qml/pages/MainPage.qml \
     qml/pages/RecentAppsPage.qml \
     qml/pages/AppPage.qml \

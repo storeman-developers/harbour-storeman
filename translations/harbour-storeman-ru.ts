@@ -1062,5 +1062,9 @@ Storeman не передает ваш пароль третьим лицам.</t
         <source>Donate with %1</source>
         <translation>Поддержать через %1</translation>
     </message>
+    <message id="orn-cover-updates-available">
+        <source>Updates available</source>
+        <translation>Доступны обновления</translation>
+    </message>
 </context>
 </TS>

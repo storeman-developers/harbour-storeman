@@ -1055,5 +1055,9 @@
         <source>Donate with %1</source>
         <translation>Donate with %1</translation>
     </message>
+    <message id="orn-cover-updates-available">
+        <source>Updates available</source>
+        <translation>Updates available</translation>
+    </message>
 </context>
 </TS>
