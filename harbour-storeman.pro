@@ -170,7 +170,6 @@ OTHER_FILES += \
     scripts/update_categories.py \
     rpm/harbour-storeman.changes \
     rpm/harbour-storeman.spec \
-    rpm/harbour-storeman.yaml \
     harbour-storeman.desktop \
     icons/harbour-storeman.svg \
     .gitignore
