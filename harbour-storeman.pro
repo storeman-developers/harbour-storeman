@@ -169,6 +169,7 @@ OTHER_FILES += \
 
 OTHER_FILES += \
     scripts/update_categories.py \
+    scripts/update_translators.py \
     rpm/harbour-storeman.changes \
     rpm/harbour-storeman.spec \
     harbour-storeman.desktop \

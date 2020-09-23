@@ -31,6 +31,3 @@ translations.files = $$OUT_PWD/translations
 translations.path  = $$PREFIX/share/$$TARGET
 
 INSTALLS += translations
-
-OTHER_FILES += \
-    $$PWD/update_translations.py
