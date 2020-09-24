@@ -1053,11 +1053,11 @@
     </message>
     <message id="orn-donate-with">
         <source>Donate with %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Mit %1 spenden</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
-        <translation type="unfinished">Updates verfügbar</translation>
+        <translation>Updates verfügbar</translation>
     </message>
 </context>
 </TS>

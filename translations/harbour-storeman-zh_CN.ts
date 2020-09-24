@@ -1048,11 +1048,11 @@
     </message>
     <message id="orn-donate-with">
         <source>Donate with %1</source>
-        <translation type="unfinished"></translation>
+        <translation>捐赠方式 %1</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
-        <translation type="unfinished">有可供更新</translation>
+        <translation>有可用更新</translation>
     </message>
 </context>
 </TS>
