@@ -23,6 +23,7 @@ class OrnPm : public QObject
     Q_PROPERTY(bool initialised READ initialised NOTIFY initialisedChanged)
     Q_PROPERTY(QVariantList operations READ operations NOTIFY operationsChanged)
     Q_PROPERTY(bool updatesAvailable READ updatesAvailable NOTIFY updatablePackagesChanged)
+    Q_PROPERTY(bool refreshingCache READ refreshingCache NOTIFY operationsChanged)
 
 public:
 
@@ -151,6 +152,8 @@ public slots:
     void removeAllRepos();
 
     // Refresh repos
+public:
+    bool refreshingCache() const;
 public slots:
     void refreshRepo(const QString &alias, bool force = false);
     void refreshRepos(bool force = false);

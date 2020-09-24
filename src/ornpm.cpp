@@ -475,6 +475,18 @@ void OrnPm::removeAllRepos()
     QtConcurrent::run(this->d_func(), &OrnPmPrivate::removeAllRepos);
 }
 
+bool OrnPm::refreshingCache() const
+{
+    for (auto op : d_func()->operations)
+    {
+        if (op == OrnPm::RefreshingRepo || op == OrnPm::RefreshingCache)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
 bool OrnPmPrivate::enableRepos(bool enable)
 {
     Q_Q(OrnPm);
@@ -574,6 +586,12 @@ void OrnPm::refreshRepo(const QString &alias, bool force)
 {
     Q_D(OrnPm);
 
+    if (d->operations.contains(alias))
+    {
+        qDebug() << "Already processing repo";
+        return;
+    }
+
     CHECK_NETWORK();
 
     if (d->startOperation(alias, RefreshingRepo))
@@ -590,6 +608,12 @@ void OrnPm::refreshRepo(const QString &alias, bool force)
 void OrnPm::refreshRepos(bool force)
 {
     Q_D(OrnPm);
+
+    if (refreshingCache())
+    {
+        qDebug() << "Already refreshing cache";
+        return;
+    }
 
     CHECK_NETWORK();
 
@@ -621,6 +645,12 @@ void OrnPm::refreshRepos(bool force)
 void OrnPm::refreshCache(bool force)
 {
     Q_D(OrnPm);
+
+    if (refreshingCache())
+    {
+        qDebug() << "Already refreshing cache";
+        return;
+    }
 
     CHECK_NETWORK();
 

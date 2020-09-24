@@ -67,10 +67,13 @@ CoverBackground {
 
         CoverAction {
             iconSource: "image://theme/icon-cover-" + (OrnPm.updatesAvailable ? "next" : "sync")
-            onTriggered: OrnPm.updatesAvailable
-                ? _activatePage("InstalledAppsPage")
-                : OrnPm.refreshRepos()
+            onTriggered: {
+                if (OrnPm.updatesAvailable) {
+                    _activatePage("InstalledAppsPage")
+                } else if (!OrnPm.refreshingCache) {
+                    OrnPm.refreshRepos()
+                }
+            }
         }
     }
 }
-
