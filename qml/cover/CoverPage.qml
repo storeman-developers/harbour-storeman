@@ -31,7 +31,7 @@ CoverBackground {
         anchors {
             horizontalCenter: parent.horizontalCenter
             top: parent.top
-            topMargin: Theme.paddingMedium
+            topMargin: Theme.paddingLarge
         }
         color: networkManager.connected
             ? Theme.highlightColor
