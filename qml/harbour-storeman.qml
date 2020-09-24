@@ -11,7 +11,7 @@ ApplicationWindow
     property bool _showUpdatesNotification: true
     property string _processingLink
     readonly property var _locale: Qt.locale()
-    property var _operations: OrnPm.initialised ? OrnPm.operations : null
+    property var _operations: OrnPm.initialised && OrnPm.operations
     property var _resolvedLinks: new Object
     readonly property real _appListDelegatePadding: {
         if (pageStack._currentOrientation === Orientation.Portrait) {
@@ -85,6 +85,23 @@ ApplicationWindow
         }
     }
 
+    function _repoActionMessage(action) {
+        switch (action) {
+        case OrnPm.RemoveRepo:
+            //% "The repository %0 was removed"
+            return qsTrId("orn-repo-removed")
+        case OrnPm.AddRepo:
+            //% "The repository %0 was added"
+            return qsTrId("orn-repo-added")
+        case OrnPm.DisableRepo:
+            //% "The repository %0 was disabled"
+            return qsTrId("orn-repo-disabled")
+        case OrnPm.EnableRepo:
+            //% "The repository %0 was enabled"
+            return qsTrId("orn-repo-enabled")
+        }
+    }
+
     initialPage: Component { MainPage { } }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: defaultAllowedOrientations
@@ -98,8 +115,6 @@ ApplicationWindow
     }
 
     NetworkManager {
-        readonly property bool online: !state || state === "online"
-
         id: networkManager
     }
 
@@ -145,7 +160,7 @@ ApplicationWindow
             replacesId = 0
             previewSummary = ""
             previewBody = message
-            icon = icn ? icn : ""
+            icon = icn || ""
             publish()
         }
 
@@ -215,11 +230,12 @@ ApplicationWindow
         target: OrnClient
 
         onError: {
+            var warnIcon = "image://theme/icon-lock-warning"
             switch (code) {
             case OrnClient.NetworkError:
-                if (networkManager.online) {
+                if (networkManager.connected) {
                     //% "Network error"
-                    notification.show(qsTrId("orn-error-network"), "image://theme/icon-lock-warning")
+                    notification.show(qsTrId("orn-error-network"), warnIcon)
                 }
                 break
             case OrnClient.AuthorisationError:
@@ -232,22 +248,22 @@ ApplicationWindow
                 break
             case OrnClient.CommentSendError:
                 //% "Error sending comment"
-                notification.show(qsTrId("orn-error-comment-sending"), "image://theme/icon-lock-warning")
+                notification.show(qsTrId("orn-error-comment-sending"), warnIcon)
                 break
             case OrnClient.CommentDeleteError:
                 //% "Error deleting comment"
-                notification.show(qsTrId("orn-error-comment-deletion"), "image://theme/icon-lock-warning")
+                notification.show(qsTrId("orn-error-comment-deletion"), warnIcon)
                 break
             default:
                 break
             }
         }
 
-        onAuthorisedChanged: OrnClient.authorised ?
-                                 //% "You have successfully logged in to the OpenRepos.net"
-                                 notification.show(qsTrId("orn-loggedin-message")) :
-                                 //% "You have logged out from the OpenRepos.net"
-                                 notification.show(qsTrId("orn-loggedout-message"))
+        onAuthorisedChanged: OrnClient.authorised
+            //% "You have successfully logged in to the OpenRepos.net"
+            ? notification.show(qsTrId("orn-loggedin-message"))
+            //% "You have logged out from the OpenRepos.net"
+            : notification.show(qsTrId("orn-loggedout-message"))
 
         onDayToExpiry: {
             //% "Authorisation expires"
@@ -269,11 +285,11 @@ ApplicationWindow
         }
 
         onBookmarkChanged: {
-            notification.show(bookmarked ?
-                                  //% "The app was added to bookmarks"
-                                  qsTrId("orn-bookmarks-added") :
-                                  //% "The app was removed from bookmarks"
-                                  qsTrId("orn-bookmarks-removed"))
+            notification.show(bookmarked
+                //% "The app was added to bookmarks"
+                ? qsTrId("orn-bookmarks-added")
+                //% "The app was removed from bookmarks"
+                : qsTrId("orn-bookmarks-removed"))
         }
     }
 
@@ -281,15 +297,13 @@ ApplicationWindow
         target: Storeman
 
         onUpdatesNotification: {
-            if (show) {
-                // Don't show notification if the app was openned from notification
-                if (_showUpdatesNotification) {
-                    updatesNotification.replacesId = replaceId
-                    updatesNotification.publish()
-                }
-            } else {
+            if (!show) {
                 updatesNotification.replacesId = replaceId
                 updatesNotification.close()
+            } else if (_showUpdatesNotification) {
+                // Don't show notification if the app was openned from notification
+                updatesNotification.replacesId = replaceId
+                updatesNotification.publish()
             }
             _showUpdatesNotification = true
         }
@@ -304,33 +318,10 @@ ApplicationWindow
     Connections {
         target: OrnPm
 
-        onRepoModified: {
-            switch (action) {
-            case OrnPm.RemoveRepo:
-                //% "The repository %0 was removed"
-                notification.show(qsTrId("orn-repo-removed").arg(repoAlias))
-                break
-            case OrnPm.AddRepo:
-                //% "The repository %0 was added"
-                notification.show(qsTrId("orn-repo-added").arg(repoAlias))
-                break
-            case OrnPm.DisableRepo:
-                //% "The repository %0 was disabled"
-                notification.show(qsTrId("orn-repo-disabled").arg(repoAlias))
-                break
-            case OrnPm.EnableRepo:
-                //% "The repository %0 was enabled"
-                notification.show(qsTrId("orn-repo-enabled").arg(repoAlias))
-                break
-            default:
-                break
-            }
-        }
+        onRepoModified: _repoActionMessage(action).arg(repoAlias)
 
-        onRemoveAllReposFinished: {
-            //% "All repositories were removed"
-            notification.show(qsTrId("orn-repo-allremoved"))
-        }
+        //% "All repositories were removed"
+        onRemoveAllReposFinished: notification.show(qsTrId("orn-repo-allremoved"))
 
         //% "Package %0 was successfully installed"
         onPackageInstalled: notification.show(qsTrId("orn-package-installed").arg(packageName))

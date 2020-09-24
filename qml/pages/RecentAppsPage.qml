@@ -12,7 +12,7 @@ Page {
     SilicaListView {
         id: appsList
         anchors.fill: parent
-        model: networkManager.online ? page.model : null
+        model: networkManager.connected ? page.model : null
 
         header: PageHeader {
             //% "Recently updated"
@@ -55,7 +55,7 @@ Page {
             enabled: text
             text: {
                 hintText = ""
-                if (!networkManager.online) {
+                if (!networkManager.connected) {
                     //% "Network is unavailable"
                     return qsTrId("orn-network-idle")
                 }

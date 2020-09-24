@@ -108,7 +108,7 @@ Page {
             enabled: text && !commentField.item.isActive
             text: {
                 hintText = ""
-                if (!networkManager.online) {
+                if (!networkManager.connected) {
                     return qsTrId("orn-network-idle")
                 }
                 if (commentsModel.networkError) {
@@ -145,7 +145,7 @@ Page {
 
             header: Loader {
                 width: parent.width
-                source: networkManager.online && OrnClient.authorised && OrnClient.cookieIsValid ?
+                source: networkManager.connected && OrnClient.authorised && OrnClient.cookieIsValid ?
                             Qt.resolvedUrl("../components/CommentField.qml") :
                             Qt.resolvedUrl("../components/CommentLabel.qml")
             }

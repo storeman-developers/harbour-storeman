@@ -22,7 +22,7 @@ Page {
         target: networkManager
         onStateChanged: {
             if (categoriesList.count === 0 &&
-                networkManager.online) {
+                networkManager.connected) {
                 categoriesModel.reset()
             }
         }
@@ -66,7 +66,7 @@ Page {
         ViewPlaceholder {
             id: viewPlaceholder
             enabled: text
-            text: networkManager.online ? "" : qsTrId("orn-network-idle")
+            text: networkManager.connected ? "" : qsTrId("orn-network-idle")
         }
     }
 }

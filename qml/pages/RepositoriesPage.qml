@@ -97,7 +97,7 @@ Page {
 
         delegate: ListItem {
             readonly property bool _enableMenu:
-                networkManager.online && !itemInProgress(repoAlias)
+                networkManager.connected && !itemInProgress(repoAlias)
 
             id: repoItem
             onClicked: getAuthorId(repoAuthor)
@@ -152,7 +152,7 @@ Page {
 
         PullDownMenu {
             readonly property bool _enableMenu:
-                networkManager.online && _operations && _operations.length === 0
+                networkManager.connected && _operations && _operations.length === 0
 
             id: menu
 

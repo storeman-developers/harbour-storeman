@@ -6,7 +6,7 @@ Dialog {
     id: dialog
     objectName: "AuthorisationDialog"
     allowedOrientations: defaultAllowedOrientations
-    canAccept: networkManager.online &&
+    canAccept: networkManager.connected &&
                usernameField.text &&
                usernameField.acceptableInput &&
                passwordField.acceptableInput

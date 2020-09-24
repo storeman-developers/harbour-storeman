@@ -69,7 +69,7 @@ Page {
             enabled: text
             text: {
                 hintText = ""
-                if (!networkManager.online) {
+                if (!networkManager.connected) {
                     return qsTrId("orn-network-idle")
                 }
                 if (appsModel.networkError) {

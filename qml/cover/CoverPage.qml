@@ -33,7 +33,7 @@ CoverBackground {
             top: parent.top
             topMargin: Theme.paddingMedium
         }
-        color: networkManager.online
+        color: networkManager.connected
             ? Theme.highlightColor
             : Theme.highlightDimmerColor
         horizontalAlignment: Text.AlignHCenter
@@ -56,7 +56,7 @@ CoverBackground {
 
     CoverActionList {
         id: coverAction
-        enabled: networkManager.online
+        enabled: networkManager.connected
 
         CoverAction {
             iconSource: "image://theme/icon-cover-search"

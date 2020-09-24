@@ -28,7 +28,7 @@ Page {
             title: categoryName
         }
 
-        model: networkManager.online ? categoryModel : null
+        model: networkManager.connected ? categoryModel : null
 
         delegate: AppListDelegate { }
 
@@ -59,7 +59,7 @@ Page {
             enabled: text
             text: {
                 hintText = ""
-                if (!networkManager.online) {
+                if (!networkManager.connected) {
                     return qsTrId("orn-network-idle")
                 }
                 if (categoryModel.networkError) {

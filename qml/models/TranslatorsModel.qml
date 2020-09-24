@@ -1,16 +1,15 @@
 import QtQuick 2.0
 
 ListModel {
-
     ListElement {
         locale: "zh_CN"
         coordinators: [
             ListElement { name: "0312birdzhang" }
         ]
         translators: [
-            ListElement { name: "Historyscholar" },
             ListElement { name: "天苯" },
-            ListElement { name: "LSDemo" }
+            ListElement { name: "LSDemo" },
+            ListElement { name: "Historyscholar" }
         ]
         reviewers: []
     }
@@ -57,10 +56,10 @@ ListModel {
             ListElement { name: "hartzi" }
         ]
         translators: [
-            ListElement { name: "Ingvix" },
-            ListElement { name: "Toxip" },
             ListElement { name: "LaurentC" },
+            ListElement { name: "Ingvix" },
             ListElement { name: "Nrde" },
+            ListElement { name: "Toxip" },
             ListElement { name: "raketti" }
         ]
         reviewers: []
@@ -85,11 +84,11 @@ ListModel {
             ListElement { name: "monkeyisland" }
         ]
         translators: [
-            ListElement { name: "feldbaum" },
-            ListElement { name: "chwa" },
-            ListElement { name: "olf" },
-            ListElement { name: "sail_parleur" },
             ListElement { name: "Unreasonable_Behaviour" },
+            ListElement { name: "olf" },
+            ListElement { name: "chwa" },
+            ListElement { name: "feldbaum" },
+            ListElement { name: "sail_parleur" },
             ListElement { name: "Mausschubser" }
         ]
         reviewers: [
@@ -110,8 +109,8 @@ ListModel {
         locale: "hu_HU"
         coordinators: []
         translators: [
-            ListElement { name: "Headarias" },
             ListElement { name: "martonmiklos" },
+            ListElement { name: "Headarias" },
             ListElement { name: "leoka" }
         ]
         reviewers: []

@@ -20,7 +20,7 @@ using namespace PackageKit;
     Q_ASSERT_X((d)->initialised, Q_FUNC_INFO, "Call only after OrnPm was initialised!")
 
 #define CHECK_NETWORK(RET) \
-    if (NetworkManager::instance()->state() != QLatin1String("online")) { \
+    if (!NetworkManager::instance()->connected()) { \
         qWarning("Network is unavailable!"); \
         return RET; \
     }
@@ -511,7 +511,7 @@ void OrnPmPrivate::removeAllRepos()
 {
     Q_Q(OrnPm);
 
-    qDebug() <<"Removing all repositories";
+    qDebug() << "Removing all repositories";
 
     for (auto it = repos.begin(); it != repos.end(); ++it)
     {
@@ -951,7 +951,7 @@ void OrnPmPrivate::refreshNextRepo(quint32 exit, quint32 runtime)
     Q_UNUSED(runtime)
 #endif
 
-    bool offline = NetworkManager::instance()->state() != QLatin1String("online");
+    bool offline = !NetworkManager::instance()->connected();
     if (offline)
     {
         reposToRefresh.clear();

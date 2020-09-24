@@ -13,8 +13,8 @@ Page {
 
     onStatusChanged: {
         if (status === PageStatus.Active) {
-            placeholder.opacity = networkManager.online ? 0.0 : 1.0
-            loader.opacity = networkManager.online ? 1.0 : 0.0
+            placeholder.opacity = networkManager.connected ? 0.0 : 1.0
+            loader.opacity = networkManager.connected ? 1.0 : 0.0
             opacity = 1.0
         }
     }
@@ -38,18 +38,18 @@ Page {
         id: animation
 
         FadeAnimation {
-            target: networkManager.online ? placeholder : loader
+            target: networkManager.connected ? placeholder : loader
             to: 0.0
         }
         FadeAnimation {
-            target: networkManager.online ? loader : placeholder
+            target: networkManager.connected ? loader : placeholder
             to: 1.0
         }
     }
 
     Connections {
         target: networkManager
-        onOnlineChanged: if (!timer.running) animation.start()
+        onConnectedChanged: if (!timer.running) animation.start()
     }
 
     InfoLabel {

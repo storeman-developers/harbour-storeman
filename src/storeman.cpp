@@ -377,7 +377,7 @@ void Storeman::startUpdatesTimer()
 
     if (this->checkForUpdates() &&
         OrnPm::instance()->initialised() &&
-        NetworkManager::instance()->state() == QLatin1String("online"))
+        NetworkManager::instance()->connected())
     {
         qDebug("Starting updates timer");
         auto delta = QDateTime::currentMSecsSinceEpoch() -

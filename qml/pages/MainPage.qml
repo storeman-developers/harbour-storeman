@@ -93,7 +93,7 @@ Page {
 
             MainPageButton {
                 id: recentlyUpdatedButton
-                enabled: networkManager.online
+                enabled: networkManager.connected
                 text: qsTrId("orn-recently-updated")
                 onClicked: pageStack.push(Qt.resolvedUrl("RecentAppsPage.qml"), {
                                               model: recentAppsModel
@@ -114,7 +114,7 @@ Page {
                 id: recentlyUpdatedGrid
                 anchors.top: recentlyUpdatedButton.bottom
                 width: parent.width
-                height: networkManager.online ? gridHeight : 0.0
+                height: networkManager.connected ? gridHeight : 0.0
                 columns: gridColumns
                 rows: gridRows
                 opacity: height === gridHeight ? 1.0 : 0.0
@@ -138,7 +138,7 @@ Page {
     Component {
         id: categoriesComponent
         MainPageButton {
-            enabled: networkManager.online
+            enabled: networkManager.connected
             text: qsTrId("orn-categories")
             onClicked: pageStack.push(Qt.resolvedUrl("CategoriesPage.qml"))
         }
@@ -147,7 +147,7 @@ Page {
     Component {
         id: bookmarksComponent
         MainPageButton {
-            enabled: networkManager.online
+            enabled: networkManager.connected
             text: qsTrId("orn-bookmarks")
             onClicked: pageStack.push(Qt.resolvedUrl("BookmarksPage.qml"), {
                                           model: bookmarksModel

@@ -5,7 +5,7 @@ MenuItem {
     property var model
 
     visible: model
-    enabled: networkManager.online
+    enabled: networkManager.connected
     //% "Refresh"
     text: qsTrId("orn-refresh")
     onClicked: model.reset()

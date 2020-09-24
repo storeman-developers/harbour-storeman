@@ -4,7 +4,7 @@ import org.nemomobile.lipstick 0.1
 import harbour.orn 1.0
 
 PullDownMenu {
-    readonly property bool _enableMenu: networkManager.online &&
+    readonly property bool _enableMenu: networkManager.connected &&
                                         !itemInProgress(app.repoAlias) &&
                                         !itemInProgress(app.packageName)
 

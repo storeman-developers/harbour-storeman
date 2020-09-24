@@ -76,7 +76,7 @@ static const QMap<quint32, const char*> categories{
     //% "Fonts"
     { 3155, QT_TRID_NOOP("orn-cat-fonts") },
     //% "Libraries"
-    {  247, QT_TRID_NOOP("orn-cat-libraries") }
+    {  247, QT_TRID_NOOP("orn-cat-libraries") },
 };
 
 static const QString KEY_DEPTH     {QStringLiteral("depth")};
