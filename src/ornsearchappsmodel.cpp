@@ -49,18 +49,15 @@ void OrnSearchAppsModel::fetchMore(const QModelIndex &parent)
 
 void OrnSearchAppsModel::processReply(const QJsonDocument &jsonDoc)
 {
-    // An ugly patch for srepeating data
-    auto replyHash = QCryptographicHash::hash(
-                jsonDoc.toJson(), QCryptographicHash::Md5);
+    // An ugly patch for repeating data
+    auto replyHash = QCryptographicHash::hash(jsonDoc.toJson(), QCryptographicHash::Md5);
     if (mPrevReplyHash == replyHash)
     {
         qDebug() << "Current reply is equal to the previous one. "
                     "Considering the model has fetched all data";
         mCanFetchMore = false;
+        return;
     }
-    else
-    {
-        mPrevReplyHash = replyHash;
-    }
+    mPrevReplyHash = replyHash;
     OrnAbstractListModel::processReply(jsonDoc);
 }
