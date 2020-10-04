@@ -1,3 +1,8 @@
+* Sun Oct  4 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.2-1
+ - Fix duplicate results in search model
+ - Update translations
+ - Provide separate builds for SFOS <=3.3 and >=3.4
+
 * Thu Sep 24 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.1-1
  - Add links for donations
  - Better cover page with actions to refresh ORN repos and go to installed applications page if updates are available
