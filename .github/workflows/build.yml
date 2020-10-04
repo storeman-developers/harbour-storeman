@@ -1,0 +1,42 @@
+name: Build Storeman
+
+on:
+  push:
+    tags:        
+      - 'v[0-9]+.[0-9]+.[0-9]+-[0-9]+'
+
+env:
+  RELEASE: 3.4.0.22
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Prepare
+      run: mkdir RPMS
+
+    - name: Build armv7hl
+      env:
+        ARCH: armv7hl
+      run: bash ./scripts/build.sh
+
+    - name: Build i486
+      env:
+        ARCH: i486
+      run: bash ./scripts/build.sh
+
+    - name: Create release
+      run: |
+        set -x
+        assets=()
+        for asset in RPMS/*.rpm; do
+          assets+=("-a" "$asset")
+        done
+        tag_name="${GITHUB_REF##*/}"
+        hub release create "${assets[@]}" -m "$tag_name" "$tag_name"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
