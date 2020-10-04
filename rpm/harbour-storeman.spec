@@ -7,7 +7,7 @@ License:        MIT
 URL:            https://github.com/mentaljam/harbour-storeman
 Source0:        %{name}-%{version}.tar.bz2
 
-Requires:       sailfish-version >= 2.1.4
+Requires:       sailfish-version >= 3.4
 Requires:       sailfishsilica-qt5
 Requires:       nemo-qml-plugin-dbus-qt5
 Requires:       nemo-qml-plugin-notifications-qt5
@@ -33,8 +33,6 @@ BuildRequires:  desktop-file-utils
 %description
 Manage repositories and apps from OpenRepos.net on your Sailfish OS device.
 
-%define __requires_exclude ^libsolv.*$
-
 %prep
 %setup -q -n %{name}-%{version}
 
@@ -48,11 +46,6 @@ rm -rf %{buildroot}
 desktop-file-install --delete-original       \
   --dir %{buildroot}%{_datadir}/applications \
    %{buildroot}%{_datadir}/applications/*.desktop
-
-%post
-test -d %{_datadir}/%{name}/lib || mkdir -p %{_datadir}/%{name}/lib
-test -f /usr/lib/libsolv.so.1 && ln -sf /usr/lib/libsolv.so.1 %{_datadir}/%{name}/lib/libsolv.so.0
-test -f /usr/lib/libsolvext.so.1 && ln -sf /usr/lib/libsolvext.so.1 %{_datadir}/%{name}/lib/libsolvext.so.0
 
 %files
 %defattr(-,root,root,-)
