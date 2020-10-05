@@ -3,10 +3,10 @@ name: Build Storeman
 on:
   push:
     tags:        
-      - 'v[0-9]+.[0-9]+.[0-9]+-[0-9]+'
+      - 'v[0-9]+.[0-9]+.[0-9]+-[0-9]+-sfos3.3'
 
 env:
-  RELEASE: 3.4.0.22
+  RELEASE: 3.3.0.14
 
 jobs:
   build:
@@ -36,7 +36,13 @@ jobs:
           assets+=("-a" "$asset")
         done
         tag_name="${GITHUB_REF##*/}"
-        hub release create "${assets[@]}" -m "$tag_name" "$tag_name"
+        tag_name="${tag_name/%-sfos3.3}"
+        if [[ "`hub release show $tag_name -f %T`" = "$tag_name" ]]
+        then
+          hub release edit "${assets[@]}" -m "" "$tag_name"
+        else
+          hub release create "${assets[@]}" -m "$tag_name" "$tag_name"
+        fi
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
