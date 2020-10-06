@@ -7,7 +7,7 @@ License:        MIT
 URL:            https://github.com/mentaljam/harbour-storeman
 Source0:        %{name}-%{version}.tar.bz2
 
-Requires:       sailfish-version <= 3.3
+Requires:       sailfish-version = 3.3
 Requires:       sailfishsilica-qt5
 Requires:       nemo-qml-plugin-dbus-qt5
 Requires:       nemo-qml-plugin-notifications-qt5
