@@ -1,7 +1,7 @@
 TARGET = harbour-storeman
 
 QT += concurrent dbus core-private
-CONFIG += sailfishapp silent
+CONFIG += sailfishapp silent c++14
 
 PKGCONFIG += \
     nemonotifications-qt5 \

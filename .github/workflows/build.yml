@@ -3,7 +3,7 @@ name: Build Storeman
 on:
   push:
     tags:        
-      - 'v[0-9]+.[0-9]+.[0-9]+-[0-9]+'
+      - 'v[0-9]+.[0-9]+.[0-9]+-[0-9]+-sfos3.2'
 
 jobs:
   build:
@@ -15,27 +15,15 @@ jobs:
     - name: Prepare
       run: mkdir RPMS
 
-    - name: Build 3.3.0.14-armv7hl
+    - name: Build 3.2.1.20-armv7hl
       env:
-        RELEASE: 3.3.0.14
+        RELEASE: 3.2.1.20
         ARCH: armv7hl
       run: bash ./scripts/gha-build.sh
 
-    - name: Build 3.3.0.14-i486
+    - name: Build 3.2.1.20-i486
       env:
-        RELEASE: 3.3.0.14
-        ARCH: i486
-      run: bash ./scripts/gha-build.sh
-
-    - name: Build 3.4.0.22-armv7hl
-      env:
-        RELEASE: 3.4.0.22
-        ARCH: armv7hl
-      run: bash ./scripts/gha-build.sh
-
-    - name: Build 3.4.0.22-i486
-      env:
-        RELEASE: 3.4.0.22
+        RELEASE: 3.2.1.20
         ARCH: i486
       run: bash ./scripts/gha-build.sh
 
