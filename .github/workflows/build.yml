@@ -5,9 +5,6 @@ on:
     tags:        
       - 'v[0-9]+.[0-9]+.[0-9]+-[0-9]+'
 
-env:
-  RELEASE: 3.4.0.22
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,25 +15,31 @@ jobs:
     - name: Prepare
       run: mkdir RPMS
 
-    - name: Build armv7hl
+    - name: Build 3.3.0.14-armv7hl
       env:
+        RELEASE: 3.3.0.14
         ARCH: armv7hl
-      run: bash ./scripts/build.sh
+      run: bash ./scripts/gha-build.sh
 
-    - name: Build i486
+    - name: Build 3.3.0.14-i486
       env:
+        RELEASE: 3.3.0.14
         ARCH: i486
-      run: bash ./scripts/build.sh
+      run: bash ./scripts/gha-build.sh
+
+    - name: Build 3.4.0.22-armv7hl
+      env:
+        RELEASE: 3.4.0.22
+        ARCH: armv7hl
+      run: bash ./scripts/gha-build.sh
+
+    - name: Build 3.4.0.22-i486
+      env:
+        RELEASE: 3.4.0.22
+        ARCH: i486
+      run: bash ./scripts/gha-build.sh
 
     - name: Create release
-      run: |
-        set -x
-        assets=()
-        for asset in RPMS/*.rpm; do
-          assets+=("-a" "$asset")
-        done
-        tag_name="${GITHUB_REF##*/}"
-        hub release create "${assets[@]}" -m "$tag_name" "$tag_name"
+      run: bash ./scripts/gha-release.sh
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-

@@ -168,6 +168,8 @@ OTHER_FILES += \
     qml/models/DummyCommentsModel.qml
 
 OTHER_FILES += \
+    scripts/gha-build.sh \
+    scripts/gha-release.sh \
     scripts/update_categories.py \
     scripts/update_translators.py \
     rpm/harbour-storeman.changes \
