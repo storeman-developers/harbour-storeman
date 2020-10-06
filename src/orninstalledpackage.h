@@ -5,7 +5,7 @@
 
 struct OrnInstalledPackage
 {
-    bool updateAvailable{false};
+    bool updateAvailable;
     QString id;
     QString name;
     QString title;

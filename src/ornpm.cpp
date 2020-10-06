@@ -885,7 +885,8 @@ void OrnPmPrivate::getUpdates()
 
     auto t = this->transaction();
 
-    QObject::connect(t, &OrnPkTransaction::Package, q, [this](quint32 info, const QString &packageId, [[maybe_unused]] const QString &summary) {
+    QObject::connect(t, &OrnPkTransaction::Package, q, [this](quint32 info, const QString &packageId, const QString &summary) {
+        Q_UNUSED(summary)
         Q_ASSERT(info == Transaction::InfoEnhancement);
         // Filter updates only for ORN packages
         if (OrnUtils::packageRepo(packageId).startsWith(OrnPm::repoNamePrefix))
@@ -894,7 +895,8 @@ void OrnPmPrivate::getUpdates()
         }
     });
 
-    QObject::connect(t, &OrnPkTransaction::Finished, q, [this](quint32 status, [[maybe_unused]] quint32 runtime) {
+    QObject::connect(t, &OrnPkTransaction::Finished, q, [this](quint32 status, quint32 runtime) {
+        Q_UNUSED(runtime)
         if (status != Transaction::ExitSuccess)
         {
             newUpdatablePackages.clear();

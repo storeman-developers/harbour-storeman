@@ -1,7 +1,7 @@
 TARGET = harbour-storeman
 
 QT += concurrent dbus core-private
-CONFIG += sailfishapp silent
+CONFIG += sailfishapp silent c++14
 
 PKGCONFIG += \
     nemonotifications-qt5 \
@@ -176,6 +176,7 @@ OTHER_FILES += \
     rpm/harbour-storeman.spec \
     harbour-storeman.desktop \
     icons/harbour-storeman.svg \
+    .github/workflows/build.yml \
     .gitignore
 
 privileges.files = data/harbour-storeman

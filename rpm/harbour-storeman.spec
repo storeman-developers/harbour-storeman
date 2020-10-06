@@ -1,12 +1,13 @@
 Name:           harbour-storeman
 Summary:        OpenRepos Client for Sailfish OS
 Version:        0.2.2
-Release:        master
+Release:        3~sfos3.2
 Group:          Qt/Qt
 License:        MIT
 URL:            https://github.com/mentaljam/harbour-storeman
 Source0:        %{name}-%{version}.tar.bz2
 
+Requires:       sailfish-version >= 2.1.4, sailfish-version < 3.3
 Requires:       sailfishsilica-qt5
 Requires:       nemo-qml-plugin-dbus-qt5
 Requires:       nemo-qml-plugin-notifications-qt5
