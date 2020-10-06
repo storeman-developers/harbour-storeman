@@ -30,12 +30,14 @@ jobs:
     - name: Build 3.4.0.22-armv7hl
       env:
         RELEASE: 3.4.0.22
+        LATEST_RELEASE: 1
         ARCH: armv7hl
       run: bash ./scripts/gha-build.sh
 
     - name: Build 3.4.0.22-i486
       env:
         RELEASE: 3.4.0.22
+        LATEST_RELEASE: 1
         ARCH: i486
       run: bash ./scripts/gha-build.sh
 

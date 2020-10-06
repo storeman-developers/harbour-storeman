@@ -1,15 +1,21 @@
-%define sfos_release %(version | cut -c 13- | cut -d . -f -2)
+%define sfos_release %(version | grep -o '\\([0-9]\\+\\.\\?\\)\\+' | cut -f -2 -d '.')
+
+%if "%{getenv:LATEST_RELEASE}"
+  %define sfos_release_comp >=
+%else
+  %define sfos_release_comp =
+%endif
 
 Name:           harbour-storeman
 Summary:        OpenRepos Client for Sailfish OS
 Version:        0.2.2
-Release:        1~sfos%{sfos_release}
+Release:        2~sfos%{sfos_release}
 Group:          Qt/Qt
 License:        MIT
 URL:            https://github.com/mentaljam/harbour-storeman
 Source0:        %{name}-%{version}.tar.bz2
 
-Requires:       sailfish-version >= %{sfos_release}
+Requires:       sailfish-version %{sfos_release_comp} %{sfos_release}
 Requires:       sailfishsilica-qt5
 Requires:       nemo-qml-plugin-dbus-qt5
 Requires:       nemo-qml-plugin-notifications-qt5
