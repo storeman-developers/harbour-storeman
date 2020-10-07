@@ -13,7 +13,7 @@
     </message>
     <message id="orn-refresh">
         <source>Refresh</source>
-        <translation>Обновить список</translation>
+        <translation>Исемлекне яңарту</translation>
     </message>
     <message id="orn-disable">
         <source>Disable</source>
