@@ -37,7 +37,7 @@
     </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
-        <translation>Челтәр яраусыз</translation>
+        <translation>Челтәргә тоташып булмый</translation>
     </message>
     <message id="orn-today">
         <source>Today</source>
@@ -135,35 +135,35 @@
     </message>
     <message id="orn-cat-coding-competition">
         <source>Coding Competition</source>
-        <translation>Соревнование разработчиков</translation>
+        <translation>Эшләтүчеләр ярышы</translation>
     </message>
     <message id="orn-cat-applications">
         <source>Applications</source>
-        <translation>Приложения</translation>
+        <translation>Кушымталар</translation>
     </message>
     <message id="orn-cat-application">
         <source>Application</source>
-        <translation>Приложение</translation>
+        <translation>Кушымта</translation>
     </message>
     <message id="orn-cat-ambience-themes">
         <source>Ambience &amp; Themes</source>
-        <translation>Атмосферы и темы</translation>
+        <translation>Атмосфералар һәм темалар</translation>
     </message>
     <message id="orn-cat-business">
         <source>Business</source>
-        <translation>Деловые</translation>
+        <translation>Эшлекле</translation>
     </message>
     <message id="orn-cat-city-guides-maps">
         <source>City guides &amp; maps</source>
-        <translation>Путеводители и карты</translation>
+        <translation>Юлкүрсәткечләр һәм карталар</translation>
     </message>
     <message id="orn-cat-education-science">
         <source>Education &amp; Science</source>
-        <translation>Образование и наука</translation>
+        <translation>Мәгариф һәм фән</translation>
     </message>
     <message id="orn-cat-entertainment">
         <source>Entertainment</source>
-        <translation>Развлечение</translation>
+        <translation>Күңеллелек</translation>
     </message>
     <message id="orn-cat-music">
         <source>Music</source>
@@ -171,23 +171,23 @@
     </message>
     <message id="orn-cat-network">
         <source>Network</source>
-        <translation>Сеть</translation>
+        <translation>Челтәр</translation>
     </message>
     <message id="orn-cat-news-info">
         <source>News &amp; info</source>
-        <translation>Новости и информация</translation>
+        <translation>Яңалык һәм информация</translation>
     </message>
     <message id="orn-cat-patches">
         <source>Patches</source>
-        <translation>Патчи</translation>
+        <translation>Патчлар</translation>
     </message>
     <message id="orn-cat-photo-video">
         <source>Photo &amp; video</source>
-        <translation>Фото и видео</translation>
+        <translation>Фото һәм видео</translation>
     </message>
     <message id="orn-cat-social-networks">
         <source>Social Networks</source>
-        <translation>Социальные сети</translation>
+        <translation>Социаль челтәрләр</translation>
     </message>
     <message id="orn-cat-sports">
         <source>Sports</source>
@@ -195,23 +195,23 @@
     </message>
     <message id="orn-cat-system">
         <source>System</source>
-        <translation>Системные</translation>
+        <translation>Систем</translation>
     </message>
     <message id="orn-cat-unknown">
         <source>Unknown</source>
-        <translation>Другие</translation>
+        <translation>Бүтәннәр</translation>
     </message>
     <message id="orn-cat-utilities">
         <source>Utilities</source>
-        <translation>Утилиты</translation>
+        <translation>Утилиталар</translation>
     </message>
     <message id="orn-cat-games">
         <source>Games</source>
-        <translation>Игры</translation>
+        <translation>Уеннар</translation>
     </message>
     <message id="orn-cat-game">
         <source>Game</source>
-        <translation>Игра</translation>
+        <translation>Уен</translation>
     </message>
     <message id="orn-cat-action">
         <source>Action</source>
