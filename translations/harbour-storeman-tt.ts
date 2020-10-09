@@ -17,43 +17,43 @@
     </message>
     <message id="orn-disable">
         <source>Disable</source>
-        <translation>Отключить</translation>
+        <translation>Өзү</translation>
     </message>
     <message id="orn-enable">
         <source>Enable</source>
-        <translation>Включить</translation>
+        <translation>Тоташтыру</translation>
     </message>
     <message id="orn-enabled">
         <source>Enabled</source>
-        <translation>Используются</translation>
+        <translation>Тоташтырылган</translation>
     </message>
     <message id="orn-disabled">
         <source>Disabled</source>
-        <translation>Отключенные</translation>
+        <translation>Өзелгән</translation>
     </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
-        <translation>Недавно обновленные</translation>
+        <translation>Яңартылганнар</translation>
     </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
-        <translation>Сеть недоступна</translation>
+        <translation>Челтәр яраусыз</translation>
     </message>
     <message id="orn-today">
         <source>Today</source>
-        <translation>Сегодня</translation>
+        <translation>Бүген</translation>
     </message>
     <message id="orn-yesterday">
         <source>Yesterday</source>
-        <translation>Вчера</translation>
+        <translation>Кичә</translation>
     </message>
     <message id="orn-this-week">
         <source>This week</source>
-        <translation>На этой неделе</translation>
+        <translation>Бу атнада</translation>
     </message>
     <message id="orn-this-month">
         <source>This month</source>
-        <translation>В этом месяце</translation>
+        <translation>Бу айда</translation>
     </message>
     <message id="orn-month-format">
         <source>%0 %1</source>
@@ -62,59 +62,59 @@
     </message>
     <message id="orn-adding-repo">
         <source>Adding</source>
-        <translation>Добавление</translation>
+        <translation>Өстәү</translation>
     </message>
     <message id="orb-remove">
         <source>Remove</source>
-        <translation>Удалить</translation>
+        <translation>Бетерергә</translation>
     </message>
     <message id="orn-removing">
         <source>Removing</source>
-        <translation>Удаление</translation>
+        <translation>Бетерү</translation>
     </message>
     <message id="orn-error">
         <source>An error occured</source>
-        <translation>Ошибка</translation>
+        <translation>Хата</translation>
     </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
-        <translation>Добавить репозиторий</translation>
+        <translation>Репозиторий өстәү</translation>
     </message>
     <message id="orn-repo-enable">
         <source>Enable repository</source>
-        <translation>Включить репозиторий</translation>
+        <translation>Репозиторийны тоташтырырга</translation>
     </message>
     <message id="orn-install">
         <source>Install</source>
-        <translation>Установить</translation>
+        <translation>Урнаштыру</translation>
     </message>
     <message id="orn-remove">
         <source>Remove</source>
-        <translation>Удалить</translation>
+        <translation>Бетерергә</translation>
     </message>
     <message id="orn-launch">
         <source>Launch</source>
-        <translation>Открыть</translation>
+        <translation>Ачарга</translation>
     </message>
     <message id="orn-package-installed">
         <source>Package %0 was successfully installed</source>
-        <translation>Пакет %0 успешно установлен</translation>
+        <translation>%0 пакеты уңышлы урнаштырылды</translation>
     </message>
     <message id="orn-package-removed">
         <source>Package %0 was successfully removed</source>
-        <translation>Пакет %0 успешно удален</translation>
+        <translation>%0 пакеты уңышлы бетерелде</translation>
     </message>
     <message id="orn-installed">
         <source>Installed</source>
-        <translation>Установлено</translation>
+        <translation>Урнаштырылды</translation>
     </message>
     <message id="orn-version-installed">
         <source>Installed version</source>
-        <translation>Установленная версия</translation>
+        <translation>Урнаштырылган версия</translation>
     </message>
     <message id="orn-version-updated">
         <source>Last updated</source>
-        <translation>Последнее обновление</translation>
+        <translation>Соңгы яңарту</translation>
     </message>
     <message id="orn-dt-format">
         <source>yyyy-MM-dd hh:mm</source>
@@ -123,15 +123,15 @@
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
-        <translation>Нет доступных версий</translation>
+        <translation>Яңарак версияләр юк</translation>
     </message>
     <message id="orn-comments">
         <source>Comments</source>
-        <translation>Комментарии</translation>
+        <translation>Комментарияләр</translation>
     </message>
     <message id="orn-author-apps">
         <source>More by %0</source>
-        <translation>Также от %0</translation>
+        <translation>Шулай ук %0</translation>
     </message>
     <message id="orn-cat-coding-competition">
         <source>Coding Competition</source>
