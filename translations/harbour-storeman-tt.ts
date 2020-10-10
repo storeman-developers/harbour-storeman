@@ -135,7 +135,7 @@
     </message>
     <message id="orn-cat-coding-competition">
         <source>Coding Competition</source>
-        <translation>Эшләтүчеләр ярышы</translation>
+        <translation>Җитештерүчеләр ярышы</translation>
     </message>
     <message id="orn-cat-applications">
         <source>Applications</source>
@@ -345,11 +345,11 @@
     </message>
     <message id="orn-development">
         <source>Development</source>
-        <translation>Эшлэтү</translation>
+        <translation>Җитештерүчәнлек</translation>
     </message>
     <message id="orn-developers">
         <source>Developers</source>
-        <translation>Эшләтүчеләр</translation>
+        <translation>Җитештерүчеләр</translation>
     </message>
     <message id="orn-appicon">
         <source>Application Icon</source>
