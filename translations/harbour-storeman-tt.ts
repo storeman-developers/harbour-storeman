@@ -333,183 +333,183 @@
     </message>
     <message id="orn-app-licensing">
         <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation>Исходный код Storeman распространяется в соответствии с условиями &lt;a href=&apos;%0&apos;&gt;лицензии MIT&lt;/a&gt;</translation>
+        <translation>Storeman'ның башлангыч коды &lt;a href=&apos;%0&apos;&gt;MIT лицензиясе&lt;/a&gt; килешүе буенча тарала</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
-        <translation>Произошла сетевая ошибка</translation>
+        <translation>Челтәр хатасы килеп чыкты</translation>
     </message>
     <message id="orn-pull-refresh">
         <source>Pull down to refresh</source>
-        <translation>Потяните вниз чтобы обновить</translation>
+        <translation>Яңартыр өчен аска тартыгыз</translation>
     </message>
     <message id="orn-development">
         <source>Development</source>
-        <translation>Разработка</translation>
+        <translation>Эшлэтү</translation>
     </message>
     <message id="orn-developers">
         <source>Developers</source>
-        <translation>Разработчики</translation>
+        <translation>Эшләтүчеләр</translation>
     </message>
     <message id="orn-appicon">
         <source>Application Icon</source>
-        <translation>Иконка приложения</translation>
+        <translation>Кушымта иконкасы</translation>
     </message>
     <message id="orn-sources">
         <source>Source Code</source>
-        <translation>Исходный код</translation>
+        <translation>Башлангыч код</translation>
     </message>
     <message id="orn-just-now">
         <source>Just now</source>
-        <translation>Прямо сейчас</translation>
+        <translation>Хәзер үк</translation>
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%n minute(s) ago</source>
         <translation>
-            <numerusform>%n минута назад</numerusform>
-            <numerusform>%n минуты назад</numerusform>
-            <numerusform>%n минут назад</numerusform>
+            <numerusform>%n минут элек</numerusform>
+            <numerusform>%n минут элек</numerusform>
+            <numerusform>%n минут элек</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%n hour(s) ago</source>
         <translation>
-            <numerusform>%n час назад</numerusform>
-            <numerusform>%n часа назад</numerusform>
-            <numerusform>%n часов назад</numerusform>
+            <numerusform>%n сәгать элек</numerusform>
+            <numerusform>%n сәгать элек</numerusform>
+            <numerusform>%n сәгать элек</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
         <extracomment>Active label to navigate to the original comment - should be a noun</extracomment>
-        <translation>Ответ %0</translation>
+        <translation>%0 җавап</translation>
     </message>
     <message id="orn-categories">
         <source>Categories</source>
-        <translation>Категории</translation>
+        <translation>Категорияләр</translation>
     </message>
     <message id="orn-category-noapps">
         <source>Currently there are no apps in this category</source>
-        <translation>В этой категории еще нет приложений</translation>
+        <translation>Бу категориядә кушымталар әлегә юк</translation>
     </message>
     <message id="orn-cat-unknown2">
         <source>Unknown category</source>
-        <translation>Неизвестная категория</translation>
+        <translation>Билгесез категория</translation>
     </message>
     <message id="orn-comment-body">
         <source>Your comment</source>
-        <translation>Ваш комментарий</translation>
+        <translation>Сезнең комментарий</translation>
     </message>
     <message id="orn-reply">
         <source>Reply</source>
         <extracomment>Menu item to reply for a comment - should be a verb</extracomment>
-        <translation>Ответить</translation>
+        <translation>Җавап бирү</translation>
     </message>
     <message id="orn-edit">
         <source>Edit</source>
-        <translation>Изменить</translation>
+        <translation>Төзәтү</translation>
     </message>
     <message id="orn-login-menu-item">
         <source>Log in to OpenRepos.net</source>
-        <translation>Войти в OpenRepos</translation>
+        <translation>OpenRepos'ка керергә</translation>
     </message>
     <message id="orn-login-action">
         <source>Log in</source>
-        <translation>Войти</translation>
+        <translation>Керү</translation>
     </message>
     <message id="orn-username">
         <source>Username or e-mail address</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation>Имя пользователя или email</translation>
+        <translation>Кулланучы исеме я e-mail</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not send your password to third-parties.</source>
-        <translation>Авторизуйтесь на OpenRepos.net, чтобы комментировать приложения и отвечать на комментарии других пользователей.
-
-Storeman не передает ваш пароль третьим лицам.</translation>
+        <translation>OpenRepos.net'ка кулланучы исеме белэн керегез, бу сезгә комментарияләргә һәм җавап бирергә мөмкинлек бирәчәк. 
+            
+Storeman серсүзне өченче затларга җибәрми.</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
-        <translation>Успешная авторизация на OpenRepos.net</translation>
+        <translation>Сез OpenRepos.net'ка уңышлы кердегез</translation>
     </message>
     <message id="orn-loggedout-message">
         <source>You have logged out from the OpenRepos.net</source>
-        <translation>Вы вышли из OpenRepos.net</translation>
+        <translation>Сез OpenRepos.net'тан чыктыгыз</translation>
     </message>
     <message id="orn-login-error-title">
         <source>Login error</source>
-        <translation>Ошибка входа</translation>
+        <translation>Керү хатасы</translation>
     </message>
     <message id="orn-login-error-message">
         <source>Could not log in the OpenRepos.net - check your credentials and network connection</source>
-        <translation>Не удалось авторизоваться на OpenRepos.net - проверьте свои учетные данные и сетевое подключение</translation>
+        <translation>OpenRepos.net'ка кереп булмады - хисап язмагызны һәм челтәрне тикшерегез</translation>
     </message>
     <message id="orn-loggedin-menu-item">
         <source>Logged in as %0</source>
-        <translation>Вы вошли как %0</translation>
+        <translation>Сез %0 булып кердегез</translation>
     </message>
     <message id="orn-logout-action">
         <source>Log out</source>
         <extracomment>Menu item</extracomment>
-        <translation>Выйти</translation>
+        <translation>Чыгарга</translation>
     </message>
     <message id="orn-logout-remorse">
         <source>Logging out</source>
         <extracomment>Remorse text</extracomment>
-        <translation>Выход</translation>
+        <translation>Чыгу</translation>
     </message>
     <message id="orn-comment-edit-label">
         <source>Edit your comment</source>
-        <translation>Редактировать комментарий</translation>
+        <translation>Комментарийны төзәтү</translation>
     </message>
     <message id="orn-comment-update">
         <source>Update</source>
         <extracomment>Update a comment</extracomment>
-        <translation>Обновить</translation>
+        <translation>Яңартып алырга</translation>
     </message>
     <message id="orn-comment-send">
         <source>Send</source>
-        <translation>Отправить</translation>
+        <translation>Җиберү</translation>
     </message>
     <message id="orn-authorisation-expires-summary">
         <source>Authorisation expires</source>
-        <translation>Истекает срок авторизации</translation>
+        <translation>Керүнең вакыты чыга</translation>
     </message>
     <message id="orn-authorisation-expires-body">
         <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>Истекает срок авторизации на OpenRepos. Коснитесь, чтобы войти заново.</translation>
+        <translation>OpenRepos'ка керүнең вакыты чыга. Кире керер өчен тиеп алыгыз.</translation>
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
-        <translation>Истек срок авторизации</translation>
+        <translation>Керүнең вакыты чыкты</translation>
     </message>
     <message id="orn-authorisation-expired-body">
         <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>Истек срок авторизации на OpenRepos. Коснитесь, чтобы войти заново.</translation>
+        <translation>OpenRepos'ка керүнең вакыты чыкты. Кире керер өчен тиеп алыгыз.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
-        <translation>Коснитесь, чтобы войти заново</translation>
+        <translation>Кире керер өчен тиеп алыгыз</translation>
     </message>
     <message id="orn-enable-all">
         <source>Enable all</source>
-        <translation>Включить все</translation>
+        <translation>Барысын кабызу</translation>
     </message>
     <message id="orn-disable-all">
         <source>Disable all</source>
-        <translation>Отключить все</translation>
+        <translation>Барысын сүндерү</translation>
     </message>
     <message id="orn-enabling-all">
         <source>Enabling all</source>
-        <translation>Включение</translation>
+        <translation>Кабызу</translation>
     </message>
     <message id="orn-disabling-all">
         <source>Disabling all</source>
-        <translation>Отключение</translation>
+        <translation>Сүндерү</translation>
     </message>
     <message id="orn-installed-apps">
         <source>Installed applications</source>
-        <translation>Установленные приложения</translation>
+        <translation>Урнаштырылган кушымталар</translation>
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
