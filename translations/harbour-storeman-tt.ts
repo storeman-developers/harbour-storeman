@@ -275,61 +275,61 @@
     </message>
     <message id="orn-version-repo-disabled">
         <source>Enable the repository first</source>
-        <translation>Необходимо включить репозиторий</translation>
+        <translation>Иң элек репозиторияне кабызырга кирәк</translation>
     </message>
     <message id="orn-search">
         <source>Search</source>
         <extracomment>The search menu item and the search page header text - should be a noun</extracomment>
-        <translation>Поиск</translation>
+        <translation>Эзләү</translation>
     </message>
     <message id="orn-searchpage-placeholder-noresults">
         <source>Nothing found</source>
-        <translation>Ничего не найдено</translation>
+        <translation>Берни табылмады</translation>
     </message>
     <message id="orn-searchpage-placeholder-noresults-hint">
         <source>Try to change search keywords</source>
-        <translation>Попробуйте изменить слова поиска</translation>
+        <translation>Эзләү сүзен үзгәртеп карагыз</translation>
     </message>
     <message id="orn-searchfield-placeholder">
         <source>Search</source>
         <extracomment>The search field placeholder text - should be a verb</extracomment>
-        <translation>Искать</translation>
+        <translation>Эзләргә</translation>
     </message>
     <message id="orn-searchpage-placeholder-default">
         <source>Search results will be shown here</source>
-        <translation>Здесь появятся результаты поиска</translation>
+        <translation>Монда эзләү нәтиҗәләре күрсәтеләчәк</translation>
     </message>
     <message id="orn-searchpage-placeholder-default-hint">
         <source>Type some keywords in the field above</source>
-        <translation>Введите слова для поиска в поле выше</translation>
+        <translation>Югарыдагы эзләү кырына берничә сүз кертегез</translation>
     </message>
     <message id="orn-about">
         <source>About Storeman</source>
-        <translation>О Storeman</translation>
+        <translation>Storeman турында</translation>
     </message>
     <message id="orn-translations">
         <source>Translations</source>
-        <translation>Переводы</translation>
+        <translation>Тәрҗемәләр</translation>
     </message>
     <message id="orn-coordinators">
         <source>Coordinators</source>
-        <translation>Координаторы</translation>
+        <translation>Координаторлар</translation>
     </message>
     <message id="orn-translators">
         <source>Translators</source>
-        <translation>Переводчики</translation>
+        <translation>Тәрҗемәчеләр</translation>
     </message>
     <message id="orn-reviewers">
         <source>Reviewers</source>
-        <translation> Корректоры</translation>
+        <translation>Корректорлар</translation>
     </message>
     <message id="orn-app-description">
         <source>Unofficial native OpenRepos.net client for Sailfish&amp;nbsp;OS</source>
-        <translation>Неофициальный нативный клиент OpenRepos.net для Sailfish&amp;nbsp;OS</translation>
+        <translation>Sailfish&amp;nbsp;OS өчен официаль булмаган OpenRepos.net клиенты</translation>
     </message>
     <message id="orn-report">
         <source>Report an Issue</source>
-        <translation>Сообщить об ошибке</translation>
+        <translation>Хата турында хәбәр итү</translation>
     </message>
     <message id="orn-app-licensing">
         <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
