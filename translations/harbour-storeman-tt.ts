@@ -17,19 +17,19 @@
     </message>
     <message id="orn-disable">
         <source>Disable</source>
-        <translation>Өзү</translation>
+        <translation>Сүндерү</translation>
     </message>
     <message id="orn-enable">
         <source>Enable</source>
-        <translation>Тоташтыру</translation>
+        <translation>Кабызу</translation>
     </message>
     <message id="orn-enabled">
         <source>Enabled</source>
-        <translation>Тоташтырылган</translation>
+        <translation>Кабызылган</translation>
     </message>
     <message id="orn-disabled">
         <source>Disabled</source>
-        <translation>Өзелгән</translation>
+        <translation>Сүндерелгән</translation>
     </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
@@ -214,12 +214,12 @@
         <translation>Уен</translation>
     </message>
     <message id="orn-cat-action">
-        <source>Action</source>
-        <translation>Игры Action</translation>
+        <source>Тиз уеннар</source>
+        <translation></translation>
     </message>
     <message id="orn-cat-adventure">
         <source>Adventure</source>
-        <translation>Приключения</translation>
+        <translation>Маҗара уеннар</translation>
     </message>
     <message id="orn-cat-arcade">
         <source>Arcade</source>
@@ -227,51 +227,51 @@
     </message>
     <message id="orn-cat-card-casino">
         <source>Card &amp; casino</source>
-        <translation>Азартные игры</translation>
+        <translation>Азарт уеннар</translation>
     </message>
     <message id="orn-cat-education">
         <source>Education</source>
-        <translation>Обучающие</translation>
+        <translation>Өйрәтүче уеннар</translation>
     </message>
     <message id="orn-cat-puzzle">
         <source>Puzzle</source>
-        <translation>Головоломки</translation>
+        <translation>Башваткычлар</translation>
     </message>
     <message id="orn-cat-strategy">
         <source>Strategy</source>
-        <translation>Стратегии</translation>
+        <translation>Стратегияләр</translation>
     </message>
     <message id="orn-cat-trivia">
         <source>Trivia</source>
-        <translation>Викторины</translation>
+        <translation>Викториналар</translation>
     </message>
     <message id="orn-cat-translations">
         <source>Translations</source>
-        <translation>Переводы</translation>
+        <translation>Тәрҗемәләр</translation>
     </message>
     <message id="orn-cat-fonts">
         <source>Fonts</source>
-        <translation>Шрифты</translation>
+        <translation>Шрифтлар</translation>
     </message>
     <message id="orn-cat-libraries">
         <source>Libraries</source>
-        <translation>Библиотеки</translation>
+        <translation>Китапханәләр</translation>
     </message>
     <message id="orn-update-available">
         <source>Update available</source>
-        <translation>Доступно обновление</translation>
+        <translation>Яңарту бар</translation>
     </message>
     <message id="orn-update">
         <source>Update</source>
-        <translation>Обновить</translation>
+        <translation>Яңартырга</translation>
     </message>
     <message id="orn-changelog">
         <source>Changelog</source>
-        <translation>Список изменений</translation>
+        <translation>Үзгәрешләр исемлеге</translation>
     </message>
     <message id="orn-comments-withnum">
         <source>Comments (%0)</source>
-        <translation>Комментарии (%0)</translation>
+        <translation>Комментарияләр (%0)</translation>
     </message>
     <message id="orn-version-repo-disabled">
         <source>Enable the repository first</source>
