@@ -653,182 +653,182 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     </message>
     <message id="orn-installed-packages">
         <source>Installed packages</source>
-        <translation>Установленные пакеты</translation>
+        <translation>Урнаштырылган пакетлар</translation>
     </message>
     <message id="orn-login2comment">
         <source>Login to comment</source>
-        <translation>Войдите, чтобы комментировать</translation>
+        <translation>Комментарий калдыру өчен керегез</translation>
     </message>
     <message id="orn-backup">
         <source>Backup</source>
-        <translation>Сохранить</translation>
+        <translation>Сакларга</translation>
     </message>
     <message id="orn-backup-hint">
         <source>&lt;h2&gt;Backup to a file&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.&lt;/p&gt;</source>
-        <translation>&lt;h2&gt;Сохранить в файл&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Резервное копирование позволяет сохранить текущие репозитории OpenRepos, установленные приложения и закладки, чтобы позже их восстановить (например, после сброса устройства). Резервная копия – это локальный файл, который сохраняется в каталоге&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Внимание!&lt;/b&gt; Перед сбросом устройства необходимо вручную скопировать резервные копии в безопасное место. Это может быть ваша SD-карта, внешнее устройство, облачное хранилище или что-либо еще.&lt;/p&gt;</translation>
+        <translation>&lt;h2&gt;Файлда саклау&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Резерв күчермә ясау OpenRepos репозиторияләрен, урнаштырылган кушымталарны һәм сайланмаларыгызны саклап калу мөмкинлеген бирә. Аларны кире торгызып була, мәсәлән, җайланманы ташлатканнан соң. Резерв күчермә - ул локаль каталогта саклана торган файл&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Игътибар!&lt;/b&gt; Җайланманы ташлатыр алдыннан резерв күчермәгезне кулдан куркынычсыз урынга алып куегыз. Бу сезнең SD-карта, тышкы җайланма, болыт саклау яки башка нәрсә булырга мөмкин.&lt;/p&gt;</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
-        <translation>Загрузка</translation>
+        <translation>Йөкләү</translation>
     </message>
     <message id="orn-pmstate-addingrepo">
         <source>Adding repo %0</source>
-        <translation>Добавление %0</translation>
+        <translation>%0 өстәү</translation>
     </message>
     <message id="orn-pmstate-removingrepo">
         <source>Removing repo %0</source>
-        <translation>Удаление %0</translation>
+        <translation>%0 бетерү</translation>
     </message>
     <message id="orn-pmstate-enablingrepo">
         <source>Enabling repo %0</source>
-        <translation>Включение %0</translation>
+        <translation>%0 кабызу</translation>
     </message>
     <message id="orn-pmstate-disablingrepo">
         <source>Disabling repo %0</source>
-        <translation>Выключение %0</translation>
+        <translation>%0 сүндерү</translation>
     </message>
     <message id="orn-pmstate-refreshingrepo">
         <source>Refreshing %0</source>
-        <translation>Обновление %0</translation>
+        <translation>%0 яңарту</translation>
     </message>
     <message id="orn-pmstate-installingpackage">
         <source>Installing package %0</source>
-        <translation>Установка %0</translation>
+        <translation>%0 урнаштыру</translation>
     </message>
     <message id="orn-pmstate-removingpackage">
         <source>Removing package %0</source>
-        <translation>Удаление %0</translation>
+        <translation>%0 бетерү</translation>
     </message>
     <message id="orn-pmstate-updatingpackage">
         <source>Updating package %0</source>
-        <translation>Обновление %0</translation>
+        <translation>%0 яңарту</translation>
     </message>
     <message id="orn-repo-removed">
         <source>The repository %0 was removed</source>
-        <translation>Репозиторий %0 удален</translation>
+        <translation>%0 репозиториясе бетерелде</translation>
     </message>
     <message id="orn-repo-added">
         <source>The repository %0 was added</source>
-        <translation>Репозиторий %0 добавлен</translation>
+        <translation>%0 репозиториясе өстәлде</translation>
     </message>
     <message id="orn-repo-disabled">
         <source>The repository %0 was disabled</source>
-        <translation>Репозиторий %0 отключен</translation>
+        <translation>%0 репозиториясе сүндерелгән</translation>
     </message>
     <message id="orn-repo-enabled">
         <source>The repository %0 was enabled</source>
-        <translation>Репозиторий %0 включен</translation>
+        <translation>%0 репозиториясе кабызылган</translation>
     </message>
     <message id="orn-not-installed">
         <source>Not installed</source>
-        <translation>Не установлено</translation>
+        <translation>Урнаштырылмаган</translation>
     </message>
     <message id="orn-installing">
         <source>Installing</source>
-        <translation>Установка</translation>
+        <translation>Урнаштыру</translation>
     </message>
     <message id="orn-unknown">
         <source>Unknown</source>
-        <translation>Неизвестно</translation>
+        <translation>Билгесез</translation>
     </message>
     <message id="orn-updating">
         <source>Updating</source>
-        <translation>Обновление</translation>
+        <translation>Яңарту</translation>
     </message>
     <message id="orn-version-available-global">
         <source>Available in other repositories</source>
-        <translation>Доступно в других репозиториях</translation>
+        <translation>Башка репозиторияләрдә бар</translation>
     </message>
     <message id="orn-installed-apps-description">
         <source>Only from enabled repositories</source>
-        <translation>Только доступные в репозиториях</translation>
+        <translation>Булган репозиторияләрдә генә</translation>
     </message>
     <message id="orn-update-all">
         <source>Update all</source>
-        <translation>Обновить все</translation>
+        <translation>Барысын яңарту</translation>
     </message>
     <message id="orn-no-installed-apps">
         <source>Could not find any applications installed from OpenRepos</source>
-        <translation>Не удалось найти приложения, установленные с OpenRepos</translation>
+        <translation>OpenRepos'тан урнаштырылган кушымталарны табып булмады</translation>
     </message>
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
         <translation>
-            <numerusform>Выполняется %n операция</numerusform>
-            <numerusform>Выполняется %n операции</numerusform>
-            <numerusform>Выполняется %n операций</numerusform>
+            <numerusform>%n операциясе башкарыла</numerusform>
+            <numerusform>%n операциясе башкарыла</numerusform>
+            <numerusform>%n операциясе башкарыла</numerusform>
         </translation>
     </message>
     <message id="orn-version-available">
         <source>Available version</source>
-        <translation>Доступная версия</translation>
+        <translation>Яңартылган версия</translation>
     </message>
     <message id="orn-error-packagenotfound">
         <source>Couldn&apos;t find package</source>
-        <translation>Пакет не найден</translation>
+        <translation>Пакет табылмады</translation>
     </message>
     <message id="orn-size-installed">
         <source>Installed size</source>
-        <translation>Установленный размер</translation>
+        <translation>Билгеләнгән күләме</translation>
     </message>
     <message id="orn-size-download-install">
         <source>Download / install size</source>
-        <translation>Размер загрузки / установки</translation>
+        <translation>Йөкләү / урнаштыру күләме</translation>
     </message>
     <message id="orn-cat-public-transport">
         <source>Public Transport</source>
-        <translation>Общественный транспорт</translation>
+        <translation>Иҗтимагый транспорт</translation>
     </message>
     <message id="orn-comments-wait">
         <source>Wait for users&apos; feedback</source>
         <extracomment>This will be shown to an application author</extracomment>
-        <translation>Подождите отзывов пользователей</translation>
+        <translation>Кулланучылар бәяләмәләрен көтегез</translation>
     </message>
     <message id="orn-comments-bethefirst">
         <source>Be the first to comment</source>
         <extracomment>This will be shown to a normal user</extracomment>
-        <translation>Оставьте комментарий первым</translation>
+        <translation>Беренче комментарийны сез калдырыгыз</translation>
     </message>
     <message id="orn-comments-nocomments">
         <source>There is nothing here yet</source>
-        <translation>Здесь пока ничего нет</translation>
+        <translation>Монда әлегә берни дә юк</translation>
     </message>
     <message id="orn-settings">
         <source>Settings</source>
-        <translation>Настройки</translation>
+        <translation>Көйләүләр</translation>
     </message>
     <message id="orn-updates">
         <source>Updates</source>
-        <translation>Обновления</translation>
+        <translation>Яңартулар</translation>
     </message>
     <message id="orn-updates-notification-switch">
         <source>Show updates notification</source>
-        <translation>Показывать уведомление об обновлениях</translation>
+        <translation>Яңартулар барлыгын белгертергә</translation>
     </message>
     <message id="orn-updates-check-interval">
         <source>Updates check interval</source>
-        <translation>Интервал проверки обновлений</translation>
+        <translation>Яңартулар тикшерү интервалы</translation>
     </message>
     <message id="orn-interval-m" numerus="yes">
         <source>%n minute(s)</source>
         <translation>
-            <numerusform>%n минута</numerusform>
-            <numerusform>%n минуты</numerusform>
+            <numerusform>%n минут</numerusform>
+            <numerusform>%n минут</numerusform>
             <numerusform>%n минут</numerusform>
         </translation>
     </message>
     <message id="orn-interval-h" numerus="yes">
         <source>%n hour(s)</source>
         <translation>
-            <numerusform>%n час</numerusform>
-            <numerusform>%n часа</numerusform>
-            <numerusform>%n часов</numerusform>
+            <numerusform>%n сәгать</numerusform>
+            <numerusform>%n сәгать</numerusform>
+            <numerusform>%n сәгать</numerusform>
         </translation>
     </message>
     <message id="orn-updates-check-interval-invalid">
         <source>The interval must be at least 10 minutes</source>
-        <translation>Интервал должен быть не менее 10 минут</translation>
+        <translation>Интервал 10 минуттан ким булырга тиеш түгел</translation>
     </message>
     <message id="orn-tag-strikeout">
         <source>S</source>
@@ -837,114 +837,114 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     </message>
     <message id="orn-hint-commentfield">
         <source>Swipe to see all the tag buttons</source>
-        <translation>Проведите, чтобы увидеть все теги</translation>
+        <translation>Барлык тегларны күрер өчен йөртеп алыгыз</translation>
     </message>
     <message id="orn-dcm-user2">
         <source>Deep Thought</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>Думатель</translation>
+        <translation>Уйлаучы</translation>
     </message>
     <message id="orn-dcm-user1">
         <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>Белый мышонок</translation>
+        <translation>Ак тычкан</translation>
     </message>
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>Каков ответ на Главный вопрос жизни, вселенной и всего такого?</translation>
+        <translation>Тормышның, галәмнең һәм барсының баш җавабы нинди?</translation>
     </message>
     <message id="orn-hint-commentdelegate-created">
         <source>7.5 million years ago</source>
-        <translation>7,5 млн. лет назад</translation>
+        <translation>7,5 млн. ел элек</translation>
     </message>
     <message id="orn-hint-commentdelegate">
         <source>Tap to navigate to the replied comment</source>
-        <translation>Коснитесь для навигации к исходному комментарию</translation>
+        <translation>Башлангыч комментарийга күчәр өчен тиеп алыгыз</translation>
     </message>
     <message id="orn-tags">
         <source>Tags</source>
-        <translation>Ключевые слова</translation>
+        <translation>Төп сүзләр</translation>
     </message>
     <message id="orn-tag-apps">
         <source>Tagged Applications</source>
-        <translation>Отмеченные приложения</translation>
+        <translation>Билгеләнгән кушымталар</translation>
     </message>
     <message id="orn-rate-app">
         <source>Rate the application</source>
-        <translation>Оценить приложение</translation>
+        <translation>Кушымтаны бәяләргә</translation>
     </message>
     <message id="orn-vote-send">
         <source>Your vote has been sent</source>
-        <translation>Голос отправлен</translation>
+        <translation>Тавыш бирелде</translation>
     </message>
     <message id="orn-login2rate">
         <source>Log in to rate the application</source>
-        <translation>Войдите, чтобы оценить приложение</translation>
+        <translation>Кушымтаны бәяләр өчен керергә кирәк</translation>
     </message>
     <message id="orn-hint-rating">
         <source>Tap to rate the application</source>
-        <translation>Коснитесь, чтобы оценить приложение</translation>
+        <translation>Кушымтаны бәяләр өчен тиеп алыгыз</translation>
     </message>
     <message id="orn-local-rpms">
         <source>Local RPM files</source>
-        <translation>Локальные RPM-файлы</translation>
+        <translation>Локаль RPM-файллар</translation>
     </message>
     <message id="orn-delete">
         <source>Delete</source>
-        <translation>Удалить</translation>
+        <translation>Бетерергә</translation>
     </message>
     <message id="orn-deleting">
         <source>Deleting</source>
-        <translation>Удаление</translation>
+        <translation>Бетерү</translation>
     </message>
     <message id="orn-no-local-rpms">
         <source>No local RPM files were found</source>
-        <translation>Локальные RPM-файлы не найдены</translation>
+        <translation>Локаль RPM-файллар табылмады</translation>
     </message>
     <message id="orn-deletion-error">
         <source>Failed to delete</source>
-        <translation>Ошибка при удалении</translation>
+        <translation>Бетерү хатасы</translation>
     </message>
     <message id="orn-remove-all">
         <source>Remove all</source>
-        <translation>Удалить все</translation>
+        <translation>Барысын бетерү</translation>
     </message>
     <message id="orn-removing-all">
         <source>Removing all</source>
-        <translation>Удаление</translation>
+        <translation>Бетерелү</translation>
     </message>
     <message id="orn-repo-allremoved">
         <source>All repositories were removed</source>
-        <translation>Все репозитории удалены</translation>
+        <translation>Барлык репозиторияләр бетерелде</translation>
     </message>
     <message id="orn-search-on-openrepos">
         <source>Search on OpenRepos.net</source>
-        <translation>Искать на OpenRepos.net</translation>
+        <translation>OpenRepos.net'та эзләү</translation>
     </message>
     <message id="orn-repo-suggestion">
         <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
-        <translation>&lt;h3&gt;Включите репозиторий Storeman&lt;/h3&gt;&lt;p&gt;Чтобы получать последние версии Storeman, как и для любого другого приложения, необходимо включить его репозиторий на OpenRepos.&lt;/p&gt;&lt;p&gt;Включить репозиторий сейчас?&lt;/p&gt;</translation>
+        <translation>&lt;h3&gt;Storeman репозиториясен кабызыгыз&lt;/h3&gt;&lt;p&gt;Storeman һәм башка кушымталарның соңгы версияләләрен куяр өчен аларның репозиторияләрен OpenRepos'та кабызырга кирәк.&lt;/p&gt;&lt;p&gt;Репозиторийны хәзер кабызыргамы?&lt;/p&gt;</translation>
     </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
-        <translation>Проверять обновления</translation>
+        <translation>Яңартуларны тикшерү</translation>
     </message>
     <message id="orn-check-for-updates-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation>Обновления проверяются только когда Storeman запущен</translation>
+        <translation>Яңартулар Storeman эшләп торганда гына тикшерелә</translation>
     </message>
     <message id="orn-smart-check-switch">
         <source>Smart check</source>
-        <translation>Умная проверка</translation>
+        <translation>Акыллы тикшерү</translation>
     </message>
     <message id="orn-smart-check-descr">
         <source>Use the OpenRepos.net API to determine if there are new updates</source>
-        <translation>Использует API OpenRepos.net, чтобы определить, доступны ли обновления</translation>
+        <translation>Яңартулар барлыгын тикшерү өчен API OpenRepos.net кулланыла.</translation>
     </message>
     <message id="orn-reload">
         <source>Reload</source>
-        <translation>Перезагрузить</translation>
+        <translation>Киредән йөкләү</translation>
     </message>
     <message id="orn-no-packages">
         <source>No packages available</source>
