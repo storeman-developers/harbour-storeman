@@ -537,7 +537,7 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     </message>
     <message id="orn-refresh-cache">
         <source>Refresh cache</source>
-        <translation>Кешны яңарту</translation>
+        <translation>Кэшны яңарту</translation>
     </message>
     <message id="orn-tag-underscore">
         <source>U</source>
@@ -948,91 +948,91 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     </message>
     <message id="orn-no-packages">
         <source>No packages available</source>
-        <translation>Нет доступных пакетов</translation>
+        <translation>Пакетлар юк</translation>
     </message>
     <message id="orn-error-comment-sending">
         <source>Error sending comment</source>
-        <translation>Ошибка отправки комментария</translation>
+        <translation>Комментарий җибәрүдә хата</translation>
     </message>
     <message id="orn-error-comment-deletion">
         <source>Error deleting comment</source>
-        <translation>Ошибка удаления комментария</translation>
+        <translation>Комментарий бетерүдә хата</translation>
     </message>
     <message id="orn-error-network">
         <source>Network error</source>
-        <translation>Ошибка сети</translation>
+        <translation>Челтәр хатасы</translation>
     </message>
     <message id="orn-hint-bookmark">
         <source>Tap to bookmark the application</source>
-        <translation>Коснитесь, чтобы добавить приложение в закладки</translation>
+        <translation>Кушымтаны сайланмаларда саклар өчен тиеп алыгыз</translation>
     </message>
     <message id="orn-bad-appid">
         <source>Invalid package ID %1</source>
-        <translation>Несуществующий пакет %1</translation>
+        <translation>%1 пакеты гамәлдән чыккан</translation>
     </message>
     <message id="orn-backup-filenameph">
         <source>A file name for backup</source>
-        <translation>Имя файла для сохранения</translation>
+        <translation>Саклау өчен файл исеме</translation>
     </message>
     <message id="orn-file-exists">
         <source>File already exists</source>
-        <translation>Файл уже существует</translation>
+        <translation>Файл инде бар</translation>
     </message>
     <message id="orn-backup-items">
         <source>What to backup</source>
-        <translation>Что сохранить</translation>
+        <translation>Нәрсә сакларга</translation>
     </message>
     <message id="orn-backup-apps">
         <source>Installed applications</source>
-        <translation>Установленные приложения</translation>
+        <translation>Урнаштырылган кушымталар</translation>
     </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
-        <translation>Коснитесь еще раз, чтобы закрыть подсказку</translation>
+        <translation>Ябар өчен тагы бер кат тиеп алыгыз</translation>
     </message>
     <message id="orn-mainpage">
         <source>Main page</source>
-        <translation>Главная страница</translation>
+        <translation>Баш бит</translation>
     </message>
     <message id="orn-show-recent-switch">
         <source>Show recently updated on start</source>
-        <translation>Показывать недавние обновления</translation>
+        <translation>Бая яңартылганнарны күрсәтергә</translation>
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>
-        <translation>Показывать страницу недавно обновленных пакетов после запуска</translation>
+        <translation>Кушымтаны ачкач, яңартылганнар битен күрсәтергә</translation>
     </message>
     <message id="orn-mainpage-order">
         <source>Order items</source>
-        <translation>Порядок</translation>
+        <translation>Тәртип</translation>
     </message>
     <message id="orn-reset">
         <source>Reset</source>
-        <translation>Сбросить</translation>
+        <translation>Ташлату</translation>
     </message>
     <message id="orn-mainpage-order-description">
         <source>Drag items to change their order</source>
-        <translation>Перетаскивайте пункты меню для смены порядка</translation>
+        <translation>Тәртипне үзгәртү өчен сайлак пунктларын күчерегез</translation>
     </message>
     <message id="orn-cat-adult-content">
         <source>Adult Content</source>
-        <translation>Для взрослых</translation>
+        <translation>Зурларга</translation>
     </message>
     <message id="orn-categories-filter">
         <source>Categories filter</source>
-        <translation>Фильтр категорий</translation>
+        <translation>Категорияләр фильтры</translation>
     </message>
     <message id="orn-categories-filter-descr">
         <source>Select which categories to show</source>
-        <translation>Скрыть или показать категории</translation>
+        <translation>Категорияләрне яшерергә я күрсәтергә</translation>
     </message>
     <message id="orn-pmstate-refreshingcache">
         <source>Refreshing of cache</source>
-        <translation>Обновление кэша</translation>
+        <translation>Кэшны яңарту</translation>
     </message>
     <message id="orn-refresh-cache-switch">
         <source>Refresh cache after system upgrade</source>
-        <translation>Обновлять кэш после обновления ОС</translation>
+        <translation>OS'ны яңартканнан соң кэшны да яңартырга</translation>
     </message>
     <message id="orn-refresh-cache-switch-descr">
         <source>Force refreshing of cache of all repositories after system upgrade</source>
