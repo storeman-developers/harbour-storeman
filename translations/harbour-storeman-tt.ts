@@ -513,31 +513,31 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
-        <translation>Приложение добавлено в закладки</translation>
+        <translation>Кушымта сайланмаларга өстәлде</translation>
     </message>
     <message id="orn-bookmarks-removed">
         <source>The app was removed from bookmarks</source>
-        <translation>Приложение удалено из закладок</translation>
+        <translation>Кушымта сайланмалардан бетерелде</translation>
     </message>
     <message id="orn-no-bookmarks">
         <source>Your bookmarked applications will be shown here</source>
-        <translation>Здесь появятся ваши закладки</translation>
+        <translation>Монда сезнең сайланмалар күрсәтеләчәк</translation>
     </message>
     <message id="orn-bookmarks">
         <source>Bookmarks</source>
-        <translation>Закладки</translation>
+        <translation>Сайланмалар</translation>
     </message>
     <message id="orn-no-repos">
         <source>No OpenRepos repositories have been added yet</source>
-        <translation>Репозитории OpenRepos еще не добавлены</translation>
+        <translation>OpenRepos репозиторияләре әлегә өстәлмәгән</translation>
     </message>
     <message id="orn-add-repo-hint">
         <source>You can add a repository from an application page</source>
-        <translation>Репозиторий можно добавить  со страницы приложения</translation>
+        <translation>Репозиторийны кушымта битеннән өстәп була</translation>
     </message>
     <message id="orn-refresh-cache">
         <source>Refresh cache</source>
-        <translation>Обновить кеш</translation>
+        <translation>Кешны яңарту</translation>
     </message>
     <message id="orn-tag-underscore">
         <source>U</source>
@@ -556,100 +556,100 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     </message>
     <message id="orn-updates-available-summary">
         <source>Updates available</source>
-        <translation>Доступны обновления</translation>
+        <translation>Яңартулар бар</translation>
     </message>
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
-        <translation>Нажмите, чтобы просмотреть детали</translation>
+        <translation>Детальләрне карау өчен тиеп алыгыз</translation>
     </message>
     <message id="orn-updates-available-body">
         <source>Applications updates are available. Click to view details.</source>
-        <translation>Доступны обновления приложений. Нажмите, чтобы просмотреть детали.</translation>
+        <translation>Кушымталарның яңартулары бар. Детальләрне карау өчен тиеп алыгыз</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>
-        <translation>Нажмите, чтобы просмотреть детали</translation>
+        <translation>Детальләрне карау өчен тиеп алыгыз</translation>
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
         <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
-        <translation>Невозможно удовлетворить зависимость %1, необходимую для %2.</translation>
+        <translation>%2 өчен кирәкле %1 бәйлелеген үтәп булмый.</translation>
     </message>
     <message id="orn-backups">
         <source>Backups</source>
-        <translation>Резервные копии</translation>
+        <translation>Резерв күчермә</translation>
     </message>
     <message id="orn-backup-description">
         <source>Backup and restore repos and installed apps</source>
-        <translation>Сохранение и восстановление репозиториев и приложений</translation>
+        <translation>Репозиторияләр белән кушымталарны саклау һәм кире торгызу</translation>
     </message>
     <message id="orn-create-backup">
         <source>Create a backup</source>
-        <translation>Создать резервную копию</translation>
+        <translation>Резерв күчермә булдыру</translation>
     </message>
     <message id="orn-backup-error">
         <source>Backup error</source>
-        <translation>Ошибка создания</translation>
+        <translation>Булдыру хатасы</translation>
     </message>
     <message id="orn-backup-error-directory">
         <source>Could not create directory</source>
-        <translation>Не удалось создать каталог</translation>
+        <translation>Каталогны ясауда хата</translation>
     </message>
     <message id="orn-restore-title">
         <source>Restore from a file</source>
-        <translation>Восстановить из файла</translation>
+        <translation>Файлдан кире торгызу</translation>
     </message>
     <message id="orn-restore">
         <source>Restore</source>
-        <translation>Восстановить</translation>
+        <translation>Кире торгызу</translation>
     </message>
     <message id="orn-restore-hint">
         <source>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</source>
-        <translation>Восстановите репозитории OpenRepos и установленные приложения из выбранного файла. Это действие не повлияет на ваши текущие настройки репозиториев и не удалит установленные приложения.</translation>
+        <translation>OpenRepos репозиторияләрен һәм кушымталарны файлдан кире торгызыгыз. Бу гамәл сезнең хәзерге саклагыч көйләүләренә тәэсир итмәячәк һәм урнаштырылган кушымталарны бетермәячәк.</translation>
     </message>
     <message id="orn-created">
         <source>Created</source>
-        <translation>Создан</translation>
+        <translation>Булды</translation>
     </message>
     <message id="orn-total-repos">
         <source>Total repositories</source>
-        <translation>Всего репозиториев</translation>
+        <translation>Бар репозиторияләр</translation>
     </message>
     <message id="orn-details">
         <source>Details</source>
-        <translation>Детали</translation>
+        <translation>Детальләр</translation>
     </message>
     <message id="orn-backups-placeholder">
         <source>Backups will be shown here</source>
-        <translation>Здесь появятся резервные копии</translation>
+        <translation>Монда резерв күчермәләр күрсәтеләчәк</translation>
     </message>
     <message id="orn-restoring-repos">
         <source>Restoring repositories</source>
-        <translation>Восстановление репозиториев</translation>
+        <translation>Репозиторияләрне кире торгызу</translation>
     </message>
     <message id="orn-refreshing-repos">
         <source>Refreshing repositories</source>
-        <translation>Обновление репозиториев</translation>
+        <translation>Репозиторияләрне яңарту</translation>
     </message>
     <message id="orn-searching-packages">
         <source>Searching packages</source>
-        <translation>Поиск пакетов</translation>
+        <translation>Пакетлар эзләү</translation>
     </message>
     <message id="orn-installing-repos">
         <source>Installing packages</source>
-        <translation>Установка пакетов</translation>
+        <translation>Пакетларны урнаштыру</translation>
     </message>
     <message id="orn-restoring-title">
         <source>Restoring</source>
-        <translation>Восстановление</translation>
+        <translation>Кире торгызу</translation>
     </message>
     <message id="orn-success-backup">
         <source>Successful backup</source>
-        <translation>Копирование успешно завершено</translation>
+        <translation>Күчермә уңышлы булдырылды</translation>
     </message>
     <message id="orn-success-restore">
         <source>Successful restore</source>
-        <translation>Восстановление успешно завершено</translation>
+        <translation>Кире торгызу уңыш белән тәмамланды</translation>
     </message>
     <message id="orn-installed-packages">
         <source>Installed packages</source>
