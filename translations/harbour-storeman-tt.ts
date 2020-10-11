@@ -1036,19 +1036,19 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     </message>
     <message id="orn-refresh-cache-switch-descr">
         <source>Force refreshing of cache of all repositories after system upgrade</source>
-        <translation>Принудительное обновление кэша всех репозиториев после обновления ОС</translation>
+        <translation>OS'ны яңартканнан соң мәҗбүри рәвештә репозиторияләр кэшен да яңартырга</translation>
     </message>
     <message id="orn-save-password">
         <source>Save password</source>
-        <translation>Сохранить пароль</translation>
+        <translation>Серсүзне саклау</translation>
     </message>
     <message id="orn-save-password-help">
         <source>Save password to the encrypted device storage to perform automatic re-login.</source>
-        <translation>Сохранить пароль в устройстве в зашифрованном виде для автоматического повторного входа в систему.</translation>
+        <translation>Киредән автоматик рәвештә системага керер өчен серсүзне шифрлап саклау.</translation>
     </message>
     <message id="orn-share-link">
         <source>Share link</source>
-        <translation>Поделиться</translation>
+        <translation>Уртаклашу</translation>
     </message>
     <message id="orn-repository">
         <source>Repository</source>
@@ -1056,15 +1056,15 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     </message>
     <message id="orn-myrepository">
         <source>My repository</source>
-        <translation>Мой репозиторий</translation>
+        <translation>Минем репозиторий</translation>
     </message>
     <message id="orn-donate-with">
         <source>Donate with %1</source>
-        <translation>Поддержать через %1</translation>
+        <translation>%1 аша булышу</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
-        <translation>Доступны обновления</translation>
+        <translation>Яңартулар бар</translation>
     </message>
 </context>
 </TS>
