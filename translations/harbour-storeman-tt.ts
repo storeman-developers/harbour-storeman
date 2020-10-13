@@ -214,8 +214,8 @@
         <translation>Уен</translation>
     </message>
     <message id="orn-cat-action">
-        <source>Тиз уеннар</source>
-        <translation></translation>
+        <source>Action</source>
+        <translation>Актив</translation>
     </message>
     <message id="orn-cat-adventure">
         <source>Adventure</source>
@@ -333,7 +333,7 @@
     </message>
     <message id="orn-app-licensing">
         <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation>Storeman'ның башлангыч коды &lt;a href=&apos;%0&apos;&gt;MIT лицензиясе&lt;/a&gt; килешүе буенча тарала</translation>
+        <translation>Storeman&apos;ның башлангыч коды &lt;a href=&apos;%0&apos;&gt;MIT лицензиясе&lt;/a&gt; килешүе буенча тарала</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
@@ -411,7 +411,7 @@
     </message>
     <message id="orn-login-menu-item">
         <source>Log in to OpenRepos.net</source>
-        <translation>OpenRepos'ка керергә</translation>
+        <translation>OpenRepos&apos;ка керергә</translation>
     </message>
     <message id="orn-login-action">
         <source>Log in</source>
@@ -424,17 +424,17 @@
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not send your password to third-parties.</source>
-        <translation>OpenRepos.net'ка кулланучы исеме белэн керегез, бу сезгә комментарияләргә һәм җавап бирергә мөмкинлек бирәчәк. 
+        <translation>OpenRepos.net&apos;ка кулланучы исеме белэн керегез, бу сезгә комментарияләргә һәм җавап бирергә мөмкинлек бирәчәк. 
             
 Storeman серсүзне өченче затларга җибәрми.</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
-        <translation>Сез OpenRepos.net'ка уңышлы кердегез</translation>
+        <translation>Сез OpenRepos.net&apos;ка уңышлы кердегез</translation>
     </message>
     <message id="orn-loggedout-message">
         <source>You have logged out from the OpenRepos.net</source>
-        <translation>Сез OpenRepos.net'тан чыктыгыз</translation>
+        <translation>Сез OpenRepos.net&apos;тан чыктыгыз</translation>
     </message>
     <message id="orn-login-error-title">
         <source>Login error</source>
@@ -442,7 +442,7 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     </message>
     <message id="orn-login-error-message">
         <source>Could not log in the OpenRepos.net - check your credentials and network connection</source>
-        <translation>OpenRepos.net'ка кереп булмады - хисап язмагызны һәм челтәрне тикшерегез</translation>
+        <translation>OpenRepos.net&apos;ка кереп булмады - хисап язмагызны һәм челтәрне тикшерегез</translation>
     </message>
     <message id="orn-loggedin-menu-item">
         <source>Logged in as %0</source>
@@ -477,7 +477,7 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     </message>
     <message id="orn-authorisation-expires-body">
         <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>OpenRepos'ка керүнең вакыты чыга. Кире керер өчен тиеп алыгыз.</translation>
+        <translation>OpenRepos&apos;ка керүнең вакыты чыга. Кире керер өчен тиеп алыгыз.</translation>
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
@@ -485,7 +485,7 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     </message>
     <message id="orn-authorisation-expired-body">
         <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>OpenRepos'ка керүнең вакыты чыкты. Кире керер өчен тиеп алыгыз.</translation>
+        <translation>OpenRepos&apos;ка керүнең вакыты чыкты. Кире керер өчен тиеп алыгыз.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
@@ -749,15 +749,15 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     </message>
     <message id="orn-no-installed-apps">
         <source>Could not find any applications installed from OpenRepos</source>
-        <translation>OpenRepos'тан урнаштырылган кушымталарны табып булмады</translation>
+        <translation>OpenRepos&apos;тан урнаштырылган кушымталарны табып булмады</translation>
     </message>
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
         <translation>
-            <numerusform>%n операциясе башкарыла</numerusform>
-            <numerusform>%n операциясе башкарыла</numerusform>
-            <numerusform>%n операциясе башкарыла</numerusform>
+            <numerusform>%n операция үтәлә</numerusform>
+            <numerusform>%n операция үтәлә</numerusform>
+            <numerusform>%n операция үтәлә</numerusform>
         </translation>
     </message>
     <message id="orn-version-available">
@@ -920,11 +920,11 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     </message>
     <message id="orn-search-on-openrepos">
         <source>Search on OpenRepos.net</source>
-        <translation>OpenRepos.net'та эзләү</translation>
+        <translation>OpenRepos.net&apos;та эзләү</translation>
     </message>
     <message id="orn-repo-suggestion">
         <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
-        <translation>&lt;h3&gt;Storeman репозиториясен кабызыгыз&lt;/h3&gt;&lt;p&gt;Storeman һәм башка кушымталарның соңгы версияләләрен куяр өчен аларның репозиторияләрен OpenRepos'та кабызырга кирәк.&lt;/p&gt;&lt;p&gt;Репозиторийны хәзер кабызыргамы?&lt;/p&gt;</translation>
+        <translation>&lt;h3&gt;Storeman репозиториясен кабызыгыз&lt;/h3&gt;&lt;p&gt;Storeman һәм башка кушымталарның соңгы версияләләрен куяр өчен аларның репозиторияләрен OpenRepos&apos;та кабызырга кирәк.&lt;/p&gt;&lt;p&gt;Репозиторийны хәзер кабызыргамы?&lt;/p&gt;</translation>
     </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
@@ -1032,11 +1032,11 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     </message>
     <message id="orn-refresh-cache-switch">
         <source>Refresh cache after system upgrade</source>
-        <translation>OS'ны яңартканнан соң кэшны да яңартырга</translation>
+        <translation>OS&apos;ны яңартканнан соң кэшны да яңартырга</translation>
     </message>
     <message id="orn-refresh-cache-switch-descr">
         <source>Force refreshing of cache of all repositories after system upgrade</source>
-        <translation>OS'ны яңартканнан соң мәҗбүри рәвештә репозиторияләр кэшен да яңартырга</translation>
+        <translation>OS&apos;ны яңартканнан соң мәҗбүри рәвештә репозиторияләр кэшен да яңартырга</translation>
     </message>
     <message id="orn-save-password">
         <source>Save password</source>
