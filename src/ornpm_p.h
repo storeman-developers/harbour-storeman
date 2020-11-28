@@ -18,6 +18,8 @@ class OrnPmPrivate : public QObjectPrivate
     Q_DECLARE_PUBLIC(OrnPm)
 
 public:
+    using ornpm_signal_t   = void (OrnPm::*)(const QString &);
+
     OrnPmPrivate() = default;
     ~OrnPmPrivate() override = default;
 
@@ -35,14 +37,10 @@ public:
 
     void onItemProgress(const QString &id, uint status, uint percentage);
 
+    OrnPkTransaction *packageTransaction(const QString &packageName, OrnPm::Operation operation, OrnPm::PackageStatus status, ornpm_signal_t sgnl);
+
     // Check for updates
     void getUpdates();
-    // Install package
-    void onPackageInstalled(const QString& packageId);
-    // Remove package
-    void onPackageRemoved(const QString& packageId);
-    // Update package
-    void onPackageUpdated(const QString& packageId);
     // Refresh repos
     void refreshNextRepo(quint32 exit, quint32 runtime);
 

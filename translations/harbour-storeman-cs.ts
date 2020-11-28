@@ -1064,5 +1064,9 @@
         <source>Updates available</source>
         <translation type="unfinished">Dostupné aktualizace</translation>
     </message>
+    <message id="orn-package-updated">
+        <source>Package %0 was successfully updated</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

@@ -326,6 +326,9 @@ ApplicationWindow
         //% "Package %0 was successfully installed"
         onPackageInstalled: notification.show(qsTrId("orn-package-installed").arg(packageName))
 
+        //% "Package %0 was successfully updated"
+        onPackageUpdated: notification.show(qsTrId("orn-package-updated").arg(packageName))
+
         //% "Package %0 was successfully removed"
         onPackageRemoved: notification.show(qsTrId("orn-package-removed").arg(packageName))
 

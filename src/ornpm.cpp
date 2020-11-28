@@ -347,43 +347,39 @@ void OrnPmPrivate::preparePackageVersions(const QString &packageName)
 
 void OrnPm::installPackage(const QString &packageId)
 {
-    Q_D(OrnPm);
-
     CHECK_NETWORK();
 
     auto name = OrnUtils::packageName(packageId);
-    if (d->startOperation(name, InstallingPackage))
+
+    auto t = d_func()->packageTransaction(name, OrnPm::InstallingPackage, OrnPm::PackageInstalling, &OrnPm::packageInstalled);
+    if (t)
     {
-        emit this->packageStatusChanged(name, OrnPm::PackageInstalling);
-        d->transaction()->installPackages(QStringList{packageId});
+        t->installPackages(QStringList{packageId});
     }
 }
 
 void OrnPm::installFile(const QString &packageFile)
 {
-    Q_D(OrnPm);
-
     CHECK_NETWORK();
 
     // GetDetailsLocal is not supported for libzypp
     auto name = rpmQuery(packageFile, QStringLiteral("%{NAME}"));
 
-    if (d->startOperation(name, InstallingPackage))
+    auto t = d_func()->packageTransaction(name, OrnPm::InstallingPackage, OrnPm::PackageInstalling, &OrnPm::packageInstalled);
+    if (t)
     {
-        d->transaction()->installFiles(QStringList{packageFile});
+        t->installFiles(QStringList{packageFile});
     }
-
 }
 
 void OrnPm::removePackage(const QString &packageId, bool autoremove)
 {
-    Q_D(OrnPm);
-
     auto name = OrnUtils::packageName(packageId);
-    if (d->startOperation(name, RemovingPackage))
+
+    auto t = d_func()->packageTransaction(name, OrnPm::RemovingPackage, OrnPm::PackageRemoving, &OrnPm::packageRemoved);
+    if (t)
     {
-        emit this->packageStatusChanged(name, OrnPm::PackageRemoving);
-        d->transaction()->removePackages(QStringList{packageId}, autoremove);
+        t->removePackages(QStringList{packageId}, autoremove);
     }
 }
 
@@ -399,11 +395,11 @@ void OrnPm::updatePackage(const QString &packageName)
         return;
     }
 
-    if (d->startOperation(packageName, UpdatingPackage))
+    auto t = d->packageTransaction(packageName, OrnPm::UpdatingPackage, OrnPm::PackageUpdating, &OrnPm::packageUpdated);
+    if (t)
     {
-        emit this->packageStatusChanged(packageName, OrnPm::PackageUpdating);
         auto packageId = d->updatablePackages[packageName];
-        d->transaction()->updatePackages(QStringList{packageId});
+        t->updatePackages(QStringList{packageId});
     }
 }
 
@@ -831,24 +827,54 @@ OrnInstalledPackageList OrnPmPrivate::prepareInstalledPackages(const QString &pa
 
 void OrnPmPrivate::onItemProgress(const QString &id, uint status, uint percentage)
 {
-    if (percentage < 100)
+    if (   percentage < 100
+        || !(status == Transaction::StatusRemove || status == Transaction::StatusInstall || status == Transaction::StatusUpdate))
     {
         return;
     }
 
-    switch (status) {
-    case Transaction::StatusInstall:
-        onPackageInstalled(id);
-        break;
-    case Transaction::StatusRemove:
-        onPackageRemoved(id);
-        break;
-    case Transaction::StatusUpdate:
-        onPackageUpdated(id);
-        break;
-    default:
-        break;
+    Q_Q(OrnPm);
+
+    auto name = OrnUtils::packageName(id);
+
+    if (status == Transaction::StatusRemove)
+    {
+        installedPackages.remove(name);
+        emit q->packageStatusChanged(name, OrnPm::PackageNotInstalled);
+        return;
     }
+
+    installedPackages[name] = id;
+    emit q->packageStatusChanged(name, OrnPm::PackageInstalled);
+    if (updatablePackages.contains(name))
+    {
+        getUpdates();
+    }
+}
+
+OrnPkTransaction *OrnPmPrivate::packageTransaction(const QString &packageName,
+        OrnPm::Operation operation,
+        OrnPm::PackageStatus status,
+        OrnPmPrivate::ornpm_signal_t sgnl)
+{
+    if (!startOperation(packageName, operation))
+    {
+        return nullptr;
+    }
+
+    Q_Q(OrnPm);
+
+    emit q->packageStatusChanged(packageName, status);
+    auto t = transaction();
+    QObject::connect(t, &OrnPkTransaction::Finished, q, [this, packageName, sgnl](uint status) {
+        Q_Q(OrnPm);
+        operations.remove(packageName);
+        emit q->operationsChanged();
+        if (status == Transaction::ExitSuccess) {
+            emit (q->*sgnl)(packageName);
+        }
+    });
+    return t;
 }
 
 void OrnPmPrivate::getUpdates()
@@ -913,59 +939,6 @@ void OrnPmPrivate::getUpdates()
     });
 
     t->getUpdates();
-}
-
-void OrnPmPrivate::onPackageInstalled(const QString &packageId)
-{
-    Q_Q(OrnPm);
-
-    auto name = OrnUtils::packageName(packageId);
-
-    installedPackages[name] = packageId;
-    emit q->packageStatusChanged(name, OrnPm::PackageInstalled);
-
-    if (operations.remove(name))
-    {
-        emit q->operationsChanged();
-        emit q->packageInstalled(name);
-    }
-}
-
-void OrnPmPrivate::onPackageRemoved(const QString &packageId)
-{
-    Q_Q(OrnPm);
-
-    auto name = OrnUtils::packageName(packageId);
-
-    installedPackages.remove(name);
-    emit q->packageStatusChanged(name, OrnPm::PackageNotInstalled);
-
-    if (operations.remove(name))
-    {
-        emit q->operationsChanged();
-        emit q->packageRemoved(name);
-    }
-}
-
-void OrnPmPrivate::onPackageUpdated(const QString &packageId)
-{
-    Q_Q(OrnPm);
-
-    auto name = OrnUtils::packageName(packageId);
-
-    installedPackages[name] = packageId;
-    emit q->packageStatusChanged(name, OrnPm::PackageInstalled);
-
-    if (updatablePackages.remove(name))
-    {
-        emit q->updatablePackagesChanged();
-    }
-
-    if (operations.remove(name))
-    {
-        emit q->operationsChanged();
-        emit q->packageUpdated(name);
-    }
 }
 
 void OrnPmPrivate::refreshNextRepo(quint32 exit, quint32 runtime)

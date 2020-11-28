@@ -1059,5 +1059,9 @@
         <source>Updates available</source>
         <translation>Updates available</translation>
     </message>
+    <message id="orn-package-updated">
+        <source>Package %0 was successfully updated</source>
+        <translation>Package %0 was successfully updated</translation>
+    </message>
 </context>
 </TS>
