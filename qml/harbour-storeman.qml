@@ -318,7 +318,7 @@ ApplicationWindow
     Connections {
         target: OrnPm
 
-        onRepoModified: _repoActionMessage(action).arg(repoAlias)
+        onRepoModified: notification.show(_repoActionMessage(action).arg(alias))
 
         //% "All repositories were removed"
         onRemoveAllReposFinished: notification.show(qsTrId("orn-repo-allremoved"))
