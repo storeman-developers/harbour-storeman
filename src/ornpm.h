@@ -86,6 +86,8 @@ public:
 
     static QString repoUrl(const QString &author);
 
+    Q_INVOKABLE static QString rpmQuery(const QString &packageFile, const QString &query);
+
     static OrnPm *instance();
     static inline QObject *qmlInstance(QQmlEngine *engine, QJSEngine *scriptEngine)
     {

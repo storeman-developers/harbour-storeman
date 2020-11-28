@@ -56,6 +56,19 @@ QString OrnPm::repoUrl(const QString &author)
     return QStringLiteral("https://sailfish.openrepos.net/%0/personal/main").arg(author);
 }
 
+QString OrnPm::rpmQuery(const QString &packageFile, const QString &query)
+{
+    QProcess rpm;
+    rpm.start(QStringLiteral("rpm"), {
+        QStringLiteral("-qp"),
+        QStringLiteral("--qf"),
+        query,
+        packageFile,
+    });
+    rpm.waitForFinished();
+    return QString::fromUtf8(rpm.readAll());
+}
+
 OrnPm *OrnPm::instance()
 {
     static OrnPm *instance = nullptr;
@@ -346,20 +359,6 @@ void OrnPm::installPackage(const QString &packageId)
     }
 }
 
-QString rmpPackageName(const QString &packageFile)
-{
-    QProcess rpm;
-    rpm.start(QStringLiteral("rpm"), {
-        QStringLiteral("-qp"),
-        QStringLiteral("--qf"),
-        QStringLiteral("%{NAME}"),
-        packageFile,
-    });
-    rpm.start();
-    rpm.waitForFinished();
-    return QString::fromUtf8(rpm.readAll());
-}
-
 void OrnPm::installFile(const QString &packageFile)
 {
     Q_D(OrnPm);
@@ -367,7 +366,7 @@ void OrnPm::installFile(const QString &packageFile)
     CHECK_NETWORK();
 
     // GetDetailsLocal is not supported for libzypp
-    auto name = rmpPackageName(packageFile);
+    auto name = rpmQuery(packageFile, QStringLiteral("%{NAME}"));
 
     if (d->startOperation(name, InstallingPackage))
     {

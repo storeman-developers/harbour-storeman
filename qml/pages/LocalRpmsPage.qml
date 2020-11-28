@@ -7,22 +7,18 @@ Page {
     // Duplicate count property because items are not really deleted from the model
     property int _count: 0
 
+    readonly property bool _ready: page.status === PageStatus.Active && queryModel.status === SparqlListModel.Ready
+
+    on_ReadyChanged: _ready && (_count = queryModel.count)
+
     id: page
     allowedOrientations: defaultAllowedOrientations
 
     SparqlListModel {
         id: queryModel
-        query: "SELECT nfo:fileName(?r) as ?fileName strafter(nie:url(?r), 'file://') as ?filePath WHERE { ?r nie:mimeType 'application/x-rpm' }"
+        query: "SELECT strafter(nie:url(?r), 'file://') as ?filePath WHERE { ?r nie:mimeType 'application/x-rpm' }"
         connection: SparqlConnection {
             driver: "QTRACKER_DIRECT"
-        }
-
-        onStatusChanged: {
-            if (status === SparqlListModel.Ready) {
-                listView.model = queryModel
-                busyIndicator.running = false
-                _count = count
-            }
         }
     }
 
@@ -30,7 +26,7 @@ Page {
         id: listView
         anchors.fill: parent
 
-        model: busyIndicator.running ? null : queryModel
+        model: _ready ? queryModel : null
 
         header: PageHeader {
             //% "Local RPM files"
@@ -40,36 +36,46 @@ Page {
         delegate: ListItem {
             id: delegateItem
             width: parent.width
-            contentHeight: delegateColumn.height + Theme.paddingSmall * 2
+            contentHeight: delegateColumn.height + Theme.paddingMedium * 2
             onClicked: openMenu()
 
             menu: ContextMenu {
 
                 MenuItem {
                     text: qsTrId("orn-install")
-                    onClicked: delegateItem.remorseAction(qsTrId("orn-installing"), function() {
-                        OrnPm.installFile(filePath)
-                    })
+                    onClicked: {
+                        // Temp variable is required for cases when user navigates back
+                        // while remorse action is still active (filePath belongs to another context)
+                        var path = filePath
+                        delegateItem.remorseAction(qsTrId("orn-installing"), function() {
+                            OrnPm.installFile(path)
+                        })
+                    }
                 }
 
                 MenuItem {
                     //% "Delete"
                     text: qsTrId("orn-delete")
-                    //% "Deleting"
-                    onClicked: delegateItem.remorseAction(qsTrId("orn-deleting"), function() {
-                        if (Storeman.removeFile(filePath)) {
-                            delegateItem.animateRemoval()
-                            _count -= 1
-                        } else {
-                            //% "Failed to delete"
-                            notification.showPopup(qsTrId("orn-deletion-error"),
-                                                   filePath, "image://theme/icon-lock-warning")
-                        }
-                    })
+                    onClicked: {
+                        var path = filePath
+                        //% "Deleting"
+                        delegateItem.remorseAction(qsTrId("orn-deleting"), function() {
+                            if (Storeman.removeFile(path)) {
+                                delegateItem.animateRemoval()
+                                _count -= 1
+                            } else {
+                                //% "Failed to delete"
+                                notification.showPopup(qsTrId("orn-deletion-error"),
+                                                       path, "image://theme/icon-lock-warning")
+                            }
+                        })
+                    }
                 }
             }
 
             Column {
+                readonly property var info: OrnPm.rpmQuery(filePath, "%{NAME} %{VERSION}\n%{DESCRIPTION}").split('\n')
+
                 id: delegateColumn
                 anchors {
                     verticalCenter: parent.verticalCenter
@@ -83,7 +89,15 @@ Page {
                     maximumLineCount: 1
                     truncationMode: TruncationMode.Fade
                     color: delegateItem.highlighted ? Theme.highlightColor : Theme.primaryColor
-                    text: fileName
+                    text: parent.info[0]
+                }
+
+                Label {
+                    width: parent.width
+                    wrapMode: Text.WordWrap
+                    color: delegateItem.highlighted ? Theme.highlightColor : Theme.secondaryColor
+                    font.pixelSize: Theme.fontSizeExtraSmall
+                    text: parent.info[1]
                 }
 
                 Label {
@@ -91,7 +105,7 @@ Page {
                     maximumLineCount: 1
                     truncationMode: TruncationMode.Fade
                     color: delegateItem.highlighted ? Theme.highlightColor : Theme.secondaryColor
-                    font.pixelSize: Theme.fontSizeSmall
+                    font.pixelSize: Theme.fontSizeTiny
                     text: filePath
                 }
             }
@@ -100,11 +114,7 @@ Page {
         PullDownMenu {
             MenuItem {
                 text: qsTrId("orn-refresh")
-                onClicked: {
-                    listView.model = null
-                    busyIndicator.running = true
-                    queryModel.reload()
-                }
+                onClicked: queryModel.reload()
             }
         }
 
@@ -114,11 +124,11 @@ Page {
             id: busyIndicator
             size: BusyIndicatorSize.Large
             anchors.centerIn: parent
-            running: true
+            running: !_ready
         }
 
         ViewPlaceholder {
-            enabled: !busyIndicator.running && _count === 0
+            enabled: _ready && _count === 0
             //% "No local RPM files were found"
             text: qsTrId("orn-no-local-rpms")
             hintText: qsTrId("orn-pull-refresh")
