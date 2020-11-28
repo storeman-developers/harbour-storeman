@@ -12,7 +12,7 @@ Page {
 
     SparqlListModel {
         id: queryModel
-        query: "SELECT nfo:fileName(?r) strafter(nie:url(?r), 'file://') WHERE { ?r nie:mimeType 'application/x-rpm' }"
+        query: "SELECT nfo:fileName(?r) as ?fileName strafter(nie:url(?r), 'file://') as ?filePath WHERE { ?r nie:mimeType 'application/x-rpm' }"
         connection: SparqlConnection {
             driver: "QTRACKER_DIRECT"
         }
@@ -38,8 +38,6 @@ Page {
         }
 
         delegate: ListItem {
-            readonly property var _data: queryModel.get(index)
-
             id: delegateItem
             width: parent.width
             contentHeight: delegateColumn.height + Theme.paddingSmall * 2
@@ -50,7 +48,7 @@ Page {
                 MenuItem {
                     text: qsTrId("orn-install")
                     onClicked: delegateItem.remorseAction(qsTrId("orn-installing"), function() {
-                        OrnPm.installFile(_data.var2)
+                        OrnPm.installFile(filePath)
                     })
                 }
 
@@ -59,13 +57,13 @@ Page {
                     text: qsTrId("orn-delete")
                     //% "Deleting"
                     onClicked: delegateItem.remorseAction(qsTrId("orn-deleting"), function() {
-                        if (Storeman.removeFile(_data.var2)) {
+                        if (Storeman.removeFile(filePath)) {
                             delegateItem.animateRemoval()
                             _count -= 1
                         } else {
                             //% "Failed to delete"
                             notification.showPopup(qsTrId("orn-deletion-error"),
-                                                   _data.var2, "image://theme/icon-lock-warning")
+                                                   filePath, "image://theme/icon-lock-warning")
                         }
                     })
                 }
@@ -85,7 +83,7 @@ Page {
                     maximumLineCount: 1
                     truncationMode: TruncationMode.Fade
                     color: delegateItem.highlighted ? Theme.highlightColor : Theme.primaryColor
-                    text: _data.var1
+                    text: fileName
                 }
 
                 Label {
@@ -94,7 +92,7 @@ Page {
                     truncationMode: TruncationMode.Fade
                     color: delegateItem.highlighted ? Theme.highlightColor : Theme.secondaryColor
                     font.pixelSize: Theme.fontSizeSmall
-                    text: _data.var2
+                    text: filePath
                 }
             }
         }
