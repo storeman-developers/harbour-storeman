@@ -1063,15 +1063,15 @@
     </message>
     <message id="orn-donate-with">
         <source>Donate with %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Prispevajte z %1</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
-        <translation type="unfinished">Na voljo so posodobitve</translation>
+        <translation>Na voljo so posodobitve</translation>
     </message>
     <message id="orn-package-updated">
         <source>Package %0 was successfully updated</source>
-        <translation type="unfinished"></translation>
+        <translation>Paket %0 je bil uspešno posodobljen</translation>
     </message>
 </context>
 </TS>

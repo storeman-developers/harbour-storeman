@@ -367,15 +367,11 @@
         <source>%n minute(s) ago</source>
         <translation>
             <numerusform>%n минут элек</numerusform>
-            <numerusform>%n минут элек</numerusform>
-            <numerusform>%n минут элек</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%n hour(s) ago</source>
         <translation>
-            <numerusform>%n сәгать элек</numerusform>
-            <numerusform>%n сәгать элек</numerusform>
             <numerusform>%n сәгать элек</numerusform>
         </translation>
     </message>
@@ -756,8 +752,6 @@ Storeman серсүзне өченче затларга җибәрми.</transla
         <extracomment>There are always more than 1 operations</extracomment>
         <translation>
             <numerusform>%n операция үтәлә</numerusform>
-            <numerusform>%n операция үтәлә</numerusform>
-            <numerusform>%n операция үтәлә</numerusform>
         </translation>
     </message>
     <message id="orn-version-available">
@@ -814,15 +808,11 @@ Storeman серсүзне өченче затларга җибәрми.</transla
         <source>%n minute(s)</source>
         <translation>
             <numerusform>%n минут</numerusform>
-            <numerusform>%n минут</numerusform>
-            <numerusform>%n минут</numerusform>
         </translation>
     </message>
     <message id="orn-interval-h" numerus="yes">
         <source>%n hour(s)</source>
         <translation>
-            <numerusform>%n сәгать</numerusform>
-            <numerusform>%n сәгать</numerusform>
             <numerusform>%n сәгать</numerusform>
         </translation>
     </message>
@@ -1065,6 +1055,10 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
         <translation>Яңартулар бар</translation>
+    </message>
+    <message id="orn-package-updated">
+        <source>Package %0 was successfully updated</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

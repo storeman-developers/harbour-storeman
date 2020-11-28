@@ -1068,7 +1068,7 @@ Storeman не передает ваш пароль третьим лицам.</t
     </message>
     <message id="orn-package-updated">
         <source>Package %0 was successfully updated</source>
-        <translation type="unfinished"></translation>
+        <translation>Пакет %0 успешно обновлен</translation>
     </message>
 </context>
 </TS>

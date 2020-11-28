@@ -1053,15 +1053,15 @@
     </message>
     <message id="orn-donate-with">
         <source>Donate with %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Faites un don avec %1</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
-        <translation type="unfinished">Mises à jour disponibles</translation>
+        <translation>Mises à jour disponibles</translation>
     </message>
     <message id="orn-package-updated">
         <source>Package %0 was successfully updated</source>
-        <translation type="unfinished"></translation>
+        <translation>Le paquet %0 a été mis à jour avec succès</translation>
     </message>
 </context>
 </TS>

@@ -17,6 +17,7 @@ TRANSLATIONS += \
     translations/harbour-storeman-ru.ts \
     translations/harbour-storeman-sl_SI.ts \
     translations/harbour-storeman-sv.ts \
+    translations/harbour-storeman-tt.ts \
     translations/harbour-storeman-zh_CN.ts
 
 qm.input    = TRANSLATIONS
