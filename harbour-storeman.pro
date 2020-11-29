@@ -176,7 +176,6 @@ OTHER_FILES += \
     rpm/harbour-storeman.spec \
     harbour-storeman.desktop \
     icons/harbour-storeman.svg \
-    .github/workflows/build.yml \
     .gitignore
 
 privileges.files = data/harbour-storeman
