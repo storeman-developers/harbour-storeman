@@ -1,3 +1,9 @@
+* Sat Nov 28 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.3
+ - Add Tatar (thanks to Rustem Abzalov) and update other translations
+ - Fix notifications on repo modification
+ - Fix again handling of package transactions status
+ - Fix and enhance page of local RPM files: show version and description of RPMs, prevent the page from twitching on opening
+
 * Sun Oct  4 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.2-1
  - Fix duplicate results in search model
  - Update translations
