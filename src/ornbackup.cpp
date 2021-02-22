@@ -13,7 +13,6 @@
 #include <QFutureWatcher>
 #include <QtDBus/QDBusMessage>
 #include <QtDBus/QDBusConnection>
-
 #include <QDebug>
 
 static const QString GROUP_REPOS    {QStringLiteral("repos")};
@@ -154,7 +153,8 @@ void OrnBackup::pAddPackage(quint32 info, const QString &packageId, const QStrin
 void OrnBackup::pInstallPackages()
 {
     QStringList ids;
-    for (const auto &pname : mPackagesToInstall.uniqueKeys())
+    const auto ukeys = mPackagesToInstall.uniqueKeys();
+    for (const auto &pname : ukeys)
     {
         const auto &pids = mPackagesToInstall.values(pname);
         QString newestId;
@@ -231,7 +231,8 @@ void OrnBackup::pBackup(const QString &filePath, BackupItems items)
     {
         qDebug() << "Backing up installed packages";
         QStringList installed;
-        for (const auto &p : ornpm_p->prepareInstalledPackages(QString()))
+        const auto packages = ornpm_p->prepareInstalledPackages(QString());
+        for (const auto &p : packages)
         {
             installed << p.name;
         }
@@ -241,12 +242,10 @@ void OrnBackup::pBackup(const QString &filePath, BackupItems items)
     if (items.testFlag(BackupItem::BackupBookmarks))
     {
         qDebug() << "Backing up bookmarks";
-        QVariantList bookmarks;
-        for (const auto &b : OrnClient::instance()->d_func()->bookmarks)
-        {
-            bookmarks << b;
-        }
-        file.setValue(OrnConst::bookmarks, bookmarks);
+        const auto &intlist = OrnClient::instance()->d_func()->bookmarks;
+        QVariantList varlist;
+        qCopy(intlist.cbegin(), intlist.cend(), varlist.begin());
+        file.setValue(OrnConst::bookmarks, varlist);
     }
 
     file.endGroup();

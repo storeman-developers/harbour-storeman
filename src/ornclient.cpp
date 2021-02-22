@@ -183,7 +183,7 @@ OrnClient::OrnClient(QObject *parent)
         auto cookie = d->secrets.data(SECRET_COOKIE);
         if (!cookie.isEmpty())
         {
-            d->userCookie = QNetworkCookie::parseCookies(cookie).first();
+            d->userCookie = QNetworkCookie::parseCookies(cookie).constFirst();
         }
         d->userToken = d->secrets.data(SECRET_TOKEN);
     }

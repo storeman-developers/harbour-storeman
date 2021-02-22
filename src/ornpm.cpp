@@ -592,7 +592,7 @@ void OrnPm::refreshRepo(const QString &alias, bool force)
     if (d->startOperation(alias, RefreshingRepo))
     {
         auto t = d->transaction();
-        connect(t, &OrnPkTransaction::Finished, [this, alias]()
+        connect(t, &OrnPkTransaction::Finished, this, [this, alias]()
         {
             this->d_func()->finishOperation(alias);
         });
@@ -654,7 +654,7 @@ void OrnPm::refreshCache(bool force)
     if (d->startOperation(name, OrnPm::RefreshingCache))
     {
         auto t = d->transaction();
-        connect(t, &QObject::destroyed, [this, name]()
+        connect(t, &QObject::destroyed, this, [this, name]()
         {
             this->d_func()->finishOperation(name);
         });

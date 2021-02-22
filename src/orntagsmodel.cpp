@@ -68,7 +68,8 @@ void OrnTagsModel::fetchMore(const QModelIndex &parent)
     auto size = mTagIds.size();
     QString resourcePrefix(QStringLiteral("tags/"));
 
-    for (const auto &id : mTagIds)
+    const auto &ids = mTagIds;
+    for (const auto &id : ids)
     {
         auto request = client->apiRequest(resourcePrefix + id);
         qDebug() << "Fetching data from" << request.url().toString();

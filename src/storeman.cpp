@@ -306,7 +306,8 @@ inline Notification *previousNotification()
 {
     Notification *prev = nullptr;
     QLatin1String category("x-storeman.updates");
-    for (auto o : Notification::notifications())
+    const auto notifications = Notification::notifications();
+    for (auto o : notifications)
     {
         auto n = dynamic_cast<Notification *>(o);
         if (n->category() == category)
