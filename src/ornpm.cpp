@@ -776,6 +776,8 @@ OrnInstalledPackageList OrnPmPrivate::prepareInstalledPackages(const QString &pa
         installed[packageName] = installedPackages[packageName];
     }
 
+    packages.reserve(installed.size());
+
     for (auto it = installed.cbegin(); it != installed.cend(); ++it)
     {
         const auto &name = it.key();
@@ -788,15 +790,25 @@ OrnInstalledPackageList OrnPmPrivate::prepareInstalledPackages(const QString &pa
 
         qDebug() << "Adding installed package" << name;
 
-        QString title{name};
-        QString icon;
+        OrnInstalledPackage package{
+            updatablePackages.contains(name),
+            it.value(),
+            name,
+            QString{},
+            QString{},
+            QString{}
+        };
+
         MDesktopEntry desktop{OrnUtils::desktopFile(name)};
 
         if (desktop.isValid())
         {
             // Read pretty name
-            title = desktop.name();
-            qDebug() << "Using name" << title << "for package" << name;
+            package.title = desktop.name();
+            package.titleUnlocalized = desktop.nameUnlocalized();
+            qDebug()
+                << "Using name" << (package.title.isEmpty() ? name : package.title)
+                << "for package" << name;
             // Find icon
             auto iconName = desktop.icon();
             if (!iconName.isEmpty())
@@ -807,19 +819,13 @@ OrnInstalledPackageList OrnPmPrivate::prepareInstalledPackages(const QString &pa
                     if (QFileInfo(iconPath).isFile())
                     {
                         qDebug() << "Using package icon" << iconPath;
-                        icon = iconPath;
+                        package.icon = iconPath;
                         break;
                     }
                 }
             }
         }
-        packages << OrnInstalledPackage {
-            updatablePackages.contains(name),
-            it.value(),
-            name,
-            title,
-            icon
-        };
+        packages << package;
     }
 
     return packages;
