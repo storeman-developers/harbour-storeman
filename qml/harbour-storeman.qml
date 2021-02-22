@@ -102,6 +102,14 @@ ApplicationWindow
         }
     }
 
+    function _updateAll() {
+        console.log("Calling _updateAll()")
+        var updates = OrnPm.updatablePackages()
+        for (var i = 0; i < updates.length; ++i) {
+            OrnPm.updatePackage(updates[i])
+        }
+    }
+
     initialPage: Component { MainPage { } }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: defaultAllowedOrientations
@@ -141,6 +149,8 @@ ApplicationWindow
         </doc:doc>
       </arg>
     </method>
+    <method name="updateAll">
+    </method>
   </interface>'
 
         function openPage(page, arguments) {
@@ -151,6 +161,10 @@ ApplicationWindow
             if (page === "ErrorPage" || page !== pageStack.currentPage.objectName) {
                 pageStack.push(Qt.resolvedUrl("pages/%1.qml".arg(page)), arguments)
             }
+        }
+
+        function updateAll() {
+            _updateAll()
         }
     }
 
@@ -206,6 +220,13 @@ ApplicationWindow
                 iface: "harbour.storeman.service",
                 method: "openPage",
                 arguments: [ "InstalledAppsPage", {} ]
+            }, {
+                name: "update-all",
+                displayName: qsTrId("orn-update-all"),
+                service: "harbour.storeman.service",
+                path: "/harbour/storeman/service",
+                iface: "harbour.storeman.service",
+                method: "updateAll"
             } ]
     }
 

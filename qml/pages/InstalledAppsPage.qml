@@ -145,12 +145,7 @@ Page {
                 enabled: networkManager.connected && _operations && _operations.length === 0
                 //% "Update all"
                 text: qsTrId("orn-update-all")
-                onClicked: {
-                    var updates = OrnPm.updatablePackages()
-                    for (var i = 0; i < updates.length; ++i) {
-                        OrnPm.updatePackage(updates[i])
-                    }
-                }
+                onClicked: _updateAll()
             }
 
             MenuStatusLabel { }
