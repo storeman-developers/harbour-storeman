@@ -1056,7 +1056,7 @@
     </message>
     <message id="orn-package-updated">
         <source>Package %0 was successfully updated</source>
-        <translation type="unfinished"></translation>
+        <translation>包 %0 已成功更新</translation>
     </message>
 </context>
 </TS>

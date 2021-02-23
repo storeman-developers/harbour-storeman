@@ -106,7 +106,7 @@
     </message>
     <message id="orn-installed">
         <source>Installed</source>
-        <translation>Урнаштырылды</translation>
+        <translation>Урнаштырылган</translation>
     </message>
     <message id="orn-version-installed">
         <source>Installed version</source>
@@ -275,7 +275,7 @@
     </message>
     <message id="orn-version-repo-disabled">
         <source>Enable the repository first</source>
-        <translation>Иң элек репозиторияне кабызырга кирәк</translation>
+        <translation>Иң элек репозиторияне ялгарга кирәк</translation>
     </message>
     <message id="orn-search">
         <source>Search</source>
@@ -914,7 +914,7 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     </message>
     <message id="orn-repo-suggestion">
         <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
-        <translation>&lt;h3&gt;Storeman репозиториясен кабызыгыз&lt;/h3&gt;&lt;p&gt;Storeman һәм башка кушымталарның соңгы версияләләрен куяр өчен аларның репозиторияләрен OpenRepos&apos;та кабызырга кирәк.&lt;/p&gt;&lt;p&gt;Репозиторийны хәзер кабызыргамы?&lt;/p&gt;</translation>
+        <translation>&lt;h3&gt;Storeman репозиториясен ялгагыз&lt;/h3&gt;&lt;p&gt;Storeman һәм башка кушымталарның соңгы версияләләрен куяр өчен аларның репозиторияләрен OpenRepos&apos;та ялгарга кирәк.&lt;/p&gt;&lt;p&gt;Репозиторийны хәзер ялгаргамы?&lt;/p&gt;</translation>
     </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
@@ -1058,7 +1058,7 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     </message>
     <message id="orn-package-updated">
         <source>Package %0 was successfully updated</source>
-        <translation type="unfinished"></translation>
+        <translation>%0 пакеты уңышлы яңартылды</translation>
     </message>
 </context>
 </TS>

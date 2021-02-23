@@ -164,7 +164,8 @@ ListModel {
             ListElement { name: "mentaljam" }
         ]
         translators: [
-            ListElement { name: "dikonov" }
+            ListElement { name: "dikonov" },
+            ListElement { name: "arustg" }
         ]
         reviewers: []
     }
@@ -193,6 +194,15 @@ ListModel {
             ListElement { name: "eson" }
         ]
         translators: []
+        reviewers: []
+    }
+
+    ListElement {
+        locale: "tt"
+        coordinators: []
+        translators: [
+            ListElement { name: "arustg" }
+        ]
         reviewers: []
     }
 }
