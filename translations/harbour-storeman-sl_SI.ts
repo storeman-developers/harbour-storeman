@@ -475,17 +475,9 @@
         <source>Authorisation expires</source>
         <translation>Avtorizacija poteče</translation>
     </message>
-    <message id="orn-authorisation-expires-body">
-        <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>OpenRepos avtorizacija poteče. Kliknite za ponovno avtoriziranje.</translation>
-    </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
         <translation>Avtorizacija je potekla</translation>
-    </message>
-    <message id="orn-authorisation-expired-body">
-        <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>OpenRepos avtorizacija je potekla. Kliknite za ponovno avtoriziranje.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
@@ -561,10 +553,6 @@
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
         <translation>Kliknite za ogled posodobitev</translation>
-    </message>
-    <message id="orn-updates-available-body">
-        <source>Applications updates are available. Click to view details.</source>
-        <translation>Na voljo so posodobitve aplikacij. Kliknite za ogled podrobnosti.</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>

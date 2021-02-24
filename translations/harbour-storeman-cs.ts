@@ -473,17 +473,9 @@
         <source>Authorisation expires</source>
         <translation>Přihlášení vyprší</translation>
     </message>
-    <message id="orn-authorisation-expires-body">
-        <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>Přihlášení k OpenRepos vypršelo. Klikněte pro obnovení.</translation>
-    </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
         <translation>Přihlášení vypršelo</translation>
-    </message>
-    <message id="orn-authorisation-expired-body">
-        <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>Přihlášení k OpenRepos vypršelo. Klikněte pro obnovení.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
@@ -559,10 +551,6 @@
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
         <translation>Kliknutím zobrazíte aktualizace</translation>
-    </message>
-    <message id="orn-updates-available-body">
-        <source>Applications updates are available. Click to view details.</source>
-        <translation>Jsou dostupné aktualizace aplikací. Klikněte pro detail.</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>

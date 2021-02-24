@@ -469,17 +469,9 @@
         <source>Authorisation expires</source>
         <translation>Az engedély lejár</translation>
     </message>
-    <message id="orn-authorisation-expires-body">
-        <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>Az OpenRepos bejelentkezésed lejárt. Koppints ide az újraengedélyezéshez.</translation>
-    </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
         <translation>Az engedély lejárt</translation>
-    </message>
-    <message id="orn-authorisation-expired-body">
-        <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>Az OpenRepos bejelentkezésed lejárt. Koppints ide az újraengedélyezéshez.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
@@ -555,10 +547,6 @@
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
         <translation>Koppints a frissítések megtekintéséhez</translation>
-    </message>
-    <message id="orn-updates-available-body">
-        <source>Applications updates are available. Click to view details.</source>
-        <translation>Frissítések érhetőek el a telepített alkalmazásokhoz. Koppints ide a részletek megtekintéséhez.</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>

@@ -471,17 +471,9 @@
         <source>Authorisation expires</source>
         <translation>Η εξουσιοδότηση λήγει</translation>
     </message>
-    <message id="orn-authorisation-expires-body">
-        <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>Η εξουσιοδότηση του OpenRepos λήγει. Κάντε κλικ για ανανέωση.</translation>
-    </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
         <translation>Η εξουσιοδότηση έληξε</translation>
-    </message>
-    <message id="orn-authorisation-expired-body">
-        <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>Η εξουσιοδότηση του OpenRepos έληξε. Κάντε κλικ για ανανέωση.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
@@ -557,10 +549,6 @@
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
         <translation>Κάντε κλικ για προβολή των ενημερώσεων</translation>
-    </message>
-    <message id="orn-updates-available-body">
-        <source>Applications updates are available. Click to view details.</source>
-        <translation>Υπάρχουν διαθέσιμες ενημερώσεις εφαρμογών. Κάντε κλικ για την προβολή λεπτομερειών.</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>

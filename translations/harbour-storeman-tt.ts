@@ -471,17 +471,9 @@ Storeman серсүзне өченче затларга җибәрми.</transla
         <source>Authorisation expires</source>
         <translation>Керүнең вакыты чыга</translation>
     </message>
-    <message id="orn-authorisation-expires-body">
-        <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>OpenRepos&apos;ка керүнең вакыты чыга. Кире керер өчен тиеп алыгыз.</translation>
-    </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
         <translation>Керүнең вакыты чыкты</translation>
-    </message>
-    <message id="orn-authorisation-expired-body">
-        <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>OpenRepos&apos;ка керүнең вакыты чыкты. Кире керер өчен тиеп алыгыз.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
@@ -557,10 +549,6 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
         <translation>Детальләрне карау өчен тиеп алыгыз</translation>
-    </message>
-    <message id="orn-updates-available-body">
-        <source>Applications updates are available. Click to view details.</source>
-        <translation>Кушымталарның яңартулары бар. Детальләрне карау өчен тиеп алыгыз</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>

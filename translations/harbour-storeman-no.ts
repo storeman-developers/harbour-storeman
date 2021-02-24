@@ -471,17 +471,9 @@
         <source>Authorisation expires</source>
         <translation>Autorisasjon utgått </translation>
     </message>
-    <message id="orn-authorisation-expires-body">
-        <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
         <translation>Autorisasjon utgått</translation>
-    </message>
-    <message id="orn-authorisation-expired-body">
-        <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation type="unfinished"></translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
@@ -557,10 +549,6 @@
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
         <translation>Klikk for å vise oppdateringer</translation>
-    </message>
-    <message id="orn-updates-available-body">
-        <source>Applications updates are available. Click to view details.</source>
-        <translation>Programoppdateringer er tilgjengelige. Klikk for å se detaljer.</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>

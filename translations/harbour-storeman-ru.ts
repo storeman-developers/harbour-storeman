@@ -475,17 +475,9 @@ Storeman не передает ваш пароль третьим лицам.</t
         <source>Authorisation expires</source>
         <translation>Истекает срок авторизации</translation>
     </message>
-    <message id="orn-authorisation-expires-body">
-        <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>Истекает срок авторизации на OpenRepos. Коснитесь, чтобы войти заново.</translation>
-    </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
         <translation>Истек срок авторизации</translation>
-    </message>
-    <message id="orn-authorisation-expired-body">
-        <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>Истек срок авторизации на OpenRepos. Коснитесь, чтобы войти заново.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
@@ -561,10 +553,6 @@ Storeman не передает ваш пароль третьим лицам.</t
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
         <translation>Нажмите, чтобы просмотреть детали</translation>
-    </message>
-    <message id="orn-updates-available-body">
-        <source>Applications updates are available. Click to view details.</source>
-        <translation>Доступны обновления приложений. Нажмите, чтобы просмотреть детали.</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>

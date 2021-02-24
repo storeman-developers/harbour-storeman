@@ -469,17 +469,9 @@
         <source>Authorisation expires</source>
         <translation>授权已失效</translation>
     </message>
-    <message id="orn-authorisation-expires-body">
-        <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>OpenRepos授权已失效，请再次授权</translation>
-    </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
         <translation>授权已失效 </translation>
-    </message>
-    <message id="orn-authorisation-expired-body">
-        <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>OpenRepos 授权已失效，点击再次授权</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
@@ -555,10 +547,6 @@
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
         <translation>点击查看更新</translation>
-    </message>
-    <message id="orn-updates-available-body">
-        <source>Applications updates are available. Click to view details.</source>
-        <translation>应用有可供更新，点击查看详情</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>

@@ -471,17 +471,9 @@
         <source>Authorisation expires</source>
         <translation>Autorisatie verloôpt</translation>
     </message>
-    <message id="orn-authorisation-expires-body">
-        <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>D’OpenRepos-autorisatie verloôpt kortelings. Tikt voôr u t’herautoriseren.</translation>
-    </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
         <translation>Autorisatie verlôpen</translation>
-    </message>
-    <message id="orn-authorisation-expired-body">
-        <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>D’OpenRepos-autorisatie is verlôpen. Tikt voôr u t’herautoriseren.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
@@ -557,10 +549,6 @@
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
         <translation>Tikt voôr d’updates te bekijken</translation>
-    </message>
-    <message id="orn-updates-available-body">
-        <source>Applications updates are available. Click to view details.</source>
-        <translation>Der zijn updates voôr uw apps beschikbaar. Tikt voôr meêr info.</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>

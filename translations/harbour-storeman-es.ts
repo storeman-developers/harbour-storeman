@@ -471,17 +471,9 @@
         <source>Authorisation expires</source>
         <translation>La autorización ha caducado</translation>
     </message>
-    <message id="orn-authorisation-expires-body">
-        <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>La autorización de OpenRepos ha caducado. Haz clic para autorizar de nuevo.</translation>
-    </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
         <translation>Autorización caducada</translation>
-    </message>
-    <message id="orn-authorisation-expired-body">
-        <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>La autorización de OpenRepos ha caducado. Haz clic para autorizar de nuevo.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
@@ -557,10 +549,6 @@
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
         <translation>Haz clic para ver las actualizaciones</translation>
-    </message>
-    <message id="orn-updates-available-body">
-        <source>Applications updates are available. Click to view details.</source>
-        <translation>Hay actualizaciones disponibles. Haz clic para ver los detalles.</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>
