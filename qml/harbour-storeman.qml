@@ -8,6 +8,12 @@ import "pages"
 
 ApplicationWindow
 {
+    // TODO: Use Qt.application.displayName (available since Qt 5.9)
+    readonly property string applicationDisplayName: "Storeman"
+    readonly property string applicationIcon: Qt.application.name
+    readonly property string dbusService: "harbour.storeman.service"
+    readonly property string dbusPath: "/harbour/storeman/service"
+    readonly property string dbusInterface: dbusService
     property bool _showUpdatesNotification: true
     property string _processingLink
     readonly property var _locale: Qt.locale()
@@ -127,9 +133,9 @@ ApplicationWindow
     }
 
     DBusAdaptor {
-        service: "harbour.storeman.service"
-        iface: "harbour.storeman.service"
-        path: "/harbour/storeman/service"
+        service: dbusService
+        iface: dbusInterface
+        path: dbusPath
         xml: '\
   <interface name="harbour.storeman.service">
     <method name="openPage">
@@ -187,17 +193,19 @@ ApplicationWindow
         }
 
         id: notification
+        appName: applicationDisplayName
         expireTimeout: 3000
     }
 
     Notification {
         id: authorisationWarning
-        appIcon: "image://theme/icon-lock-warning"
+        appName: applicationDisplayName
+        appIcon: applicationIcon
         remoteActions: [ {
                 name: "default",
-                service: "harbour.storeman.service",
-                path: "/harbour/storeman/service",
-                iface: "harbour.storeman.service",
+                service: dbusService,
+                path: dbusPath,
+                iface: dbusInterface,
                 method: "openPage",
                 arguments: [ "AuthorisationDialog", {} ]
             } ]
@@ -205,43 +213,42 @@ ApplicationWindow
 
     Notification {
         id: updatesNotification
-        category: "x-storeman.updates"
-        appIcon: "image://theme/icon-lock-application-update"
+        appName: applicationDisplayName
+        appIcon: applicationIcon
         //% "Updates available"
-        previewSummary: qsTrId("orn-updates-available-summary")
+        summary: qsTrId("orn-updates-available-summary")
         //% "Click to view updates"
-        previewBody: qsTrId("orn-updates-available-preview")
-        //% "Applications updates are available. Click to view details."
-        body: qsTrId("orn-updates-available-body")
+        body: qsTrId("orn-updates-available-preview")
         remoteActions: [ {
                 name: "default",
-                service: "harbour.storeman.service",
-                path: "/harbour/storeman/service",
-                iface: "harbour.storeman.service",
+                service: dbusService,
+                path: dbusPath,
+                iface: dbusInterface,
                 method: "openPage",
                 arguments: [ "InstalledAppsPage", {} ]
             }, {
                 name: "update-all",
                 displayName: qsTrId("orn-update-all"),
-                service: "harbour.storeman.service",
-                path: "/harbour/storeman/service",
-                iface: "harbour.storeman.service",
+                service: dbusService,
+                path: dbusPath,
+                iface: dbusInterface,
                 method: "updateAll"
             } ]
     }
 
     Notification {
         id: errorNotification
-        appIcon: "image://theme/icon-lock-warning"
+        appName: applicationDisplayName
+        appIcon: applicationIcon
         //% "An error occured"
-        previewSummary: qsTrId("orn-error")
+        summary: qsTrId("orn-error")
         //% "Click to view details"
         previewBody: qsTrId("orn-view-details")
         remoteActions: [ {
                 name: "default",
-                service: "harbour.storeman.service",
-                path: "/harbour/storeman/service",
-                iface: "harbour.storeman.service",
+                service: dbusService,
+                path: dbusPath,
+                iface: dbusInterface,
                 method: "openPage",
                 arguments: [ "ErrorPage", { message: body } ]
             } ]
@@ -265,7 +272,7 @@ ApplicationWindow
                             qsTrId("orn-login-error-title"),
                             //% "Could not log in the OpenRepos.net - check your credentials and network connection"
                             qsTrId("orn-login-error-message"),
-                            "image://theme/icon-lock-warning")
+                            warnIcon)
                 break
             case OrnClient.CommentSendError:
                 //% "Error sending comment"
@@ -288,20 +295,16 @@ ApplicationWindow
 
         onDayToExpiry: {
             //% "Authorisation expires"
-            authorisationWarning.previewSummary = qsTrId("orn-authorisation-expires-summary")
+            authorisationWarning.summary = qsTrId("orn-authorisation-expires-summary")
             //% "Click to reauthorise"
-            authorisationWarning.previewBody = qsTrId("orn-reauthorise")
-            //% "The OpenRepos authorisation expires. Click to reauthorise."
-            authorisationWarning.body = qsTrId("orn-authorisation-expires-body")
+            authorisationWarning.body = qsTrId("orn-reauthorise")
             authorisationWarning.publish()
         }
 
         onCookieIsValidChanged: if (!OrnClient.cookieIsValid) {
             //% "Authorisation expired"
-            authorisationWarning.previewSummary = qsTrId("orn-authorisation-expired-summary")
-            authorisationWarning.previewBody = qsTrId("orn-reauthorise")
-            //% "The OpenRepos authorisation has expired. Click to reauthorise."
-            authorisationWarning.body = qsTrId("orn-authorisation-expired-body")
+            authorisationWarning.summary = qsTrId("orn-authorisation-expired-summary")
+            authorisationWarning.body = qsTrId("orn-reauthorise")
             authorisationWarning.publish()
         }
 

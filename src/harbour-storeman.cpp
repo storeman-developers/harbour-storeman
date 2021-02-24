@@ -56,6 +56,8 @@ int main(int argc, char *argv[])
 
     SailfishApp::application(argc, argv);
     QGuiApplication::setApplicationVersion(QStringLiteral(STOREMAN_VERSION));
+    // TODO: Available in Qt.application object since Qt 5.9
+    // QGuiApplication::setApplicationDisplayName(QStringLiteral("Storeman"));
 
     auto view = SailfishApp::createView();
 
