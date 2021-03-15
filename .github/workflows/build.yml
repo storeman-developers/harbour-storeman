@@ -34,6 +34,13 @@ jobs:
         ARCH: armv7hl
       run: bash ./scripts/gha-build.sh
 
+    - name: Build 3.4.0.24-aarch64
+      env:
+        RELEASE: 3.4.0.24
+        LATEST_RELEASE: 1
+        ARCH: aarch64
+      run: bash ./scripts/gha-build.sh
+
     - name: Build 3.4.0.24-i486
       env:
         RELEASE: 3.4.0.24
