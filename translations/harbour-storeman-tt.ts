@@ -324,16 +324,9 @@
         <translation>Корректорлар</translation>
     </message>
     <message id="orn-app-description">
-        <source>Unofficial native OpenRepos.net client for Sailfish&amp;nbsp;OS</source>
-        <translation>Sailfish&amp;nbsp;OS өчен официаль булмаган OpenRepos.net клиенты</translation>
-    </message>
-    <message id="orn-report">
-        <source>Report an Issue</source>
-        <translation>Хата турында хәбәр итү</translation>
-    </message>
-    <message id="orn-app-licensing">
-        <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation>Storeman&apos;ның башлангыч коды &lt;a href=&apos;%0&apos;&gt;MIT лицензиясе&lt;/a&gt; килешүе буенча тарала</translation>
+        <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
+        <oldsource>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%1&apos;&gt;MIT License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub&lt;br /&gt;(use the buttons below)&lt;/p&gt;</oldsource>
+        <translation type="unfinished">Sailfish&amp;nbsp;OS өчен официаль булмаган OpenRepos.net клиенты</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>

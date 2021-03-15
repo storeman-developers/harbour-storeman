@@ -324,16 +324,9 @@
         <translation>Revisores</translation>
     </message>
     <message id="orn-app-description">
-        <source>Unofficial native OpenRepos.net client for Sailfish&amp;nbsp;OS</source>
-        <translation>Cliente nativo no oficial de OpenRepos.net para Sailfish&amp;nbsp;OS</translation>
-    </message>
-    <message id="orn-report">
-        <source>Report an Issue</source>
-        <translation>Informar de un fallo</translation>
-    </message>
-    <message id="orn-app-licensing">
-        <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation>Esta es una aplicación de código abierto que se distribuye bajo los términos de la&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;Licencia MIT&lt;/a&gt;</translation>
+        <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
+        <oldsource>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%1&apos;&gt;MIT License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub&lt;br /&gt;(use the buttons below)&lt;/p&gt;</oldsource>
+        <translation type="unfinished">Cliente nativo no oficial de OpenRepos.net para Sailfish&amp;nbsp;OS</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
