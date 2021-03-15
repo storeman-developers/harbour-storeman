@@ -16,10 +16,10 @@ ListModel {
 
     ListElement {
         locale: "cs"
-        coordinators: []
-        translators: [
+        coordinators: [
             ListElement { name: "Malakay" }
         ]
+        translators: []
         reviewers: []
     }
 
@@ -45,6 +45,15 @@ ListModel {
         locale: "nl_BE"
         coordinators: [
             ListElement { name: "pljmn" }
+        ]
+        translators: []
+        reviewers: []
+    }
+
+    ListElement {
+        locale: "et"
+        coordinators: [
+            ListElement { name: "tlend" }
         ]
         translators: []
         reviewers: []
@@ -98,19 +107,20 @@ ListModel {
 
     ListElement {
         locale: "el"
-        coordinators: []
-        translators: [
+        coordinators: [
             ListElement { name: "dglent" }
         ]
+        translators: []
         reviewers: []
     }
 
     ListElement {
         locale: "hu_HU"
-        coordinators: []
+        coordinators: [
+            ListElement { name: "Headarias" }
+        ]
         translators: [
             ListElement { name: "martonmiklos" },
-            ListElement { name: "Headarias" },
             ListElement { name: "leoka" }
         ]
         reviewers: []
@@ -129,10 +139,10 @@ ListModel {
 
     ListElement {
         locale: "no"
-        coordinators: []
-        translators: [
+        coordinators: [
             ListElement { name: "storeslem" }
         ]
+        translators: []
         reviewers: []
     }
 
@@ -172,10 +182,10 @@ ListModel {
 
     ListElement {
         locale: "sl_SI"
-        coordinators: []
-        translators: [
+        coordinators: [
             ListElement { name: "sponka" }
         ]
+        translators: []
         reviewers: []
     }
 
@@ -199,10 +209,10 @@ ListModel {
 
     ListElement {
         locale: "tt"
-        coordinators: []
-        translators: [
+        coordinators: [
             ListElement { name: "arustg" }
         ]
+        translators: []
         reviewers: []
     }
 }
