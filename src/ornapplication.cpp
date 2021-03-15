@@ -189,7 +189,8 @@ void OrnApplication::ornRequest()
         mRating         = rating[OrnConst::rating].toString().toFloat();
 
         mTagIds.clear();
-        for (const QJsonValueRef id : data[OrnConst::tags].toArray())
+        const auto tags = data[OrnConst::tags].toArray();
+        for (const QJsonValue &id : tags)
         {
             mTagIds << OrnUtils::toString(id.toObject()[OrnConst::tid]);
         }

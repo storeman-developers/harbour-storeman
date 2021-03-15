@@ -152,7 +152,13 @@ QVariant OrnInstalledAppsModel::data(const QModelIndex &index, int role) const
     case NameRole:
         return package.name;
     case TitleRole:
-        return package.title;
+        return package.title.isEmpty()
+            ? package.name
+            : package.title;
+    case TitleUnlocalizedRole:
+        return package.titleUnlocalized.isEmpty()
+            ? package.name
+            : package.titleUnlocalized;
     case VersionRole:
         return OrnUtils::packageVersion(package.id);
     case IconRole:
@@ -177,13 +183,14 @@ QVariant OrnInstalledAppsModel::data(const QModelIndex &index, int role) const
 QHash<int, QByteArray> OrnInstalledAppsModel::roleNames() const
 {
     return {
-        { NameRole,    "packageName"    },
-        { TitleRole,   "packageTitle"   },
-        { VersionRole, "packageVersion" },
-        { IconRole,    "packageIcon"    },
-        { SectionRole, "section"        },
-        { UpdateAvailableRole, "updateAvailable" },
-        { UpdateVersionRole,   "updateVersion" },
-        { IdRole,      "packageId"}
+        { NameRole,             "packageName"    },
+        { TitleRole,            "packageTitle"   },
+        { TitleUnlocalizedRole, "packageTitleUnlocalized" },
+        { VersionRole,          "packageVersion" },
+        { IconRole,             "packageIcon"    },
+        { SectionRole,          "section"        },
+        { UpdateAvailableRole,  "updateAvailable" },
+        { UpdateVersionRole,    "updateVersion" },
+        { IdRole,               "packageId"}
     };
 }

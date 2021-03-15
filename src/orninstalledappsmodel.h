@@ -14,6 +14,7 @@ public:
     {
         NameRole = Qt::UserRole + 1,
         TitleRole,
+        TitleUnlocalizedRole,
         VersionRole,
         IconRole,
         SortRole,

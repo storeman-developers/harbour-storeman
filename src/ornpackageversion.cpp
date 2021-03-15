@@ -8,7 +8,8 @@ QVariantList splitVersion(const QString &version)
     QVariantList parts;
     static QRegularExpression sep_re(QStringLiteral("[.+~-]"));
     bool ok;
-    for (const QString &s : version.split(sep_re))
+    const auto sparts = version.split(sep_re);
+    for (const auto &s : sparts)
     {
         auto v = s.toInt(&ok);
         parts << (ok ? QVariant(v) : QVariant(s));

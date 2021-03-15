@@ -8,7 +8,9 @@
 
 #include <QDebug>
 
-static const QMap<quint32, const char*> categories{
+using categories_t = const QMap<quint32, const char*>;
+
+Q_GLOBAL_STATIC_WITH_ARGS(categories_t, categories, ({
     //% "Coding Competition"
     { 3092, QT_TRID_NOOP("orn-cat-coding-competition") },
     //% "Applications"
@@ -77,7 +79,7 @@ static const QMap<quint32, const char*> categories{
     { 3155, QT_TRID_NOOP("orn-cat-fonts") },
     //% "Libraries"
     {  247, QT_TRID_NOOP("orn-cat-libraries") },
-};
+}));
 
 static const QString KEY_DEPTH     {QStringLiteral("depth")};
 static const QString KEY_PARENTS   {QStringLiteral("parents")};
@@ -97,9 +99,9 @@ OrnCategoryListItem::OrnCategoryListItem(const QJsonObject &data)
 
 QString OrnCategoryListItem::categoryName(quint32 tid)
 {
-    if (categories.contains(tid))
+    if (categories->contains(tid))
     {
-        return qtTrId(categories[tid]);
+        return qtTrId((*categories)[tid]);
     }
     qWarning() << "Categories dictionary does not contain tid"
                << tid << "- dictionary update can be required";

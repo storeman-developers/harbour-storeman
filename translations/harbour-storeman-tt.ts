@@ -106,7 +106,7 @@
     </message>
     <message id="orn-installed">
         <source>Installed</source>
-        <translation>Урнаштырылды</translation>
+        <translation>Урнаштырылган</translation>
     </message>
     <message id="orn-version-installed">
         <source>Installed version</source>
@@ -275,7 +275,7 @@
     </message>
     <message id="orn-version-repo-disabled">
         <source>Enable the repository first</source>
-        <translation>Иң элек репозиторияне кабызырга кирәк</translation>
+        <translation>Иң элек репозиторияне ялгарга кирәк</translation>
     </message>
     <message id="orn-search">
         <source>Search</source>
@@ -322,18 +322,6 @@
     <message id="orn-reviewers">
         <source>Reviewers</source>
         <translation>Корректорлар</translation>
-    </message>
-    <message id="orn-app-description">
-        <source>Unofficial native OpenRepos.net client for Sailfish&amp;nbsp;OS</source>
-        <translation>Sailfish&amp;nbsp;OS өчен официаль булмаган OpenRepos.net клиенты</translation>
-    </message>
-    <message id="orn-report">
-        <source>Report an Issue</source>
-        <translation>Хата турында хәбәр итү</translation>
-    </message>
-    <message id="orn-app-licensing">
-        <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation>Storeman&apos;ның башлангыч коды &lt;a href=&apos;%0&apos;&gt;MIT лицензиясе&lt;/a&gt; килешүе буенча тарала</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
@@ -471,17 +459,9 @@ Storeman серсүзне өченче затларга җибәрми.</transla
         <source>Authorisation expires</source>
         <translation>Керүнең вакыты чыга</translation>
     </message>
-    <message id="orn-authorisation-expires-body">
-        <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>OpenRepos&apos;ка керүнең вакыты чыга. Кире керер өчен тиеп алыгыз.</translation>
-    </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
         <translation>Керүнең вакыты чыкты</translation>
-    </message>
-    <message id="orn-authorisation-expired-body">
-        <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>OpenRepos&apos;ка керүнең вакыты чыкты. Кире керер өчен тиеп алыгыз.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
@@ -557,10 +537,6 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
         <translation>Детальләрне карау өчен тиеп алыгыз</translation>
-    </message>
-    <message id="orn-updates-available-body">
-        <source>Applications updates are available. Click to view details.</source>
-        <translation>Кушымталарның яңартулары бар. Детальләрне карау өчен тиеп алыгыз</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>
@@ -914,7 +890,7 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     </message>
     <message id="orn-repo-suggestion">
         <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
-        <translation>&lt;h3&gt;Storeman репозиториясен кабызыгыз&lt;/h3&gt;&lt;p&gt;Storeman һәм башка кушымталарның соңгы версияләләрен куяр өчен аларның репозиторияләрен OpenRepos&apos;та кабызырга кирәк.&lt;/p&gt;&lt;p&gt;Репозиторийны хәзер кабызыргамы?&lt;/p&gt;</translation>
+        <translation>&lt;h3&gt;Storeman репозиториясен ялгагыз&lt;/h3&gt;&lt;p&gt;Storeman һәм башка кушымталарның соңгы версияләләрен куяр өчен аларның репозиторияләрен OpenRepos&apos;та ялгарга кирәк.&lt;/p&gt;&lt;p&gt;Репозиторийны хәзер ялгаргамы?&lt;/p&gt;</translation>
     </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
@@ -1058,6 +1034,10 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     </message>
     <message id="orn-package-updated">
         <source>Package %0 was successfully updated</source>
+        <translation>%0 пакеты уңышлы яңартылды</translation>
+    </message>
+    <message id="orn-app-description2">
+        <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

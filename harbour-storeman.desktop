@@ -4,3 +4,6 @@ X-Nemo-Application-Type=silica-qt5
 Icon=harbour-storeman
 Exec=harbour-storeman
 Name=Storeman
+
+[X-HarbourBackup]
+BackupPathList=.config/harbour-storeman/:.local/share/harbour-storeman/

@@ -321,19 +321,7 @@
     </message>
     <message id="orn-reviewers">
         <source>Reviewers</source>
-        <translation> Корректоры</translation>
-    </message>
-    <message id="orn-app-description">
-        <source>Unofficial native OpenRepos.net client for Sailfish&amp;nbsp;OS</source>
-        <translation>Неофициальный нативный клиент OpenRepos.net для Sailfish&amp;nbsp;OS</translation>
-    </message>
-    <message id="orn-report">
-        <source>Report an Issue</source>
-        <translation>Сообщить об ошибке</translation>
-    </message>
-    <message id="orn-app-licensing">
-        <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation>Исходный код Storeman распространяется в соответствии с условиями &lt;a href=&apos;%0&apos;&gt;лицензии MIT&lt;/a&gt;</translation>
+        <translation>Корректоры</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
@@ -475,17 +463,9 @@ Storeman не передает ваш пароль третьим лицам.</t
         <source>Authorisation expires</source>
         <translation>Истекает срок авторизации</translation>
     </message>
-    <message id="orn-authorisation-expires-body">
-        <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>Истекает срок авторизации на OpenRepos. Коснитесь, чтобы войти заново.</translation>
-    </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
         <translation>Истек срок авторизации</translation>
-    </message>
-    <message id="orn-authorisation-expired-body">
-        <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>Истек срок авторизации на OpenRepos. Коснитесь, чтобы войти заново.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
@@ -561,10 +541,6 @@ Storeman не передает ваш пароль третьим лицам.</t
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
         <translation>Нажмите, чтобы просмотреть детали</translation>
-    </message>
-    <message id="orn-updates-available-body">
-        <source>Applications updates are available. Click to view details.</source>
-        <translation>Доступны обновления приложений. Нажмите, чтобы просмотреть детали.</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>
@@ -1069,6 +1045,10 @@ Storeman не передает ваш пароль третьим лицам.</t
     <message id="orn-package-updated">
         <source>Package %0 was successfully updated</source>
         <translation>Пакет %0 успешно обновлен</translation>
+    </message>
+    <message id="orn-app-description2">
+        <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Клиент OpenRepos.net для Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;Исходный код Storeman распространяется в соответствии с условиями &lt;a href=&quot;%1&quot;&gt;лицензии&amp;nbsp;MIT&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Вы можете сообщить об ошибке на OpenRepos.net или GitHub&lt;br /&gt;(используйте кнопки ниже)&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>

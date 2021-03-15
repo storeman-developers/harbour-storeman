@@ -9,6 +9,7 @@ struct OrnInstalledPackage
     QString id;
     QString name;
     QString title;
+    QString titleUnlocalized;
     QString icon;
 };
 

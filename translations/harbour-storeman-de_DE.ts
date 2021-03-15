@@ -323,18 +323,6 @@
         <source>Reviewers</source>
         <translation>Rezensenten</translation>
     </message>
-    <message id="orn-app-description">
-        <source>Unofficial native OpenRepos.net client for Sailfish&amp;nbsp;OS</source>
-        <translation>Inoffizieller nativer OpenRepos.net-Client für Sailfish&amp;nbsp;OS</translation>
-    </message>
-    <message id="orn-report">
-        <source>Report an Issue</source>
-        <translation>Einen Fehler melden</translation>
-    </message>
-    <message id="orn-app-licensing">
-        <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation>Dies ist eine Open-Source-Software, die unter den Bedingungen der &lt;a href=&apos;%0&apos;&gt;MIT-Lizenz&lt;/a&gt; vertrieben wird.</translation>
-    </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
         <translation>Ein Netzwerkfehler ist aufgetreten</translation>
@@ -471,17 +459,9 @@
         <source>Authorisation expires</source>
         <translation>Autorisierung läuft ab</translation>
     </message>
-    <message id="orn-authorisation-expires-body">
-        <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>Die OpenRepos-Autorisierung läuft ab. Klicken, um erneut zu autorisieren.</translation>
-    </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
         <translation>Autorisierung abgelaufen</translation>
-    </message>
-    <message id="orn-authorisation-expired-body">
-        <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>Die OpenRepos-Autorisierung ist abgelaufen. Klicken, um erneut zu autorisieren.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
@@ -557,10 +537,6 @@
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
         <translation>Klicken zum Anzeigen der Updates</translation>
-    </message>
-    <message id="orn-updates-available-body">
-        <source>Applications updates are available. Click to view details.</source>
-        <translation>Programm-Updates sind verfügbar. Klicken, um Details zu sehen.</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>
@@ -1062,6 +1038,10 @@
     <message id="orn-package-updated">
         <source>Package %0 was successfully updated</source>
         <translation>Paket %0 wurde erfolgreich aktualisiert</translation>
+    </message>
+    <message id="orn-app-description2">
+        <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -23,7 +23,7 @@ OrnPkTransaction *OrnPkDaemon::transaction() {
                qPrintable(reply.errorName().append(": ").append(reply.errorMessage())));
 
     auto t = new OrnPkTransaction(
-        qvariant_cast<QDBusObjectPath>(reply.arguments().first()).path(),
+        qvariant_cast<QDBusObjectPath>(reply.arguments().constFirst()).path(),
         false,
         parent()
     );

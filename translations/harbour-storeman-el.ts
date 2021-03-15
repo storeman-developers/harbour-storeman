@@ -323,18 +323,6 @@
         <source>Reviewers</source>
         <translation>Αναθεωρητές</translation>
     </message>
-    <message id="orn-app-description">
-        <source>Unofficial native OpenRepos.net client for Sailfish&amp;nbsp;OS</source>
-        <translation>Ανεπίσημος εγγενής πελάτης του OpenRepos.net για το λειτουργικό Sailfish&amp;nbsp;OS</translation>
-    </message>
-    <message id="orn-report">
-        <source>Report an Issue</source>
-        <translation>Αναφέρετε ένα σφάλμα</translation>
-    </message>
-    <message id="orn-app-licensing">
-        <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation>Αυτό είναι ένα λογισμικό ανοιχτού κώδικα το οποίοι διανέμεται υπό την άδεια χρήσης &lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT&lt;/a&gt;</translation>
-    </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
         <translation>Παρουσιάστηκε ένα πρόβλημα με το δίκτυο</translation>
@@ -471,17 +459,9 @@
         <source>Authorisation expires</source>
         <translation>Η εξουσιοδότηση λήγει</translation>
     </message>
-    <message id="orn-authorisation-expires-body">
-        <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>Η εξουσιοδότηση του OpenRepos λήγει. Κάντε κλικ για ανανέωση.</translation>
-    </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
         <translation>Η εξουσιοδότηση έληξε</translation>
-    </message>
-    <message id="orn-authorisation-expired-body">
-        <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>Η εξουσιοδότηση του OpenRepos έληξε. Κάντε κλικ για ανανέωση.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
@@ -557,10 +537,6 @@
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
         <translation>Κάντε κλικ για προβολή των ενημερώσεων</translation>
-    </message>
-    <message id="orn-updates-available-body">
-        <source>Applications updates are available. Click to view details.</source>
-        <translation>Υπάρχουν διαθέσιμες ενημερώσεις εφαρμογών. Κάντε κλικ για την προβολή λεπτομερειών.</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>
@@ -1061,6 +1037,10 @@
     </message>
     <message id="orn-package-updated">
         <source>Package %0 was successfully updated</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-app-description2">
+        <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
