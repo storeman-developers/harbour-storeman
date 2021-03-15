@@ -30,7 +30,7 @@ public:
     void refreshCache(bool force = false);    
     void getUpdates();
 
-    Q_PROPERTY(uint Role READ role)
+    Q_PROPERTY(uint Role READ role CONSTANT)
     uint role() const {
         return property("Role").toUInt();
     }

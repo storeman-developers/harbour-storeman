@@ -38,7 +38,7 @@ CoverBackground {
             : Theme.highlightDimmerColor
         horizontalAlignment: Text.AlignHCenter
         font.pixelSize: Theme.fontSizeLarge
-        text: "Storeman"
+        text: applicationDisplayName
     }
 
     Label {

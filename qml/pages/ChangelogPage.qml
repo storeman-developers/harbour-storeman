@@ -1,7 +1,10 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import "../components"
 
 Page {
+    property string appName
+    property string appIconSource
     property alias changelog: label.text
 
     allowedOrientations: defaultAllowedOrientations
@@ -14,8 +17,11 @@ Page {
             id: content
             width: parent.width
 
-            PageHeader {
+            FancyPageHeader {
+                id: header
                 title: qsTrId("orn-changelog")
+                description: appName
+                iconSource: appIconSource
             }
 
             Label {

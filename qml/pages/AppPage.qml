@@ -129,7 +129,9 @@ Page {
                         Qt.openUrlExternally(parts[2])
                     } else {
                         pageStack.push(Qt.resolvedUrl("ChangelogPage.qml"), {
-                                            changelog: app.changelog
+                                           appName: app.title,
+                                           appIconSource: app.iconSource,
+                                           changelog: app.changelog
                                        })
                     }
                 }
@@ -145,8 +147,9 @@ Page {
                     pageStack.push(Qt.resolvedUrl("CommentsPage.qml"), {
                                        commentsModel: commentsModel,
                                        appId: app.appId,
+                                       appName: app.title,
+                                       appIconSource: app.iconSource,
                                        userId: app.userId,
-                                       userName: app.userName,
                                        hasComments: _commentsCount > 0
                                    })
                 }

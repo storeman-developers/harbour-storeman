@@ -57,7 +57,7 @@ Page {
                     //% "Search on OpenRepos.net"
                     text: qsTrId("orn-search-on-openrepos")
                     onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
-                                              { initialSearch: packageTitle })
+                                              { initialSearch: packageTitleUnlocalized })
                 }
 
                 MenuItem {
@@ -145,12 +145,7 @@ Page {
                 enabled: networkManager.connected && _operations && _operations.length === 0
                 //% "Update all"
                 text: qsTrId("orn-update-all")
-                onClicked: {
-                    var updates = OrnPm.updatablePackages()
-                    for (var i = 0; i < updates.length; ++i) {
-                        OrnPm.updatePackage(updates[i])
-                    }
-                }
+                onClicked: _updateAll()
             }
 
             MenuStatusLabel { }

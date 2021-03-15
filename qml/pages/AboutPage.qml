@@ -33,7 +33,7 @@ Page {
             Label {
                 anchors.horizontalCenter: parent.horizontalCenter
                 color: Theme.highlightColor
-                text: "Storeman " + Qt.application.version
+                text: applicationDisplayName + " " + Qt.application.version
             }
 
             Label {
@@ -49,15 +49,24 @@ Page {
                 font.pixelSize: Theme.fontSizeSmall
                 wrapMode: Text.WordWrap
                 horizontalAlignment: Qt.AlignHCenter
-                //% "Unofficial native OpenRepos.net client for Sailfish&nbsp;OS"
-                text: qsTrId("orn-app-description") + "<br />" +
-                //% "This is an open source software which is distributed under the terms of the<br /><a href='%0'>MIT License</a>"
-                      qsTrId("orn-app-licensing").arg("https://github.com/mentaljam/harbour-storeman/blob/master/LICENSE")
+                //% "<p>Native OpenRepos.net client for Sailfish&nbsp;OS</p>"
+                //% "<p>This is an open source software which is distributed under the terms of the <a href='%1'>MIT&nbsp;License</a></p>"
+                //% "<p>You can report an issue on OpenRepos.net or GitHub (use the buttons below)</p>"
+                text: qsTrId("orn-app-description2").arg("https://github.com/mentaljam/harbour-storeman/blob/master/LICENSE")
                 onLinkActivated: Qt.openUrlExternally(link)
             }
 
             ButtonLayout {
                 width: parent.width
+
+                Button {
+                    text: "OpenRepos.net"
+                    onClicked: {
+                        pageStack.push(Qt.resolvedUrl("AppPage.qml"), {
+                            appId: 10056
+                        })
+                    }
+                }
 
                 Button {
                     text: qsTrId("orn-development")
@@ -67,12 +76,6 @@ Page {
                 Button {
                     text: qsTrId("orn-translations")
                     onClicked: pageStack.push(Qt.resolvedUrl("TranslationsPage.qml"))
-                }
-
-                Button {
-                    //% "Report an Issue"
-                    text: qsTrId("orn-report")
-                    onClicked: Qt.openUrlExternally("https://github.com/mentaljam/harbour-storeman/issues/new")
                 }
 
                 Button {

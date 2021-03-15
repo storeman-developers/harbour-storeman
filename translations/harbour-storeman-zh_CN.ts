@@ -323,18 +323,6 @@
         <source>Reviewers</source>
         <translation>审阅者</translation>
     </message>
-    <message id="orn-app-description">
-        <source>Unofficial native OpenRepos.net client for Sailfish&amp;nbsp;OS</source>
-        <translation>非官方原生openrepos.net旗鱼系统客户端</translation>
-    </message>
-    <message id="orn-report">
-        <source>Report an Issue</source>
-        <translation>报告问题</translation>
-    </message>
-    <message id="orn-app-licensing">
-        <source>This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;</source>
-        <translation>这是一个在&lt;br /&gt;&lt;a href=&apos;%0&apos;&gt;MIT License&lt;/a&gt;下分发的开源软件</translation>
-    </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
         <translation>出现一个网络错误</translation>
@@ -469,17 +457,9 @@
         <source>Authorisation expires</source>
         <translation>授权已失效</translation>
     </message>
-    <message id="orn-authorisation-expires-body">
-        <source>The OpenRepos authorisation expires. Click to reauthorise.</source>
-        <translation>OpenRepos授权已失效，请再次授权</translation>
-    </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
         <translation>授权已失效 </translation>
-    </message>
-    <message id="orn-authorisation-expired-body">
-        <source>The OpenRepos authorisation has expired. Click to reauthorise.</source>
-        <translation>OpenRepos 授权已失效，点击再次授权</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
@@ -555,10 +535,6 @@
     <message id="orn-updates-available-preview">
         <source>Click to view updates</source>
         <translation>点击查看更新</translation>
-    </message>
-    <message id="orn-updates-available-body">
-        <source>Applications updates are available. Click to view details.</source>
-        <translation>应用有可供更新，点击查看详情</translation>
     </message>
     <message id="orn-view-details">
         <source>Click to view details</source>
@@ -1056,6 +1032,10 @@
     </message>
     <message id="orn-package-updated">
         <source>Package %0 was successfully updated</source>
+        <translation>包 %0 已成功更新</translation>
+    </message>
+    <message id="orn-app-description2">
+        <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

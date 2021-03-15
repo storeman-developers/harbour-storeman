@@ -4,6 +4,8 @@
 #include <QTimer>
 #include <QDebug>
 
+#include <utility>
+
 OrnRepoModel::OrnRepoModel(QObject *parent)
     : QAbstractListModel(parent)
 {
@@ -36,20 +38,14 @@ void OrnRepoModel::reset()
     mData.clear();
 
     auto repos = OrnPm::instance()->repoList();
-    auto size = repos.size();
-    int enabledRepos = 0;
-    if (size)
-    {
-        mData.append(repos);
-        for (const auto &repo : repos)
-        {
-            enabledRepos += repo.enabled;
-        }
-    }
+    const auto enabled = std::count_if(repos.cbegin(), repos.cend(), [](const auto &r) {
+        return r.enabled;
+    });
+    mData.append(repos);
 
-    if (mEnabledRepos != enabledRepos)
+    if (mEnabledRepos != enabled)
     {
-        mEnabledRepos = enabledRepos;
+        mEnabledRepos = enabled;
         emit this->enabledReposChanged();
     }
 
