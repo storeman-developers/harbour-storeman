@@ -1,3 +1,15 @@
+* Mon Mar 15 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.4
+- Add configuration for the My backup utility
+- Search installed packages by unlocalized name
+- Add "Update all" action to the updates notification
+- Better notifications
+- Use fancy headers for the changelog and comments pages
+- AboutPage.qml: Replace the link to GitHub issues with the in-app link to the OpenRepos.net page
+- AboutPage.qml: Remove the "unofficial" word from the app description
+- AboutPage.qml: Add a note about reporting issues
+- Add Estonian (thanks to Priit Jõerüüt)
+- Update other translations and translator model
+
 * Sat Nov 28 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.3
  - Add Tatar (thanks to Rustem Abzalov) and update other translations
  - Fix notifications on repo modification
