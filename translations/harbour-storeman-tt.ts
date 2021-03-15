@@ -323,11 +323,6 @@
         <source>Reviewers</source>
         <translation>Корректорлар</translation>
     </message>
-    <message id="orn-app-description">
-        <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
-        <oldsource>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%1&apos;&gt;MIT License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub&lt;br /&gt;(use the buttons below)&lt;/p&gt;</oldsource>
-        <translation type="unfinished">Sailfish&amp;nbsp;OS өчен официаль булмаган OpenRepos.net клиенты</translation>
-    </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
         <translation>Челтәр хатасы килеп чыкты</translation>
@@ -1040,6 +1035,10 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     <message id="orn-package-updated">
         <source>Package %0 was successfully updated</source>
         <translation>%0 пакеты уңышлы яңартылды</translation>
+    </message>
+    <message id="orn-app-description2">
+        <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

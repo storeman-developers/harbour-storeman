@@ -323,11 +323,6 @@
         <source>Reviewers</source>
         <translation>Корректоры</translation>
     </message>
-    <message id="orn-app-description">
-        <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
-        <oldsource>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the&lt;br /&gt;&lt;a href=&apos;%1&apos;&gt;MIT License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub&lt;br /&gt;(use the buttons below)&lt;/p&gt;</oldsource>
-        <translation>&lt;p&gt;Клиент OpenRepos.net для Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;Исходный код Storeman распространяется в соответствии с условиями &lt;a href=&quot;%1&quot;&gt;лицензии&amp;nbsp;MIT&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Вы можете сообщить об ошибке на OpenRepos.net или GitHub&lt;br /&gt;(используйте кнопки ниже)&lt;/p&gt;</translation>
-    </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
         <translation>Произошла сетевая ошибка</translation>
@@ -1050,6 +1045,10 @@ Storeman не передает ваш пароль третьим лицам.</t
     <message id="orn-package-updated">
         <source>Package %0 was successfully updated</source>
         <translation>Пакет %0 успешно обновлен</translation>
+    </message>
+    <message id="orn-app-description2">
+        <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Клиент OpenRepos.net для Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;Исходный код Storeman распространяется в соответствии с условиями &lt;a href=&quot;%1&quot;&gt;лицензии&amp;nbsp;MIT&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Вы можете сообщить об ошибке на OpenRepos.net или GitHub&lt;br /&gt;(используйте кнопки ниже)&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>
