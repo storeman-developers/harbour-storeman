@@ -6,8 +6,9 @@ import "../components"
 Page {
     property alias commentField: commentsList.headerItem
     property int appId
+    property string appName
+    property string appIconSource
     property int userId
-    property string userName
     property bool hasComments: false
     property bool _hintMode: Storeman.showHint(Storeman.CommentDelegateHint)
     property OrnCommentsModel commentsModel: null
@@ -77,22 +78,31 @@ Page {
             MenuStatusLabel { }
         }
 
-        PageHeader {
+        FancyPageHeader {
             id: pageHeader
-            // Hide header when typing comment
-            height: page.isLandscape && commentField.item.isActive ?
-                        0.0 :
-                        Math.max(_preferredHeight,
-                                 _titleItem.y + _titleItem.height +
-                                 (_descriptionLabel ? _descriptionLabel.height : 0.0) +
-                                 Theme.paddingMedium)
-            opacity: height > 0.0 ? 1.0 : 0.0
-            visible: opacity
             //% "Comments"
             title: qsTrId("orn-comments")
-            description: userName
+            description: appName
+            iconSource: appIconSource
 
-            Behavior on opacity { NumberAnimation { } }
+            // Hide header when typing comment
+            states: State {
+                name: "hideOnTyping"
+                when: page.isLandscape && commentField.item.isActive
+                PropertyChanges {
+                    target: pageHeader
+                    explicit: true
+                    height: 0
+                    opacity: 0.0
+                    visible: false
+                }
+            }
+
+            transitions: Transition {
+                NumberAnimation {
+                    properties: "height,opacity"
+                }
+            }
         }
 
         BusyIndicator {
