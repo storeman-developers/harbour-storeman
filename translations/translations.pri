@@ -5,6 +5,7 @@ TRANSLATIONS += \
     translations/harbour-storeman-de_DE.ts \
     translations/harbour-storeman-el.ts \
     translations/harbour-storeman-es.ts \
+    translations/harbour-storeman-et.ts \
     translations/harbour-storeman-fi_FI.ts \
     translations/harbour-storeman-fr.ts \
     translations/harbour-storeman-hu_HU.ts \
