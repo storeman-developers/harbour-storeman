@@ -213,6 +213,7 @@ ApplicationWindow
 
     Notification {
         id: updatesNotification
+        category: "x-storeman.updates"
         appName: applicationDisplayName
         appIcon: applicationIcon
         //% "Updates available"
