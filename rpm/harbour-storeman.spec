@@ -1,6 +1,6 @@
 Name:           harbour-storeman
 Summary:        OpenRepos Client for Sailfish OS
-Version:        0.2.4
+Version:        0.2.5
 Release:        master
 Group:          Qt/Qt
 License:        MIT
