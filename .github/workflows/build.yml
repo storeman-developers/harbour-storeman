@@ -27,24 +27,6 @@ jobs:
         ARCH: i486
       run: bash ./scripts/gha-build.sh
 
-    - name: Build 3.4.0.24-armv7hl
-      env:
-        RELEASE: 3.4.0.24
-        ARCH: armv7hl
-      run: bash ./scripts/gha-build.sh
-
-    - name: Build 3.4.0.24-aarch64
-      env:
-        RELEASE: 3.4.0.24
-        ARCH: aarch64
-      run: bash ./scripts/gha-build.sh
-
-    - name: Build 3.4.0.24-i486
-      env:
-        RELEASE: 3.4.0.24
-        ARCH: i486
-      run: bash ./scripts/gha-build.sh
-
     - name: Build 4.0.1.45-armv7hl
       env:
         RELEASE: 4.0.1.45
