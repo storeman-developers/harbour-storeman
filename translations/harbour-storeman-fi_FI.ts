@@ -1017,29 +1017,29 @@
     </message>
     <message id="orn-share-link">
         <source>Share link</source>
-        <translation type="unfinished"></translation>
+        <translation>Jaa linkki</translation>
     </message>
     <message id="orn-repository">
         <source>Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Pakettilähde</translation>
     </message>
     <message id="orn-myrepository">
         <source>My repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Oma pakettilähde</translation>
     </message>
     <message id="orn-donate-with">
         <source>Donate with %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Lahjoita %1</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
-        <translation type="unfinished">Päivityksiä saatavilla</translation>
+        <translation>Päivityksiä saatavana</translation>
     </message>
     <message id="orn-package-updated">
         <source>Package %0 was successfully updated</source>
-        <translation type="unfinished"></translation>
+        <translation>Paketti %0 päivitettiin onnistuneesti</translation>
     </message>
-    <message id="orn-app-description2">
+    <message id="orn-app-description-full">
         <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
