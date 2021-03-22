@@ -410,7 +410,7 @@
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not send your password to third-parties.</source>
-        <translation type="unfinished"></translation>
+        <translation>Accedi a OpenRepos.net per commentare e rispondere agli altri commenti. &lt;br /&gt;&lt;br /&gt; Storeman non invierà la tua password a terzi.</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
@@ -989,57 +989,57 @@
     </message>
     <message id="orn-categories-filter">
         <source>Categories filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtro categorie</translation>
     </message>
     <message id="orn-categories-filter-descr">
         <source>Select which categories to show</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona quale categoria visualizzare</translation>
     </message>
     <message id="orn-pmstate-refreshingcache">
         <source>Refreshing of cache</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiorna la cache</translation>
     </message>
     <message id="orn-refresh-cache-switch">
         <source>Refresh cache after system upgrade</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiorna la cache dopo un aggiornamento del sistema</translation>
     </message>
     <message id="orn-refresh-cache-switch-descr">
         <source>Force refreshing of cache of all repositories after system upgrade</source>
-        <translation type="unfinished"></translation>
+        <translation>Forza l&apos;aggiornamento della cache di tutte le repository dopo un aggiornamento di sistema.</translation>
     </message>
     <message id="orn-save-password">
         <source>Save password</source>
-        <translation type="unfinished"></translation>
+        <translation>Salva la password</translation>
     </message>
     <message id="orn-save-password-help">
         <source>Save password to the encrypted device storage to perform automatic re-login.</source>
-        <translation type="unfinished"></translation>
+        <translation>Salva la password nella memoria crittografata per permettere l&apos;accesso automatico.</translation>
     </message>
     <message id="orn-share-link">
         <source>Share link</source>
-        <translation type="unfinished"></translation>
+        <translation>Condividi link</translation>
     </message>
     <message id="orn-repository">
         <source>Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Repository</translation>
     </message>
     <message id="orn-myrepository">
         <source>My repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Le mie repository</translation>
     </message>
     <message id="orn-donate-with">
         <source>Donate with %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Dona con %1</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
-        <translation type="unfinished">Aggiornamenti disponibili</translation>
+        <translation>Aggiornamenti disponibili</translation>
     </message>
     <message id="orn-package-updated">
         <source>Package %0 was successfully updated</source>
-        <translation type="unfinished"></translation>
+        <translation>%0 è stato aggiornato correttamente</translation>
     </message>
-    <message id="orn-app-description2">
+    <message id="orn-app-description-full">
         <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>

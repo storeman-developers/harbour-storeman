@@ -52,7 +52,7 @@ Page {
                 //% "<p>Native OpenRepos.net client for Sailfish&nbsp;OS</p>"
                 //% "<p>This is an open source software which is distributed under the terms of the <a href='%1'>MIT&nbsp;License</a></p>"
                 //% "<p>You can report an issue on OpenRepos.net or GitHub (use the buttons below)</p>"
-                text: qsTrId("orn-app-description2").arg("https://github.com/mentaljam/harbour-storeman/blob/master/LICENSE")
+                text: qsTrId("orn-app-description-full").arg("https://github.com/mentaljam/harbour-storeman/blob/master/LICENSE")
                 onLinkActivated: Qt.openUrlExternally(link)
             }
 

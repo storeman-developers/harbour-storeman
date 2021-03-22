@@ -811,21 +811,21 @@
     <message id="orn-dcm-user2">
         <source>Deep Thought</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Deep Thought</translation>
     </message>
     <message id="orn-dcm-user1">
         <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Väike valge hiir</translation>
     </message>
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Mis on vastus Elu, Universumi ja Kõige Suuremale Küsimusele?</translation>
     </message>
     <message id="orn-hint-commentdelegate-created">
         <source>7.5 million years ago</source>
-        <translation type="unfinished"></translation>
+        <translation>7,5 miljonit aastat tagasi</translation>
     </message>
     <message id="orn-hint-commentdelegate">
         <source>Tap to navigate to the replied comment</source>
@@ -1039,7 +1039,7 @@
         <source>Package %0 was successfully updated</source>
         <translation>%0 rakenduse uuendamine õnnestus</translation>
     </message>
-    <message id="orn-app-description2">
+    <message id="orn-app-description-full">
         <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
