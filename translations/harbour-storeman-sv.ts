@@ -1041,7 +1041,7 @@
     </message>
     <message id="orn-app-description-full">
         <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;OpenRepos-klient för Sailfish&amp;nbsp;OS.&lt;/p&gt;&lt;p&gt;Detta är öppen källkodsmjukvara som distribueras under villkoren för &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License.&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Du kan rapportera problem på OpenRepos.net eller GitHub (använd knapparna nedan).&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>

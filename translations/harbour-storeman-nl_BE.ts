@@ -13,7 +13,7 @@
     </message>
     <message id="orn-refresh">
         <source>Refresh</source>
-        <translation>Vernieuwen</translation>
+        <translation>Vernieven</translation>
     </message>
     <message id="orn-disable">
         <source>Disable</source>
@@ -49,11 +49,11 @@
     </message>
     <message id="orn-this-week">
         <source>This week</source>
-        <translation>Deze week</translation>
+        <translation>Van de week</translation>
     </message>
     <message id="orn-this-month">
         <source>This month</source>
-        <translation>Deze maand</translation>
+        <translation>Van de maand</translation>
     </message>
     <message id="orn-month-format">
         <source>%0 %1</source>
@@ -131,7 +131,7 @@
     </message>
     <message id="orn-author-apps">
         <source>More by %0</source>
-        <translation>Oòk van %0</translation>
+        <translation>Oôk van %0</translation>
     </message>
     <message id="orn-cat-coding-competition">
         <source>Coding Competition</source>
@@ -275,7 +275,7 @@
     </message>
     <message id="orn-version-repo-disabled">
         <source>Enable the repository first</source>
-        <translation>Schakelt eèrst de pakketbron in</translation>
+        <translation>Schakelt eêrst de pakketbron in</translation>
     </message>
     <message id="orn-search">
         <source>Search</source>
@@ -301,7 +301,7 @@
     </message>
     <message id="orn-searchpage-placeholder-default-hint">
         <source>Type some keywords in the field above</source>
-        <translation>Voert hierboven enkele sleutelwoorden in</translation>
+        <translation>Voert hierboven wa sleutelwoorden in</translation>
     </message>
     <message id="orn-about">
         <source>About Storeman</source>
@@ -329,7 +329,7 @@
     </message>
     <message id="orn-pull-refresh">
         <source>Pull down to refresh</source>
-        <translation>Trekt omleêg voôr te vernieuwen</translation>
+        <translation>Trekt naar omleêg voôr te vernieven</translation>
     </message>
     <message id="orn-development">
         <source>Development</source>
@@ -354,15 +354,15 @@
     <message id="orn-mins-ago" numerus="yes">
         <source>%n minute(s) ago</source>
         <translation>
-            <numerusform>Êne minuut geleden</numerusform>
-            <numerusform>%n minuten geleden</numerusform>
+            <numerusform>Over êne minuut</numerusform>
+            <numerusform>Over %n minuten</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%n hour(s) ago</source>
         <translation>
-            <numerusform>Eên uur geleden</numerusform>
-            <numerusform>%n uur geleden</numerusform>
+            <numerusform>Over eên uur</numerusform>
+            <numerusform>Over %n uur</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
@@ -513,7 +513,7 @@
     </message>
     <message id="orn-refresh-cache">
         <source>Refresh cache</source>
-        <translation>Cache vernieuwen</translation>
+        <translation>Cache vernieven</translation>
     </message>
     <message id="orn-tag-underscore">
         <source>U</source>
@@ -565,7 +565,7 @@
     </message>
     <message id="orn-backup-error-directory">
         <source>Could not create directory</source>
-        <translation>Kost map ni aanmaken</translation>
+        <translation>Kost de farde ni aanmaken</translation>
     </message>
     <message id="orn-restore-title">
         <source>Restore from a file</source>
@@ -577,7 +577,7 @@
     </message>
     <message id="orn-restore-hint">
         <source>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</source>
-        <translation>Herstelt OpenRepos-pakketbronnen en geïnstalleerde apps uit ’t geselecteerd bestand. Deze handeling heeft gênen invloed op uw huidige pakketbronnen, en ga’ geïnstalleerde apps ni’ verwijderen.</translation>
+        <translation>Herstelt OpenRepos-pakketbronnen en geïnstalleerde apps uit ’t geselecteerd bestand. Deze handeling hee’ gênen invloed op uw huidige pakketbronnen, en ga’ geïnstalleerde apps ni’ verwijderen.</translation>
     </message>
     <message id="orn-created">
         <source>Created</source>
@@ -601,7 +601,7 @@
     </message>
     <message id="orn-refreshing-repos">
         <source>Refreshing repositories</source>
-        <translation>Pakketbronnen worden vernieuwd</translation>
+        <translation>Pakketbronnen worden verniefd</translation>
     </message>
     <message id="orn-searching-packages">
         <source>Searching packages</source>
@@ -637,7 +637,7 @@
     </message>
     <message id="orn-backup-hint">
         <source>&lt;h2&gt;Backup to a file&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.&lt;/p&gt;</source>
-        <translation>&lt;h2&gt;Back-up naar een bestand&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Back-up laat u toe van uw huidige OpenRepos-pakketbronnen op te slaan, evenals u geïnstalleerde apps en bladwijzers, voôr ze later t’herstellen (bijvoorbeeld nada’ g’u toestel hed teruggebracht naar de fabrieksinstellingen). Nen back-up is e lokaal bestand da wordt opgeslagen in de map &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Past op!&lt;/b&gt; Kopieert u back-ups handmatig naar een veilige locatie, gelijk u SD-kaart, een extern toestel of ne cloudopslagdienst, voôraleêr da’ g’u toestel terugbrengt naar de fabrieksinstellingen.&lt;/p&gt;</translation>
+        <translation>&lt;h2&gt;Back-up naar een bestand&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Back-up laat u toe van uw huidige OpenRepos-pakketbronnen op te slaan, evenals u geïnstalleerde apps en bladwijzers, voôr ze later t’herstellen (bijvoorbeeld nada’ g’u toestel hed teruggebracht naar de fabrieksinstellingen). Nen back-up is e lokaal bestand da wordt opgeslagen in de farde &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Past op!&lt;/b&gt; Kopieert u back-ups handmatig naar een veilige locatie, gelijk u SD-kaart, een extern toestel of ne cloudopslagdienst, voôraleêr da’ g’u toestel terugbrengt naar de fabrieksinstellingen.&lt;/p&gt;</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -661,7 +661,7 @@
     </message>
     <message id="orn-pmstate-refreshingrepo">
         <source>Refreshing %0</source>
-        <translation>%0 wordt vernieuwd</translation>
+        <translation>%0 wordt verniefd</translation>
     </message>
     <message id="orn-pmstate-installingpackage">
         <source>Installing package %0</source>
@@ -727,8 +727,8 @@
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
         <translation>
-            <numerusform>Eên actie wordt uitgevoerd</numerusform>
-            <numerusform>%n acties worden uitgevoerd</numerusform>
+            <numerusform>Der wordt eên actie uitgevoerd</numerusform>
+            <numerusform>Der worden %n acties uitgevoerd</numerusform>
         </translation>
     </message>
     <message id="orn-version-available">
@@ -816,12 +816,12 @@
     <message id="orn-dcm-user1">
         <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>E klei wit muisken</translation>
+        <translation>E klei wit muizeken</translation>
     </message>
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>Wad is ’t antwoord op d’ultieme vraag over ’t Leven, ’t Universum, en Al?</translation>
+        <translation>Wad is ’t antwoord op d’ultieme vraag over ’t Leven, ’t Universum, en Alles?</translation>
     </message>
     <message id="orn-hint-commentdelegate-created">
         <source>7.5 million years ago</source>
@@ -845,7 +845,7 @@
     </message>
     <message id="orn-vote-send">
         <source>Your vote has been sent</source>
-        <translation>U stem heeft verzonden geweest</translation>
+        <translation>U stem hee’ verzonden geweest</translation>
     </message>
     <message id="orn-login2rate">
         <source>Log in to rate the application</source>
@@ -893,7 +893,7 @@
     </message>
     <message id="orn-repo-suggestion">
         <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
-        <translation>&lt;h3&gt;Schakelt de Storeman-pakketbron in&lt;/h3&gt;&lt;p&gt;Voôr de laatste nieuwe versies van Storeman te kunnen ontvangen, moete d’OpenRepos-pakketbron dervan inschakelen, just gelijk voôr iederen anderen app.&lt;/p&gt;&lt;p&gt;Wilde da nu doen?&lt;/p&gt;</translation>
+        <translation>&lt;h3&gt;Schakelt de Storeman-pakketbron in&lt;/h3&gt;&lt;p&gt;Voôr de laatste nieve versies van Storeman te kunnen ontvangen, moete d’OpenRepos-pakketbron dervan inschakelen, just gelijk voôr iederen anderen app.&lt;/p&gt;&lt;p&gt;Wilde da nu doen?&lt;/p&gt;</translation>
     </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
@@ -909,7 +909,7 @@
     </message>
     <message id="orn-smart-check-descr">
         <source>Use the OpenRepos.net API to determine if there are new updates</source>
-        <translation>Gebruikt den OpenRepos.net-API voôr te bepalen of da’ der nieuwe updates beschikbaar zijn</translation>
+        <translation>Gebruikt den OpenRepos.net-API voôr te bepalen of da’ der nieve updates beschikbaar zijn</translation>
     </message>
     <message id="orn-reload">
         <source>Reload</source>
@@ -993,19 +993,19 @@
     </message>
     <message id="orn-categories-filter-descr">
         <source>Select which categories to show</source>
-        <translation>Kiest welke categorieën da’ ge wilt zien</translation>
+        <translation>Kiest wa’ voôr categorieën da’ ge wilt zien</translation>
     </message>
     <message id="orn-pmstate-refreshingcache">
         <source>Refreshing of cache</source>
-        <translation>Vernieuwen van cache</translation>
+        <translation>Vernieven van cache</translation>
     </message>
     <message id="orn-refresh-cache-switch">
         <source>Refresh cache after system upgrade</source>
-        <translation>Cache vernieuwen achter systeemupdate</translation>
+        <translation>Cache vernieven achter systeemupdate</translation>
     </message>
     <message id="orn-refresh-cache-switch-descr">
         <source>Force refreshing of cache of all repositories after system upgrade</source>
-        <translation>Cache van alle pakketbronnen gedwongen vernieuwen achter systeemupdate</translation>
+        <translation>Cache van alle pakketbronnen gedwongen vernieven achter systeemupdate</translation>
     </message>
     <message id="orn-save-password">
         <source>Save password</source>
@@ -1029,19 +1029,19 @@
     </message>
     <message id="orn-donate-with">
         <source>Donate with %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Doneren me %1</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
-        <translation type="unfinished">Updates beschikbaar</translation>
+        <translation>Updates beschikbaar</translation>
     </message>
     <message id="orn-package-updated">
         <source>Package %0 was successfully updated</source>
-        <translation type="unfinished"></translation>
+        <translation>Pakket %0 is bijgewèrkt</translation>
     </message>
     <message id="orn-app-description-full">
         <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;OpenRepos.net-cliënt voôr Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;Storeman is vrije software, uitgegeven onder de voôrwaarden van de &lt;a href=&apos;%1&apos;&gt;MIT-licentie&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Ge kunt problemen melden op OpenRepos.net of op GitHub (gebruikt daarvoôr de knopkes hieronder)&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>
