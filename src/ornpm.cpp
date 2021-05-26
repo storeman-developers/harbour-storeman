@@ -132,16 +132,19 @@ void OrnPmPrivate::initialise()
     repo_add_solv(srepo, sfile, 0);
     fclose(sfile);
 
+    const auto installed = QString::fromLatin1("installed");
     for (int i = 0; i < spool->nsolvables; ++i)
     {
         auto s = &spool->solvables[i];
         auto name = QString::fromLatin1(solvable_lookup_str(s, SOLVABLE_NAME));
         if (name.size() > 0)
         {
-            auto id = QStringLiteral("%1;%2;%3;installed").arg(
-                        name,
-                        QLatin1String{solvable_lookup_str(s, SOLVABLE_EVR)},
-                        QLatin1String{solvable_lookup_str(s, SOLVABLE_ARCH)});
+            const auto id = QStringList{
+                name,
+                QString::fromLatin1(solvable_lookup_str(s, SOLVABLE_EVR)),
+                QString::fromLatin1(solvable_lookup_str(s, SOLVABLE_ARCH)),
+                installed,
+            }.join(QChar{';'});
             installedPackages.insert(name, id);
         }
     }
