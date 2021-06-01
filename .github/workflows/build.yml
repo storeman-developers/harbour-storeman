@@ -27,23 +27,23 @@ jobs:
         ARCH: i486
       run: bash ./scripts/gha-build.sh
 
-    - name: Build 4.0.1.45-armv7hl
+    - name: Build 4.1.0.23-armv7hl
       env:
-        RELEASE: 4.0.1.45
+        RELEASE: 4.1.0.23
         LATEST_RELEASE: 1
         ARCH: armv7hl
       run: bash ./scripts/gha-build.sh
 
-    - name: Build 4.0.1.45-aarch64
+    - name: Build 4.1.0.23-aarch64
       env:
-        RELEASE: 4.0.1.45
+        RELEASE: 4.1.0.23
         LATEST_RELEASE: 1
         ARCH: aarch64
       run: bash ./scripts/gha-build.sh
 
-    - name: Build 4.0.1.45-i486
+    - name: Build 4.1.0.23-i486
       env:
-        RELEASE: 4.0.1.45
+        RELEASE: 4.1.0.23
         LATEST_RELEASE: 1
         ARCH: i486
       run: bash ./scripts/gha-build.sh
