@@ -133,6 +133,7 @@ OTHER_FILES += \
     qml/pages/RepoSuggestionPage.qml \
     qml/pages/CategoriesFilterPage.qml \
     qml/pages/SharePage.qml \
+    qml/pages/UnusedReposDialog.qml \
     qml/components/AppListDelegate.qml \
     qml/components/RatingBox.qml \
     qml/components/IconLabel.qml \

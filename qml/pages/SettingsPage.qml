@@ -16,6 +16,7 @@ Page {
             Storeman.updateInterval = checkUpdatesIntervalButton.interval
             Storeman.checkForUpdates = checkForUpdatesSwitch.checked
             Storeman.refreshOnSystemUpgrade = resfreshCacheSwitch.checked
+            Storeman.searchUnusedRepos = searchUnusedSwitch.checked
         }
     }
 
@@ -76,6 +77,10 @@ Page {
                 onClicked: pageStack.push(Qt.resolvedUrl("CategoriesFilterPage.qml"))
             }
 
+            SectionHeader {
+                text: qsTrId("orn-repositories")
+            }
+
             TextSwitch {
                 id: resfreshCacheSwitch
                 //% "Refresh cache after system upgrade"
@@ -83,6 +88,15 @@ Page {
                 //% "Force refreshing of cache of all repositories after system upgrade"
                 description: qsTrId("orn-refresh-cache-switch-descr")
                 checked: Storeman.refreshOnSystemUpgrade
+            }
+
+            TextSwitch {
+                id: searchUnusedSwitch
+                //% "Search for unused repositories"
+                text: qsTrId("orn-unused-repos-switch")
+                //% "Search for unused repositories after removing packages.
+                description: qsTrId("orn-unused-repos-switch-descr")
+                checked: Storeman.searchUnusedRepos
             }
 
             SectionHeader {

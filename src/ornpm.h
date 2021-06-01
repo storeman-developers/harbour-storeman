@@ -162,8 +162,12 @@ public slots:
     void refreshCache(bool force = false);
 
     // Get ORN repositories
+signals:
+    void unusedRepos(const QStringList &repos);
 public:
     QList<OrnRepo> repoList() const;
+public slots:
+    void getUnusedRepos();
 
     // Get installed packages
 signals:

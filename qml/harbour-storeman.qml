@@ -8,12 +8,15 @@ import "pages"
 
 ApplicationWindow
 {
+    property bool manualUnusedCheck
     // TODO: Use Qt.application.displayName (available since Qt 5.9)
     readonly property string applicationDisplayName: "Storeman"
     readonly property string applicationIcon: Qt.application.name
     readonly property string dbusService: "harbour.storeman.service"
     readonly property string dbusPath: "/harbour/storeman/service"
     readonly property string dbusInterface: dbusService
+    //% "Show details"
+    readonly property string _showDetailsId: QT_TRID_NOOP("orn-show-details")
     property bool _showUpdatesNotification: true
     property string _processingLink
     readonly property var _locale: Qt.locale()
@@ -116,6 +119,10 @@ ApplicationWindow
         }
     }
 
+    function removeAuthorRepo(author) {
+        OrnPm.modifyRepo("openrepos-" + author, OrnPm.RemoveRepo)
+    }
+
     initialPage: Component { MainPage { } }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: defaultAllowedOrientations
@@ -172,6 +179,10 @@ ApplicationWindow
         function updateAll() {
             _updateAll()
         }
+
+        function removeRepos(repos) {
+            repos.forEach(removeAuthorRepo)
+        }
     }
 
     Notification {
@@ -218,8 +229,7 @@ ApplicationWindow
         appIcon: applicationIcon
         //% "Updates available"
         summary: qsTrId("orn-updates-available-summary")
-        //% "Click to view updates"
-        body: qsTrId("orn-updates-available-preview")
+        body: qsTrId(_showDetailsId)
         remoteActions: [ {
                 name: "default",
                 service: dbusService,
@@ -243,8 +253,7 @@ ApplicationWindow
         appIcon: applicationIcon
         //% "An error occured"
         summary: qsTrId("orn-error")
-        //% "Click to view details"
-        previewBody: qsTrId("orn-view-details")
+        previewBody: qsTrId(_showDetailsId)
         remoteActions: [ {
                 name: "default",
                 service: dbusService,
@@ -252,6 +261,34 @@ ApplicationWindow
                 iface: dbusInterface,
                 method: "openPage",
                 arguments: [ "ErrorPage", { message: body } ]
+            } ]
+    }
+
+    Notification {
+        property var repos
+
+        id: unusedReposNotification
+        appName: applicationDisplayName
+        appIcon: applicationIcon
+        //% "Unused repositories found"
+        summary: qsTrId("orn-unused-repos-found")
+        previewBody: qsTrId(_showDetailsId)
+        remoteActions: [ {
+                name: "default",
+                service: dbusService,
+                path: dbusPath,
+                iface: dbusInterface,
+                method: "openPage",
+                arguments: [ "UnusedReposDialog", { repos: repos } ]
+            }, {
+                name: "remove-all",
+                //% "Remove all"
+                displayName: qsTrId("orn-remove-all"),
+                service: dbusService,
+                path: dbusPath,
+                iface: dbusInterface,
+                method: "removeRepos",
+                arguments: [ repos ]
             } ]
     }
 
@@ -354,8 +391,30 @@ ApplicationWindow
         //% "Package %0 was successfully updated"
         onPackageUpdated: notification.show(qsTrId("orn-package-updated").arg(packageName))
 
-        //% "Package %0 was successfully removed"
-        onPackageRemoved: notification.show(qsTrId("orn-package-removed").arg(packageName))
+        onPackageRemoved: {
+            //% "Package %0 was successfully removed"
+            notification.show(qsTrId("orn-package-removed").arg(packageName))
+            if (Storeman.searchUnusedRepos) {
+                OrnPm.getUnusedRepos()
+            }
+        }
+
+        onUnusedRepos: {
+            if (repos.length) {
+                if (manualUnusedCheck) {
+                    pageStack.push(Qt.resolvedUrl("pages/UnusedReposDialog.qml"), {
+                        repos: repos
+                    })
+                } else {
+                    unusedReposNotification.repos = repos
+                    unusedReposNotification.publish()
+                }
+            } else if (manualUnusedCheck) {
+                manualUnusedCheck = false
+                //% "Unused repositories not found"
+                notification.show(qsTrId("orn-no-unused-repos"))
+            }
+        }
 
         onError: {
             switch (code) {
