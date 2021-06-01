@@ -98,11 +98,11 @@
     </message>
     <message id="orn-package-installed">
         <source>Package %0 was successfully installed</source>
-        <translation>%0 rakenduse paigaldamine õnnestus</translation>
+        <translation>Rakenduse %0 paigaldamine õnnestus</translation>
     </message>
     <message id="orn-package-removed">
         <source>Package %0 was successfully removed</source>
-        <translation>%0 rakenduse eemaldamine õnnestus</translation>
+        <translation>Rakenduse %0 eemaldamine õnnestus</translation>
     </message>
     <message id="orn-installed">
         <source>Installed</source>
@@ -297,7 +297,7 @@
     </message>
     <message id="orn-searchpage-placeholder-default">
         <source>Search results will be shown here</source>
-        <translation>Siin kuvame otsingutulemused</translation>
+        <translation>Siin kuvame otsingutulemusi</translation>
     </message>
     <message id="orn-searchpage-placeholder-default-hint">
         <source>Type some keywords in the field above</source>
@@ -534,14 +534,6 @@
         <source>Updates available</source>
         <translation>Uuendused on saadaval</translation>
     </message>
-    <message id="orn-updates-available-preview">
-        <source>Click to view updates</source>
-        <translation>Uuenduste nägemiseks klõpsi</translation>
-    </message>
-    <message id="orn-view-details">
-        <source>Click to view details</source>
-        <translation>Lisateabe nägemiseks klõpsi</translation>
-    </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
         <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
@@ -633,11 +625,11 @@
     </message>
     <message id="orn-backup">
         <source>Backup</source>
-        <translation>Varundus</translation>
+        <translation>Tee varukoopia</translation>
     </message>
     <message id="orn-backup-hint">
         <source>&lt;h2&gt;Backup to a file&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.&lt;/p&gt;</source>
-        <translation>&lt;h2&gt;Varukoopia salvestamine&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Varundamisel saad sa salvestada kasutatavate OpenRepos repositooriumide loendi, paigaldatud rakendused ning järjehoidjad ning vajadusel neid hiljem taastada (näiteks siis, kui peaksid seadme lähtestama). Varundamise tulemus on &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; kausta salvestatud fail.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;NB!&lt;/b&gt;Enne, kui vormindad andmekandja või lähtestad seadme, siis kopeeri varukoopia mujale. Selleks võib olla SD-kaart, muu seade, pilvesalvestusruum või midagi muud sarnast.&lt;/p&gt;</translation>
+        <translation>&lt;h2&gt;Varukoopia salvestamine&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Varundamisel saad sa salvestada kasutatavate OpenRepos repositooriumide loendi, paigaldatud rakendused ning järjehoidjad ning vajadusel neid hiljem taastada (näiteks siis, kui peaksid seadme lähtestama). Varundamise tulemus on &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; kausta salvestatud fail.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;NB! &lt;/b&gt;Enne, kui vormindad andmekandja või lähtestad selle seadme, siis kopeeri varukoopia mujale. Selleks võib olla SD-kaart, muu seade, pilvesalvestusruum või midagi muud sarnast.&lt;/p&gt;</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -953,7 +945,7 @@
     </message>
     <message id="orn-backup-apps">
         <source>Installed applications</source>
-        <translation>Paigaldatud rakendused</translation>
+        <translation>Paigaldatud rakendusi</translation>
     </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
@@ -1037,10 +1029,42 @@
     </message>
     <message id="orn-package-updated">
         <source>Package %0 was successfully updated</source>
-        <translation>%0 rakenduse uuendamine õnnestus</translation>
+        <translation>Rakenduse %0 uuendamine õnnestus</translation>
     </message>
     <message id="orn-app-description-full">
         <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
+        <translation>&lt;p&gt;OpenRepos.net klient Sailfish&amp;nbsp;OS jaoks&lt;/p&gt;&lt;p&gt;Tegemist on vaba tarkvaraga, mida levitatakse &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;Litsentsi&lt;/a&gt;alusel.&lt;/p&gt;&lt;p&gt;Vigadest palun teata kas OpenRepos.net lehel või GitHub&apos;is (vajalikud nupud on allpool olemas).&lt;/p&gt;</translation>
+    </message>
+    <message id="orn-no-unused-repos">
+        <source>Unused repositories not found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-search-unused-repos">
+        <source>Search for unused</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-unused-repos-text">
+        <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-unused-repos-switch">
+        <source>Search for unused repositories</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-unused-repos-switch-descr">
+        <source>Search for unused repositories after removing packages.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-show-details">
+        <source>Show details</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-unused-repos-found">
+        <source>Unused repositories found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-unused-repos">
+        <source>Unused repositories</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

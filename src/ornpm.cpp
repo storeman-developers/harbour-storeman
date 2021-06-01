@@ -132,16 +132,19 @@ void OrnPmPrivate::initialise()
     repo_add_solv(srepo, sfile, 0);
     fclose(sfile);
 
+    const auto installed = QString::fromLatin1("installed");
     for (int i = 0; i < spool->nsolvables; ++i)
     {
         auto s = &spool->solvables[i];
         auto name = QString::fromLatin1(solvable_lookup_str(s, SOLVABLE_NAME));
         if (name.size() > 0)
         {
-            auto id = QStringLiteral("%1;%2;%3;installed").arg(
-                        name,
-                        QLatin1String{solvable_lookup_str(s, SOLVABLE_EVR)},
-                        QLatin1String{solvable_lookup_str(s, SOLVABLE_ARCH)});
+            const auto id = QStringList{
+                name,
+                QString::fromLatin1(solvable_lookup_str(s, SOLVABLE_EVR)),
+                QString::fromLatin1(solvable_lookup_str(s, SOLVABLE_ARCH)),
+                installed,
+            }.join(QChar{';'});
             installedPackages.insert(name, id);
         }
     }
@@ -296,49 +299,30 @@ void OrnPmPrivate::preparePackageVersions(const QString &packageName)
                             OrnConst::installed);
         }
     }
-    repo_free(srepo, 0);
+    repo_empty(srepo, 0);
+    pool_free(spool);
 
-    for (auto it = repos.cbegin(); it != repos.cend(); ++it)
-    {
-        if (it.value())
+    processSolvables(true, [this, &packageName, &versions](const auto alias, auto spool) {
+        for (int i = 0; i < spool->nsolvables; ++i)
         {
-            const auto &alias = it.key();
-            auto spath = solvPathTmpl.arg(alias);
-            srepo = repo_create(spool, "");
-
-            qDebug() << "Reading" << spath;
-            auto sfile = fopen(spath.toUtf8().data(), "r");
-            if (!sfile)
+            auto s = &spool->solvables[i];
+            if (packageName == QLatin1String{solvable_lookup_str(s, SOLVABLE_NAME)})
             {
-                qCritical() << "Could not read" << spath;
-                repo_free(srepo, 0);
-                continue;
-            }
-
-            repo_add_solv(srepo, sfile, 0);
-            fclose(sfile);
-            for (int i = 0; i < spool->nsolvables; ++i)
-            {
-                auto s = &spool->solvables[i];
-                if (packageName == QLatin1String(solvable_lookup_str(s, SOLVABLE_NAME)))
+                const auto arch = QString::fromLatin1(solvable_lookup_str(s, SOLVABLE_ARCH));
+                if (archs.contains(arch))
                 {
-                    auto arch = QString::fromLatin1(solvable_lookup_str(s, SOLVABLE_ARCH));
-                    if (archs.contains(arch))
-                    {
-                        versions << OrnPackageVersion(
-                                        solvable_lookup_num(s, SOLVABLE_DOWNLOADSIZE, 0),
-                                        solvable_lookup_num(s, SOLVABLE_INSTALLSIZE, 0),
-                                        QString::fromLatin1(solvable_lookup_str(s, SOLVABLE_EVR)),
-                                        arch,
-                                        alias);
-                    }
+                    versions << OrnPackageVersion{
+                        solvable_lookup_num(s, SOLVABLE_DOWNLOADSIZE, 0),
+                        solvable_lookup_num(s, SOLVABLE_INSTALLSIZE, 0),
+                        QString::fromLatin1(solvable_lookup_str(s, SOLVABLE_EVR)),
+                        arch,
+                        alias
+                    };
                 }
             }
-            repo_free(srepo, 0);
         }
-    }
+    });
 
-    pool_free(spool);
     std::sort(versions.rbegin(), versions.rend());
 
     qDebug() << "Finished resolving versions for package" << packageName;
@@ -676,6 +660,31 @@ QList<OrnRepo> OrnPm::repoList() const
     return repos;
 }
 
+void OrnPm::getUnusedRepos()
+{
+    Q_D(const OrnPm);
+    QStringList unused;
+    const auto pos = repoNamePrefix.size();
+
+    d->processSolvables(true, [d, &unused, pos](const auto &alias, auto spool) {
+        bool nopackages = true;
+        for (int i = 0; i < spool->nsolvables; ++i)
+        {
+            const auto pname = QString::fromLatin1(solvable_lookup_str(&spool->solvables[i], SOLVABLE_NAME));
+            if (d->installedPackages.contains(pname))
+            {
+                nopackages = false;
+                break;
+            }
+        }
+        if (nopackages) {
+            unused.append(alias.mid(pos));
+        }
+    });
+
+    emit unusedRepos(unused);
+}
+
 void OrnPm::getInstalledPackages(const QString &packageName)
 {
     auto watcher = new QFutureWatcher<OrnInstalledPackageList>();
@@ -736,35 +745,13 @@ OrnInstalledPackageList OrnPmPrivate::prepareInstalledPackages(const QString &pa
 
     // Prepare set to filter installed packages to show only those from OpenRepos
     StringSet ornPackages;
-    auto spool = pool_create();
-    for (auto it = repos.cbegin(); it != repos.cend(); ++it)
-    {
-        if (it.value())
+    processSolvables(true, [&ornPackages]([[maybe_unused]] const auto &alias, auto spool) {
+        for (int i = 0; i < spool->nsolvables; ++i)
         {
-            const auto &alias = it.key();
-            auto spath = solvPathTmpl.arg(alias);
-            qDebug() << "Reading" << spath;
-            auto srepo = repo_create(spool, alias.toUtf8().data());
-
-            auto sfile = fopen(spath.toUtf8().data(), "r");
-            if (!sfile)
-            {
-                qCritical() << "Could not read" << spath;
-                repo_free(srepo, 0);
-                continue;
-            }
-
-            repo_add_solv(srepo, sfile, 0);
-            for (int i = 0; i < spool->nsolvables; ++i)
-            {
-                auto s = &spool->solvables[i];
-                ornPackages.insert(QString::fromLatin1(solvable_lookup_str(s, SOLVABLE_NAME)));
-            }
-            fclose(sfile);
-            repo_free(srepo, 0);
+            auto s = &spool->solvables[i];
+            ornPackages.insert(QString::fromLatin1(solvable_lookup_str(s, SOLVABLE_NAME)));
         }
-    }
-    pool_free(spool);
+    });
 
     StringHash installed;
     if (packageName.isEmpty())
@@ -992,4 +979,37 @@ void OrnPmPrivate::refreshNextRepo(quint32 exit, quint32 runtime)
         startOperation(alias, OrnPm::RefreshingRepo);
         t->repoRefreshNow(alias, forceRefresh);
     }
+}
+
+void OrnPmPrivate::processSolvables(bool enabled, std::function<void(const QString&, s_Pool*)> callback) const
+{
+    auto spool = pool_create();
+    auto srepo = repo_create(spool, "");
+
+    for (auto it = repos.cbegin(), end = repos.cend(); it != end; ++it)
+    {
+        if (it.value() != enabled)
+        {
+            continue;
+        }
+        const auto &alias = it.key();
+        const auto spath = solvPathTmpl.arg(alias);
+
+        qDebug() << "Reading" << spath;
+        auto sfile = fopen(spath.toUtf8().data(), "r");
+        if (!sfile)
+        {
+            qCritical() << "Could not read" << spath;
+            continue;
+        }
+        repo_add_solv(srepo, sfile, 0);
+        fclose(sfile);
+
+        callback(alias, spool);
+
+        repo_empty(srepo, 0);
+    }
+
+    repo_free(srepo, 0);
+    pool_free(spool);
 }

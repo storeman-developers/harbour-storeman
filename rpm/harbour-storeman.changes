@@ -1,3 +1,9 @@
+* Tue Jun  1 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.6
+- Refactoring
+- Add the ability to search for unused repositories
+- Add Slovak (thanks to  Ladislav Hodas)
+- Update other transactions
+
 * Mon Mar 22 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.5
 - Fix a regression with duplicate updtes notification
 - Update translations

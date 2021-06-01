@@ -207,6 +207,17 @@ Page {
                                                })
             }
 
+            MenuItem {
+                visible: reposList.count
+                enabled: menu._enableMenu
+                //% "Search for unused"
+                text: qsTrId("orn-search-unused-repos")
+                onClicked: {
+                    manualUnusedCheck = true
+                    OrnPm.getUnusedRepos()
+                }
+            }
+
             MenuStatusLabel { }
         }
 

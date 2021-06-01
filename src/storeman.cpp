@@ -34,6 +34,7 @@ static const QString UPDATES_SMART            {QStringLiteral("updates/smart")};
 static const QString UPDATES_SHOW_NOTIFICATION{QStringLiteral("updates/show_notification")};
 static const QString UPDATES_LAST_CHECK       {QStringLiteral("updates/last_check")};
 static const QString REFRESH_CACHE_ENABLE     {QStringLiteral("refresh_cache/enable")};
+static const QString REPOS_SEARCH_UNUSED      {QStringLiteral("repos/search_unused")};
 static const QString GROUP_HINTS              {QStringLiteral("hints")};
 
 
@@ -200,6 +201,22 @@ void Storeman::setRefreshOnSystemUpgrade(bool value)
 
     d_func()->settings.setValue(REFRESH_CACHE_ENABLE, value);
     emit this->refreshOnSystemUpgradeChanged();
+}
+
+bool Storeman::searchUnusedRepos() const
+{
+    return d_func()->settings.value(REPOS_SEARCH_UNUSED, false).toBool();
+}
+
+void Storeman::setSearchUnusedRepos(bool value)
+{
+    if (this->searchUnusedRepos() == value)
+    {
+        return;
+    }
+
+    d_func()->settings.setValue(REPOS_SEARCH_UNUSED, value);
+    emit this->searchUnusedReposChanged();
 }
 
 bool Storeman::fileExists(const QString &filePath)

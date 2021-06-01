@@ -9,8 +9,11 @@
 #include <private/qobject_p.h>
 #include <QSet>
 
+#include <functional>
 
 #define PK_FLAG_NONE  quint64(0)
+
+struct s_Pool;
 
 class OrnPmPrivate : public QObjectPrivate
 {
@@ -18,7 +21,7 @@ class OrnPmPrivate : public QObjectPrivate
     Q_DECLARE_PUBLIC(OrnPm)
 
 public:
-    using ornpm_signal_t   = void (OrnPm::*)(const QString &);
+    using ornpm_signal_t = void (OrnPm::*)(const QString &);
 
     OrnPmPrivate() = default;
     ~OrnPmPrivate() override = default;
@@ -43,6 +46,8 @@ public:
     void getUpdates();
     // Refresh repos
     void refreshNextRepo(quint32 exit, quint32 runtime);
+
+    void processSolvables(bool enabled, std::function<void(const QString&, s_Pool*)> callback) const;
 
     // <alias, enabled>
     using RepoHash      = QHash<QString, bool>;
