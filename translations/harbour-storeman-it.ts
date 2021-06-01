@@ -534,14 +534,6 @@
         <source>Updates available</source>
         <translation>Aggiornamenti disponibili</translation>
     </message>
-    <message id="orn-updates-available-preview">
-        <source>Click to view updates</source>
-        <translation>Clicca per vedere gli aggiornamenti</translation>
-    </message>
-    <message id="orn-view-details">
-        <source>Click to view details</source>
-        <translation>Clicca per maggiori informazioni</translation>
-    </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
         <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
@@ -1041,6 +1033,38 @@
     </message>
     <message id="orn-app-description-full">
         <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-no-unused-repos">
+        <source>Unused repositories not found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-search-unused-repos">
+        <source>Search for unused</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-unused-repos-text">
+        <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-unused-repos-switch">
+        <source>Search for unused repositories</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-unused-repos-switch-descr">
+        <source>Search for unused repositories after removing packages.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-show-details">
+        <source>Show details</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-unused-repos-found">
+        <source>Unused repositories found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-unused-repos">
+        <source>Unused repositories</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

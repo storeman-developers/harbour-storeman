@@ -21,6 +21,7 @@ class Storeman : public QObject
     Q_PROPERTY(bool smartUpdate READ smartUpdate WRITE setSmartUpdate NOTIFY smartUpdateChanged)
     Q_PROPERTY(bool showUpdatesNotification READ showUpdatesNotification WRITE setShowUpdatesNotification NOTIFY showUpdatesNotificationChanged)
     Q_PROPERTY(bool refreshOnSystemUpgrade READ refreshOnSystemUpgrade WRITE setRefreshOnSystemUpgrade NOTIFY refreshOnSystemUpgradeChanged)
+    Q_PROPERTY(bool searchUnusedRepos READ searchUnusedRepos WRITE setSearchUnusedRepos NOTIFY searchUnusedReposChanged)
 
 public:
     enum Hint
@@ -67,6 +68,9 @@ public:
     bool refreshOnSystemUpgrade() const;
     void setRefreshOnSystemUpgrade(bool value);
 
+    bool searchUnusedRepos() const;
+    void setSearchUnusedRepos(bool value);
+
     Q_INVOKABLE static bool fileExists(const QString &filePath);
     Q_INVOKABLE static bool removeFile(const QString &filePath);
 
@@ -88,6 +92,7 @@ signals:
     void smartUpdateChanged();
     void showUpdatesNotificationChanged();
     void refreshOnSystemUpgradeChanged();
+    void searchUnusedReposChanged();
     void updatesNotification(bool show, quint32 replaceId);
     void repoSuggestion(const QString &author, bool enableOnly);
     void recentAppsChanged();

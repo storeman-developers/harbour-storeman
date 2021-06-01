@@ -181,6 +181,15 @@ ListModel {
     }
 
     ListElement {
+        locale: "sk_SK"
+        coordinators: [
+            ListElement { name: "holask" }
+        ]
+        translators: []
+        reviewers: []
+    }
+
+    ListElement {
         locale: "sl_SI"
         coordinators: [
             ListElement { name: "sponka" }
