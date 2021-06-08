@@ -6,14 +6,13 @@
 #include "ornpktransaction.h"
 #include "ornssu.h"
 
+#include <solv/repo_solv.h>
 #include <private/qobject_p.h>
 #include <QSet>
 
 #include <functional>
 
 #define PK_FLAG_NONE  quint64(0)
-
-struct s_Pool;
 
 class OrnPmPrivate : public QObjectPrivate
 {
@@ -47,7 +46,7 @@ public:
     // Refresh repos
     void refreshNextRepo(quint32 exit, quint32 runtime);
 
-    void processSolvables(bool enabled, std::function<void(const QString&, s_Pool*)> callback) const;
+    void processSolvables(bool enabled, std::function<void(const QString&, Pool*)> callback) const;
 
     // <alias, enabled>
     using RepoHash      = QHash<QString, bool>;

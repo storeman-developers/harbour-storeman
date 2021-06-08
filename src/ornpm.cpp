@@ -4,7 +4,6 @@
 #include "ornutils.h"
 #include "ornconst.h"
 
-#include <solv/repo_solv.h>
 #include <connman-qt5/networkmanager.h>
 #include <mlite5/MDesktopEntry>
 
@@ -979,7 +978,7 @@ void OrnPmPrivate::refreshNextRepo(quint32 exit, quint32 runtime)
     }
 }
 
-void OrnPmPrivate::processSolvables(bool enabled, std::function<void(const QString&, s_Pool*)> callback) const
+void OrnPmPrivate::processSolvables(bool enabled, std::function<void(const QString&, Pool*)> callback) const
 {
     auto spool = pool_create();
     auto srepo = repo_create(spool, "");
