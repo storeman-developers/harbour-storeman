@@ -1040,37 +1040,37 @@
         <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
         <translation>&lt;p&gt;Natywny klient OpenRepos.net dla Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;To jest otwartoźródłowe oprogramowanie dystrybuowane na warunkach &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Możesz raportować błędy na OpenRepos.net lub GitHubie (użyj przycisków poniżej)&lt;/p&gt;</translation>
     </message>
-    <message id="orn-no-unused-repos">
-        <source>Unused repositories not found</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="orn-search-unused-repos">
-        <source>Search for unused</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="orn-unused-repos-text">
-        <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="orn-unused-repos-switch">
-        <source>Search for unused repositories</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="orn-unused-repos-switch-descr">
-        <source>Search for unused repositories after removing packages.</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message id="orn-show-details">
         <source>Show details</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokaż szczegóły</translation>
     </message>
     <message id="orn-unused-repos-found">
         <source>Unused repositories found</source>
-        <translation type="unfinished"></translation>
+        <translation>Znaleziono nieużywane repozytoria</translation>
+    </message>
+    <message id="orn-no-unused-repos">
+        <source>Unused repositories not found</source>
+        <translation>Nie znaleziono nieużywanych repozytoriów</translation>
+    </message>
+    <message id="orn-search-unused-repos">
+        <source>Search for unused</source>
+        <translation>Wyszukaj nieużywane</translation>
+    </message>
+    <message id="orn-unused-repos-switch">
+        <source>Search for unused repositories</source>
+        <translation>Wyszukaj nieużywane repozytoria</translation>
+    </message>
+    <message id="orn-unused-repos-switch-descr">
+        <source>Search for unused repositories after removing packages.</source>
+        <translation>Szukaj nieużywanych repozytoriów po usunięciu pakietów</translation>
     </message>
     <message id="orn-unused-repos">
         <source>Unused repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Nieużywane repozytoria</translation>
+    </message>
+    <message id="orn-unused-repos-text">
+        <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Nie ma zainstalowanych pakietów dla następnych repozytoriów.&lt;/p&gt;&lt;p&gt;Czy chcesz je teraz usunąć?&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>
