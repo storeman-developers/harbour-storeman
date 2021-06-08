@@ -1032,37 +1032,37 @@ Storeman серсүзне өченче затларга җибәрми.</transla
         <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
         <translation>&lt;p&gt;Sailfish&amp;nbsp;OS өчен бердәм OpenRepos.net клиенты&lt;/p&gt;&lt;p&gt;Storeman&apos;ның чыганак коды &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;лицензиясе&lt;/a&gt; шартлары буенча тарала&lt;/p&gt;&lt;p&gt;Тәкъдимнәрне OpenRepos.net һәм GitHub.com сайтлары аша җиткереп була (астагы төймәләр)&lt;/p&gt;</translation>
     </message>
-    <message id="orn-no-unused-repos">
-        <source>Unused repositories not found</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="orn-search-unused-repos">
-        <source>Search for unused</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="orn-unused-repos-text">
-        <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="orn-unused-repos-switch">
-        <source>Search for unused repositories</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="orn-unused-repos-switch-descr">
-        <source>Search for unused repositories after removing packages.</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message id="orn-show-details">
         <source>Show details</source>
-        <translation type="unfinished"></translation>
+        <translation>Детальләрне күрсәтергә</translation>
     </message>
     <message id="orn-unused-repos-found">
         <source>Unused repositories found</source>
-        <translation type="unfinished"></translation>
+        <translation>Кулланылмый торган репозиторияләр табылды</translation>
+    </message>
+    <message id="orn-no-unused-repos">
+        <source>Unused repositories not found</source>
+        <translation>Кулланылмый торган репозиторияләр табылмады</translation>
+    </message>
+    <message id="orn-search-unused-repos">
+        <source>Search for unused</source>
+        <translation>Кулланылмаганны табарга</translation>
+    </message>
+    <message id="orn-unused-repos-switch">
+        <source>Search for unused repositories</source>
+        <translation>Кулланылмый торган репозиторияләрне эзләргә</translation>
+    </message>
+    <message id="orn-unused-repos-switch-descr">
+        <source>Search for unused repositories after removing packages.</source>
+        <translation>Пакетлар бетерелгәннән соң кулланылмый торган репозиторияләрне табарга</translation>
     </message>
     <message id="orn-unused-repos">
         <source>Unused repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Кулланылмый торган репозиторияләр</translation>
+    </message>
+    <message id="orn-unused-repos-text">
+        <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Түбәндәге репозиторияләр өчен пакетлар урнаштырылмаган.&lt;/p&gt;&lt;p&gt;Аларны хәзер үк бетерергә телисезме?&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>

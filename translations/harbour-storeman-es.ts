@@ -1035,16 +1035,20 @@
         <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
         <translation>&lt;p&gt;Cliente nativo de OpenRepos.net para Sailfish&amp;nbsp;OS&lt;/p&gt; &lt;p&gt;Este es un programa de código abierto que se distribuye bajo los términos de la &lt;a href=&apos;%1&apos;&gt;Licencia&amp;nbsp;MIT&lt;/a&gt; &lt;/p&gt;&lt;p&gt;Puedes informar de un problema en OpenRepos.net o en GitHub (usa los botones de abajo) &lt;/p&gt;</translation>
     </message>
+    <message id="orn-show-details">
+        <source>Show details</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-unused-repos-found">
+        <source>Unused repositories found</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message id="orn-no-unused-repos">
         <source>Unused repositories not found</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="orn-search-unused-repos">
         <source>Search for unused</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="orn-unused-repos-text">
-        <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="orn-unused-repos-switch">
@@ -1055,16 +1059,12 @@
         <source>Search for unused repositories after removing packages.</source>
         <translation type="unfinished"></translation>
     </message>
-    <message id="orn-show-details">
-        <source>Show details</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="orn-unused-repos-found">
-        <source>Unused repositories found</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message id="orn-unused-repos">
         <source>Unused repositories</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-unused-repos-text">
+        <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

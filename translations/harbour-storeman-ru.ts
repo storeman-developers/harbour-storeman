@@ -1042,6 +1042,14 @@ Storeman не передает ваш пароль третьим лицам.</t
         <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
         <translation>&lt;p&gt;Клиент OpenRepos.net для Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;Исходный код Storeman распространяется в соответствии с условиями &lt;a href=&quot;%1&quot;&gt;лицензии&amp;nbsp;MIT&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Вы можете сообщить об ошибке на OpenRepos.net или GitHub&lt;br /&gt;(используйте кнопки ниже)&lt;/p&gt;</translation>
     </message>
+    <message id="orn-show-details">
+        <source>Show details</source>
+        <translation>Подробности</translation>
+    </message>
+    <message id="orn-unused-repos-found">
+        <source>Unused repositories found</source>
+        <translation>Найдены неиспользуемые репозитории</translation>
+    </message>
     <message id="orn-no-unused-repos">
         <source>Unused repositories not found</source>
         <translation>Неиспользуемые репозитории не найдены</translation>
@@ -1049,10 +1057,6 @@ Storeman не передает ваш пароль третьим лицам.</t
     <message id="orn-search-unused-repos">
         <source>Search for unused</source>
         <translation>Поиск неиспользуемых</translation>
-    </message>
-    <message id="orn-unused-repos-text">
-        <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Для следующих репозиториев нет ни одного установленного пакета.&lt;/p&gt;&lt;p&gt;Удалить?&lt;/p&gt;</translation>
     </message>
     <message id="orn-unused-repos-switch">
         <source>Search for unused repositories</source>
@@ -1062,17 +1066,13 @@ Storeman не передает ваш пароль третьим лицам.</t
         <source>Search for unused repositories after removing packages.</source>
         <translation>Проверять неиспользуемые репозитории после удаления пакетов.</translation>
     </message>
-    <message id="orn-show-details">
-        <source>Show details</source>
-        <translation>Подробности</translation>
-    </message>
-    <message id="orn-unused-repos-found">
-        <source>Unused repositories found</source>
-        <translation>Найдены неиспользуемые репозитории</translation>
-    </message>
     <message id="orn-unused-repos">
         <source>Unused repositories</source>
         <translation>Неиспользуемые репозитории</translation>
+    </message>
+    <message id="orn-unused-repos-text">
+        <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Для следующих репозиториев нет ни одного установленного пакета.&lt;/p&gt;&lt;p&gt;Удалить?&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>
