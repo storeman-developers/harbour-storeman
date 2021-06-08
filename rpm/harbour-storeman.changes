@@ -1,3 +1,6 @@
+* Tue Jun  8 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.7
+- Update other transactions
+
 * Tue Jun  1 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.6
 - Refactoring
 - Add the ability to search for unused repositories

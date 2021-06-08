@@ -1033,39 +1033,39 @@
     </message>
     <message id="orn-app-description-full">
         <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="orn-no-unused-repos">
-        <source>Unused repositories not found</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="orn-search-unused-repos">
-        <source>Search for unused</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="orn-unused-repos-text">
-        <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="orn-unused-repos-switch">
-        <source>Search for unused repositories</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="orn-unused-repos-switch-descr">
-        <source>Search for unused repositories after removing packages.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Nativer OpenRepos.net-Client für Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;Dies ist eine Open-Source-Software, die unter den Bedingungen der &lt;a href=&apos;%1&apos;&gt;MIT-Lizenz&lt;/a&gt; verbreitet wird&lt;/p&gt;&lt;p&gt;Du kannst einen Fehler auf OpenRepos.net oder GitHub melden (verwende die Buttons unten)&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>
-        <translation type="unfinished"></translation>
+        <translation>Details anzeigen</translation>
     </message>
     <message id="orn-unused-repos-found">
         <source>Unused repositories found</source>
-        <translation type="unfinished"></translation>
+        <translation>Nicht verwendete Quellen gefunden</translation>
+    </message>
+    <message id="orn-no-unused-repos">
+        <source>Unused repositories not found</source>
+        <translation>Keine ungenutzten Quellen gefunden</translation>
+    </message>
+    <message id="orn-search-unused-repos">
+        <source>Search for unused</source>
+        <translation>Suche nach ungenutzten</translation>
+    </message>
+    <message id="orn-unused-repos-switch">
+        <source>Search for unused repositories</source>
+        <translation>Suche nach ungenutzten Quellen</translation>
+    </message>
+    <message id="orn-unused-repos-switch-descr">
+        <source>Search for unused repositories after removing packages.</source>
+        <translation>Suche nach nicht verwendeten Quellen nach dem Entfernen von Paketen.</translation>
     </message>
     <message id="orn-unused-repos">
         <source>Unused repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Nicht verwendete Quellen</translation>
+    </message>
+    <message id="orn-unused-repos-text">
+        <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Es gibt keine installierten Pakete für die folgenden Quellen.&lt;/p&gt;&lt;p&gt;Möchtest du sie jetzt entfernen?&lt;/p&gt;</translation>
     </message>
 </context>
 </TS>
