@@ -133,6 +133,7 @@ OTHER_FILES += \
     qml/pages/RepoSuggestionPage.qml \
     qml/pages/CategoriesFilterPage.qml \
     qml/pages/SharePage.qml \
+    qml/pages/IntervalPickerDialog.qml \
     qml/pages/UnusedReposDialog.qml \
     qml/components/AppListDelegate.qml \
     qml/components/RatingBox.qml \
@@ -164,6 +165,8 @@ OTHER_FILES += \
     qml/components/BackupLabel.qml \
     qml/components/BackupOptions.qml \
     qml/components/CategoriesFilterDelegate.qml \
+    qml/components/IntervalView.qml \
+    qml/components/ListViewPositionAnimation.qml \
     qml/models/DevelopersModel.qml \
     qml/models/TranslatorsModel.qml \
     qml/models/DummyCommentsModel.qml

@@ -181,19 +181,12 @@ Page {
                     var m = interval / 60000
                     var h = Math.floor(m / 60)
                     m -= (h * 60)
-                    var d = pageStack.push("Sailfish.Silica.TimePickerDialog", {
+                    var d = pageStack.push(Qt.resolvedUrl("IntervalPickerDialog.qml"), {
                         hour: h,
                         minute: m
                     })
                     d.accepted.connect(function() {
-                        var res = (d.hour * 60 + d.minute) * 60000
-                        if (res >= 600000) {
-                            interval = res
-                        } else {
-                            //% "The interval must be at least 10 minutes"
-                            notification.show(qsTrId("orn-updates-check-interval-invalid"),
-                                              "image://theme/icon-s-high-importance")
-                        }
+                        interval = (d.hour * 60 + d.minute) * 60000
                     })
                 }
 

@@ -787,10 +787,6 @@
             <numerusform>%n Stunden</numerusform>
         </translation>
     </message>
-    <message id="orn-updates-check-interval-invalid">
-        <source>The interval must be at least 10 minutes</source>
-        <translation>Der Intervall muss mindestens 10 Minuten betragen</translation>
-    </message>
     <message id="orn-tag-strikeout">
         <source>S</source>
         <extracomment>Tag strikeout</extracomment>
@@ -1066,6 +1062,10 @@
     <message id="orn-unused-repos-text">
         <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Es gibt keine installierten Pakete für die folgenden Quellen.&lt;/p&gt;&lt;p&gt;Möchtest du sie jetzt entfernen?&lt;/p&gt;</translation>
+    </message>
+    <message id="orn-updates-check-interval-minimum">
+        <source>At least 10 minutes</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

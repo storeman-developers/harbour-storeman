@@ -166,18 +166,9 @@ Page {
         }
     }
 
-    NumberAnimation {
-        function moveTo(pos) {
-            stop()
-            from = commentsList.contentY
-            commentsList.positionViewAtIndex(pos, ListView.End)
-            // FIXME: Sometimes it's not defined
-            to = commentsList.contentY
-            start()
-        }
-
+    ListViewPositionAnimation {
         id: moveAnimation
         target: commentsList
-        property: "contentY"
+        mode: ListView.End
     }
 }
