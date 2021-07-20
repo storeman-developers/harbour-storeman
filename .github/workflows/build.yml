@@ -17,17 +17,17 @@ jobs:
 
     - name: Build 3.3.0.14
       env:
-        RELEASE: 3.3.0.14
+        RELEASE:  3.3.0.14
         SFOS_MIN: 3.3
         SFOS_MAX: 3.4
-        ARCH: armv7hl i486
+        ARCHS:    armv7hl i486
       run: bash ./scripts/gha-build.sh
 
     - name: Build 4.1.0.24
       env:
-        RELEASE: 4.1.0.24
+        RELEASE:  4.1.0.24
         SFOS_MIN: 3.4
-        ARCHS: armv7hl aarch64 i486
+        ARCHS:    armv7hl aarch64 i486
       run: bash ./scripts/gha-build.sh
 
     - name: Create release
