@@ -1062,7 +1062,7 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     </message>
     <message id="orn-updates-check-interval-minimum">
         <source>At least 10 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>10 минуттан да ким түгел</translation>
     </message>
 </context>
 </TS>

@@ -1072,7 +1072,7 @@ Storeman не передает ваш пароль третьим лицам.</t
     </message>
     <message id="orn-updates-check-interval-minimum">
         <source>At least 10 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>Минимум 10 минут</translation>
     </message>
 </context>
 </TS>

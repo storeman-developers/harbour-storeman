@@ -255,7 +255,7 @@
     </message>
     <message id="orn-cat-libraries">
         <source>Libraries</source>
-        <translation>Librairies</translation>
+        <translation>Bibliothèques</translation>
     </message>
     <message id="orn-update-available">
         <source>Update available</source>
@@ -1029,43 +1029,43 @@
     </message>
     <message id="orn-app-description-full">
         <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Client OpenRepos.net natif pour Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;Ceci est logiciel open source distribué sous les termes de la &lt;a href=&apos;%1&apos;&gt;License&amp;nbsp; MIT&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Vous pouvez signaler un problème sur OpenRepos.net ou GitHub (utilisez le bouton ci-dessous)&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Client OpenRepos.net natif pour Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;Ceci est logiciel open source distribué sous les termes de la &lt;a href=&apos;%1&apos;&gt;license&amp;nbsp; MIT&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Vous pouvez signaler un problème sur OpenRepos.net ou GitHub (utilisez le bouton ci-dessous)&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher les détails</translation>
     </message>
     <message id="orn-unused-repos-found">
         <source>Unused repositories found</source>
-        <translation type="unfinished"></translation>
+        <translation>Dépôts inutilisés trouvés</translation>
     </message>
     <message id="orn-no-unused-repos">
         <source>Unused repositories not found</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucun dépôt inutilisé n&apos;a été trouvé</translation>
     </message>
     <message id="orn-search-unused-repos">
         <source>Search for unused</source>
-        <translation type="unfinished"></translation>
+        <translation>Chercher les inutilisés</translation>
     </message>
     <message id="orn-unused-repos-switch">
         <source>Search for unused repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>‎Rechercher de dépôts inutilisés‎</translation>
     </message>
     <message id="orn-unused-repos-switch-descr">
         <source>Search for unused repositories after removing packages.</source>
-        <translation type="unfinished"></translation>
+        <translation>‎Rechercher les dépôts inutilisés après la suppression d&apos;application.‎</translation>
     </message>
     <message id="orn-unused-repos">
         <source>Unused repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Dépôts inutilisés</translation>
     </message>
     <message id="orn-unused-repos-text">
         <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Les dépôts suivants ne sont utilisés par aucune des applications installées.&lt;/p&gt;&lt;p&gt;Souhaitez-vous les enlever maintenant ?&lt;/p&gt;</translation>
     </message>
     <message id="orn-updates-check-interval-minimum">
         <source>At least 10 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>Au moins 10 minutes</translation>
     </message>
 </context>
 </TS>

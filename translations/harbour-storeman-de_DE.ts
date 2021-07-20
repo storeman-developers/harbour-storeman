@@ -1065,7 +1065,7 @@
     </message>
     <message id="orn-updates-check-interval-minimum">
         <source>At least 10 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>Mindestens 10 Minuten</translation>
     </message>
 </context>
 </TS>
