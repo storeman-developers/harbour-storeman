@@ -15,16 +15,10 @@ jobs:
     - name: Prepare
       run: mkdir RPMS
 
-    - name: Build 3.2.1.20-armv7hl
+    - name: Build 3.2.1.20
       env:
         RELEASE: 3.2.1.20
-        ARCH: armv7hl
-      run: bash ./scripts/gha-build.sh
-
-    - name: Build 3.2.1.20-i486
-      env:
-        RELEASE: 3.2.1.20
-        ARCH: i486
+        ARCHS: armv7hl i486
       run: bash ./scripts/gha-build.sh
 
     - name: Create release

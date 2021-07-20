@@ -1,7 +1,7 @@
 Name:           harbour-storeman
 Summary:        OpenRepos Client for Sailfish OS
 Version:        0.2.7
-Release:        1~sfos3.2
+Release:        1~sdk%{getenv:RELEASE}
 Group:          Qt/Qt
 License:        MIT
 URL:            https://github.com/mentaljam/harbour-storeman

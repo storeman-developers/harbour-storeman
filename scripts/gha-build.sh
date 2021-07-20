@@ -2,12 +2,13 @@
 
 docker run --rm --privileged -v $PWD:/share coderus/sailfishos-platform-sdk:$RELEASE /bin/bash -c "
   set -x
-  export LATEST_RELEASE=$LATEST_RELEASE
-  mkdir -p tree
-  cd tree
-  cp -r /share/* .
-  cd ..
-  mkdir -p build
+  export RELEASE="$RELEASE"
+  mkdir -p tree build
+  cp -r /share/* tree
   cd build
-  mb2 -t SailfishOS-$RELEASE-$ARCH build -d ../tree
-  sudo cp -r RPMS/*.rpm /share/RPMS"
+  for ARCH in $ARCHS
+  do
+    mb2 -t SailfishOS-$RELEASE-\$ARCH build -d ../tree
+    sudo cp RPMS/*.rpm /share/RPMS
+  done
+"
