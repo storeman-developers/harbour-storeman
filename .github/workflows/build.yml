@@ -15,37 +15,19 @@ jobs:
     - name: Prepare
       run: mkdir RPMS
 
-    - name: Build 3.3.0.14-armv7hl
+    - name: Build 3.3.0.14
       env:
         RELEASE: 3.3.0.14
-        ARCH: armv7hl
+        SFOS_MIN: 3.3
+        SFOS_MAX: 3.4
+        ARCH: armv7hl i486
       run: bash ./scripts/gha-build.sh
 
-    - name: Build 3.3.0.14-i486
+    - name: Build 4.1.0.24
       env:
-        RELEASE: 3.3.0.14
-        ARCH: i486
-      run: bash ./scripts/gha-build.sh
-
-    - name: Build 4.1.0.23-armv7hl
-      env:
-        RELEASE: 4.1.0.23
-        LATEST_RELEASE: 1
-        ARCH: armv7hl
-      run: bash ./scripts/gha-build.sh
-
-    - name: Build 4.1.0.23-aarch64
-      env:
-        RELEASE: 4.1.0.23
-        LATEST_RELEASE: 1
-        ARCH: aarch64
-      run: bash ./scripts/gha-build.sh
-
-    - name: Build 4.1.0.23-i486
-      env:
-        RELEASE: 4.1.0.23
-        LATEST_RELEASE: 1
-        ARCH: i486
+        RELEASE: 4.1.0.24
+        SFOS_MIN: 3.4
+        ARCHS: armv7hl aarch64 i486
       run: bash ./scripts/gha-build.sh
 
     - name: Create release
