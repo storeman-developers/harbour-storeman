@@ -149,9 +149,7 @@ Page {
         MainPageButton {
             enabled: networkManager.connected
             text: qsTrId("orn-bookmarks")
-            onClicked: pageStack.push(Qt.resolvedUrl("BookmarksPage.qml"), {
-                                          model: bookmarksModel
-                                      })
+            onClicked: pageStack.push(Qt.resolvedUrl("BookmarksPage.qml"))
         }
     }
 
@@ -204,11 +202,7 @@ Page {
         filterRole: OrnAppsModel.VisibilityRole
     }
 
-    OrnBookmarksModel {
-        id: bookmarksModel
-    }
-
-    SilicaFlickable {
+        SilicaFlickable {
         anchors.fill: parent
         contentHeight: content.height
 

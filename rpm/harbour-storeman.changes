@@ -1,3 +1,10 @@
+* Tue Jul 20 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.8
+- Fix busy indicator on the app list page remains active after pkcon action finishes
+- Allow to set the update interval up to 48 hours
+- Fix backing up and restoring bookmarks
+- Animate removal of backup items
+- Update translations
+
 * Tue Jun  8 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.7
 - Update other transactions
 

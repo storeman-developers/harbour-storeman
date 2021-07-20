@@ -131,7 +131,7 @@
     </message>
     <message id="orn-author-apps">
         <source>More by %0</source>
-        <translation>Viac ako %0</translation>
+        <translation>Viac od %0</translation>
     </message>
     <message id="orn-cat-coding-competition">
         <source>Coding Competition</source>
@@ -792,10 +792,6 @@
             <numerusform>%n hodín</numerusform>
         </translation>
     </message>
-    <message id="orn-updates-check-interval-invalid">
-        <source>The interval must be at least 10 minutes</source>
-        <translation>Interval musí byť najmenej 10 minút</translation>
-    </message>
     <message id="orn-tag-strikeout">
         <source>S</source>
         <extracomment>Tag strikeout</extracomment>
@@ -858,7 +854,7 @@
     </message>
     <message id="orn-delete">
         <source>Delete</source>
-        <translation>Zmazať</translation>
+        <translation>Odstrániť</translation>
     </message>
     <message id="orn-deleting">
         <source>Deleting</source>
@@ -886,7 +882,7 @@
     </message>
     <message id="orn-search-on-openrepos">
         <source>Search on OpenRepos.net</source>
-        <translation>Hľadať v OpenRepos.net</translation>
+        <translation>Vyhľadať v OpenRepos.net</translation>
     </message>
     <message id="orn-repo-suggestion">
         <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
@@ -1038,7 +1034,7 @@
     </message>
     <message id="orn-app-description-full">
         <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Pôvodný klient OpenRepos.net pre Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;Toto je voľne dostupný otvorený softvér, ktorý je šírený v súlade s licenciou &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Zistenie mäžete nahlásiť v OpenRepos.net alebo GitHub (použite tlačidlá nižšie)&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Pôvodný klient OpenRepos.net pre Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;Toto je voľne dostupný otvorený softvér, ktorý je šírený v súlade s licenciou &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Zistenie môžete nahlásiť v OpenRepos.net alebo GitHub (použite tlačidlá nižšie)&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>
@@ -1071,6 +1067,10 @@
     <message id="orn-unused-repos-text">
         <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Pre tieto sklady nie sú inštalované žiadne balíky.&lt;/p&gt;&lt;p&gt;Chcete ich teraz odstrániť?&lt;/p&gt;</translation>
+    </message>
+    <message id="orn-updates-check-interval-minimum">
+        <source>At least 10 minutes</source>
+        <translation>Najmenej 10 minút</translation>
     </message>
 </context>
 </TS>

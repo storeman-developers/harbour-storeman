@@ -70,6 +70,7 @@ Page {
             delegate: ListItem {
                 id: listItem
                 width: parent.width
+                ListView.onRemove: animateRemoval(listItem)
 
                 menu: ContextMenu {
                     MenuItem {
