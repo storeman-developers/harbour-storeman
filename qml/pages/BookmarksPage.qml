@@ -4,13 +4,15 @@ import harbour.orn 1.0
 import "../components"
 
 Page {
-    property OrnBookmarksModel model
-
     id: page
     allowedOrientations: defaultAllowedOrientations
 
+    OrnBookmarksModel {
+        id: bookmarksModel
+    }
+
     Connections {
-        target: model
+        target: bookmarksModel
         onRowsInserted: proxyModel.sort(Qt.AscendingOrder)
     }
 
@@ -21,7 +23,7 @@ Page {
             id: proxyModel
             sortRole: OrnBookmarksModel.SortRole
             sortCaseSensitivity: Qt.CaseInsensitive
-            sourceModel: page.model
+            sourceModel: bookmarksModel
         }
 
         header: PageHeader {
@@ -43,7 +45,7 @@ Page {
             id: menu
 
             RefreshMenuItem {
-                model: page.model
+                model: bookmarksModel
             }
 
             MenuSearchItem {}
@@ -56,11 +58,11 @@ Page {
         BusyIndicator {
             size: BusyIndicatorSize.Large
             anchors.centerIn: parent
-            running: page.model.fetching
+            running: bookmarksModel.fetching
         }
 
         ViewPlaceholder {
-            enabled: !page.model.fetching && bookmarksList.count === 0
+            enabled: !bookmarksModel.fetching && bookmarksList.count === 0
             //% "Your bookmarked applications will be shown here"
             text: qsTrId("orn-no-bookmarks")
         }
