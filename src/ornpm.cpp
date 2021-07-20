@@ -828,6 +828,7 @@ void OrnPmPrivate::onItemProgress(const QString &id, uint status, uint percentag
     Q_Q(OrnPm);
 
     auto name = OrnUtils::packageName(id);
+    finishOperation(name);
 
     if (status == Transaction::StatusRemove)
     {
