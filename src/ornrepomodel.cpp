@@ -35,13 +35,12 @@ void OrnRepoModel::reset()
 {
     qDebug() << "Resetting model";
     this->beginResetModel();
-    mData.clear();
 
-    auto repos = OrnPm::instance()->repoList();
-    const auto enabled = std::count_if(repos.cbegin(), repos.cend(), [](const auto &r) {
+    mData = OrnPm::instance()->repoList();
+
+    const auto enabled = std::count_if(mData.cbegin(), mData.cend(), [](const auto &r) {
         return r.enabled;
     });
-    mData.append(repos);
 
     if (mEnabledRepos != enabled)
     {
@@ -60,7 +59,7 @@ void OrnRepoModel::onRepoModified(const QString &alias, int action)
     {
         auto row = mData.size();
         this->beginInsertRows(parentIndex, row, row);
-        mData << OrnRepo{ true, alias, alias.mid(OrnPm::repoNamePrefix.size()) };
+        mData << OrnRepo{true, alias};
         ++mEnabledRepos;
         emit this->enabledReposChanged();
         this->endInsertRows();

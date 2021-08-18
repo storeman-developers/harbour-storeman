@@ -24,6 +24,7 @@ class OrnPm : public QObject
     Q_PROPERTY(QVariantList operations READ operations NOTIFY operationsChanged)
     Q_PROPERTY(bool updatesAvailable READ updatesAvailable NOTIFY updatablePackagesChanged)
     Q_PROPERTY(bool refreshingCache READ refreshingCache NOTIFY operationsChanged)
+    Q_PROPERTY(QString storemanRepo MEMBER storemanRepo CONSTANT)
 
 public:
 
@@ -83,6 +84,7 @@ public:
     Q_ENUM(ErrorCode)
 
     static const QLatin1String repoNamePrefix;
+    static const QString storemanRepo;
 
     static QString repoUrl(const QString &author);
 
@@ -104,7 +106,7 @@ public:
     Q_INVOKABLE QStringList updatablePackages() const;
     QString updateVersion(const QString &packageName) const;
 
-    RepoStatus repoStatus(const QString &alias) const;
+    Q_INVOKABLE RepoStatus repoStatus(const QString &alias) const;
     PackageStatus packageStatus(const QString &packageName) const;
 
 signals:

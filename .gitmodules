@@ -1,0 +1,3 @@
+[submodule "mentaljam-obs"]
+	path = mentaljam-obs
+	url = https://github.com/mentaljam/mentaljam-obs.git

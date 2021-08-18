@@ -433,40 +433,6 @@ void Storeman::checkSystemVersion()
     OrnPm::instance()->refreshCache(true);
 }
 
-void Storeman::checkRepos()
-{
-    Q_D(Storeman);
-
-    QString key{QStringLiteral("repo_suggested")};
-    if (!d->settings.contains(key))
-    {
-        QtConcurrent::run(d, &StoremanPrivate::checkRepos);
-        d->settings.setValue(key, true);
-    }
-}
-
-void StoremanPrivate::checkRepos()
-{
-    auto repos = OrnPm::instance()->repoList();
-    QString author{QStringLiteral("osetr")};
-    auto it = std::find_if(repos.begin(), repos.end(), [author](const OrnRepo &repo)
-    {
-        return (repo.author == author);
-    });
-
-    Q_Q(Storeman);
-    if (it == repos.end())
-    {
-        // Repo is not added
-        emit q->repoSuggestion(author, false);
-    }
-    else if (!it->enabled)
-    {
-        // Repo is added but disabled
-        emit q->repoSuggestion(author, true);
-    }
-}
-
 void StoremanPrivate::refreshRepos()
 {
     OrnPm::instance()->refreshRepos();

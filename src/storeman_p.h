@@ -12,7 +12,6 @@ class StoremanPrivate : public QObjectPrivate
 {
     Q_DECLARE_PUBLIC(Storeman)
 
-    void checkRepos();
     void refreshRepos();
 
     QSettings settings;

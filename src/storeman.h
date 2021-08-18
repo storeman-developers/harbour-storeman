@@ -79,8 +79,6 @@ public:
 
     Q_INVOKABLE OrnApplication *cachedApp(quint32 appId);
 
-    Q_INVOKABLE void checkRepos();
-
 public slots:
     void resetUpdatesTimer();
 
@@ -94,7 +92,6 @@ signals:
     void refreshOnSystemUpgradeChanged();
     void searchUnusedReposChanged();
     void updatesNotification(bool show, quint32 replaceId);
-    void repoSuggestion(const QString &author, bool enableOnly);
     void recentAppsChanged();
 
 private slots:

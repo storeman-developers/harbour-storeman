@@ -876,10 +876,6 @@ Storeman серсүзне өченче затларга җибәрми.</transla
         <source>Search on OpenRepos.net</source>
         <translation>OpenRepos.net&apos;та эзләү</translation>
     </message>
-    <message id="orn-repo-suggestion">
-        <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
-        <translation>&lt;h3&gt;Storeman репозиториясен ялгагыз&lt;/h3&gt;&lt;p&gt;Storeman һәм башка кушымталарның соңгы версияләләрен куяр өчен аларның репозиторияләрен OpenRepos&apos;та ялгарга кирәк.&lt;/p&gt;&lt;p&gt;Репозиторийны хәзер ялгаргамы?&lt;/p&gt;</translation>
-    </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
         <translation>Яңартуларны тикшерү</translation>
@@ -1063,6 +1059,18 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     <message id="orn-updates-check-interval-minimum">
         <source>At least 10 minutes</source>
         <translation>10 минуттан да ким түгел</translation>
+    </message>
+    <message id="orn-check-for-self-updates-switch">
+        <source>Check for self-updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-check-for-self-updates-descr">
+        <source>Enable the Storeman OBS repository to check for Storeman updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-storeman-repo-name">
+        <source>Storeman OBS Repository</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
