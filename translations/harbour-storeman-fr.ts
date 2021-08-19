@@ -879,10 +879,6 @@
         <source>Search on OpenRepos.net</source>
         <translation>Chercher sur OpenRepos.net</translation>
     </message>
-    <message id="orn-repo-suggestion">
-        <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
-        <translation>&lt;h3&gt;Activer le dépôt de Storeman&lt;/h3&gt;&lt;p&gt;Pour maintenir Storeman à jour, vous devez activer son dépôt sur votre téléphone, comme vous le feriez pour n&apos;importe quelle appli provenant d&apos;OpenRepos.&lt;/p&gt;&lt;p&gt;Souhaitez-vous le faire sans plus attendre ?&lt;/p&gt;</translation>
-    </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
         <translation>Rechercher des mises à jour</translation>
@@ -1066,6 +1062,18 @@
     <message id="orn-updates-check-interval-minimum">
         <source>At least 10 minutes</source>
         <translation>Au moins 10 minutes</translation>
+    </message>
+    <message id="orn-check-for-self-updates-switch">
+        <source>Check for self-updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-check-for-self-updates-descr">
+        <source>Enable the Storeman OBS repository to check for Storeman updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-storeman-repo-name">
+        <source>Storeman OBS Repository</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

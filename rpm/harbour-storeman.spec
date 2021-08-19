@@ -1,7 +1,7 @@
 Name:           harbour-storeman
 Summary:        OpenRepos Client for Sailfish OS
-Version:        0.2.8
-Release:        3
+Version:        0.2.9
+Release:        1
 Group:          Qt/Qt
 License:        MIT
 URL:            https://github.com/mentaljam/harbour-storeman
@@ -29,6 +29,9 @@ BuildRequires:  PackageKit-Qt5-devel
 BuildRequires:  qt5-qttools-linguist
 BuildRequires:  desktop-file-utils
 
+Conflicts:      %{name}-installer
+Obsoletes:      %{name}-installer
+
 %description
 Manage repositories and apps from OpenRepos.net on your Sailfish OS device.
 
@@ -36,7 +39,7 @@ Manage repositories and apps from OpenRepos.net on your Sailfish OS device.
 %setup -q -n %{name}-%{version}
 
 %build
-%qmake5 VERSION=%{version}
+%qmake5 VERSION=%(echo %{version} | grep -Eo '^[0-9]+.[0-9]+.[0-9]+')
 make %{?_smp_mflags}
 
 %install
@@ -46,6 +49,13 @@ desktop-file-install --delete-original       \
   --dir %{buildroot}%{_datadir}/applications \
    %{buildroot}%{_datadir}/applications/*.desktop
 
+%post
+ssu ur || true
+
+%postun
+rm -f /var/cache/ssu/features.ini || true
+ssu ur || true
+
 %files
 %defattr(-,root,root,-)
 %{_bindir}
@@ -54,3 +64,4 @@ desktop-file-install --delete-original       \
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
 %{_datadir}/mapplauncherd/privileges.d/%{name}
 %{_datadir}/dbus-1/services/harbour.storeman.service
+%{_datadir}/ssu/features.d/mentaljam-obs.ini

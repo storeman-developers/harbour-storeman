@@ -134,6 +134,36 @@ Page {
             }
 
             TextSwitch {
+                property bool _repoEnabled
+                function _checkRepoStatus() {
+                    _repoEnabled = OrnPm.repoStatus(OrnPm.storemanRepo) === OrnPm.RepoEnabled
+                }
+
+                id: selfUpdatesSwitch
+                checked: OrnPm.repoStatus(OrnPm.storemanRepo) === OrnPm.RepoEnabled
+                //% "Check for self-updates"
+                text: qsTrId("orn-check-for-self-updates-switch")
+                //% "Enable the Storeman OBS repository to check for Storeman updates"
+                description: qsTrId("orn-check-for-self-updates-descr")
+                onClicked: {
+                    busy = true
+                    OrnPm.modifyRepo(OrnPm.storemanRepo, _repoEnabled ? OrnPm.DisableRepo : OrnPm.EnableRepo)
+                }
+
+                Component.onCompleted: _checkRepoStatus()
+
+                Connections {
+                    target: OrnPm
+                    onRepoModified: {
+                        if (alias === OrnPm.storemanRepo) {
+                            selfUpdatesSwitch.busy = false
+                            selfUpdatesSwitch._checkRepoStatus()
+                        }
+                    }
+                }
+            }
+
+            TextSwitch {
                 id: smartUpdateSwitch
                 checked: Storeman.smartUpdate
                 //% "Smart check"

@@ -38,6 +38,7 @@ SOURCES += \
     src/harbour-storeman.cpp \
     src/networkaccessmanagerfactory.cpp \
     src/ornappsmodel.cpp \
+    src/ornrepo.cpp \
     src/ornsecrets.cpp \
     src/ornpkdaemon.cpp \
     src/ornpktransaction.cpp \
@@ -130,7 +131,6 @@ OTHER_FILES += \
     qml/pages/SettingsPage.qml \
     qml/pages/MainPageOrderDialog.qml \
     qml/pages/LocalRpmsPage.qml \
-    qml/pages/RepoSuggestionPage.qml \
     qml/pages/CategoriesFilterPage.qml \
     qml/pages/SharePage.qml \
     qml/pages/IntervalPickerDialog.qml \
@@ -189,6 +189,9 @@ privileges.path = $$INSTALL_ROOT/usr/share/mapplauncherd/privileges.d/
 dbus.files = data/harbour.storeman.service
 dbus.path = $$INSTALL_ROOT/usr/share/dbus-1/services
 
-INSTALLS += privileges dbus
+repo.files = mentaljam-obs/ssu
+repo.path = $$INSTALL_ROOT/usr/share/
+
+INSTALLS += privileges dbus repo
 
 include(translations/translations.pri)

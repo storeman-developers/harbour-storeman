@@ -884,10 +884,6 @@
         <source>Search on OpenRepos.net</source>
         <translation>Hledat na OpenRepos</translation>
     </message>
-    <message id="orn-repo-suggestion">
-        <source>&lt;h3&gt;Enable the Storeman repository&lt;/h3&gt;&lt;p&gt;To receive the latest versions of Storeman, you need to enable its OpenRepos repository like for any other app.&lt;/p&gt;&lt;p&gt;Do you want to do it now?&lt;/p&gt;</source>
-        <translation>&lt;h3&gt;Povolte repozitář Storemana&lt;/h3&gt;&lt;p&gt;Pro obdržení nejnovějších verzí Storemana je třeba povolit jeho repozitář jako pro každou jinou aplikaci&lt;/p&gt;&lt;p&gt;Chcete to udělat hned?&lt;/p&gt;</translation>
-    </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
         <translation>Zkontrolovat aktualizace</translation>
@@ -1070,6 +1066,18 @@
     </message>
     <message id="orn-updates-check-interval-minimum">
         <source>At least 10 minutes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-check-for-self-updates-switch">
+        <source>Check for self-updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-check-for-self-updates-descr">
+        <source>Enable the Storeman OBS repository to check for Storeman updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="orn-storeman-repo-name">
+        <source>Storeman OBS Repository</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
