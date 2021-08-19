@@ -25,6 +25,7 @@ using namespace PackageKit;
     }
 
 const QLatin1String OrnPm::repoNamePrefix("openrepos-");
+const QString OrnPm::storemanRepo("mentaljam-obs");
 
 OrnPm::OrnPm(QObject *parent)
     : QObject(*new OrnPmPrivate(), parent)
@@ -113,6 +114,9 @@ void OrnPmPrivate::initialise()
         }
     }
     qDebug() << "System has" << repos.size() << "ORN repositories";
+
+    qDebug() << "Getting the Storeman OBS repository";
+    repos.insert(OrnPm::storemanRepo, !disabled.contains(OrnPm::storemanRepo));
 
     qDebug() << "Getting the list of installed packages";
     auto spool = pool_create();
@@ -650,11 +654,10 @@ QList<OrnRepo> OrnPm::repoList() const
     Q_D(const OrnPm);
 
     OrnRepoList repos;
-    auto pos = repoNamePrefix.size();
+    repos.reserve(d->repos.size());
     for (auto it = d->repos.cbegin(); it != d->repos.cend(); ++it)
     {
-        const auto &alias = it.key();
-        repos << OrnRepo{ it.value(), alias, alias.mid(pos) };
+        repos << OrnRepo{it.value(), it.key()};
     }
     return repos;
 }
@@ -666,6 +669,9 @@ void OrnPm::getUnusedRepos()
     const auto pos = repoNamePrefix.size();
 
     d->processSolvables(true, [d, &unused, pos](const auto &alias, auto spool) {
+        if (alias == storemanRepo) {
+            return;
+        }
         bool nopackages = true;
         for (int i = 0; i < spool->nsolvables; ++i)
         {
@@ -881,8 +887,9 @@ void OrnPmPrivate::getUpdates()
     QObject::connect(t, &OrnPkTransaction::Package, q, [this](quint32 info, const QString &packageId, const QString &summary) {
         Q_UNUSED(summary)
         Q_ASSERT(info == Transaction::InfoEnhancement);
-        // Filter updates only for ORN packages
-        if (OrnUtils::packageRepo(packageId).startsWith(OrnPm::repoNamePrefix))
+        // Filter updates only for ORN and Storeman packages
+        const auto alias = OrnUtils::packageRepo(packageId);
+        if (alias.startsWith(OrnPm::repoNamePrefix) || alias == OrnPm::storemanRepo)
         {
             newUpdatablePackages.insert(OrnUtils::packageName(packageId), packageId);
         }

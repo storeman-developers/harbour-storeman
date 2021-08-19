@@ -46,7 +46,6 @@ Page {
 
     onStatusChanged: {
         if (status === PageStatus.Active) {
-            Storeman.checkRepos()
             if (_initialLoad && Storeman.showRecentOnStart) {
                 _initialLoad = false
                 pageStack.push(Qt.resolvedUrl("RecentAppsPage.qml"), {

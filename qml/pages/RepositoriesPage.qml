@@ -98,9 +98,10 @@ Page {
         delegate: ListItem {
             readonly property bool _enableMenu:
                 networkManager.connected && !itemInProgress(repoAlias)
+            readonly property bool _isOrnRepo: repoAlias !== OrnPm.storemanRepo
 
             id: repoItem
-            onClicked: getAuthorId(repoAuthor)
+            onClicked: _isOrnRepo && getAuthorId(repoAuthor)
             menu: ContextMenu {
 
                 MenuItem {
@@ -123,6 +124,7 @@ Page {
                 }
 
                 MenuItem {
+                    visible: _isOrnRepo
                     enabled: _enableMenu
                     //% "Remove"
                     text: qsTrId("orb-remove")
