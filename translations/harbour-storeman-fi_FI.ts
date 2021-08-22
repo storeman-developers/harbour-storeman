@@ -397,7 +397,7 @@
     </message>
     <message id="orn-login-menu-item">
         <source>Log in to OpenRepos.net</source>
-        <translation>Kirjaudu kohteeseen OpenRepos.net</translation>
+        <translation>OpenRepos.net-kirjautuminen</translation>
     </message>
     <message id="orn-login-action">
         <source>Log in</source>
@@ -410,7 +410,7 @@
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not send your password to third-parties.</source>
-        <translation>Kirjaudu kohteeseen OpenRepos.net jättääksesi kommentteja. &lt;br /&gt;&lt;br /&gt; Storeman ei luovuta salasanaasi kolmansille osapuolille.</translation>
+        <translation>Kirjaudu OpenRepos.net-tilillesi jättääksesi kommentteja ja antaaksesi arvioita.&lt;br /&gt;&lt;br /&gt;Storeman ei luovuta salasanaasi kolmansille osapuolille.</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
@@ -489,11 +489,11 @@
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
-        <translation>Sovellus lisättiin kirjanmerkkeihin</translation>
+        <translation>Kirjanmerkki lisätty</translation>
     </message>
     <message id="orn-bookmarks-removed">
         <source>The app was removed from bookmarks</source>
-        <translation>Sovellus poistettiin kirjanmerkeistä</translation>
+        <translation>Kirjanmerkki poistettu</translation>
     </message>
     <message id="orn-no-bookmarks">
         <source>Your bookmarked applications will be shown here</source>
@@ -537,7 +537,7 @@
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
         <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
-        <translation>%2 tarvitsee %1-paketin, jota ei löydy</translation>
+        <translation>%2 tarvitsee paketin %1, jota ei löydy</translation>
     </message>
     <message id="orn-backups">
         <source>Backups</source>
@@ -799,7 +799,7 @@
     <message id="orn-dcm-user2">
         <source>Deep Thought</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>Syvä miete</translation>
+        <translation>Syvä Miete</translation>
     </message>
     <message id="orn-dcm-user1">
         <source>A little white mouse</source>
@@ -885,7 +885,7 @@
     </message>
     <message id="orn-check-for-updates-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation>Päivitykset tarkistetaan Storemanin ollessa ajossa</translation>
+        <translation>Päivitykset tarkistetaan vain silloin, kun Storeman on käynnissä</translation>
     </message>
     <message id="orn-smart-check-switch">
         <source>Smart check</source>
@@ -905,11 +905,11 @@
     </message>
     <message id="orn-error-comment-sending">
         <source>Error sending comment</source>
-        <translation>Kommentin lähettäminen ei onnistu</translation>
+        <translation>Virhe kommentin lähettämisessä</translation>
     </message>
     <message id="orn-error-comment-deletion">
         <source>Error deleting comment</source>
-        <translation>Kommentin poistaminen ei onnistu</translation>
+        <translation>Virhe kommentin poistamisessa</translation>
     </message>
     <message id="orn-error-network">
         <source>Network error</source>
@@ -953,7 +953,7 @@
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>
-        <translation>Siirty viimeksi päivitettyihin sovelluksiin avattaessa</translation>
+        <translation>Siirry Viimeksi päivitetty -sivulle kun sovellus käynnistyy</translation>
     </message>
     <message id="orn-mainpage-order">
         <source>Order items</source>
@@ -1013,7 +1013,7 @@
     </message>
     <message id="orn-donate-with">
         <source>Donate with %1</source>
-        <translation>Lahjoita %1</translation>
+        <translation>%1-lahjoitus</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
@@ -1025,43 +1025,43 @@
     </message>
     <message id="orn-app-description-full">
         <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;OpenRepos.net-sovelluskauppa Sailfish&amp;nbsp;OS:lle&lt;/p&gt;&lt;p&gt;Storeman on avoimen lähdekoodin sovellus, joka käyttää &lt;a href=&apos;%1&apos;&gt;MIT-lisenssiä&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Voit raportoida ongelmista OpenRepos.net-sivulla, tai GitHub-projektissa (allaolevat painikkeet)&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä tiedot</translation>
     </message>
     <message id="orn-unused-repos-found">
         <source>Unused repositories found</source>
-        <translation type="unfinished"></translation>
+        <translation>Käyttämättömiä pakettilähteitä havaittu</translation>
     </message>
     <message id="orn-no-unused-repos">
         <source>Unused repositories not found</source>
-        <translation type="unfinished"></translation>
+        <translation>Käyttämättömiä pakettilähteitä ei löytynyt</translation>
     </message>
     <message id="orn-search-unused-repos">
         <source>Search for unused</source>
-        <translation type="unfinished"></translation>
+        <translation>Etsi käyttämättömiä</translation>
     </message>
     <message id="orn-unused-repos-switch">
         <source>Search for unused repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Etsi käyttämättömiä pakettilähteitä</translation>
     </message>
     <message id="orn-unused-repos-switch-descr">
         <source>Search for unused repositories after removing packages.</source>
-        <translation type="unfinished"></translation>
+        <translation>Etsi käyttämättömiä pakettilähteitä sovelluksien poistamisen jälkeen</translation>
     </message>
     <message id="orn-unused-repos">
         <source>Unused repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Käyttämättömät pakettilähteet</translation>
     </message>
     <message id="orn-unused-repos-text">
         <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Seuraavista pakettilähteistä ei ole asennettu sovelluksia.&lt;/p&gt;&lt;p&gt;Poistetaanko pakettilähteet nyt?&lt;/p&gt;</translation>
     </message>
     <message id="orn-updates-check-interval-minimum">
         <source>At least 10 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>Vähintään 10 minuuttia</translation>
     </message>
     <message id="orn-check-for-self-updates-switch">
         <source>Check for self-updates</source>

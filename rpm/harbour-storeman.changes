@@ -1,3 +1,8 @@
+* Sun Aug 22 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.9
+- Add OBS repository for Storeman automatically
+- Support Storeman installer
+- Update translations
+
 * Tue Jul 20 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.8
 - Fix busy indicator on the app list page remains active after pkcon action finishes
 - Allow to set the update interval up to 48 hours

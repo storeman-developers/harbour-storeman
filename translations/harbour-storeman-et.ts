@@ -1065,15 +1065,15 @@
     </message>
     <message id="orn-check-for-self-updates-switch">
         <source>Check for self-updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontrolli, kas rakendusel on uuendusi</translation>
     </message>
     <message id="orn-check-for-self-updates-descr">
         <source>Enable the Storeman OBS repository to check for Storeman updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Võta kasutusele Storeman&apos;i OBS repositoorium ja kasutada seda rakenduse omade uuenduste kontrolliks</translation>
     </message>
     <message id="orn-storeman-repo-name">
         <source>Storeman OBS Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Storeman&apos;i OBS repositoorium</translation>
     </message>
 </context>
 </TS>

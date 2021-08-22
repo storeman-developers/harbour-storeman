@@ -1054,7 +1054,7 @@
     </message>
     <message id="orn-unused-repos-switch-descr">
         <source>Search for unused repositories after removing packages.</source>
-        <translation>Vyhľadať nepoužité sklady po odstránení balíkov</translation>
+        <translation>Vyhľadať nepoužité sklady po odstránení balíkov.</translation>
     </message>
     <message id="orn-unused-repos">
         <source>Unused repositories</source>
@@ -1070,15 +1070,15 @@
     </message>
     <message id="orn-check-for-self-updates-switch">
         <source>Check for self-updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Skontrolovať automatické aktualizácie</translation>
     </message>
     <message id="orn-check-for-self-updates-descr">
         <source>Enable the Storeman OBS repository to check for Storeman updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Povoliť Storeman OBS sklad pre kontrolu aktualizácii Storeman</translation>
     </message>
     <message id="orn-storeman-repo-name">
         <source>Storeman OBS Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Sklad Storeman OBS</translation>
     </message>
 </context>
 </TS>
