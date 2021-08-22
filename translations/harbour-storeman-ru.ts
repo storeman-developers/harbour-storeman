@@ -1072,15 +1072,15 @@ Storeman не передает ваш пароль третьим лицам.</t
     </message>
     <message id="orn-check-for-self-updates-switch">
         <source>Check for self-updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Обновлять Storeman</translation>
     </message>
     <message id="orn-check-for-self-updates-descr">
         <source>Enable the Storeman OBS repository to check for Storeman updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Включить репозиторий Storeman на OBS для автоматической проверки обновлений</translation>
     </message>
     <message id="orn-storeman-repo-name">
         <source>Storeman OBS Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Репозиторий Storeman OBS</translation>
     </message>
 </context>
 </TS>
