@@ -1,3 +1,6 @@
+* Mon Sep  6 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.10
+- Update translations
+
 * Sun Aug 22 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.9
 - Add OBS repository for Storeman automatically
 - Support Storeman installer
