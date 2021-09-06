@@ -893,7 +893,7 @@
     </message>
     <message id="orn-smart-check-descr">
         <source>Use the OpenRepos.net API to determine if there are new updates</source>
-        <translation>Usa la API de Openrepos.net para determinar si hay nuevas actualizaciones</translation>
+        <translation>Usar la API de Openrepos.net para determinar si hay nuevas actualizaciones</translation>
     </message>
     <message id="orn-reload">
         <source>Reload</source>
@@ -953,7 +953,7 @@
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>
-        <translation>Cambia a la página de paquetes actualizados recientemente al iniciar la aplicación</translation>
+        <translation>Cambiar a la página de paquetes actualizados recientemente al iniciar la aplicación</translation>
     </message>
     <message id="orn-mainpage-order">
         <source>Order items</source>
@@ -1065,7 +1065,7 @@
     </message>
     <message id="orn-check-for-self-updates-switch">
         <source>Check for self-updates</source>
-        <translation>Comprobar actualizaciones automáticas</translation>
+        <translation>Comprobar auto-actualizaciones</translation>
     </message>
     <message id="orn-check-for-self-updates-descr">
         <source>Enable the Storeman OBS repository to check for Storeman updates</source>

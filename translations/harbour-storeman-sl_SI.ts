@@ -211,11 +211,11 @@
     </message>
     <message id="orn-cat-game">
         <source>Game</source>
-        <translation>Igre</translation>
+        <translation>Igra</translation>
     </message>
     <message id="orn-cat-action">
         <source>Action</source>
-        <translation>Akcijske</translation>
+        <translation>Akcija</translation>
     </message>
     <message id="orn-cat-adventure">
         <source>Adventure</source>
@@ -1007,7 +1007,7 @@
     </message>
     <message id="orn-save-password-help">
         <source>Save password to the encrypted device storage to perform automatic re-login.</source>
-        <translation>Shrani šifirano geslo za samodejno prijavo.</translation>
+        <translation>Shrani šifrirano geslo za samodejno prijavo.</translation>
     </message>
     <message id="orn-share-link">
         <source>Share link</source>
@@ -1075,15 +1075,15 @@
     </message>
     <message id="orn-check-for-self-updates-switch">
         <source>Check for self-updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Preveri za posodobitev Storeman</translation>
     </message>
     <message id="orn-check-for-self-updates-descr">
         <source>Enable the Storeman OBS repository to check for Storeman updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Omogoči Storeman OBS skladišče za preverjanje Storeman posodobitev</translation>
     </message>
     <message id="orn-storeman-repo-name">
         <source>Storeman OBS Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Storeman OBS skladišče</translation>
     </message>
 </context>
 </TS>
