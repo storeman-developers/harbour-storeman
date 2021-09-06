@@ -1062,15 +1062,15 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     </message>
     <message id="orn-check-for-self-updates-switch">
         <source>Check for self-updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Storeman&apos;ны яңартып торырга</translation>
     </message>
     <message id="orn-check-for-self-updates-descr">
         <source>Enable the Storeman OBS repository to check for Storeman updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Storeman яңартуларын тикшерү өчен Storeman OBS репозиториясен тоташтырырга</translation>
     </message>
     <message id="orn-storeman-repo-name">
         <source>Storeman OBS Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Storeman OBS репозиториясе</translation>
     </message>
 </context>
 </TS>

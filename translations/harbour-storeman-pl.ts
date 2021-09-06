@@ -1070,15 +1070,15 @@
     </message>
     <message id="orn-check-for-self-updates-switch">
         <source>Check for self-updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Sprawdź czy jest aktualizacja</translation>
     </message>
     <message id="orn-check-for-self-updates-descr">
         <source>Enable the Storeman OBS repository to check for Storeman updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Włącz repozytorium OBS Storeman, aby sprawdzić aktualizacje Storeman</translation>
     </message>
     <message id="orn-storeman-repo-name">
         <source>Storeman OBS Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Repozytorium OBS Storeman</translation>
     </message>
 </context>
 </TS>
