@@ -70,10 +70,9 @@ ListItem {
         }
 
         MenuItem {
+            //% "Share link"
             text: qsTrId("orn-share-link")
-            onClicked: pageStack.push(Qt.resolvedUrl("../pages/SharePage.qml"), {
-                                          link: "https://openrepos.net/comment/%1#comment-%1".arg(model.commentId),
-                                      })
+            onClicked: shareAction.shareLink("https://openrepos.net/comment/%1#comment-%1".arg(model.commentId))
         }
     }
 

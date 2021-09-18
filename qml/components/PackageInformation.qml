@@ -22,10 +22,11 @@ Item {
         }
         icon.source: "image://theme/icon-m-share?" +
                      (pressed ? Theme.highlightColor : Theme.primaryColor)
-        onClicked: pageStack.push(Qt.resolvedUrl("../pages/SharePage.qml"), {
-                                      link: "https://openrepos.net/node/" + app.appId,
-                                      linkTitle: app.title,
-                                  })
+        onClicked: shareAction.shareLink("https://openrepos.net/node/" + app.appId, app.title)
+
+        ShareLinkAction {
+            id: shareAction
+        }
     }
 
     IconButton {

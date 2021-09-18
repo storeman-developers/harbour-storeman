@@ -64,6 +64,10 @@ Page {
         running: true
     }
 
+    ShareLinkAction {
+        id: shareAction
+    }
+
     SilicaFlickable {
         anchors.fill: parent
 

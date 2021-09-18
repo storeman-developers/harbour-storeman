@@ -132,7 +132,6 @@ OTHER_FILES += \
     qml/pages/MainPageOrderDialog.qml \
     qml/pages/LocalRpmsPage.qml \
     qml/pages/CategoriesFilterPage.qml \
-    qml/pages/SharePage.qml \
     qml/pages/IntervalPickerDialog.qml \
     qml/pages/UnusedReposDialog.qml \
     qml/components/AppListDelegate.qml \
@@ -167,6 +166,7 @@ OTHER_FILES += \
     qml/components/CategoriesFilterDelegate.qml \
     qml/components/IntervalView.qml \
     qml/components/ListViewPositionAnimation.qml \
+    qml/components/ShareLinkAction.qml \
     qml/models/DevelopersModel.qml \
     qml/models/TranslatorsModel.qml \
     qml/models/DummyCommentsModel.qml
