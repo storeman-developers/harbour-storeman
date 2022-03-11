@@ -1,4 +1,4 @@
-name: GitHub-actions CI build runner
+name: GitHub-actions CI build-runner
 
 env:
   sfos_target: 4.1.0.24
