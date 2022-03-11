@@ -9,7 +9,6 @@ assignees: ''
 
 #### PRODUCT
 
-<Storeman, Storeman Installer etc.>
 
 #### DESCRIPTION
 
