@@ -10,10 +10,7 @@ assignees: ''
 ## Product
 <Storeman, Storeman Installer etc.>
 
-
 ## Description
 
-
 ## Additional information
-
-(Please consider which other pieces of information may be relevant: e.g., attach relevant data, provide screenshots etc.)
+<Please consider which other pieces of information may be relevant: Attach relevant data, provide screenshots etc.>
