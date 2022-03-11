@@ -7,9 +7,6 @@ assignees: ''
 
 ---
 
-#### PRODUCT
-
-
 #### DESCRIPTION
 
 
