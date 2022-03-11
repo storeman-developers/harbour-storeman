@@ -12,12 +12,12 @@ assignees: ''
 <br />**Storeman VERSION** (Storeman → [Top pulley] About Storeman): 
 <br />
 
-### Description
+#### BUG DESCRIPTION
 
 
-### Steps to reproduce
+#### STEPS TO REPRODUCE
 
 
-### Additional information
+#### ADDITIONAL INFORMATION
 
-Please consider which other pieces of information may be relevant: Denote if this is not always reproducible, if this is a regression (then name to which older version), attach relevant data such as log files or the systemd journal, provide screenshots etc.
+<Please consider which other pieces of information may be relevant: Denote if this is not always reproducible, if this is a regression (then name to which older version), attach relevant data such as log files or the systemd journal, provide screenshots etc.>
