@@ -1,8 +1,7 @@
 name: GitHub-actions CI build runner
 
 env:
-  sfos_target32: ${{ '3.3.0.16' }}
-  sfos_target64: ${{ '4.0.1.48' }}
+  sfos_target: 4.1.0.24
 
 on:
   push:
@@ -10,7 +9,7 @@ on:
       - '*'
   pull_request:
     branches:
-      - 'devel'
+      - devel
       - 'sfos*'
 
 jobs:
@@ -26,19 +25,19 @@ jobs:
     - name: Build armv7hl
       uses: coderus/github-sfos-build@master
       with:
-        release: ${{ env.sfos_target32 }}
+        release: ${{ env.sfos_target }}
         arch: armv7hl
 
     - name: Build i486
       uses: coderus/github-sfos-build@master
       with:
-        release: ${{ env.sfos_target32 }}
+        release: ${{ env.sfos_target }}
         arch: i486
 
     - name: Build aarch64
       uses: coderus/github-sfos-build@master
       with:
-        release: ${{ env.sfos_target64 }}
+        release: ${{ env.sfos_target }}
         arch: aarch64
 
     - name: Upload build result
