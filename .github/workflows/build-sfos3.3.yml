@@ -6,7 +6,7 @@ env:
 on:
   push:
     tags:
-      - '*'
+      - 'v*-sfos3.3'
   pull_request:
     branches:
       - devel
