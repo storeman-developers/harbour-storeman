@@ -2,7 +2,7 @@ import QtQuick 2.0
 
 ListModel {
     ListElement {
-        locale: "zh_CN"
+        locale: "zh"
         coordinators: [
             ListElement { name: "0312birdzhang" }
         ]
@@ -60,7 +60,7 @@ ListModel {
     }
 
     ListElement {
-        locale: "fi_FI"
+        locale: "fi"
         coordinators: [
             ListElement { name: "hartzi" }
         ]
@@ -88,7 +88,7 @@ ListModel {
     }
 
     ListElement {
-        locale: "de_DE"
+        locale: "de"
         coordinators: [
             ListElement { name: "monkeyisland" }
         ]
@@ -115,7 +115,7 @@ ListModel {
     }
 
     ListElement {
-        locale: "hu_HU"
+        locale: "hu"
         coordinators: [
             ListElement { name: "Headarias" }
         ]
@@ -158,7 +158,7 @@ ListModel {
     }
 
     ListElement {
-        locale: "pt_BR"
+        locale: "pt"
         coordinators: [
             ListElement { name: "adrianocolvero" }
         ]
@@ -181,7 +181,7 @@ ListModel {
     }
 
     ListElement {
-        locale: "sk_SK"
+        locale: "sk"
         coordinators: [
             ListElement { name: "holask" }
         ]
@@ -190,7 +190,7 @@ ListModel {
     }
 
     ListElement {
-        locale: "sl_SI"
+        locale: "sl"
         coordinators: [
             ListElement { name: "sponka" }
         ]
