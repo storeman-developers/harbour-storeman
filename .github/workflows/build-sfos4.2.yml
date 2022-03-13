@@ -1,0 +1,59 @@
+name: GitHub-actions CI build-runner - sfos4.2 branch against SFOS 4.2.0.21 (aarch64, armv7hl, i486)
+
+env:
+  sfos_target: 4.2.0.21
+
+on:
+  push:
+    tags:
+      - 'v*-sfos4.2'
+  pull_request:
+    branches:
+      - sfos4.2
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Prepare
+      run: mkdir RPMS
+
+    - name: Build armv7hl
+      uses: coderus/github-sfos-build@master
+      with:
+        release: ${{ env.sfos_target }}
+        arch: armv7hl
+
+    - name: Build i486
+      uses: coderus/github-sfos-build@master
+      with:
+        release: ${{ env.sfos_target }}
+        arch: i486
+
+    - name: Build aarch64
+      uses: coderus/github-sfos-build@master
+      with:
+        release: ${{ env.sfos_target }}
+        arch: aarch64
+
+    - name: Upload build result
+      uses: actions/upload-artifact@v2
+      with:
+        name: rpm-build-result
+        path: RPMS
+
+    - name: Create release
+      if: contains(github.ref, 'release')
+      run: |
+        set -x
+        assets=()
+        for asset in RPMS/*.rpm; do
+          assets+=("-a" "$asset")
+        done
+        tag_name="${GITHUB_REF##*/}"
+        hub release create "${assets[@]}" -m "$tag_name" "$tag_name"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,31 @@
+name: GitHub-actions CI build-runner - devel branch against SFOS 3.3.0.14 (armv7hl)
+
+env:
+  sfos_target: 3.3.0.14
+
+on:
+  pull_request:
+    branches:
+      - devel
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Prepare
+      run: mkdir RPMS
+
+    - name: Build armv7hl
+      uses: coderus/github-sfos-build@old-stable
+      with:
+        release: ${{ env.sfos_target }}
+        arch: armv7hl
+
+    - name: Upload build result
+      uses: actions/upload-artifact@v2
+      with:
+        name: rpm-build-result
+        path: RPMS
