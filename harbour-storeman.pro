@@ -186,9 +186,6 @@ privileges.path = $$INSTALL_ROOT/usr/share/mapplauncherd/privileges.d/
 dbus.files = data/harbour.storeman.service
 dbus.path = $$INSTALL_ROOT/usr/share/dbus-1/services
 
-repo.files = mentaljam-obs/ssu
-repo.path = $$INSTALL_ROOT/usr/share/
-
 INSTALLS += privileges dbus repo
 
 include(translations/translations.pri)
