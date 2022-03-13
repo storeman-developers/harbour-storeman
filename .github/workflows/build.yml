@@ -1,7 +1,7 @@
 name: GitHub-actions CI build-runner
 
 env:
-  sfos_target: 4.1.0.24
+  sfos_target: 3.3.0.14
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
   pull_request:
     branches:
       - devel
-      - 'sfos*'
+      - sfos3.3
 
 jobs:
   build:
@@ -23,19 +23,19 @@ jobs:
       run: mkdir RPMS
 
     - name: Build armv7hl
-      uses: coderus/github-sfos-build@master
+      uses: coderus/github-sfos-build@old-stable
       with:
         release: ${{ env.sfos_target }}
         arch: armv7hl
 
     - name: Build i486
-      uses: coderus/github-sfos-build@master
+      uses: coderus/github-sfos-build@old-stable
       with:
         release: ${{ env.sfos_target }}
         arch: i486
 
     - name: Build aarch64
-      uses: coderus/github-sfos-build@master
+      uses: coderus/github-sfos-build@old-stable
       with:
         release: ${{ env.sfos_target }}
         arch: aarch64
