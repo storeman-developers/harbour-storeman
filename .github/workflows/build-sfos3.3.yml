@@ -1,4 +1,4 @@
-name: GitHub-actions CI build-runner - sfos3.3 branch against SFOS 3.3.0.14 (armv7hl, i486)
+name: CI build - sfos3.3 branch on SFOS 3.3.0.14 (armv7hl, i486)
 
 env:
   sfos_target: 3.3.0.14

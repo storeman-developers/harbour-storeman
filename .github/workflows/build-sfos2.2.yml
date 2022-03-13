@@ -1,4 +1,4 @@
-name: GitHub-actions CI build-runner - sfos3.2 branch against SFOS 2.2.0.29 (armv7hl, i486)
+name: CI build - sfos3.2 branch on SFOS 2.2.0.29 (armv7hl, i486)
 
 env:
   sfos_target: 2.2.0.29
