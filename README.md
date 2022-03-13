@@ -2,7 +2,7 @@
 
 Unofficial native OpenRepos.net client for Sailfish OS
 
-[![Release](https://img.shields.io/github/release/mentaljam/harbour-storeman.svg)](https://github.com/mentaljam/harbour-storeman/releases/latest)
+[![Release](https://img.shields.io/github/release/storeman-developers/harbour-storeman.svg)](https://github.com/storeman-developers/harbour-storeman/releases)
 
 ## Current features
 
@@ -30,13 +30,14 @@ Unofficial native OpenRepos.net client for Sailfish OS
 
 ## Installation
 
-Current RPMs to install are available at [OpenRepos.net](https://openrepos.net/content/osetr/storeman).
+The Storeman Installer for installing Storeman proper is available at [OpenRepos.net](https://openrepos.net/content/osetr/storeman-installer).
 
 ## Contributors
 
 - [Petr Tsymbarovich](https://github.com/mentaljam)
 - [Christoph](https://github.com/inta)
 - [Matti Viljanen](https://github.com/direc85)
+- [olf](https://github.com/Olf0)
 - OpenRepos service by [Basil Semuonov](https://github.com/custodian)
 - Application icon by [Laurent_C](https://openrepos.net/users/laurentc)
 
