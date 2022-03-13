@@ -9,7 +9,6 @@ on:
       - 'v*-sfos3.3'
   pull_request:
     branches:
-      - devel
       - sfos3.3
 
 jobs:
