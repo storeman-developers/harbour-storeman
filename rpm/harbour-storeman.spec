@@ -1,10 +1,10 @@
 Name:           harbour-storeman
-Summary:        OpenRepos Client for Sailfish OS
+Summary:        OpenRepos client for SailfishOS
 Version:        0.2.12
 Release:        1
 Group:          Qt/Qt
 License:        MIT
-URL:            https://github.com/mentaljam/harbour-storeman
+URL:            https://github.com/storeman-developers/harbour-storeman
 Source0:        %{name}-%{version}.tar.bz2
 
 Requires:       sailfishsilica-qt5
@@ -45,9 +45,7 @@ make %{?_smp_mflags}
 %install
 rm -rf %{buildroot}
 %qmake5_install
-desktop-file-install --delete-original       \
-  --dir %{buildroot}%{_datadir}/applications \
-   %{buildroot}%{_datadir}/applications/*.desktop
+desktop-file-install --delete-original --dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*.desktop
 
 %posttrans
 rm -f /var/cache/ssu/features.ini
