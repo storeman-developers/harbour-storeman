@@ -1,5 +1,8 @@
+* Tue Jan 27 2022 olf <https://github.com/Olf0> 0.2.12
+- Omit ssu/features.d/mentaljam-obs.ini
+
 * Sat Sep 18 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.11
-- Use the new share API on SFOS 4.2
+- Use the new share API on ≥ SFOS 4.2
 
 * Mon Sep  6 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.10
 - Update translations
