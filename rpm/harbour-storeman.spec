@@ -1,10 +1,10 @@
 Name:           harbour-storeman
-Summary:        OpenRepos Client for Sailfish OS
+Summary:        OpenRepos client for SailfishOS
 Version:        0.2.12
 Release:        1
 Group:          Qt/Qt
 License:        MIT
-URL:            https://github.com/mentaljam/harbour-storeman
+URL:            https://github.com/storeman-developers/harbour-storeman
 Source0:        %{name}-%{version}.tar.bz2
 
 Requires:       sailfishsilica-qt5
@@ -33,7 +33,7 @@ Conflicts:      %{name}-installer
 Obsoletes:      %{name}-installer
 
 %description
-Manage repositories and apps from OpenRepos.net on your Sailfish OS device.
+Storeman manages repositories and applications from OpenRepos.net on your SailfishOS device.
 
 %prep
 %setup -q -n %{name}-%{version}
@@ -45,17 +45,16 @@ make %{?_smp_mflags}
 %install
 rm -rf %{buildroot}
 %qmake5_install
-desktop-file-install --delete-original       \
-  --dir %{buildroot}%{_datadir}/applications \
-   %{buildroot}%{_datadir}/applications/*.desktop
+desktop-file-install --delete-original --dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*.desktop
 
 %posttrans
+ssu rr mentaljam-obs
 rm -f /var/cache/ssu/features.ini
-ssu ar mentaljam-obs 'https://repo.sailfishos.org/obs/home:/mentaljam/%%(release)_%%(arch)/'
+ssu ar harbour-storeman-obs 'https://repo.sailfishos.org/obs/home:/olf:/harbour-storeman/%%(release)_%%(arch)/'
 ssu ur
 
 %postun
-ssu rr mentaljam-obs
+ssu rr harbour-storeman-obs
 rm -f /var/cache/ssu/features.ini
 ssu ur
 
