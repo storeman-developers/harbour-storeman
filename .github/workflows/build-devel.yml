@@ -29,16 +29,3 @@ jobs:
       with:
         name: rpm-build-result
         path: RPMS
-
-    - name: Create release
-      if: contains(github.ref, 'release')
-      run: |
-        set -x
-        assets=()
-        for asset in RPMS/*.rpm; do
-          assets+=("-a" "$asset")
-        done
-        tag_name="${GITHUB_REF##*/}"
-        hub release create "${assets[@]}" -m "$tag_name" "$tag_name"
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
