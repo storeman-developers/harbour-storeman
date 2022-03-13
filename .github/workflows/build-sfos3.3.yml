@@ -1,4 +1,4 @@
-name: GitHub-actions CI build-runner
+name: GitHub-actions CI build-runner - sfos3.3 branch against SFOS 3.3.0.14 (armv7hl, i486)
 
 env:
   sfos_target: 3.3.0.14
@@ -33,12 +33,6 @@ jobs:
       with:
         release: ${{ env.sfos_target }}
         arch: i486
-
-    - name: Build aarch64
-      uses: coderus/github-sfos-build@old-stable
-      with:
-        release: ${{ env.sfos_target }}
-        arch: aarch64
 
     - name: Upload build result
       uses: actions/upload-artifact@v2
