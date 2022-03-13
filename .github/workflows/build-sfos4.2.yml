@@ -1,4 +1,4 @@
-name: GitHub-actions CI build-runner
+name: GitHub-actions CI build-runner - sfos4.2 branch against SFOS 4.2.0.21 (aarch64, armv7hl, i486)
 
 env:
   sfos_target: 4.2.0.21
