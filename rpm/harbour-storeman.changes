@@ -1,5 +1,18 @@
+* Sun Mar 13 2022 olf <https://github.com/Olf0> 0.2.12
+- Omit ssu/features.d/mentaljam-obs.ini
+- Delete .gitmodules, because it became superfluous
+- Create two issue templates (#169)
+- storeman.spec: Do not assign repo in global section (#172)
+- Update README.md (#167, #176, #182)
+- Create four build-*.yml files (#170, #177)
+- spec file: Update "URL:" and repository configuration (#178)
+- harbour-storeman.pro: Delete repo config file entry (#179)
+- spec file: Depend on libsolv, not libsolv0 (#180)
+- Adapt translations to #168 (#175)
+- ornpm.cpp L28: storemanRepo "mentaljam-obs"→"harbour-storeman-obs" (#183), missed in PR #172.
+
 * Sat Sep 18 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.11
-- Use the new share API on SFOS 4.2
+- Use the new share API on ≥ SFOS 4.2
 
 * Mon Sep  6 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.10
 - Update translations
