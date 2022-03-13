@@ -70,6 +70,7 @@ ListModel {
             ListElement { name: "Nrde" },
             ListElement { name: "Toxip" },
             ListElement { name: "raketti" }
+            ListElement { name: "direc85" }
         ]
         reviewers: []
     }
