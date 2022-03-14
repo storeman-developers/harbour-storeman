@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="de">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="de">
 <context>
-    <name></name>
+    <name/>
     <message id="orn-notrated">
         <source>Not rated yet</source>
         <translation>Noch nicht bewertet</translation>
@@ -353,17 +351,11 @@
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%n minute(s) ago</source>
-        <translation>
-            <numerusform>vor %n Minute</numerusform>
-            <numerusform>vor %n Minuten</numerusform>
-        </translation>
+        <translation><numerusform>vor %n Minute</numerusform><numerusform>vor %n Minuten</numerusform></translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%n hour(s) ago</source>
-        <translation>
-            <numerusform>vor %n Stunde</numerusform>
-            <numerusform>vor %n Stunden</numerusform>
-        </translation>
+        <translation><numerusform>vor %n Stunde</numerusform><numerusform>vor %n Stunden</numerusform></translation>
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
@@ -718,10 +710,7 @@
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
-        <translation>
-            <numerusform>%n Operation ist in Arbeit</numerusform>
-            <numerusform>%n Operationen sind in Arbeit</numerusform>
-        </translation>
+        <translation><numerusform>%n Operation ist in Arbeit</numerusform><numerusform>%n Operationen sind in Arbeit</numerusform></translation>
     </message>
     <message id="orn-version-available">
         <source>Available version</source>
@@ -775,17 +764,11 @@
     </message>
     <message id="orn-interval-m" numerus="yes">
         <source>%n minute(s)</source>
-        <translation>
-            <numerusform>%n Minute</numerusform>
-            <numerusform>%n Minuten</numerusform>
-        </translation>
+        <translation><numerusform>%n Minute</numerusform><numerusform>%n Minuten</numerusform></translation>
     </message>
     <message id="orn-interval-h" numerus="yes">
         <source>%n hour(s)</source>
-        <translation>
-            <numerusform>%n Stunde</numerusform>
-            <numerusform>%n Stunden</numerusform>
-        </translation>
+        <translation><numerusform>%n Stunde</numerusform><numerusform>%n Stunden</numerusform></translation>
     </message>
     <message id="orn-tag-strikeout">
         <source>S</source>
