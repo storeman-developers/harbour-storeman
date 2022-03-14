@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="sl">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="sl">
 <context>
-    <name></name>
+    <name/>
     <message id="orn-notrated">
         <source>Not rated yet</source>
         <translation>Ni ocen</translation>
@@ -353,21 +351,11 @@
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%n minute(s) ago</source>
-        <translation>
-            <numerusform>Pred %n minuto</numerusform>
-            <numerusform>Pred %n minutama</numerusform>
-            <numerusform>Pred %n minutami</numerusform>
-            <numerusform>Pred %n minutami</numerusform>
-        </translation>
+        <translation><numerusform>Pred %n minuto</numerusform><numerusform>Pred %n minutama</numerusform><numerusform>Pred %n minutami</numerusform><numerusform>Pred %n minutami</numerusform></translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%n hour(s) ago</source>
-        <translation>
-            <numerusform>Pred %n uro</numerusform>
-            <numerusform>Pred %n urama</numerusform>
-            <numerusform>Pred %n urami</numerusform>
-            <numerusform>Pred %n urami</numerusform>
-        </translation>
+        <translation><numerusform>Pred %n uro</numerusform><numerusform>Pred %n urama</numerusform><numerusform>Pred %n urami</numerusform><numerusform>Pred %n urami</numerusform></translation>
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
@@ -722,12 +710,7 @@
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
-        <translation>
-            <numerusform>%n operacija v teku</numerusform>
-            <numerusform>%n operaciji v teku</numerusform>
-            <numerusform>%n operacije v teku</numerusform>
-            <numerusform>%n operacij v teku</numerusform>
-        </translation>
+        <translation><numerusform>%n operacija v teku</numerusform><numerusform>%n operaciji v teku</numerusform><numerusform>%n operacije v teku</numerusform><numerusform>%n operacij v teku</numerusform></translation>
     </message>
     <message id="orn-version-available">
         <source>Available version</source>
@@ -781,21 +764,11 @@
     </message>
     <message id="orn-interval-m" numerus="yes">
         <source>%n minute(s)</source>
-        <translation>
-            <numerusform>%n minuta</numerusform>
-            <numerusform>%n minuti</numerusform>
-            <numerusform>%n minute</numerusform>
-            <numerusform>%n minut</numerusform>
-        </translation>
+        <translation><numerusform>%n minuta</numerusform><numerusform>%n minuti</numerusform><numerusform>%n minute</numerusform><numerusform>%n minut</numerusform></translation>
     </message>
     <message id="orn-interval-h" numerus="yes">
         <source>%n hour(s)</source>
-        <translation>
-            <numerusform>%n ura</numerusform>
-            <numerusform>%n uri</numerusform>
-            <numerusform>%n ure</numerusform>
-            <numerusform>%n ur</numerusform>
-        </translation>
+        <translation><numerusform>%n ura</numerusform><numerusform>%n uri</numerusform><numerusform>%n ure</numerusform><numerusform>%n ur</numerusform></translation>
     </message>
     <message id="orn-tag-strikeout">
         <source>S</source>
