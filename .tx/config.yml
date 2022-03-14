@@ -6,4 +6,4 @@ git:
       source_file: translations/harbour-storeman.ts
       translation_files_expression: 'translations/harbour-storeman-<lang>.ts'
   settings:
-    pr_branch_name: 'devel<br_unique_id>'
+    pr_branch_name: devel_<br_unique_id>
