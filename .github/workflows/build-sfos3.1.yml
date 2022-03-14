@@ -1,7 +1,7 @@
-name: CI build - sfos3.2 branch on SFOS 2.2.0.29 (armv7hl, i486)
+name: CI build - sfos3.2 branch for SFOS 3.1.0.12 (armv7hl, i486)
 
 env:
-  sfos_target: 2.2.0.29
+  sfos_target: 3.1.0.12
 
 on:
   push:
