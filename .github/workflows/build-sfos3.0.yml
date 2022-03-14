@@ -1,7 +1,7 @@
-name: CI build - sfos3.2 branch on SFOS 3.1.0.12 (armv7hl, i486)
+name: CI build - sfos3.2 branch on SFOS 3.0.1.11 (armv7hl)
 
 env:
-  sfos_target: 3.1.0.12
+  sfos_target: 3.0.1.11
 
 on:
   push:
@@ -26,12 +26,6 @@ jobs:
       with:
         release: ${{ env.sfos_target }}
         arch: armv7hl
-
-    - name: Build i486
-      uses: coderus/github-sfos-build@old-stable
-      with:
-        release: ${{ env.sfos_target }}
-        arch: i486
 
     - name: Upload build result
       uses: actions/upload-artifact@v2
