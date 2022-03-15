@@ -46,7 +46,16 @@ Categories:
 DeveloperName: Storeman Developers (mentaljam)
 Custom:
   Repo: %{url}
-Icon: https://raw.githubusercontent.com/storeman-developers/harbour-storeman/master/icons/harbour-storeman.svg
+Icon: %{url}/raw/master/icons/harbour-storeman.svg
+Screenshots:
+ - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-01.png
+ - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-02.png
+ - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-03.png
+ - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-04.png
+ - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-06.png
+ - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-07.png
+ - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-08.png
+ - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-09.png
 Url:
   Homepage: %{url}
   Help: %{url}/issues
