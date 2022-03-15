@@ -172,8 +172,6 @@ OTHER_FILES += \
     qml/models/DummyCommentsModel.qml
 
 OTHER_FILES += \
-    scripts/gha-build.sh \
-    scripts/gha-release.sh \
     scripts/update_categories.py \
     scripts/update_translators.py \
     rpm/harbour-storeman.changes \
@@ -189,9 +187,6 @@ privileges.path = $$INSTALL_ROOT/usr/share/mapplauncherd/privileges.d/
 dbus.files = data/harbour.storeman.service
 dbus.path = $$INSTALL_ROOT/usr/share/dbus-1/services
 
-repo.files = mentaljam-obs/ssu
-repo.path = $$INSTALL_ROOT/usr/share/
-
-INSTALLS += privileges dbus repo
+INSTALLS += privileges dbus
 
 include(translations/translations.pri)
