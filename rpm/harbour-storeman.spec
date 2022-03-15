@@ -35,15 +35,22 @@ Obsoletes:      %{name}-installer
 %description
 Storeman manages repositories and applications from OpenRepos.net on your SailfishOS device.
 
+# This description section includes metadata for SailfishOS:Chum, see
+# https://github.com/sailfishos-chum/main/blob/main/Metadata.md
 %if "%{?vendor}" == "chum"
-PackageName: Storeman 
+PackageName: Storeman for SailfishOS
 Type: desktop-application
 Categories:
  - Utilities
+ - System
 DeveloperName: Storeman Developers (mentaljam)
 Custom:
- - Repo: https://github.com/storeman-developers/harbour-storeman
-Icon: https://raw.githubusercontent.com/poetaster/harbour-storeman/master/icons/256x256/harbour-storeman.png
+  Repo: %{url}
+Icon: https://raw.githubusercontent.com/poetaster/harbour-storeman/master/icons/harbour-storeman.svg
+Url:
+  Homepage: %{url}
+  Help: %{url}/issues
+  Bugtracker: %{url}/issues
 %endif
 
 %prep
