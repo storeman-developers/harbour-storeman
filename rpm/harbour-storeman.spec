@@ -46,7 +46,7 @@ Categories:
 DeveloperName: Storeman Developers (mentaljam)
 Custom:
   Repo: %{url}
-Icon: https://raw.githubusercontent.com/poetaster/harbour-storeman/master/icons/harbour-storeman.svg
+Icon: https://raw.githubusercontent.com/storeman-developers/harbour-storeman/master/icons/harbour-storeman.svg
 Url:
   Homepage: %{url}
   Help: %{url}/issues
