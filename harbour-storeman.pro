@@ -186,6 +186,6 @@ privileges.path = $$INSTALL_ROOT/usr/share/mapplauncherd/privileges.d/
 dbus.files = data/harbour.storeman.service
 dbus.path = $$INSTALL_ROOT/usr/share/dbus-1/services
 
-INSTALLS += privileges dbus repo
+INSTALLS += privileges dbus
 
 include(translations/translations.pri)
