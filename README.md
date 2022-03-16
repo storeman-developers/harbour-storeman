@@ -43,4 +43,11 @@ The Storeman Installer for installing Storeman proper is available at [OpenRepos
 
 ## Translations
 
-Read [here](translations/README.md)
+If you want to translate Storeman to a language it does not support yet or enhance an existing translation, please [read the translations-README](translations/README.md).
+
+## Screenshots
+
+|     |     |     |     |
+| --- | --- | --- | --- |
+| ![RecentAppsPage](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-01.png) | ![AppPage](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-02.png) | ![CommentsPage](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-03.png) | ![Writing-comment-in_CommentsPage](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-04.png) |
+| ![RepositoriesPage](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-06.png) | ![InstalledAppsPage](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-07.png) | ![BookmarksPage](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-08.png) | ![RepositoryPage](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-09.png) |
