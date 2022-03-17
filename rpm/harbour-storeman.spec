@@ -7,6 +7,12 @@ License:        MIT
 URL:            https://github.com/storeman-developers/harbour-storeman
 Source0:        %{name}-%{version}.tar.bz2
 
+# Requires: sailfish-version >= 3.1.0 for the code in the sfos3.2 branch and >= 3.3.0 for the code in all other branches.
+# Note that >= 4.2.0 only exists for the changed "sharing" code (for SFOS4.2's new sharing API) in the sfos4.2 branch.
+# Requires: sailfish-version < 3.3.0 and < 4.2.0 are only counterparts to segregate the covered SFOS releases range.
+# But these two "Requires:" have become superfluous since Storeman is distributed via Sailfish-OBS, as it allows to set
+# segregated target release ranges to build Storeman from its three release branches (sfos3.2, sfos3.3 and sfos4.2).
+
 Requires:       sailfishsilica-qt5
 Requires:       nemo-qml-plugin-dbus-qt5
 Requires:       nemo-qml-plugin-notifications-qt5
@@ -43,7 +49,10 @@ Type: desktop-application
 Categories:
  - Utilities
  - System
-DeveloperName: Storeman Developers (mentaljam)
+ - Network
+ - Settings
+ - PackageManager
+DeveloperName: Storeman developers (mentaljam)
 Custom:
   Repo: %{url}
 Icon: %{url}/raw/master/icons/harbour-storeman.svg
