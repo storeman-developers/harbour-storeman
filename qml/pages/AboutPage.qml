@@ -77,17 +77,6 @@ Page {
                     text: qsTrId("orn-translations")
                     onClicked: pageStack.push(Qt.resolvedUrl("TranslationsPage.qml"))
                 }
-
-                Button {
-                    //% "Donate with %1"
-                    text: qsTrId("orn-donate-with").arg("PayPal")
-                    onClicked: Qt.openUrlExternally("https://www.paypal.me/osetr")
-                }
-
-                Button {
-                    text: qsTrId("orn-donate-with").arg("Tinkoff Bank")
-                    onClicked: Qt.openUrlExternally("https://www.tinkoff.ru/sl/AHE8JmExARH")
-                }
             }
         }
     }
