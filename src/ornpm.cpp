@@ -25,7 +25,7 @@ using namespace PackageKit;
     }
 
 const QLatin1String OrnPm::repoNamePrefix("openrepos-");
-const QString OrnPm::storemanRepo("harbour-storeman-obs");
+const QString OrnPm::storemanRepo("mentaljam-obs");
 
 OrnPm::OrnPm(QObject *parent)
     : QObject(*new OrnPmPrivate(), parent)
