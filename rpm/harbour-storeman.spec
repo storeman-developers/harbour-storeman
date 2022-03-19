@@ -1,11 +1,17 @@
 Name:           harbour-storeman
-Summary:        OpenRepos client for SailfishOS
-Version:        0.2.12
+Summary:        OpenRepos client application for SailfishOS
+Version:        0.3.0
 Release:        1
 Group:          Qt/Qt
 License:        MIT
 URL:            https://github.com/storeman-developers/harbour-storeman
 Source0:        %{name}-%{version}.tar.bz2
+
+# Requires: sailfish-version >= 3.1.0 for the code in the sfos3.2 branch and >= 3.3.0 for the code in all other branches.
+# Note that >= 4.2.0 only exists for the changed "sharing" code (for SFOS4.2's new sharing API) in the sfos4.2 branch.
+# Requires: sailfish-version < 3.3.0 and < 4.2.0 are only counterparts to segregate the covered SFOS releases range.
+# But these two "Requires:" have become superfluous since Storeman is distributed via Sailfish-OBS, as it allows to set
+# segregated target release ranges to build Storeman from its three release branches (sfos3.2, sfos3.3 and sfos4.2).
 
 Requires:       sailfishsilica-qt5
 Requires:       nemo-qml-plugin-dbus-qt5
@@ -34,6 +40,36 @@ Obsoletes:      %{name}-installer
 
 %description
 Storeman manages repositories and applications from OpenRepos.net on your SailfishOS device.
+
+# This description section includes metadata for SailfishOS:Chum, see
+# https://github.com/sailfishos-chum/main/blob/main/Metadata.md
+%if "%{?vendor}" == "chum"
+PackageName: Storeman for SailfishOS
+Type: desktop-application
+Categories:
+ - Utilities
+ - System
+ - Network
+ - Settings
+ - PackageManager
+DeveloperName: Storeman developers (mentaljam)
+Custom:
+  Repo: %{url}
+Icon: %{url}/raw/master/icons/harbour-storeman.svg
+Screenshots:
+ - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-01.png
+ - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-02.png
+ - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-03.png
+ - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-04.png
+ - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-06.png
+ - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-07.png
+ - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-08.png
+ - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-09.png
+Url:
+  Homepage: %{url}
+  Help: %{url}/issues
+  Bugtracker: %{url}/issues
+%endif
 
 %prep
 %setup -q -n %{name}-%{version}
