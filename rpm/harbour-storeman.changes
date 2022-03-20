@@ -1,3 +1,10 @@
+* Sun Mar 20 2022 olf <https://github.com/Olf0> 0.2.12
+- Add 8 screenshots, plus social media icons (#216, #232, #238) 
+- spec file: Add SailfishOS:Chum metadata (#218, #233)
+- Remove donation links (#224) 
+- README: Enhance translations title etc. (#234)
+- Update Hungarian translation
+
 * Sun Mar 13 2022 olf <https://github.com/Olf0> 0.2.12
 - Cease using a repository entry in SSU's global section (#157) by storeman.spec: Do not assign repo in global section (#172)
 - Omit ssu/features.d/mentaljam-obs.ini
@@ -11,6 +18,7 @@
 - spec file: Depend on libsolv, not libsolv0 (#180)
 - Adapt translations to #168 (#175)
 - ornpm.cpp L28: storemanRepo "mentaljam-obs"→"harbour-storeman-obs" (#183), missed in PR #172.
+- Update translations (de, es, et, fr, ru, sl, sv, tt)
 
 * Sat Sep 18 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.11
 - Use the new share API on ≥ SFOS 4.2
