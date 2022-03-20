@@ -2,7 +2,7 @@ import QtQuick 2.0
 
 ListModel {
     ListElement {
-        locale: "zh"
+        locale: "zh_CN"
         coordinators: [
             ListElement { name: "0312birdzhang" }
         ]
@@ -60,7 +60,7 @@ ListModel {
     }
 
     ListElement {
-        locale: "fi"
+        locale: "fi_FI"
         coordinators: [
             ListElement { name: "hartzi" }
         ]
@@ -69,8 +69,7 @@ ListModel {
             ListElement { name: "Ingvix" },
             ListElement { name: "Nrde" },
             ListElement { name: "Toxip" },
-            ListElement { name: "raketti" },
-            ListElement { name: "direc85" }
+            ListElement { name: "raketti" }
         ]
         reviewers: []
     }
@@ -89,7 +88,7 @@ ListModel {
     }
 
     ListElement {
-        locale: "de"
+        locale: "de_DE"
         coordinators: [
             ListElement { name: "monkeyisland" }
         ]
@@ -116,7 +115,7 @@ ListModel {
     }
 
     ListElement {
-        locale: "hu"
+        locale: "hu_HU"
         coordinators: [
             ListElement { name: "Headarias" }
         ]
@@ -159,7 +158,7 @@ ListModel {
     }
 
     ListElement {
-        locale: "pt"
+        locale: "pt_BR"
         coordinators: [
             ListElement { name: "adrianocolvero" }
         ]
@@ -182,7 +181,7 @@ ListModel {
     }
 
     ListElement {
-        locale: "sk"
+        locale: "sk_SK"
         coordinators: [
             ListElement { name: "holask" }
         ]
@@ -191,7 +190,7 @@ ListModel {
     }
 
     ListElement {
-        locale: "sl"
+        locale: "sl_SI"
         coordinators: [
             ListElement { name: "sponka" }
         ]

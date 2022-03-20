@@ -1,19 +1,5 @@
-* Sun Mar 13 2022 olf <https://github.com/Olf0> 0.2.12
-- Cease using a repository entry in SSU's global section (#157) by storeman.spec: Do not assign repo in global section (#172)
-- Omit ssu/features.d/mentaljam-obs.ini
-- Delete .gitmodules, because it became superfluous (#171)
-- .pro file, line 189: Delete repo from INSTALLS += (#204)
-- Create two issue templates (#169)
-- Update README.md (#167, #176, #182)
-- Create four build-*.yml files (#170, #177)
-- spec file: Update "URL:" and repository configuration (#178)
-- harbour-storeman.pro: Delete repo config file entry (#179)
-- spec file: Depend on libsolv, not libsolv0 (#180)
-- Adapt translations to #168 (#175)
-- ornpm.cpp L28: storemanRepo "mentaljam-obs"→"harbour-storeman-obs" (#183), missed in PR #172.
-
 * Sat Sep 18 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.11
-- Use the new share API on ≥ SFOS 4.2
+- Use the new share API on SFOS 4.2
 
 * Mon Sep  6 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.10
 - Update translations
@@ -56,44 +42,44 @@
 - Update other translations and translator model
 
 * Sat Nov 28 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.3
-- Add Tatar (thanks to Rustem Abzalov) and update other translations
-- Fix notifications on repo modification
-- Fix again handling of package transactions status
-- Fix and enhance page of local RPM files: show version and description of RPMs, prevent the page from twitching on opening
+ - Add Tatar (thanks to Rustem Abzalov) and update other translations
+ - Fix notifications on repo modification
+ - Fix again handling of package transactions status
+ - Fix and enhance page of local RPM files: show version and description of RPMs, prevent the page from twitching on opening
 
 * Sun Oct  4 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.2-1
-- Fix duplicate results in search model
-- Update translations
-- Provide separate builds for SFOS <=3.3 and >=3.4
+ - Fix duplicate results in search model
+ - Update translations
+ - Provide separate builds for SFOS <=3.3 and >=3.4
 
 * Thu Sep 24 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.1-1
-- Add links for donations
-- Better cover page with actions to refresh ORN repos and go to installed applications page if updates are available
-- Better handling of state of internet connection
-- Prevent multiple call of refresh slots
-- Update translations
+ - Add links for donations
+ - Better cover page with actions to refresh ORN repos and go to installed applications page if updates are available
+ - Better handling of state of internet connection
+ - Prevent multiple call of refresh slots
+ - Update translations
 
 * Tue Sep 22 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.0-1
-- Use IconButton instead of PushUpMenu to share an app link
-- App page: Move share, thumb-up and star icons to the right
-- Use Silica-provided size formatter (thanks Dmitry Gerasimov)
-- Track all PackageKit transactions to commit installations, removals and updates of packages that are come not from Storeman
-- Use mlite5 for reading desktop files
-- Update RMP description
-- Update Slovenian (Slovenia)
-- Many internal changes and refactoring of C++/Qt part
+ - Use IconButton instead of PushUpMenu to share an app link
+ - App page: Move share, thumb-up and star icons to the right
+ - Use Silica-provided size formatter (thanks Dmitry Gerasimov)
+ - Track all PackageKit transactions to commit installations, removals and updates of packages that are come not from Storeman
+ - Use mlite5 for reading desktop files
+ - Update RMP description
+ - Update Slovenian (Slovenia)
+ - Many internal changes and refactoring of C++/Qt part
 
 * Sat Aug 22 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.12-2
-- RPM: remove postuninstall scriplet as it breaks upgrading
+ - RPM: remove postuninstall scriplet as it breaks upgrading
 
 * Sat Aug 22 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.12-1
-- Fix "update cache" hangs after "enable all" sources
-- Rename "User applications" page to "Repository"
-- For publishers: rename "My applications" menu item to "My repository" and move it to main page
-- RPM: add postuninstall scriplet to remove lost QML files on uninstallation
-- Fix Storeman on SFOS > 3.4 when built with earlier SDK (big thanks ExPLIT for help and testing)
-- Reset recent apps model automatically on refresh timer
-- Update translations
+ - Fix "update cache" hangs after "enable all" sources
+ - Rename "User applications" page to "Repository"
+ - For publishers: rename "My applications" menu item to "My repository" and move it to main page
+ - RPM: add postuninstall scriplet to remove lost QML files on uninstallation
+ - Fix Storeman on SFOS ^3.4 when built with earlier SDK (big thanks ExPLIT for help and testing)
+ - Reset recent apps model automatically on refresh timer
+ - Update translations
 
 * Wed Aug 19 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.11-1
 - Add share menu to apps and comments
