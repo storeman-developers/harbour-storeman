@@ -1,4 +1,5 @@
-name: CI build - sfos3.3 branch for SFOS 3.3.0.14 (armv7hl, i486)
+name: CI build - sfos3.3 branch for SFOS 3.3.0.14 (armv7hl, i486) & SFOS 4.0.1.45 (aarch64)
+
 
 env:
   sfos_target: 3.3.0.14
@@ -32,6 +33,12 @@ jobs:
       with:
         release: ${{ env.sfos_target }}
         arch: i486
+    
+    - name: Build aarch64
+      uses: coderus/github-sfos-build@master
+      with:
+        release: 4.0.1.45
+        arch: aarch64
 
     - name: Upload build result
       uses: actions/upload-artifact@v2
