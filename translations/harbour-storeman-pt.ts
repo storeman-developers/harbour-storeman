@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="zh_CN">
+<TS version="2.1" language="pt">
 <context>
     <name></name>
     <message id="orn-notrated">
         <source>Not rated yet</source>
-        <translation>暂无评分</translation>
+        <translation>Não avaliado ainda</translation>
     </message>
     <message id="orn-repositories">
         <source>Repositories</source>
-        <translation>软件源</translation>
+        <translation>Repositórios</translation>
     </message>
     <message id="orn-refresh">
         <source>Refresh</source>
-        <translation>刷新</translation>
+        <translation>Atualizar</translation>
     </message>
     <message id="orn-disable">
         <source>Disable</source>
-        <translation>禁用</translation>
+        <translation>Desabilitar</translation>
     </message>
     <message id="orn-enable">
         <source>Enable</source>
-        <translation>启用</translation>
+        <translation>Habilitar</translation>
     </message>
     <message id="orn-enabled">
         <source>Enabled</source>
-        <translation>已启用</translation>
+        <translation>Habilitado</translation>
     </message>
     <message id="orn-disabled">
         <source>Disabled</source>
-        <translation>已禁用</translation>
+        <translation>Desabilitado</translation>
     </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
-        <translation>最近更新</translation>
+        <translation>Atualizações recentes</translation>
     </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
-        <translation>网络不可用</translation>
+        <translation>Rede indisponível</translation>
     </message>
     <message id="orn-today">
         <source>Today</source>
-        <translation>今天</translation>
+        <translation>Hoje</translation>
     </message>
     <message id="orn-yesterday">
         <source>Yesterday</source>
-        <translation>昨天</translation>
+        <translation>Ontém</translation>
     </message>
     <message id="orn-this-week">
         <source>This week</source>
-        <translation>本周</translation>
+        <translation>Essa semana</translation>
     </message>
     <message id="orn-this-month">
         <source>This month</source>
-        <translation>本月</translation>
+        <translation>Esse mês</translation>
     </message>
     <message id="orn-month-format">
         <source>%0 %1</source>
@@ -62,59 +62,59 @@
     </message>
     <message id="orn-adding-repo">
         <source>Adding</source>
-        <translation>正在添加软件源</translation>
+        <translation>Adicionando</translation>
     </message>
     <message id="orb-remove">
         <source>Remove</source>
-        <translation>正在移除软件源</translation>
+        <translation>Remover</translation>
     </message>
     <message id="orn-removing">
         <source>Removing</source>
-        <translation>正在移除</translation>
+        <translation>Removendo</translation>
     </message>
     <message id="orn-error">
         <source>An error occured</source>
-        <translation>发生了一个出错</translation>
+        <translation>Ocorreu um erro</translation>
     </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
-        <translation>添加软件源</translation>
+        <translation>Adicionar repositório</translation>
     </message>
     <message id="orn-repo-enable">
         <source>Enable repository</source>
-        <translation>启用软件源</translation>
+        <translation>Habilitar repositório</translation>
     </message>
     <message id="orn-install">
         <source>Install</source>
-        <translation>安装</translation>
+        <translation>Instalar</translation>
     </message>
     <message id="orn-remove">
         <source>Remove</source>
-        <translation>移除</translation>
+        <translation>Remover</translation>
     </message>
     <message id="orn-launch">
         <source>Launch</source>
-        <translation>打开</translation>
+        <translation>Executar</translation>
     </message>
     <message id="orn-package-installed">
         <source>Package %0 was successfully installed</source>
-        <translation>应用%0安装成功</translation>
+        <translation>Pacote %0 foi instalado com sucesso</translation>
     </message>
     <message id="orn-package-removed">
         <source>Package %0 was successfully removed</source>
-        <translation>应用%0被成功移除</translation>
+        <translation>Pacote %0 foi removido com sucesso</translation>
     </message>
     <message id="orn-installed">
         <source>Installed</source>
-        <translation>已安装</translation>
+        <translation>Instalado</translation>
     </message>
     <message id="orn-version-installed">
         <source>Installed version</source>
-        <translation>安装版本</translation>
+        <translation>Versão instalada</translation>
     </message>
     <message id="orn-version-updated">
         <source>Last updated</source>
-        <translation>最后更新</translation>
+        <translation>Ultima atualização</translation>
     </message>
     <message id="orn-dt-format">
         <source>yyyy-MM-dd hh:mm</source>
@@ -123,405 +123,407 @@
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
-        <translation>没有可供安装版本</translation>
+        <translation>Sem versões disponíveis</translation>
     </message>
     <message id="orn-comments">
         <source>Comments</source>
-        <translation>评论</translation>
+        <translation>Comentários</translation>
     </message>
     <message id="orn-author-apps">
         <source>More by %0</source>
-        <translation>同样来自%0</translation>
+        <translation>Mais de %0</translation>
     </message>
     <message id="orn-cat-coding-competition">
         <source>Coding Competition</source>
-        <translation>编码比赛</translation>
+        <translation>Coding Competition</translation>
     </message>
     <message id="orn-cat-applications">
         <source>Applications</source>
-        <translation>应用</translation>
+        <translation>Aplicativos</translation>
     </message>
     <message id="orn-cat-application">
         <source>Application</source>
-        <translation>应用</translation>
+        <translation>Aplicativo</translation>
     </message>
     <message id="orn-cat-ambience-themes">
         <source>Ambience &amp; Themes</source>
-        <translation>氛围和主题</translation>
+        <translation>Ambiente &amp; Temas</translation>
     </message>
     <message id="orn-cat-business">
         <source>Business</source>
-        <translation>商业</translation>
+        <translation>Negócios</translation>
     </message>
     <message id="orn-cat-city-guides-maps">
         <source>City guides &amp; maps</source>
-        <translation>城市导航和地图</translation>
+        <translation>Guias &amp; Mapas</translation>
     </message>
     <message id="orn-cat-education-science">
         <source>Education &amp; Science</source>
-        <translation>教育和科学</translation>
+        <translation>Educação &amp; Ciências</translation>
     </message>
     <message id="orn-cat-entertainment">
         <source>Entertainment</source>
-        <translation>娱乐</translation>
+        <translation>Entretenimento</translation>
     </message>
     <message id="orn-cat-music">
         <source>Music</source>
-        <translation>音乐</translation>
+        <translation>Música</translation>
     </message>
     <message id="orn-cat-network">
         <source>Network</source>
-        <translation>网络</translation>
+        <translation>Rede</translation>
     </message>
     <message id="orn-cat-news-info">
         <source>News &amp; info</source>
-        <translation>新闻和消息</translation>
+        <translation>Notícias &amp; Informação</translation>
     </message>
     <message id="orn-cat-patches">
         <source>Patches</source>
-        <translation>补丁</translation>
+        <translation>Patches</translation>
     </message>
     <message id="orn-cat-photo-video">
         <source>Photo &amp; video</source>
-        <translation>照片和视频</translation>
+        <translation>Foto &amp; Vídeo </translation>
     </message>
     <message id="orn-cat-social-networks">
         <source>Social Networks</source>
-        <translation>社交网络</translation>
+        <translation>Redes Sociais</translation>
     </message>
     <message id="orn-cat-sports">
         <source>Sports</source>
-        <translation>运动</translation>
+        <translation>Esportes</translation>
     </message>
     <message id="orn-cat-system">
         <source>System</source>
-        <translation>系统</translation>
+        <translation>Sistema</translation>
     </message>
     <message id="orn-cat-unknown">
         <source>Unknown</source>
-        <translation>未知</translation>
+        <translation>Desconhecido</translation>
     </message>
     <message id="orn-cat-utilities">
         <source>Utilities</source>
-        <translation>工具</translation>
+        <translation>Utilidades</translation>
     </message>
     <message id="orn-cat-games">
         <source>Games</source>
-        <translation>游戏</translation>
+        <translation>Jogos</translation>
     </message>
     <message id="orn-cat-game">
         <source>Game</source>
-        <translation>游戏</translation>
+        <translation>Jogo</translation>
     </message>
     <message id="orn-cat-action">
         <source>Action</source>
-        <translation>动作</translation>
+        <translation>Ação</translation>
     </message>
     <message id="orn-cat-adventure">
         <source>Adventure</source>
-        <translation>冒险</translation>
+        <translation>Aventura</translation>
     </message>
     <message id="orn-cat-arcade">
         <source>Arcade</source>
-        <translation>街机</translation>
+        <translation>Arcade</translation>
     </message>
     <message id="orn-cat-card-casino">
         <source>Card &amp; casino</source>
-        <translation>卡牌和赌场</translation>
+        <translation>Cartas &amp; Cassino</translation>
     </message>
     <message id="orn-cat-education">
         <source>Education</source>
-        <translation>教育</translation>
+        <translation>Educação</translation>
     </message>
     <message id="orn-cat-puzzle">
         <source>Puzzle</source>
-        <translation>解谜</translation>
+        <translation>Quebra-cabeças</translation>
     </message>
     <message id="orn-cat-strategy">
         <source>Strategy</source>
-        <translation>策略</translation>
+        <translation>Estratégia</translation>
     </message>
     <message id="orn-cat-trivia">
         <source>Trivia</source>
-        <translation>问答游戏</translation>
+        <translation>Trivia</translation>
     </message>
     <message id="orn-cat-translations">
         <source>Translations</source>
-        <translation>翻译</translation>
+        <translation>Traduções</translation>
     </message>
     <message id="orn-cat-fonts">
         <source>Fonts</source>
-        <translation>字体</translation>
+        <translation>Fontes</translation>
     </message>
     <message id="orn-cat-libraries">
         <source>Libraries</source>
-        <translation>库</translation>
+        <translation>Bibliotecas</translation>
     </message>
     <message id="orn-update-available">
         <source>Update available</source>
-        <translation>可用更新</translation>
+        <translation>Atualização disponível</translation>
     </message>
     <message id="orn-update">
         <source>Update</source>
-        <translation>更新</translation>
+        <translation>Atualização</translation>
     </message>
     <message id="orn-changelog">
         <source>Changelog</source>
-        <translation>更新日志</translation>
+        <translation>Changelog</translation>
     </message>
     <message id="orn-comments-withnum">
         <source>Comments (%0)</source>
-        <translation>评论(%0)</translation>
+        <translation>Comentários (%0)</translation>
     </message>
     <message id="orn-version-repo-disabled">
         <source>Enable the repository first</source>
-        <translation>先启用软件源</translation>
+        <translation>Habilitar o repositório primeiro</translation>
     </message>
     <message id="orn-search">
         <source>Search</source>
         <extracomment>The search menu item and the search page header text - should be a noun</extracomment>
-        <translation>搜索</translation>
+        <translation>Buscar</translation>
     </message>
     <message id="orn-searchpage-placeholder-noresults">
         <source>Nothing found</source>
-        <translation>什么都没有找到</translation>
+        <translation>Nada encontrado</translation>
     </message>
     <message id="orn-searchpage-placeholder-noresults-hint">
         <source>Try to change search keywords</source>
-        <translation>尝试更改搜索关键词</translation>
+        <translation>Tente mudar as palavras-chave da busca</translation>
     </message>
     <message id="orn-searchfield-placeholder">
         <source>Search</source>
         <extracomment>The search field placeholder text - should be a verb</extracomment>
-        <translation>搜索</translation>
+        <translation>Buscar</translation>
     </message>
     <message id="orn-searchpage-placeholder-default">
         <source>Search results will be shown here</source>
-        <translation>搜索结果会在这里显示</translation>
+        <translation>Os resultados da busca serão exibidos aqui</translation>
     </message>
     <message id="orn-searchpage-placeholder-default-hint">
         <source>Type some keywords in the field above</source>
-        <translation>在上述区域输入关键词</translation>
+        <translation>Digite algumas palavras-chave no campo acima</translation>
     </message>
     <message id="orn-about">
         <source>About Storeman</source>
-        <translation>关于Storeman</translation>
+        <translation>Sobre o Storeman</translation>
     </message>
     <message id="orn-translations">
         <source>Translations</source>
-        <translation>翻译</translation>
+        <translation>Traduções</translation>
     </message>
     <message id="orn-coordinators">
         <source>Coordinators</source>
-        <translation>协助者</translation>
+        <translation>Coordenadores</translation>
     </message>
     <message id="orn-translators">
         <source>Translators</source>
-        <translation>翻译者</translation>
+        <translation>Tradutores</translation>
     </message>
     <message id="orn-reviewers">
         <source>Reviewers</source>
-        <translation>审阅者</translation>
+        <translation>Revisores</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
-        <translation>出现一个网络错误</translation>
+        <translation>Ocorreu um erro de rede</translation>
     </message>
     <message id="orn-pull-refresh">
         <source>Pull down to refresh</source>
-        <translation>下拉以更新</translation>
+        <translation>Deslize para atualizar</translation>
     </message>
     <message id="orn-development">
         <source>Development</source>
-        <translation>开发</translation>
+        <translation>Desenvolvimento</translation>
     </message>
     <message id="orn-developers">
         <source>Developers</source>
-        <translation>开发者</translation>
+        <translation>Desenvolvedores</translation>
     </message>
     <message id="orn-appicon">
         <source>Application Icon</source>
-        <translation>应用图标</translation>
+        <translation>Ícone do aplicativo</translation>
     </message>
     <message id="orn-sources">
         <source>Source Code</source>
-        <translation>源代码</translation>
+        <translation>Código Fonte</translation>
     </message>
     <message id="orn-just-now">
         <source>Just now</source>
-        <translation>刚刚</translation>
+        <translation>Agora</translation>
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%n minute(s) ago</source>
         <translation>
-            <numerusform>%n分钟以前</numerusform>
+            <numerusform>%n minuto atrás</numerusform>
+            <numerusform>%n minutos atrás</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%n hour(s) ago</source>
         <translation>
-            <numerusform>%n小时以前</numerusform>
+            <numerusform>%n hora atrás</numerusform>
+            <numerusform>%n horas atrás</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
         <extracomment>Active label to navigate to the original comment - should be a noun</extracomment>
-        <translation> 回复%0</translation>
+        <translation>Responder a %0</translation>
     </message>
     <message id="orn-categories">
         <source>Categories</source>
-        <translation>分类</translation>
+        <translation>Categorias</translation>
     </message>
     <message id="orn-category-noapps">
         <source>Currently there are no apps in this category</source>
-        <translation>此分类暂无软件</translation>
+        <translation>Atualmente não existem apps nessa categoria</translation>
     </message>
     <message id="orn-cat-unknown2">
         <source>Unknown category</source>
-        <translation>未知分类</translation>
+        <translation>Categoria desconhecida</translation>
     </message>
     <message id="orn-comment-body">
         <source>Your comment</source>
-        <translation>你的评论</translation>
+        <translation>Seu comentário</translation>
     </message>
     <message id="orn-reply">
         <source>Reply</source>
         <extracomment>Menu item to reply for a comment - should be a verb</extracomment>
-        <translation>回复</translation>
+        <translation>Responder</translation>
     </message>
     <message id="orn-edit">
         <source>Edit</source>
-        <translation>编辑</translation>
+        <translation>Editar</translation>
     </message>
     <message id="orn-login-menu-item">
         <source>Log in to OpenRepos.net</source>
-        <translation>登录OpenRepos.net</translation>
+        <translation>Log in no OpenRepos.net</translation>
     </message>
     <message id="orn-login-action">
         <source>Log in</source>
-        <translation>登录</translation>
+        <translation>Log in</translation>
     </message>
     <message id="orn-username">
         <source>Username or e-mail address</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation>用户名称或邮箱地址</translation>
+        <translation>Usuário ou e-mail</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not send your password to third-parties.</source>
-        <translation>登录 OpenRepos.net 以评论软件或回复他人评论。&lt;br /&gt;&lt;br /&gt;Storeman 不会将你的密码保存到第三方。</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
-        <translation>你已成功登录OpenRepos.net</translation>
+        <translation>Você logou com sucesso no OpenRepos.net</translation>
     </message>
     <message id="orn-loggedout-message">
         <source>You have logged out from the OpenRepos.net</source>
-        <translation> 你已登出OpenRepos.net</translation>
+        <translation>Você desconectou do OpenRepos.net</translation>
     </message>
     <message id="orn-login-error-title">
         <source>Login error</source>
-        <translation>登录错误</translation>
+        <translation>Erro no Login</translation>
     </message>
     <message id="orn-login-error-message">
         <source>Could not log in the OpenRepos.net - check your credentials and network connection</source>
-        <translation>不能登录OpenRepos.net，请检查你的凭证和网络连接</translation>
+        <translation>Não foi possível conectar ao OpenRepos.net - Cheque suas credenciais e  a conexão com a internet.</translation>
     </message>
     <message id="orn-loggedin-menu-item">
         <source>Logged in as %0</source>
-        <translation>登录为%0</translation>
+        <translation>Logado como %0</translation>
     </message>
     <message id="orn-logout-action">
         <source>Log out</source>
         <extracomment>Menu item</extracomment>
-        <translation>登出</translation>
+        <translation>Sair</translation>
     </message>
     <message id="orn-logout-remorse">
         <source>Logging out</source>
         <extracomment>Remorse text</extracomment>
-        <translation>登出中</translation>
+        <translation>Saindo</translation>
     </message>
     <message id="orn-comment-edit-label">
         <source>Edit your comment</source>
-        <translation>编辑你的评论</translation>
+        <translation>Edite seu comentário</translation>
     </message>
     <message id="orn-comment-update">
         <source>Update</source>
         <extracomment>Update a comment</extracomment>
-        <translation>更新</translation>
+        <translation>Atualize</translation>
     </message>
     <message id="orn-comment-send">
         <source>Send</source>
-        <translation>发送</translation>
+        <translation>Envie</translation>
     </message>
     <message id="orn-authorisation-expires-summary">
         <source>Authorisation expires</source>
-        <translation>授权已失效</translation>
+        <translation>Autorização expirou</translation>
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
-        <translation>授权已失效 </translation>
+        <translation>Autorização expirada.</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
-        <translation>点击重新授权</translation>
+        <translation>Clique para reautorizar</translation>
     </message>
     <message id="orn-enable-all">
         <source>Enable all</source>
-        <translation>全部启用</translation>
+        <translation>Habilitar tudo</translation>
     </message>
     <message id="orn-disable-all">
         <source>Disable all</source>
-        <translation>全部禁用</translation>
+        <translation>Desabilitar tudo</translation>
     </message>
     <message id="orn-enabling-all">
         <source>Enabling all</source>
-        <translation>正在启用全部</translation>
+        <translation>Habilitando tudo</translation>
     </message>
     <message id="orn-disabling-all">
         <source>Disabling all</source>
-        <translation>正在禁用全部</translation>
+        <translation>Desabilitando tudo</translation>
     </message>
     <message id="orn-installed-apps">
         <source>Installed applications</source>
-        <translation>已安装的应用</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
-        <translation>软件已加入书签</translation>
+        <translation>O app foi adicionado aos favoritos</translation>
     </message>
     <message id="orn-bookmarks-removed">
         <source>The app was removed from bookmarks</source>
-        <translation>软件已从书签中移除</translation>
+        <translation>O app foi removido dos favoritos</translation>
     </message>
     <message id="orn-no-bookmarks">
         <source>Your bookmarked applications will be shown here</source>
-        <translation>你收藏的软件会在这里显示</translation>
+        <translation>Seus apps marcados como favoritos serão exibidos aqui</translation>
     </message>
     <message id="orn-bookmarks">
         <source>Bookmarks</source>
-        <translation>书签</translation>
+        <translation>Favoritos</translation>
     </message>
     <message id="orn-no-repos">
         <source>No OpenRepos repositories have been added yet</source>
-        <translation>到目前为止尚无添加的OpenRepos软件源</translation>
+        <translation>Nenhum repositório do OpenRepos.net foi adicionado</translation>
     </message>
     <message id="orn-add-repo-hint">
         <source>You can add a repository from an application page</source>
-        <translation>你可以从一个应用页面添加软件源</translation>
+        <translation>Você pode adicionar um repositório de uma página de aplicativo</translation>
     </message>
     <message id="orn-refresh-cache">
         <source>Refresh cache</source>
-        <translation>更新缓存</translation>
+        <translation>Atualizar cache</translation>
     </message>
     <message id="orn-tag-underscore">
         <source>U</source>
         <extracomment>Tag underscore</extracomment>
-        <translation>U</translation>
+        <translation>S</translation>
     </message>
     <message id="orn-tag-strong">
         <source>B</source>
         <extracomment>Tag strong</extracomment>
-        <translation>B</translation>
+        <translation>N</translation>
     </message>
     <message id="orn-tag-emphasize">
         <source>I</source>
@@ -530,497 +532,500 @@
     </message>
     <message id="orn-updates-available-summary">
         <source>Updates available</source>
-        <translation>有可供更新</translation>
+        <translation>Atualizações disponíveis</translation>
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
         <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
-        <translation>没有提供被%2需要的%1</translation>
+        <translation>Nada fornece %1 necessário por %2</translation>
     </message>
     <message id="orn-backups">
         <source>Backups</source>
-        <translation>备份</translation>
+        <translation>Backups</translation>
     </message>
     <message id="orn-backup-description">
         <source>Backup and restore repos and installed apps</source>
-        <translation>备份恢复软件源和安装的软件</translation>
+        <translation>Faça Backup e Restaure repos e apps instalados</translation>
     </message>
     <message id="orn-create-backup">
         <source>Create a backup</source>
-        <translation>创建一个备份</translation>
+        <translation>Criar um backup</translation>
     </message>
     <message id="orn-backup-error">
         <source>Backup error</source>
-        <translation>备份错误</translation>
+        <translation>Erro no backup</translation>
     </message>
     <message id="orn-backup-error-directory">
         <source>Could not create directory</source>
-        <translation>不能创建目录</translation>
+        <translation>Não foi possível criar diretório</translation>
     </message>
     <message id="orn-restore-title">
         <source>Restore from a file</source>
-        <translation>从一个文件恢复</translation>
+        <translation>Restaurar de um arquivo</translation>
     </message>
     <message id="orn-restore">
         <source>Restore</source>
-        <translation>恢复</translation>
+        <translation>Restaurar</translation>
     </message>
     <message id="orn-restore-hint">
         <source>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</source>
-        <translation>恢复OpenRepos软件源，从选取的文件安装软件。这个操作不会影响你目前的软件源并且不会移除已安装的软件。</translation>
+        <translation>Restaurar OpenRepos.net repositórios e aplicativos instalados do arquivo selecionado. Essa ação não afetará seus repositórios atuais e não removerá aplicativos instalados.</translation>
     </message>
     <message id="orn-created">
         <source>Created</source>
-        <translation>创建</translation>
+        <translation>Criado</translation>
     </message>
     <message id="orn-total-repos">
         <source>Total repositories</source>
-        <translation>全部软件源</translation>
+        <translation>Todos os repositórios</translation>
     </message>
     <message id="orn-details">
         <source>Details</source>
-        <translation>详情</translation>
+        <translation>Detalhes</translation>
     </message>
     <message id="orn-backups-placeholder">
         <source>Backups will be shown here</source>
-        <translation>备份会展示在此</translation>
+        <translation>Backups serão exibidos aqui</translation>
     </message>
     <message id="orn-restoring-repos">
         <source>Restoring repositories</source>
-        <translation>恢复软件源中</translation>
+        <translation>Restaurando repositórios</translation>
     </message>
     <message id="orn-refreshing-repos">
         <source>Refreshing repositories</source>
-        <translation>更新软件源中</translation>
+        <translation>Atualizando repositórios</translation>
     </message>
     <message id="orn-searching-packages">
         <source>Searching packages</source>
-        <translation>搜索应用中</translation>
+        <translation>Buscando pacotes</translation>
     </message>
     <message id="orn-installing-repos">
         <source>Installing packages</source>
-        <translation>安装应用中</translation>
+        <translation>Instalando pacotes</translation>
     </message>
     <message id="orn-restoring-title">
         <source>Restoring</source>
-        <translation>恢复中</translation>
+        <translation>Restaurando</translation>
     </message>
     <message id="orn-success-backup">
         <source>Successful backup</source>
-        <translation>备份成功</translation>
+        <translation>Backup concluído</translation>
     </message>
     <message id="orn-success-restore">
         <source>Successful restore</source>
-        <translation>恢复成功</translation>
+        <translation>Restauração concluída</translation>
     </message>
     <message id="orn-installed-packages">
         <source>Installed packages</source>
-        <translation>安装的应用</translation>
+        <translation>Pacotes instalados</translation>
     </message>
     <message id="orn-login2comment">
         <source>Login to comment</source>
-        <translation>登录以评论</translation>
+        <translation>Logue para comentar</translation>
     </message>
     <message id="orn-backup">
         <source>Backup</source>
-        <translation>备份</translation>
+        <translation>Backup</translation>
     </message>
     <message id="orn-backup-hint">
         <source>&lt;h2&gt;Backup to a file&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.&lt;/p&gt;</source>
-        <translation>&lt;h2&gt;备份到文件&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;备份允许保存你目前的OpenRepos软件源、已安装的应用和收藏夹，以便后面恢复它们（例如恢复出厂设置后）。每个备份是一个储存于&lt;i&gt;~/Documents/Storeman&lt;/i&gt;目录的文件。&lt;br /&gt;&lt;br /&gt;&lt;b&gt;注意！&lt;/b&gt;在执行恢复重置之前，你应该将你的备份手动复制到一个安全的地方。可能是你的储存卡，外部设备，云储存或其它地方。</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
-        <translation>正在初始化</translation>
+        <translation>Inicializando</translation>
     </message>
     <message id="orn-pmstate-addingrepo">
         <source>Adding repo %0</source>
-        <translation>正在添加软件源%0</translation>
+        <translation>Adicionando repo %0</translation>
     </message>
     <message id="orn-pmstate-removingrepo">
         <source>Removing repo %0</source>
-        <translation>正在移除软件源%0</translation>
+        <translation>Removendo repo %0</translation>
     </message>
     <message id="orn-pmstate-enablingrepo">
         <source>Enabling repo %0</source>
-        <translation>正在启用软件源%0</translation>
+        <translation>Habilitando repo %0</translation>
     </message>
     <message id="orn-pmstate-disablingrepo">
         <source>Disabling repo %0</source>
-        <translation> 正在禁用软件源%0</translation>
+        <translation>Desabilitando repo %0</translation>
     </message>
     <message id="orn-pmstate-refreshingrepo">
         <source>Refreshing %0</source>
-        <translation>正在更新软件源%0</translation>
+        <translation>Atualizando %0</translation>
     </message>
     <message id="orn-pmstate-installingpackage">
         <source>Installing package %0</source>
-        <translation>正在安装应用 %0</translation>
+        <translation>Instalando pacote %0</translation>
     </message>
     <message id="orn-pmstate-removingpackage">
         <source>Removing package %0</source>
-        <translation> 正在移除应用%0</translation>
+        <translation>Removendo pacote %0</translation>
     </message>
     <message id="orn-pmstate-updatingpackage">
         <source>Updating package %0</source>
-        <translation>  正在更新应用%0</translation>
+        <translation>Atualizando pacote %0</translation>
     </message>
     <message id="orn-repo-removed">
         <source>The repository %0 was removed</source>
-        <translation> 软件源%0已移除</translation>
+        <translation>O repositório %0 foi removido</translation>
     </message>
     <message id="orn-repo-added">
         <source>The repository %0 was added</source>
-        <translation>软件源%0已添加</translation>
+        <translation>O repositório %0 foi adicionado</translation>
     </message>
     <message id="orn-repo-disabled">
         <source>The repository %0 was disabled</source>
-        <translation>软件源%0已禁用</translation>
+        <translation>O repositório %0 foi desabilitado</translation>
     </message>
     <message id="orn-repo-enabled">
         <source>The repository %0 was enabled</source>
-        <translation>软件源%0已启用</translation>
+        <translation>O repositório %0 foi habilitado</translation>
     </message>
     <message id="orn-not-installed">
         <source>Not installed</source>
-        <translation>尚未安装</translation>
+        <translation>Não instalado</translation>
     </message>
     <message id="orn-installing">
         <source>Installing</source>
-        <translation>安装中</translation>
+        <translation>Instalando</translation>
     </message>
     <message id="orn-unknown">
         <source>Unknown</source>
-        <translation>未知</translation>
+        <translation>Desconhecido</translation>
     </message>
     <message id="orn-updating">
         <source>Updating</source>
-        <translation>更新中</translation>
+        <translation>Atualizando</translation>
     </message>
     <message id="orn-version-available-global">
         <source>Available in other repositories</source>
-        <translation>在其它软件源中可用</translation>
+        <translation>Disponível em outros repositórios</translation>
     </message>
     <message id="orn-installed-apps-description">
         <source>Only from enabled repositories</source>
-        <translation>仅来自启用的软件源</translation>
+        <translation>Apenas de repositórios habilitados</translation>
     </message>
     <message id="orn-update-all">
         <source>Update all</source>
-        <translation>全部更新</translation>
+        <translation>Atualizar tudo</translation>
     </message>
     <message id="orn-no-installed-apps">
         <source>Could not find any applications installed from OpenRepos</source>
-        <translation>不能找到任何来自OpenRepos的已安装应用</translation>
+        <translation>Não foi possível encontrar aplicativos instalados do OpenRepos</translation>
     </message>
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
         <translation>
-            <numerusform>%n项操作正在执行中</numerusform>
+            <numerusform>%n operações em progresso</numerusform>
+            <numerusform>%n operações em progresso</numerusform>
         </translation>
     </message>
     <message id="orn-version-available">
         <source>Available version</source>
-        <translation>可用版本</translation>
+        <translation>Versão disponível</translation>
     </message>
     <message id="orn-error-packagenotfound">
         <source>Couldn&apos;t find package</source>
-        <translation>不能找到应用包</translation>
+        <translation>Não foi possível encontrar pacote</translation>
     </message>
     <message id="orn-size-installed">
         <source>Installed size</source>
-        <translation>安装后大小</translation>
+        <translation>Tamanho instalado</translation>
     </message>
     <message id="orn-size-download-install">
         <source>Download / install size</source>
-        <translation>下载/安装大小</translation>
+        <translation>Download / Tamanho instalado</translation>
     </message>
     <message id="orn-cat-public-transport">
         <source>Public Transport</source>
-        <translation>公共交通</translation>
+        <translation>Transporte Público</translation>
     </message>
     <message id="orn-comments-wait">
         <source>Wait for users&apos; feedback</source>
         <extracomment>This will be shown to an application author</extracomment>
-        <translation>等待用户反馈</translation>
+        <translation>Aguarde pelo feedback dos usuários</translation>
     </message>
     <message id="orn-comments-bethefirst">
         <source>Be the first to comment</source>
         <extracomment>This will be shown to a normal user</extracomment>
-        <translation>成为第一个评论的人</translation>
+        <translation>Seja o primeiro a comentar</translation>
     </message>
     <message id="orn-comments-nocomments">
         <source>There is nothing here yet</source>
-        <translation>这里至今什么都没有</translation>
+        <translation>Ainda não há nada aqui</translation>
     </message>
     <message id="orn-settings">
         <source>Settings</source>
-        <translation>设置</translation>
+        <translation>Configurações</translation>
     </message>
     <message id="orn-updates">
         <source>Updates</source>
-        <translation>更新</translation>
+        <translation>Atualizações</translation>
     </message>
     <message id="orn-updates-notification-switch">
         <source>Show updates notification</source>
-        <translation>显示更新通知</translation>
+        <translation>Mostrar notificações de atualizações</translation>
     </message>
     <message id="orn-updates-check-interval">
         <source>Updates check interval</source>
-        <translation>检查更新间隔</translation>
+        <translation>Intervalo entre checagem de atualizações</translation>
     </message>
     <message id="orn-interval-m" numerus="yes">
         <source>%n minute(s)</source>
         <translation>
-            <numerusform>%n 分钟</numerusform>
+            <numerusform>%n minuto</numerusform>
+            <numerusform>%n minutos</numerusform>
         </translation>
     </message>
     <message id="orn-interval-h" numerus="yes">
         <source>%n hour(s)</source>
         <translation>
-            <numerusform>%n 小时</numerusform>
+            <numerusform>%n hora</numerusform>
+            <numerusform>%n horas</numerusform>
         </translation>
     </message>
     <message id="orn-tag-strikeout">
         <source>S</source>
         <extracomment>Tag strikeout</extracomment>
-        <translation>S</translation>
+        <translation>I</translation>
     </message>
     <message id="orn-hint-commentfield">
         <source>Swipe to see all the tag buttons</source>
-        <translation>轻扫查看全部标签按钮</translation>
+        <translation>Deslize para ver todas as tags</translation>
     </message>
     <message id="orn-dcm-user2">
         <source>Deep Thought</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>深思</translation>
+        <translation>Pensador Profundo</translation>
     </message>
     <message id="orn-dcm-user1">
         <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>一只小白鼠</translation>
+        <translation>Um ratinho branco</translation>
     </message>
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>关于生命、宇宙、万物的终极问题的答案是什么？</translation>
+        <translation>Qual é a Resposta para a vida, o Universo e Tudo Mais?</translation>
     </message>
     <message id="orn-hint-commentdelegate-created">
         <source>7.5 million years ago</source>
-        <translation>750万年以前</translation>
+        <translation>7.5 milhões de anos atrás</translation>
     </message>
     <message id="orn-hint-commentdelegate">
         <source>Tap to navigate to the replied comment</source>
-        <translation>点击以查看回复的评论</translation>
+        <translation>Toque para navegar até o comentário respondido</translation>
     </message>
     <message id="orn-tags">
         <source>Tags</source>
-        <translation>标签</translation>
+        <translation>Tags</translation>
     </message>
     <message id="orn-tag-apps">
         <source>Tagged Applications</source>
-        <translation>标记的应用</translation>
+        <translation>Aplicativos com Tags</translation>
     </message>
     <message id="orn-rate-app">
         <source>Rate the application</source>
-        <translation>给应用评分</translation>
+        <translation>Avalie o aplicativo</translation>
     </message>
     <message id="orn-vote-send">
         <source>Your vote has been sent</source>
-        <translation>你的提议已发送</translation>
+        <translation>Seu voto foi enviado</translation>
     </message>
     <message id="orn-login2rate">
         <source>Log in to rate the application</source>
-        <translation>登录给应用评分</translation>
+        <translation>Faça login para avaliar o aplicativo</translation>
     </message>
     <message id="orn-hint-rating">
         <source>Tap to rate the application</source>
-        <translation>点击给应用评分</translation>
+        <translation>Toque para avaliar o aplicativo</translation>
     </message>
     <message id="orn-local-rpms">
         <source>Local RPM files</source>
-        <translation>本地RPM文件</translation>
+        <translation>Arquivos RPM locais</translation>
     </message>
     <message id="orn-delete">
         <source>Delete</source>
-        <translation>删除</translation>
+        <translation>Excluir</translation>
     </message>
     <message id="orn-deleting">
         <source>Deleting</source>
-        <translation>删除中</translation>
+        <translation>Excluindo</translation>
     </message>
     <message id="orn-no-local-rpms">
         <source>No local RPM files were found</source>
-        <translation>没有发现本地RPM文件</translation>
+        <translation>Nenhum arquivo RPM local foi encontrado</translation>
     </message>
     <message id="orn-deletion-error">
         <source>Failed to delete</source>
-        <translation>删除失败</translation>
+        <translation>Falha ao excluir</translation>
     </message>
     <message id="orn-remove-all">
         <source>Remove all</source>
-        <translation>全部移除</translation>
+        <translation>Remover tudo</translation>
     </message>
     <message id="orn-removing-all">
         <source>Removing all</source>
-        <translation>全部移除中</translation>
+        <translation>Removendo tudo</translation>
     </message>
     <message id="orn-repo-allremoved">
         <source>All repositories were removed</source>
-        <translation>所有软件源均被移除</translation>
+        <translation>Todos os repositórios foram removidos</translation>
     </message>
     <message id="orn-search-on-openrepos">
         <source>Search on OpenRepos.net</source>
-        <translation>在OpenRepos.net搜索</translation>
+        <translation>Buscar em OpenRepos.net</translation>
     </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
-        <translation>检查更新</translation>
+        <translation>Procurar atualizações</translation>
     </message>
     <message id="orn-check-for-updates-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation>仅当Storeman运行的时候检查更新</translation>
+        <translation>Somente é possível buscar atualizações quando o Storeman está em execução.</translation>
     </message>
     <message id="orn-smart-check-switch">
         <source>Smart check</source>
-        <translation>智能检查</translation>
+        <translation>Verificação inteligente</translation>
     </message>
     <message id="orn-smart-check-descr">
         <source>Use the OpenRepos.net API to determine if there are new updates</source>
-        <translation>使用OpenRepos.net API以确定是否有更新</translation>
+        <translation>Usar a API do OpenRepos.net para verificar atualizações</translation>
     </message>
     <message id="orn-reload">
         <source>Reload</source>
-        <translation>重新加载</translation>
+        <translation>Recarregar</translation>
     </message>
     <message id="orn-no-packages">
         <source>No packages available</source>
-        <translation>没有可用的包</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-error-comment-sending">
         <source>Error sending comment</source>
-        <translation>发送评论出错</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-error-comment-deletion">
         <source>Error deleting comment</source>
-        <translation>删除评论出错</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-error-network">
         <source>Network error</source>
-        <translation>网络错误</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-hint-bookmark">
         <source>Tap to bookmark the application</source>
-        <translation>点击收藏此应用</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-bad-appid">
         <source>Invalid package ID %1</source>
-        <translation>无效的包ID %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-backup-filenameph">
         <source>A file name for backup</source>
-        <translation>一个备份的文件名</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-file-exists">
         <source>File already exists</source>
-        <translation>文件已经存在</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-backup-items">
         <source>What to backup</source>
-        <translation>备份什么</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-backup-apps">
         <source>Installed applications</source>
-        <translation>已安装的应用</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
-        <translation>再次点击以关闭提示</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-mainpage">
         <source>Main page</source>
-        <translation>主页</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-show-recent-switch">
         <source>Show recently updated on start</source>
-        <translation>启动时显示最近更新</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>
-        <translation>启动时切换到最近更新的软件页面</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-mainpage-order">
         <source>Order items</source>
-        <translation>排序</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-reset">
         <source>Reset</source>
-        <translation>重置</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-mainpage-order-description">
         <source>Drag items to change their order</source>
-        <translation>拖动来改变他们的顺序</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-cat-adult-content">
         <source>Adult Content</source>
-        <translation>成人内容</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-categories-filter">
         <source>Categories filter</source>
-        <translation>分类筛选</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-categories-filter-descr">
         <source>Select which categories to show</source>
-        <translation>选择要显示的分类</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-pmstate-refreshingcache">
         <source>Refreshing of cache</source>
-        <translation>刷新缓存</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-refresh-cache-switch">
         <source>Refresh cache after system upgrade</source>
-        <translation>系统升级之后刷新缓存</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-refresh-cache-switch-descr">
         <source>Force refreshing of cache of all repositories after system upgrade</source>
-        <translation>系统更新之后，强制刷新所有软件源的缓存数据</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-save-password">
         <source>Save password</source>
-        <translation>保存密码</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-save-password-help">
         <source>Save password to the encrypted device storage to perform automatic re-login.</source>
-        <translation>保存密码到加密设备存储以执行自动登录。</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-share-link">
         <source>Share link</source>
-        <translation>分享链接</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-repository">
         <source>Repository</source>
-        <translation>软件源</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-myrepository">
         <source>My repository</source>
-        <translation>我的软件库</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-donate-with">
         <source>Donate with %1</source>
-        <translation>通过%1捐赠</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
-        <translation>有可用更新</translation>
+        <translation type="unfinished">Atualizações disponíveis</translation>
     </message>
     <message id="orn-package-updated">
         <source>Package %0 was successfully updated</source>
-        <translation>包 %0 已成功更新</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-app-description-full">
         <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
-        <translation>&lt;p&gt;原生旗鱼系统 OpenRepos.net 客户端&lt;/p&gt;&lt;p&gt;这是一个在&lt;a href=&apos;%1&apos;&gt;MIT许可证&lt;/a&gt;下分发的开源软件&lt;/p&gt;&lt;p&gt;你可以通过OpenRepos.net 或 GitHub 报告问题（使用下方按钮）&lt;/p&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>

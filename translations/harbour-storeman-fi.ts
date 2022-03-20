@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.1" language="fi">
 <context>
     <name></name>
     <message id="orn-notrated">
         <source>Not rated yet</source>
-        <translation>Noch nicht bewertet</translation>
+        <translation>Ei arvioita</translation>
     </message>
     <message id="orn-repositories">
         <source>Repositories</source>
-        <translation>Softwarequellen</translation>
+        <translation>Pakettilähteet</translation>
     </message>
     <message id="orn-refresh">
         <source>Refresh</source>
-        <translation>Aktualisieren</translation>
+        <translation>Virkistä</translation>
     </message>
     <message id="orn-disable">
         <source>Disable</source>
-        <translation>Deaktivieren</translation>
+        <translation>Poista käytöstä</translation>
     </message>
     <message id="orn-enable">
         <source>Enable</source>
-        <translation>Aktivieren</translation>
+        <translation>Ota käyttöön</translation>
     </message>
     <message id="orn-enabled">
         <source>Enabled</source>
-        <translation>Aktiviert</translation>
+        <translation>Käytössä</translation>
     </message>
     <message id="orn-disabled">
         <source>Disabled</source>
-        <translation>Deaktiviert</translation>
+        <translation>Ei käytössä</translation>
     </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
-        <translation>Kürzlich aktualisiert</translation>
+        <translation>Viimeksi päivitetty</translation>
     </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
-        <translation>Keine Netzwerkverbindung</translation>
+        <translation>Verkkoon ei saada yhteyttä</translation>
     </message>
     <message id="orn-today">
         <source>Today</source>
-        <translation>Heute</translation>
+        <translation>Tänään</translation>
     </message>
     <message id="orn-yesterday">
         <source>Yesterday</source>
-        <translation>Gestern</translation>
+        <translation>Eilen</translation>
     </message>
     <message id="orn-this-week">
         <source>This week</source>
-        <translation>Diese Woche</translation>
+        <translation>Tällä viikolla</translation>
     </message>
     <message id="orn-this-month">
         <source>This month</source>
-        <translation>Diesen Monat</translation>
+        <translation>Tässä kuussa</translation>
     </message>
     <message id="orn-month-format">
         <source>%0 %1</source>
@@ -62,184 +62,184 @@
     </message>
     <message id="orn-adding-repo">
         <source>Adding</source>
-        <translation>Hinzufügen</translation>
+        <translation>Lisätään</translation>
     </message>
     <message id="orb-remove">
         <source>Remove</source>
-        <translation>Entfernen</translation>
+        <translation>Poista</translation>
     </message>
     <message id="orn-removing">
         <source>Removing</source>
-        <translation>Entfernen</translation>
+        <translation>Poistetaan</translation>
     </message>
     <message id="orn-error">
         <source>An error occured</source>
-        <translation>Ein Fehler ist aufgetreten</translation>
+        <translation>Tapahtui virhe</translation>
     </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
-        <translation>Quelle hinzufügen</translation>
+        <translation>Lisää pakettilähde</translation>
     </message>
     <message id="orn-repo-enable">
         <source>Enable repository</source>
-        <translation>Quelle aktivieren</translation>
+        <translation>Ota pakettilähde käyttöön</translation>
     </message>
     <message id="orn-install">
         <source>Install</source>
-        <translation>Installieren</translation>
+        <translation>Asenna</translation>
     </message>
     <message id="orn-remove">
         <source>Remove</source>
-        <translation>Entfernen</translation>
+        <translation>Poista</translation>
     </message>
     <message id="orn-launch">
         <source>Launch</source>
-        <translation>Starten</translation>
+        <translation>Avaa</translation>
     </message>
     <message id="orn-package-installed">
         <source>Package %0 was successfully installed</source>
-        <translation>Paket %0 wurde erfolgreich installiert</translation>
+        <translation>%0 paketti asennettiin onnistuneesti</translation>
     </message>
     <message id="orn-package-removed">
         <source>Package %0 was successfully removed</source>
-        <translation>Paket %0 wurde erfolgreich entfernt</translation>
+        <translation>%0 paketti poistettiin onnistuneesti</translation>
     </message>
     <message id="orn-installed">
         <source>Installed</source>
-        <translation>Installiert</translation>
+        <translation>Asennettu</translation>
     </message>
     <message id="orn-version-installed">
         <source>Installed version</source>
-        <translation>Installierte Version</translation>
+        <translation>Asennettu versio</translation>
     </message>
     <message id="orn-version-updated">
         <source>Last updated</source>
-        <translation>Letzte Aktualisierung</translation>
+        <translation>Viimeksi päivitetty</translation>
     </message>
     <message id="orn-dt-format">
         <source>yyyy-MM-dd hh:mm</source>
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation>dd.MM.yyyy hh:mm</translation>
+        <translation>hh:mm, dd.MM.yyyy</translation>
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
-        <translation>Keine Versionen verfügbar</translation>
+        <translation>Ei saatavilla olevia versioita</translation>
     </message>
     <message id="orn-comments">
         <source>Comments</source>
-        <translation>Kommentare</translation>
+        <translation>Kommentit</translation>
     </message>
     <message id="orn-author-apps">
         <source>More by %0</source>
-        <translation>Mehr von %0</translation>
+        <translation>Lisää tekijältä %0</translation>
     </message>
     <message id="orn-cat-coding-competition">
         <source>Coding Competition</source>
-        <translation>Coding Competition</translation>
+        <translation>Koodauskilpailu</translation>
     </message>
     <message id="orn-cat-applications">
         <source>Applications</source>
-        <translation>Programme</translation>
+        <translation>Sovellukset</translation>
     </message>
     <message id="orn-cat-application">
         <source>Application</source>
-        <translation>Programm</translation>
+        <translation>Sovellus</translation>
     </message>
     <message id="orn-cat-ambience-themes">
         <source>Ambience &amp; Themes</source>
-        <translation>Ambiente &amp; Themen</translation>
+        <translation>Tunnelmat &amp; Teemat</translation>
     </message>
     <message id="orn-cat-business">
         <source>Business</source>
-        <translation>Büro</translation>
+        <translation>Liiketoiminta</translation>
     </message>
     <message id="orn-cat-city-guides-maps">
         <source>City guides &amp; maps</source>
-        <translation>Standort &amp; Navigation</translation>
+        <translation>Oppaat &amp; Kartat</translation>
     </message>
     <message id="orn-cat-education-science">
         <source>Education &amp; Science</source>
-        <translation>Bildung &amp; Wissenschaft</translation>
+        <translation>Koulutus &amp; Tiede</translation>
     </message>
     <message id="orn-cat-entertainment">
         <source>Entertainment</source>
-        <translation>Unterhaltung</translation>
+        <translation>Viihde</translation>
     </message>
     <message id="orn-cat-music">
         <source>Music</source>
-        <translation>Musik</translation>
+        <translation>Musiikki</translation>
     </message>
     <message id="orn-cat-network">
         <source>Network</source>
-        <translation>Netzwerk</translation>
+        <translation>Verkko</translation>
     </message>
     <message id="orn-cat-news-info">
         <source>News &amp; info</source>
-        <translation>Neuigkeiten &amp; Information</translation>
+        <translation>Uutiset</translation>
     </message>
     <message id="orn-cat-patches">
         <source>Patches</source>
-        <translation>Patches</translation>
+        <translation>Käyttöjärjestelmän muokkaukset</translation>
     </message>
     <message id="orn-cat-photo-video">
         <source>Photo &amp; video</source>
-        <translation>Foto &amp; Video</translation>
+        <translation>Kuva &amp; Video</translation>
     </message>
     <message id="orn-cat-social-networks">
         <source>Social Networks</source>
-        <translation>Soziale Netzwerke</translation>
+        <translation>Sosiaaliset verkostot</translation>
     </message>
     <message id="orn-cat-sports">
         <source>Sports</source>
-        <translation>Sport</translation>
+        <translation>Urheilu</translation>
     </message>
     <message id="orn-cat-system">
         <source>System</source>
-        <translation>System</translation>
+        <translation>Järjestelmä</translation>
     </message>
     <message id="orn-cat-unknown">
         <source>Unknown</source>
-        <translation>Unbekannt</translation>
+        <translation>Tuntematon</translation>
     </message>
     <message id="orn-cat-utilities">
         <source>Utilities</source>
-        <translation>Dienstprogramme</translation>
+        <translation>Apuohjelmat</translation>
     </message>
     <message id="orn-cat-games">
         <source>Games</source>
-        <translation>Spiele</translation>
+        <translation>Pelit</translation>
     </message>
     <message id="orn-cat-game">
         <source>Game</source>
-        <translation>Spiel</translation>
+        <translation>Peli</translation>
     </message>
     <message id="orn-cat-action">
         <source>Action</source>
-        <translation>Action</translation>
+        <translation>Toiminta</translation>
     </message>
     <message id="orn-cat-adventure">
         <source>Adventure</source>
-        <translation>Abenteuer</translation>
+        <translation>Seikkailu </translation>
     </message>
     <message id="orn-cat-arcade">
         <source>Arcade</source>
-        <translation>Arcade</translation>
+        <translation>Pelihalli</translation>
     </message>
     <message id="orn-cat-card-casino">
         <source>Card &amp; casino</source>
-        <translation>Karten &amp; Kasino</translation>
+        <translation>Kortti &amp; Kasino</translation>
     </message>
     <message id="orn-cat-education">
         <source>Education</source>
-        <translation>Bildung</translation>
+        <translation>Opetus</translation>
     </message>
     <message id="orn-cat-puzzle">
         <source>Puzzle</source>
-        <translation>Puzzle</translation>
+        <translation>Pulmapeli</translation>
     </message>
     <message id="orn-cat-strategy">
         <source>Strategy</source>
-        <translation>Strategie</translation>
+        <translation>Strategia</translation>
     </message>
     <message id="orn-cat-trivia">
         <source>Trivia</source>
@@ -247,273 +247,273 @@
     </message>
     <message id="orn-cat-translations">
         <source>Translations</source>
-        <translation>Übersetzungen</translation>
+        <translation>Käännökset</translation>
     </message>
     <message id="orn-cat-fonts">
         <source>Fonts</source>
-        <translation>Schriftarten</translation>
+        <translation>Fontit</translation>
     </message>
     <message id="orn-cat-libraries">
         <source>Libraries</source>
-        <translation>Bibliotheken</translation>
+        <translation>Kirjastot</translation>
     </message>
     <message id="orn-update-available">
         <source>Update available</source>
-        <translation>Update verfügbar</translation>
+        <translation>Päivitys saatavilla</translation>
     </message>
     <message id="orn-update">
         <source>Update</source>
-        <translation>Aktualisieren</translation>
+        <translation>Päivitä</translation>
     </message>
     <message id="orn-changelog">
         <source>Changelog</source>
-        <translation>Änderungsprotokoll</translation>
+        <translation>Muutokset</translation>
     </message>
     <message id="orn-comments-withnum">
         <source>Comments (%0)</source>
-        <translation>Kommentare (%0)</translation>
+        <translation>Kommentit (%0)</translation>
     </message>
     <message id="orn-version-repo-disabled">
         <source>Enable the repository first</source>
-        <translation>Aktiviere zuerst die Softwarequelle</translation>
+        <translation>Lisää pakettilähde ensin</translation>
     </message>
     <message id="orn-search">
         <source>Search</source>
         <extracomment>The search menu item and the search page header text - should be a noun</extracomment>
-        <translation>Suche</translation>
+        <translation>Haku</translation>
     </message>
     <message id="orn-searchpage-placeholder-noresults">
         <source>Nothing found</source>
-        <translation>Es wurde nichts gefunden</translation>
+        <translation>Mitään ei löytynyt</translation>
     </message>
     <message id="orn-searchpage-placeholder-noresults-hint">
         <source>Try to change search keywords</source>
-        <translation>Versuche den Suchbegriff zu ändern</translation>
+        <translation>Kokeile muita hakusanoja</translation>
     </message>
     <message id="orn-searchfield-placeholder">
         <source>Search</source>
         <extracomment>The search field placeholder text - should be a verb</extracomment>
-        <translation>Suchen</translation>
+        <translation>Hae</translation>
     </message>
     <message id="orn-searchpage-placeholder-default">
         <source>Search results will be shown here</source>
-        <translation>Hier werden die Suchergebnisse angezeigt</translation>
+        <translation>Hakutulokset näytetään tässä</translation>
     </message>
     <message id="orn-searchpage-placeholder-default-hint">
         <source>Type some keywords in the field above</source>
-        <translation>Gib einige Schlüsselwörter in das Feld oben ein</translation>
+        <translation>Kirjoita jotain avainsanoja ylläolevaan kenttään</translation>
     </message>
     <message id="orn-about">
         <source>About Storeman</source>
-        <translation>Über Storeman</translation>
+        <translation>Tietoja sovelluksesta</translation>
     </message>
     <message id="orn-translations">
         <source>Translations</source>
-        <translation>Übersetzungen</translation>
+        <translation>Käännökset</translation>
     </message>
     <message id="orn-coordinators">
         <source>Coordinators</source>
-        <translation>Koordinatoren</translation>
+        <translation>Koordinaattorit</translation>
     </message>
     <message id="orn-translators">
         <source>Translators</source>
-        <translation>Übersetzer</translation>
+        <translation>Kääntäjät</translation>
     </message>
     <message id="orn-reviewers">
         <source>Reviewers</source>
-        <translation>Rezensenten</translation>
+        <translation>Arvostelijat</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
-        <translation>Ein Netzwerkfehler ist aufgetreten</translation>
+        <translation>Verkkovirhe</translation>
     </message>
     <message id="orn-pull-refresh">
         <source>Pull down to refresh</source>
-        <translation>Zum Aktualisieren herunterziehen</translation>
+        <translation>Virkistä vetämällä alas</translation>
     </message>
     <message id="orn-development">
         <source>Development</source>
-        <translation>Entwicklung</translation>
+        <translation>Kehitys</translation>
     </message>
     <message id="orn-developers">
         <source>Developers</source>
-        <translation>Entwickler</translation>
+        <translation>Kehittäjät</translation>
     </message>
     <message id="orn-appicon">
         <source>Application Icon</source>
-        <translation>Programm-Icon</translation>
+        <translation>Sovelluksen kuvake</translation>
     </message>
     <message id="orn-sources">
         <source>Source Code</source>
-        <translation>Quelltext</translation>
+        <translation>Lähdekoodi</translation>
     </message>
     <message id="orn-just-now">
         <source>Just now</source>
-        <translation>Gerade</translation>
+        <translation>Juuri nyt</translation>
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%n minute(s) ago</source>
         <translation>
-            <numerusform>vor %n Minute</numerusform>
-            <numerusform>vor %n Minuten</numerusform>
+            <numerusform>%n minuutti sitten</numerusform>
+            <numerusform>%n minuuttia sitten</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%n hour(s) ago</source>
         <translation>
-            <numerusform>vor %n Stunde</numerusform>
-            <numerusform>vor %n Stunden</numerusform>
+            <numerusform>%n tunti sitten</numerusform>
+            <numerusform>%n tuntia sitten</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
         <extracomment>Active label to navigate to the original comment - should be a noun</extracomment>
-        <translation>Antwort an %0</translation>
+        <translation>Vastaus käyttäjälle %0</translation>
     </message>
     <message id="orn-categories">
         <source>Categories</source>
-        <translation>Kategorien</translation>
+        <translation>Kategoriat</translation>
     </message>
     <message id="orn-category-noapps">
         <source>Currently there are no apps in this category</source>
-        <translation>Derzeit gibt es keine Apps in dieser Kategorie</translation>
+        <translation>Tässä kategoriassa ei ole sovelluksia tällä hetkellä</translation>
     </message>
     <message id="orn-cat-unknown2">
         <source>Unknown category</source>
-        <translation>Unbekannte Kategorie</translation>
+        <translation>Tuntematon kategoria</translation>
     </message>
     <message id="orn-comment-body">
         <source>Your comment</source>
-        <translation>Dein Kommentar</translation>
+        <translation>Kommentti</translation>
     </message>
     <message id="orn-reply">
         <source>Reply</source>
         <extracomment>Menu item to reply for a comment - should be a verb</extracomment>
-        <translation>Antworten</translation>
+        <translation>Vastaa</translation>
     </message>
     <message id="orn-edit">
         <source>Edit</source>
-        <translation>Bearbeiten</translation>
+        <translation>Muokkaa</translation>
     </message>
     <message id="orn-login-menu-item">
         <source>Log in to OpenRepos.net</source>
-        <translation>Bei OpenRepos.net anmelden</translation>
+        <translation>OpenRepos.net-kirjautuminen</translation>
     </message>
     <message id="orn-login-action">
         <source>Log in</source>
-        <translation>Anmelden</translation>
+        <translation>Kirjaudu sisään</translation>
     </message>
     <message id="orn-username">
         <source>Username or e-mail address</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation>Benutzername oder E-Mail-Adresse</translation>
+        <translation>Käyttäjänimi tai sähköposti</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not send your password to third-parties.</source>
-        <translation>Melde dich bei OpenRepos.net an, um Programme zu kommentieren und auf die Kommentare anderer zu antworten.&lt;br /&gt;&lt;br /&gt;Storeman gibt dein Passwort nicht an Dritte weiter.</translation>
+        <translation>Kirjaudu OpenRepos.net-tilillesi jättääksesi kommentteja ja antaaksesi arvioita.&lt;br /&gt;&lt;br /&gt;Storeman ei luovuta salasanaasi kolmansille osapuolille.</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
-        <translation>Du wurdest erfolgreich bei OpenRepos.net angemeldet</translation>
+        <translation>Olet kirjautunut onnistuneesti kohteeseen OpenRepos.net</translation>
     </message>
     <message id="orn-loggedout-message">
         <source>You have logged out from the OpenRepos.net</source>
-        <translation>Du wurdest bei OpenRepos.net abgemeldet</translation>
+        <translation>Olet kirjautunut ulos onnistuneesti kohteesta OpenRepos.net</translation>
     </message>
     <message id="orn-login-error-title">
         <source>Login error</source>
-        <translation>Anmeldefehler</translation>
+        <translation>Virhe sisäänkirjautumisessa</translation>
     </message>
     <message id="orn-login-error-message">
         <source>Could not log in the OpenRepos.net - check your credentials and network connection</source>
-        <translation>Du konntest nicht bei OpenRepos.net angemeldet werden, überprüfe deine Zugangsdaten und die Netzwerkverbindung</translation>
+        <translation>Kirjautuminen kohteeseen OpenRepos.net epäonnistui - tarkista kirjautumistietosi tai verkkoyhteytesi</translation>
     </message>
     <message id="orn-loggedin-menu-item">
         <source>Logged in as %0</source>
-        <translation>Angemeldet als %0</translation>
+        <translation>%0 kirjautunut sisään</translation>
     </message>
     <message id="orn-logout-action">
         <source>Log out</source>
         <extracomment>Menu item</extracomment>
-        <translation>Abmelden</translation>
+        <translation>Kirjaudu ulos</translation>
     </message>
     <message id="orn-logout-remorse">
         <source>Logging out</source>
         <extracomment>Remorse text</extracomment>
-        <translation>Abmelden</translation>
+        <translation>Kirjaudutaan ulos</translation>
     </message>
     <message id="orn-comment-edit-label">
         <source>Edit your comment</source>
-        <translation>Kommentar bearbeiten</translation>
+        <translation>Muokkaa kommenttia</translation>
     </message>
     <message id="orn-comment-update">
         <source>Update</source>
         <extracomment>Update a comment</extracomment>
-        <translation>Aktualisieren</translation>
+        <translation>Päivitä</translation>
     </message>
     <message id="orn-comment-send">
         <source>Send</source>
-        <translation>Senden</translation>
+        <translation>Lähetä</translation>
     </message>
     <message id="orn-authorisation-expires-summary">
         <source>Authorisation expires</source>
-        <translation>Autorisierung läuft ab</translation>
+        <translation>Tunnusten käyttöoikeus vanhenee</translation>
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
-        <translation>Autorisierung abgelaufen</translation>
+        <translation>Tunnusten käyttöoikeus vanhentunut</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
-        <translation>Klicken, um erneut zu autorisieren</translation>
+        <translation>Uudista käyttöoikeus</translation>
     </message>
     <message id="orn-enable-all">
         <source>Enable all</source>
-        <translation>Alle aktivieren</translation>
+        <translation>Ota kaikki käyttöön</translation>
     </message>
     <message id="orn-disable-all">
         <source>Disable all</source>
-        <translation>Alle deaktivieren</translation>
+        <translation>Poista kaikki käytöstä</translation>
     </message>
     <message id="orn-enabling-all">
         <source>Enabling all</source>
-        <translation>Aktiviere alle</translation>
+        <translation>Otetaan käyttöön</translation>
     </message>
     <message id="orn-disabling-all">
         <source>Disabling all</source>
-        <translation>Deaktiviere alle</translation>
+        <translation>Poistetaan käytöstä</translation>
     </message>
     <message id="orn-installed-apps">
         <source>Installed applications</source>
-        <translation>Installierte Programme</translation>
+        <translation>Asennetut sovellukset</translation>
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
-        <translation>Das Programm wurde zu den Lesezeichen hinzugefügt</translation>
+        <translation>Kirjanmerkki lisätty</translation>
     </message>
     <message id="orn-bookmarks-removed">
         <source>The app was removed from bookmarks</source>
-        <translation>Das Programm wurde aus den Lesezeichen entfernt</translation>
+        <translation>Kirjanmerkki poistettu</translation>
     </message>
     <message id="orn-no-bookmarks">
         <source>Your bookmarked applications will be shown here</source>
-        <translation>Hier werden die Lesezeichen angezeigt</translation>
+        <translation>Kirjanmerkkeihin lisätyt sovellukset näkyvät tässä</translation>
     </message>
     <message id="orn-bookmarks">
         <source>Bookmarks</source>
-        <translation>Lesezeichen</translation>
+        <translation>Kirjanmerkit</translation>
     </message>
     <message id="orn-no-repos">
         <source>No OpenRepos repositories have been added yet</source>
-        <translation>Es wurden noch keine OpenRepos-Quellen hinzugefügt</translation>
+        <translation>Pakettilähteitä ei ole vielä lisätty</translation>
     </message>
     <message id="orn-add-repo-hint">
         <source>You can add a repository from an application page</source>
-        <translation>Du kannst eine Quelle von der Programm-Seite hinzufügen</translation>
+        <translation>Voit lisätä pakettilähteen sovelluksen sivulta</translation>
     </message>
     <message id="orn-refresh-cache">
         <source>Refresh cache</source>
-        <translation>Cache auffrischen</translation>
+        <translation>Virkistä välimuisti</translation>
     </message>
     <message id="orn-tag-underscore">
         <source>U</source>
@@ -532,259 +532,259 @@
     </message>
     <message id="orn-updates-available-summary">
         <source>Updates available</source>
-        <translation>Updates verfügbar</translation>
+        <translation>Päivityksiä saatavilla</translation>
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
         <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
-        <translation>Nichts stellt %1 bereit, welches von %2 benötigt wird</translation>
+        <translation>%2 tarvitsee paketin %1, jota ei löydy</translation>
     </message>
     <message id="orn-backups">
         <source>Backups</source>
-        <translation>Datensicherung</translation>
+        <translation>Varmuuskopiot</translation>
     </message>
     <message id="orn-backup-description">
         <source>Backup and restore repos and installed apps</source>
-        <translation>Quellen/Apps sichern und wiederherstellen</translation>
+        <translation>Varmuuskopioi ja palauta pakettilähteet ja asennetut ohjelmat</translation>
     </message>
     <message id="orn-create-backup">
         <source>Create a backup</source>
-        <translation>Sicherungskopie erstellen</translation>
+        <translation>Luo varmuuskopio</translation>
     </message>
     <message id="orn-backup-error">
         <source>Backup error</source>
-        <translation>Fehler bei der Datensicherung</translation>
+        <translation>Virhe varmuuskopioinnissa</translation>
     </message>
     <message id="orn-backup-error-directory">
         <source>Could not create directory</source>
-        <translation>Konnte Verzeichnis nicht erstellen</translation>
+        <translation>Hakemiston luonti epäonnistui</translation>
     </message>
     <message id="orn-restore-title">
         <source>Restore from a file</source>
-        <translation>Aus Datei wiederherstellen</translation>
+        <translation>Palauta tiedostosta</translation>
     </message>
     <message id="orn-restore">
         <source>Restore</source>
-        <translation>Wiederherstellen</translation>
+        <translation>Palauta</translation>
     </message>
     <message id="orn-restore-hint">
         <source>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</source>
-        <translation>Wiederherstellen der OpenRepos-Quellen und installierten Programme aus der ausgewählten Datei. Diese Aktion betrifft nicht deine aktuellen Quellen und wird keine installierten Programme entfernen.</translation>
+        <translation>Palauta OpenRepos-pakettilähteet ja asennetut ohjelmat valitusta tiedostosta. Tämä toiminto ei vaikuta nykyisiin pakettilähteisiisi eikä poista asennettuja ohjelmia.</translation>
     </message>
     <message id="orn-created">
         <source>Created</source>
-        <translation>Erstellt</translation>
+        <translation>Luotu</translation>
     </message>
     <message id="orn-total-repos">
         <source>Total repositories</source>
-        <translation>Quellen gesamt</translation>
+        <translation>Pakettilähteitä yhteensä</translation>
     </message>
     <message id="orn-details">
         <source>Details</source>
-        <translation>Details</translation>
+        <translation>Lisätietoja</translation>
     </message>
     <message id="orn-backups-placeholder">
         <source>Backups will be shown here</source>
-        <translation>Hier werden die Sicherungskopien angezeigt</translation>
+        <translation>Varmuuskopiot näytetään tässä</translation>
     </message>
     <message id="orn-restoring-repos">
         <source>Restoring repositories</source>
-        <translation>Quellen wiederherstellen</translation>
+        <translation>Palautetaan pakettilähteitä</translation>
     </message>
     <message id="orn-refreshing-repos">
         <source>Refreshing repositories</source>
-        <translation>Quellen aktualisieren</translation>
+        <translation>Virkistetään pakettilähteitä</translation>
     </message>
     <message id="orn-searching-packages">
         <source>Searching packages</source>
-        <translation>Suche Pakete</translation>
+        <translation>Etsitään paketteja</translation>
     </message>
     <message id="orn-installing-repos">
         <source>Installing packages</source>
-        <translation>Installiere Pakete</translation>
+        <translation>Asennetaan paketteja</translation>
     </message>
     <message id="orn-restoring-title">
         <source>Restoring</source>
-        <translation>Wiederherstellen</translation>
+        <translation>Palautetaan</translation>
     </message>
     <message id="orn-success-backup">
         <source>Successful backup</source>
-        <translation>Datensicherung erfolgreich</translation>
+        <translation>Varmuuskopionti onnistui</translation>
     </message>
     <message id="orn-success-restore">
         <source>Successful restore</source>
-        <translation>Wiederherstellung erfolgreich</translation>
+        <translation>Palautus onnistui</translation>
     </message>
     <message id="orn-installed-packages">
         <source>Installed packages</source>
-        <translation>Installierte Pakete</translation>
+        <translation>Asennetut paketit</translation>
     </message>
     <message id="orn-login2comment">
         <source>Login to comment</source>
-        <translation>Zum Kommentieren anmelden</translation>
+        <translation>Kirjaudu sisään kommentoidaksesi</translation>
     </message>
     <message id="orn-backup">
         <source>Backup</source>
-        <translation>Daten sichern</translation>
+        <translation>Varmuuskopioi</translation>
     </message>
     <message id="orn-backup-hint">
         <source>&lt;h2&gt;Backup to a file&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.&lt;/p&gt;</source>
-        <translation>&lt;h2&gt;Datensicherung als Datei&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Die Datensicherung ermöglicht es dir, deine aktuellen OpenRepos-Quellen, installierten Programme und Lesezeichen zu speichern und später wiederherzustellen (z.B. nach dem Zurücksetzen in den Werkszustand). Eine Sicherungskopie ist eine lokale Datei, die im Verzeichnis &lt;i&gt;~/Documents/Storeman&lt;/i&gt; gespeichert wird.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Achtung!&lt;/b&gt; Du solltest deine Sicherungskopien manuell an einen sicheren Ort kopieren, bevor du dein Gerät zurücksetzt. Es kann sich dabei um deine SD-Karte, ein externes Gerät, einen Cloud-Speicher oder etwas anderes handeln.&lt;/p&gt;</translation>
+        <translation>&lt;h2&gt;Varmuuskopioi tiedostoon&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Varmuuskopioinnin avulla voit tallentaa nykyiset OpenRepos-pakettilähteesi, asennetut ohjelmat ja kirjanmerkit sekä palauttaa ne myöhemmin (esimerkiksi tehdasasetusten palauttamisen jälkeen). Varmuuskopio on paikallinen tiedosto, joka on tallennettu &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; hakemistoon. &lt;br /&gt;&lt;br /&gt;&lt;b&gt;Huomio!&lt;/b&gt; Varmuuskopiot tulisi kopioida talteen manuaalisesti ennen tehdasasetusten palauttamista. Esimerkiksi SD-kortille, ulkoiseen laitteeseen tai pilvipalveluun.</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
-        <translation>Initialisiere</translation>
+        <translation>Alustetaan</translation>
     </message>
     <message id="orn-pmstate-addingrepo">
         <source>Adding repo %0</source>
-        <translation>Füge Quelle %0 hinzu</translation>
+        <translation>Lisätään pakettilähdettä %0</translation>
     </message>
     <message id="orn-pmstate-removingrepo">
         <source>Removing repo %0</source>
-        <translation>Entferne Quelle %0</translation>
+        <translation>Poistetaan pakettilähdettä %0</translation>
     </message>
     <message id="orn-pmstate-enablingrepo">
         <source>Enabling repo %0</source>
-        <translation>Aktiviere Quelle %0</translation>
+        <translation>Otetaan käyttöön pakettilähdettä %0</translation>
     </message>
     <message id="orn-pmstate-disablingrepo">
         <source>Disabling repo %0</source>
-        <translation>Deaktiviere Quelle %0</translation>
+        <translation>Poistetaan käytöstä pakettilähdettä %0</translation>
     </message>
     <message id="orn-pmstate-refreshingrepo">
         <source>Refreshing %0</source>
-        <translation>Aktualisiere Quelle %0</translation>
+        <translation>Virkistetään %0</translation>
     </message>
     <message id="orn-pmstate-installingpackage">
         <source>Installing package %0</source>
-        <translation>Installiere Paket %0</translation>
+        <translation>Asennetaan pakettia %0</translation>
     </message>
     <message id="orn-pmstate-removingpackage">
         <source>Removing package %0</source>
-        <translation>Entferne Paket %0</translation>
+        <translation>Poistetaan pakettia %0</translation>
     </message>
     <message id="orn-pmstate-updatingpackage">
         <source>Updating package %0</source>
-        <translation>Aktualisiere Paket %0</translation>
+        <translation>Päivitetään pakettia %0</translation>
     </message>
     <message id="orn-repo-removed">
         <source>The repository %0 was removed</source>
-        <translation>Die Quelle %0 wurde entfernt</translation>
+        <translation>Pakettilähde %0 poistettiin</translation>
     </message>
     <message id="orn-repo-added">
         <source>The repository %0 was added</source>
-        <translation>Die Quelle %0 wurde hinzugefügt</translation>
+        <translation>Pakettilähde %0 lisättiin</translation>
     </message>
     <message id="orn-repo-disabled">
         <source>The repository %0 was disabled</source>
-        <translation>Die Quelle %0 wurde deaktiviert</translation>
+        <translation>Pakettilähde %0 poistettiin käytöstä</translation>
     </message>
     <message id="orn-repo-enabled">
         <source>The repository %0 was enabled</source>
-        <translation>Die Quelle %0 wurde aktiviert</translation>
+        <translation>Pakettilähde %0 otettiin käyttöön</translation>
     </message>
     <message id="orn-not-installed">
         <source>Not installed</source>
-        <translation>Nicht installiert</translation>
+        <translation>Ei asennettu</translation>
     </message>
     <message id="orn-installing">
         <source>Installing</source>
-        <translation>Installiere</translation>
+        <translation>Asennetaan</translation>
     </message>
     <message id="orn-unknown">
         <source>Unknown</source>
-        <translation>Unbekannt</translation>
+        <translation>Tuntematon</translation>
     </message>
     <message id="orn-updating">
         <source>Updating</source>
-        <translation>Aktualisiere</translation>
+        <translation>Päivitetään</translation>
     </message>
     <message id="orn-version-available-global">
         <source>Available in other repositories</source>
-        <translation>Verfügbar in anderen Softwarequellen</translation>
+        <translation>Saatavana muista pakettilähteistä</translation>
     </message>
     <message id="orn-installed-apps-description">
         <source>Only from enabled repositories</source>
-        <translation>Nur von aktivierten Quellen</translation>
+        <translation>Vain käyttöönotetuista pakettilähteistä</translation>
     </message>
     <message id="orn-update-all">
         <source>Update all</source>
-        <translation>Alle Updates installieren</translation>
+        <translation>Päivitä kaikki</translation>
     </message>
     <message id="orn-no-installed-apps">
         <source>Could not find any applications installed from OpenRepos</source>
-        <translation>Keine über OpenRepos installierten Programme gefunden</translation>
+        <translation>Yhtään kohteesta OpenRepos asennettua sovellusta ei löytynyt</translation>
     </message>
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
         <translation>
-            <numerusform>%n Operation ist in Arbeit</numerusform>
-            <numerusform>%n Operationen sind in Arbeit</numerusform>
+            <numerusform>Suoritetaan %n operaatiota</numerusform>
+            <numerusform>Suoritetaan %n operaatiota</numerusform>
         </translation>
     </message>
     <message id="orn-version-available">
         <source>Available version</source>
-        <translation>Verfügbare Version</translation>
+        <translation>Saatavilla oleva versio</translation>
     </message>
     <message id="orn-error-packagenotfound">
         <source>Couldn&apos;t find package</source>
-        <translation>Paket nicht gefunden</translation>
+        <translation>Pakettia ei löytynyt</translation>
     </message>
     <message id="orn-size-installed">
         <source>Installed size</source>
-        <translation>Installationsgröße</translation>
+        <translation>Asennuskoko</translation>
     </message>
     <message id="orn-size-download-install">
         <source>Download / install size</source>
-        <translation>Download- / Installationsgröße</translation>
+        <translation>Lataus- / asennuskoko</translation>
     </message>
     <message id="orn-cat-public-transport">
         <source>Public Transport</source>
-        <translation>Öffentlicher Verkehr</translation>
+        <translation>Julkinen liikenne</translation>
     </message>
     <message id="orn-comments-wait">
         <source>Wait for users&apos; feedback</source>
         <extracomment>This will be shown to an application author</extracomment>
-        <translation>Warte auf Rückmeldung der Nutzer</translation>
+        <translation>Odota käyttäjien palautetta</translation>
     </message>
     <message id="orn-comments-bethefirst">
         <source>Be the first to comment</source>
         <extracomment>This will be shown to a normal user</extracomment>
-        <translation>Schreibe den ersten Kommentar</translation>
+        <translation>Ole ensimmäinen kommentoija</translation>
     </message>
     <message id="orn-comments-nocomments">
         <source>There is nothing here yet</source>
-        <translation>Hier ist noch nichts</translation>
+        <translation>Täällä ei ole vielä mitään</translation>
     </message>
     <message id="orn-settings">
         <source>Settings</source>
-        <translation>Einstellungen</translation>
+        <translation>Asetukset</translation>
     </message>
     <message id="orn-updates">
         <source>Updates</source>
-        <translation>Updates</translation>
+        <translation>Päivitykset</translation>
     </message>
     <message id="orn-updates-notification-switch">
         <source>Show updates notification</source>
-        <translation>Update-Benachrichtigung anzeigen</translation>
+        <translation>Näytä ilmoitus päivityksistä</translation>
     </message>
     <message id="orn-updates-check-interval">
         <source>Updates check interval</source>
-        <translation>Aktualisierungsintervall</translation>
+        <translation>Päivitysten tarkastusväli</translation>
     </message>
     <message id="orn-interval-m" numerus="yes">
         <source>%n minute(s)</source>
         <translation>
-            <numerusform>%n Minute</numerusform>
-            <numerusform>%n Minuten</numerusform>
+            <numerusform>%n minuutti</numerusform>
+            <numerusform>%n minuuttia</numerusform>
         </translation>
     </message>
     <message id="orn-interval-h" numerus="yes">
         <source>%n hour(s)</source>
         <translation>
-            <numerusform>%n Stunde</numerusform>
-            <numerusform>%n Stunden</numerusform>
+            <numerusform>%n tunti</numerusform>
+            <numerusform>%n tuntia</numerusform>
         </translation>
     </message>
     <message id="orn-tag-strikeout">
@@ -794,286 +794,286 @@
     </message>
     <message id="orn-hint-commentfield">
         <source>Swipe to see all the tag buttons</source>
-        <translation>Wischen, um alle Tags zu sehen</translation>
+        <translation>Pyyhkäise nähdäksesi kaikki avainsanapainikkeet</translation>
     </message>
     <message id="orn-dcm-user2">
         <source>Deep Thought</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>Deep Thought</translation>
+        <translation>Syvä Miete</translation>
     </message>
     <message id="orn-dcm-user1">
         <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>Eine kleine weiße Maus</translation>
+        <translation>Pieni valkoinen hiiri</translation>
     </message>
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>Was ist die Antwort auf die ultimative Frage nach dem Leben, dem Universum und dem ganzen Rest?</translation>
+        <translation>Mikä on vastaus elämään, maailmankaikkeuteen ja kaikkeen muuhun sellaiseen?</translation>
     </message>
     <message id="orn-hint-commentdelegate-created">
         <source>7.5 million years ago</source>
-        <translation>vor 7,5 Millionen Jahren</translation>
+        <translation>7,5 miljoonaa vuotta sitten</translation>
     </message>
     <message id="orn-hint-commentdelegate">
         <source>Tap to navigate to the replied comment</source>
-        <translation>Tippen, um zum beantworteten Kommentar zu gelangen</translation>
+        <translation>Paina siirtyäksesi vastattuun kommenttiin</translation>
     </message>
     <message id="orn-tags">
         <source>Tags</source>
-        <translation>Tags</translation>
+        <translation>Avainsanat</translation>
     </message>
     <message id="orn-tag-apps">
         <source>Tagged Applications</source>
-        <translation>Getaggte Programme</translation>
+        <translation>Merkityt sovellukset</translation>
     </message>
     <message id="orn-rate-app">
         <source>Rate the application</source>
-        <translation>Bewerte dieses Programm</translation>
+        <translation>Arvostele sovellus</translation>
     </message>
     <message id="orn-vote-send">
         <source>Your vote has been sent</source>
-        <translation>Deine Bewertung wurde gesendet</translation>
+        <translation>Äänesi on tallennettu</translation>
     </message>
     <message id="orn-login2rate">
         <source>Log in to rate the application</source>
-        <translation>Melde dich an, um das Programm zu bewerten</translation>
+        <translation>Kirjaudu arvostelleksesi sovellus</translation>
     </message>
     <message id="orn-hint-rating">
         <source>Tap to rate the application</source>
-        <translation>Tippen, um das Programm zu bewerten</translation>
+        <translation>Paina arvostelleksesi sovellus</translation>
     </message>
     <message id="orn-local-rpms">
         <source>Local RPM files</source>
-        <translation>Lokale RPM-Pakete</translation>
+        <translation>Paikalliset RPM-tiedostot</translation>
     </message>
     <message id="orn-delete">
         <source>Delete</source>
-        <translation>Löschen</translation>
+        <translation>Poista</translation>
     </message>
     <message id="orn-deleting">
         <source>Deleting</source>
-        <translation>Lösche</translation>
+        <translation>Poistetaan</translation>
     </message>
     <message id="orn-no-local-rpms">
         <source>No local RPM files were found</source>
-        <translation>Es wurden  keine lokalen RPM-Pakete gefunden.</translation>
+        <translation>Paikallisia RPM-tiedostoja ei löytynyt</translation>
     </message>
     <message id="orn-deletion-error">
         <source>Failed to delete</source>
-        <translation>Löschen fehlgeschlagen</translation>
+        <translation>Poistaminen ei onnistunut</translation>
     </message>
     <message id="orn-remove-all">
         <source>Remove all</source>
-        <translation>Alle entfernen</translation>
+        <translation>Poista kaikki</translation>
     </message>
     <message id="orn-removing-all">
         <source>Removing all</source>
-        <translation>Entferne alle</translation>
+        <translation>Poistetaan kaikki</translation>
     </message>
     <message id="orn-repo-allremoved">
         <source>All repositories were removed</source>
-        <translation>Alle Quellen wurden entfernt</translation>
+        <translation>Kaikki pakettilähteet poistettiin</translation>
     </message>
     <message id="orn-search-on-openrepos">
         <source>Search on OpenRepos.net</source>
-        <translation>Suche auf OpenRepos.net</translation>
+        <translation>Etsi kohteesta OpenRepos.net</translation>
     </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
-        <translation>Nach Updates suchen</translation>
+        <translation>Tarkista päivitykset</translation>
     </message>
     <message id="orn-check-for-updates-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation>Updates werden nur gesucht während Storeman läuft</translation>
+        <translation>Päivitykset tarkistetaan vain silloin, kun Storeman on käynnissä</translation>
     </message>
     <message id="orn-smart-check-switch">
         <source>Smart check</source>
-        <translation>Intelligente Prüfung</translation>
+        <translation>Älykäs tarkistus</translation>
     </message>
     <message id="orn-smart-check-descr">
         <source>Use the OpenRepos.net API to determine if there are new updates</source>
-        <translation>Verwende die OpenRepos.net-API, um festzustellen, ob neue Updates verfügbar sind</translation>
+        <translation>Käytä OpenRepos.net-rajapintaa uusien päivitysten tarkistamiseen</translation>
     </message>
     <message id="orn-reload">
         <source>Reload</source>
-        <translation>Erneut laden</translation>
+        <translation>Lataa uudelleen</translation>
     </message>
     <message id="orn-no-packages">
         <source>No packages available</source>
-        <translation>Keine Pakete verfügbar</translation>
+        <translation>Paketteja ei saatavilla</translation>
     </message>
     <message id="orn-error-comment-sending">
         <source>Error sending comment</source>
-        <translation>Fehler beim Senden des Kommentars</translation>
+        <translation>Virhe kommentin lähettämisessä</translation>
     </message>
     <message id="orn-error-comment-deletion">
         <source>Error deleting comment</source>
-        <translation>Fehler beim Löschen des Kommentars</translation>
+        <translation>Virhe kommentin poistamisessa</translation>
     </message>
     <message id="orn-error-network">
         <source>Network error</source>
-        <translation>Netzwerkfehler</translation>
+        <translation>Verkkovirhe</translation>
     </message>
     <message id="orn-hint-bookmark">
         <source>Tap to bookmark the application</source>
-        <translation>Tippen, um ein Lesezeichen für dieses Programm anzulegen</translation>
+        <translation>Lisää sovellus kirjanmerkkeihin napauttamalla</translation>
     </message>
     <message id="orn-bad-appid">
         <source>Invalid package ID %1</source>
-        <translation>Ungültige Paket-ID %1</translation>
+        <translation>Virheellinen pakettitunniste %1</translation>
     </message>
     <message id="orn-backup-filenameph">
         <source>A file name for backup</source>
-        <translation>Ein Dateiname für die Sicherungskopie</translation>
+        <translation>Tiedostonimi varmuuskopiolle</translation>
     </message>
     <message id="orn-file-exists">
         <source>File already exists</source>
-        <translation>Datei existiert bereits</translation>
+        <translation>Tiedosto on jo olemassa</translation>
     </message>
     <message id="orn-backup-items">
         <source>What to backup</source>
-        <translation>Was gesichert werden soll</translation>
+        <translation>Mitä varmuuskopioidaan</translation>
     </message>
     <message id="orn-backup-apps">
         <source>Installed applications</source>
-        <translation>Installierte Programme</translation>
+        <translation>Asennetut sovellukset</translation>
     </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
-        <translation>Tippe erneut, um den Hinweis zu schließen</translation>
+        <translation>Napauta uudelleen sulkeaksesi vihjeen</translation>
     </message>
     <message id="orn-mainpage">
         <source>Main page</source>
-        <translation>Hauptseite</translation>
+        <translation>Pääsivu</translation>
     </message>
     <message id="orn-show-recent-switch">
         <source>Show recently updated on start</source>
-        <translation>Kürzlich aktualisierte Pakete anzeigen</translation>
+        <translation>Näytä viimeksi päivitetyt avattaessa</translation>
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>
-        <translation>Beim Start auf die Seite der zuletzt aktualisierten Pakete wechseln</translation>
+        <translation>Siirry Viimeksi päivitetty -sivulle kun sovellus käynnistyy</translation>
     </message>
     <message id="orn-mainpage-order">
         <source>Order items</source>
-        <translation>Reihenfolge festlegen</translation>
+        <translation>Järjestä</translation>
     </message>
     <message id="orn-reset">
         <source>Reset</source>
-        <translation>Zurücksetzen</translation>
+        <translation>Palauta oletukset</translation>
     </message>
     <message id="orn-mainpage-order-description">
         <source>Drag items to change their order</source>
-        <translation>Halte und ziehe, um die Reihenfolge zu ändern</translation>
+        <translation>Raahaa kohteita vaihtaaksesi järjestystä</translation>
     </message>
     <message id="orn-cat-adult-content">
         <source>Adult Content</source>
-        <translation>Inhalt für Erwachsene</translation>
+        <translation>Aikuisille suunnattu sisältö</translation>
     </message>
     <message id="orn-categories-filter">
         <source>Categories filter</source>
-        <translation>Kategorien-Filter</translation>
+        <translation>Kategorioiden suodattimet</translation>
     </message>
     <message id="orn-categories-filter-descr">
         <source>Select which categories to show</source>
-        <translation>Kategorien die angezeigt werden sollen</translation>
+        <translation>Valitse näytettävät kategoriat</translation>
     </message>
     <message id="orn-pmstate-refreshingcache">
         <source>Refreshing of cache</source>
-        <translation>Auffrischen des Caches</translation>
+        <translation>Päivitetään välimuistia</translation>
     </message>
     <message id="orn-refresh-cache-switch">
         <source>Refresh cache after system upgrade</source>
-        <translation>Cache nach System-Upgrade auffrischen</translation>
+        <translation>Päivitä välimuisti järjestelmäpäivityksen jälkeen</translation>
     </message>
     <message id="orn-refresh-cache-switch-descr">
         <source>Force refreshing of cache of all repositories after system upgrade</source>
-        <translation>Auffrischen des Caches aller Repositories nach dem System-Upgrade erzwingen</translation>
+        <translation>Pakota välimuistin ja pakettilähteiden päivitys järjestelmäpäivityksen jälkeen</translation>
     </message>
     <message id="orn-save-password">
         <source>Save password</source>
-        <translation>Passwort speichern</translation>
+        <translation>Tallenna salasana</translation>
     </message>
     <message id="orn-save-password-help">
         <source>Save password to the encrypted device storage to perform automatic re-login.</source>
-        <translation>Passwort verschlüsselt speichern, um eine automatische Neuanmeldung durchzuführen.</translation>
+        <translation>Tallenna salasana laitteen suojattuun tallennustilaan suorittaaksesi automaattinen sisäänkirjautuminen.</translation>
     </message>
     <message id="orn-share-link">
         <source>Share link</source>
-        <translation>Link versenden</translation>
+        <translation>Jaa linkki</translation>
     </message>
     <message id="orn-repository">
         <source>Repository</source>
-        <translation>Softwarequelle</translation>
+        <translation>Pakettilähde</translation>
     </message>
     <message id="orn-myrepository">
         <source>My repository</source>
-        <translation>Meine Softwarequelle</translation>
+        <translation>Oma pakettilähde</translation>
     </message>
     <message id="orn-donate-with">
         <source>Donate with %1</source>
-        <translation>Mit %1 spenden</translation>
+        <translation>%1-lahjoitus</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
-        <translation>Updates verfügbar</translation>
+        <translation>Päivityksiä saatavana</translation>
     </message>
     <message id="orn-package-updated">
         <source>Package %0 was successfully updated</source>
-        <translation>Paket %0 wurde erfolgreich aktualisiert</translation>
+        <translation>Paketti %0 päivitettiin onnistuneesti</translation>
     </message>
     <message id="orn-app-description-full">
         <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Nativer OpenRepos.net-Client für Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;Dies ist eine Open-Source-Software, die unter den Bedingungen der &lt;a href=&apos;%1&apos;&gt;MIT-Lizenz&lt;/a&gt; verbreitet wird&lt;/p&gt;&lt;p&gt;Du kannst einen Fehler auf OpenRepos.net oder GitHub melden (verwende die Buttons unten)&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;OpenRepos.net-sovelluskauppa Sailfish&amp;nbsp;OS:lle&lt;/p&gt;&lt;p&gt;Storeman on avoimen lähdekoodin sovellus, joka käyttää &lt;a href=&apos;%1&apos;&gt;MIT-lisenssiä&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Voit raportoida ongelmista OpenRepos.net-sivulla, tai GitHub-projektissa (allaolevat painikkeet)&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>
-        <translation>Details anzeigen</translation>
+        <translation>Näytä tiedot</translation>
     </message>
     <message id="orn-unused-repos-found">
         <source>Unused repositories found</source>
-        <translation>Nicht verwendete Quellen gefunden</translation>
+        <translation>Käyttämättömiä pakettilähteitä havaittu</translation>
     </message>
     <message id="orn-no-unused-repos">
         <source>Unused repositories not found</source>
-        <translation>Keine ungenutzten Quellen gefunden</translation>
+        <translation>Käyttämättömiä pakettilähteitä ei löytynyt</translation>
     </message>
     <message id="orn-search-unused-repos">
         <source>Search for unused</source>
-        <translation>Suche nach ungenutzten</translation>
+        <translation>Etsi käyttämättömiä</translation>
     </message>
     <message id="orn-unused-repos-switch">
         <source>Search for unused repositories</source>
-        <translation>Suche nach ungenutzten Quellen</translation>
+        <translation>Etsi käyttämättömiä pakettilähteitä</translation>
     </message>
     <message id="orn-unused-repos-switch-descr">
         <source>Search for unused repositories after removing packages.</source>
-        <translation>Suche nach nicht verwendeten Quellen nach dem Entfernen von Paketen.</translation>
+        <translation>Etsi käyttämättömiä pakettilähteitä sovelluksien poistamisen jälkeen</translation>
     </message>
     <message id="orn-unused-repos">
         <source>Unused repositories</source>
-        <translation>Nicht verwendete Quellen</translation>
+        <translation>Käyttämättömät pakettilähteet</translation>
     </message>
     <message id="orn-unused-repos-text">
         <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Es gibt keine installierten Pakete für die folgenden Quellen.&lt;/p&gt;&lt;p&gt;Möchtest du sie jetzt entfernen?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Seuraavista pakettilähteistä ei ole asennettu sovelluksia.&lt;/p&gt;&lt;p&gt;Poistetaanko pakettilähteet nyt?&lt;/p&gt;</translation>
     </message>
     <message id="orn-updates-check-interval-minimum">
         <source>At least 10 minutes</source>
-        <translation>Mindestens 10 Minuten</translation>
+        <translation>Vähintään 10 minuuttia</translation>
     </message>
     <message id="orn-check-for-self-updates-switch">
         <source>Check for self-updates</source>
-        <translation>Nach Storeman Aktualisierungen suchen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-check-for-self-updates-descr">
         <source>Enable the Storeman OBS repository to check for Storeman updates</source>
-        <translation>Storeman OBS Quelle zur Suche nach Aktualisierungen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-storeman-repo-name">
         <source>Storeman OBS Repository</source>
-        <translation>Storeman OBS Quelle</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
