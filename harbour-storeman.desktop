@@ -5,5 +5,8 @@ Icon=harbour-storeman
 Exec=harbour-storeman
 Name=Storeman
 
+[X-Sailjail]
+Sandboxing=Disabled
+
 [X-HarbourBackup]
 BackupPathList=.config/harbour-storeman/:.local/share/harbour-storeman/
