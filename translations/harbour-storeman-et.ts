@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="et">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="et">
 <context>
-    <name></name>
+    <name/>
     <message id="orn-notrated">
         <source>Not rated yet</source>
         <translation>Mitte keegi pole veel hinnanud</translation>
@@ -353,17 +351,11 @@
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%n minute(s) ago</source>
-        <translation>
-            <numerusform>%n minut tagasi</numerusform>
-            <numerusform>%n minutit tagasi</numerusform>
-        </translation>
+        <translation><numerusform>%n minut tagasi</numerusform><numerusform>%n minutit tagasi</numerusform></translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%n hour(s) ago</source>
-        <translation>
-            <numerusform>%n tund tagasi</numerusform>
-            <numerusform>%n tundi tagasi</numerusform>
-        </translation>
+        <translation><numerusform>%n tund tagasi</numerusform><numerusform>%n tundi tagasi</numerusform></translation>
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
@@ -718,10 +710,7 @@
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
-        <translation>
-            <numerusform>%n toiming on pooleli</numerusform>
-            <numerusform>%n toimingut on pooleli</numerusform>
-        </translation>
+        <translation><numerusform>%n toiming on pooleli</numerusform><numerusform>%n toimingut on pooleli</numerusform></translation>
     </message>
     <message id="orn-version-available">
         <source>Available version</source>
@@ -775,17 +764,11 @@
     </message>
     <message id="orn-interval-m" numerus="yes">
         <source>%n minute(s)</source>
-        <translation>
-            <numerusform>%n minut</numerusform>
-            <numerusform>%n minutit</numerusform>
-        </translation>
+        <translation><numerusform>%n minut</numerusform><numerusform>%n minutit</numerusform></translation>
     </message>
     <message id="orn-interval-h" numerus="yes">
         <source>%n hour(s)</source>
-        <translation>
-            <numerusform>%n tund</numerusform>
-            <numerusform>%n tundi</numerusform>
-        </translation>
+        <translation><numerusform>%n tund</numerusform><numerusform>%n tundi</numerusform></translation>
     </message>
     <message id="orn-tag-strikeout">
         <source>S</source>

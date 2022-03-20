@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="tt">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="tt">
 <context>
-    <name></name>
+    <name/>
     <message id="orn-notrated">
         <source>Not rated yet</source>
         <translation>Бәяләрсез</translation>
@@ -353,15 +351,11 @@
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%n minute(s) ago</source>
-        <translation>
-            <numerusform>%n минут элек</numerusform>
-        </translation>
+        <translation><numerusform>%n минут элек</numerusform></translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%n hour(s) ago</source>
-        <translation>
-            <numerusform>%n сәгать элек</numerusform>
-        </translation>
+        <translation><numerusform>%n сәгать элек</numerusform></translation>
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
@@ -718,9 +712,7 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
-        <translation>
-            <numerusform>%n операция үтәлә</numerusform>
-        </translation>
+        <translation><numerusform>%n операция үтәлә</numerusform></translation>
     </message>
     <message id="orn-version-available">
         <source>Available version</source>
@@ -774,15 +766,11 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     </message>
     <message id="orn-interval-m" numerus="yes">
         <source>%n minute(s)</source>
-        <translation>
-            <numerusform>%n минут</numerusform>
-        </translation>
+        <translation><numerusform>%n минут</numerusform></translation>
     </message>
     <message id="orn-interval-h" numerus="yes">
         <source>%n hour(s)</source>
-        <translation>
-            <numerusform>%n сәгать</numerusform>
-        </translation>
+        <translation><numerusform>%n сәгать</numerusform></translation>
     </message>
     <message id="orn-tag-strikeout">
         <source>S</source>
