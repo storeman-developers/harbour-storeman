@@ -1,17 +1,17 @@
 Name:           harbour-storeman
-Summary:        OpenRepos client for SailfishOS
-Version:        0.2.12
+Summary:        OpenRepos Client for Sailfish OS
+Version:        0.2.11
 Release:        1
 Group:          Qt/Qt
 License:        MIT
-URL:            https://github.com/storeman-developers/harbour-storeman
+URL:            https://github.com/mentaljam/harbour-storeman
 Source0:        %{name}-%{version}.tar.bz2
 
 Requires:       sailfishsilica-qt5
 Requires:       nemo-qml-plugin-dbus-qt5
 Requires:       nemo-qml-plugin-notifications-qt5
 Requires:       connman-qt5-declarative
-Requires:       libsolv
+Requires:       libsolv0
 Requires:       sailfishsecretsdaemon-secretsplugins-default
 BuildRequires:  pkgconfig(sailfishapp)
 BuildRequires:  pkgconfig(Qt5Core)
@@ -33,7 +33,7 @@ Conflicts:      %{name}-installer
 Obsoletes:      %{name}-installer
 
 %description
-Storeman manages repositories and applications from OpenRepos.net on your SailfishOS device.
+Manage repositories and apps from OpenRepos.net on your Sailfish OS device.
 
 %prep
 %setup -q -n %{name}-%{version}
@@ -45,18 +45,16 @@ make %{?_smp_mflags}
 %install
 rm -rf %{buildroot}
 %qmake5_install
-desktop-file-install --delete-original --dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*.desktop
+desktop-file-install --delete-original       \
+  --dir %{buildroot}%{_datadir}/applications \
+   %{buildroot}%{_datadir}/applications/*.desktop
 
-%posttrans
-ssu rr mentaljam-obs
-rm -f /var/cache/ssu/features.ini
-ssu ar harbour-storeman-obs 'https://repo.sailfishos.org/obs/home:/olf:/harbour-storeman/%%(release)_%%(arch)/'
-ssu ur
+%post
+ssu ur || true
 
 %postun
-ssu rr harbour-storeman-obs
-rm -f /var/cache/ssu/features.ini
-ssu ur
+rm -f /var/cache/ssu/features.ini || true
+ssu ur || true
 
 %files
 %defattr(-,root,root,-)
@@ -66,3 +64,4 @@ ssu ur
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
 %{_datadir}/mapplauncherd/privileges.d/%{name}
 %{_datadir}/dbus-1/services/harbour.storeman.service
+%{_datadir}/ssu/features.d/mentaljam-obs.ini

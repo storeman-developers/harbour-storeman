@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi">
+<TS version="2.1" language="hu_HU">
 <context>
     <name></name>
     <message id="orn-notrated">
         <source>Not rated yet</source>
-        <translation>Ei arvioita</translation>
+        <translation>Még nincs értékelve</translation>
     </message>
     <message id="orn-repositories">
         <source>Repositories</source>
-        <translation>Pakettilähteet</translation>
+        <translation>Csomagtárolók</translation>
     </message>
     <message id="orn-refresh">
         <source>Refresh</source>
-        <translation>Virkistä</translation>
+        <translation>Frissítés</translation>
     </message>
     <message id="orn-disable">
         <source>Disable</source>
-        <translation>Poista käytöstä</translation>
+        <translation>Letilt</translation>
     </message>
     <message id="orn-enable">
         <source>Enable</source>
-        <translation>Ota käyttöön</translation>
+        <translation>Engedélyez</translation>
     </message>
     <message id="orn-enabled">
         <source>Enabled</source>
-        <translation>Käytössä</translation>
+        <translation>Engedélyezve</translation>
     </message>
     <message id="orn-disabled">
         <source>Disabled</source>
-        <translation>Ei käytössä</translation>
+        <translation>Tiltva</translation>
     </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
-        <translation>Viimeksi päivitetty</translation>
+        <translation>Nemrég frissítve</translation>
     </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
-        <translation>Verkkoon ei saada yhteyttä</translation>
+        <translation>Hálózat nem elérhető</translation>
     </message>
     <message id="orn-today">
         <source>Today</source>
-        <translation>Tänään</translation>
+        <translation>Ma</translation>
     </message>
     <message id="orn-yesterday">
         <source>Yesterday</source>
-        <translation>Eilen</translation>
+        <translation>Tegnap</translation>
     </message>
     <message id="orn-this-week">
         <source>This week</source>
-        <translation>Tällä viikolla</translation>
+        <translation>Ezen a héten</translation>
     </message>
     <message id="orn-this-month">
         <source>This month</source>
-        <translation>Tässä kuussa</translation>
+        <translation>Ebben a hónapban</translation>
     </message>
     <message id="orn-month-format">
         <source>%0 %1</source>
@@ -62,184 +62,184 @@
     </message>
     <message id="orn-adding-repo">
         <source>Adding</source>
-        <translation>Lisätään</translation>
+        <translation>Hozzáadás</translation>
     </message>
     <message id="orb-remove">
         <source>Remove</source>
-        <translation>Poista</translation>
+        <translation>Eltávolítás</translation>
     </message>
     <message id="orn-removing">
         <source>Removing</source>
-        <translation>Poistetaan</translation>
+        <translation>Eltávolítás</translation>
     </message>
     <message id="orn-error">
         <source>An error occured</source>
-        <translation>Tapahtui virhe</translation>
+        <translation>Hiba történt</translation>
     </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
-        <translation>Lisää pakettilähde</translation>
+        <translation>Csomagtároló hozzáadása</translation>
     </message>
     <message id="orn-repo-enable">
         <source>Enable repository</source>
-        <translation>Ota pakettilähde käyttöön</translation>
+        <translation>Csomagtároló engedélyezése</translation>
     </message>
     <message id="orn-install">
         <source>Install</source>
-        <translation>Asenna</translation>
+        <translation>Telepítés</translation>
     </message>
     <message id="orn-remove">
         <source>Remove</source>
-        <translation>Poista</translation>
+        <translation>Eltávolítás</translation>
     </message>
     <message id="orn-launch">
         <source>Launch</source>
-        <translation>Avaa</translation>
+        <translation>Indítás</translation>
     </message>
     <message id="orn-package-installed">
         <source>Package %0 was successfully installed</source>
-        <translation>%0 paketti asennettiin onnistuneesti</translation>
+        <translation>%0 sikeresen telepítve</translation>
     </message>
     <message id="orn-package-removed">
         <source>Package %0 was successfully removed</source>
-        <translation>%0 paketti poistettiin onnistuneesti</translation>
+        <translation>%0 sikeresen eltávolítva</translation>
     </message>
     <message id="orn-installed">
         <source>Installed</source>
-        <translation>Asennettu</translation>
+        <translation>Telepítve</translation>
     </message>
     <message id="orn-version-installed">
         <source>Installed version</source>
-        <translation>Asennettu versio</translation>
+        <translation>Telepített verzió</translation>
     </message>
     <message id="orn-version-updated">
         <source>Last updated</source>
-        <translation>Viimeksi päivitetty</translation>
+        <translation>Utoljára frissítve</translation>
     </message>
     <message id="orn-dt-format">
         <source>yyyy-MM-dd hh:mm</source>
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation>hh:mm, dd.MM.yyyy</translation>
+        <translation>yyyy.MM.dd. hh:mm</translation>
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
-        <translation>Ei saatavilla olevia versioita</translation>
+        <translation>Nincs elérhető verzió</translation>
     </message>
     <message id="orn-comments">
         <source>Comments</source>
-        <translation>Kommentit</translation>
+        <translation>Hozzászólások</translation>
     </message>
     <message id="orn-author-apps">
         <source>More by %0</source>
-        <translation>Lisää tekijältä %0</translation>
+        <translation>%0 további alkalmazásai</translation>
     </message>
     <message id="orn-cat-coding-competition">
         <source>Coding Competition</source>
-        <translation>Koodauskilpailu</translation>
+        <translation>Kódoló verseny</translation>
     </message>
     <message id="orn-cat-applications">
         <source>Applications</source>
-        <translation>Sovellukset</translation>
+        <translation>Alkalmazások</translation>
     </message>
     <message id="orn-cat-application">
         <source>Application</source>
-        <translation>Sovellus</translation>
+        <translation>Általános</translation>
     </message>
     <message id="orn-cat-ambience-themes">
         <source>Ambience &amp; Themes</source>
-        <translation>Tunnelmat &amp; Teemat</translation>
+        <translation>Ambience és témák</translation>
     </message>
     <message id="orn-cat-business">
         <source>Business</source>
-        <translation>Liiketoiminta</translation>
+        <translation>Üzlet</translation>
     </message>
     <message id="orn-cat-city-guides-maps">
         <source>City guides &amp; maps</source>
-        <translation>Oppaat &amp; Kartat</translation>
+        <translation>Térképek és városkalauzok</translation>
     </message>
     <message id="orn-cat-education-science">
         <source>Education &amp; Science</source>
-        <translation>Koulutus &amp; Tiede</translation>
+        <translation>Oktatás és tudomány</translation>
     </message>
     <message id="orn-cat-entertainment">
         <source>Entertainment</source>
-        <translation>Viihde</translation>
+        <translation>Szórakozás</translation>
     </message>
     <message id="orn-cat-music">
         <source>Music</source>
-        <translation>Musiikki</translation>
+        <translation>Zene</translation>
     </message>
     <message id="orn-cat-network">
         <source>Network</source>
-        <translation>Verkko</translation>
+        <translation>Hálózat</translation>
     </message>
     <message id="orn-cat-news-info">
         <source>News &amp; info</source>
-        <translation>Uutiset</translation>
+        <translation>Hírek és infó</translation>
     </message>
     <message id="orn-cat-patches">
         <source>Patches</source>
-        <translation>Käyttöjärjestelmän muokkaukset</translation>
+        <translation>Javítások</translation>
     </message>
     <message id="orn-cat-photo-video">
         <source>Photo &amp; video</source>
-        <translation>Kuva &amp; Video</translation>
+        <translation>Fotó és videó</translation>
     </message>
     <message id="orn-cat-social-networks">
         <source>Social Networks</source>
-        <translation>Sosiaaliset verkostot</translation>
+        <translation>Közösségi</translation>
     </message>
     <message id="orn-cat-sports">
         <source>Sports</source>
-        <translation>Urheilu</translation>
+        <translation>Sport</translation>
     </message>
     <message id="orn-cat-system">
         <source>System</source>
-        <translation>Järjestelmä</translation>
+        <translation>Rendszer</translation>
     </message>
     <message id="orn-cat-unknown">
         <source>Unknown</source>
-        <translation>Tuntematon</translation>
+        <translation>Kategorizálatlan</translation>
     </message>
     <message id="orn-cat-utilities">
         <source>Utilities</source>
-        <translation>Apuohjelmat</translation>
+        <translation>Segédprogramok</translation>
     </message>
     <message id="orn-cat-games">
         <source>Games</source>
-        <translation>Pelit</translation>
+        <translation>Játékok</translation>
     </message>
     <message id="orn-cat-game">
         <source>Game</source>
-        <translation>Peli</translation>
+        <translation>Játék</translation>
     </message>
     <message id="orn-cat-action">
         <source>Action</source>
-        <translation>Toiminta</translation>
+        <translation>Akció</translation>
     </message>
     <message id="orn-cat-adventure">
         <source>Adventure</source>
-        <translation>Seikkailu </translation>
+        <translation>Kaland</translation>
     </message>
     <message id="orn-cat-arcade">
         <source>Arcade</source>
-        <translation>Pelihalli</translation>
+        <translation>Árkád</translation>
     </message>
     <message id="orn-cat-card-casino">
         <source>Card &amp; casino</source>
-        <translation>Kortti &amp; Kasino</translation>
+        <translation>Kártyajáték és kaszinó</translation>
     </message>
     <message id="orn-cat-education">
         <source>Education</source>
-        <translation>Opetus</translation>
+        <translation>Oktatás</translation>
     </message>
     <message id="orn-cat-puzzle">
         <source>Puzzle</source>
-        <translation>Pulmapeli</translation>
+        <translation>Puzzle</translation>
     </message>
     <message id="orn-cat-strategy">
         <source>Strategy</source>
-        <translation>Strategia</translation>
+        <translation>Stratégia</translation>
     </message>
     <message id="orn-cat-trivia">
         <source>Trivia</source>
@@ -247,273 +247,271 @@
     </message>
     <message id="orn-cat-translations">
         <source>Translations</source>
-        <translation>Käännökset</translation>
+        <translation>Lokalizációk</translation>
     </message>
     <message id="orn-cat-fonts">
         <source>Fonts</source>
-        <translation>Fontit</translation>
+        <translation>Betűkészletek</translation>
     </message>
     <message id="orn-cat-libraries">
         <source>Libraries</source>
-        <translation>Kirjastot</translation>
+        <translation>Könyvtárak</translation>
     </message>
     <message id="orn-update-available">
         <source>Update available</source>
-        <translation>Päivitys saatavilla</translation>
+        <translation>Frissítés elérhető</translation>
     </message>
     <message id="orn-update">
         <source>Update</source>
-        <translation>Päivitä</translation>
+        <translation>Frissítés</translation>
     </message>
     <message id="orn-changelog">
         <source>Changelog</source>
-        <translation>Muutokset</translation>
+        <translation>Változásnapló</translation>
     </message>
     <message id="orn-comments-withnum">
         <source>Comments (%0)</source>
-        <translation>Kommentit (%0)</translation>
+        <translation>Hozzászólások (%0)</translation>
     </message>
     <message id="orn-version-repo-disabled">
         <source>Enable the repository first</source>
-        <translation>Lisää pakettilähde ensin</translation>
+        <translation>Előbb engedélyezd a csomagtárolót</translation>
     </message>
     <message id="orn-search">
         <source>Search</source>
         <extracomment>The search menu item and the search page header text - should be a noun</extracomment>
-        <translation>Haku</translation>
+        <translation>Keresés</translation>
     </message>
     <message id="orn-searchpage-placeholder-noresults">
         <source>Nothing found</source>
-        <translation>Mitään ei löytynyt</translation>
+        <translation>Nincs találat</translation>
     </message>
     <message id="orn-searchpage-placeholder-noresults-hint">
         <source>Try to change search keywords</source>
-        <translation>Kokeile muita hakusanoja</translation>
+        <translation>Próbáld megváltoztatni a keresési kulcsszavakat</translation>
     </message>
     <message id="orn-searchfield-placeholder">
         <source>Search</source>
         <extracomment>The search field placeholder text - should be a verb</extracomment>
-        <translation>Hae</translation>
+        <translation>Keresés</translation>
     </message>
     <message id="orn-searchpage-placeholder-default">
         <source>Search results will be shown here</source>
-        <translation>Hakutulokset näytetään tässä</translation>
+        <translation>A keresési eredményeket itt láthatod</translation>
     </message>
     <message id="orn-searchpage-placeholder-default-hint">
         <source>Type some keywords in the field above</source>
-        <translation>Kirjoita jotain avainsanoja ylläolevaan kenttään</translation>
+        <translation>Írj néhány kulcsszót a fenti mezőbe</translation>
     </message>
     <message id="orn-about">
         <source>About Storeman</source>
-        <translation>Tietoja sovelluksesta</translation>
+        <translation>Storeman névjegye</translation>
     </message>
     <message id="orn-translations">
         <source>Translations</source>
-        <translation>Käännökset</translation>
+        <translation>Lokalizációk</translation>
     </message>
     <message id="orn-coordinators">
         <source>Coordinators</source>
-        <translation>Koordinaattorit</translation>
+        <translation>Koordinátorok</translation>
     </message>
     <message id="orn-translators">
         <source>Translators</source>
-        <translation>Kääntäjät</translation>
+        <translation>Fordítók</translation>
     </message>
     <message id="orn-reviewers">
         <source>Reviewers</source>
-        <translation>Arvostelijat</translation>
+        <translation>Felülvizsgálók</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
-        <translation>Verkkovirhe</translation>
+        <translation>Hálózati hiba történt</translation>
     </message>
     <message id="orn-pull-refresh">
         <source>Pull down to refresh</source>
-        <translation>Virkistä vetämällä alas</translation>
+        <translation>Húzd le a frissítéshez</translation>
     </message>
     <message id="orn-development">
         <source>Development</source>
-        <translation>Kehitys</translation>
+        <translation>Fejlesztés</translation>
     </message>
     <message id="orn-developers">
         <source>Developers</source>
-        <translation>Kehittäjät</translation>
+        <translation>Fejlesztők</translation>
     </message>
     <message id="orn-appicon">
         <source>Application Icon</source>
-        <translation>Sovelluksen kuvake</translation>
+        <translation>Alkalmazásikon</translation>
     </message>
     <message id="orn-sources">
         <source>Source Code</source>
-        <translation>Lähdekoodi</translation>
+        <translation>Forráskód</translation>
     </message>
     <message id="orn-just-now">
         <source>Just now</source>
-        <translation>Juuri nyt</translation>
+        <translation>Épp most</translation>
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%n minute(s) ago</source>
         <translation>
-            <numerusform>%n minuutti sitten</numerusform>
-            <numerusform>%n minuuttia sitten</numerusform>
+            <numerusform>%n perccel ezelőtt</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%n hour(s) ago</source>
         <translation>
-            <numerusform>%n tunti sitten</numerusform>
-            <numerusform>%n tuntia sitten</numerusform>
+            <numerusform>%n órája</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
         <extracomment>Active label to navigate to the original comment - should be a noun</extracomment>
-        <translation>Vastaus käyttäjälle %0</translation>
+        <translation>Válasz neki: %0</translation>
     </message>
     <message id="orn-categories">
         <source>Categories</source>
-        <translation>Kategoriat</translation>
+        <translation>Kategóriák</translation>
     </message>
     <message id="orn-category-noapps">
         <source>Currently there are no apps in this category</source>
-        <translation>Tässä kategoriassa ei ole sovelluksia tällä hetkellä</translation>
+        <translation>Jelenleg nem található alkalmazás ebben a kategóriában</translation>
     </message>
     <message id="orn-cat-unknown2">
         <source>Unknown category</source>
-        <translation>Tuntematon kategoria</translation>
+        <translation>Ismeretlen kategória</translation>
     </message>
     <message id="orn-comment-body">
         <source>Your comment</source>
-        <translation>Kommentti</translation>
+        <translation>A hozzászólásod</translation>
     </message>
     <message id="orn-reply">
         <source>Reply</source>
         <extracomment>Menu item to reply for a comment - should be a verb</extracomment>
-        <translation>Vastaa</translation>
+        <translation>Válasz</translation>
     </message>
     <message id="orn-edit">
         <source>Edit</source>
-        <translation>Muokkaa</translation>
+        <translation>Szerkesztés</translation>
     </message>
     <message id="orn-login-menu-item">
         <source>Log in to OpenRepos.net</source>
-        <translation>OpenRepos.net-kirjautuminen</translation>
+        <translation>OpenRepos.net bejelentkezés </translation>
     </message>
     <message id="orn-login-action">
         <source>Log in</source>
-        <translation>Kirjaudu sisään</translation>
+        <translation>Bejelentkezés</translation>
     </message>
     <message id="orn-username">
         <source>Username or e-mail address</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation>Käyttäjänimi tai sähköposti</translation>
+        <translation>Felhasználónév</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not send your password to third-parties.</source>
-        <translation>Kirjaudu OpenRepos.net-tilillesi jättääksesi kommentteja ja antaaksesi arvioita.&lt;br /&gt;&lt;br /&gt;Storeman ei luovuta salasanaasi kolmansille osapuolille.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
-        <translation>Olet kirjautunut onnistuneesti kohteeseen OpenRepos.net</translation>
+        <translation>Sikeresen beléptél az OpenRepos.net-re</translation>
     </message>
     <message id="orn-loggedout-message">
         <source>You have logged out from the OpenRepos.net</source>
-        <translation>Olet kirjautunut ulos onnistuneesti kohteesta OpenRepos.net</translation>
+        <translation>Kiléptél az OpenRepos.net-ből</translation>
     </message>
     <message id="orn-login-error-title">
         <source>Login error</source>
-        <translation>Virhe sisäänkirjautumisessa</translation>
+        <translation>Hiba a bejelentkezéskor</translation>
     </message>
     <message id="orn-login-error-message">
         <source>Could not log in the OpenRepos.net - check your credentials and network connection</source>
-        <translation>Kirjautuminen kohteeseen OpenRepos.net epäonnistui - tarkista kirjautumistietosi tai verkkoyhteytesi</translation>
+        <translation>Nem sikerült bejelentkezni az OpenRepos.net-re - Ellenőrizzd a hitelesítő adatokat és a hálózati kapcsolatot</translation>
     </message>
     <message id="orn-loggedin-menu-item">
         <source>Logged in as %0</source>
-        <translation>%0 kirjautunut sisään</translation>
+        <translation>Bejelentkezve mint %0</translation>
     </message>
     <message id="orn-logout-action">
         <source>Log out</source>
         <extracomment>Menu item</extracomment>
-        <translation>Kirjaudu ulos</translation>
+        <translation>Kijelentkezés</translation>
     </message>
     <message id="orn-logout-remorse">
         <source>Logging out</source>
         <extracomment>Remorse text</extracomment>
-        <translation>Kirjaudutaan ulos</translation>
+        <translation>Kijelentkezés</translation>
     </message>
     <message id="orn-comment-edit-label">
         <source>Edit your comment</source>
-        <translation>Muokkaa kommenttia</translation>
+        <translation>Hozzászólás szerkesztése</translation>
     </message>
     <message id="orn-comment-update">
         <source>Update</source>
         <extracomment>Update a comment</extracomment>
-        <translation>Päivitä</translation>
+        <translation>Frissítés</translation>
     </message>
     <message id="orn-comment-send">
         <source>Send</source>
-        <translation>Lähetä</translation>
+        <translation>Küldés</translation>
     </message>
     <message id="orn-authorisation-expires-summary">
         <source>Authorisation expires</source>
-        <translation>Tunnusten käyttöoikeus vanhenee</translation>
+        <translation>Az engedély lejár</translation>
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
-        <translation>Tunnusten käyttöoikeus vanhentunut</translation>
+        <translation>Az engedély lejárt</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
-        <translation>Uudista käyttöoikeus</translation>
+        <translation>Koppints az újraengedélyezéshez</translation>
     </message>
     <message id="orn-enable-all">
         <source>Enable all</source>
-        <translation>Ota kaikki käyttöön</translation>
+        <translation>Az összes engedélyezése</translation>
     </message>
     <message id="orn-disable-all">
         <source>Disable all</source>
-        <translation>Poista kaikki käytöstä</translation>
+        <translation>Az összes letiltása</translation>
     </message>
     <message id="orn-enabling-all">
         <source>Enabling all</source>
-        <translation>Otetaan käyttöön</translation>
+        <translation>Az összes engedélyezése</translation>
     </message>
     <message id="orn-disabling-all">
         <source>Disabling all</source>
-        <translation>Poistetaan käytöstä</translation>
+        <translation>Az összes letiltása</translation>
     </message>
     <message id="orn-installed-apps">
         <source>Installed applications</source>
-        <translation>Asennetut sovellukset</translation>
+        <translation>Telepített alkalmazások</translation>
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
-        <translation>Kirjanmerkki lisätty</translation>
+        <translation>Az alkalmazás hozzáadva a könyvjelzőkhöz</translation>
     </message>
     <message id="orn-bookmarks-removed">
         <source>The app was removed from bookmarks</source>
-        <translation>Kirjanmerkki poistettu</translation>
+        <translation>Az alkalmazás eltávolítva a könyvjelzők közül</translation>
     </message>
     <message id="orn-no-bookmarks">
         <source>Your bookmarked applications will be shown here</source>
-        <translation>Kirjanmerkkeihin lisätyt sovellukset näkyvät tässä</translation>
+        <translation>Itt találod a könyvjelzőzött alkalmazásaidat</translation>
     </message>
     <message id="orn-bookmarks">
         <source>Bookmarks</source>
-        <translation>Kirjanmerkit</translation>
+        <translation>Könyvjelzők</translation>
     </message>
     <message id="orn-no-repos">
         <source>No OpenRepos repositories have been added yet</source>
-        <translation>Pakettilähteitä ei ole vielä lisätty</translation>
+        <translation>Nincs még mentett OpenRepos csomagtároló</translation>
     </message>
     <message id="orn-add-repo-hint">
         <source>You can add a repository from an application page</source>
-        <translation>Voit lisätä pakettilähteen sovelluksen sivulta</translation>
+        <translation>Csomagtárolót egy alkalmazás oldaláról adhatsz hozzá</translation>
     </message>
     <message id="orn-refresh-cache">
         <source>Refresh cache</source>
-        <translation>Virkistä välimuisti</translation>
+        <translation>Gyorsítótár frissítése</translation>
     </message>
     <message id="orn-tag-underscore">
         <source>U</source>
@@ -532,259 +530,256 @@
     </message>
     <message id="orn-updates-available-summary">
         <source>Updates available</source>
-        <translation>Päivityksiä saatavilla</translation>
+        <translation>Elérhető frissítések</translation>
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
         <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
-        <translation>%2 tarvitsee paketin %1, jota ei löydy</translation>
+        <translation>A(z) %2 által igényelt %1 függőség nem telepíthető</translation>
     </message>
     <message id="orn-backups">
         <source>Backups</source>
-        <translation>Varmuuskopiot</translation>
+        <translation>Biztonsági mentések</translation>
     </message>
     <message id="orn-backup-description">
         <source>Backup and restore repos and installed apps</source>
-        <translation>Varmuuskopioi ja palauta pakettilähteet ja asennetut ohjelmat</translation>
+        <translation>Csomagtárolók és alkalmazások mentése és visszaállítása</translation>
     </message>
     <message id="orn-create-backup">
         <source>Create a backup</source>
-        <translation>Luo varmuuskopio</translation>
+        <translation>Biztonsági mentés létrehozása</translation>
     </message>
     <message id="orn-backup-error">
         <source>Backup error</source>
-        <translation>Virhe varmuuskopioinnissa</translation>
+        <translation>Mentési hiba</translation>
     </message>
     <message id="orn-backup-error-directory">
         <source>Could not create directory</source>
-        <translation>Hakemiston luonti epäonnistui</translation>
+        <translation>Mappa létrehozása sikertelen</translation>
     </message>
     <message id="orn-restore-title">
         <source>Restore from a file</source>
-        <translation>Palauta tiedostosta</translation>
+        <translation>Visszaállítás fájlból</translation>
     </message>
     <message id="orn-restore">
         <source>Restore</source>
-        <translation>Palauta</translation>
+        <translation>Visszaállítás</translation>
     </message>
     <message id="orn-restore-hint">
         <source>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</source>
-        <translation>Palauta OpenRepos-pakettilähteet ja asennetut ohjelmat valitusta tiedostosta. Tämä toiminto ei vaikuta nykyisiin pakettilähteisiisi eikä poista asennettuja ohjelmia.</translation>
+        <translation>OpenRepos csomagtárolók és telepített alkalmazások visszaállítása előzőleg elmentett fájlból. A művelet nem érinti a jelenleg beállított tárolókat és nem távolít el telepített alkalmazásokat.</translation>
     </message>
     <message id="orn-created">
         <source>Created</source>
-        <translation>Luotu</translation>
+        <translation>Létrehozva</translation>
     </message>
     <message id="orn-total-repos">
         <source>Total repositories</source>
-        <translation>Pakettilähteitä yhteensä</translation>
+        <translation>Összes csomagtároló</translation>
     </message>
     <message id="orn-details">
         <source>Details</source>
-        <translation>Lisätietoja</translation>
+        <translation>Részletek</translation>
     </message>
     <message id="orn-backups-placeholder">
         <source>Backups will be shown here</source>
-        <translation>Varmuuskopiot näytetään tässä</translation>
+        <translation>A biztonsági mentéseket itt találod</translation>
     </message>
     <message id="orn-restoring-repos">
         <source>Restoring repositories</source>
-        <translation>Palautetaan pakettilähteitä</translation>
+        <translation>Csomagtárolók visszaállítása</translation>
     </message>
     <message id="orn-refreshing-repos">
         <source>Refreshing repositories</source>
-        <translation>Virkistetään pakettilähteitä</translation>
+        <translation>Csomagtárolók frissítése</translation>
     </message>
     <message id="orn-searching-packages">
         <source>Searching packages</source>
-        <translation>Etsitään paketteja</translation>
+        <translation>Csomagok keresése</translation>
     </message>
     <message id="orn-installing-repos">
         <source>Installing packages</source>
-        <translation>Asennetaan paketteja</translation>
+        <translation>Csomagok telepítése</translation>
     </message>
     <message id="orn-restoring-title">
         <source>Restoring</source>
-        <translation>Palautetaan</translation>
+        <translation>Visszaállítás</translation>
     </message>
     <message id="orn-success-backup">
         <source>Successful backup</source>
-        <translation>Varmuuskopionti onnistui</translation>
+        <translation>Sikeres biztonsági mentés</translation>
     </message>
     <message id="orn-success-restore">
         <source>Successful restore</source>
-        <translation>Palautus onnistui</translation>
+        <translation>Sikeres visszaállítás</translation>
     </message>
     <message id="orn-installed-packages">
         <source>Installed packages</source>
-        <translation>Asennetut paketit</translation>
+        <translation>Telepített csomagok</translation>
     </message>
     <message id="orn-login2comment">
         <source>Login to comment</source>
-        <translation>Kirjaudu sisään kommentoidaksesi</translation>
+        <translation>Hozzászólás írásához jelentkezz be</translation>
     </message>
     <message id="orn-backup">
         <source>Backup</source>
-        <translation>Varmuuskopioi</translation>
+        <translation>Biztonsági mentés</translation>
     </message>
     <message id="orn-backup-hint">
         <source>&lt;h2&gt;Backup to a file&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.&lt;/p&gt;</source>
-        <translation>&lt;h2&gt;Varmuuskopioi tiedostoon&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Varmuuskopioinnin avulla voit tallentaa nykyiset OpenRepos-pakettilähteesi, asennetut ohjelmat ja kirjanmerkit sekä palauttaa ne myöhemmin (esimerkiksi tehdasasetusten palauttamisen jälkeen). Varmuuskopio on paikallinen tiedosto, joka on tallennettu &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; hakemistoon. &lt;br /&gt;&lt;br /&gt;&lt;b&gt;Huomio!&lt;/b&gt; Varmuuskopiot tulisi kopioida talteen manuaalisesti ennen tehdasasetusten palauttamista. Esimerkiksi SD-kortille, ulkoiseen laitteeseen tai pilvipalveluun.</translation>
+        <translation>&lt;h2&gt;Biztonsági mentés egy fájlba&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;A biztonsági mentés segítségével elmentheted a jelenlegi OpenRepos csomagtárolóidat, telepített alkalmazásaidat és könyvjelzőidet, hogy majd később visszaállítsd őket. (például gyári beállításokra való visszaállítás esetében). A biztonsági mentés egy helyi fájl a&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; mappában.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Figyelem!&lt;/b&gt; A biztonsági mentéseidet a gyári visszaállítás előtt valamilyen biztonságos helyre kell másolnod. Ez lehet az SD-kártyád, külső tároló, felhőtárhely vagy valami más.&lt;/p&gt;</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
-        <translation>Alustetaan</translation>
+        <translation>Inicializálás</translation>
     </message>
     <message id="orn-pmstate-addingrepo">
         <source>Adding repo %0</source>
-        <translation>Lisätään pakettilähdettä %0</translation>
+        <translation>%0 repo hozzáadása</translation>
     </message>
     <message id="orn-pmstate-removingrepo">
         <source>Removing repo %0</source>
-        <translation>Poistetaan pakettilähdettä %0</translation>
+        <translation>%0 repo eltávolítása</translation>
     </message>
     <message id="orn-pmstate-enablingrepo">
         <source>Enabling repo %0</source>
-        <translation>Otetaan käyttöön pakettilähdettä %0</translation>
+        <translation>%0 repo engedélyezése</translation>
     </message>
     <message id="orn-pmstate-disablingrepo">
         <source>Disabling repo %0</source>
-        <translation>Poistetaan käytöstä pakettilähdettä %0</translation>
+        <translation>%0 repo letiltása</translation>
     </message>
     <message id="orn-pmstate-refreshingrepo">
         <source>Refreshing %0</source>
-        <translation>Virkistetään %0</translation>
+        <translation>%0 frissítése</translation>
     </message>
     <message id="orn-pmstate-installingpackage">
         <source>Installing package %0</source>
-        <translation>Asennetaan pakettia %0</translation>
+        <translation>%0 csomag telepítése</translation>
     </message>
     <message id="orn-pmstate-removingpackage">
         <source>Removing package %0</source>
-        <translation>Poistetaan pakettia %0</translation>
+        <translation>%0 csomag eltávolítása</translation>
     </message>
     <message id="orn-pmstate-updatingpackage">
         <source>Updating package %0</source>
-        <translation>Päivitetään pakettia %0</translation>
+        <translation>%0 csomag frissítése</translation>
     </message>
     <message id="orn-repo-removed">
         <source>The repository %0 was removed</source>
-        <translation>Pakettilähde %0 poistettiin</translation>
+        <translation>A %0 csomagtároló eltávolítva</translation>
     </message>
     <message id="orn-repo-added">
         <source>The repository %0 was added</source>
-        <translation>Pakettilähde %0 lisättiin</translation>
+        <translation>A %0 csomagtároló hozzáadva</translation>
     </message>
     <message id="orn-repo-disabled">
         <source>The repository %0 was disabled</source>
-        <translation>Pakettilähde %0 poistettiin käytöstä</translation>
+        <translation>A %0 csomagtároló letiltva</translation>
     </message>
     <message id="orn-repo-enabled">
         <source>The repository %0 was enabled</source>
-        <translation>Pakettilähde %0 otettiin käyttöön</translation>
+        <translation>A %0 csomagtároló engedélyezve</translation>
     </message>
     <message id="orn-not-installed">
         <source>Not installed</source>
-        <translation>Ei asennettu</translation>
+        <translation>Nincs telepítve</translation>
     </message>
     <message id="orn-installing">
         <source>Installing</source>
-        <translation>Asennetaan</translation>
+        <translation>Telepítés</translation>
     </message>
     <message id="orn-unknown">
         <source>Unknown</source>
-        <translation>Tuntematon</translation>
+        <translation>Ismeretlen</translation>
     </message>
     <message id="orn-updating">
         <source>Updating</source>
-        <translation>Päivitetään</translation>
+        <translation>Frissítés</translation>
     </message>
     <message id="orn-version-available-global">
         <source>Available in other repositories</source>
-        <translation>Saatavana muista pakettilähteistä</translation>
+        <translation>Másik csomagtárolókon elérhető</translation>
     </message>
     <message id="orn-installed-apps-description">
         <source>Only from enabled repositories</source>
-        <translation>Vain käyttöönotetuista pakettilähteistä</translation>
+        <translation>Csak az engedélyezett csomagtárolókból</translation>
     </message>
     <message id="orn-update-all">
         <source>Update all</source>
-        <translation>Päivitä kaikki</translation>
+        <translation>Az összes frissítése</translation>
     </message>
     <message id="orn-no-installed-apps">
         <source>Could not find any applications installed from OpenRepos</source>
-        <translation>Yhtään kohteesta OpenRepos asennettua sovellusta ei löytynyt</translation>
+        <translation>Nem találhatók OpenRepos-ból telepített alkalmazások</translation>
     </message>
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
         <translation>
-            <numerusform>Suoritetaan %n operaatiota</numerusform>
-            <numerusform>Suoritetaan %n operaatiota</numerusform>
+            <numerusform>%n művelet folyamatban</numerusform>
         </translation>
     </message>
     <message id="orn-version-available">
         <source>Available version</source>
-        <translation>Saatavilla oleva versio</translation>
+        <translation>Elérhető verzió</translation>
     </message>
     <message id="orn-error-packagenotfound">
         <source>Couldn&apos;t find package</source>
-        <translation>Pakettia ei löytynyt</translation>
+        <translation>A csomag nem található</translation>
     </message>
     <message id="orn-size-installed">
         <source>Installed size</source>
-        <translation>Asennuskoko</translation>
+        <translation>Telepített méret</translation>
     </message>
     <message id="orn-size-download-install">
         <source>Download / install size</source>
-        <translation>Lataus- / asennuskoko</translation>
+        <translation>Letöltési / telepítési méret</translation>
     </message>
     <message id="orn-cat-public-transport">
         <source>Public Transport</source>
-        <translation>Julkinen liikenne</translation>
+        <translation>Tömegközlekedés</translation>
     </message>
     <message id="orn-comments-wait">
         <source>Wait for users&apos; feedback</source>
         <extracomment>This will be shown to an application author</extracomment>
-        <translation>Odota käyttäjien palautetta</translation>
+        <translation>Felhasználói visszajelzésre vár</translation>
     </message>
     <message id="orn-comments-bethefirst">
         <source>Be the first to comment</source>
         <extracomment>This will be shown to a normal user</extracomment>
-        <translation>Ole ensimmäinen kommentoija</translation>
+        <translation>Legyél te az első hozzászóló</translation>
     </message>
     <message id="orn-comments-nocomments">
         <source>There is nothing here yet</source>
-        <translation>Täällä ei ole vielä mitään</translation>
+        <translation>Még nincs itt semmi</translation>
     </message>
     <message id="orn-settings">
         <source>Settings</source>
-        <translation>Asetukset</translation>
+        <translation>Beállítások</translation>
     </message>
     <message id="orn-updates">
         <source>Updates</source>
-        <translation>Päivitykset</translation>
+        <translation>Frissítések</translation>
     </message>
     <message id="orn-updates-notification-switch">
         <source>Show updates notification</source>
-        <translation>Näytä ilmoitus päivityksistä</translation>
+        <translation>Frissítési értesítések megjelenítése</translation>
     </message>
     <message id="orn-updates-check-interval">
         <source>Updates check interval</source>
-        <translation>Päivitysten tarkastusväli</translation>
+        <translation>Frissítéskeresési időköz</translation>
     </message>
     <message id="orn-interval-m" numerus="yes">
         <source>%n minute(s)</source>
         <translation>
-            <numerusform>%n minuutti</numerusform>
-            <numerusform>%n minuuttia</numerusform>
+            <numerusform>%n perc</numerusform>
         </translation>
     </message>
     <message id="orn-interval-h" numerus="yes">
         <source>%n hour(s)</source>
         <translation>
-            <numerusform>%n tunti</numerusform>
-            <numerusform>%n tuntia</numerusform>
+            <numerusform>%n óra</numerusform>
         </translation>
     </message>
     <message id="orn-tag-strikeout">
@@ -794,274 +789,274 @@
     </message>
     <message id="orn-hint-commentfield">
         <source>Swipe to see all the tag buttons</source>
-        <translation>Pyyhkäise nähdäksesi kaikki avainsanapainikkeet</translation>
+        <translation>Lapozz, hogy lásd az összes címke gombját</translation>
     </message>
     <message id="orn-dcm-user2">
         <source>Deep Thought</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>Syvä Miete</translation>
+        <translation>Mély gondolat</translation>
     </message>
     <message id="orn-dcm-user1">
         <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>Pieni valkoinen hiiri</translation>
+        <translation>Egy kis fehér egér</translation>
     </message>
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>Mikä on vastaus elämään, maailmankaikkeuteen ja kaikkeen muuhun sellaiseen?</translation>
+        <translation>Mi a válasz az Élet Végső Kérdésére, az Univerzumra és Mindenre?</translation>
     </message>
     <message id="orn-hint-commentdelegate-created">
         <source>7.5 million years ago</source>
-        <translation>7,5 miljoonaa vuotta sitten</translation>
+        <translation>7.5 millió évvel ezelőtt</translation>
     </message>
     <message id="orn-hint-commentdelegate">
         <source>Tap to navigate to the replied comment</source>
-        <translation>Paina siirtyäksesi vastattuun kommenttiin</translation>
+        <translation>Érintsd meg a válasz megtekintéséhez  </translation>
     </message>
     <message id="orn-tags">
         <source>Tags</source>
-        <translation>Avainsanat</translation>
+        <translation>Címkék</translation>
     </message>
     <message id="orn-tag-apps">
         <source>Tagged Applications</source>
-        <translation>Merkityt sovellukset</translation>
+        <translation>Címkézett alkalmazások</translation>
     </message>
     <message id="orn-rate-app">
         <source>Rate the application</source>
-        <translation>Arvostele sovellus</translation>
+        <translation>Értékeld az alkalmazást</translation>
     </message>
     <message id="orn-vote-send">
         <source>Your vote has been sent</source>
-        <translation>Äänesi on tallennettu</translation>
+        <translation>Az értékelésed elküldtük</translation>
     </message>
     <message id="orn-login2rate">
         <source>Log in to rate the application</source>
-        <translation>Kirjaudu arvostelleksesi sovellus</translation>
+        <translation>Jelentkezz be az alkalmazás értékeléséhez</translation>
     </message>
     <message id="orn-hint-rating">
         <source>Tap to rate the application</source>
-        <translation>Paina arvostelleksesi sovellus</translation>
+        <translation>Érintsd meg az alkalmazás értékeléséhez</translation>
     </message>
     <message id="orn-local-rpms">
         <source>Local RPM files</source>
-        <translation>Paikalliset RPM-tiedostot</translation>
+        <translation>Helyi RPM fájlok</translation>
     </message>
     <message id="orn-delete">
         <source>Delete</source>
-        <translation>Poista</translation>
+        <translation>Törlés</translation>
     </message>
     <message id="orn-deleting">
         <source>Deleting</source>
-        <translation>Poistetaan</translation>
+        <translation>Törlés folyamatban</translation>
     </message>
     <message id="orn-no-local-rpms">
         <source>No local RPM files were found</source>
-        <translation>Paikallisia RPM-tiedostoja ei löytynyt</translation>
+        <translation>Nem található helyi RPM fájl</translation>
     </message>
     <message id="orn-deletion-error">
         <source>Failed to delete</source>
-        <translation>Poistaminen ei onnistunut</translation>
+        <translation>A törlés sikertelen</translation>
     </message>
     <message id="orn-remove-all">
         <source>Remove all</source>
-        <translation>Poista kaikki</translation>
+        <translation>Az összes eltávolítása</translation>
     </message>
     <message id="orn-removing-all">
         <source>Removing all</source>
-        <translation>Poistetaan kaikki</translation>
+        <translation>Az összes eltávolítása</translation>
     </message>
     <message id="orn-repo-allremoved">
         <source>All repositories were removed</source>
-        <translation>Kaikki pakettilähteet poistettiin</translation>
+        <translation>Az összes csomagtároló eltávolítva</translation>
     </message>
     <message id="orn-search-on-openrepos">
         <source>Search on OpenRepos.net</source>
-        <translation>Etsi kohteesta OpenRepos.net</translation>
+        <translation>Keresés az OpenRepos.net-en</translation>
     </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
-        <translation>Tarkista päivitykset</translation>
+        <translation>Frissítések keresése</translation>
     </message>
     <message id="orn-check-for-updates-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation>Päivitykset tarkistetaan vain silloin, kun Storeman on käynnissä</translation>
+        <translation>A frissítések ellenőrzése csak a Storeman futásakor történik</translation>
     </message>
     <message id="orn-smart-check-switch">
         <source>Smart check</source>
-        <translation>Älykäs tarkistus</translation>
+        <translation>Okos ellenőrzés</translation>
     </message>
     <message id="orn-smart-check-descr">
         <source>Use the OpenRepos.net API to determine if there are new updates</source>
-        <translation>Käytä OpenRepos.net-rajapintaa uusien päivitysten tarkistamiseen</translation>
+        <translation>Használd az OpenRepos.net API-t annak meghatározásához, hogy vannak-e új frissítések</translation>
     </message>
     <message id="orn-reload">
         <source>Reload</source>
-        <translation>Lataa uudelleen</translation>
+        <translation>Újratöltés</translation>
     </message>
     <message id="orn-no-packages">
         <source>No packages available</source>
-        <translation>Paketteja ei saatavilla</translation>
+        <translation>Nincsenek elérhető csomagok</translation>
     </message>
     <message id="orn-error-comment-sending">
         <source>Error sending comment</source>
-        <translation>Virhe kommentin lähettämisessä</translation>
+        <translation>Hiba a hozzászólás küldésekor</translation>
     </message>
     <message id="orn-error-comment-deletion">
         <source>Error deleting comment</source>
-        <translation>Virhe kommentin poistamisessa</translation>
+        <translation>Hiba a hozzászólás törlésekor</translation>
     </message>
     <message id="orn-error-network">
         <source>Network error</source>
-        <translation>Verkkovirhe</translation>
+        <translation>Hálózati hiba</translation>
     </message>
     <message id="orn-hint-bookmark">
         <source>Tap to bookmark the application</source>
-        <translation>Lisää sovellus kirjanmerkkeihin napauttamalla</translation>
+        <translation>Érintsd meg az alkalmazás könyvjelzőzéséhez</translation>
     </message>
     <message id="orn-bad-appid">
         <source>Invalid package ID %1</source>
-        <translation>Virheellinen pakettitunniste %1</translation>
+        <translation>Érvénytelen csomag ID %1</translation>
     </message>
     <message id="orn-backup-filenameph">
         <source>A file name for backup</source>
-        <translation>Tiedostonimi varmuuskopiolle</translation>
+        <translation>A mentési fájl neve</translation>
     </message>
     <message id="orn-file-exists">
         <source>File already exists</source>
-        <translation>Tiedosto on jo olemassa</translation>
+        <translation>A fájl már létezik</translation>
     </message>
     <message id="orn-backup-items">
         <source>What to backup</source>
-        <translation>Mitä varmuuskopioidaan</translation>
+        <translation>Mit szeretnél menteni?</translation>
     </message>
     <message id="orn-backup-apps">
         <source>Installed applications</source>
-        <translation>Asennetut sovellukset</translation>
+        <translation>Telepített alkalmazások</translation>
     </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
-        <translation>Napauta uudelleen sulkeaksesi vihjeen</translation>
+        <translation>Érintsd meg még egyszer a tipp bezárásához</translation>
     </message>
     <message id="orn-mainpage">
         <source>Main page</source>
-        <translation>Pääsivu</translation>
+        <translation>Főoldal</translation>
     </message>
     <message id="orn-show-recent-switch">
         <source>Show recently updated on start</source>
-        <translation>Näytä viimeksi päivitetyt avattaessa</translation>
+        <translation>Indításkor mutasd a legutóbb frissítetteket</translation>
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>
-        <translation>Siirry Viimeksi päivitetty -sivulle kun sovellus käynnistyy</translation>
+        <translation>Indításkor ugrás a legutóbb frissített csomagok oldalára</translation>
     </message>
     <message id="orn-mainpage-order">
         <source>Order items</source>
-        <translation>Järjestä</translation>
+        <translation>Elemek rendezése</translation>
     </message>
     <message id="orn-reset">
         <source>Reset</source>
-        <translation>Palauta oletukset</translation>
+        <translation>Reset</translation>
     </message>
     <message id="orn-mainpage-order-description">
         <source>Drag items to change their order</source>
-        <translation>Raahaa kohteita vaihtaaksesi järjestystä</translation>
+        <translation>Húzd az elemeket a sorrend megváltoztatásához</translation>
     </message>
     <message id="orn-cat-adult-content">
         <source>Adult Content</source>
-        <translation>Aikuisille suunnattu sisältö</translation>
+        <translation>Felnőtt tartalom</translation>
     </message>
     <message id="orn-categories-filter">
         <source>Categories filter</source>
-        <translation>Kategorioiden suodattimet</translation>
+        <translation>Kategória szűrő</translation>
     </message>
     <message id="orn-categories-filter-descr">
         <source>Select which categories to show</source>
-        <translation>Valitse näytettävät kategoriat</translation>
+        <translation>Válaszd ki milyen kategóriák legyenek megjelenítve</translation>
     </message>
     <message id="orn-pmstate-refreshingcache">
         <source>Refreshing of cache</source>
-        <translation>Päivitetään välimuistia</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-refresh-cache-switch">
         <source>Refresh cache after system upgrade</source>
-        <translation>Päivitä välimuisti järjestelmäpäivityksen jälkeen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-refresh-cache-switch-descr">
         <source>Force refreshing of cache of all repositories after system upgrade</source>
-        <translation>Pakota välimuistin ja pakettilähteiden päivitys järjestelmäpäivityksen jälkeen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-save-password">
         <source>Save password</source>
-        <translation>Tallenna salasana</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-save-password-help">
         <source>Save password to the encrypted device storage to perform automatic re-login.</source>
-        <translation>Tallenna salasana laitteen suojattuun tallennustilaan suorittaaksesi automaattinen sisäänkirjautuminen.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-share-link">
         <source>Share link</source>
-        <translation>Jaa linkki</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-repository">
         <source>Repository</source>
-        <translation>Pakettilähde</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-myrepository">
         <source>My repository</source>
-        <translation>Oma pakettilähde</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-donate-with">
         <source>Donate with %1</source>
-        <translation>%1-lahjoitus</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
-        <translation>Päivityksiä saatavana</translation>
+        <translation type="unfinished">Elérhető frissítések</translation>
     </message>
     <message id="orn-package-updated">
         <source>Package %0 was successfully updated</source>
-        <translation>Paketti %0 päivitettiin onnistuneesti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-app-description-full">
         <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
-        <translation>&lt;p&gt;OpenRepos.net-sovelluskauppa Sailfish&amp;nbsp;OS:lle&lt;/p&gt;&lt;p&gt;Storeman on avoimen lähdekoodin sovellus, joka käyttää &lt;a href=&apos;%1&apos;&gt;MIT-lisenssiä&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Voit raportoida ongelmista OpenRepos.net-sivulla, tai GitHub-projektissa (allaolevat painikkeet)&lt;/p&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>
-        <translation>Näytä tiedot</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-unused-repos-found">
         <source>Unused repositories found</source>
-        <translation>Käyttämättömiä pakettilähteitä havaittu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-no-unused-repos">
         <source>Unused repositories not found</source>
-        <translation>Käyttämättömiä pakettilähteitä ei löytynyt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-search-unused-repos">
         <source>Search for unused</source>
-        <translation>Etsi käyttämättömiä</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-unused-repos-switch">
         <source>Search for unused repositories</source>
-        <translation>Etsi käyttämättömiä pakettilähteitä</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-unused-repos-switch-descr">
         <source>Search for unused repositories after removing packages.</source>
-        <translation>Etsi käyttämättömiä pakettilähteitä sovelluksien poistamisen jälkeen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-unused-repos">
         <source>Unused repositories</source>
-        <translation>Käyttämättömät pakettilähteet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-unused-repos-text">
         <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Seuraavista pakettilähteistä ei ole asennettu sovelluksia.&lt;/p&gt;&lt;p&gt;Poistetaanko pakettilähteet nyt?&lt;/p&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-updates-check-interval-minimum">
         <source>At least 10 minutes</source>
-        <translation>Vähintään 10 minuuttia</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-check-for-self-updates-switch">
         <source>Check for self-updates</source>
