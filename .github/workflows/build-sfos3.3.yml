@@ -35,7 +35,7 @@ jobs:
         arch: i486
     
     - name: Build aarch64
-      uses: coderus/github-sfos-build@master
+      uses: coderus/github-sfos-build@old-stable
       with:
         release: 4.0.1.45
         arch: aarch64
