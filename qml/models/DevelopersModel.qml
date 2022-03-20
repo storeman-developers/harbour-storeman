@@ -17,10 +17,6 @@ ListModel {
             ListElement {
                 name: "Matti Viljanen"
                 link: "https://github.com/direc85"
-            },
-            ListElement {
-                name: "olf"
-                link: "https://github.com/Olf0"
             }
         ]
     }
