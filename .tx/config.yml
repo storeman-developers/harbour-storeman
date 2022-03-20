@@ -1,0 +1,7 @@
+git:
+  filters:
+    - filter_type: file
+      file_format: QT
+      source_language: en
+      source_file: translations/harbour-storeman.ts
+      translation_files_expression: 'translations/harbour-storeman-<lang>.ts'

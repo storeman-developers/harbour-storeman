@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="zh">
 <context>
     <name></name>
     <message id="orn-notrated">
         <source>Not rated yet</source>
-        <translation>Zatiaľ nehodnotené</translation>
+        <translation>暂无评分</translation>
     </message>
     <message id="orn-repositories">
         <source>Repositories</source>
-        <translation>Sklady</translation>
+        <translation>软件源</translation>
     </message>
     <message id="orn-refresh">
         <source>Refresh</source>
-        <translation>Obnoviť</translation>
+        <translation>刷新</translation>
     </message>
     <message id="orn-disable">
         <source>Disable</source>
-        <translation>Zakázať</translation>
+        <translation>禁用</translation>
     </message>
     <message id="orn-enable">
         <source>Enable</source>
-        <translation>Povoliť</translation>
+        <translation>启用</translation>
     </message>
     <message id="orn-enabled">
         <source>Enabled</source>
-        <translation>Povolený</translation>
+        <translation>已启用</translation>
     </message>
     <message id="orn-disabled">
         <source>Disabled</source>
-        <translation>Zakázaný</translation>
+        <translation>已禁用</translation>
     </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
-        <translation>Nedávno aktualizované</translation>
+        <translation>最近更新</translation>
     </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
-        <translation>Sieť je nedostupná</translation>
+        <translation>网络不可用</translation>
     </message>
     <message id="orn-today">
         <source>Today</source>
-        <translation>Dnes</translation>
+        <translation>今天</translation>
     </message>
     <message id="orn-yesterday">
         <source>Yesterday</source>
-        <translation>Včera</translation>
+        <translation>昨天</translation>
     </message>
     <message id="orn-this-week">
         <source>This week</source>
-        <translation>Tento týždeň</translation>
+        <translation>本周</translation>
     </message>
     <message id="orn-this-month">
         <source>This month</source>
-        <translation>Tento mesiac</translation>
+        <translation>本月</translation>
     </message>
     <message id="orn-month-format">
         <source>%0 %1</source>
@@ -62,460 +62,456 @@
     </message>
     <message id="orn-adding-repo">
         <source>Adding</source>
-        <translation>Pridávanie</translation>
+        <translation>正在添加软件源</translation>
     </message>
     <message id="orb-remove">
         <source>Remove</source>
-        <translation>Odstrániť</translation>
+        <translation>正在移除软件源</translation>
     </message>
     <message id="orn-removing">
         <source>Removing</source>
-        <translation>Odstraňovanie</translation>
+        <translation>正在移除</translation>
     </message>
     <message id="orn-error">
         <source>An error occured</source>
-        <translation>Vyskytla sa chyba</translation>
+        <translation>发生了一个出错</translation>
     </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
-        <translation>Pridať sklad</translation>
+        <translation>添加软件源</translation>
     </message>
     <message id="orn-repo-enable">
         <source>Enable repository</source>
-        <translation>Povoliť sklad</translation>
+        <translation>启用软件源</translation>
     </message>
     <message id="orn-install">
         <source>Install</source>
-        <translation>Inštalovať</translation>
+        <translation>安装</translation>
     </message>
     <message id="orn-remove">
         <source>Remove</source>
-        <translation>Odstrániť</translation>
+        <translation>移除</translation>
     </message>
     <message id="orn-launch">
         <source>Launch</source>
-        <translation>Spustiť</translation>
+        <translation>打开</translation>
     </message>
     <message id="orn-package-installed">
         <source>Package %0 was successfully installed</source>
-        <translation>Balík %0 bol úspešne inštalovaný</translation>
+        <translation>应用%0安装成功</translation>
     </message>
     <message id="orn-package-removed">
         <source>Package %0 was successfully removed</source>
-        <translation>Balík %0 bol úspešne odstránený</translation>
+        <translation>应用%0被成功移除</translation>
     </message>
     <message id="orn-installed">
         <source>Installed</source>
-        <translation>Inštalovaný</translation>
+        <translation>已安装</translation>
     </message>
     <message id="orn-version-installed">
         <source>Installed version</source>
-        <translation>Inštalovaná verzia</translation>
+        <translation>安装版本</translation>
     </message>
     <message id="orn-version-updated">
         <source>Last updated</source>
-        <translation>Posledná aktualizácia</translation>
+        <translation>最后更新</translation>
     </message>
     <message id="orn-dt-format">
         <source>yyyy-MM-dd hh:mm</source>
         <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation>dd-MM-yyyy hh:mm</translation>
+        <translation>yyyy-MM-dd hh:mm</translation>
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
-        <translation>Žiadna verzia nie je dostupná</translation>
+        <translation>没有可供安装版本</translation>
     </message>
     <message id="orn-comments">
         <source>Comments</source>
-        <translation>Poznámky</translation>
+        <translation>评论</translation>
     </message>
     <message id="orn-author-apps">
         <source>More by %0</source>
-        <translation>Viac od %0</translation>
+        <translation>同样来自%0</translation>
     </message>
     <message id="orn-cat-coding-competition">
         <source>Coding Competition</source>
-        <translation>Súťaž v programovaní</translation>
+        <translation>编码比赛</translation>
     </message>
     <message id="orn-cat-applications">
         <source>Applications</source>
-        <translation>Aplikácie</translation>
+        <translation>应用</translation>
     </message>
     <message id="orn-cat-application">
         <source>Application</source>
-        <translation>Aplikácia</translation>
+        <translation>应用</translation>
     </message>
     <message id="orn-cat-ambience-themes">
         <source>Ambience &amp; Themes</source>
-        <translation>Prostredie a témy</translation>
+        <translation>氛围和主题</translation>
     </message>
     <message id="orn-cat-business">
         <source>Business</source>
-        <translation>Podnikanie</translation>
+        <translation>商业</translation>
     </message>
     <message id="orn-cat-city-guides-maps">
         <source>City guides &amp; maps</source>
-        <translation>Sprievodcovia a mapy</translation>
+        <translation>城市导航和地图</translation>
     </message>
     <message id="orn-cat-education-science">
         <source>Education &amp; Science</source>
-        <translation>Vzdelanie a veda</translation>
+        <translation>教育和科学</translation>
     </message>
     <message id="orn-cat-entertainment">
         <source>Entertainment</source>
-        <translation>Zábava</translation>
+        <translation>娱乐</translation>
     </message>
     <message id="orn-cat-music">
         <source>Music</source>
-        <translation>Hudba</translation>
+        <translation>音乐</translation>
     </message>
     <message id="orn-cat-network">
         <source>Network</source>
-        <translation>Sieť</translation>
+        <translation>网络</translation>
     </message>
     <message id="orn-cat-news-info">
         <source>News &amp; info</source>
-        <translation>Správy a informácie</translation>
+        <translation>新闻和消息</translation>
     </message>
     <message id="orn-cat-patches">
         <source>Patches</source>
-        <translation>Záplaty</translation>
+        <translation>补丁</translation>
     </message>
     <message id="orn-cat-photo-video">
         <source>Photo &amp; video</source>
-        <translation>Foto a video</translation>
+        <translation>照片和视频</translation>
     </message>
     <message id="orn-cat-social-networks">
         <source>Social Networks</source>
-        <translation>Sociálne siete</translation>
+        <translation>社交网络</translation>
     </message>
     <message id="orn-cat-sports">
         <source>Sports</source>
-        <translation>Športy</translation>
+        <translation>运动</translation>
     </message>
     <message id="orn-cat-system">
         <source>System</source>
-        <translation>Systém</translation>
+        <translation>系统</translation>
     </message>
     <message id="orn-cat-unknown">
         <source>Unknown</source>
-        <translation>Neurčené</translation>
+        <translation>未知</translation>
     </message>
     <message id="orn-cat-utilities">
         <source>Utilities</source>
-        <translation>Pomôcky</translation>
+        <translation>工具</translation>
     </message>
     <message id="orn-cat-games">
         <source>Games</source>
-        <translation>Hry</translation>
+        <translation>游戏</translation>
     </message>
     <message id="orn-cat-game">
         <source>Game</source>
-        <translation>Hra</translation>
+        <translation>游戏</translation>
     </message>
     <message id="orn-cat-action">
         <source>Action</source>
-        <translation>Akcia</translation>
+        <translation>动作</translation>
     </message>
     <message id="orn-cat-adventure">
         <source>Adventure</source>
-        <translation>Dobrodružstvo</translation>
+        <translation>冒险</translation>
     </message>
     <message id="orn-cat-arcade">
         <source>Arcade</source>
-        <translation>Arkáda</translation>
+        <translation>街机</translation>
     </message>
     <message id="orn-cat-card-casino">
         <source>Card &amp; casino</source>
-        <translation>Karty a herňa</translation>
+        <translation>卡牌和赌场</translation>
     </message>
     <message id="orn-cat-education">
         <source>Education</source>
-        <translation>Vzdelávanie</translation>
+        <translation>教育</translation>
     </message>
     <message id="orn-cat-puzzle">
         <source>Puzzle</source>
-        <translation>Skladačky</translation>
+        <translation>解谜</translation>
     </message>
     <message id="orn-cat-strategy">
         <source>Strategy</source>
-        <translation>Stratégie</translation>
+        <translation>策略</translation>
     </message>
     <message id="orn-cat-trivia">
         <source>Trivia</source>
-        <translation>Drobnosti</translation>
+        <translation>问答游戏</translation>
     </message>
     <message id="orn-cat-translations">
         <source>Translations</source>
-        <translation>Preklady</translation>
+        <translation>翻译</translation>
     </message>
     <message id="orn-cat-fonts">
         <source>Fonts</source>
-        <translation>Znaky</translation>
+        <translation>字体</translation>
     </message>
     <message id="orn-cat-libraries">
         <source>Libraries</source>
-        <translation>Knižnice</translation>
+        <translation>库</translation>
     </message>
     <message id="orn-update-available">
         <source>Update available</source>
-        <translation>Je dostupná aktualizácia</translation>
+        <translation>可用更新</translation>
     </message>
     <message id="orn-update">
         <source>Update</source>
-        <translation>Aktualizovať</translation>
+        <translation>更新</translation>
     </message>
     <message id="orn-changelog">
         <source>Changelog</source>
-        <translation>Protokol zmien</translation>
+        <translation>更新日志</translation>
     </message>
     <message id="orn-comments-withnum">
         <source>Comments (%0)</source>
-        <translation>Poznámky (%0)</translation>
+        <translation>评论(%0)</translation>
     </message>
     <message id="orn-version-repo-disabled">
         <source>Enable the repository first</source>
-        <translation>Najskôr povoliť sklad</translation>
+        <translation>先启用软件源</translation>
     </message>
     <message id="orn-search">
         <source>Search</source>
         <extracomment>The search menu item and the search page header text - should be a noun</extracomment>
-        <translation>Hľadať</translation>
+        <translation>搜索</translation>
     </message>
     <message id="orn-searchpage-placeholder-noresults">
         <source>Nothing found</source>
-        <translation>Nič nebolo nájdené</translation>
+        <translation>什么都没有找到</translation>
     </message>
     <message id="orn-searchpage-placeholder-noresults-hint">
         <source>Try to change search keywords</source>
-        <translation>Skúste zmeniť hľadané kľúčové slová</translation>
+        <translation>尝试更改搜索关键词</translation>
     </message>
     <message id="orn-searchfield-placeholder">
         <source>Search</source>
         <extracomment>The search field placeholder text - should be a verb</extracomment>
-        <translation>Hľadať</translation>
+        <translation>搜索</translation>
     </message>
     <message id="orn-searchpage-placeholder-default">
         <source>Search results will be shown here</source>
-        <translation>Výsledok hľadania bude zobrazený tu</translation>
+        <translation>搜索结果会在这里显示</translation>
     </message>
     <message id="orn-searchpage-placeholder-default-hint">
         <source>Type some keywords in the field above</source>
-        <translation>Do poľa vyššie zadajte niektoré kľúčové slová</translation>
+        <translation>在上述区域输入关键词</translation>
     </message>
     <message id="orn-about">
         <source>About Storeman</source>
-        <translation>O aplikácii</translation>
+        <translation>关于Storeman</translation>
     </message>
     <message id="orn-translations">
         <source>Translations</source>
-        <translation>Preklady</translation>
+        <translation>翻译</translation>
     </message>
     <message id="orn-coordinators">
         <source>Coordinators</source>
-        <translation>Koordinátori</translation>
+        <translation>协助者</translation>
     </message>
     <message id="orn-translators">
         <source>Translators</source>
-        <translation>Prekladatelia</translation>
+        <translation>翻译者</translation>
     </message>
     <message id="orn-reviewers">
         <source>Reviewers</source>
-        <translation>Korektori</translation>
+        <translation>审阅者</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
-        <translation>Vyskytla sa chyba siete</translation>
+        <translation>出现一个网络错误</translation>
     </message>
     <message id="orn-pull-refresh">
         <source>Pull down to refresh</source>
-        <translation>Potiahnuť nadol pre obnovenie</translation>
+        <translation>下拉以更新</translation>
     </message>
     <message id="orn-development">
         <source>Development</source>
-        <translation>Vývoj</translation>
+        <translation>开发</translation>
     </message>
     <message id="orn-developers">
         <source>Developers</source>
-        <translation>Vývojári</translation>
+        <translation>开发者</translation>
     </message>
     <message id="orn-appicon">
         <source>Application Icon</source>
-        <translation>Ikona aplikácie</translation>
+        <translation>应用图标</translation>
     </message>
     <message id="orn-sources">
         <source>Source Code</source>
-        <translation>Zdrojový text</translation>
+        <translation>源代码</translation>
     </message>
     <message id="orn-just-now">
         <source>Just now</source>
-        <translation>Práve teraz</translation>
+        <translation>刚刚</translation>
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%n minute(s) ago</source>
         <translation>
-            <numerusform>pred %n minútou</numerusform>
-            <numerusform>pred %n minútami</numerusform>
-            <numerusform>pred %n minútami</numerusform>
+            <numerusform>%n分钟以前</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%n hour(s) ago</source>
         <translation>
-            <numerusform>pred %n hodinou</numerusform>
-            <numerusform>pred %n hodinami</numerusform>
-            <numerusform>pred %n hodinami</numerusform>
+            <numerusform>%n小时以前</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
         <extracomment>Active label to navigate to the original comment - should be a noun</extracomment>
-        <translation>Odpovedať na %0</translation>
+        <translation> 回复%0</translation>
     </message>
     <message id="orn-categories">
         <source>Categories</source>
-        <translation>Kategórie</translation>
+        <translation>分类</translation>
     </message>
     <message id="orn-category-noapps">
         <source>Currently there are no apps in this category</source>
-        <translation>V súčasnosti nie sú žiadne aplikácie v tejto kategórii</translation>
+        <translation>此分类暂无软件</translation>
     </message>
     <message id="orn-cat-unknown2">
         <source>Unknown category</source>
-        <translation>Neurčená kategória</translation>
+        <translation>未知分类</translation>
     </message>
     <message id="orn-comment-body">
         <source>Your comment</source>
-        <translation>Vaša poznámka</translation>
+        <translation>你的评论</translation>
     </message>
     <message id="orn-reply">
         <source>Reply</source>
         <extracomment>Menu item to reply for a comment - should be a verb</extracomment>
-        <translation>Odpovedať</translation>
+        <translation>回复</translation>
     </message>
     <message id="orn-edit">
         <source>Edit</source>
-        <translation>Upraviť</translation>
+        <translation>编辑</translation>
     </message>
     <message id="orn-login-menu-item">
         <source>Log in to OpenRepos.net</source>
-        <translation>Prihlásiť sa do OpenRepos.net</translation>
+        <translation>登录OpenRepos.net</translation>
     </message>
     <message id="orn-login-action">
         <source>Log in</source>
-        <translation>Prihlásiť sa</translation>
+        <translation>登录</translation>
     </message>
     <message id="orn-username">
         <source>Username or e-mail address</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation>Meno používateľa alebo e-mail</translation>
+        <translation>用户名称或邮箱地址</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not send your password to third-parties.</source>
-        <translation>Prihlásiť sa do OpenRepos.net s možnosťou písania poznámok k aplikáciam alebo reakcie na poznámky ostatných prispievateľov.&lt;br /&gt;&lt;br /&gt;Storeman neposiela Vaše heslo tretím stranám.</translation>
+        <translation>登录 OpenRepos.net 以评论软件或回复他人评论。&lt;br /&gt;&lt;br /&gt;Storeman 不会将你的密码保存到第三方。</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
-        <translation>Úspešne ste sa prihlásili do OpenRepos.net</translation>
+        <translation>你已成功登录OpenRepos.net</translation>
     </message>
     <message id="orn-loggedout-message">
         <source>You have logged out from the OpenRepos.net</source>
-        <translation>Odhlásili ste sa z OpenRepos.net</translation>
+        <translation> 你已登出OpenRepos.net</translation>
     </message>
     <message id="orn-login-error-title">
         <source>Login error</source>
-        <translation>Chyba prihlasovania</translation>
+        <translation>登录错误</translation>
     </message>
     <message id="orn-login-error-message">
         <source>Could not log in the OpenRepos.net - check your credentials and network connection</source>
-        <translation>Nie je možné prihlásiť sa do OpenRepos.net - skontrolujte Vaše poverenia: meno, heslo a sieťové pripojenie</translation>
+        <translation>不能登录OpenRepos.net，请检查你的凭证和网络连接</translation>
     </message>
     <message id="orn-loggedin-menu-item">
         <source>Logged in as %0</source>
-        <translation>Prihlásený ako %0</translation>
+        <translation>登录为%0</translation>
     </message>
     <message id="orn-logout-action">
         <source>Log out</source>
         <extracomment>Menu item</extracomment>
-        <translation>Odhlásiť sa</translation>
+        <translation>登出</translation>
     </message>
     <message id="orn-logout-remorse">
         <source>Logging out</source>
         <extracomment>Remorse text</extracomment>
-        <translation>Odhlasovanie</translation>
+        <translation>登出中</translation>
     </message>
     <message id="orn-comment-edit-label">
         <source>Edit your comment</source>
-        <translation>Napíšte Vašu poznámku</translation>
+        <translation>编辑你的评论</translation>
     </message>
     <message id="orn-comment-update">
         <source>Update</source>
         <extracomment>Update a comment</extracomment>
-        <translation>Aktualizovať</translation>
+        <translation>更新</translation>
     </message>
     <message id="orn-comment-send">
         <source>Send</source>
-        <translation>Poslať</translation>
+        <translation>发送</translation>
     </message>
     <message id="orn-authorisation-expires-summary">
         <source>Authorisation expires</source>
-        <translation>Platnosť autorizácie vyprší</translation>
+        <translation>授权已失效</translation>
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
-        <translation>Platnosť autorizácie vypršala</translation>
+        <translation>授权已失效 </translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
-        <translation>Ťuknúť pre zopakovanie autorizácie</translation>
+        <translation>点击重新授权</translation>
     </message>
     <message id="orn-enable-all">
         <source>Enable all</source>
-        <translation>Povoliť všetko</translation>
+        <translation>全部启用</translation>
     </message>
     <message id="orn-disable-all">
         <source>Disable all</source>
-        <translation>Zakázať všetko</translation>
+        <translation>全部禁用</translation>
     </message>
     <message id="orn-enabling-all">
         <source>Enabling all</source>
-        <translation>Povoľovanie všetkého</translation>
+        <translation>正在启用全部</translation>
     </message>
     <message id="orn-disabling-all">
         <source>Disabling all</source>
-        <translation>Zakazovanie všetkého</translation>
+        <translation>正在禁用全部</translation>
     </message>
     <message id="orn-installed-apps">
         <source>Installed applications</source>
-        <translation>Inštalované aplikácie</translation>
+        <translation>已安装的应用</translation>
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
-        <translation>Aplikácia bola pridaná do obľúbených</translation>
+        <translation>软件已加入书签</translation>
     </message>
     <message id="orn-bookmarks-removed">
         <source>The app was removed from bookmarks</source>
-        <translation>Aplikácia bola odstránená z obľúbených</translation>
+        <translation>软件已从书签中移除</translation>
     </message>
     <message id="orn-no-bookmarks">
         <source>Your bookmarked applications will be shown here</source>
-        <translation>Vaše obľúbené aplikácie budú zobrazené tu</translation>
+        <translation>你收藏的软件会在这里显示</translation>
     </message>
     <message id="orn-bookmarks">
         <source>Bookmarks</source>
-        <translation>Obľúbené</translation>
+        <translation>书签</translation>
     </message>
     <message id="orn-no-repos">
         <source>No OpenRepos repositories have been added yet</source>
-        <translation>Neboli pridané žiadne sklady z OpenRepos</translation>
+        <translation>到目前为止尚无添加的OpenRepos软件源</translation>
     </message>
     <message id="orn-add-repo-hint">
         <source>You can add a repository from an application page</source>
-        <translation>Sklad môžete pridať na stránke aplikácie</translation>
+        <translation>你可以从一个应用页面添加软件源</translation>
     </message>
     <message id="orn-refresh-cache">
         <source>Refresh cache</source>
-        <translation>Obnoviť vyrovnávaciu pamäť</translation>
+        <translation>更新缓存</translation>
     </message>
     <message id="orn-tag-underscore">
         <source>U</source>
@@ -534,262 +530,256 @@
     </message>
     <message id="orn-updates-available-summary">
         <source>Updates available</source>
-        <translation>Je dostupná aktualizácia</translation>
+        <translation>有可供更新</translation>
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
         <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
-        <translation>%1 neposkytuje nič potrebné pre %2</translation>
+        <translation>没有提供被%2需要的%1</translation>
     </message>
     <message id="orn-backups">
         <source>Backups</source>
-        <translation>Zálohy</translation>
+        <translation>备份</translation>
     </message>
     <message id="orn-backup-description">
         <source>Backup and restore repos and installed apps</source>
-        <translation>Zálohovať a obnoviť sklady a inštalované aplikácie</translation>
+        <translation>备份恢复软件源和安装的软件</translation>
     </message>
     <message id="orn-create-backup">
         <source>Create a backup</source>
-        <translation>Vytvoriť zálohu</translation>
+        <translation>创建一个备份</translation>
     </message>
     <message id="orn-backup-error">
         <source>Backup error</source>
-        <translation>Chyba zálohovania</translation>
+        <translation>备份错误</translation>
     </message>
     <message id="orn-backup-error-directory">
         <source>Could not create directory</source>
-        <translation>Nemožno vytvoriť adresár</translation>
+        <translation>不能创建目录</translation>
     </message>
     <message id="orn-restore-title">
         <source>Restore from a file</source>
-        <translation>Obnoviť zo súboru</translation>
+        <translation>从一个文件恢复</translation>
     </message>
     <message id="orn-restore">
         <source>Restore</source>
-        <translation>Obnoviť</translation>
+        <translation>恢复</translation>
     </message>
     <message id="orn-restore-hint">
         <source>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</source>
-        <translation>Obnoviť sklady OpenRepos a inštalované aplikácie z vybraného súboru. Táto akcia nebude mať dopad na Vaše aktuálne sklady a neodstráni inštalované aplikácie.</translation>
+        <translation>恢复OpenRepos软件源，从选取的文件安装软件。这个操作不会影响你目前的软件源并且不会移除已安装的软件。</translation>
     </message>
     <message id="orn-created">
         <source>Created</source>
-        <translation>Vytvorené</translation>
+        <translation>创建</translation>
     </message>
     <message id="orn-total-repos">
         <source>Total repositories</source>
-        <translation>Sklady spolu</translation>
+        <translation>全部软件源</translation>
     </message>
     <message id="orn-details">
         <source>Details</source>
-        <translation>Podrobnosti</translation>
+        <translation>详情</translation>
     </message>
     <message id="orn-backups-placeholder">
         <source>Backups will be shown here</source>
-        <translation>Zálohy sa zobrazia tu</translation>
+        <translation>备份会展示在此</translation>
     </message>
     <message id="orn-restoring-repos">
         <source>Restoring repositories</source>
-        <translation>Obnovovanie skladov</translation>
+        <translation>恢复软件源中</translation>
     </message>
     <message id="orn-refreshing-repos">
         <source>Refreshing repositories</source>
-        <translation>Načítanie skladov</translation>
+        <translation>更新软件源中</translation>
     </message>
     <message id="orn-searching-packages">
         <source>Searching packages</source>
-        <translation>Hľadanie balíkov</translation>
+        <translation>搜索应用中</translation>
     </message>
     <message id="orn-installing-repos">
         <source>Installing packages</source>
-        <translation>Inštalovanie balíkov</translation>
+        <translation>安装应用中</translation>
     </message>
     <message id="orn-restoring-title">
         <source>Restoring</source>
-        <translation>Obnovovanie</translation>
+        <translation>恢复中</translation>
     </message>
     <message id="orn-success-backup">
         <source>Successful backup</source>
-        <translation>Zálohovanie bolo úspešné</translation>
+        <translation>备份成功</translation>
     </message>
     <message id="orn-success-restore">
         <source>Successful restore</source>
-        <translation>Obnovovanie bolo úspešné</translation>
+        <translation>恢复成功</translation>
     </message>
     <message id="orn-installed-packages">
         <source>Installed packages</source>
-        <translation>Inštalované balíky</translation>
+        <translation>安装的应用</translation>
     </message>
     <message id="orn-login2comment">
         <source>Login to comment</source>
-        <translation>Prihlásiť sa pre vloženie poznámky</translation>
+        <translation>登录以评论</translation>
     </message>
     <message id="orn-backup">
         <source>Backup</source>
-        <translation>Zálohovať</translation>
+        <translation>备份</translation>
     </message>
     <message id="orn-backup-hint">
         <source>&lt;h2&gt;Backup to a file&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.&lt;/p&gt;</source>
-        <translation>&lt;h2&gt;Zálohovať do súboru&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Zálohovanie Vám umožní uchovať Vaše súčasné sklady OpenRepos, inštalované aplikácie a obľúbené a neskôr ich obnoviť (napríklad po obnovení fabrických nastavení). Záloha je lokálny súbor, ktorý je uložený do adresára&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; .&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Upozornenie!&lt;/b&gt; Tento súbor môžete ručne skopírovať na ľubovoľné bezpečné miesto pred obnovením fabrických nastavení. Môže to byť Vaša SD karta, externé zariadenie, vzdialený ukladací priestor alebo kdekoľvek inde.&lt;/p&gt;</translation>
+        <translation>&lt;h2&gt;备份到文件&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;备份允许保存你目前的OpenRepos软件源、已安装的应用和收藏夹，以便后面恢复它们（例如恢复出厂设置后）。每个备份是一个储存于&lt;i&gt;~/Documents/Storeman&lt;/i&gt;目录的文件。&lt;br /&gt;&lt;br /&gt;&lt;b&gt;注意！&lt;/b&gt;在执行恢复重置之前，你应该将你的备份手动复制到一个安全的地方。可能是你的储存卡，外部设备，云储存或其它地方。</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
-        <translation>Inicializácia</translation>
+        <translation>正在初始化</translation>
     </message>
     <message id="orn-pmstate-addingrepo">
         <source>Adding repo %0</source>
-        <translation>Pridávanie skladu %0</translation>
+        <translation>正在添加软件源%0</translation>
     </message>
     <message id="orn-pmstate-removingrepo">
         <source>Removing repo %0</source>
-        <translation>Odstraňovanie skladu %0</translation>
+        <translation>正在移除软件源%0</translation>
     </message>
     <message id="orn-pmstate-enablingrepo">
         <source>Enabling repo %0</source>
-        <translation>Povoľovanie skladu %0</translation>
+        <translation>正在启用软件源%0</translation>
     </message>
     <message id="orn-pmstate-disablingrepo">
         <source>Disabling repo %0</source>
-        <translation>Zakazovanie skladu %0</translation>
+        <translation> 正在禁用软件源%0</translation>
     </message>
     <message id="orn-pmstate-refreshingrepo">
         <source>Refreshing %0</source>
-        <translation>Načítanie skladu %0</translation>
+        <translation>正在更新软件源%0</translation>
     </message>
     <message id="orn-pmstate-installingpackage">
         <source>Installing package %0</source>
-        <translation>Inštalovanie balíka %0</translation>
+        <translation>正在安装应用 %0</translation>
     </message>
     <message id="orn-pmstate-removingpackage">
         <source>Removing package %0</source>
-        <translation>Odstraňovanie balíka %0</translation>
+        <translation> 正在移除应用%0</translation>
     </message>
     <message id="orn-pmstate-updatingpackage">
         <source>Updating package %0</source>
-        <translation>Aktualizácia balíka %0</translation>
+        <translation>  正在更新应用%0</translation>
     </message>
     <message id="orn-repo-removed">
         <source>The repository %0 was removed</source>
-        <translation>Sklad %0 bol odstránený</translation>
+        <translation> 软件源%0已移除</translation>
     </message>
     <message id="orn-repo-added">
         <source>The repository %0 was added</source>
-        <translation>Sklad %0 bol pridaný</translation>
+        <translation>软件源%0已添加</translation>
     </message>
     <message id="orn-repo-disabled">
         <source>The repository %0 was disabled</source>
-        <translation>Sklad %0 bol zakázaný</translation>
+        <translation>软件源%0已禁用</translation>
     </message>
     <message id="orn-repo-enabled">
         <source>The repository %0 was enabled</source>
-        <translation>Sklad %0 bol povolený</translation>
+        <translation>软件源%0已启用</translation>
     </message>
     <message id="orn-not-installed">
         <source>Not installed</source>
-        <translation>Neinštalované</translation>
+        <translation>尚未安装</translation>
     </message>
     <message id="orn-installing">
         <source>Installing</source>
-        <translation>Inštalovanie</translation>
+        <translation>安装中</translation>
     </message>
     <message id="orn-unknown">
         <source>Unknown</source>
-        <translation>Neurčený</translation>
+        <translation>未知</translation>
     </message>
     <message id="orn-updating">
         <source>Updating</source>
-        <translation>Aktualizovanie</translation>
+        <translation>更新中</translation>
     </message>
     <message id="orn-version-available-global">
         <source>Available in other repositories</source>
-        <translation>Dostupné v inom sklade</translation>
+        <translation>在其它软件源中可用</translation>
     </message>
     <message id="orn-installed-apps-description">
         <source>Only from enabled repositories</source>
-        <translation>Iba z povolených skladov</translation>
+        <translation>仅来自启用的软件源</translation>
     </message>
     <message id="orn-update-all">
         <source>Update all</source>
-        <translation>Aktualizovať všetko</translation>
+        <translation>全部更新</translation>
     </message>
     <message id="orn-no-installed-apps">
         <source>Could not find any applications installed from OpenRepos</source>
-        <translation>Nie je možné nájsť žiadnu aplikáciu inštalovanú z OpenRepos</translation>
+        <translation>不能找到任何来自OpenRepos的已安装应用</translation>
     </message>
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
         <translation>
-            <numerusform>%n operácia prebieha</numerusform>
-            <numerusform>%n operácie prebiehajú</numerusform>
-            <numerusform>%n operácií prebieha</numerusform>
+            <numerusform>%n项操作正在执行中</numerusform>
         </translation>
     </message>
     <message id="orn-version-available">
         <source>Available version</source>
-        <translation>Dostupná verzia</translation>
+        <translation>可用版本</translation>
     </message>
     <message id="orn-error-packagenotfound">
         <source>Couldn&apos;t find package</source>
-        <translation>Nemožno nájsť balík</translation>
+        <translation>不能找到应用包</translation>
     </message>
     <message id="orn-size-installed">
         <source>Installed size</source>
-        <translation>Veľkosť inštalácie</translation>
+        <translation>安装后大小</translation>
     </message>
     <message id="orn-size-download-install">
         <source>Download / install size</source>
-        <translation>Stiahnutá/inštalovaná veľkosť</translation>
+        <translation>下载/安装大小</translation>
     </message>
     <message id="orn-cat-public-transport">
         <source>Public Transport</source>
-        <translation>Verejný prenos</translation>
+        <translation>公共交通</translation>
     </message>
     <message id="orn-comments-wait">
         <source>Wait for users&apos; feedback</source>
         <extracomment>This will be shown to an application author</extracomment>
-        <translation>Čaká na spätnú väzbu používateľa</translation>
+        <translation>等待用户反馈</translation>
     </message>
     <message id="orn-comments-bethefirst">
         <source>Be the first to comment</source>
         <extracomment>This will be shown to a normal user</extracomment>
-        <translation>Buďte prvý s poznámkou</translation>
+        <translation>成为第一个评论的人</translation>
     </message>
     <message id="orn-comments-nocomments">
         <source>There is nothing here yet</source>
-        <translation>Zatiaľ tu nič nie je</translation>
+        <translation>这里至今什么都没有</translation>
     </message>
     <message id="orn-settings">
         <source>Settings</source>
-        <translation>Nastavenia</translation>
+        <translation>设置</translation>
     </message>
     <message id="orn-updates">
         <source>Updates</source>
-        <translation>Aktualizácie</translation>
+        <translation>更新</translation>
     </message>
     <message id="orn-updates-notification-switch">
         <source>Show updates notification</source>
-        <translation>Zobraziť notifikácie aktualizácií</translation>
+        <translation>显示更新通知</translation>
     </message>
     <message id="orn-updates-check-interval">
         <source>Updates check interval</source>
-        <translation>Interval kontroly</translation>
+        <translation>检查更新间隔</translation>
     </message>
     <message id="orn-interval-m" numerus="yes">
         <source>%n minute(s)</source>
         <translation>
-            <numerusform>%n minúta</numerusform>
-            <numerusform>%n minúty</numerusform>
-            <numerusform>%n minút</numerusform>
+            <numerusform>%n 分钟</numerusform>
         </translation>
     </message>
     <message id="orn-interval-h" numerus="yes">
         <source>%n hour(s)</source>
         <translation>
-            <numerusform>%n hodina</numerusform>
-            <numerusform>%n hodiny</numerusform>
-            <numerusform>%n hodín</numerusform>
+            <numerusform>%n 小时</numerusform>
         </translation>
     </message>
     <message id="orn-tag-strikeout">
@@ -799,286 +789,286 @@
     </message>
     <message id="orn-hint-commentfield">
         <source>Swipe to see all the tag buttons</source>
-        <translation>Potiahnutím zobrazíte všetky tlačidlá značiek</translation>
+        <translation>轻扫查看全部标签按钮</translation>
     </message>
     <message id="orn-dcm-user2">
         <source>Deep Thought</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>Deep Thought</translation>
+        <translation>深思</translation>
     </message>
     <message id="orn-dcm-user1">
         <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>Malá biela myš</translation>
+        <translation>一只小白鼠</translation>
     </message>
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>Čo je odpoveďou na konečnú otázku života, vesmír, všetko?</translation>
+        <translation>关于生命、宇宙、万物的终极问题的答案是什么？</translation>
     </message>
     <message id="orn-hint-commentdelegate-created">
         <source>7.5 million years ago</source>
-        <translation>Pred 7,5 miliónmi rokov</translation>
+        <translation>750万年以前</translation>
     </message>
     <message id="orn-hint-commentdelegate">
         <source>Tap to navigate to the replied comment</source>
-        <translation>Ťuknúť a odpovedať na poznámku</translation>
+        <translation>点击以查看回复的评论</translation>
     </message>
     <message id="orn-tags">
         <source>Tags</source>
-        <translation>Značky</translation>
+        <translation>标签</translation>
     </message>
     <message id="orn-tag-apps">
         <source>Tagged Applications</source>
-        <translation>Označené aplikácie</translation>
+        <translation>标记的应用</translation>
     </message>
     <message id="orn-rate-app">
         <source>Rate the application</source>
-        <translation>Hodnotiť aplikáciu</translation>
+        <translation>给应用评分</translation>
     </message>
     <message id="orn-vote-send">
         <source>Your vote has been sent</source>
-        <translation>Váš hlas bol odoslaný</translation>
+        <translation>你的提议已发送</translation>
     </message>
     <message id="orn-login2rate">
         <source>Log in to rate the application</source>
-        <translation>Prihlásiť sa a hodnotiť aplikáciu</translation>
+        <translation>登录给应用评分</translation>
     </message>
     <message id="orn-hint-rating">
         <source>Tap to rate the application</source>
-        <translation>Ťuknúť a hodnotiť aplikáciu</translation>
+        <translation>点击给应用评分</translation>
     </message>
     <message id="orn-local-rpms">
         <source>Local RPM files</source>
-        <translation>Lokálne RPM súbory</translation>
+        <translation>本地RPM文件</translation>
     </message>
     <message id="orn-delete">
         <source>Delete</source>
-        <translation>Odstrániť</translation>
+        <translation>删除</translation>
     </message>
     <message id="orn-deleting">
         <source>Deleting</source>
-        <translation>Zmazávanie</translation>
+        <translation>删除中</translation>
     </message>
     <message id="orn-no-local-rpms">
         <source>No local RPM files were found</source>
-        <translation>Neexistujú žiadne lokálne RPM súbory</translation>
+        <translation>没有发现本地RPM文件</translation>
     </message>
     <message id="orn-deletion-error">
         <source>Failed to delete</source>
-        <translation>Zmazávanie zlyhalo</translation>
+        <translation>删除失败</translation>
     </message>
     <message id="orn-remove-all">
         <source>Remove all</source>
-        <translation>Odstrániť všetko</translation>
+        <translation>全部移除</translation>
     </message>
     <message id="orn-removing-all">
         <source>Removing all</source>
-        <translation>Odstraňovanie všetkých</translation>
+        <translation>全部移除中</translation>
     </message>
     <message id="orn-repo-allremoved">
         <source>All repositories were removed</source>
-        <translation>Všetky sklady boli odstránené</translation>
+        <translation>所有软件源均被移除</translation>
     </message>
     <message id="orn-search-on-openrepos">
         <source>Search on OpenRepos.net</source>
-        <translation>Vyhľadať v OpenRepos.net</translation>
+        <translation>在OpenRepos.net搜索</translation>
     </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
-        <translation>Skontrolovať aktualizácie</translation>
+        <translation>检查更新</translation>
     </message>
     <message id="orn-check-for-updates-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation>Aktualizácie sa kontrolujú iba ak je spustený Storeman</translation>
+        <translation>仅当Storeman运行的时候检查更新</translation>
     </message>
     <message id="orn-smart-check-switch">
         <source>Smart check</source>
-        <translation>Chytrá kontrola</translation>
+        <translation>智能检查</translation>
     </message>
     <message id="orn-smart-check-descr">
         <source>Use the OpenRepos.net API to determine if there are new updates</source>
-        <translation>Použiť API OpenRepos.net na zistenie existencie aktualizácií</translation>
+        <translation>使用OpenRepos.net API以确定是否有更新</translation>
     </message>
     <message id="orn-reload">
         <source>Reload</source>
-        <translation>Načítať</translation>
+        <translation>重新加载</translation>
     </message>
     <message id="orn-no-packages">
         <source>No packages available</source>
-        <translation>Nie sú dostupné žiadne balíky</translation>
+        <translation>没有可用的包</translation>
     </message>
     <message id="orn-error-comment-sending">
         <source>Error sending comment</source>
-        <translation>Chyba pri odosielaní poznámky</translation>
+        <translation>发送评论出错</translation>
     </message>
     <message id="orn-error-comment-deletion">
         <source>Error deleting comment</source>
-        <translation>Chyba pri mazaní poznámky</translation>
+        <translation>删除评论出错</translation>
     </message>
     <message id="orn-error-network">
         <source>Network error</source>
-        <translation>Chyba siete</translation>
+        <translation>网络错误</translation>
     </message>
     <message id="orn-hint-bookmark">
         <source>Tap to bookmark the application</source>
-        <translation>Ťuknúť a označiť aplikáciu</translation>
+        <translation>点击收藏此应用</translation>
     </message>
     <message id="orn-bad-appid">
         <source>Invalid package ID %1</source>
-        <translation>Chybné ID balíka %1</translation>
+        <translation>无效的包ID %1</translation>
     </message>
     <message id="orn-backup-filenameph">
         <source>A file name for backup</source>
-        <translation>Názov súboru pre zálohu</translation>
+        <translation>一个备份的文件名</translation>
     </message>
     <message id="orn-file-exists">
         <source>File already exists</source>
-        <translation>Súbor už existuje</translation>
+        <translation>文件已经存在</translation>
     </message>
     <message id="orn-backup-items">
         <source>What to backup</source>
-        <translation>Čo zálohovať</translation>
+        <translation>备份什么</translation>
     </message>
     <message id="orn-backup-apps">
         <source>Installed applications</source>
-        <translation>Inštalované aplikácie</translation>
+        <translation>已安装的应用</translation>
     </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
-        <translation>Ťuknúť znovu a zatvoriť vysvetlivku</translation>
+        <translation>再次点击以关闭提示</translation>
     </message>
     <message id="orn-mainpage">
         <source>Main page</source>
-        <translation>Hlavná stránka</translation>
+        <translation>主页</translation>
     </message>
     <message id="orn-show-recent-switch">
         <source>Show recently updated on start</source>
-        <translation>Pri štarte zobraziť nedávno aktualizované</translation>
+        <translation>启动时显示最近更新</translation>
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>
-        <translation>Prepnúť na stránku nedávno aktualizovaných pri štarte</translation>
+        <translation>启动时切换到最近更新的软件页面</translation>
     </message>
     <message id="orn-mainpage-order">
         <source>Order items</source>
-        <translation>Usporiadanie položiek</translation>
+        <translation>排序</translation>
     </message>
     <message id="orn-reset">
         <source>Reset</source>
-        <translation>Vynulovať</translation>
+        <translation>重置</translation>
     </message>
     <message id="orn-mainpage-order-description">
         <source>Drag items to change their order</source>
-        <translation>Presunutím položiek zmeniť ich poradie</translation>
+        <translation>拖动来改变他们的顺序</translation>
     </message>
     <message id="orn-cat-adult-content">
         <source>Adult Content</source>
-        <translation>Obsah pre dospelých</translation>
+        <translation>成人内容</translation>
     </message>
     <message id="orn-categories-filter">
         <source>Categories filter</source>
-        <translation>Filter kategórií</translation>
+        <translation>分类筛选</translation>
     </message>
     <message id="orn-categories-filter-descr">
         <source>Select which categories to show</source>
-        <translation>Vybrať kategóriu pre zobrazenie</translation>
+        <translation>选择要显示的分类</translation>
     </message>
     <message id="orn-pmstate-refreshingcache">
         <source>Refreshing of cache</source>
-        <translation>Obnovenie vyrovnávacej pamäte</translation>
+        <translation>刷新缓存</translation>
     </message>
     <message id="orn-refresh-cache-switch">
         <source>Refresh cache after system upgrade</source>
-        <translation>Obnoviť vyrovnávaciu pamäť po aktualizácii</translation>
+        <translation>系统升级之后刷新缓存</translation>
     </message>
     <message id="orn-refresh-cache-switch-descr">
         <source>Force refreshing of cache of all repositories after system upgrade</source>
-        <translation>Vynútiť obnovenie vyrovnávacej pamäte po aktualizácii systému</translation>
+        <translation>系统更新之后，强制刷新所有软件源的缓存数据</translation>
     </message>
     <message id="orn-save-password">
         <source>Save password</source>
-        <translation>Uložiť heslo</translation>
+        <translation>保存密码</translation>
     </message>
     <message id="orn-save-password-help">
         <source>Save password to the encrypted device storage to perform automatic re-login.</source>
-        <translation>Uložiť heslo do šifrovanej pamäte zariadenia a vykonať opätovné prihlásenie.</translation>
+        <translation>保存密码到加密设备存储以执行自动登录。</translation>
     </message>
     <message id="orn-share-link">
         <source>Share link</source>
-        <translation>Poskytnúť odkaz</translation>
+        <translation>分享链接</translation>
     </message>
     <message id="orn-repository">
         <source>Repository</source>
-        <translation>Sklad</translation>
+        <translation>软件源</translation>
     </message>
     <message id="orn-myrepository">
         <source>My repository</source>
-        <translation>Môj sklad</translation>
+        <translation>我的软件库</translation>
     </message>
     <message id="orn-donate-with">
         <source>Donate with %1</source>
-        <translation>Prispieť %1</translation>
+        <translation>通过%1捐赠</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
-        <translation>Sú dostupné aktualizácie</translation>
+        <translation>有可用更新</translation>
     </message>
     <message id="orn-package-updated">
         <source>Package %0 was successfully updated</source>
-        <translation>Balík %0 bol úspešne aktualizovaný</translation>
+        <translation>包 %0 已成功更新</translation>
     </message>
     <message id="orn-app-description-full">
         <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Pôvodný klient OpenRepos.net pre Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;Toto je voľne dostupný otvorený softvér, ktorý je šírený v súlade s licenciou &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Zistenie môžete nahlásiť v OpenRepos.net alebo GitHub (použite tlačidlá nižšie)&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;原生旗鱼系统 OpenRepos.net 客户端&lt;/p&gt;&lt;p&gt;这是一个在&lt;a href=&apos;%1&apos;&gt;MIT许可证&lt;/a&gt;下分发的开源软件&lt;/p&gt;&lt;p&gt;你可以通过OpenRepos.net 或 GitHub 报告问题（使用下方按钮）&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>
-        <translation>Zobraziť podrobnosti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-unused-repos-found">
         <source>Unused repositories found</source>
-        <translation>Boli nájdené nepoužité sklady</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-no-unused-repos">
         <source>Unused repositories not found</source>
-        <translation>Neboli nájdené nepoužité sklady</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-search-unused-repos">
         <source>Search for unused</source>
-        <translation>Vyhľadať nepoužité</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-unused-repos-switch">
         <source>Search for unused repositories</source>
-        <translation>Vyhľadať nepoužité sklady</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-unused-repos-switch-descr">
         <source>Search for unused repositories after removing packages.</source>
-        <translation>Vyhľadať nepoužité sklady po odstránení balíkov.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-unused-repos">
         <source>Unused repositories</source>
-        <translation>Nepoužité sklady</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-unused-repos-text">
         <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Pre tieto sklady nie sú inštalované žiadne balíky.&lt;/p&gt;&lt;p&gt;Chcete ich teraz odstrániť?&lt;/p&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-updates-check-interval-minimum">
         <source>At least 10 minutes</source>
-        <translation>Najmenej 10 minút</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-check-for-self-updates-switch">
         <source>Check for self-updates</source>
-        <translation>Skontrolovať automatické aktualizácie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-check-for-self-updates-descr">
         <source>Enable the Storeman OBS repository to check for Storeman updates</source>
-        <translation>Povoliť Storeman OBS sklad pre kontrolu aktualizácii Storeman</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="orn-storeman-repo-name">
         <source>Storeman OBS Repository</source>
-        <translation>Sklad Storeman OBS</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
