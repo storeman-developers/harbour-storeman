@@ -7,7 +7,7 @@ License:        MIT
 URL:            https://github.com/storeman-developers/harbour-storeman
 Source0:        %{name}-%{version}.tar.bz2
 
-# To segregate the SFOS releases range covered by each release branch:
+# Segregate the SFOS releases range covered by each release branch:
 Requires: sailfish-version >= 3.1.0
 Requires: sailfish-version  < 3.3.0
 
