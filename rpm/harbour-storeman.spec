@@ -7,9 +7,9 @@ License:        MIT
 URL:            https://github.com/storeman-developers/harbour-storeman
 Source0:        %{name}-%{version}.tar.bz2
 
-# Requires: sailfish-version >= 3.1.0 for the code in the sfos3.2 branch and >= 3.3.0 for the code in all other branches.
-# Requires: sailfish-version >= 4.2.0 for the changed "sharing" code for SFOS4.2's new sharing API in the sfos4.2 branch.
-# Requires: sailfish-version < 3.3.0 and < 4.2.0 are only counterparts to segregate the covered SFOS releases range.
+# Segregate the SFOS releases range covered by each release branch:
+Requires: sailfish-version >= 3.3.0
+Requires: sailfish-version  < 4.2.0
 
 Requires:       sailfishsilica-qt5
 Requires:       nemo-qml-plugin-dbus-qt5
