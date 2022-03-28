@@ -15,7 +15,7 @@ Requires:       sailfishsilica-qt5
 Requires:       nemo-qml-plugin-dbus-qt5
 Requires:       nemo-qml-plugin-notifications-qt5
 Requires:       connman-qt5-declarative
-Requires:       libsolv
+Requires:       libsolv0
 Requires:       sailfishsecretsdaemon-secretsplugins-default
 BuildRequires:  pkgconfig(sailfishapp)
 BuildRequires:  pkgconfig(Qt5Core)
