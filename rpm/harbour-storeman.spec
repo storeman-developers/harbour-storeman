@@ -1,7 +1,7 @@
 Name:           harbour-storeman
 Summary:        OpenRepos client application for SailfishOS
 Version:        0.3.0
-Release:        3
+Release:        4
 Group:          Qt/Qt
 License:        MIT
 URL:            https://github.com/storeman-developers/harbour-storeman
@@ -36,11 +36,11 @@ BuildRequires:  desktop-file-utils
 Conflicts:      %{name}-installer
 Obsoletes:      %{name}-installer
 
+# This description section includes metadata for SailfishOS:Chum, see
+# https://github.com/sailfishos-chum/main/blob/main/Metadata.md
 %description
 Storeman manages repositories and applications from OpenRepos.net on your SailfishOS device.
 
-# This description section includes metadata for SailfishOS:Chum, see
-# https://github.com/sailfishos-chum/main/blob/main/Metadata.md
 %if "%{?vendor}" == "chum"
 PackageName: Storeman for SailfishOS
 Type: desktop-application
@@ -95,7 +95,7 @@ ssu ur
 
 %files
 %defattr(-,root,root,-)
-%{_bindir}
+%{_bindir}/%{name}
 %{_datadir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
