@@ -1,7 +1,7 @@
 Name:           harbour-storeman
 Summary:        OpenRepos client application for SailfishOS
 Version:        0.3.0
-Release:        4
+Release:        5
 Group:          Qt/Qt
 License:        MIT
 URL:            https://github.com/storeman-developers/harbour-storeman
@@ -15,7 +15,6 @@ Requires:       sailfishsilica-qt5
 Requires:       nemo-qml-plugin-dbus-qt5
 Requires:       nemo-qml-plugin-notifications-qt5
 Requires:       connman-qt5-declarative
-Requires:       libsolv
 Requires:       sailfishsecretsdaemon-secretsplugins-default
 BuildRequires:  pkgconfig(sailfishapp)
 BuildRequires:  pkgconfig(Qt5Core)
@@ -39,7 +38,8 @@ Obsoletes:      %{name}-installer
 # This description section includes metadata for SailfishOS:Chum, see
 # https://github.com/sailfishos-chum/main/blob/main/Metadata.md
 %description
-Storeman manages repositories and applications from OpenRepos.net on your SailfishOS device.
+Storeman manages repositories and applications from OpenRepos.net
+on your SailfishOS device.
 
 %if "%{?vendor}" == "chum"
 PackageName: Storeman for SailfishOS
