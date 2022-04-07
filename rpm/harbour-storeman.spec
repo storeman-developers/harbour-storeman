@@ -39,7 +39,8 @@ Obsoletes:      %{name}-installer
 # This description section includes metadata for SailfishOS:Chum, see
 # https://github.com/sailfishos-chum/main/blob/main/Metadata.md
 %description
-Storeman manages repositories and applications from OpenRepos.net on your SailfishOS device.
+Storeman manages repositories and applications from OpenRepos.net
+on your SailfishOS device.
 
 %if "%{?vendor}" == "chum"
 PackageName: Storeman for SailfishOS
