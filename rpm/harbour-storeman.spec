@@ -79,8 +79,8 @@ make %{?_smp_mflags}
 %install
 rm -rf %{buildroot}
 %qmake5_install
-desktop-file-install --delete-original --dir %{buildroot}%{_datadir}/applications \
-   %{buildroot}%{_datadir}/applications/*.desktop
+desktop-file-install --delete-original --dir=%{buildroot}%{_datadir}/applications \
+   %{buildroot}%{_datadir}/applications/%{name}.desktop
 
 %posttrans
 ssu rr mentaljam-obs
