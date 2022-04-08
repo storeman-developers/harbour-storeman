@@ -70,7 +70,7 @@ Url:
 %endif
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 
 %build
 %qmake5 VERSION=%(echo %{version} | grep -Eo '^[0-9]+.[0-9]+.[0-9]+')
