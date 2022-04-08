@@ -27,6 +27,7 @@ BuildRequires:  pkgconfig(Qt5Sparql)
 BuildRequires:  pkgconfig(Qt5Concurrent)
 BuildRequires:  pkgconfig(sailfishsecrets)
 BuildRequires:  pkgconfig(mlite5)
+BuildRequires:  pkgconfig(libsolv)
 BuildRequires:  libsolv-devel
 BuildRequires:  PackageKit-Qt5-devel
 BuildRequires:  qt5-qttools-linguist
