@@ -2,19 +2,6 @@ import QtQuick 2.0
 
 ListModel {
     ListElement {
-        locale: "zh"
-        coordinators: [
-            ListElement { name: "0312birdzhang" }
-        ]
-        translators: [
-            ListElement { name: "天苯" },
-            ListElement { name: "LSDemo" },
-            ListElement { name: "Historyscholar" }
-        ]
-        reviewers: []
-    }
-
-    ListElement {
         locale: "cs"
         coordinators: [
             ListElement { name: "Malakay" }
@@ -33,18 +20,36 @@ ListModel {
     }
 
     ListElement {
-        locale: "nl"
+        locale: "de"
         coordinators: [
-            ListElement { name: "pljmn" }
+            ListElement { name: "monkeyisland" }
+        ]
+        translators: [
+            ListElement { name: "Unreasonable_Behaviour" },
+            ListElement { name: "olf" },
+            ListElement { name: "chwa" },
+            ListElement { name: "feldbaum" },
+            ListElement { name: "sail_parleur" },
+            ListElement { name: "Mausschubser" }
+        ]
+        reviewers: [
+            ListElement { name: "inta" }
+        ]
+    }
+
+    ListElement {
+        locale: "el"
+        coordinators: [
+            ListElement { name: "dglent" }
         ]
         translators: []
         reviewers: []
     }
 
     ListElement {
-        locale: "nl_BE"
+        locale: "es"
         coordinators: [
-            ListElement { name: "pljmn" }
+            ListElement { name: "carmenfdezb" }
         ]
         translators: []
         reviewers: []
@@ -89,33 +94,6 @@ ListModel {
     }
 
     ListElement {
-        locale: "de"
-        coordinators: [
-            ListElement { name: "monkeyisland" }
-        ]
-        translators: [
-            ListElement { name: "Unreasonable_Behaviour" },
-            ListElement { name: "olf" },
-            ListElement { name: "chwa" },
-            ListElement { name: "feldbaum" },
-            ListElement { name: "sail_parleur" },
-            ListElement { name: "Mausschubser" }
-        ]
-        reviewers: [
-            ListElement { name: "inta" }
-        ]
-    }
-
-    ListElement {
-        locale: "el"
-        coordinators: [
-            ListElement { name: "dglent" }
-        ]
-        translators: []
-        reviewers: []
-    }
-
-    ListElement {
         locale: "hu"
         coordinators: [
             ListElement { name: "Headarias" }
@@ -135,6 +113,24 @@ ListModel {
         translators: [
             ListElement { name: "claustn" }
         ]
+        reviewers: []
+    }
+
+    ListElement {
+        locale: "nl"
+        coordinators: [
+            ListElement { name: "pljmn" }
+        ]
+        translators: []
+        reviewers: []
+    }
+
+    ListElement {
+        locale: "nl_BE"
+        coordinators: [
+            ListElement { name: "pljmn" }
+        ]
+        translators: []
         reviewers: []
     }
 
@@ -200,15 +196,6 @@ ListModel {
     }
 
     ListElement {
-        locale: "es"
-        coordinators: [
-            ListElement { name: "carmenfdezb" }
-        ]
-        translators: []
-        reviewers: []
-    }
-
-    ListElement {
         locale: "sv"
         coordinators: [
             ListElement { name: "eson" }
@@ -223,6 +210,19 @@ ListModel {
             ListElement { name: "arustg" }
         ]
         translators: []
+        reviewers: []
+    }
+
+    ListElement {
+        locale: "zh"
+        coordinators: [
+            ListElement { name: "0312birdzhang" }
+        ]
+        translators: [
+            ListElement { name: "天苯" },
+            ListElement { name: "LSDemo" },
+            ListElement { name: "Historyscholar" }
+        ]
         reviewers: []
     }
 }
