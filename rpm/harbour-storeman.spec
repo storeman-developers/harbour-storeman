@@ -70,7 +70,7 @@ Url:
 %endif
 
 %prep
-%autosetup
+%setup -q
 
 %build
 %qmake5 VERSION=%(echo %{version} | grep -Eo '^[0-9]+.[0-9]+.[0-9]+')
@@ -78,8 +78,8 @@ make %{?_smp_mflags}
 
 %install
 %qmake5_install
-desktop-file-install --delete-original --dir %{buildroot}%{_datadir}/applications \
-   %{buildroot}%{_datadir}/applications/*.desktop
+desktop-file-install --delete-original --dir=%{buildroot}%{_datadir}/applications \
+   %{buildroot}%{_datadir}/applications/%{name}.desktop
 
 %posttrans
 ssu rr mentaljam-obs
