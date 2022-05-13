@@ -28,8 +28,7 @@ BuildRequires:  pkgconfig(Qt5Concurrent)
 BuildRequires:  pkgconfig(sailfishsecrets)
 BuildRequires:  pkgconfig(mlite5)
 BuildRequires:  pkgconfig(libsolv)
-BuildRequires:  libsolv-devel
-BuildRequires:  PackageKit-Qt5-devel
+BuildRequires:  pkgconfig(packagekitqt5)
 BuildRequires:  qt5-qttools-linguist
 BuildRequires:  desktop-file-utils
 
@@ -78,7 +77,6 @@ Url:
 make %{?_smp_mflags}
 
 %install
-rm -rf %{buildroot}
 %qmake5_install
 desktop-file-install --delete-original --dir=%{buildroot}%{_datadir}/applications \
    %{buildroot}%{_datadir}/applications/%{name}.desktop
