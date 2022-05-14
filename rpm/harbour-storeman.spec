@@ -2,7 +2,7 @@ Name:           harbour-storeman
 Summary:        OpenRepos client application for SailfishOS
 Version:        0.3.0
 Release:        5
-Group:          Qt/Qt
+Group:          Applications/System
 License:        MIT
 URL:            https://github.com/storeman-developers/harbour-storeman
 Source0:        %{name}-%{version}.tar.bz2
@@ -27,8 +27,8 @@ BuildRequires:  pkgconfig(Qt5Sparql)
 BuildRequires:  pkgconfig(Qt5Concurrent)
 BuildRequires:  pkgconfig(sailfishsecrets)
 BuildRequires:  pkgconfig(mlite5)
-BuildRequires:  libsolv-devel
-BuildRequires:  PackageKit-Qt5-devel
+BuildRequires:  pkgconfig(libsolv)
+BuildRequires:  pkgconfig(packagekitqt5)
 BuildRequires:  qt5-qttools-linguist
 BuildRequires:  desktop-file-utils
 
@@ -70,17 +70,16 @@ Url:
 %endif
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 
 %build
 %qmake5 VERSION=%(echo %{version} | grep -Eo '^[0-9]+.[0-9]+.[0-9]+')
 make %{?_smp_mflags}
 
 %install
-rm -rf %{buildroot}
 %qmake5_install
-desktop-file-install --delete-original --dir %{buildroot}%{_datadir}/applications \
-   %{buildroot}%{_datadir}/applications/*.desktop
+desktop-file-install --delete-original --dir=%{buildroot}%{_datadir}/applications \
+   %{buildroot}%{_datadir}/applications/%{name}.desktop
 
 %posttrans
 ssu rr mentaljam-obs
