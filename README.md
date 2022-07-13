@@ -30,16 +30,16 @@ OpenRepos client application for SailfishOS
 
 ## Installation of Storeman
 
-The Storeman Installer for installing Storeman proper is available at [OpenRepos.net](https://openrepos.net/content/osetr/storeman-installer).
+The Storeman Installer for installing Storeman proper is available at [OpenRepos.net](https://openrepos.net/content/olf/storeman-installer).
 
 ## Contributors to Storeman
 
-- [Petr Tsymbarovich](https://github.com/mentaljam) (mentaljam / osetr)
-- [Christoph](https://github.com/inta) (inta)
-- [Matti Viljanen](https://github.com/direc85) (direc85)
-- [olf](https://github.com/Olf0) (Olf0)
-- OpenRepos service by [Basil Semuonov](https://github.com/custodian) (custodian)
-- Application icon by [Laurent_C](https://openrepos.net/users/laurentc) (laurentc)
+- [Petr Tsymbarovich (mentaljam / osetr)](https://github.com/mentaljam)
+- [olf (Olf0)](https://github.com/Olf0)
+- [Christoph (inta)](https://github.com/inta)
+- [Matti Viljanen (direc85)](https://github.com/direc85)
+- OpenRepos service by [Basil Semuonov (custodian / thecust)](https://github.com/custodian)
+- Application icon by [Laurent_C (laurentc)](https://openrepos.net/users/laurentc)
 
 ## Translating Storeman ("l10n" / "i18n")
 
