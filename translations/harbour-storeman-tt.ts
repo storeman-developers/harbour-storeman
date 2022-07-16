@@ -996,9 +996,9 @@ Storeman серсүзне өченче затларга җибәрми.</transla
         <source>My repository</source>
         <translation>Минем репозиторий</translation>
     </message>
-    <message id="orn-donate-with">
-        <source>Donate with %1</source>
-        <translation>%1 аша булышу</translation>
+    <message id="orn-donations">
+        <source>Donations</source>
+        <translation>булышу</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
@@ -1009,8 +1009,8 @@ Storeman серсүзне өченче затларга җибәрми.</transla
         <translation>%0 пакеты уңышлы яңартылды</translation>
     </message>
     <message id="orn-app-description-full">
-        <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Sailfish&amp;nbsp;OS өчен бердәм OpenRepos.net клиенты&lt;/p&gt;&lt;p&gt;Storeman&apos;ның чыганак коды &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;лицензиясе&lt;/a&gt; шартлары буенча тарала&lt;/p&gt;&lt;p&gt;Тәкъдимнәрне OpenRepos.net һәм GitHub.com сайтлары аша җиткереп була (астагы төймәләр)&lt;/p&gt;</translation>
+        <source>&lt;p&gt;A native OpenRepos.net client app for SailfishOS&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues can be reported preferably at GitHub or alternatively at OpenRepos.net (e.g., by using the buttons below).&lt;/p&gt;</source>
+        <translation>&lt;p&gt;SailfishOS өчен бердәм OpenRepos.net клиенты&lt;/p&gt;&lt;p&gt;Storeman&apos;ның чыганак коды &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;лицензиясе&lt;/a&gt; шартлары буенча тарала.&lt;/p&gt;&lt;p&gt;Тәкъдимнәрне OpenRepos.net һәм GitHub.com сайтлары аша җиткереп була (астагы төймәләр).&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>

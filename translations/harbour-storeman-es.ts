@@ -994,9 +994,9 @@
         <source>My repository</source>
         <translation>Mi repositorio</translation>
     </message>
-    <message id="orn-donate-with">
-        <source>Donate with %1</source>
-        <translation>Donar con %1</translation>
+    <message id="orn-donations">
+        <source>Donations</source>
+        <translation>Donar</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
@@ -1007,8 +1007,8 @@
         <translation>El paquete %0 se actualizó correctamente</translation>
     </message>
     <message id="orn-app-description-full">
-        <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Cliente nativo de OpenRepos.net para Sailfish&amp;nbsp;OS&lt;/p&gt; &lt;p&gt;Este es un programa de código abierto que se distribuye bajo los términos de la &lt;a href=&apos;%1&apos;&gt;Licencia&amp;nbsp;MIT&lt;/a&gt; &lt;/p&gt;&lt;p&gt;Puedes informar de un problema en OpenRepos.net o en GitHub (usa los botones de abajo) &lt;/p&gt;</translation>
+        <source>&lt;p&gt;A native OpenRepos.net client app for SailfishOS&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues can be reported preferably at GitHub or alternatively at OpenRepos.net (e.g., by using the buttons below).&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Cliente nativo de OpenRepos.net para SailfishOS&lt;/p&gt;&lt;p&gt;Este es un programa de código abierto que se distribuye bajo los términos de la &lt;a href=&apos;%1&apos;&gt;Licencia&amp;nbsp;MIT&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Puedes informar de un problema en OpenRepos.net o en GitHub (usa los botones de abajo).&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>
