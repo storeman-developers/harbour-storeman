@@ -1011,8 +1011,8 @@
         <source>My repository</source>
         <translation type="unfinished"></translation>
     </message>
-    <message id="orn-donate-with">
-        <source>Donate with %1</source>
+    <message id="orn-donations">
+        <source>Donations</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="orn-cover-updates-available">
