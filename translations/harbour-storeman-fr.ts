@@ -994,9 +994,9 @@
         <source>My repository</source>
         <translation>Mon dépôt</translation>
     </message>
-    <message id="orn-donate-with">
-        <source>Donate with %1</source>
-        <translation>Faites un don avec %1</translation>
+    <message id="orn-donations">
+        <source>Donations</source>
+        <translation>Faites</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
