@@ -996,9 +996,9 @@ Storeman не передает ваш пароль третьим лицам.</t
         <source>My repository</source>
         <translation>Мой репозиторий</translation>
     </message>
-    <message id="orn-donate-with">
-        <source>Donate with %1</source>
-        <translation>Поддержать через %1</translation>
+    <message id="orn-donations">
+        <source>Donations</source>
+        <translation>Поддержать</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
