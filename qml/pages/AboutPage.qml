@@ -69,7 +69,7 @@ Page {
                 }
 
                 Button {
-                    text: qsTrId("orn-development")
+                    text: "@GitHub"
                     onClicked: pageStack.push(Qt.resolvedUrl("DevelopmentPage.qml"))
                 }
 
@@ -80,7 +80,7 @@ Page {
                 
                 Button {
                     //% "Donation"
-                    text: qsTrId("orn-donations")
+                    text: qsTrId("orn-donation")
                     onClicked: Qt.openUrlExternally("https://openrepos.net/donate")
                 }
             }
