@@ -996,9 +996,9 @@ Storeman серсүзне өченче затларга җибәрми.</transla
         <source>My repository</source>
         <translation>Минем репозиторий</translation>
     </message>
-    <message id="orn-donate-with">
-        <source>Donate with %1</source>
-        <translation>%1 аша булышу</translation>
+    <message id="orn-donations">
+        <source>Donations</source>
+        <translation>булышу</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
