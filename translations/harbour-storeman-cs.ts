@@ -1016,9 +1016,9 @@
         <source>My repository</source>
         <translation>Můj repozitář</translation>
     </message>
-    <message id="orn-donate-with">
-        <source>Donate with %1</source>
-        <translation>Přispět přes %1</translation>
+    <message id="orn-donations">
+        <source>Donations</source>
+        <translation>Přispět</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
