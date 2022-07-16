@@ -1024,8 +1024,8 @@
         <translation>Pakket %0 is bijgewerkt</translation>
     </message>
     <message id="orn-app-description-full">
-        <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
-        <translation>&lt;p&gt;OpenRepos.net-cliënt voor Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;Dit is vrije software, uitgegeven onder de voorwaarden van de &lt;a href=&apos;%1&apos;&gt;MIT-licentie&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Je kunt een probleem melden op OpenRepos.net of op GitHub (gebruik daarvoor de knoppen hieronder)&lt;/p&gt;</translation>
+        <source>&lt;p&gt;A native OpenRepos.net client app for SailfishOS&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues can be reported preferably at GitHub or alternatively at OpenRepos.net (e.g., by using the buttons below).&lt;/p&gt;</source>
+        <translation>&lt;p&gt;OpenRepos.net-cliënt voor SailfishOS&lt;/p&gt;&lt;p&gt;Dit is vrije software, uitgegeven onder de voorwaarden van de &lt;a href=&apos;%1&apos;&gt;MIT-licentie&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Je kunt een probleem melden op OpenRepos.net of op GitHub (gebruik daarvoor de knoppen hieronder).&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>
