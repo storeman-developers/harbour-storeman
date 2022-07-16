@@ -332,20 +332,21 @@
         <translation>Pull down to refresh</translation>
     </message>
     <message id="orn-development">
-        <source>Development</source>
-        <translation>Development</translation>
+        <source>Credits</source>
+        <extracomment>Acknowledgements for contributions - should be a noun</extracomment>
+        <translation>Credits</translation>
     </message>
     <message id="orn-developers">
         <source>Developers</source>
         <translation>Developers</translation>
     </message>
     <message id="orn-appicon">
-        <source>Application Icon</source>
-        <translation>Application Icon</translation>
+        <source>Application icon</source>
+        <translation>Application icon</translation>
     </message>
     <message id="orn-sources">
-        <source>Source Code</source>
-        <translation>Source Code</translation>
+        <source>Source code &amp; Issue tracker</source>
+        <translation>Source code &amp; Issue tracker</translation>
     </message>
     <message id="orn-just-now">
         <source>Just now</source>
@@ -1011,9 +1012,10 @@
         <source>My repository</source>
         <translation>My repository</translation>
     </message>
-    <message id="orn-donations">
-        <source>Donations</source>
-        <translation>Donations</translation>
+    <message id="orn-donation">
+        <source>Donation</source>
+        <extracomment>Should be a noun</extracomment>
+        <translation>Donation</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
@@ -1024,8 +1026,8 @@
         <translation>Package %0 was successfully updated</translation>
     </message>
     <message id="orn-app-description-full">
-        <source>&lt;p&gt;A native OpenRepos.net client app for SailfishOS&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues can be reported preferably at GitHub or alternatively at OpenRepos.net (e.g., by using the buttons below).&lt;/p&gt;</source>
-        <translation>&lt;p&gt;A native OpenRepos.net client app for SailfishOS&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues can be reported preferably at GitHub or alternatively at OpenRepos.net (e.g., by using the buttons below).&lt;/p&gt;</translation>
+        <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues shall be reported preferably at GitHub or alternatively at OpenRepos (use the buttons below).&lt;/p&gt;</source>
+        <translation>&lt;p&gt;OpenRepos client application for SailfishOS&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues shall be reported preferably at GitHub or alternatively at OpenRepos (use the buttons below).&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>
