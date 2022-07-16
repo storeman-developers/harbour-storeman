@@ -61,7 +61,7 @@ Page {
 
                 Button {
                     text: "@GitHub"
-                    onClicked: Qt.openUrlExternally("https://github.com/storeman-developers/")
+                    onClicked: Qt.openUrlExternally("https://github.com/storeman-developers")
                 }
 
                 Button {
