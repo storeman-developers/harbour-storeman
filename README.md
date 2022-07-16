@@ -1,4 +1,4 @@
-# **Storeman** &nbsp; ![Storeman icon 86x86](https://github.com/storeman-developers/harbour-storeman/raw/master/icons/86x86/harbour-storeman.png)
+# ![Storeman icon 86x86](https://github.com/storeman-developers/harbour-storeman/raw/master/icons/86x86/harbour-storeman.png) &nbsp; **Storeman**
 
 OpenRepos client application for SailfishOS
 
