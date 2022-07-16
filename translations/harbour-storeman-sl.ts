@@ -1007,8 +1007,8 @@
         <translation>Paket %0 je bil uspešno posodobljen</translation>
     </message>
     <message id="orn-app-description-full">
-        <source>&lt;p&gt;Native OpenRepos.net client for Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;This is an open source software which is distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;&lt;/p&gt;&lt;p&gt;You can report an issue on OpenRepos.net or GitHub (use the buttons below)&lt;/p&gt;</source>
-        <translation>&lt;p&gt;OpenRepos.net odjemalec za Sailfish&amp;nbsp;OS&lt;/p&gt;&lt;p&gt;To je odprtokodni program, ki se distribuira z &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;licenco.&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Morebitne pripombe in težave lahko javite na OpenRepos.net ali GitHub (uporabite spodnje gumbe)&lt;/p&gt;</translation>
+        <source>&lt;p&gt;A native OpenRepos.net client app for SailfishOS&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues can be reported preferably at GitHub or alternatively at OpenRepos.net (e.g., by using the buttons below).&lt;/p&gt;</source>
+        <translation>&lt;p&gt;OpenRepos.net odjemalec za SailfishOS&lt;/p&gt;&lt;p&gt;To je odprtokodni program, ki se distribuira z &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;licenco.&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Morebitne pripombe in težave lahko javite na OpenRepos.net ali GitHub (uporabite spodnje gumbe).&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>
