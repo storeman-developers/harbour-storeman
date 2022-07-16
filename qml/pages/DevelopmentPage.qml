@@ -57,7 +57,7 @@ Page {
         PullDownMenu {
 
             MenuItem {
-                //% "Source Code & Issue Tracker"
+                //% "Source code & Issue tracker"
                 text: qsTrId("orn-sources")
                 onClicked: Qt.openUrlExternally("https://github.com/storeman-developers/")
             }
