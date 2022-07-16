@@ -994,9 +994,9 @@
         <source>My repository</source>
         <translation>Saját tároló</translation>
     </message>
-    <message id="orn-donate-with">
-        <source>Donate with %1</source>
-        <translation>Adományozz %1 segítségével</translation>
+    <message id="orn-donations">
+        <source>Donations</source>
+        <translation>Adományozz</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
