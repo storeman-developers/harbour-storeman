@@ -77,6 +77,12 @@ Page {
                     text: qsTrId("orn-translations")
                     onClicked: pageStack.push(Qt.resolvedUrl("TranslationsPage.qml"))
                 }
+                
+                Button {
+                    //% "Donations"
+                    text: qsTrId("orn-donations")
+                    onClicked: Qt.openUrlExternally("https://openrepos.net/donate")
+                }
             }
         }
     }
