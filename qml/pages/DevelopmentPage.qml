@@ -11,7 +11,7 @@ Page {
         model: DevelopersModel { }
 
         header: PageHeader {
-            //% "Development"
+            //% "Credits"
             title: qsTrId("orn-development")
         }
 
@@ -59,7 +59,7 @@ Page {
             MenuItem {
                 //% "Source code & Issue tracker"
                 text: qsTrId("orn-sources")
-                onClicked: Qt.openUrlExternally("https://github.com/storeman-developers/")
+                onClicked: Qt.openUrlExternally("https://github.com/storeman-developers/harbour-storeman")
             }
 
             MenuStatusLabel { }
