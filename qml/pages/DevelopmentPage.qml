@@ -11,7 +11,7 @@ Page {
         model: DevelopersModel { }
 
         header: PageHeader {
-            //% "Development"
+            //% "Development & Issues"
             title: qsTrId("orn-development")
         }
 
@@ -57,9 +57,9 @@ Page {
         PullDownMenu {
 
             MenuItem {
-                //% "Source Code"
+                //% "Source Code & Issue Tracker"
                 text: qsTrId("orn-sources")
-                onClicked: Qt.openUrlExternally("https://github.com/mentaljam/harbour-storeman")
+                onClicked: Qt.openUrlExternally("https://github.com/storeman-developers/")
             }
 
             MenuStatusLabel { }
