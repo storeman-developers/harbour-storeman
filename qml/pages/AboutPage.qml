@@ -60,6 +60,11 @@ Page {
                 width: parent.width
 
                 Button {
+                    text: "@GitHub"
+                    onClicked: Qt.openUrlExternally("https://github.com/storeman-developers/")
+                }
+
+                Button {
                     text: "@OpenRepos"
                     onClicked: {
                         pageStack.push(Qt.resolvedUrl("AppPage.qml"), {
@@ -69,20 +74,20 @@ Page {
                 }
 
                 Button {
-                    text: "@GitHub"
-                    onClicked: pageStack.push(Qt.resolvedUrl("DevelopmentPage.qml"))
+                    //% "Donation"
+                    text: qsTrId("orn-donation")
+                    onClicked: Qt.openUrlExternally("https://openrepos.net/donate")
                 }
 
                 Button {
                     text: qsTrId("orn-translations")
                     onClicked: pageStack.push(Qt.resolvedUrl("TranslationsPage.qml"))
                 }
-                
+
                 Button {
-                    //% "Donation"
-                    text: qsTrId("orn-donation")
-                    onClicked: Qt.openUrlExternally("https://openrepos.net/donate")
-                }
+                    text: qsTrId("orn-development")
+                    onClicked: pageStack.push(Qt.resolvedUrl("DevelopmentPage.qml"))
+                }                
             }
         }
     }
