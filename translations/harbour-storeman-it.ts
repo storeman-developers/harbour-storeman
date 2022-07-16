@@ -1011,9 +1011,9 @@
         <source>My repository</source>
         <translation>Le mie repository</translation>
     </message>
-    <message id="orn-donate-with">
-        <source>Donate with %1</source>
-        <translation>Dona con %1</translation>
+    <message id="orn-donations">
+        <source>Donations</source>
+        <translation>Dona</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
