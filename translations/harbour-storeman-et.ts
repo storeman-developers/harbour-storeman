@@ -994,9 +994,9 @@
         <source>My repository</source>
         <translation>Minu repositoorium</translation>
     </message>
-    <message id="orn-donate-with">
-        <source>Donate with %1</source>
-        <translation>Toeta meid: %1</translation>
+    <message id="orn-donations">
+        <source>Donations</source>
+        <translation>Toeta</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
