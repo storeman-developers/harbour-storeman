@@ -1006,9 +1006,9 @@
         <source>My repository</source>
         <translation>我的软件库</translation>
     </message>
-    <message id="orn-donate-with">
-        <source>Donate with %1</source>
-        <translation>通过%1捐赠</translation>
+    <message id="orn-donations">
+        <source>Donations</source>
+        <translation>捐赠</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
