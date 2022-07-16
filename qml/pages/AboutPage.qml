@@ -49,9 +49,9 @@ Page {
                 font.pixelSize: Theme.fontSizeSmall
                 wrapMode: Text.WordWrap
                 horizontalAlignment: Qt.AlignHCenter
-                //% "<p>A native OpenRepos.net client app for SailfishOS</p>"
+                //% "<p>OpenRepos client application for SailfishOS</p>"
                 //% "<p>Storeman is Free Software (FLOSS), distributed under the terms of the <a href='%1'>MIT&nbsp;License</a>.</p>"
-                //% "<p>Issues can be reported preferably at GitHub or alternatively at OpenRepos.net (e.g., by using the buttons below).</p>"
+                //% "<p>Issues can be reported preferably at GitHub or alternatively at OpenRepos (by using the buttons below).</p>"
                 text: qsTrId("orn-app-description-full").arg("https://github.com/storeman-developers/harbour-storeman/raw/master/LICENSE")
                 onLinkActivated: Qt.openUrlExternally(link)
             }
@@ -60,7 +60,7 @@ Page {
                 width: parent.width
 
                 Button {
-                    text: "OpenRepos.net"
+                    text: "@OpenRepos"
                     onClicked: {
                         pageStack.push(Qt.resolvedUrl("AppPage.qml"), {
                             appId: 11621
@@ -79,7 +79,7 @@ Page {
                 }
                 
                 Button {
-                    //% "Donations"
+                    //% "Donate"
                     text: qsTrId("orn-donations")
                     onClicked: Qt.openUrlExternally("https://openrepos.net/donate")
                 }
