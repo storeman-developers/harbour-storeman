@@ -1007,9 +1007,9 @@
         <translation>Paket %0 je bil uspešno posodobljen</translation>
     </message>
     <message id="orn-app-description-full">
-        <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues shall be reported preferably at GitHub or alternatively at OpenRepos (use the buttons below).&lt;/p&gt;</source>
+        <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues shall be reported preferably at GitHub or alternatively at OpenRepos (use the buttons below).&lt;/p&gt;</source>
         <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software).</extracomment>
-        <translation>&lt;p&gt;OpenRepos odjemalec za SailfishOS&lt;/p&gt;&lt;p&gt;To je odprtokodni program, ki se distribuira z &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;licenco&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Morebitne pripombe in težave lahko javite na GitHub ali OpenRepos (uporabite spodnje gumbe).&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;OpenRepos odjemalec za SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;To je odprtokodni program, ki se distribuira z &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;licenco&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Morebitne pripombe in težave lahko javite na GitHub ali OpenRepos (uporabite spodnje gumbe).&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>
