@@ -1,7 +1,7 @@
 Name:           harbour-storeman
 Summary:        OpenRepos client application for SailfishOS
 Version:        0.3.1
-Release:        2
+Release:        3
 Group:          Applications/System
 License:        MIT
 URL:            https://github.com/storeman-developers/harbour-storeman
