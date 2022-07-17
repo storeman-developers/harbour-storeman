@@ -1016,8 +1016,8 @@
         <source>My repository</source>
         <translation>Můj repozitář</translation>
     </message>
-    <message id="orn-donations">
-        <source>Donations</source>
+    <message id="orn-donation">
+        <source>Donation</source>
         <translation>Přispět</translation>
     </message>
     <message id="orn-cover-updates-available">
@@ -1029,7 +1029,7 @@
         <translation>Balíček %0 byl úspěšně aktualizován</translation>
     </message>
     <message id="orn-app-description-full">
-        <source>&lt;p&gt;A native OpenRepos.net client app for SailfishOS&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues can be reported preferably at GitHub or alternatively at OpenRepos.net (e.g., by using the buttons below).&lt;/p&gt;</source>
+        <source>&lt;p&gt;OpenRepos client app for SailfishOS&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues can be reported preferably at GitHub or alternatively at OpenRepos.net (use the buttons below).&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="orn-show-details">
