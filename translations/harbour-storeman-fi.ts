@@ -1011,8 +1011,8 @@
         <source>My repository</source>
         <translation>Oma pakettilähde</translation>
     </message>
-    <message id="orn-donations">
-        <source>Donations</source>
+    <message id="orn-donation">
+        <source>Donation</source>
         <translation>lahjoitus</translation>
     </message>
     <message id="orn-cover-updates-available">
@@ -1024,8 +1024,9 @@
         <translation>Paketti %0 päivitettiin onnistuneesti</translation>
     </message>
     <message id="orn-app-description-full">
-        <source>&lt;p&gt;A native OpenRepos.net client app for SailfishOS&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues can be reported preferably at GitHub or alternatively at OpenRepos.net (e.g., by using the buttons below).&lt;/p&gt;</source>
-        <translation>&lt;p&gt;OpenRepos.net-sovelluskauppa SailfishOS:lle&lt;/p&gt;&lt;p&gt;Storeman on avoimen lähdekoodin sovellus, joka käyttää &lt;a href=&apos;%1&apos;&gt;MIT-lisenssiä&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Voit raportoida ongelmista OpenRepos.net-sivulla, tai GitHub-projektissa (allaolevat painikkeet).&lt;/p&gt;</translation>
+        <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues shall be reported preferably at GitHub or alternatively at OpenRepos (use the buttons below).&lt;/p&gt;</source>
+        <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software).</extracomment>
+        <translation>&lt;p&gt;OpenRepos-sovelluskauppa SailfishOS:lle&lt;/p&gt;&lt;p&gt;Storeman on avoimen lähdekoodin sovellus, joka käyttää &lt;a href=&apos;%1&apos;&gt;MIT-lisenssiä&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Voit raportoida ongelmista GitHub-projektissa, tai OpenRepos-sivulla (allaolevat painikkeet).&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>

@@ -996,8 +996,8 @@ Storeman не передает ваш пароль третьим лицам.</t
         <source>My repository</source>
         <translation>Мой репозиторий</translation>
     </message>
-    <message id="orn-donations">
-        <source>Donations</source>
+    <message id="orn-donation">
+        <source>Donation</source>
         <translation>Поддержать</translation>
     </message>
     <message id="orn-cover-updates-available">
@@ -1009,8 +1009,9 @@ Storeman не передает ваш пароль третьим лицам.</t
         <translation>Пакет %0 успешно обновлен</translation>
     </message>
     <message id="orn-app-description-full">
-        <source>&lt;p&gt;A native OpenRepos.net client app for SailfishOS&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues can be reported preferably at GitHub or alternatively at OpenRepos.net (e.g., by using the buttons below).&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Клиент OpenRepos.net для SailfishOS&lt;/p&gt;&lt;p&gt;Исходный код Storeman распространяется в соответствии с условиями &lt;a href=&quot;%1&quot;&gt;лицензии&amp;nbsp;MIT&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Вы можете сообщить об ошибке на OpenRepos.net или GitHub&lt;br /&gt;(используйте кнопки ниже).&lt;/p&gt;</translation>
+        <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues shall be reported preferably at GitHub or alternatively at OpenRepos (use the buttons below).&lt;/p&gt;</source>
+        <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software).</extracomment>
+        <translation>&lt;p&gt;Клиент OpenRepos для SailfishOS&lt;/p&gt;&lt;p&gt;Исходный код Storeman распространяется в соответствии с условиями &lt;a href=&quot;%1&quot;&gt;лицензии&amp;nbsp;MIT&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Вы можете сообщить об ошибке на GitHub или OpenRepos (используйте кнопки ниже).&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>
