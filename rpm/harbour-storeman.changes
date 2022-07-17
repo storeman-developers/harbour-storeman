@@ -1,10 +1,20 @@
-* Sun Mar 20 2022 olf <https://github.com/Olf0> 0.3.0
+* Sun Jul 17 2022 olf <https://github.com/Olf0> 0.3.1
+- Update contributors' copyright notices in license file (#313)
+- Re-introduce donation button (#322)
+
+* Sat May 14 2022 olf <https://github.com/Olf0> 0.3.0
 - Add 8 screenshots, plus social media icons (#216, #232, #238) 
 - spec file: Add SailfishOS:Chum metadata (#218, #233)
 - Remove donation links (#224) 
 - README: Enhance translations title etc. (#234)
 - Update Hungarian translation
-- Only in sfos4.2 branch: Trivially bail out of SailJail (#250) 
+- Only in sfos4.2 branch: Trivially bail out of SailJail (#250)
+- spec file: Do not try to own /usr/bin
+- Adapt to revised release tag naming scheme (#280)
+- Various enhancements to the spec file
+- Delete git submodule mentaljam-obs
+- Spec file enancements (#291, #298, #299, #302)
+- Switch to a standard Group: (#304)
 
 * Sun Mar 13 2022 olf <https://github.com/Olf0> 0.2.12
 - Cease using a repository entry in SSU's global section (#157) by storeman.spec: Do not assign repo in global section (#172)
