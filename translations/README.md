@@ -1,6 +1,6 @@
-# Translations
+# Translations (l10n / i18n)
 
-You can help to localize harbour-storeman to your language using [Transifex](https://www.transifex.com/mentaljam/harbour-storeman) or [Qt Linguist](http://doc.qt.io/qt-5/qtlinguist-index.html).
+You can help to localize harbour-storeman in your language using [Transifex](https://www.transifex.com/mentaljam/harbour-storeman) or [Qt Linguist](http://doc.qt.io/qt-5/qtlinguist-index.html).
 
 Note that for Storeman primarily translations designated with a country code only (e.g., `pt`) shall be created and maintained.  Only if a complete and well maintained translation for the sole country code exists, a country specific variant with a locale will be accepted (e.g., `nl_BE`).
 
@@ -14,6 +14,6 @@ If you want to test your translation before publishing you should compile it and
 
     /usr/share/harbour-storeman/translations
 
-The application tries to load translation files automatically basing on your system locale settings. Also you can run application with selected locale from terminal. For example for Russian language the command is
+The application tries to load a translation file automatically based on your system locale setting.  You can also run the application with a selected locale from the terminal.  For example, for the Russian language the command is:
 
-    LANG=ru harbour-storeman
+    export LANG=ru; harbour-storeman
