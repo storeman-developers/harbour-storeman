@@ -7,7 +7,7 @@ Note that for Storeman principally translations designated with a country code o
 [Transifex](https://www.transifex.com/mentaljam/harbour-storeman) is the preferred way of pushing your translations.
 Please do not send PRs with translations directly to GitHub, if you have a Transifex account.
 
-Note that translations for Storeman are *ID based* Qt `ts` files.  Hence, if you want to compile a translation file for testing, you should run the lrelease command with the "`-idbased`" option, for example:
+Note that translations for Storeman are *ID based* Qt `ts` files.  Hence, if you want to compile a translation file for testing, you should run the `lrelease` command with the `-idbased` option, for example:
 
     lrelease -idbased harbour-storeman.ts
 
