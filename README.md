@@ -50,7 +50,7 @@ If you want to translate Storeman to a language it does not support yet or enhan
 | ![RecentAppsPage](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-01.png) | ![AppPage](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-02.png) | ![CommentsPage](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-03.png) | ![Commenting](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-04.png) |
 | ![RepositoriesPage](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-06.png) | ![InstalledAppsPage](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-07.png) | ![BookmarksPage](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-08.png) | ![RepositoryPage](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-09.png) |
 
-## Contributors to Storeman
+## Credits
 
 - [Petr Tsymbarovich (mentaljam / osetr)](https://github.com/mentaljam)
 - [olf (Olf0)](https://github.com/Olf0)
