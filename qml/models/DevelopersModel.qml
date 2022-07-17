@@ -52,7 +52,7 @@ ListModel {
     }
 
     ListElement {
-        //% "Application Icon"
+        //% "Application icon"
         role: qsTrId("orn-appicon")
         participants: [
             ListElement {
