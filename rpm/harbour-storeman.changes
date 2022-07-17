@@ -1,10 +1,11 @@
 * Sun Jul 24 2022 olf <https://github.com/Olf0> 0.3.2
-- Shorten a few strings (#327)
+- [Changelog] Final update for v0.3.1 (#353)
 
 * Sun Jul 17 2022 olf <https://github.com/Olf0> 0.3.1
+- Shorten a few strings (#327)
+- [Changelog] Update v0.3.0 and v0.3.1 (#329)
 - [LICENSE] Update contributors' copyright notices (#313)
 - [AboutPage.qml] Re-introduce donation button (#322)
-- Update changelog for v0.3.0 and v0.3.1 (#329)
 - Shorten a few strings (#327, #332, #333)
 - [AboutPage.qml] Beautify vertical spacing (#340)
 - [AboutPage.qml] Increase icon size (#341)
