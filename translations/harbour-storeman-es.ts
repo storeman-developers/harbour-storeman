@@ -1008,6 +1008,7 @@
     </message>
     <message id="orn-app-description-full">
         <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues shall be reported preferably at GitHub or alternatively at OpenRepos (use the buttons below).&lt;/p&gt;</source>
+        <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software).</extracomment>
         <translation>&lt;p&gt;Cliente de OpenRepos para SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Este es un programa de código abierto que se distribuye bajo los términos de la &lt;a href=&apos;%1&apos;&gt;licencia&amp;nbsp;MIT&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Puedes informar de un problema en GitHub o en OpenRepos (usa los botones de abajo).&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
