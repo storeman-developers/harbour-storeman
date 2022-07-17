@@ -1,6 +1,6 @@
 # Translations (l10n / i18n)
 
-You can help to localize harbour-storeman in your language using [Transifex](https://www.transifex.com/mentaljam/harbour-storeman) or [Qt Linguist](http://doc.qt.io/qt-5/qtlinguist-index.html).
+You can help to localize harbour-storeman to your language using [Transifex](https://www.transifex.com/mentaljam/harbour-storeman) or [Qt Linguist](http://doc.qt.io/qt-5/qtlinguist-index.html).
 
 Note that for Storeman primarily translations designated with a country code only (e.g., `pt`) shall be created and maintained.  Only if a complete and well maintained translation for the sole country code exists, a country specific variant with a locale will be accepted (e.g., `nl_BE`).
 
