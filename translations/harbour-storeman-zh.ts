@@ -1019,8 +1019,8 @@
         <translation>包 %0 已成功更新</translation>
     </message>
     <message id="orn-app-description-full">
-        <source>&lt;p&gt;A native OpenRepos.net client app for SailfishOS&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;License&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues can be reported preferably at GitHub or alternatively at OpenRepos.net (e.g., by using the buttons below).&lt;/p&gt;</source>
-        <translation>&lt;p&gt;原生旗鱼系统 OpenRepos 客户端&lt;/p&gt;&lt;p&gt;这是一个在&lt;a href=&apos;%1&apos;&gt;MIT许可证&lt;/a&gt;下分发的开源软件。&lt;/p&gt;&lt;p&gt;你可以通过 GitHub 或 OpenRepos 报告问题（使用下方按钮）。&lt;/p&gt;</translation>
+        <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues shall be reported preferably at GitHub or alternatively at OpenRepos (use the buttons below).&lt;/p&gt;</source>
+        <translation>&lt;p&gt;原生旗鱼系统 OpenRepos 客户端&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;这是一个在&lt;a href=&apos;%1&apos;&gt;MIT许可证&lt;/a&gt;下分发的开源软件。&lt;/p&gt;&lt;p&gt;你可以通过 GitHub 或 OpenRepos 报告问题（使用下方按钮）。&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>
