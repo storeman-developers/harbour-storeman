@@ -1007,9 +1007,9 @@
         <translation>Le paquet %0 a été mis à jour avec succès</translation>
     </message>
     <message id="orn-app-description-full">
-        <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues shall be reported preferably at GitHub or alternatively at OpenRepos (use the buttons below).&lt;/p&gt;</source>
+        <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues shall be reported preferably at GitHub or alternatively at OpenRepos (use the buttons below).&lt;/p&gt;</source>
         <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software).</extracomment>
-        <translation>&lt;p&gt;Client OpenRepos pour SailfishOS&lt;/p&gt;&lt;p&gt;Ceci est logiciel libre (FLOSS) distribué sous les termes de la &lt;a href=&apos;%1&apos;&gt;license&amp;nbsp;MIT&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Vous pouvez signaler un problème sur GitHub ou OpenRepos (utilisez le bouton ci-dessous).&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Client OpenRepos pour SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Ceci est logiciel libre (FLOSS) distribué sous les termes de la &lt;a href=&apos;%1&apos;&gt;license&amp;nbsp;MIT&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Vous pouvez signaler un problème sur GitHub ou OpenRepos (utilisez le bouton ci-dessous).&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>
