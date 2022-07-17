@@ -65,7 +65,7 @@ Page {
         PullDownMenu {
 
             MenuItem {
-                text: "Transifex"
+                text: "Storeman@Transifex"
                 onClicked: Qt.openUrlExternally("https://www.transifex.com/mentaljam/harbour-storeman")
             }
 
