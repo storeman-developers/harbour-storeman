@@ -1,3 +1,6 @@
+* Sun Jul 24 2022 olf <https://github.com/Olf0> 0.3.2
+- Shorten a few strings (#327)
+
 * Sun Jul 17 2022 olf <https://github.com/Olf0> 0.3.1
 - [LICENSE] Update contributors' copyright notices (#313)
 - [AboutPage.qml] Re-introduce donation button (#322)
