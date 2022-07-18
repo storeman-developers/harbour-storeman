@@ -150,7 +150,7 @@ ApplicationWindow
         <doc:doc>
           <doc:summary>
             Name of the page to open
-            (https://github.com/mentaljam/harbour-storeman/tree/master/qml/pages)
+            (https://github.com/storeman-developers/harbour-storeman/tree/master/qml/pages)
           </doc:summary>
         </doc:doc>
       </arg>
