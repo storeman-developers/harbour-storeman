@@ -1,9 +1,17 @@
+* Sun Jul 24 2022 olf <https://github.com/Olf0> 0.3.2
+- [Changelog] Final update for v0.3.1 (#353, #330)
+- [harbour-storeman.ts] Fix typo & beautify (#347) 
+- [harbour-storeman.qml] Eliminate last stale link (#354)
+- Enhance comments WRT Qt-ToDos (#357)
+- Enhance spec file a bit, requires Installer ≥ 1.3.0 (#360) 
+
 * Sun Jul 17 2022 olf <https://github.com/Olf0> 0.3.1
-- Update contributors' copyright notices in license file (#313)
-- Re-introduce donation button (#322)
-- Update changelog for v0.3.0 and v0.3.1 (#329)
+- [LICENSE] Update contributors' copyright notices (#313)
+- [AboutPage.qml] Re-introduce donation button (#322)
 - Shorten a few strings (#327, #332, #333)
+- [Changelog] Update v0.3.0 and v0.3.1 (#329)
 - [AboutPage.qml] Beautify vertical spacing (#340)
+- [AboutPage.qml] Increase icon size (#341)
 
 * Sat May 14 2022 olf <https://github.com/Olf0> 0.3.0
 - Add 8 screenshots, plus social media icons (#216, #232, #238) 
