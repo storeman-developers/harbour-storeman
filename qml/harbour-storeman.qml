@@ -9,7 +9,8 @@ import "pages"
 ApplicationWindow
 {
     property bool manualUnusedCheck
-    // TODO: Use Qt.application.displayName (available since Qt 5.9)
+    // Qt.application.displayName (available since Qt 5.9) cannot be used, because SFOS 4.4.0 still deploys QT 5.6 and Storeman supports SFOS ≥ 3.1.0!
+    // For a detailed discussion see https://github.com/storeman-developers/harbour-storeman/issues/356#issuecomment-1192249781
     readonly property string applicationDisplayName: "Storeman"
     readonly property string applicationIcon: Qt.application.name
     readonly property string dbusService: "harbour.storeman.service"
@@ -150,7 +151,7 @@ ApplicationWindow
         <doc:doc>
           <doc:summary>
             Name of the page to open
-            (https://github.com/mentaljam/harbour-storeman/tree/master/qml/pages)
+            (https://github.com/storeman-developers/harbour-storeman/tree/master/qml/pages)
           </doc:summary>
         </doc:doc>
       </arg>
