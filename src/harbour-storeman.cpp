@@ -56,8 +56,9 @@ int main(int argc, char *argv[])
 
     SailfishApp::application(argc, argv);
     QGuiApplication::setApplicationVersion(QStringLiteral(STOREMAN_VERSION));
-    // TODO: Available in Qt.application object since Qt 5.9
-    // QGuiApplication::setApplicationDisplayName(QStringLiteral("Storeman"));
+    // QGuiApplication::setApplicationDisplayName(QStringLiteral("Storeman")); (available in Qt.application object since Qt 5.9) cannot be used, 
+    // because SFOS 4.4.0 still deploys QT 5.6 and Storeman supports SFOS ≥ 3.1.0!
+    // For a detailed discussion see https://github.com/storeman-developers/harbour-storeman/issues/356#issuecomment-1192249781
 
     auto view = SailfishApp::createView();
 

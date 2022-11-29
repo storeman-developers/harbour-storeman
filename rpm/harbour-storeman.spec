@@ -1,7 +1,7 @@
 Name:           harbour-storeman
 Summary:        OpenRepos client application for SailfishOS
-Version:        0.3.1
-Release:        3
+Version:        0.3.2
+Release:        1
 Group:          Applications/System
 License:        MIT
 URL:            https://github.com/storeman-developers/harbour-storeman
@@ -81,16 +81,22 @@ make %{?_smp_mflags}
 desktop-file-install --delete-original --dir=%{buildroot}%{_datadir}/applications \
    %{buildroot}%{_datadir}/applications/%{name}.desktop
 
-%posttrans
-ssu rr mentaljam-obs
-rm -f /var/cache/ssu/features.ini
-ssu ar harbour-storeman-obs 'https://repo.sailfishos.org/obs/home:/olf:/harbour-storeman/%%(release)_%%(arch)/'
-ssu ur
+%post
+if [ "$1" = "1" ] # Installation
+then
+  ssu rr mentaljam-obs
+  rm -f /var/cache/ssu/features.ini
+  ssu ar harbour-storeman-obs 'https://repo.sailfishos.org/obs/home:/olf:/harbour-storeman/%%(release)_%%(arch)/'
+  ssu ur
+fi
 
 %postun
-ssu rr harbour-storeman-obs
-rm -f /var/cache/ssu/features.ini
-ssu ur
+if [ "$1" = "0" ] # Removal
+then
+  ssu rr harbour-storeman-obs
+  rm -f /var/cache/ssu/features.ini
+  ssu ur
+fi
 
 %files
 %defattr(-,root,root,-)
