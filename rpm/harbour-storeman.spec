@@ -82,6 +82,7 @@ desktop-file-install --delete-original --dir=%{buildroot}%{_datadir}/application
    %{buildroot}%{_datadir}/applications/%{name}.desktop
 
 %post
+# The %%post scriptlet is deliberately run when installing *and* updating.
 ssu_ur='no'
 ssu_lr="$(ssu lr | grep '^ - ' | cut -f 3 -d ' ')"
 if printf '%s' "$ssu_lr" | grep -Fq 'mentaljam-obs'
