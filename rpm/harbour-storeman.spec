@@ -83,7 +83,7 @@ desktop-file-install --delete-original --dir=%{buildroot}%{_datadir}/application
 
 %post
 ssu_ur='no'
-ssu_lr="$(ssu lr)"
+ssu_lr="$(ssu lr | grep '^ - ' | cut -f 3 -d ' ')"
 if printf '%s' "$ssu_lr" | grep -Fq 'mentaljam-obs'
 then
   ssu rr mentaljam-obs
