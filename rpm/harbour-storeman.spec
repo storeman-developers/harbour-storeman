@@ -82,7 +82,7 @@ desktop-file-install --delete-original --dir=%{buildroot}%{_datadir}/application
    %{buildroot}%{_datadir}/applications/%{name}.desktop
 
 %post
-# The %%post scriptlet is deliberately run when installing *and* updating.
+# The %%post scriptlet is deliberately run when installing *and* updating:
 ssu_ur=no
 ssu_lr="$(ssu lr | grep '^ - ' | cut -f 3 -d ' ')"
 if printf %s "$ssu_lr" | grep -Fq mentaljam-obs
@@ -99,14 +99,21 @@ fi
 if [ $ssu_ur = yes ]
 then ssu ur
 fi
+# BTW, `ssu`, `rm -f`, `mkdir -p` etc. *always* return with "0" ("success"), hence
+# no appended `|| true` needed to satisfy `set -e` for failing commands outside of
+# flow control directives (if, while, until etc.).  Furthermore on Fedora docs it
+# is indicated that the final exit status of a whole scriptlet is crucial: 
+# https://docs.fedoraproject.org/en-US/packaging-guidelines/Scriptlets/#_syntax
+exit 0
 
 %postun
-if [ $1 = 0 ] # Removal
+if [ $1 = 0 ]  # Removal
 then
   ssu rr harbour-storeman-obs
   rm -f /var/cache/ssu/features.ini
   ssu ur
 fi
+exit 0
 
 %files
 %defattr(-,root,root,-)
