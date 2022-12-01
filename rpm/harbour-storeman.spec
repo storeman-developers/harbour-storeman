@@ -82,16 +82,31 @@ desktop-file-install --delete-original --dir=%{buildroot}%{_datadir}/application
    %{buildroot}%{_datadir}/applications/%{name}.desktop
 
 %post
-if [ "$1" = "1" ] # Installation
+# The %%post scriptlet is deliberately run when installing *and* updating:
+ssu_ur=no
+ssu_lr="$(ssu lr | grep '^ - ' | cut -f 3 -d ' ')"
+if printf %s "$ssu_lr" | grep -Fq mentaljam-obs
 then
   ssu rr mentaljam-obs
   rm -f /var/cache/ssu/features.ini
-  ssu ar harbour-storeman-obs 'https://repo.sailfishos.org/obs/home:/olf:/harbour-storeman/%%(release)_%%(arch)/'
-  ssu ur
+  ssu_ur=yes
 fi
+if ! printf %s "$ssu_lr" | grep -Fq harbour-storeman-obs
+then
+  ssu ar harbour-storeman-obs 'https://repo.sailfishos.org/obs/home:/olf:/harbour-storeman/%%(release)_%%(arch)/'
+  ssu_ur=yes
+fi
+if [ $ssu_ur = yes ]
+then ssu ur
+fi
+# BTW, `ssu`, `rm -f`, `mkdir -p` etc. *always* return with "0" ("success"), hence
+# no appended `|| true` needed to satisfy `set -e` for failing commands outside of
+# flow control directives (if, while, until etc.).  Furthermore on Fedora docs it
+# is indicated that the final exit status of a whole scriptlet is crucial: 
+# https://docs.fedoraproject.org/en-US/packaging-guidelines/Scriptlets/#_syntax
 
 %postun
-if [ "$1" = "0" ] # Removal
+if [ $1 = 0 ]  # Removal
 then
   ssu rr harbour-storeman-obs
   rm -f /var/cache/ssu/features.ini
