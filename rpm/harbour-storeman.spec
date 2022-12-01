@@ -104,7 +104,6 @@ fi
 # flow control directives (if, while, until etc.).  Furthermore on Fedora docs it
 # is indicated that the final exit status of a whole scriptlet is crucial: 
 # https://docs.fedoraproject.org/en-US/packaging-guidelines/Scriptlets/#_syntax
-exit 0
 
 %postun
 if [ $1 = 0 ]  # Removal
@@ -113,7 +112,6 @@ then
   rm -f /var/cache/ssu/features.ini
   ssu ur
 fi
-exit 0
 
 %files
 %defattr(-,root,root,-)
