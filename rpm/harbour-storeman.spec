@@ -101,8 +101,8 @@ then ssu ur
 fi
 # BTW, `ssu`, `rm -f`, `mkdir -p` etc. *always* return with "0" ("success"), hence
 # no appended `|| true` needed to satisfy `set -e` for failing commands outside of
-# flow control directives (if, while, until etc.).  Furthermore on Fedora docs it
-# is indicated that the final exit status of a whole scriptlet is crucial: 
+# flow control directives (if, while, until etc.).  Furthermore on Fedora Docs it
+# is indicated that only the final exit status of a whole scriptlet is crucial: 
 # https://docs.fedoraproject.org/en-US/packaging-guidelines/Scriptlets/#_syntax
 
 %postun
