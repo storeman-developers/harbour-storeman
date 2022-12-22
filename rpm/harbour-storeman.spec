@@ -1,6 +1,6 @@
 Name:           harbour-storeman
 Summary:        OpenRepos client application for SailfishOS
-Version:        0.3.2
+Version:        0.3.3
 Release:        1
 Group:          Applications/System
 License:        MIT
@@ -104,6 +104,10 @@ fi
 # flow control directives (if, while, until etc.).  Furthermore on Fedora Docs it
 # is indicated that only the final exit status of a whole scriptlet is crucial: 
 # https://docs.fedoraproject.org/en-US/packaging-guidelines/Scriptlets/#_syntax
+# I have the impression, that only the main section of a spec file is interpreted
+# by `rpmbuild` in a shell called with the option `-e', but not the scriptlets
+# (`%pre`, `%post`, `%preun`, `%postun`, `%pretrans`, `%posttrans`, `%trigger*`
+# and `%file*`), which are also not interpreted by `rpmbuild`!
 
 %postun
 if [ $1 = 0 ]  # Removal
@@ -111,6 +115,8 @@ then
   ssu rr harbour-storeman-obs
   rm -f /var/cache/ssu/features.ini
   ssu ur
+  # Remove a %{name}-installer log-file, if extant:
+  rm -f %{_localstatedir}/log/%{name}-installer.log.txt
 fi
 
 %files
