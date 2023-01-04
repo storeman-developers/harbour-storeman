@@ -1,6 +1,6 @@
 ---
 name: Help form
-about: Questions about this project
+about: Questions about Storeman
 title: "[Help] "
 labels: 'question'
 assignees: ''
