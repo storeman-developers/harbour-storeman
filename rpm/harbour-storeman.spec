@@ -4,8 +4,8 @@ Version:        0.3.3
 Release:        1
 Group:          Applications/System
 License:        MIT
-URL:            https://github.com/storeman-developers/harbour-storeman
-Source0:        %{name}-%{version}.tar.bz2
+URL:            https://github.com/storeman-developers/%{name}
+Source0:        %{url}/archive/%{version}/%{name}-%{version}.tar.gz
 
 # Requires: sailfish-version >= 3.1.0 for the code in the sfos3.2 branch and >= 3.3.0 for the code in all other branches.
 # Requires: sailfish-version >= 4.2.0 for the changed "sharing" code for SFOS4.2's new sharing API in the sfos4.2 branch.
@@ -33,9 +33,8 @@ BuildRequires:  qt5-qttools-linguist
 BuildRequires:  desktop-file-utils
 
 Conflicts:      %{name}-installer
-Obsoletes:      %{name}-installer
 
-# This description section includes metadata for SailfishOS:Chum, see
+# This %%description section includes metadata for SailfishOS:Chum, see
 # https://github.com/sailfishos-chum/main/blob/main/Metadata.md
 %description
 Storeman manages repositories and applications from OpenRepos.net
@@ -67,6 +66,7 @@ Url:
   Homepage: %{url}
   Help: %{url}/issues
   Bugtracker: %{url}/issues
+  Donation: https://openrepos.net/donate
 %endif
 
 %prep
@@ -85,13 +85,13 @@ desktop-file-install --delete-original --dir=%{buildroot}%{_datadir}/application
 # The %%post scriptlet is deliberately run when installing *and* updating:
 ssu_ur=no
 ssu_lr="$(ssu lr | grep '^ - ' | cut -f 3 -d ' ')"
-if printf %s "$ssu_lr" | grep -Fq mentaljam-obs
+if echo "$ssu_lr" | grep -Fq mentaljam-obs
 then
   ssu rr mentaljam-obs
   rm -f /var/cache/ssu/features.ini
   ssu_ur=yes
 fi
-if ! printf %s "$ssu_lr" | grep -Fq harbour-storeman-obs
+if ! echo "$ssu_lr" | grep -Fq harbour-storeman-obs
 then
   ssu ar harbour-storeman-obs 'https://repo.sailfishos.org/obs/home:/olf:/harbour-storeman/%%(release)_%%(arch)/'
   ssu_ur=yes
@@ -105,13 +105,13 @@ fi
 # is indicated that solely the final exit status of a whole scriptlet is crucial: 
 # See https://docs.pagure.org/packaging-guidelines/Packaging%3AScriptlets.html
 # or https://docs.fedoraproject.org/en-US/packaging-guidelines/Scriptlets/#_syntax
-# committed on 18 February 2019 by tibbs ( https://pagure.io/user/tibbs ) as
-# "8d0cec9 Partially convert to semantic line breaks." in
+# committed on 18 February 2019 by tibbs ( https://pagure.io/user/tibbs ) in
 # https://pagure.io/packaging-committee/c/8d0cec97aedc9b34658d004e3a28123f36404324
 # Hence I have the impression, that only the main section of a spec file is
-# interpreted by `rpmbuild` in a shell called with the option `-e', but not the
-# scriptlets (`%pre`, `%post`, `%preun`, `%postun`, `%pretrans`, `%posttrans`,
-# `%trigger*` and `%file*`), which are also not interpreted by `rpmbuild`!
+# interpreted in a shell called with the option `-e', but not the scriptlets
+# (`%%pre`, `%%post`, `%%preun`, `%%postun`, `%%pretrans`, `%%posttrans`,
+# `%%trigger*` and `%%file*`).
+exit 0
 
 %postun
 if [ $1 = 0 ]  # Removal
@@ -122,6 +122,7 @@ then
   # Remove a %%{name}-installer log-file, if extant:
   rm -f %{_localstatedir}/log/%{name}-installer.log.txt
 fi
+exit 0
 
 %files
 %defattr(-,root,root,-)
