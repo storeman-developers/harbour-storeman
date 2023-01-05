@@ -7,8 +7,9 @@ on:
   push:
     tags:
       - 'sfos3.2_release/*'
-      - 'sfos3.2_alpha/*'
+      - 'sfos3.2_rc/*'
       - 'sfos3.2_beta/*'
+      - 'sfos3.2_alpha/*'
       - 'sfos3.2_test/*'
       - 'sfos3.2/*'
   pull_request:
