@@ -6,12 +6,12 @@ env:
 on:
   push:
     tags:
-      - 'sfos3.2_release/*'
-      - 'sfos3.2_rc/*'
-      - 'sfos3.2_beta/*'
-      - 'sfos3.2_alpha/*'
-      - 'sfos3.2_test/*'
-      - 'sfos3.2/*'
+      - 'sfos4.2_release/*'
+      - 'sfos4.2_rc/*'
+      - 'sfos4.2_beta/*'
+      - 'sfos4.2_alpha/*'
+      - 'sfos4.2_test/*'
+      - 'sfos4.2/*'
   pull_request:
     branches:
       - sfos4.2
