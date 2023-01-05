@@ -1,4 +1,4 @@
-name: CI build - sfos4.2 branch for SFOS 4.2.0.21 (aarch64, armv7hl, i486)
+name: CI - sfos4.2 branch on SFOS 4.2.0.21 (aarch64, armv7hl, i486)
 
 env:
   sfos_target: 4.2.0.21
