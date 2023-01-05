@@ -1,4 +1,4 @@
-name: CI build - sfos3.3 branch for SFOS 3.3.0.14 (armv7hl, i486) & SFOS 4.0.1.45 (aarch64)
+name: CI - sfos3.3 branch on SFOS 3.3.0.14 (armv7hl, i486) & SFOS 4.0.1.45 (aarch64)
 
 
 env:
