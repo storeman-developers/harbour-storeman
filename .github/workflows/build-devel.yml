@@ -22,6 +22,7 @@ jobs:
       uses: actions/cache@v3
       with:
         path: coderus/github-sfos-build@*
+              coderus/*sailfishos-platform-sdk*
         key: cache
 
     - name: Prepare
