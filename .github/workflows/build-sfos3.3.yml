@@ -1,4 +1,4 @@
-name: CI - sfos3.3 branch on SFOS 3.3.0.14 (armv7hl, i486) & SFOS 4.0.1.45 (aarch64)
+name: CI - sfos3.3 branch on SFOS 3.3.0 (armv7hl,i486) & SFOS 4.0.1 (aarch64)
 
 
 env:
@@ -19,13 +19,29 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
-
+    runs-on: ubuntu-22.04
+    env:
+      SEGMENT_DOWNLOAD_TIMEOUT_MINS: 3
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Cache SDK images
+      id: cache-sdk
+      uses: actions/cache@v3
+      with:
+        path: coderus/github-sfos-build@*
+              coderus/*sailfishos-platform-sdk*
+        key: cache
 
     - name: Prepare
       run: mkdir RPMS
+
+    - name: Build aarch64
+      uses: coderus/github-sfos-build@old-stable
+      with:
+        release: 4.0.1.45
+        arch: aarch64
 
     - name: Build armv7hl
       uses: coderus/github-sfos-build@old-stable
@@ -38,15 +54,10 @@ jobs:
       with:
         release: ${{ env.sfos_target }}
         arch: i486
-    
-    - name: Build aarch64
-      uses: coderus/github-sfos-build@old-stable
-      with:
-        release: 4.0.1.45
-        arch: aarch64
 
     - name: Upload build result
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: rpm-build-result
-        path: RPMS
+        path: RPMS/
+
