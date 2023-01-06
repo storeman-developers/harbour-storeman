@@ -1,4 +1,4 @@
-name: CI - devel branch on SFOS 3.3.0.14 (armv7hl)
+name: CI - devel branch on SFOS 3.3.0 (armv7hl)
 
 env:
   sfos_target: 3.3.0.14
@@ -10,10 +10,19 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
-
+    runs-on: ubuntu-22.04
+    env:
+      SEGMENT_DOWNLOAD_TIMEOUT_MINS: 1
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Cache SDK images
+      id: cache-sdk
+      uses: actions/cache@v3
+      with:
+        path: coderus/github-sfos-build@*
+        key: cache
 
     - name: Prepare
       run: mkdir RPMS
@@ -25,7 +34,8 @@ jobs:
         arch: armv7hl
 
     - name: Upload build result
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: rpm-build-result
-        path: RPMS
+        path: RPMS/
+
