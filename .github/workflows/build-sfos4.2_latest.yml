@@ -1,18 +1,26 @@
-name: CI - devel branch on SFOS 3.3.0 (armv7hl)
+name: CI - sfos4.2 branch on SFOS-latest (aarch64,armv7hl,i486)
 
 env:
-  sfos_target: 3.3.0.14
+  sfos_target: latest
 
 on:
+  push:
+    tags:
+      - 'sfos4.2_release/*'
+      - 'sfos4.2_rc/*'
+      - 'sfos4.2_beta/*'
+      - 'sfos4.2_alpha/*'
+      - 'sfos4.2_test/*'
+      - 'sfos4.2/*'
   pull_request:
     branches:
-      - devel
+      - sfos4.2
 
 jobs:
   build:
     runs-on: ubuntu-22.04
     env:
-      SEGMENT_DOWNLOAD_TIMEOUT_MINS: 1
+      SEGMENT_DOWNLOAD_TIMEOUT_MINS: 2
     steps:
     - name: Checkout
       uses: actions/checkout@v3
@@ -29,11 +37,23 @@ jobs:
     - name: Prepare
       run: mkdir RPMS
 
+    - name: Build aarch64
+      uses: coderus/github-sfos-build@master
+      with:
+        release: ${{ env.sfos_target }}
+        arch: aarch64
+
     - name: Build armv7hl
-      uses: coderus/github-sfos-build@old-stable
+      uses: coderus/github-sfos-build@master
       with:
         release: ${{ env.sfos_target }}
         arch: armv7hl
+
+    - name: Build i486
+      uses: coderus/github-sfos-build@master
+      with:
+        release: ${{ env.sfos_target }}
+        arch: i486
 
     - name: Upload build result
       uses: actions/upload-artifact@v3
