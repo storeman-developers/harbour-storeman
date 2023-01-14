@@ -40,4 +40,3 @@ jobs:
       with:
         name: rpm-build-result
         path: RPMS/
-
