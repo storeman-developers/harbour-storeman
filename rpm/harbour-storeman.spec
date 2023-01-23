@@ -5,7 +5,13 @@ Release:        1
 Group:          Applications/System
 License:        MIT
 URL:            https://github.com/storeman-developers/%{name}
+# The "Source0:" line below requires that the value of %%{name} is also the
+# project name at GitHub and the value of %%{version} is also the name of a
+# correspondingly set git-tag.
 Source0:        %{url}/archive/%{version}/%{name}-%{version}.tar.gz
+# Note that the rpmlintrc file shall be named exactly so according to
+# https://en.opensuse.org/openSUSE:Packaging_checks#Building_Packages_in_spite_of_errors
+Source99:       %{name}-rpmlintrc
 
 # Requires: sailfish-version >= 3.1.0 for the code in the sfos3.2 branch and >= 3.3.0 for the code in all other branches.
 # Requires: sailfish-version >= 4.2.0 for the changed "sharing" code for SFOS4.2's new sharing API in the sfos4.2 branch.
@@ -63,7 +69,7 @@ Screenshots:
  - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-08.png
  - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-09.png
 Url:
-  Homepage: %{url}
+  Homepage: https://openrepos.net/content/olf/storeman-installer
   Help: %{url}/issues
   Bugtracker: %{url}/issues
   Donation: https://openrepos.net/donate
@@ -132,3 +138,4 @@ exit 0
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
 %{_datadir}/mapplauncherd/privileges.d/%{name}
 %{_datadir}/dbus-1/services/harbour.storeman.service
+
