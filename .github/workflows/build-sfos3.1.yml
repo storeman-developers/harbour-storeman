@@ -1,7 +1,7 @@
 name: CI - sfos3.2 branch on SFOS 3.1.0 (armv7hl,i486)
 
 env:
-  sfos_target: 3.1.0.12
+  RELEASE: 3.1.0.12
 
 on:
   push:
@@ -37,20 +37,20 @@ jobs:
     - name: Prepare
       run: mkdir RPMS
 
-    - name: Build armv7hl
+    - name: Build armv7hl on ${{ env.RELEASE }}
       uses: coderus/github-sfos-build@old-stable
       with:
-        release: ${{ env.sfos_target }}
+        release: ${{ env.RELEASE }}
         arch: armv7hl
 
-    - name: Build i486
+    - name: Build i486 on ${{ env.RELEASE }}
       uses: coderus/github-sfos-build@old-stable
       with:
-        release: ${{ env.sfos_target }}
+        release: ${{ env.RELEASE }}
         arch: i486
 
-    - name: Upload build result
+    - name: Upload build results
       uses: actions/upload-artifact@v3
       with:
-        name: rpm-build-result
+        name: RPM-build-results
         path: RPMS/
