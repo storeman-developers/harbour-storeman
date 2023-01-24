@@ -55,7 +55,7 @@ jobs:
         release: ${{ env.RELEASE }}
         arch: i486
 
-    - name: Upload build result
+    - name: Upload build results
       uses: actions/upload-artifact@v3
       with:
         name: RPM-build-results
