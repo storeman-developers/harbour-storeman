@@ -1,7 +1,8 @@
-name: CI - sfos4.2 branch on SFOS-latest (aarch64,armv7hl,i486)
+name: CI - sfos4.2 branch on latest SFOS (aarch64,armv7hl,i486)
 
 env:
-  sfos_target: latest
+  LATEST: 4.4.0.68
+  # See https://hub.docker.com/r/coderus/sailfishos-platform-sdk/tags
 
 on:
   push:
@@ -20,6 +21,7 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     env:
+      RELEASE: ${{ env.LATEST }}
       SEGMENT_DOWNLOAD_TIMEOUT_MINS: 2
     steps:
     - name: Checkout
@@ -37,26 +39,26 @@ jobs:
     - name: Prepare
       run: mkdir RPMS
 
-    - name: Build aarch64
+    - name: Build aarch64 on ${{ env.RELEASE }}
       uses: coderus/github-sfos-build@master
       with:
-        release: ${{ env.sfos_target }}
+        release: ${{ env.RELEASE }}
         arch: aarch64
 
-    - name: Build armv7hl
+    - name: Build armv7hl on ${{ env.RELEASE }}
       uses: coderus/github-sfos-build@master
       with:
-        release: ${{ env.sfos_target }}
+        release: ${{ env.RELEASE }}
         arch: armv7hl
 
-    - name: Build i486
+    - name: Build i486 on ${{ env.RELEASE }}
       uses: coderus/github-sfos-build@master
       with:
-        release: ${{ env.sfos_target }}
+        release: ${{ env.RELEASE }}
         arch: i486
 
-    - name: Upload build result
+    - name: Upload build results
       uses: actions/upload-artifact@v3
       with:
-        name: rpm-build-result
+        name: RPM-build-results
         path: RPMS/
