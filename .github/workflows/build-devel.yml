@@ -1,7 +1,7 @@
 name: CI - devel branch on SFOS 3.3.0 (armv7hl)
 
 env:
-  sfos_target: 3.3.0.14
+  RELEASE: 3.3.0.14
 
 on:
   pull_request:
@@ -32,11 +32,12 @@ jobs:
     - name: Build armv7hl
       uses: coderus/github-sfos-build@old-stable
       with:
-        release: ${{ env.sfos_target }}
+        release: ${{ env.RELEASE }}
         arch: armv7hl
 
     - name: Upload build result
       uses: actions/upload-artifact@v3
       with:
-        name: rpm-build-result
+        name: RPM-build-results
         path: RPMS/
+
