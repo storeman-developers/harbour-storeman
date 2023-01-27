@@ -1,11 +1,14 @@
-* Sun Jul 24 2022 olf <https://github.com/Olf0> 0.3.2
+* Fri Jan 27 2023 olf <Olf0@users.noreply.github.com> - 0.3.3
+- 
+
+* Sun Jul 24 2022 olf <Olf0@users.noreply.github.com> - 0.3.2
 - [Changelog] Final update for v0.3.1 (#353, #330)
 - [harbour-storeman.ts] Fix typo & beautify (#347) 
 - [harbour-storeman.qml] Eliminate last stale link (#354)
 - Enhance comments WRT Qt-ToDos (#357)
 - Enhance spec file, now requires Installer ≥ 1.3.0 (#360) 
 
-* Sun Jul 17 2022 olf <https://github.com/Olf0> 0.3.1
+* Sun Jul 17 2022 olf <Olf0@users.noreply.github.com> - 0.3.1
 - [LICENSE] Update contributors' copyright notices (#313)
 - [AboutPage.qml] Re-introduce donation button (#322)
 - Shorten a few strings (#327, #332, #333)
@@ -13,7 +16,7 @@
 - [AboutPage.qml] Beautify vertical spacing (#340)
 - [AboutPage.qml] Increase icon size (#341)
 
-* Sat May 14 2022 olf <https://github.com/Olf0> 0.3.0
+* Sat May 14 2022 olf <Olf0@users.noreply.github.com> - 0.3.0
 - Add 8 screenshots, plus social media icons (#216, #232, #238) 
 - spec file: Add SailfishOS:Chum metadata (#218, #233)
 - Remove donation links (#224) 
@@ -27,7 +30,7 @@
 - Spec file enancements (#291, #298, #299, #302)
 - Switch to a standard Group: (#304)
 
-* Sun Mar 13 2022 olf <https://github.com/Olf0> 0.2.12
+* Sun Mar 13 2022 olf <Olf0@users.noreply.github.com> - 0.2.12
 - Cease using a repository entry in SSU's global section (#157) by storeman.spec: Do not assign repo in global section (#172)
 - Omit ssu/features.d/mentaljam-obs.ini
 - Delete .gitmodules, because it became superfluous (#171)
@@ -42,13 +45,13 @@
 - ornpm.cpp L28: storemanRepo "mentaljam-obs"→"harbour-storeman-obs" (#183), missed in PR #172.
 - Update translations (de, es, et, fr, ru, sl, sv, tt)
 
-* Sat Sep 18 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.11
+* Sat Sep 18 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.2.11
 - Use the new share API on ≥ SFOS 4.2
 
-* Mon Sep  6 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.10
+* Mon Sep  6 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.2.10
 - Update translations
 
-* Sun Aug 22 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.9
+* Sun Aug 22 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.2.9
 - Add OBS repository for Storeman automatically
 - Support Storeman installer
 - Update translations
@@ -60,20 +63,20 @@
 - Animate removal of backup items
 - Update translations
 
-* Tue Jun  8 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.7
+* Tue Jun  8 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.2.7
 - Update other transactions
 
-* Tue Jun  1 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.6
+* Tue Jun  1 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.2.6
 - Refactoring
 - Add the ability to search for unused repositories
 - Add Slovak (thanks to  Ladislav Hodas)
 - Update other transactions
 
-* Mon Mar 22 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.5
+* Mon Mar 22 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.2.5
 - Fix a regression with duplicate updtes notification
 - Update translations
 
-* Mon Mar 15 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.4
+* Mon Mar 15 2021 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.2.4
 - Add configuration for the My backup utility
 - Search installed packages by unlocalized name
 - Add "Update all" action to the updates notification
@@ -85,25 +88,25 @@
 - Add Estonian (thanks to Priit Jõerüüt)
 - Update other translations and translator model
 
-* Sat Nov 28 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.3
+* Sat Nov 28 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.2.3
 - Add Tatar (thanks to Rustem Abzalov) and update other translations
 - Fix notifications on repo modification
 - Fix again handling of package transactions status
 - Fix and enhance page of local RPM files: show version and description of RPMs, prevent the page from twitching on opening
 
-* Sun Oct  4 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.2-1
+* Sun Oct  4 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.2.2
 - Fix duplicate results in search model
 - Update translations
 - Provide separate builds for SFOS <=3.3 and >=3.4
 
-* Thu Sep 24 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.1-1
+* Thu Sep 24 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.2.1
 - Add links for donations
 - Better cover page with actions to refresh ORN repos and go to installed applications page if updates are available
 - Better handling of state of internet connection
 - Prevent multiple call of refresh slots
 - Update translations
 
-* Tue Sep 22 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.2.0-1
+* Tue Sep 22 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.2.0
 - Use IconButton instead of PushUpMenu to share an app link
 - App page: Move share, thumb-up and star icons to the right
 - Use Silica-provided size formatter (thanks Dmitry Gerasimov)
@@ -113,10 +116,10 @@
 - Update Slovenian (Slovenia)
 - Many internal changes and refactoring of C++/Qt part
 
-* Sat Aug 22 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.12-2
+* Sat Aug 22 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.1.12-2
 - RPM: remove postuninstall scriplet as it breaks upgrading
 
-* Sat Aug 22 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.12-1
+* Sat Aug 22 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.1.12
 - Fix "update cache" hangs after "enable all" sources
 - Rename "User applications" page to "Repository"
 - For publishers: rename "My applications" menu item to "My repository" and move it to main page
@@ -125,17 +128,17 @@
 - Reset recent apps model automatically on refresh timer
 - Update translations
 
-* Wed Aug 19 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.11-1
+* Wed Aug 19 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.1.11
 - Add share menu to apps and comments
 - Use Secrets only if user logged in (don't show secret access pop-up for users who are not logged in)
 - Update translations
 
-* Mon Jun 29 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.10-1
+* Mon Jun 29 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.1.10
 - Store user authorization data with Sailfish Secrets
 - Add an option to store user password with Sailfish Secrets to automatic re-login
 - OrnCommentsModel: Fix some warnings
 
-* Thu Jun 18 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.9-1
+* Thu Jun 18 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.1.9
 - Fix dates in changelog
 - Fix some Clang static analyzer warnings
 - Use #pragma once as include guard
@@ -144,47 +147,47 @@
 - AppPage.qml: Fix changelog URL handling
 - Update translations
 
-* Sat Jan  4 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.8-1
+* Sat Jan  4 2020 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.1.8
 - Open changelog directly in a browser if only contains a link (thanks to Miklós Márton)
 - Add the OrnProxyModel::reset() slot
 - OrnAbstractListModel: Better fetching status
 - Refresh cache after system upgrade
 - Update translations
 
-* Thu Dec 19 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.7-1
+* Thu Dec 19 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.1.7
 - Update translations
 - Add an option to hide particular categories
 - Remove old code
 
-* Thu Aug 1 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.6-1
+* Thu Aug 1 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.1.6
 - Update harbour-storeman-zh_CN.ts
 - Fix detection of OS version (fix issues with SailfishOS 3.1)
 - Fix launching installed applications
 
-* Thu Apr 25 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.5-1
+* Thu Apr 25 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.1.5
 - PackageKit: Use `InstallPackages` instead of `UpdatePackages`
 - Clear page stack on close to prevent some binding errors
 - OrnApplication: Better handling of available versions
 - Update translations
 - A hotfix for SailfishOS 3.0.3 (Hossa)
 
-* Sun Mar 24 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.4-1
+* Sun Mar 24 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.1.4
 - Update translations
 
-* Fri Mar 22 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.3-1
+* Fri Mar 22 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.1.3
 - Update translations
 
-* Mon Feb 25 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.2-1
+* Mon Feb 25 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.1.2
 - Update translations
 
-* Sat Feb 16 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.1-1
+* Sat Feb 16 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.1.1
 - Add an ability to order items of the main page
 - Fix disappearing grid of recent updates
 - Remove old code
 - Refactoring
 - Update translations
 
-* Sun Feb 10 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.1.0-1
+* Sun Feb 10 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.1.0
 - Better handling of empty and deleted packages
 - Allow to select which items to backup (repos, installed apps, bookmarks)
 - Allow to set a backup filename
@@ -203,7 +206,7 @@
 - Update translations
 - Different small fixes and optimizations
 
-* Sun Jan 20 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.33-3
+* Sun Jan 20 2019 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.33-3
 - Fix layout for various devices, orientations and system font sizes (thanks to Matti Viljanen)
 - Hide pulley menu on the comments page when page header is hidden (thanks to Matti Viljanen)
 - ApplicationPage.qml: Add "like" buttun to make rating applications more clear
@@ -213,7 +216,7 @@
 - Update translations
 - Update the list of contributors
 
-* Tue Nov 27 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.32-1
+* Tue Nov 27 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.32
 - SearchPage.qml: Force focus on the search field when is activated with the search action from the cover and when is cleared
 - CommentDelegate.qml: Fix strings formatting
 - Add ability to delete own comments
@@ -225,14 +228,14 @@
 - Update translations
 - Update README.md
 
-* Thu Nov 22 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.31-1
+* Thu Nov 22 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.31
 - Fix comment field was not writable to, if the very first comment and while the device was in landscape orientation
 - Fix hiding of page header of the comments page in landscape orientation
 - Fix rendering of comments
 - Handle apps with no packages
 - Update translations
 
-* Sun Nov 18 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.30-1
+* Sun Nov 18 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.30
 - Clear the comment field only if comment was successfully sent
 - Fixed a bug due to which it was impossible to remove an application if an update was available
 - Comment delegate: fix the user label icon
@@ -240,11 +243,11 @@
 - Installed applications: show both the installed and the available versions for packages with available updates
 - Update translations
 
-* Sat Nov  3 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.29-1
+* Sat Nov  3 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.29
 - Update translations
 - Try to show packages of an author (repository)
 
-* Fri Jul 20 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.28-1
+* Fri Jul 20 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.28
 - Notifications: Don't open a page on tap if it's already openned
 - Force update repos on the update timer reset
 - ApplicationPage.qml: Add the option to reload data
@@ -253,7 +256,7 @@
 - Update Silica usage (use openMenu in ListItem instead of showMenu)
 - Fix some bugs
 
-* Fri Jun  8 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.27-1
+* Fri Jun  8 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.27
 - Launch Storeman as a single instance
 - Don't block Storeman on cache refreshing
 - Better handling of the operations status
@@ -263,11 +266,11 @@
 - Update translations
 - Fallback default locale to en if no translations were loaded
 
-* Wed May 23 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.26-1
+* Wed May 23 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.26
 - Suggest users to enable the Storeman repository
 - Update translations
 
-* Sat May 12 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.25-1
+* Sat May 12 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.25
 - An attempt to fix crashing on actions on repos and apps
 - InstalledAppsPage.qml: make the behavior of the installed app delegate more clear for users
 - InstalledAppsPage.qml: search by title instead of package name
@@ -275,12 +278,12 @@
 - Fix opening Storeman from notifications
 - Update translations
 
-* Thu May 10 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.24-1
+* Thu May 10 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.24
 - Optimize network requests
 - Fix Slovenian translation was not added
 - Update other translations
 
-* Mon May  7 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.23-1
+* Mon May  7 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.23
 - Drop dependency on QtQuick.Layouts
 - Better animations for screenshots of applications
 - Add option to remove all repos
@@ -288,7 +291,7 @@
 - Fix infinite "Refreshing cache" on the very first launch
 - Update translations
 
-* Thu Apr 26 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.22-1
+* Thu Apr 26 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.22
 - Use mapplauncherd instead of policykit rules
 - Find and manage local RPM files
 - Add Dutch (Belgium)
@@ -296,7 +299,7 @@
 - Update translators model
 - Code refactoring
 
-* Mon Mar 19 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.21-1
+* Mon Mar 19 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.21
 - Better handling of PackageKit errors
 - Fix all comments' authors were developers
 - CommentsPage.qml: fix busy indicator
@@ -310,7 +313,7 @@
 - Update translations
 - Clean code
 
-* Sun Mar  4 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.20-1
+* Sun Mar  4 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.20
 - Add settings page
 - Comment field - add the strikeout tag
 - Comments page - show touch hints on the first usage
@@ -322,25 +325,25 @@
 - Refactoring
 - Update translations
 
-* Fri Feb 23 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.19-1
+* Fri Feb 23 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.19
 - Fix #38
 - Fix comment field clearing
 - Update translations
 
-* Thu Feb 22 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.18-1
+* Thu Feb 22 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.18
 - Update comment datetime label every 30s
 - Don't start the updates timer if network is offline
 - Better handling of network state
 - Update translations
 
-* Tue Feb 20 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.17-1
+* Tue Feb 20 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.17
 - Add Portuguese (Brazil), thanks to adrianocolvero
 - Update other translations
 - Installed apps page - fix install all action
 - Show the date of the last update in the app lists
 - Application page - add fade effect for long category names
 
-* Mon Feb 19 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.16-3
+* Mon Feb 19 2018 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.16-3
 - Support for Sailfish OS 2.1.4 Lapuanjoki
 - Open links to OpenRepos apps within Storeman
 - Fix comment editing
@@ -357,7 +360,7 @@
 - Update translations
 - A lot of internal changes
 
-* Tue Sep 26 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.15-1
+* Tue Sep 26 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.15
 - Comments page - show a "Login to comment" button when user isn't authorised
 - Comments page - fix header height
 - Simplify loading of the application page
@@ -367,7 +370,7 @@
 - Application page - open OpenRepos links within Storeman
 - Update translations
 
-* Mon Sep 04 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.14-1
+* Mon Sep 04 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.14
 - Use libsolv to read repodata
 - Fix notification messages
 - Show notifications on PackageKit errors
@@ -378,17 +381,17 @@
 - Update translations
 - Add Basil to the developers list
 
-* Sat Aug 12 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.13-2
+* Sat Aug 12 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.13-2
 - Update translations
 
-* Tue Aug  8 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.13-1
+* Tue Aug  8 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.13
 - Application page - show categories (tap for open the category page)
 - Application page - add opacity ramp effect for app description label
 - Application page - better layout and package status
 - Comment field - when editing a comment put the cursor to the end of the text
 - Comment field - tags panel now is flickable
 - Comment field - use Rich text as format for labels of tag buttons
-- Comment field - add new tag buttons: blockquote and code (refers GH-17)
+- Comment field - add new tag buttons: blockquote and code (refers GH #17)
 - Installed apps page - add menu items to update packages and show in the app list sections if updates are available
 - Repositories page - open the search page for the repo name on click
 - Drop the libzypp dependency and add the zlib dependency
@@ -397,43 +400,43 @@
 - Better handling of working status
 - Update translations
 
-* Fri Aug  4 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.12-1
+* Fri Aug  4 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.12
 - Set edited comments format to Filtered HTML explicitly to avoid corruption of tags
 - Use RichText format and a piece of regex magic for better comments style
 - Comment field - add tags panel
 - Update translations
 
-* Thu Aug  3 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.11-1
+* Thu Aug  3 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.11
 - Enhance links handling in comments - navigate to a comment on clicking an OpenRepos comment link if its in current model
 - Comment field - force use PlainText format
 - Fix fetching list of available packages
 - ApplicationPage - more information about package status and operations
 
-* Wed Aug  2 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.10-1
+* Wed Aug  2 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.10
 - Run enable/disable all repos asynchronously
 - Add local bookmarks for applications
 - Use global OrnZypp instance for repo and package management which should fix some crashes
 - Update translations
 
-* Wed Jul 26 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.9-1
+* Wed Jul 26 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.9
 - Installed apps list - open search page on delegate click
 - Repositories page - fix counting of enabled/disabled repositories
 - Repositories page - show menu for repo items by single tap
 - Installed apps page - loads apps asynchronously
 
-* Tue Jul 25 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.8-1
+* Tue Jul 25 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.8
 - Add authorisation notification action
 - Add enable/disable all repositories functionality
 - Initial support for listing of installed apps
 - Update translations
 - Fix weekdays in changelog
 
-* Fri Jul 21 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.7-2
+* Fri Jul 21 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.7-2
 - Improve comments page appearance
 - Fix comment field jumps when typing in landscape mode
 - Update translations
 
-* Thu Jul 20 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.7-1
+* Thu Jul 20 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.7
 - Fix version comparing
 - Use package update time instead of OpenRepos page update time
 - Add ability to comment, reply to comments and edit comments
@@ -443,7 +446,7 @@
 - Some UI improvements
 - Update translations and add Danish translation
 
-* Tue Jul 11 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.6-1
+* Tue Jul 11 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.6
 - Allow all orintations
 - Do not highlight app information label on short press or flick
 - Better update month label
@@ -452,28 +455,28 @@
 - Add Finnish (Finland)
 - Add Hungarian (Hungary)
 
-* Mon Jul 10 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.5-1
+* Mon Jul 10 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.5
 - Add categories page
 - Update translations (add French, Italian and Spanish translations)
 
-* Sun Jul  9 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.4-1
+* Sun Jul  9 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.4
 - Add about page
 - Add Dutch, German, Polish and Swedish translations (thanks to the community, details are on the Transifex project page)
 - New awesome application icon by Laurent_C <l.chambon@gmail.com>
 - Improve comments list (add link to an original comment for replies, better timestamp label)
 - Update recently updated apps list
 
-* Tue Jul  4 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.3-1
+* Tue Jul  4 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.3
 - Add search page
 - Fix freezing after installation/removing
 - Better information about available app version
 
-* Mon Jul  3 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.2-2
+* Mon Jul  3 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.2-2
 - Install polkit rules to remove Warehouse dependency
 
-* Mon Jul  3 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.2-1
+* Mon Jul  3 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.2
 - Fix typo in the recent apps page
 - Fix not loading when network is not available
 
-* Mon Jul  3 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> 0.0.1-1
+* Mon Jul  3 2017 Petr Tsymbarovich <petr@tsymbarovich.ru> - 0.0.1
 - Initial release
