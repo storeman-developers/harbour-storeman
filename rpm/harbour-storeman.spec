@@ -50,7 +50,7 @@ on your SailfishOS device.
 PackageName: Storeman for SailfishOS
 Type: desktop-application
 Categories:
- - Utilities
+ - Utility
  - System
  - Network
  - Settings
