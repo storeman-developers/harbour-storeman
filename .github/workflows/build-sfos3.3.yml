@@ -1,15 +1,16 @@
-name: CI build - sfos3.3 branch for SFOS 3.3.0.14 (armv7hl, i486) & SFOS 4.0.1.45 (aarch64)
+name: CI - sfos3.3 branch on SFOS 3.3.0 (armv7hl,i486) & SFOS 4.0.1 (aarch64)
 
 
 env:
-  sfos_target: 3.3.0.14
+  RELEASE: 3.3.0.14
 
 on:
   push:
     tags:
       - 'sfos3.3_release/*'
-      - 'sfos3.3_alpha/*'
+      - 'sfos3.3_rc/*'
       - 'sfos3.3_beta/*'
+      - 'sfos3.3_alpha/*'
       - 'sfos3.3_test/*'
       - 'sfos3.3/*'
   pull_request:
@@ -18,34 +19,45 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
-
+    runs-on: ubuntu-22.04
+    env:
+      SEGMENT_DOWNLOAD_TIMEOUT_MINS: 2
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    # Caching Docker images is not ready yet, see 
+    # https://github.com/storeman-developers/harbour-storeman-installer/blob/devel/cache-docker-images_github-ci.md
+    #- name: Cache Docker images of the Sailfish-SDK
+    #  id: cache-sdk
+    #  uses: actions/cache@v3
+    #  with:
+    #    path: $GITHUB_WORKSPACE/…
+    #    key: cache
 
     - name: Prepare
       run: mkdir RPMS
 
-    - name: Build armv7hl
-      uses: coderus/github-sfos-build@old-stable
-      with:
-        release: ${{ env.sfos_target }}
-        arch: armv7hl
-
-    - name: Build i486
-      uses: coderus/github-sfos-build@old-stable
-      with:
-        release: ${{ env.sfos_target }}
-        arch: i486
-    
-    - name: Build aarch64
+    - name: Build aarch64 on 4.0.1.45
       uses: coderus/github-sfos-build@old-stable
       with:
         release: 4.0.1.45
         arch: aarch64
 
-    - name: Upload build result
-      uses: actions/upload-artifact@v2
+    - name: Build armv7hl on ${{ env.RELEASE }}
+      uses: coderus/github-sfos-build@old-stable
       with:
-        name: rpm-build-result
-        path: RPMS
+        release: ${{ env.RELEASE }}
+        arch: armv7hl
+
+    - name: Build i486 on ${{ env.RELEASE }}
+      uses: coderus/github-sfos-build@old-stable
+      with:
+        release: ${{ env.RELEASE }}
+        arch: i486
+
+    - name: Upload build results
+      uses: actions/upload-artifact@v3
+      with:
+        name: RPM-build-results
+        path: RPMS/
