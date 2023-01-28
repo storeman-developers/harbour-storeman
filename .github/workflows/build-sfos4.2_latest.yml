@@ -1,7 +1,8 @@
-name: CI - sfos4.2 branch on SFOS 4.2.0 (aarch64,armv7hl,i486)
+name: CI - sfos4.2 branch on latest SFOS (aarch64,armv7hl,i486)
 
 env:
-  RELEASE: 4.2.0.21
+  RELEASE: 4.4.0.68
+  # See https://hub.docker.com/r/coderus/sailfishos-platform-sdk/tags
 
 on:
   push:
