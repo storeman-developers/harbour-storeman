@@ -3,8 +3,6 @@ name: CI - sfos4.2 branch on latest SFOS (aarch64,armv7hl,i486)
 env:
   LATEST: 4.4.0.68
   # See https://hub.docker.com/r/coderus/sailfishos-platform-sdk/tags
-  RELEASE: ${{ env.LATEST }}
-  SEGMENT_DOWNLOAD_TIMEOUT_MINS: 2
 
 on:
   push:
@@ -22,6 +20,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
+    env:
+      RELEASE: ${{ env.LATEST }}
+      SEGMENT_DOWNLOAD_TIMEOUT_MINS: 2
     steps:
     - name: Checkout
       uses: actions/checkout@v3
