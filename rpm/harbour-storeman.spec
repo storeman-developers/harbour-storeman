@@ -39,6 +39,7 @@ BuildRequires:  qt5-qttools-linguist
 BuildRequires:  desktop-file-utils
 
 Conflicts:      %{name}-installer
+Obsoletes:      %{name}-installer
 
 # This %%description section includes metadata for SailfishOS:Chum, see
 # https://github.com/sailfishos-chum/main/blob/main/Metadata.md
