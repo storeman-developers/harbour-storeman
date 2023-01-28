@@ -1,7 +1,7 @@
-name: CI build - devel branch for SFOS 3.3.0.14 (armv7hl)
+name: CI - devel branch on SFOS 3.3.0 (armv7hl)
 
 env:
-  sfos_target: 3.3.0.14
+  RELEASE: 3.3.0.14
 
 on:
   pull_request:
@@ -10,10 +10,21 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
-
+    runs-on: ubuntu-22.04
+    env:
+      SEGMENT_DOWNLOAD_TIMEOUT_MINS: 1
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    # Caching Docker images is not ready yet, see 
+    # https://github.com/storeman-developers/harbour-storeman-installer/blob/devel/cache-docker-images_github-ci.md
+    #- name: Cache Docker images of the Sailfish-SDK
+    #  id: cache-sdk
+    #  uses: actions/cache@v3
+    #  with:
+    #    path: $GITHUB_WORKSPACE/…
+    #    key: cache
 
     - name: Prepare
       run: mkdir RPMS
@@ -21,11 +32,12 @@ jobs:
     - name: Build armv7hl
       uses: coderus/github-sfos-build@old-stable
       with:
-        release: ${{ env.sfos_target }}
+        release: ${{ env.RELEASE }}
         arch: armv7hl
 
     - name: Upload build result
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
-        name: rpm-build-result
-        path: RPMS
+        name: RPM-build-results
+        path: RPMS/
+
