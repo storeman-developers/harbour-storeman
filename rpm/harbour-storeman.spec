@@ -51,8 +51,8 @@ on your SailfishOS device.
 PackageName: Storeman for SailfishOS
 Type: desktop-application
 Categories:
- - Utility
  - System
+ - Utility
  - Network
  - Settings
  - PackageManager
