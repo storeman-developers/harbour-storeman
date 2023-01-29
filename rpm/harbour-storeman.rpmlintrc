@@ -12,7 +12,7 @@ addFilter('invalid-license')
 # - It extracts strange changelog entries out of Git, if a %%changelog section is used
 addFilter('incoherent-version-in-changelog')
 # - It sometimes re-writes the %version-%release strings of package names, 
-#   when referencing (only) a branch (i.e., not a git tag), e.g.:
+#   when referencing (only) a branch (i.e., not a git tag), for example,
 #   0.5.2-1 to 0.5.2+rebuild1+main.20230129011931.1.g584263a-1.8.1.jolla
 addFilter('filename-too-long-for-joliet')
 
