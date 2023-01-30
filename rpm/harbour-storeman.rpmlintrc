@@ -6,14 +6,14 @@
 
 # On behalf of Jolla's tar_git / SailfishOS-OBS:
 # - It re-writes the DistURL, rendering it inconsistent
-addFilter('invalid-url DistURL')
+addFilter('invalid-url DistURL obs:')
 # - It has a limited list of FLOSS-licenses, most SDPX-IDs are missing
 addFilter('invalid-license')
 # - It extracts strange changelog entries out of Git, if a %%changelog section is used
 addFilter('incoherent-version-in-changelog')
 # - It sometimes re-writes the %version-%release strings of package names, 
 #   when referencing (only) a branch (i.e., not a git tag), for example,
-#   0.5.2-1 to 0.5.2+rebuild1+main.20230129011931.1.g584263a-1.8.1.jolla
+#   0.5.2-1 to 0.5.2+main.20230129011931.1.g584263a-1.8.1.jolla
 addFilter('filename-too-long-for-joliet')
 
 # On behalf of the SailfishOS:Chum specification:
@@ -30,5 +30,5 @@ setBadness('description-line-too-long', 0)
 addFilter('obsolete-not-provided harbour-storeman-installer')
 addFilter('unversioned Obsoletes: Obsoletes:  *harbour-storeman-installer')
 # - This is also how it ought to be
-addFilter('dangerous-command-in-%post[a-z]* rm')
+addFilter('dangerous-command-in-%post[un]* rm')
 
