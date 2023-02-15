@@ -1,4 +1,4 @@
-name: CI - devel branch on SFOS 3.3.0 (armv7hl)
+name: CI - devel branch on SFOS 3.3.0 (i486)
 
 env:
   RELEASE: 3.3.0.14
