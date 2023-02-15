@@ -47,7 +47,7 @@ Obsoletes:      %{name}-installer
 Storeman manages repositories and applications from OpenRepos.net
 on your SailfishOS device.
 
-%if "%{?vendor}" == "chum"
+%if 0%{?_chum}
 PackageName: Storeman for SailfishOS
 Type: desktop-application
 Categories:
