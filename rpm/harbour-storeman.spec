@@ -1,6 +1,6 @@
 Name:           harbour-storeman
 Summary:        OpenRepos client application for SailfishOS
-Version:        0.3.3
+Version:        0.3.4
 Release:        1
 Group:          Applications/System
 License:        MIT
@@ -8,7 +8,7 @@ URL:            https://github.com/storeman-developers/%{name}
 # The "Source0:" line below requires that the value of %%{name} is also the
 # project name at GitHub and the value of %%{version} is also the name of a
 # correspondingly set git-tag.
-Source0:        %{url}/archive/%{version}/%{name}-%{version}.tar.gz
+Source0:        %{url}/archive/sfosX.Y_release/%{version}-%{release}/%{name}-%{version}.tar.gz
 # Note that the rpmlintrc file must be named so according to
 # https://en.opensuse.org/openSUSE:Packaging_checks#Building_Packages_in_spite_of_errors
 Source99:       %{name}.rpmlintrc
@@ -47,7 +47,7 @@ Obsoletes:      %{name}-installer
 Storeman manages repositories and applications from OpenRepos.net
 on your SailfishOS device.
 
-%if "%{?vendor}" == "chum"
+%if 0%{?_chum}
 PackageName: Storeman for SailfishOS
 Type: desktop-application
 Categories:
@@ -75,6 +75,11 @@ Url:
   Bugtracker: %{url}/issues
   Donation: https://openrepos.net/donate
 %endif
+
+# Define (S)RPM compression sensibly, also taking compatibility into account, see
+# https://github.com/sailfishos-patches/patchmanager/pull/417#issuecomment-1429068156
+%define _source_payload w6.gzdio
+%define _binary_payload w2.xzdio
 
 %prep
 %setup -q
@@ -138,4 +143,3 @@ exit 0
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
 %{_datadir}/mapplauncherd/privileges.d/%{name}
 %{_datadir}/dbus-1/services/harbour.storeman.service
-
