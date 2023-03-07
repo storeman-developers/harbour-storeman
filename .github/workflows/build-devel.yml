@@ -1,4 +1,4 @@
-name: CI - devel branch on SFOS 3.3.0 (armv7hl)
+name: CI - devel branch on SFOS 3.3.0 (i486)
 
 env:
   RELEASE: 3.3.0.14
@@ -29,11 +29,11 @@ jobs:
     - name: Prepare
       run: mkdir RPMS
 
-    - name: Build armv7hl
+    - name: Build i486
       uses: coderus/github-sfos-build@old-stable
       with:
         release: ${{ env.RELEASE }}
-        arch: armv7hl
+        arch: i486
 
     - name: Upload build result
       uses: actions/upload-artifact@v3

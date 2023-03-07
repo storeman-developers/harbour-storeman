@@ -1,3 +1,11 @@
+* Tue Mar 07 2023 olf <Olf0@users.noreply.github.com> - 0.3.4
+- Use rpmlintrc file (#394, #396, #397)
+- Update changelog file (#398, #400)
+- Update and improve CI configuration (5f2b2ef, 5ce355d, f2fad82)
+- Add categories to desktop file (e3236de)
+- Use `%if 0%{?_chum}` to enable Chum metadata (200b221)
+- Fix `Source0:` link in spec file (cf83800)
+
 * Sat Jan 28 2023 olf <Olf0@users.noreply.github.com> - 0.3.3
 - Many minor, internal improvements
 

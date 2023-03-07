@@ -1,1 +1,34 @@
+# References: An exceptionally comprehensive example rpmlintrc file
+# https://github.com/coreos/tectonic-rpms/blob/master/rpmlint-config
+# but adheres to the old syntax, not the new TOML one: https://toml.io/en/
+# See also https://fedoraproject.org/wiki/Common_Rpmlint_issues and
+# https://en.opensuse.org/openSUSE:Packaging_checks#Building_Packages_in_spite_of_errors
+
+# On behalf of Jolla's tar_git / SailfishOS-OBS:
+# - It re-writes the DistURL, rendering it inconsistent
+addFilter('invalid-url DistURL obs:')
+# - It has a limited list of FLOSS-licenses, most SDPX-IDs are missing
+addFilter('invalid-license')
+# - It extracts strange changelog entries out of Git, if a %%changelog section is used
+addFilter('incoherent-version-in-changelog')
+# - It sometimes re-writes the %version-%release strings of package names, 
+#   when referencing (only) a branch (i.e., not a git tag), for example,
+#   0.5.2-1 to 0.5.2+main.20230129011931.1.g584263a-1.8.1.jolla
+addFilter('filename-too-long-for-joliet')
+
+# On behalf of the SailfishOS:Chum specification:
+# - which re-uses the spec file tag "Url:"
+addFilter('tag-in-description Url:')
+# - which also re-uses the spec file tag "Icon:"
+addFilter('tag-in-description Icon:')
+# - which makes one easily do
+addFilter('description-line-too-long')
+setBadness('description-line-too-long', 0)
+
+# On our own behalf:
+# - This is how it ought to be
+addFilter('obsolete-not-provided harbour-storeman-installer')
+addFilter('unversioned Obsoletes: Obsoletes:  *harbour-storeman-installer')
+# - This is also how it ought to be
+addFilter('dangerous-command-in-%post[un]* rm')
 
