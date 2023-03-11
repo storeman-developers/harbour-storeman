@@ -1,14 +1,15 @@
 Name:           harbour-storeman
 Summary:        OpenRepos client application for SailfishOS
 Version:        0.3.5
-Release:        1
+Release:        release1
 Group:          Applications/System
 License:        MIT
 URL:            https://github.com/storeman-developers/%{name}
 # The "Source0:" line below requires that the value of %%{name} is also the
-# project name at GitHub and the value of %%{version} is also the name of a
-# correspondingly set git-tag.
-Source0:        %{url}/archive/sfosX.Y_release/%{version}-%{release}/%{name}-%{version}.tar.gz
+# project name at GitHub and the value of sfosX.Y_%%{release}/%%{version} is
+# also the name of a correspondingly set git-tag.  For details and reasons, see
+# https://github.com/storeman-developers/harbour-storeman/wiki/Git-tag-format
+Source0:        %{url}/archive/sfosX.Y_%{release}/%{version}/%{name}-%{version}.tar.gz
 # Note that the rpmlintrc file must be named so according to
 # https://en.opensuse.org/openSUSE:Packaging_checks#Building_Packages_in_spite_of_errors
 Source99:       %{name}.rpmlintrc
@@ -85,7 +86,7 @@ Url:
 %setup -q
 
 %build
-%qmake5 VERSION=%(echo %{version} | grep -Eo '^[0-9]+.[0-9]+.[0-9]+')
+%qmake5 VERSION=%(echo '%{version}' | grep -o '^[0-9][0-9]*.[0-9][0-9]*.[0-9][0-9]*')
 make %{?_smp_mflags}
 
 %install
