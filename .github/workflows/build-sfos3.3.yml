@@ -7,11 +7,11 @@ env:
 on:
   push:
     tags:
-      - 'sfos3.3_release/*'
-      - 'sfos3.3_rc/*'
-      - 'sfos3.3_beta/*'
-      - 'sfos3.3_alpha/*'
-      - 'sfos3.3_test/*'
+      - 'sfos3.3_release*/*'
+      - 'sfos3.3_rc*/*'
+      - 'sfos3.3_beta*/*'
+      - 'sfos3.3_alpha*/*'
+      - 'sfos3.3_test*/*'
       - 'sfos3.3/*'
   pull_request:
     branches:
