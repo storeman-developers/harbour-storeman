@@ -1,15 +1,16 @@
+%global branch sfosX.Y
 Name:           harbour-storeman
 Summary:        OpenRepos client application for SailfishOS
 Version:        0.3.5
-Release:        release1
+Release:        release1_%{branch}
 Group:          Applications/System
 License:        MIT
 URL:            https://github.com/storeman-developers/%{name}
 # The "Source0:" line below requires that the value of %%{name} is also the
-# project name at GitHub and the value of `sfosX.Y~/%%{version}-%%{release}` is
-# also the name of a correspondingly set Git tag.  For details and reasons, see
+# project name at GitHub and the value of `%%{release}/%%{version}` is also
+# the name of a correspondingly set Git tag.  For details and reasons, see
 # https://github.com/storeman-developers/harbour-storeman/wiki/Git-tag-format
-Source0:        %{url}/archive/sfosX.Y~/%{version}-%{release}/%{name}-%{version}.tar.gz
+Source0:        %{url}/archive/%{release}/%{version}/%{name}-%{version}.tar.gz
 # Note that the rpmlintrc file must be named so according to
 # https://en.opensuse.org/openSUSE:Packaging_checks#Building_Packages_in_spite_of_errors
 Source99:       %{name}.rpmlintrc
