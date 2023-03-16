@@ -87,7 +87,7 @@ Url:
 %setup -q
 
 %build
-%qmake5 VERSION=%(echo '%{version}' | grep -o '^[0-9][0-9]*.[0-9][0-9]*.[0-9][0-9]*')
+%qmake5 VERSION=%{version}
 make %{?_smp_mflags}
 
 %install
