@@ -71,7 +71,7 @@
         <translation>Entfernen</translation>
     </message>
     <message id="orn-error">
-        <source>An error occured</source>
+        <source>An error occurred</source>
         <translation>Ein Fehler ist aufgetreten</translation>
     </message>
     <message id="orn-repo-add">
@@ -116,7 +116,7 @@
     </message>
     <message id="orn-dt-format">
         <source>yyyy-MM-dd hh:mm</source>
-        <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
+        <extracomment>Output format for the date labels.  For details visit https://doc.qt.io/qt-5/qdate.html#toString</extracomment>
         <translation>dd.MM.yyyy hh:mm</translation>
     </message>
     <message id="orn-version-noavailable">
@@ -330,20 +330,21 @@
         <translation>Zum Aktualisieren herunterziehen</translation>
     </message>
     <message id="orn-development">
-        <source>Development</source>
-        <translation>Entwicklung</translation>
+        <source>Credits</source>
+        <extracomment>Acknowledgements for contributions - should be a noun</extracomment>
+        <translation>Danksagungen</translation>
     </message>
     <message id="orn-developers">
         <source>Developers</source>
         <translation>Entwickler</translation>
     </message>
     <message id="orn-appicon">
-        <source>Application Icon</source>
+        <source>Application icon</source>
         <translation>Programm-Icon</translation>
     </message>
     <message id="orn-sources">
-        <source>Source Code</source>
-        <translation>Quelltext</translation>
+        <source>Source code &amp; Issue tracker</source>
+        <translation>Quelltext &amp; Fehlernachverfolgung</translation>
     </message>
     <message id="orn-just-now">
         <source>Just now</source>
@@ -528,7 +529,7 @@
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
-        <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
+        <extracomment>A template string for a dependency resolution error.  %1 is a dependency and %2 is a failed package.</extracomment>
         <translation>Nichts stellt %1 bereit, welches von %2 benötigt wird</translation>
     </message>
     <message id="orn-backups">
@@ -996,7 +997,8 @@
     </message>
     <message id="orn-donation">
         <source>Donation</source>
-        <translation>Spenden</translation>
+        <extracomment>Should be a noun</extracomment>
+        <translation>Spende</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
@@ -1008,7 +1010,7 @@
     </message>
     <message id="orn-app-description-full">
         <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues shall be reported preferably at GitHub or alternatively at OpenRepos (use the buttons below).&lt;/p&gt;</source>
-        <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software).</extracomment>
+        <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software), just keep it as &quot;(FLOSS)&quot;.</extracomment>
         <translation>&lt;p&gt;OpenRepos-Client App für SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman ist Freie Software (FLOSS), die unter den Bedingungen der &lt;a href=&apos;%1&apos;&gt;MIT-Lizenz&lt;/a&gt; verbreitet wird.&lt;/p&gt;&lt;p&gt;Fehler sollen vorzugsweise auf GitHub oder alternativ auf OpenRepos gemeldet werden (verwende dafür die untenstehenden Schaltflächen).&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
@@ -1049,11 +1051,11 @@
     </message>
     <message id="orn-check-for-self-updates-switch">
         <source>Check for self-updates</source>
-        <translation>Nach Storeman Aktualisierungen suchen</translation>
+        <translation>Nach Aktualisierungen von Storeman suchen</translation>
     </message>
     <message id="orn-check-for-self-updates-descr">
         <source>Enable the Storeman OBS repository to check for Storeman updates</source>
-        <translation>Storeman OBS Quelle zur Suche nach Aktualisierungen</translation>
+        <translation>Storeman OBS Quelle zur Suche nach Aktualisierungen einschalten</translation>
     </message>
     <message id="orn-storeman-repo-name">
         <source>Storeman OBS Repository</source>
