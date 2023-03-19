@@ -73,8 +73,8 @@
         <translation>Removing</translation>
     </message>
     <message id="orn-error">
-        <source>An error occured</source>
-        <translation>An error occured</translation>
+        <source>An error occurred</source>
+        <translation>An error occurred</translation>
     </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
