@@ -252,7 +252,7 @@ ApplicationWindow
         id: errorNotification
         appName: applicationDisplayName
         appIcon: applicationIcon
-        //% "An error occured"
+        //% "An error occurred"
         summary: qsTrId("orn-error")
         previewBody: qsTrId(_showDetailsId)
         remoteActions: [ {
