@@ -22,3 +22,5 @@ Storeman tries to automatically load a translation file according to your system
 ```
 export LANG=sv; harbour-storeman
 ```
+
+<sub>When updating this README, please also update [its counterpart for the SailfishOS:Chum GUI app](https://github.com/sailfishos-chum/sailfishos-chum-gui//blob/main/translations/README.md)</sub>
