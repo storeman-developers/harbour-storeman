@@ -1,10 +1,10 @@
 # Translations (l10n / i18n)
 
-You can help localising Storeman to your language using [Transifex](https://www.transifex.com/mentaljam/harbour-storeman) or [Qt Linguist](https://doc.qt.io/qt-5/qtlinguist-index.html).
+You can help localising Storeman to your language using [Transifex](https://app.transifex.com/mentaljam/harbour-storeman) or [Qt Linguist](https://doc.qt.io/qt-5/qtlinguist-index.html).
 
 Note that for Storeman principally translations designated with a country code only (e.g., `pt`) shall be created and maintained.  Only if a complete and well maintained translation for the sole country code exists, a country specific variant with a locale will be accepted (e.g., `nl_BE`).
 
-[Transifex](https://www.transifex.com/mentaljam/harbour-storeman) is the preferred way of submitting translations.  Please do not send pull requests (PRs) with translations directly to GitHub, if you have a Transifex account.
+[Transifex](https://app.transifex.com/mentaljam/harbour-storeman) is the preferred way of submitting translations.  Please do not send pull requests (PRs) with translations directly to GitHub, if you have a Transifex account.
 
 If you do not want to use Atlassian's Transifex, alternatives are [Qt Linguist](https://doc.qt.io/qt-5/linguist-translators.html) or to perform this manually, which is tediously and error prone, hence only suitable for small changes.  The resulting changes must be submitted as a pull request.
 
