@@ -3,10 +3,10 @@ Name:           harbour-storeman
 Summary:        OpenRepos client application for SailfishOS
 Version:        0.3.5
 Release:        release1_%{branch}
-Vendor:         meego
 Group:          Applications/System
 License:        MIT
 URL:            https://github.com/storeman-developers/%{name}
+Vendor:         meego
 # The "Source0:" line below requires that the value of %%{name} is also the
 # project name at GitHub and the value of `%%{release}/%%{version}` is also
 # the name of a correspondingly set Git tag.  For details and reasons, see
