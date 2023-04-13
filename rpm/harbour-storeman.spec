@@ -51,7 +51,7 @@ Storeman manages repositories and applications from OpenRepos.net
 on your SailfishOS device.
 
 %if 0%{?_chum}
-PackageName: Storeman for SailfishOS
+Title: Storeman for SailfishOS
 Type: desktop-application
 Categories:
  - System
@@ -62,7 +62,7 @@ Categories:
 DeveloperName: Storeman developers (mentaljam)
 Custom:
   Repo: %{url}
-Icon: %{url}/raw/master/icons/harbour-storeman.svg
+PackageIcon: %{url}/raw/master/icons/harbour-storeman.svg
 Screenshots:
  - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-01.png
  - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-02.png
@@ -72,7 +72,7 @@ Screenshots:
  - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-07.png
  - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-08.png
  - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-09.png
-Url:
+Links:
   Homepage: https://openrepos.net/content/olf/storeman-installer
   Help: %{url}/issues
   Bugtracker: %{url}/issues
