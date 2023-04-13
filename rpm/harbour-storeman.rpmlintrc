@@ -16,12 +16,8 @@ addFilter('incoherent-version-in-changelog')
 #   0.5.2-1 to 0.5.2+main.20230129011931.1.g584263a-1.8.1.jolla
 addFilter('filename-too-long-for-joliet')
 
-# On behalf of the SailfishOS:Chum specification:
-# - which re-uses the spec file tag "Url:"
-addFilter('tag-in-description Url:')
-# - which also re-uses the spec file tag "Icon:"
-addFilter('tag-in-description Icon:')
-# - which makes one easily do
+# On behalf of the SailfishOS:Chum metadata definition:
+# - which often forces one to do
 addFilter('description-line-too-long')
 setBadness('description-line-too-long', 0)
 
