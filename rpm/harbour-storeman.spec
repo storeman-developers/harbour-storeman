@@ -1,14 +1,17 @@
+%global branch sfosX.Y
 Name:           harbour-storeman
 Summary:        OpenRepos client application for SailfishOS
-Version:        0.3.4
-Release:        1
+Version:        0.3.5
+Release:        release1_%{branch}
 Group:          Applications/System
 License:        MIT
 URL:            https://github.com/storeman-developers/%{name}
+Vendor:         meego
 # The "Source0:" line below requires that the value of %%{name} is also the
-# project name at GitHub and the value of %%{version} is also the name of a
-# correspondingly set git-tag.
-Source0:        %{url}/archive/sfosX.Y_release/%{version}-%{release}/%{name}-%{version}.tar.gz
+# project name at GitHub and the value of `%%{release}/%%{version}` is also
+# the name of a correspondingly set Git tag.  For details and reasons, see
+# https://github.com/storeman-developers/harbour-storeman/wiki/Git-tag-format
+Source0:        %{url}/archive/%{release}/%{version}/%{name}-%{version}.tar.gz
 # Note that the rpmlintrc file must be named so according to
 # https://en.opensuse.org/openSUSE:Packaging_checks#Building_Packages_in_spite_of_errors
 Source99:       %{name}.rpmlintrc
@@ -48,7 +51,7 @@ Storeman manages repositories and applications from OpenRepos.net
 on your SailfishOS device.
 
 %if 0%{?_chum}
-PackageName: Storeman for SailfishOS
+Title: Storeman for SailfishOS
 Type: desktop-application
 Categories:
  - System
@@ -59,7 +62,7 @@ Categories:
 DeveloperName: Storeman developers (mentaljam)
 Custom:
   Repo: %{url}
-Icon: %{url}/raw/master/icons/harbour-storeman.svg
+PackageIcon: %{url}/raw/master/icons/harbour-storeman.svg
 Screenshots:
  - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-01.png
  - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-02.png
@@ -69,7 +72,7 @@ Screenshots:
  - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-07.png
  - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-08.png
  - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-09.png
-Url:
+Links:
   Homepage: https://openrepos.net/content/olf/storeman-installer
   Help: %{url}/issues
   Bugtracker: %{url}/issues
@@ -85,7 +88,7 @@ Url:
 %setup -q
 
 %build
-%qmake5 VERSION=%(echo %{version} | grep -Eo '^[0-9]+.[0-9]+.[0-9]+')
+%qmake5 VERSION=%(echo '%{version}' | grep -o '^[0-9][0-9]*.[0-9][0-9]*.[0-9][0-9]*')
 make %{?_smp_mflags}
 
 %install
