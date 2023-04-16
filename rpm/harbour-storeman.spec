@@ -1,4 +1,4 @@
-%global branch sfosX.Y
+%global branch sfos4.2
 Name:           harbour-storeman
 Summary:        OpenRepos client application for SailfishOS
 Version:        0.3.5
