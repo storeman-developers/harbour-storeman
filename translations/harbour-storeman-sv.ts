@@ -71,7 +71,7 @@
         <translation>Tar bort</translation>
     </message>
     <message id="orn-error">
-        <source>An error occured</source>
+        <source>An error occurred</source>
         <translation>Ett fel inträffade</translation>
     </message>
     <message id="orn-repo-add">
@@ -116,7 +116,7 @@
     </message>
     <message id="orn-dt-format">
         <source>yyyy-MM-dd hh:mm</source>
-        <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
+        <extracomment>Output format for the date labels.  For details visit https://doc.qt.io/qt-5/qdate.html#toString</extracomment>
         <translation>yyyy-MM-dd hh:mm</translation>
     </message>
     <message id="orn-version-noavailable">
@@ -330,20 +330,21 @@
         <translation>Dra neråt för att uppdatera</translation>
     </message>
     <message id="orn-development">
-        <source>Development</source>
-        <translation>Utveckling</translation>
+        <source>Credits</source>
+        <extracomment>Acknowledgements for contributions - should be a noun</extracomment>
+        <translation>Erkännanden</translation>
     </message>
     <message id="orn-developers">
         <source>Developers</source>
         <translation>Utvecklare</translation>
     </message>
     <message id="orn-appicon">
-        <source>Application Icon</source>
+        <source>Application icon</source>
         <translation>Programikon</translation>
     </message>
     <message id="orn-sources">
-        <source>Source Code</source>
-        <translation>Källkod</translation>
+        <source>Source code &amp; Issue tracker</source>
+        <translation>Källkod &amp; ärendehanterare</translation>
     </message>
     <message id="orn-just-now">
         <source>Just now</source>
@@ -528,7 +529,7 @@
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
-        <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
+        <extracomment>A template string for a dependency resolution error.  %1 is a dependency and %2 is a failed package.</extracomment>
         <translation>Inget tillhandahåller %1,  som behövs av %2</translation>
     </message>
     <message id="orn-backups">
@@ -996,7 +997,8 @@
     </message>
     <message id="orn-donation">
         <source>Donation</source>
-        <translation>Donera</translation>
+        <extracomment>Should be a noun</extracomment>
+        <translation>Donation</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
@@ -1008,8 +1010,8 @@
     </message>
     <message id="orn-app-description-full">
         <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues shall be reported preferably at GitHub or alternatively at OpenRepos (use the buttons below).&lt;/p&gt;</source>
-        <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software).</extracomment>
-        <translation>&lt;p&gt;OpenRepos-klient för SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Detta är öppen källkodsmjukvara som distribueras under villkoren för &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Du kan rapportera problem på GitHub eller OpenRepos (använd knapparna nedan).&lt;/p&gt;</translation>
+        <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software), just keep it as &quot;(FLOSS)&quot;.</extracomment>
+        <translation>&lt;p&gt;OpenRepos-klient för SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman är fri mjukvara (FLOSS) som distribueras under villkoren för &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Problem skall företrädesvis rapporteras på GitHub eller alternativt på OpenRepos (använd knapparna nedan).&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>
@@ -1041,7 +1043,7 @@
     </message>
     <message id="orn-unused-repos-text">
         <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Det finns inga installerade paket från dessa förråd.&lt;/p&gt; &lt;p&gt;Vill du ta bort dem nu?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Det finns inga installerade paket från dessa förråd.&lt;/p&gt;&lt;p&gt;Vill du ta bort dem nu?&lt;/p&gt;</translation>
     </message>
     <message id="orn-updates-check-interval-minimum">
         <source>At least 10 minutes</source>

@@ -7,11 +7,11 @@ env:
 on:
   push:
     tags:
-      - 'sfos4.2_release/*'
-      - 'sfos4.2_rc/*'
-      - 'sfos4.2_beta/*'
-      - 'sfos4.2_alpha/*'
-      - 'sfos4.2_test/*'
+      - 'release*_sfos4.2/*'
+      - 'rc*_sfos4.2/*'
+      - 'beta*_sfos4.2/*'
+      - 'alpha*_sfos4.2/*'
+      - 'test*_sfos4.2/*'
       - 'sfos4.2/*'
   pull_request:
     branches:
