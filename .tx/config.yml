@@ -1,7 +1,12 @@
 git:
+  # Basic setup guide for GitHub:
+  # https://help.transifex.com/en/articles/6265125-github-via-transifex-ui
   filters:
     - filter_type: file
+      # All supported i18n types (hard to find): https://docs.transifex.com/formats
       file_format: QT
       source_language: en
       source_file: translations/harbour-storeman.ts
+      # Path expression to translation files, must be quoted in single-quotes
+      # and must contain <lang> placeholder:
       translation_files_expression: 'translations/harbour-storeman-<lang>.ts'
