@@ -1,6 +1,12 @@
-* Sun Mar 12 2023 olf <Olf0@users.noreply.github.com> - 0.3.5
-- Alter git tag format for releases, see https://github.com/storeman-developers/harbour-storeman/wiki/Git-tag-format
-- 
+* Sun Apr 23 2023 olf <Olf0@users.noreply.github.com> - 0.3.5
+- Alter git tag format for releases (c504524, bb0da90, c2e9488, a51b66f, 27a608e, 82c81f8, dd6c643, e197605, 5914b1a, ab66732, 8d5b933), see https://github.com/storeman-developers/harbour-storeman/wiki/Git-tag-format
+- Add comments to Transifex configuration file `.tx/config.yml` (dd97396)
+- Fix typo: occured→occurred (#407)
+- Update translations: sv (#408), sl (#409), de (#410), et (#411), fr (#412), sk (#413)
+- Improve README.md etc.
+- Migrate Transifex's DNS name (59cee1a), see  https://help.transifex.com/en/articles/7171815-web-application-s-domain-change
+- Set Vendor: to fix half of issue #406 (e3078c8, 34284c3)
+- Adapt to chum-metadata v1 (#414)
 
 * Tue Mar 07 2023 olf <Olf0@users.noreply.github.com> - 0.3.4
 - Use rpmlintrc file (#394, #396, #397)
