@@ -7,6 +7,7 @@
 - Migrate Transifex's DNS name (59cee1a), see https://help.transifex.com/en/articles/7171815-web-application-s-domain-change
 - Set `Vendor:` to fix half of issue #406 (e3078c8, 34284c3)
 - Adapt to chum-metadata v1 (#414)
+- Pick a proper `Group:` tag (ccd8892)
 
 * Tue Mar 07 2023 olf <Olf0@users.noreply.github.com> - 0.3.4
 - Use rpmlintrc file (#394, #396, #397)
