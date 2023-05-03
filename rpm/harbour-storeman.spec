@@ -3,7 +3,9 @@ Name:           harbour-storeman
 Summary:        OpenRepos client application for SailfishOS
 Version:        0.3.5
 Release:        release1_%{branch}
-Group:          Applications/System
+# The Group tag should comprise one of the groups listed here:
+# https://github.com/mer-tools/spectacle/blob/master/data/GROUPS
+Group:          Software Management/Package Manager
 License:        MIT
 URL:            https://github.com/storeman-developers/%{name}
 Vendor:         meego
