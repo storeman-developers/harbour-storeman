@@ -8,6 +8,8 @@ Release:        release1_%{branch}
 Group:          Software Management/Package Manager
 License:        MIT
 URL:            https://github.com/storeman-developers/%{name}
+# Altering the `Vendor:` field breaks the update path on SailfishOS, see
+# https://en.opensuse.org/SDB:Vendor_change_update#Disabling_Vendor_stickiness
 Vendor:         meego
 # The "Source0:" line below requires that the value of %%{name} is also the
 # project name at GitHub and the value of `%%{release}/%%{version}` is also
