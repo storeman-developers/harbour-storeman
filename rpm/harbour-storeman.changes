@@ -1,3 +1,6 @@
+* Sun May 06 2023 olf <Olf0@users.noreply.github.com> - 0.3.6
+- Foo
+
 * Wed May 03 2023 olf <Olf0@users.noreply.github.com> - 0.3.5
 - Alter git tag format for releases (c504524, bb0da90, c2e9488, a51b66f, 27a608e, 82c81f8, dd6c643, e197605, 5914b1a, ab66732, 8d5b933), see https://github.com/storeman-developers/harbour-storeman/wiki/Git-tag-format
 - Add comments to Transifex configuration file `.tx/config.yml` (dd97396)
