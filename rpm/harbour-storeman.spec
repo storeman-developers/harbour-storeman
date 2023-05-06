@@ -2,7 +2,7 @@
 Name:           harbour-storeman
 Summary:        OpenRepos client application for SailfishOS
 # The <version> tag must adhere to semantic versioning: Among multiple other
-# reasons due to its use for `qmake5` in line 103.  See https://semver.org/
+# reasons due to its use for `qmake5` in line 102.  See https://semver.org/
 Version:        0.3.5
 # The <release> tag comprises one of {alpha,beta,rc,release} postfixed with a
 # natural number greater or equal to 1 (e.g., "beta3") and may additonally be
@@ -12,8 +12,7 @@ Version:        0.3.5
 # used for any published version, but for the purpose of testing infrastructure
 # other nonsensual identifiers as `adud` may be used, which do *not* trigger a
 # build at GitHub and OBS, when configured accordingly; mind the sorting
-# (`adud` < `alpha`).
-# For details and reasons, see
+# (`adud` < `alpha`).  For details and reasons, see
 # https://github.com/storeman-developers/harbour-storeman/wiki/Git-tag-format
 Release:        release1_%{branch}
 Group:          Applications/System
