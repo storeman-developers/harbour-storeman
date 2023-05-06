@@ -5,7 +5,7 @@ Summary:        OpenRepos client application for SailfishOS
 # reasons due to its use for `qmake5` in line 102.  See https://semver.org/
 Version:        0.3.5
 # The <release> tag comprises one of {alpha,beta,rc,release} postfixed with a
-# natural number greater or equal to 1 (e.g., "beta3") and may additonally be
+# natural number greater or equal to 1 (e.g., "beta3") and may additionally be
 # postfixed with a plus character ("+"), the name of the packager and a release
 # number chosen by her (e.g., "rc2+jane4").  `{alpha|beta|rc|release}`
 # indicates the expected status of the software.  No other identifiers shall be
