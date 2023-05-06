@@ -1,10 +1,10 @@
 %global branch sfosX.Y
 Name:           harbour-storeman
 Summary:        OpenRepos client application for SailfishOS
-# The <version> tag must adhere to semantic versioning: among multiple other
+# The <version> tag must adhere to semantic versioning: Among multiple other
 # reasons due to its use for `qmake5` in line 103.  See https://semver.org/
 Version:        0.3.5
-# The <release> tag is comprised of {alpha,beta,rc,release} postfixed with a
+# The <release> tag comprises one of {alpha,beta,rc,release} postfixed with a
 # natural number greater or equal to 1 (e.g., "beta3") and may additonally be
 # postfixed with a plus character ("+"), the name of the packager and a release
 # number chosen by her (e.g., "rc2+jane4").  `{alpha|beta|rc|release}`
