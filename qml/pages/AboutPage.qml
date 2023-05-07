@@ -51,7 +51,7 @@ Page {
                 horizontalAlignment: Qt.AlignHCenter
                 //% "<p>OpenRepos client application for SailfishOS<br />&nbsp;</p>"
                 //% "<p>Storeman is Free Software (FLOSS), distributed under the terms of the <a href='%1'>MIT&nbsp;license</a>.<br />&nbsp;</p>"
-                //% "<p>Any issues (bug reports, feature suggestions, help inquiries etc.) shall be reported at GitHub (you may use the button below).</p>"
+                //% "<p>Any issues (bug reports, feature suggestions, help inquiries etc.) shall be filed at GitHub (you may use the button below).</p>"
                 text: qsTrId("orn-app-description-full").arg("https://github.com/storeman-developers/harbour-storeman/raw/master/LICENSE")
                 onLinkActivated: Qt.openUrlExternally(link)
             }
