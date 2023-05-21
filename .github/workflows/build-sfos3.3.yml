@@ -11,7 +11,6 @@ on:
       - 'rc*_sfos3.3/*'
       - 'beta*_sfos3.3/*'
       - 'alpha*_sfos3.3/*'
-      - 'test*_sfos3.3/*'
       - 'sfos3.3/*'
   pull_request:
     branches:
