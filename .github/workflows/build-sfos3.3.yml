@@ -1,6 +1,5 @@
 name: CI - sfos3.3 branch on SFOS 3.3.0 (armv7hl,i486) & SFOS 4.0.1 (aarch64)
 
-
 env:
   RELEASE: 3.3.0.14
 
