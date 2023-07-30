@@ -6,7 +6,7 @@ OpenRepos client application for SailfishOS
 
 ## Feature set
 
-### Working with [OpenRepos.net](https://openrepos.net/)
+### Working with [OpenRepos](https://openrepos.net/)
 #### Discover applications
 - Search for applications
 - List recently updated applications
