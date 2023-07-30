@@ -1,13 +1,27 @@
 %global branch sfos3.3
 Name:           harbour-storeman
 Summary:        OpenRepos client application for SailfishOS
-Version:        0.3.5
+# The <version> tag must adhere to semantic versioning: Among multiple other
+# reasons due to its use for `qmake5` in line 102.  See https://semver.org/
+Version:        0.3.6
+# The <release> tag comprises one of {alpha,beta,rc,release} postfixed with a
+# natural number greater or equal to 1 (e.g., "beta3") and may additionally be
+# postfixed with a plus character ("+"), the name of the packager and a release
+# number chosen by her (e.g., "rc2+jane4").  `{alpha|beta|rc|release}`
+# indicates the expected status of the software.  No other identifiers shall be
+# used for any published version, but for the purpose of testing infrastructure
+# other nonsensual identifiers as `adud` may be used, which do *not* trigger a
+# build at GitHub and OBS, when configured accordingly; mind the sorting
+# (`adud` < `alpha`).  For details and reasons, see
+# https://github.com/storeman-developers/harbour-storeman/wiki/Git-tag-format
 Release:        release1_%{branch}
 # The Group tag should comprise one of the groups listed here:
 # https://github.com/mer-tools/spectacle/blob/master/data/GROUPS
 Group:          Software Management/Package Manager
 License:        MIT
 URL:            https://github.com/storeman-developers/%{name}
+# Altering the `Vendor:` field breaks the update path on SailfishOS, see
+# https://en.opensuse.org/SDB:Vendor_change_update#Disabling_Vendor_stickiness
 Vendor:         meego
 # The "Source0:" line below requires that the value of %%{name} is also the
 # project name at GitHub and the value of `%%{release}/%%{version}` is also
@@ -90,7 +104,7 @@ Links:
 %setup -q
 
 %build
-%qmake5 VERSION=%(echo '%{version}' | grep -o '^[0-9][0-9]*.[0-9][0-9]*.[0-9][0-9]*')
+%qmake5 VERSION=%{version}
 make %{?_smp_mflags}
 
 %install
