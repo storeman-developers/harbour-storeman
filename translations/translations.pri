@@ -30,7 +30,7 @@ qm.CONFIG   = target_predeps no_link
 
 QMAKE_EXTRA_COMPILERS += qm
 
-translations.files += $$OUT_PWD/translations/*.qm
+translations.files += translations/*.qm
 translations.path  = $$PREFIX/share/$$TARGET
 
 INSTALLS += translations
