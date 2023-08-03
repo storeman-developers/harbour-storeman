@@ -1,7 +1,7 @@
 * Sun Aug 06 2023 olf <Olf0@users.noreply.github.com> - 0.3.7
 - 
 
-* Wed Jun 21 2023 olf <Olf0@users.noreply.github.com> - 0.3.6
+* Sun Jul 30 2023 olf <Olf0@users.noreply.github.com> - 0.3.6
 - Omit apparently superfluous processing of `%{version}` for qmake5 in the spec file (#405)
 - Some minor documentation and strings improvements (#428, #429, #430)
 - Cease CI building on git tags matching `test*_` (#430)
