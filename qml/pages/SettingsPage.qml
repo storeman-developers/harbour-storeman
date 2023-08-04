@@ -94,7 +94,7 @@ Page {
                 id: searchUnusedSwitch
                 //% "Search for unused repositories"
                 text: qsTrId("orn-unused-repos-switch")
-                //% "Search for unused repositories after removing packages.
+                //% "Search for unused repositories after removing packages."
                 description: qsTrId("orn-unused-repos-switch-descr")
                 checked: Storeman.searchUnusedRepos
             }

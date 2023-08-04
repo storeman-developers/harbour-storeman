@@ -2,7 +2,7 @@
 Name:           harbour-storeman
 Summary:        OpenRepos client application for SailfishOS
 # The <version> tag must adhere to semantic versioning: Among multiple other
-# reasons due to its use for `qmake5` in line 102.  See https://semver.org/
+# reasons due to its use for `qmake5` in line 107.  See https://semver.org/
 Version:        0.3.6
 # The <release> tag comprises one of {alpha,beta,rc,release} postfixed with a
 # natural number greater or equal to 1 (e.g., "beta3") and may additionally be
@@ -14,7 +14,7 @@ Version:        0.3.6
 # build at GitHub and OBS, when configured accordingly; mind the sorting
 # (`adud` < `alpha`).  For details and reasons, see
 # https://github.com/storeman-developers/harbour-storeman/wiki/Git-tag-format
-Release:        release1_%{branch}
+Release:        release2_%{branch}
 # The Group tag should comprise one of the groups listed here:
 # https://github.com/mer-tools/spectacle/blob/master/data/GROUPS
 Group:          Software Management/Package Manager
