@@ -25,7 +25,7 @@ export LANG=sv; harbour-storeman
 
 ### Updating the source `.ts` file with source strings from source code 
 
-Developers and release managers can use the `lupdate` process, either from [within Qt Linguist](https://doc.qt.io/qtcreator/creator-editor-external.html) or directly [at the command line](https://doc.qt.io/qt-5/linguist-manager.html), or tediously perform this manually, which hence is only suitable for small changes.
+Developers and release managers can use the `lupdate` process, either from [within Qt Linguist](https://doc.qt.io/qtcreator/creator-editor-external.html) or directly [at the command line](https://doc.qt.io/qt-5/linguist-manager.html) (mind to [include all files with translatable strings](https://github.com/storeman-developers/harbour-storeman/pull/431#issuecomment-1659024529), e.g., by `lupdate qml/ src/ *.desktop -ts translations/harbour-storeman.ts`), or tediously perform this manually, which hence is only suitable for small changes.
 
 ---------------------------------------------
 
