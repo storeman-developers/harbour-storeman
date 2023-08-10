@@ -69,7 +69,7 @@ ApplicationWindow
             req.onreadystatechange = function() {
                 if (req.readyState === XMLHttpRequest.DONE) {
                     if (req.status === 200) {
-                        // Check if the headers contain an id link
+                        // Check if the headers contain an ID link
                         match = /<\/node\/(\d*)>.*/.exec(req.getResponseHeader("link"))
                         if (match) {
                             appid = match[1]
