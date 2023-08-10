@@ -64,7 +64,7 @@ ApplicationWindow
             }
             _processingLink = link
             var req = new XMLHttpRequest()
-            // Prepare a http request to obtain the headers
+            // Prepare an HTTP request to obtain the headers
             req.open("HEAD", link, true)
             req.onreadystatechange = function() {
                 if (req.readyState === XMLHttpRequest.DONE) {
