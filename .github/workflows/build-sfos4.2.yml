@@ -59,3 +59,4 @@ jobs:
       with:
         name: RPM-build-results_sfos4.2.0+
         path: RPMS/
+
