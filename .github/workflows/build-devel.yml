@@ -38,6 +38,6 @@ jobs:
     - name: Upload build result
       uses: actions/upload-artifact@v3
       with:
-        name: RPM-build-results
+        name: RPM-build-results_devel-for-i486-on-sfos3.3.0
         path: RPMS/
 
