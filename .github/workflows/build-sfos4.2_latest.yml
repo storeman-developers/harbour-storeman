@@ -60,3 +60,4 @@ jobs:
       with:
         name: RPM-build-results_sfos-latest
         path: RPMS/
+
