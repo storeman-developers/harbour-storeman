@@ -2,8 +2,6 @@ name: CI - devel branch on SFOS 3.3.0 (i486)
 
 env:
   RELEASE: 3.3.0.14
-  # Do not wait up to the default of 10 minutes for network timeouts in a workflow which runs ca. 5 minutes
-  SEGMENT_DOWNLOAD_TIMEOUT_MINS: 1
 
 on:
   pull_request:
@@ -27,6 +25,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-22.04
+    env:
+      # Do not wait up to the default of 10 minutes for network timeouts in a workflow which runs ca. 5 minutes
+      SEGMENT_DOWNLOAD_TIMEOUT_MINS: 1
     steps:
     - name: Checkout
       uses: actions/checkout@v3
@@ -61,3 +62,4 @@ jobs:
 #branding:  # "Invalid workflow file: Unexpected value 'branding'"; maybe action MUST be located in '/' or the name MUST be action.yml or both, see e.g., https://github.com/actions/cache/blob/main/action.yml#L37
 #  icon: 'gift'
 #  color: 'purple'
+
