@@ -15,10 +15,23 @@ on:
     branches:
       - sfos4.2
 
+defaults:
+  run:
+    # Note thas 'bash' provides -o pipefail, in contrast to the default (i.e., unspecified, which also uses bash) or 'sh',
+    # see https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsshell
+    shell: sh
+
+# See, e.g.: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-only-cancel-in-progress-jobs-or-runs-for-the-current-workflow
+concurrency:
+  group: ci-${{ github.ref_name }}
+  # 'false' (default) allows for two concurrent runs, one executing and one freshly enqueued; 'true' for only one; no 'concurrency:' defined for multiple.
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-22.04
     env:
+      # Do not wait up to the default of 10 minutes for network timeouts in a workflow which runs ca. 10 minutes.
       SEGMENT_DOWNLOAD_TIMEOUT_MINS: 2
     steps:
     - name: Checkout
@@ -59,4 +72,10 @@ jobs:
       with:
         name: RPM-build-results_sfos4.2.0+
         path: RPMS/
+
+# Just for fun, see https://feathericons.com/ and
+# https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#branding
+#branding:  # "Invalid workflow file: Unexpected value 'branding'"; maybe action MUST be located in '/' or the name MUST be action.yml or both, see e.g., https://github.com/actions/cache/blob/main/action.yml#L37
+#  icon: 'gift'
+#  color: 'purple'
 
