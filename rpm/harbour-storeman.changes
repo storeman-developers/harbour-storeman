@@ -1,8 +1,12 @@
-* Sun Jul 30 2023 olf <Olf0@users.noreply.github.com> - 0.3.6
+* Mon Sep 11 2023 olf <Olf0@users.noreply.github.com> - 0.3.7
+- [harbour-storeman.ts] PRs #428 & #429 missed to adapt the base .ts file (#442)
+- Update some language specific .ts files according to PR #442 (4de442b, b129474, 7004990, b001953, 14c8f85, c390d44)
+
+* Sun Aug 06 2023 olf <Olf0@users.noreply.github.com> - 0.3.6
 - Omit apparently superfluous processing of `%{version}` for qmake5 in the spec file (#405)
 - Some minor documentation and strings improvements (#428, #429, #430)
 - Cease CI building on git tags matching `test*_` (#430)
-- Trim packaging by omitting i18n files which are superfluous in the final RPM (#431; detected, analysed and implemented by @nephros)
+- Trim packaging by omitting i18n files which are superfluous in the final RPM (#431; detected, analysed, implemented and fixed by @nephros)
 
 * Wed May 03 2023 olf <Olf0@users.noreply.github.com> - 0.3.5
 - Alter git tag format for releases (c504524, bb0da90, c2e9488, a51b66f, 27a608e, 82c81f8, dd6c643, e197605, 5914b1a, ab66732, 8d5b933), see https://github.com/storeman-developers/harbour-storeman/wiki/Git-tag-format
