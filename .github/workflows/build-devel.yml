@@ -2,11 +2,27 @@ name: CI - devel branch on SFOS 3.3.0 (i486)
 
 env:
   RELEASE: 3.3.0.14
+  # Do not wait up to the default of 10 minutes for network timeouts in a workflow which runs ca. 5 minutes
+  SEGMENT_DOWNLOAD_TIMEOUT_MINS: 1
 
 on:
   pull_request:
     branches:
       - devel
+  # Allows to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+defaults:
+  run:
+    # Note thas 'bash' provides -o pipefail, in contrast to the default (i.e., unspecified, which also uses bash) or 'sh',
+    # see https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsshell
+    shell: sh
+
+# See, e.g.: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-only-cancel-in-progress-jobs-or-runs-for-the-current-workflow
+concurrency:
+  group: ci-${{ github.ref_name }}
+  # 'false' (default) allows for two concurrent runs, one executing and one freshly enqueued; 'true' for only one; no 'concurrency:' defined for multiple.
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -32,6 +48,7 @@ jobs:
     - name: Build i486
       uses: coderus/github-sfos-build@old-stable
       with:
+        # Solely builds for i486 on 3.3.0, because of https://github.com/sailfishos-patches/patchmanager/pull/437#issuecomment-1615317003
         release: ${{ env.RELEASE }}
         arch: i486
 
