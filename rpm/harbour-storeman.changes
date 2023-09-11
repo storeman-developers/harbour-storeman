@@ -1,4 +1,4 @@
-* Mon Aug 07 2023 olf <Olf0@users.noreply.github.com> - 0.3.7
+* Mon Sep 10 2023 olf <Olf0@users.noreply.github.com> - 0.3.7
 - [harbour-storeman.ts] PRs #428 & #429 missed to adapt the base .ts file (#442)
 - Update some language specific .ts files according to PR #442 (4de442b, b129474, 7004990, b001953, 14c8f85, c390d44)
 
