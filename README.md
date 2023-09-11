@@ -4,9 +4,9 @@ OpenRepos client application for SailfishOS
 
 [![Release](https://img.shields.io/github/release/storeman-developers/harbour-storeman.svg)](https://github.com/storeman-developers/harbour-storeman/releases)
 
-## Current features
+## Feature set
 
-### Working with OpenRepos.net
+### Working with [OpenRepos](https://openrepos.net/)
 #### Discover applications
 - Search for applications
 - List recently updated applications
@@ -30,25 +30,25 @@ OpenRepos client application for SailfishOS
 
 ## Installing Storeman
 
-The Storeman Installer for installing Storeman proper is available at [OpenRepos.net](https://openrepos.net/content/olf/storeman-installer).
+The [Storeman Installer](https://github.com/storeman-developers/harbour-storeman-installer#readme) for installing Storeman proper [is available at OpenRepos](https://openrepos.net/content/olf/storeman-installer).
 
 ## Important notes
 
-* If you have any troubles with installing, removing or updating packages after a SailfishOS upgrade, try running `devel-su pkcon refresh` in the terminal app.
-* Starting with version 0.2.9, Storeman is built by the help of the SailfishOS-OBS and initially installed by the Storeman Installer (or manually).  To update from Storeman < 0.2.9, one must remove ("uninstall") Storeman *before* installing the Storeman Installer or manually installing Storeman ≥ 0.2.9.  After an initial installation of Storeman ≥ 0.2.9, further updates of Storeman will be performed by Storeman, as usual. 
-* Before software can be built for a SailfishOS release at the SailfishOS-OBS, Jolla must create a corresponding "download on demand (DoD)" OBS-repository.  It often takes some time after a new "general availability (GA)" SailfishOS release is published before the corresponding "DoD" repository is being made available, during which installing or updating Storeman by the Storeman Installer or Storeman's self-updating on a device with the new SailfishOS release already installed will fail; consequently this is always the case during the "closed beta (cBeta)" and "early access (EA)" phases of a new SailfishOS release.  Hence one has to either manually set the last prior SailfishOS GA release in the SailfishOS:Chum GUI application or manually download and install or update Storeman built for the last prior SailfishOS GA release, then.
-* **Disclaimer:** Storeman and Storeman Installer may still have flaws, kill your kittens or break your SailfishOS installation!  Although this is very unlikely after years of testing by many users, new flaws may be introduced in any release (as for any software).  Mind, that the license you implicitly accept by using Storeman excludes any liability.
+* If you experience issues when installing, removing or updating packages after a SailfishOS upgrade, try running `devel-su pkcon refresh` in a terminal app.
+* Starting with version 0.2.9, Storeman is built by the help of the SailfishOS-OBS and initially installed by the Storeman Installer (or manually).  To update from Storeman < 0.2.9 (needs SailfishOS ≥ 3.1.0), one should reinstall Storeman via the Storeman Installer (which installs the current Storeman release, and since Storeman Installer 1.3.0 automatically removes a Storeman < 0.3.0 before that) or manually remove Storeman < 0.2.9 and install Storeman ≥ 0.3.0.  After an initial installation of Storeman ≥ 0.3.0, further updates of Storeman will be performed within Storeman, as usual.
+* Before software can be build for a SailfishOS release at the SailfishOS-OBS, Jolla must create a [corresponding "download on demand (DoD)" OBS-repository](https://build.merproject.org/project/subprojects/sailfishos).  It may take a little time after a new SailfishOS release is published before the corresponding "DoD" repository is being made available, during which installing Storeman by the Storeman Installer or updating Storeman by itself on a device with the new SailfishOS release already installed does not work, because Storeman cannot be compiled for this new SailfishOS release at the Sailfish-OBS, yet; consequently this is always the case for "closed beta (cBeta)" releases of SailfishOS.  In such a situation one has to manually download Storeman built for the last prior SailfishOS "general availability (GA)" release (e.g., from [its releases section at GitHub](https://github.com/storeman-developers/harbour-storeman/releases) or [the SailfishOS-OBS](https://build.merproject.org/project/show/home:olf:harbour-storeman)), then install or update Storeman via `pkcon install-local <downloaded RPM file>`, and hope that there is no change in the new SailfishOS release which breaks Storeman; if there is, please report that soon at [Storeman's issue tracker](https://github.com/storeman-developers/harbour-storeman/issues).
+* Disclaimer: Storeman and its installer may still have flaws, kill your kittens or break your SailfishOS installation!  Although this is very unlikely after years of testing by many users, new flaws may be introduced in any release (as for any software).  Mind that the license you implicitly accept by using Storeman or Storeman Installer excludes any liability.
 
 ## Translating Storeman (l10n / i18n)
 
-If you want to translate Storeman to a language it does not support yet or enhance an existing translation, please [read the translations-README](translations/README.md).
+If you want to translate Storeman to a language it does not support yet or enhance an existing translation, please [read the translations-README](https://github.com/storeman-developers/harbour-storeman/tree/master/translations#readme).
 
 ## Screenshots of Storeman
 
 |     |     |     |     |
 | --- | --- | --- | --- |
-| ![RecentAppsPage](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-01.png) | ![AppPage](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-02.png) | ![CommentsPage](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-03.png) | ![Commenting](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-04.png) |
-| ![RepositoriesPage](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-06.png) | ![InstalledAppsPage](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-07.png) | ![BookmarksPage](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-08.png) | ![RepositoryPage](https://github.com/storeman-developers/harbour-storeman/blob/devel/.xdata/screenshots/screenshot-screenshot-storeman-09.png) |
+| ![RecentAppsPage](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-01.png) | ![AppPage](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-02.png) | ![CommentsPage](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-03.png) | ![Commenting](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-04.png) |
+| ![RepositoriesPage](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-06.png) | ![InstalledAppsPage](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-07.png) | ![BookmarksPage](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-08.png) | ![RepositoryPage](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-09.png) |
 
 ## Credits
 

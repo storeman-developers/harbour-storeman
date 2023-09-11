@@ -1,15 +1,15 @@
-name: CI build - sfos3.2 branch for SFOS 3.1.0.12 (armv7hl, i486)
+name: CI - sfos3.2 branch on SFOS 3.1.0 (armv7hl,i486)
 
 env:
-  sfos_target: 3.1.0.12
+  RELEASE: 3.1.0.12
 
 on:
   push:
     tags:
-      - 'sfos3.2_release/*'
-      - 'sfos3.2_alpha/*'
-      - 'sfos3.2_beta/*'
-      - 'sfos3.2_test/*'
+      - 'release*_sfos3.2/*'
+      - 'rc*_sfos3.2/*'
+      - 'beta*_sfos3.2/*'
+      - 'alpha*_sfos3.2/*'
       - 'sfos3.2/*'
   pull_request:
     branches:
@@ -17,28 +17,39 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
-
+    runs-on: ubuntu-22.04
+    env:
+      SEGMENT_DOWNLOAD_TIMEOUT_MINS: 2
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    # Caching Docker images is not ready yet, see 
+    # https://github.com/storeman-developers/harbour-storeman-installer/blob/devel/cache-docker-images_github-ci.md
+    #- name: Cache Docker images of the Sailfish-SDK
+    #  id: cache-sdk
+    #  uses: actions/cache@v3
+    #  with:
+    #    path: $GITHUB_WORKSPACE/…
+    #    key: cache
 
     - name: Prepare
       run: mkdir RPMS
 
-    - name: Build armv7hl
+    - name: Build armv7hl on ${{ env.RELEASE }}
       uses: coderus/github-sfos-build@old-stable
       with:
-        release: ${{ env.sfos_target }}
+        release: ${{ env.RELEASE }}
         arch: armv7hl
 
-    - name: Build i486
+    - name: Build i486 on ${{ env.RELEASE }}
       uses: coderus/github-sfos-build@old-stable
       with:
-        release: ${{ env.sfos_target }}
+        release: ${{ env.RELEASE }}
         arch: i486
 
-    - name: Upload build result
-      uses: actions/upload-artifact@v2
+    - name: Upload build results
+      uses: actions/upload-artifact@v3
       with:
-        name: rpm-build-result
-        path: RPMS
+        name: RPM-build-results
+        path: RPMS/

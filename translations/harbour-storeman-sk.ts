@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="sk">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="sk">
 <context>
-    <name></name>
+    <name/>
     <message id="orn-notrated">
         <source>Not rated yet</source>
         <translation>Zatiaľ nehodnotené</translation>
@@ -73,7 +71,7 @@
         <translation>Odstraňovanie</translation>
     </message>
     <message id="orn-error">
-        <source>An error occured</source>
+        <source>An error occurred</source>
         <translation>Vyskytla sa chyba</translation>
     </message>
     <message id="orn-repo-add">
@@ -118,7 +116,7 @@
     </message>
     <message id="orn-dt-format">
         <source>yyyy-MM-dd hh:mm</source>
-        <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
+        <extracomment>Output format for the date labels.  For details visit https://doc.qt.io/qt-5/qdate.html#toString</extracomment>
         <translation>dd-MM-yyyy hh:mm</translation>
     </message>
     <message id="orn-version-noavailable">
@@ -251,7 +249,7 @@
     </message>
     <message id="orn-cat-fonts">
         <source>Fonts</source>
-        <translation>Znaky</translation>
+        <translation>Písma</translation>
     </message>
     <message id="orn-cat-libraries">
         <source>Libraries</source>
@@ -332,20 +330,21 @@
         <translation>Potiahnuť nadol pre obnovenie</translation>
     </message>
     <message id="orn-development">
-        <source>Development</source>
-        <translation>Vývoj</translation>
+        <source>Credits</source>
+        <extracomment>Acknowledgements for contributions - should be a noun</extracomment>
+        <translation>Kredity</translation>
     </message>
     <message id="orn-developers">
         <source>Developers</source>
         <translation>Vývojári</translation>
     </message>
     <message id="orn-appicon">
-        <source>Application Icon</source>
+        <source>Application icon</source>
         <translation>Ikona aplikácie</translation>
     </message>
     <message id="orn-sources">
-        <source>Source Code</source>
-        <translation>Zdrojový text</translation>
+        <source>Source code &amp; Issue tracker</source>
+        <translation>Zdrojový kód a nástroj na sledovanie problémov</translation>
     </message>
     <message id="orn-just-now">
         <source>Just now</source>
@@ -353,19 +352,11 @@
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%n minute(s) ago</source>
-        <translation>
-            <numerusform>pred %n minútou</numerusform>
-            <numerusform>pred %n minútami</numerusform>
-            <numerusform>pred %n minútami</numerusform>
-        </translation>
+        <translation><numerusform>pred %n minútou</numerusform><numerusform>pred %n minútami</numerusform><numerusform>pred %n minútami</numerusform><numerusform>pred %n minútami</numerusform></translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%n hour(s) ago</source>
-        <translation>
-            <numerusform>pred %n hodinou</numerusform>
-            <numerusform>pred %n hodinami</numerusform>
-            <numerusform>pred %n hodinami</numerusform>
-        </translation>
+        <translation><numerusform>pred %n hodinou</numerusform><numerusform>pred %n hodinami</numerusform><numerusform>pred %n hodinami</numerusform><numerusform>pred %n hodinami</numerusform></translation>
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
@@ -378,7 +369,7 @@
     </message>
     <message id="orn-category-noapps">
         <source>Currently there are no apps in this category</source>
-        <translation>V súčasnosti nie sú žiadne aplikácie v tejto kategórii</translation>
+        <translation>Teraz nie sú žiadne aplikácie v tejto kategórii</translation>
     </message>
     <message id="orn-cat-unknown2">
         <source>Unknown category</source>
@@ -538,7 +529,7 @@
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
-        <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
+        <extracomment>A template string for a dependency resolution error.  %1 is a dependency and %2 is a failed package.</extracomment>
         <translation>%1 neposkytuje nič potrebné pre %2</translation>
     </message>
     <message id="orn-backups">
@@ -720,11 +711,7 @@
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
-        <translation>
-            <numerusform>%n operácia prebieha</numerusform>
-            <numerusform>%n operácie prebiehajú</numerusform>
-            <numerusform>%n operácií prebieha</numerusform>
-        </translation>
+        <translation><numerusform>%n operácia prebieha</numerusform><numerusform>%n operácie prebiehajú</numerusform><numerusform>%n operácií prebieha</numerusform><numerusform>%n operácií prebieha</numerusform></translation>
     </message>
     <message id="orn-version-available">
         <source>Available version</source>
@@ -778,19 +765,11 @@
     </message>
     <message id="orn-interval-m" numerus="yes">
         <source>%n minute(s)</source>
-        <translation>
-            <numerusform>%n minúta</numerusform>
-            <numerusform>%n minúty</numerusform>
-            <numerusform>%n minút</numerusform>
-        </translation>
+        <translation><numerusform>%n minúta</numerusform><numerusform>%n minúty</numerusform><numerusform>%n minút</numerusform><numerusform>%n minút</numerusform></translation>
     </message>
     <message id="orn-interval-h" numerus="yes">
         <source>%n hour(s)</source>
-        <translation>
-            <numerusform>%n hodina</numerusform>
-            <numerusform>%n hodiny</numerusform>
-            <numerusform>%n hodín</numerusform>
-        </translation>
+        <translation><numerusform>%n hodina</numerusform><numerusform>%n hodiny</numerusform><numerusform>%n hodín</numerusform><numerusform>%n hodín</numerusform></translation>
     </message>
     <message id="orn-tag-strikeout">
         <source>S</source>
@@ -804,7 +783,7 @@
     <message id="orn-dcm-user2">
         <source>Deep Thought</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>Deep Thought</translation>
+        <translation>Hlboká myšlienka</translation>
     </message>
     <message id="orn-dcm-user1">
         <source>A little white mouse</source>
@@ -1018,7 +997,8 @@
     </message>
     <message id="orn-donation">
         <source>Donation</source>
-        <translation>Prispiet</translation>
+        <extracomment>Should be a noun</extracomment>
+        <translation>Darcovstvo</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
@@ -1029,9 +1009,9 @@
         <translation>Balík %0 bol úspešne aktualizovaný</translation>
     </message>
     <message id="orn-app-description-full">
-        <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues shall be reported preferably at GitHub or alternatively at OpenRepos (use the buttons below).&lt;/p&gt;</source>
-        <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software).</extracomment>
-        <translation>&lt;p&gt;Klient OpenRepos pre SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Toto je voľne dostupný otvorený softvér, ktorý je šírený v súlade s &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;licenciou&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Zistenie môžete nahlásiť v GitHub alebo OpenRepos (použite tlačidlá nižšie).&lt;/p&gt;</translation>
+        <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Any issues (bug reports, feature suggestions, help requests etc.) shall be filed at GitHub (you may use the button below).&lt;/p&gt;</source>
+        <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software), just keep it as &quot;(FLOSS)&quot;.</extracomment>
+        <translation>&lt;p&gt;Klient OpenRepos pre SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Toto je voľne dostupný otvorený softvér, ktorý je šírený v súlade s &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;licenciou&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Zistenie môžete nahlásiť v GitHub (použite tlačidlá nižšie).&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>

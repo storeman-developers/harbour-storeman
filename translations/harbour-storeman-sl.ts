@@ -71,7 +71,7 @@
         <translation>Odstranjujem</translation>
     </message>
     <message id="orn-error">
-        <source>An error occured</source>
+        <source>An error occurred</source>
         <translation>Prišlo je do napake</translation>
     </message>
     <message id="orn-repo-add">
@@ -116,7 +116,7 @@
     </message>
     <message id="orn-dt-format">
         <source>yyyy-MM-dd hh:mm</source>
-        <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
+        <extracomment>Output format for the date labels.  For details visit https://doc.qt.io/qt-5/qdate.html#toString</extracomment>
         <translation>yyyy-MM-dd hh:mm</translation>
     </message>
     <message id="orn-version-noavailable">
@@ -330,20 +330,21 @@
         <translation>Za osveževanje potegnite navzdol</translation>
     </message>
     <message id="orn-development">
-        <source>Development</source>
-        <translation>Razvoj</translation>
+        <source>Credits</source>
+        <extracomment>Acknowledgements for contributions - should be a noun</extracomment>
+        <translation>Zasluge</translation>
     </message>
     <message id="orn-developers">
         <source>Developers</source>
         <translation>Razvijalci</translation>
     </message>
     <message id="orn-appicon">
-        <source>Application Icon</source>
+        <source>Application icon</source>
         <translation>Ikona aplikacije</translation>
     </message>
     <message id="orn-sources">
-        <source>Source Code</source>
-        <translation>Izvorna koda</translation>
+        <source>Source code &amp; Issue tracker</source>
+        <translation>Izvorna koda in sledilec težav</translation>
     </message>
     <message id="orn-just-now">
         <source>Just now</source>
@@ -528,7 +529,7 @@
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
-        <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
+        <extracomment>A template string for a dependency resolution error.  %1 is a dependency and %2 is a failed package.</extracomment>
         <translation>Nič ne zagotavlja %1 kar potrebuje %2</translation>
     </message>
     <message id="orn-backups">
@@ -996,7 +997,8 @@
     </message>
     <message id="orn-donation">
         <source>Donation</source>
-        <translation>Prispevajte</translation>
+        <extracomment>Should be a noun</extracomment>
+        <translation>Donacije</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
@@ -1007,9 +1009,9 @@
         <translation>Paket %0 je bil uspešno posodobljen</translation>
     </message>
     <message id="orn-app-description-full">
-        <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues shall be reported preferably at GitHub or alternatively at OpenRepos (use the buttons below).&lt;/p&gt;</source>
-        <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software).</extracomment>
-        <translation>&lt;p&gt;OpenRepos odjemalec za SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;To je odprtokodni program, ki se distribuira z &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;licenco&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Morebitne pripombe in težave lahko javite na GitHub ali OpenRepos (uporabite spodnje gumbe).&lt;/p&gt;</translation>
+        <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Any issues (bug reports, feature suggestions, help requests etc.) shall be filed at GitHub (you may use the button below).&lt;/p&gt;</source>
+        <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software), just keep it as &quot;(FLOSS)&quot;.</extracomment>
+        <translation>&lt;p&gt;OpenRepos odjemalec za SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;Odprtokodni program (FLOSS), ki se distribuira z &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;licenco&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Morebitne pripombe in težave lahko javite na GitHub (uporabite spodnje gumbe).&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>
