@@ -1,4 +1,4 @@
-%global branch sfos3.2
+%global branch sfos3.1
 Name:           harbour-storeman
 Summary:        OpenRepos client application for SailfishOS
 # The <version> tag must adhere to semantic versioning: Among multiple other
