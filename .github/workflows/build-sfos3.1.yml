@@ -31,7 +31,7 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     env:
-      # Do not wait up to the default of 10 minutes for network timeouts in a workflow which runs ca. 5 minutes
+      # Do not wait up to the default of 10 minutes for network timeouts in a workflow which runs ca. 5 minutes.
       SEGMENT_DOWNLOAD_TIMEOUT_MINS: 2
     steps:
     - name: Checkout
