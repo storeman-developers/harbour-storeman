@@ -1,5 +1,6 @@
 * Mon Aug 07 2023 olf <Olf0@users.noreply.github.com> - 0.3.7
-- 
+- [harbour-storeman.ts] PRs #428 & #429 missed to adapt the base .ts file (#442)
+- Update language specific .ts file according to PR #442 (4de442b, b129474, 7004990, b001953, 14c8f85, c390d44)
 
 * Sun Aug 06 2023 olf <Olf0@users.noreply.github.com> - 0.3.6
 - Omit apparently superfluous processing of `%{version}` for qmake5 in the spec file (#405)
