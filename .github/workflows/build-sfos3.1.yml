@@ -1,4 +1,4 @@
-name: CI - sfos3.2 branch on SFOS 3.1.0 (armv7hl,i486)
+name: CI - sfos3.1 branch on SFOS 3.1.0 (armv7hl,i486)
 
 env:
   RELEASE: 3.1.0.12
@@ -6,14 +6,14 @@ env:
 on:
   push:
     tags:
-      - 'release*_sfos3.2/*'
-      - 'rc*_sfos3.2/*'
-      - 'beta*_sfos3.2/*'
-      - 'alpha*_sfos3.2/*'
-      - 'sfos3.2/*'
+      - 'release*_sfos3.1/*'
+      - 'rc*_sfos3.1/*'
+      - 'beta*_sfos3.1/*'
+      - 'alpha*_sfos3.1/*'
+      - 'sfos3.1/*'
   pull_request:
     branches:
-      - sfos3.2
+      - sfos3.1
 
 jobs:
   build:
@@ -51,5 +51,6 @@ jobs:
     - name: Upload build results
       uses: actions/upload-artifact@v3
       with:
-        name: RPM-build-results
+        name: RPM-build-results_sfos3.1.0-3.2.1
         path: RPMS/
+

@@ -58,5 +58,6 @@ jobs:
     - name: Upload build results
       uses: actions/upload-artifact@v3
       with:
-        name: RPM-build-results
+        name: RPM-build-results_sfos-latest
         path: RPMS/
+
