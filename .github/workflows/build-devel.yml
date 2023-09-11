@@ -40,4 +40,3 @@ jobs:
       with:
         name: RPM-build-results_devel-i486-sfos3.3.0+
         path: RPMS/
-
