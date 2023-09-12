@@ -1,4 +1,4 @@
-name: CI - sfos3.2 branch on SFOS 3.1.0 (armv7hl,i486)
+name: CI - sfos3.1 branch on SFOS 3.1.0 (armv7hl,i486)
 
 env:
   RELEASE: 3.1.0.12
@@ -6,19 +6,32 @@ env:
 on:
   push:
     tags:
-      - 'release*_sfos3.2/*'
-      - 'rc*_sfos3.2/*'
-      - 'beta*_sfos3.2/*'
-      - 'alpha*_sfos3.2/*'
-      - 'sfos3.2/*'
+      - 'release*_sfos3.1/*'
+      - 'rc*_sfos3.1/*'
+      - 'beta*_sfos3.1/*'
+      - 'alpha*_sfos3.1/*'
+      - 'sfos3.1/*'
   pull_request:
     branches:
-      - sfos3.2
+      - sfos3.1
+
+defaults:
+  run:
+    # Note thas 'bash' provides -o pipefail, in contrast to the default (i.e., unspecified, which also uses bash) or 'sh',
+    # see https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsshell
+    shell: sh
+
+# See, e.g.: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-only-cancel-in-progress-jobs-or-runs-for-the-current-workflow
+concurrency:
+  group: ci-${{ github.ref_name }}
+  # 'false' (default) allows for two concurrent runs, one executing and one freshly enqueued; 'true' for only one; no 'concurrency:' defined for multiple.
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-22.04
     env:
+      # Do not wait up to the default of 10 minutes for network timeouts in a workflow which runs ca. 5 minutes.
       SEGMENT_DOWNLOAD_TIMEOUT_MINS: 2
     steps:
     - name: Checkout
@@ -51,5 +64,12 @@ jobs:
     - name: Upload build results
       uses: actions/upload-artifact@v3
       with:
-        name: RPM-build-results
+        name: RPM-build-results_sfos3.1.0-3.2.1
         path: RPMS/
+
+# Just for fun, see https://feathericons.com/ and
+# https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#branding
+#branding:  # "Invalid workflow file: Unexpected value 'branding'"; maybe action MUST be located in '/' or the name MUST be action.yml or both, see e.g., https://github.com/actions/cache/blob/main/action.yml#L37
+#  icon: 'gift'
+#  color: 'purple'
+
