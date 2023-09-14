@@ -1,8 +1,8 @@
-name: CI - sfos4.2 branch on latest SFOS (aarch64,armv7hl,i486)
+name: CI - sfos4.2 branch on latest SDK (aarch64,armv7hl,i486)
 
 env:
+  # For the latest available docker image, see https://github.com/CODeRUS/docker-sailfishos-platform-sdk
   RELEASE: 4.5.0.16
-  # See https://hub.docker.com/r/coderus/sailfishos-platform-sdk/tags
 
 on:
   push:
@@ -15,10 +15,13 @@ on:
   pull_request:
     branches:
       - sfos4.2
+  # Allows to run this workflow manually from the Actions tab.
+  #workflow_dispatch:
+  # Rather set a new release in the spec file and a new tag in the format N/X.Y.Z (e.g., release2_sfos4.2/0.6.3) to build a release version again.
 
 defaults:
   run:
-    # Note thas 'bash' provides -o pipefail, in contrast to the default (i.e., unspecified, which also uses bash) or 'sh',
+    # Note that 'bash' provides -o pipefail, in contrast to the default (i.e., unspecified, which also uses bash) or 'sh',
     # see https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsshell
     shell: sh
 
@@ -35,6 +38,7 @@ jobs:
       # Do not wait up to the default of 10 minutes for network timeouts in a workflow which runs ca. 10 minutes.
       SEGMENT_DOWNLOAD_TIMEOUT_MINS: 2
     steps:
+
     - name: Checkout
       uses: actions/checkout@v3
 
@@ -71,7 +75,7 @@ jobs:
     - name: Upload build results
       uses: actions/upload-artifact@v3
       with:
-        name: RPM-build-results_sfos-latest
+        name: RPM-build-results_SFOS${{ env.RELEASE }}
         path: RPMS/
 
 # Just for fun, see https://feathericons.com/ and
