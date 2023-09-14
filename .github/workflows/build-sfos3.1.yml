@@ -1,4 +1,4 @@
-name: CI - sfos3.1 branch on SFOS 3.1.0 (armv7hl,i486)
+name: CI - sfos3.1 branch on SDK for 3.1.0 (armv7hl,i486)
 
 env:
   RELEASE: 3.1.0.12
@@ -14,10 +14,13 @@ on:
   pull_request:
     branches:
       - sfos3.1
+  # Allows to run this workflow manually from the Actions tab.
+  #workflow_dispatch:
+  # Rather set a new release in the spec file and a new tag in the format N/X.Y.Z (e.g., release2_sfos3.1/0.6.3) to build a release version again.
 
 defaults:
   run:
-    # Note thas 'bash' provides -o pipefail, in contrast to the default (i.e., unspecified, which also uses bash) or 'sh',
+    # Note that 'bash' provides -o pipefail, in contrast to the default (i.e., unspecified, which also uses bash) or 'sh',
     # see https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsshell
     shell: sh
 
@@ -34,6 +37,7 @@ jobs:
       # Do not wait up to the default of 10 minutes for network timeouts in a workflow which runs ca. 5 minutes.
       SEGMENT_DOWNLOAD_TIMEOUT_MINS: 2
     steps:
+
     - name: Checkout
       uses: actions/checkout@v3
 
@@ -64,7 +68,7 @@ jobs:
     - name: Upload build results
       uses: actions/upload-artifact@v3
       with:
-        name: RPM-build-results_sfos3.1.0-3.2.1
+        name: RPM-build-results_SFOS3.1.0-3.2.1
         path: RPMS/
 
 # Just for fun, see https://feathericons.com/ and
