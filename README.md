@@ -41,7 +41,7 @@ The [Storeman Installer](https://github.com/storeman-developers/harbour-storeman
 
 ## Translating Storeman (l10n / i18n)
 
-If you want to translate Storeman to a language it does not support yet or enhance an existing translation, please [read the translations-README](https://github.com/storeman-developers/harbour-storeman/tree/master/translations#readme).
+If you want to translate Storeman to a language it does not support yet or enhance an existing translation, please [read the translations-README](https:./translations#readme).
 
 ## Screenshots of Storeman
 
