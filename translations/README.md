@@ -10,7 +10,7 @@ If you do not want to use Atlassian's Transifex, alternatives are [Qt Linguist](
 
 ### Testing translations
 
-Note that translations for Storeman are utilising *ID based* Qt `ts` files.  Hence, to compile a translation file for testing, the `lrelease` command must be executed with the option `-idbased` to convert the translation files (`.ts` files) into Qt message files (`.qm` files) , either from [within Qt Linguist](https://doc.qt.io/qtcreator/creator-editor-external.html) or directly [at the command line](https://doc.qt.io/qt-5/linguist-manager.html):
+Note that translations for Storeman are utilising *ID based* Qt `ts` files.  Hence, to compile a translation file for testing, the `lrelease` command must be executed with the option `-idbased` to convert the translation files (`.ts` files) into Qt message files (`.qm` files), either from [within Qt Linguist](https://doc.qt.io/qtcreator/creator-editor-external.html) or directly [at the command line](https://doc.qt.io/qt-5/linguist-manager.html):
 ```
 lrelease -idbased harbour-storeman.ts
 ```
