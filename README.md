@@ -49,11 +49,11 @@ If you want to translate Storeman to a language it does not support yet or enhan
 | :---: | :---: | :---: | :---: |
 |       |       |       |       |
 | ![RecentAppsPage](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-01.png) | ![AppPage](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-02.png) | ![CommentsPage](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-03.png) | ![Commenting](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-04.png) |
-| <sub>Recently updated Apps</sub> | <sub>App details</sub> | <sub>Comments</sub> | <sub>Commenting</sub> |
+| <sub>Recently updated Apps</sub> | <sub>App details</sub> | <sub>App's comments</sub> | <sub>Commenting</sub> |
 |       |       |       |       |
 |       |       |       |       |
 | ![RepositoriesPage](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-06.png) | ![InstalledAppsPage](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-07.png) | ![BookmarksPage](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-08.png) | ![RepositoryPage](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-09.png) |
-| <sub>Repositories</sub> | <sub>Installed Apps</sub> | <sub>Bookmarks</sub> | <sub>Repository</sub> |
+| <sub>Manage repositories</sub> | <sub>Installed Apps</sub> | <sub>Bookmarked Apps</sub> | <sub>Repository details</sub> |
 |       |       |       |       |
 
 ## Credits
