@@ -2,7 +2,7 @@
 
 OpenRepos client application for SailfishOS
 
-[![Release](https://img.shields.io/github/release/storeman-developers/harbour-storeman.svg)](https://github.com/storeman-developers/harbour-storeman/releases)
+<sup><sub>`Current`</sub></sup>[![Current relse](https://img.shields.io/github/release/storeman-developers/harbour-storeman.svg)](https://github.com/storeman-developers/harbour-storeman/releases)
 
 ## Feature set
 
