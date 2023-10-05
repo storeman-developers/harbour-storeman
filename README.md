@@ -1,8 +1,7 @@
-# ![Storeman icon 86x86](https://github.com/storeman-developers/harbour-storeman/raw/master/icons/86x86/harbour-storeman.png) &nbsp; **Storeman**
+# ![Storeman icon 86x86](./icons/86x86/harbour-storeman.png?raw=true) &nbsp; **Storeman**
+**OpenRepos client application for SailfishOS**
 
-OpenRepos client application for SailfishOS
-
-<sup><sub>`Current`</sub></sup>[![Current relse](https://img.shields.io/github/release/storeman-developers/harbour-storeman.svg)](https://github.com/storeman-developers/harbour-storeman/releases)
+<sup><sub>`Current`</sub></sup>[![Current release](https://img.shields.io/github/release/storeman-developers/harbour-storeman.svg)](https://github.com/storeman-developers/harbour-storeman/releases)
 
 ## Feature set
 
@@ -48,11 +47,11 @@ If you want to translate Storeman to a language it does not support yet or enhan
 |       |       |       |       |
 | :---: | :---: | :---: | :---: |
 |       |       |       |       |
-| ![RecentAppsPage](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-01.png) | ![AppPage](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-02.png) | ![CommentsPage](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-03.png) | ![Commenting](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-04.png) |
+| ![RecentAppsPage](./.xdata/screenshots/screenshot-screenshot-storeman-01.png?raw=true) | ![AppPage](./.xdata/screenshots/screenshot-screenshot-storeman-02.png?raw=true) | ![CommentsPage](./.xdata/screenshots/screenshot-screenshot-storeman-03.png?raw=true) | ![Commenting](./.xdata/screenshots/screenshot-screenshot-storeman-04.png?raw=true) |
 | <sub>Recently&nbsp;updated&nbsp;Apps</sub> | <sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;App&nbsp;details&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub> | <sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;App's&nbsp;comments&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub> | <sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Commenting&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub> |
 |       |       |       |       |
 |       |       |       |       |
-| ![RepositoriesPage](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-06.png) | ![InstalledAppsPage](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-07.png) | ![BookmarksPage](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-08.png) | ![RepositoryPage](https://github.com/storeman-developers/harbour-storeman/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-09.png) |
+| ![RepositoriesPage](./.xdata/screenshots/screenshot-screenshot-storeman-06.png?raw=true) | ![InstalledAppsPage](./.xdata/screenshots/screenshot-screenshot-storeman-07.png?raw=true) | ![BookmarksPage](./.xdata/screenshots/screenshot-screenshot-storeman-08.png?raw=true) | ![RepositoryPage](./.xdata/screenshots/screenshot-screenshot-storeman-09.png?raw=true) |
 | <sub>Manage repositories</sub> | <sub>Installed Apps</sub> | <sub>Bookmarked Apps</sub> | <sub>Repository details</sub> |
 |       |       |       |       |
 
@@ -67,4 +66,4 @@ If you want to translate Storeman to a language it does not support yet or enhan
 - [Christoph (inta)](https://github.com/inta)
 - [Miklós Márton (martonmiklos)](https://github.com/martonmiklos)
 - [OpenRepos service](https://openrepos.net/content/basil/about-openrepos) by [Basil Semuonov (custodian / thecust)](https://github.com/custodian)
-- [Storeman icon](https://github.com/storeman-developers/harbour-storeman/raw/master/icons/harbour-storeman.svg) by [Laurent Chambon (Laurent_C)](https://mastodon.social/@Laurent_C)
+- [Storeman icon](./icons/harbour-storeman.svg) by [Laurent Chambon (Laurent_C)](https://mastodon.social/@Laurent_C)
