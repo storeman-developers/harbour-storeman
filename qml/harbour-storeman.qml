@@ -65,12 +65,12 @@ ApplicationWindow
             }
             _processingLink = link
             var req = new XMLHttpRequest()
-            // Prepare a http request to get headers
+            // Prepare an HTTP request to obtain the headers
             req.open("HEAD", link, true)
             req.onreadystatechange = function() {
                 if (req.readyState === XMLHttpRequest.DONE) {
                     if (req.status === 200) {
-                        // Check if headers contain an id link
+                        // Check if the headers contain an ID link
                         match = /<\/node\/(\d*)>.*/.exec(req.getResponseHeader("link"))
                         if (match) {
                             appid = match[1]
@@ -98,16 +98,16 @@ ApplicationWindow
     function _repoActionMessage(action) {
         switch (action) {
         case OrnPm.RemoveRepo:
-            //% "The repository %0 was removed"
+            //% "Removed repository %0"
             return qsTrId("orn-repo-removed")
         case OrnPm.AddRepo:
-            //% "The repository %0 was added"
+            //% "Added repository %0"
             return qsTrId("orn-repo-added")
         case OrnPm.DisableRepo:
-            //% "The repository %0 was disabled"
+            //% "Disabled repository %0"
             return qsTrId("orn-repo-disabled")
         case OrnPm.EnableRepo:
-            //% "The repository %0 was enabled"
+            //% "Enabled repository %0"
             return qsTrId("orn-repo-enabled")
         }
     }
@@ -309,7 +309,7 @@ ApplicationWindow
                 notification.showPopup(
                             //% "Login error"
                             qsTrId("orn-login-error-title"),
-                            //% "Could not log in the OpenRepos.net - check your credentials and network connection"
+                            //% "Cannot log in to OpenRepos.net - check your credentials and network connection"
                             qsTrId("orn-login-error-message"),
                             warnIcon)
                 break
@@ -327,9 +327,9 @@ ApplicationWindow
         }
 
         onAuthorisedChanged: OrnClient.authorised
-            //% "You have successfully logged in to the OpenRepos.net"
+            //% "You are logged in to OpenRepos.net"
             ? notification.show(qsTrId("orn-loggedin-message"))
-            //% "You have logged out from the OpenRepos.net"
+            //% "You are logged out from OpenRepos.net"
             : notification.show(qsTrId("orn-loggedout-message"))
 
         onDayToExpiry: {
@@ -349,9 +349,9 @@ ApplicationWindow
 
         onBookmarkChanged: {
             notification.show(bookmarked
-                //% "The app was added to bookmarks"
+                //% "Added a bookmark for the app"
                 ? qsTrId("orn-bookmarks-added")
-                //% "The app was removed from bookmarks"
+                //% "Removed the bookmark for the app"
                 : qsTrId("orn-bookmarks-removed"))
         }
     }
@@ -364,7 +364,7 @@ ApplicationWindow
                 updatesNotification.replacesId = replaceId
                 updatesNotification.close()
             } else if (_showUpdatesNotification) {
-                // Don't show notification if the app was openned from notification
+                // Do not show a notification if the app was opened from a notification
                 updatesNotification.replacesId = replaceId
                 updatesNotification.publish()
             }
@@ -377,17 +377,17 @@ ApplicationWindow
 
         onRepoModified: notification.show(_repoActionMessage(action).arg(alias))
 
-        //% "All repositories were removed"
+        //% "Removed all repositories"
         onRemoveAllReposFinished: notification.show(qsTrId("orn-repo-allremoved"))
 
-        //% "Package %0 was successfully installed"
+        //% "Installed Package %0"
         onPackageInstalled: notification.show(qsTrId("orn-package-installed").arg(packageName))
 
-        //% "Package %0 was successfully updated"
+        //% "Updated Package %0"
         onPackageUpdated: notification.show(qsTrId("orn-package-updated").arg(packageName))
 
         onPackageRemoved: {
-            //% "Package %0 was successfully removed"
+            //% "Removed package %0"
             notification.show(qsTrId("orn-package-removed").arg(packageName))
             if (Storeman.searchUnusedRepos) {
                 OrnPm.getUnusedRepos()
@@ -406,7 +406,7 @@ ApplicationWindow
                 }
             } else if (manualUnusedCheck) {
                 manualUnusedCheck = false
-                //% "Unused repositories not found"
+                //% "Found no unused repository"
                 notification.show(qsTrId("orn-no-unused-repos"))
             }
         }
@@ -414,12 +414,12 @@ ApplicationWindow
         onError: {
             switch (code) {
             case OrnPm.ErrorPackageNotFound:
-                //% "Couldn't find package"
+                //% "Cannot find package"
                 details = qsTrId("orn-error-packagenotfound")
                 break
             case OrnPm.ErrorDepResolutionFailed:
                 var match = details.match(/nothing provides (.*) needed by (.*)/)
-                //: A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.
+                //: A template string for a dependency resolution error.  %1 is a dependency and %2 is a failed package.
                 //% "Nothing provides %1 needed by %2"
                 details = qsTrId("orn-error-depresolution").arg(match[1]).arg(match[2])
                 break
