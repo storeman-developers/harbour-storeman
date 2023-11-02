@@ -364,7 +364,7 @@ ApplicationWindow
                 updatesNotification.replacesId = replaceId
                 updatesNotification.close()
             } else if (_showUpdatesNotification) {
-                // Don't show notification if the app was openned from notification
+                // Don't show notification if the app was opened from notification
                 updatesNotification.replacesId = replaceId
                 updatesNotification.publish()
             }
