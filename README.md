@@ -61,6 +61,7 @@ If you want to translate Storeman to a language it does not support yet or enhan
 - [olf (Olf0)](https://github.com/Olf0)
 - [Matti Viljanen (direc85)](https://github.com/direc85)
 - [Björn Bidar (Thaodan)](https://github.com/Thaodan)
+- [citronalco](https://github.com/citronalco)
 - [Dmitry Gerasimov (dseight)](https://github.com/dseight)
 - [elros34](https://github.com/elros34)
 - [Christoph (inta)](https://github.com/inta)
