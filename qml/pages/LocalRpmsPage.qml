@@ -1,24 +1,29 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import QtSparql 1.0
+import QtDocGallery 5.0
 import harbour.orn 1.0
 
 Page {
     // Duplicate count property because items are not really deleted from the model
     property int _count: 0
 
-    readonly property bool _ready: page.status === PageStatus.Active && queryModel.status === SparqlListModel.Ready
+    readonly property bool _ready: page.status === PageStatus.Active && (queryModel.status === DocumentGalleryModel.Idle || queryModel.status === DocumentGalleryModel.Finished)
 
     on_ReadyChanged: _ready && (_count = queryModel.count)
 
     id: page
     allowedOrientations: defaultAllowedOrientations
 
-    SparqlListModel {
+    DocumentGalleryModel {
         id: queryModel
-        query: "SELECT strafter(nie:url(?r), 'file://') as ?filePath WHERE { ?r nie:mimeType 'application/x-rpm' }"
-        connection: SparqlConnection {
-            driver: "QTRACKER_DIRECT"
+        properties: ["fileName", "filePath"]
+        sortProperties: ["+fileName"]
+        rootType: DocumentGallery.File
+        filter: GalleryFilterUnion {
+            filters: [
+                GalleryEqualsFilter { property: "fileExtension"; value: "rpm" },
+                GalleryEqualsFilter { property: "fileExtension"; value: "RPM" }
+            ]
         }
     }
 
