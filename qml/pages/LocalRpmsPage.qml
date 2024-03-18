@@ -19,12 +19,7 @@ Page {
         properties: ["fileName", "filePath"]
         sortProperties: ["+fileName"]
         rootType: DocumentGallery.File
-        filter: GalleryFilterUnion {
-            filters: [
-                GalleryEqualsFilter { property: "fileExtension"; value: "rpm" },
-                GalleryEqualsFilter { property: "fileExtension"; value: "RPM" }
-            ]
-        }
+        filter: GalleryEqualsFilter { property: "mimeType"; value: "application/x-rpm" }
     }
 
     SilicaListView {
