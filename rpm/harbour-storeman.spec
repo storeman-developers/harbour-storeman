@@ -78,7 +78,7 @@ Categories:
 DeveloperName: Storeman developers (mentaljam)
 Custom:
   Repo: %{url}
-PackageIcon: %{url}/raw/master/icons/harbour-storeman.svg
+PackageIcon: %{url}/raw/master/icons/%{name}.svg
 Screenshots:
  - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-01.png
  - %{url}/raw/master/.xdata/screenshots/screenshot-screenshot-storeman-02.png
@@ -122,9 +122,9 @@ then
   rm -f /var/cache/ssu/features.ini
   ssu_ur=yes
 fi
-if ! echo "$ssu_lr" | grep -Fq harbour-storeman-obs
+if ! echo "$ssu_lr" | grep -Fq %{name}-obs
 then
-  ssu ar harbour-storeman-obs 'https://repo.sailfishos.org/obs/home:/olf:/harbour-storeman/%%(release)_%%(arch)/'
+  ssu ar %{name}-obs 'https://repo.sailfishos.org/obs/home:/olf:/%{name}/%%(release)_%%(arch)/'
   ssu_ur=yes
 fi
 if [ $ssu_ur = yes ]
@@ -146,7 +146,7 @@ exit 0
 %postun
 if [ $1 = 0 ]  # Removal
 then
-  ssu rr harbour-storeman-obs
+  ssu rr %{name}-obs
   rm -f /var/cache/ssu/features.ini
   ssu ur
   # Remove a %%{name}-installer log-file, if extant:

@@ -23,6 +23,10 @@ ListModel {
                 link: "https://github.com/Thaodan"
             },
             ListElement {
+                name: "citronalco"
+                link: "https://github.com/citronalco"
+            },
+            ListElement {
                 name: "Dmitry Gerasimov (dseight)"
                 link: "https://github.com/dseight"
             },
