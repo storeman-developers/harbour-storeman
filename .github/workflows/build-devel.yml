@@ -1,4 +1,4 @@
-name: CI - devel branch on SFOS 3.3.0 (i486)
+name: CI - devel branch on SDK for 3.3.0 (i486)
 
 env:
   RELEASE: 3.3.0.14
@@ -12,15 +12,16 @@ on:
 
 defaults:
   run:
-    # Note thas 'bash' provides -o pipefail, in contrast to the default (i.e., unspecified, which also uses bash) or 'sh',
+    # Note that 'bash' provides -o pipefail, in contrast to the default (i.e., unspecified, which also uses bash) or 'sh',
     # see https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsshell
     shell: sh
 
+# Do not use concurrency in order to enforce checking every commit of a Pull Request.
 # See, e.g.: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-only-cancel-in-progress-jobs-or-runs-for-the-current-workflow
-concurrency:
-  group: ci-${{ github.ref_name }}
+#concurrency:
+  #group: ci-${{ github.ref_name }}
   # 'false' (default) allows for two concurrent runs, one executing and one freshly enqueued; 'true' for only one; no 'concurrency:' defined for multiple.
-  cancel-in-progress: false
+  #cancel-in-progress: false
 
 jobs:
   build:
@@ -29,6 +30,7 @@ jobs:
       # Do not wait up to the default of 10 minutes for network timeouts in a workflow which runs ca. 3 minutes.
       SEGMENT_DOWNLOAD_TIMEOUT_MINS: 1
     steps:
+
     - name: Checkout
       uses: actions/checkout@v3
 
@@ -54,7 +56,7 @@ jobs:
     - name: Upload build result
       uses: actions/upload-artifact@v3
       with:
-        name: RPM-build-results_devel-i486-sfos3.3.0+
+        name: RPM-build-results_devel-i486-SFOS3.3.0+
         path: RPMS/
 
 # Just for fun, see https://feathericons.com/ and
