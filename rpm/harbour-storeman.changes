@@ -1,7 +1,8 @@
-* Mon Mar 18 2024 olf <Olf0@users.noreply.github.com> - 0.3.8
-- Rename branch sfos3.2 to sfos3.1 to reflect reality and avoid confusion (#454, #455)
+* Tue Mar 19 2024 olf <Olf0@users.noreply.github.com> - 0.3.8
+- Rename branch `sfos3.2` to `sfos3.1` to reflect reality and avoid confusion (#454, #455)
 - [Workflows] Add recent changes from Patchmanager (#457)
-- [Local RPMs page] Replace QtSparql with QtDocGallery (#462) by @citronalco, closes issue #461
+- [Local RPMs page] Replace `QtSparql` with `QtDocGallery` (#462) by @citronalco, closes issue #461
+- [Local RPMs page] Filter for `mimeType` instead of `fileName` to select RPM files (#463), enhances PR #462
 
 * Mon Sep 11 2023 olf <Olf0@users.noreply.github.com> - 0.3.7
 - [harbour-storeman.ts] PRs #428 & #429 missed to adapt the base .ts file (#442)
