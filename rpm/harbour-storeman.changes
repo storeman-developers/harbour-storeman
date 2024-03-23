@@ -1,3 +1,6 @@
+* Sat Mar 23 2024 olf <Olf0@users.noreply.github.com> - 0.3.9
+- Remove `User=` specification from D-Bus service file (#473) by @nephros, closes issue #301
+
 * Tue Mar 19 2024 olf <Olf0@users.noreply.github.com> - 0.3.8
 - Rename branch `sfos3.2` to `sfos3.1` to reflect reality and avoid confusion (#454, #455)
 - [Workflows] Add recent changes from Patchmanager (#457)
