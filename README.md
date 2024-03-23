@@ -59,6 +59,7 @@ If you want to translate Storeman to a language it does not support yet or enhan
 
 - [Petr Tsymbarovich (mentaljam / osetr)](https://github.com/mentaljam)
 - [olf (Olf0)](https://github.com/Olf0)
+- [Peter G. (nephros)](https://github.com/nephros)
 - [Matti Viljanen (direc85)](https://github.com/direc85)
 - [Björn Bidar (Thaodan)](https://github.com/Thaodan)
 - [citronalco](https://github.com/citronalco)
