@@ -32,7 +32,7 @@ Source0:        %{url}/archive/%{release}/%{version}/%{name}-%{version}.tar.gz
 # https://en.opensuse.org/openSUSE:Packaging_checks#Building_Packages_in_spite_of_errors
 Source99:       %{name}.rpmlintrc
 
-# Requires: sailfish-version >= 3.1.0 for the code in the sfos3.2 branch and >= 3.3.0 for the code in all other branches.
+# Requires: sailfish-version >= 3.1.0 for the code in the sfos3.1 branch and >= 3.3.0 for the code in all other branches.
 # Requires: sailfish-version >= 4.2.0 for the changed "sharing" code for SFOS4.2's new sharing API in the sfos4.2 branch.
 # Requires: sailfish-version < 3.3.0 and < 4.2.0 are only counterparts to segregate the covered SFOS releases range.
 
