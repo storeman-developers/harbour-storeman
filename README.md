@@ -55,10 +55,11 @@ If you want to translate Storeman to a language it does not support yet or enhan
 | <sub>Manage repositories</sub> | <sub>Installed Apps</sub> | <sub>Bookmarked Apps</sub> | <sub>Repository details</sub> |
 |       |       |       |       |
 
-## Credits
-
+## [Contributors](https://github.com/storeman-developers/harbour-storeman/graphs/contributors)
+Note that translators are not listed here, but [there](https://github.com/storeman-developers/harbour-storeman/blob/master/qml/models/TranslatorsModel.qml).
 - [Petr Tsymbarovich (mentaljam / osetr)](https://github.com/mentaljam)
 - [olf (Olf0)](https://github.com/Olf0)
+- [Peter G. (nephros)](https://github.com/nephros)
 - [Matti Viljanen (direc85)](https://github.com/direc85)
 - [Björn Bidar (Thaodan)](https://github.com/Thaodan)
 - [citronalco](https://github.com/citronalco)
