@@ -15,6 +15,10 @@ ListModel {
                 link: "https://github.com/Olf0"
             },
             ListElement {
+                name: "Peter G. (nephros)"
+                link: "https://github.com/nephros"
+            },
+            ListElement {
                 name: "Matti Viljanen (direc85)"
                 link: "https://github.com/direc85"
             },
