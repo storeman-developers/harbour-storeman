@@ -1,3 +1,6 @@
+* Mon Mar 25 2024 olf <Olf0@users.noreply.github.com> - 0.7.1
+- 
+
 * Sun Mar 24 2024 olf <Olf0@users.noreply.github.com> - 0.7.0
 - Remove `User=` specification from D-Bus service file (#473) by @nephros, closes issue #301
 
