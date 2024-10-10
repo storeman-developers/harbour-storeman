@@ -1,6 +1,6 @@
 git:
   # Basic setup guide for GitHub:
-  # https://help.transifex.com/en/articles/6265125-github-via-transifex-ui
+  # https://help.transifex.com/en/articles/6265125
   filters:
     - filter_type: file
       # All supported i18n types (hard to find): https://docs.transifex.com/formats
