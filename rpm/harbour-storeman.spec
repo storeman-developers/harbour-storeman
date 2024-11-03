@@ -113,22 +113,37 @@ desktop-file-install --delete-original --dir=%{buildroot}%{_datadir}/application
    %{buildroot}%{_datadir}/applications/%{name}.desktop
 
 %post
+# This is a shortened version of the %%post scriptlet of Storeman Installer,
+# omitting a lots of detailed comments, also omitting creating and recording a
+# log-file.
+# Mind to keep these two %%post scripltets synchronised!
 # The %%post scriptlet is deliberately run when installing *and* updating:
 ssu_ur=no
 ssu_lr="$(ssu lr | grep '^ - ' | cut -f 3 -d ' ')"
 if echo "$ssu_lr" | grep -Fq mentaljam-obs
 then
   ssu rr mentaljam-obs
-  rm -f /var/cache/ssu/features.ini
   ssu_ur=yes
 fi
-if ! echo "$ssu_lr" | grep -Fq %{name}-obs
+# Add harbour-storeman-obs repository configuration, depending on the installed
+# SailfishOS release (3.1.0 is the lowest supported, see line 35 ff.):
+source %{_sysconfdir}/os-release
+sailfish_version="$(echo "$VERSION_ID" | cut -s -f 1-3 -d '.' | tr -d '.')"
+# Must be an all numerical string of at least three digits:
+if echo "$sailfish_version" | grep -q '^[0-9][0-9][0-9][0-9]*$'
 then
-  ssu ar %{name}-obs 'https://repo.sailfishos.org/obs/home:/olf:/%{name}/%%(release)_%%(arch)/'
+  if [ "$sailfish_version" -lt 460 ]
+  then ssu ar %{name}-obs 'https://repo.sailfishos.org/obs/home:/olf:/%{name}/%%(release)_%%(arch)/'
+  else ssu ar %{name}-obs 'https://repo.sailfishos.org/obs/home:/olf:/%{name}/%%(releaseMajorMinor)_%%(arch)/'
+  fi
   ssu_ur=yes
+# Should be enhanced to proper debug output, also writing to systemd-journal:
+else echo "Error: VERSION_ID=$VERSION_ID => sailfish_version=$sailfish_version" >&2
 fi
 if [ $ssu_ur = yes ]
-then ssu ur
+then
+  rm -f /var/cache/ssu/features.ini
+  ssu ur
 fi
 # BTW, `ssu`, `rm -f`, `mkdir -p` etc. *always* return with "0" ("success"), hence
 # no appended `|| true` needed to satisfy `set -e` for failing commands outside of
