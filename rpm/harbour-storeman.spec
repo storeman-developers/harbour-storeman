@@ -152,7 +152,7 @@ fi
 # committed on 18 February 2019 by tibbs ( https://pagure.io/user/tibbs ) in
 # https://pagure.io/packaging-committee/c/8d0cec97aedc9b34658d004e3a28123f36404324
 # Hence I have the impression, that only the main section of a spec file is
-# interpreted in a shell called with the option `-e', but not the scriptlets
+# interpreted in a shell invoked with the option `-e', but not the scriptlets
 # (`%%pre*`, `%%post*`, `%%trigger*` and `%%file*`).
 exit 0
 
@@ -160,7 +160,6 @@ exit 0
 if [ $1 = 0 ]  # Removal
 then
   ssu rr %{name}-obs
-  rm -f /var/cache/ssu/features.ini
   ssu ur
   # Remove a %%{name}-installer log-file, if extant:
   rm -f %{_localstatedir}/log/%{name}-installer.log.txt
