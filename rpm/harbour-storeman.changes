@@ -1,3 +1,6 @@
+* Wed Nov 06 2024 olf <Olf0@users.noreply.github.com> - 0.7.2
+- 
+
 * Sub nov 03 2024 olf <Olf0@users.noreply.github.com> - 0.7.1
 - Handle `storeman-obs` repository well, when Storeman was not installed by the Storeman Installer
 
