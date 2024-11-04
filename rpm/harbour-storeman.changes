@@ -1,8 +1,9 @@
 * Wed Nov 06 2024 olf <Olf0@users.noreply.github.com> - 0.7.2
 - 
 
-* Sub nov 03 2024 olf <Olf0@users.noreply.github.com> - 0.7.1
+* Mon Nov 04 2024 olf <Olf0@users.noreply.github.com> - 0.7.1
 - Handle `storeman-obs` repository well, when Storeman was not installed by the Storeman Installer
+- Rework OBS repository handling, part 1: Unify and simplify
 
 * Sun Mar 24 2024 olf <Olf0@users.noreply.github.com> - 0.7.0
 - Remove `User=` specification from D-Bus service file (#473) by @nephros, closes issue #301
