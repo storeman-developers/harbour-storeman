@@ -7,7 +7,10 @@ from getpass import getpass
 import requests
 import json
 
+# This API is deprectated and does not work any longer:
 URL = 'http://www.transifex.com/api/2/project/harbour-storeman/languages/'
+# Either use Transifex's Python library: https://developers.transifex.com/reference/api-python-sdk
+# Or use Transifex's REST API: https://developers.transifex.com/reference/get_languages
 
 def credentials():
     '''Get Transifex user name and password'''
