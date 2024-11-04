@@ -3,7 +3,7 @@ Name:           harbour-storeman
 Summary:        OpenRepos client application for SailfishOS
 # The <version> tag must adhere to semantic versioning: Among multiple other
 # reasons due to its use for `qmake5` in line 107.  See https://semver.org/
-Version:        0.7.0
+Version:        0.7.1
 # The <release> tag comprises one of {alpha,beta,rc,release} postfixed with a
 # natural number greater or equal to 1 (e.g., "beta3") and may additionally be
 # postfixed with a plus character ("+"), the name of the packager and a release
@@ -113,19 +113,32 @@ desktop-file-install --delete-original --dir=%{buildroot}%{_datadir}/application
    %{buildroot}%{_datadir}/applications/%{name}.desktop
 
 %post
+# This is a shortened version of the %%post scriptlet of Storeman Installer,
+# omitting a lots of detailed comments, also omitting creating and recording a
+# log-file.
+# Mind to keep these two %%post scripltets synchronised!
 # The %%post scriptlet is deliberately run when installing *and* updating:
 ssu_ur=no
 ssu_lr="$(ssu lr | grep '^ - ' | cut -f 3 -d ' ')"
 if echo "$ssu_lr" | grep -Fq mentaljam-obs
 then
   ssu rr mentaljam-obs
-  rm -f /var/cache/ssu/features.ini
   ssu_ur=yes
 fi
-if ! echo "$ssu_lr" | grep -Fq %{name}-obs
+# Add harbour-storeman-obs repository configuration, depending on the installed
+# SailfishOS release (3.1.0 is the lowest supported, see line 35 ff.):
+source %{_sysconfdir}/os-release
+sailfish_version="$(echo "$VERSION_ID" | cut -s -f 1-3 -d '.' | tr -d '.')"
+# Must be an all numerical string of at least three digits:
+if echo "$sailfish_version" | grep -q '^[0-9][0-9][0-9][0-9]*$'
 then
-  ssu ar %{name}-obs 'https://repo.sailfishos.org/obs/home:/olf:/%{name}/%%(release)_%%(arch)/'
+  if [ "$sailfish_version" -lt 460 ]
+  then ssu ar %{name}-obs 'https://repo.sailfishos.org/obs/home:/olf:/%{name}/%%(release)_%%(arch)/'
+  else ssu ar %{name}-obs 'https://repo.sailfishos.org/obs/home:/olf:/%{name}/%%(releaseMajorMinor)_%%(arch)/'
+  fi
   ssu_ur=yes
+# Should be enhanced to proper debug output, also writing to systemd-journal:
+else echo "Error: VERSION_ID=$VERSION_ID => sailfish_version=$sailfish_version" >&2
 fi
 if [ $ssu_ur = yes ]
 then ssu ur
@@ -139,7 +152,7 @@ fi
 # committed on 18 February 2019 by tibbs ( https://pagure.io/user/tibbs ) in
 # https://pagure.io/packaging-committee/c/8d0cec97aedc9b34658d004e3a28123f36404324
 # Hence I have the impression, that only the main section of a spec file is
-# interpreted in a shell called with the option `-e', but not the scriptlets
+# interpreted in a shell invoked with the option `-e', but not the scriptlets
 # (`%%pre*`, `%%post*`, `%%trigger*` and `%%file*`).
 exit 0
 
@@ -147,7 +160,6 @@ exit 0
 if [ $1 = 0 ]  # Removal
 then
   ssu rr %{name}-obs
-  rm -f /var/cache/ssu/features.ini
   ssu ur
   # Remove a %%{name}-installer log-file, if extant:
   rm -f %{_localstatedir}/log/%{name}-installer.log.txt

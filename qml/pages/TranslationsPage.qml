@@ -66,7 +66,7 @@ Page {
 
             MenuItem {
                 text: "Storeman@Transifex"
-                onClicked: Qt.openUrlExternally("https://www.transifex.com/mentaljam/harbour-storeman")
+                onClicked: Qt.openUrlExternally("https://app.transifex.com/mentaljam/harbour-storeman")
             }
 
             MenuStatusLabel { }
