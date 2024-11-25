@@ -14,7 +14,7 @@ Version:        0.7.2
 # build at GitHub and OBS, when configured accordingly; mind the sorting
 # (`adud` < `alpha`).  For details and reasons, see
 # https://github.com/storeman-developers/harbour-storeman/wiki/Git-tag-format
-Release:        release1_%{branch}
+Release:        release2_%{branch}
 # The Group tag should comprise one of the groups listed here:
 # https://github.com/mer-tools/spectacle/blob/master/data/GROUPS
 Group:          Software Management/Package Manager
@@ -132,15 +132,15 @@ VERSION_ID=''
 source %{_sysconfdir}/os-release
 sailfish_version="$(echo "$VERSION_ID" | cut -s -f 1-3 -d '.' | tr -d '.')"
 # sailfish_version must be an all numerical string of at least three digits:
-if ! echo "sailfish_version" | grep -q '^[0-9][0-9][0-9][0-9]*$'
-then
-  echo "Error: VERSION_ID=$VERSION_ID => sailfish_version=$sailfish_version" >&2
+if [ $(echo "$sailfish_version" | grep -c '^[0-9][0-9][0-9][0-9]*$') != 1 ]
+then echo "Error: VERSION_ID=$VERSION_ID => sailfish_version=$sailfish_version" >&2
 else
   # Ensure that the repo config is correct: If it is missing or a fixed
   # SFOS-release number was used, set it anew.
   release_macro="$(grep '^harbour-storeman-obs=' %{_sysconfdir}/ssu/ssu.ini | grep -o '/[[:graph:]][[:graph:]][[:graph:]][[:graph:]]*/$' | grep -o '%%(release[[:alpha:]]*)')"
   if [ $sailfish_version -ge 460 ] && [ "$release_macro" != '%%(releaseMajorMinor)' ]
   then
+    # No `ssu rr harbour-storeman-obs` needed, because an `ssu ar <name> <URL>` overwrites an extant entry.
     ssu ar harbour-storeman-obs 'https://repo.sailfishos.org/obs/home:/olf:/harbour-storeman/%%(releaseMajorMinor)_%%(arch)/'
     ssu_ur=yes
   elif [ $sailfish_version -lt 460 ] && [ "$release_macro" != '%%(release)' ]
@@ -149,9 +149,7 @@ else
     ssu_ur=yes
   fi
 fi
-if [ $ssu_ur = yes ]
-then ssu ur
-fi
+[ $ssu_ur = yes ] && ssu ur
 # BTW, `ssu`, `rm -f`, `mkdir -p` etc. *always* return with "0" ("success"), hence
 # no appended `|| true` needed to satisfy `set -e` for failing commands outside of
 # flow control directives (if, while, until etc.).  Furthermore Fedora Docs etc.
