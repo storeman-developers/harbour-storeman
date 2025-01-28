@@ -404,7 +404,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message id="orn-username">
-        <source>Username or e-mail address</source>
+        <source>Username</source>
         <extracomment>A translated string should not be longer than the original</extracomment>
         <translation type="unfinished"></translation>
     </message>
