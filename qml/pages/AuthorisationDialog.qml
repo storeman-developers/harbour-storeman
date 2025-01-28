@@ -60,7 +60,7 @@ Dialog {
             TextField {
                 id: usernameField
                 width: parent.width
-                //: A translated string should not be longer than the original
+                //: A translated string should comprise less than 27 characters
                 //% "Username"
                 placeholderText: qsTrId("orn-username")
                 label: placeholderText
