@@ -61,7 +61,7 @@ Dialog {
                 id: usernameField
                 width: parent.width
                 //: A translated string should not be longer than the original
-                //% "Username or e-mail address"
+                //% "Username"
                 placeholderText: qsTrId("orn-username")
                 label: placeholderText
                 validator: RegExpValidator {
