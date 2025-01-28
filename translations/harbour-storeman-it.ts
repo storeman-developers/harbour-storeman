@@ -405,7 +405,7 @@
     </message>
     <message id="orn-username">
         <source>Username</source>
-        <extracomment>A translated string should not be longer than the original</extracomment>
+        <extracomment>A translated string should comprise less than 27 characters</extracomment>
         <translation>Nome utente</translation>
     </message>
     <message id="orn-login-help">
