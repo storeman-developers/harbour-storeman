@@ -396,8 +396,8 @@
         <translation>Bejelentkezés</translation>
     </message>
     <message id="orn-username">
-        <source>Username or e-mail address</source>
-        <extracomment>A translated string should not be longer than the original</extracomment>
+        <source>Username</source>
+        <extracomment>A translated string should comprise less than 27 characters</extracomment>
         <translation>Felhasználónév</translation>
     </message>
     <message id="orn-login-help">

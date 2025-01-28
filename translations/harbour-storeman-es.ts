@@ -396,9 +396,9 @@
         <translation>Iniciar sesión</translation>
     </message>
     <message id="orn-username">
-        <source>Username or e-mail address</source>
-        <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation>Nombre de usuario o correo</translation>
+        <source>Username</source>
+        <extracomment>A translated string should comprise less than 27 characters</extracomment>
+        <translation>Nombre de usuario</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not send your password to third-parties.</source>
