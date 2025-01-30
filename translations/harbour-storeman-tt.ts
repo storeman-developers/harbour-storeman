@@ -71,7 +71,7 @@
         <translation>Бетерү</translation>
     </message>
     <message id="orn-error">
-        <source>An error occured</source>
+        <source>An error occurred</source>
         <translation>Хата</translation>
     </message>
     <message id="orn-repo-add">
@@ -116,7 +116,7 @@
     </message>
     <message id="orn-dt-format">
         <source>yyyy-MM-dd hh:mm</source>
-        <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
+        <extracomment>Output format for the date labels.  For details visit https://doc.qt.io/qt-5/qdate.html#toString</extracomment>
         <translation>hh:mm, dd.MM.yyyy</translation>
     </message>
     <message id="orn-version-noavailable">
@@ -330,20 +330,21 @@
         <translation>Яңартыр өчен аска тартыгыз</translation>
     </message>
     <message id="orn-development">
-        <source>Development</source>
-        <translation>Җитештерүчәнлек</translation>
+        <source>Credits</source>
+        <extracomment>Acknowledgements for contributions - should be a noun</extracomment>
+        <translation>Катнашучылар</translation>
     </message>
     <message id="orn-developers">
         <source>Developers</source>
         <translation>Җитештерүчеләр</translation>
     </message>
     <message id="orn-appicon">
-        <source>Application Icon</source>
+        <source>Application icon</source>
         <translation>Кушымта иконкасы</translation>
     </message>
     <message id="orn-sources">
-        <source>Source Code</source>
-        <translation>Чыганак код</translation>
+        <source>Source code &amp; Issue tracker</source>
+        <translation>Чыганак кодны һәм проблемаларны күзәтү</translation>
     </message>
     <message id="orn-just-now">
         <source>Just now</source>
@@ -530,7 +531,7 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
-        <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
+        <extracomment>A template string for a dependency resolution error.  %1 is a dependency and %2 is a failed package.</extracomment>
         <translation>%2 өчен кирәкле %1 бәйлелеген үтәп булмый.</translation>
     </message>
     <message id="orn-backups">
@@ -998,7 +999,8 @@ Storeman серсүзне өченче затларга җибәрми.</transla
     </message>
     <message id="orn-donation">
         <source>Donation</source>
-        <translation>булышу</translation>
+        <extracomment>Should be a noun</extracomment>
+        <translation>Донатлау</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
@@ -1009,9 +1011,9 @@ Storeman серсүзне өченче затларга җибәрми.</transla
         <translation>%0 пакеты уңышлы яңартылды</translation>
     </message>
     <message id="orn-app-description-full">
-        <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues shall be reported preferably at GitHub or alternatively at OpenRepos (use the buttons below).&lt;/p&gt;</source>
-        <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software).</extracomment>
-        <translation>&lt;p&gt;SailfishOS өчен бердәм OpenRepos клиенты&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman&apos;ның чыганак коды &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;лицензиясе&lt;/a&gt; шартлары буенча тарала.&lt;/p&gt;&lt;p&gt;Тәкъдимнәрне GitHub һәм OpenRepos сайтлары аша җиткереп була (астагы төймәләр).&lt;/p&gt;</translation>
+        <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Any issues (bug reports, feature suggestions, help requests etc.) shall be filed at GitHub (you may use the button below).&lt;/p&gt;</source>
+        <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software), just keep it as &quot;(FLOSS)&quot;.</extracomment>
+        <translation>&lt;p&gt;SailfishOS өчен бердәм OpenRepos клиенты&lt;br /&gt;nbsp;&lt;/p&gt;&lt;p&gt;Storeman&apos;ның чыганак коды &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;лицензиясе&lt;/a&gt; шартлары буенча тарала.&lt;/p&gt;&lt;p&gt;Тәкъдимнәрне GitHub сайтлары аша җиткереп була (астагы төймәләр).&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>
