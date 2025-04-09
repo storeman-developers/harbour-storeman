@@ -32,14 +32,14 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     env:
       # Do not wait up to the default of 10 minutes for network timeouts in a workflow which runs ca. 10 minutes.
       SEGMENT_DOWNLOAD_TIMEOUT_MINS: 2
     steps:
 
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     # Caching Docker images is not ready yet, see 
     # https://github.com/storeman-developers/harbour-storeman-installer/blob/devel/cache-docker-images_github-ci.md
@@ -72,7 +72,7 @@ jobs:
         arch: i486
 
     - name: Upload build results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: RPM-build-results_SFOS4.2.0+
         path: RPMS/

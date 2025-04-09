@@ -71,7 +71,7 @@
         <translation>Удаление</translation>
     </message>
     <message id="orn-error">
-        <source>An error occured</source>
+        <source>An error occurred</source>
         <translation>Ошибка</translation>
     </message>
     <message id="orn-repo-add">
@@ -116,7 +116,7 @@
     </message>
     <message id="orn-dt-format">
         <source>yyyy-MM-dd hh:mm</source>
-        <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
+        <extracomment>Output format for the date labels.  For details visit https://doc.qt.io/qt-5/qdate.html#toString</extracomment>
         <translation>hh:mm, dd.MM.yyyy</translation>
     </message>
     <message id="orn-version-noavailable">
@@ -330,7 +330,8 @@
         <translation>Потяните вниз чтобы обновить</translation>
     </message>
     <message id="orn-development">
-        <source>Development</source>
+        <source>Credits</source>
+        <extracomment>Acknowledgements for contributions - should be a noun</extracomment>
         <translation>Разработка</translation>
     </message>
     <message id="orn-developers">
@@ -338,11 +339,11 @@
         <translation>Разработчики</translation>
     </message>
     <message id="orn-appicon">
-        <source>Application Icon</source>
+        <source>Application icon</source>
         <translation>Иконка приложения</translation>
     </message>
     <message id="orn-sources">
-        <source>Source Code</source>
+        <source>Source code &amp; Issue tracker</source>
         <translation>Исходный код</translation>
     </message>
     <message id="orn-just-now">
@@ -396,9 +397,9 @@
         <translation>Войти</translation>
     </message>
     <message id="orn-username">
-        <source>Username or e-mail address</source>
-        <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation>Имя пользователя или email</translation>
+        <source>Username</source>
+        <extracomment>A translated string should comprise less than 27 characters</extracomment>
+        <translation>Имя пользователя</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not send your password to third-parties.</source>
@@ -530,7 +531,7 @@ Storeman не передает ваш пароль третьим лицам.</t
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
-        <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
+        <extracomment>A template string for a dependency resolution error.  %1 is a dependency and %2 is a failed package.</extracomment>
         <translation>Невозможно удовлетворить зависимость %1, необходимую для %2.</translation>
     </message>
     <message id="orn-backups">
@@ -998,6 +999,7 @@ Storeman не передает ваш пароль третьим лицам.</t
     </message>
     <message id="orn-donation">
         <source>Donation</source>
+        <extracomment>Should be a noun</extracomment>
         <translation>Поддержать</translation>
     </message>
     <message id="orn-cover-updates-available">
@@ -1009,8 +1011,8 @@ Storeman не передает ваш пароль третьим лицам.</t
         <translation>Пакет %0 успешно обновлен</translation>
     </message>
     <message id="orn-app-description-full">
-        <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues shall be reported preferably at GitHub or alternatively at OpenRepos (use the buttons below).&lt;/p&gt;</source>
-        <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software).</extracomment>
+        <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Any issues (bug reports, feature suggestions, help requests etc.) shall be filed at GitHub (you may use the button below).&lt;/p&gt;</source>
+        <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software), just keep it as &quot;(FLOSS)&quot;.</extracomment>
         <translation>&lt;p&gt;Клиент OpenRepos для SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Исходный код Storeman распространяется в соответствии с условиями &lt;a href=&quot;%1&quot;&gt;лицензии&amp;nbsp;MIT&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Вы можете сообщить об ошибке на GitHub или OpenRepos (используйте кнопки ниже).&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
