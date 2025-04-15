@@ -2,10 +2,7 @@ name: CI - sfos4.2 branch on latest SDK (aarch64,armv7hl,i486)
 
 env:
   # For the available docker images, see https://github.com/CODeRUS/docker-sailfishos-platform-sdk
-  # But LATEST means here, "known to run on the latest SailfishOS release": Binaries for 4.3.0 are known to run on 5.0.0.
-  RELEASE: 4.3.0.12
-  # When LATEST has to be raised (e.g. to "RELEASE: 5.0.0.43"), create a new, separate workflow configuration file for 4.3.0,
-  # named: `build-sfos4.2_sdk4.3.yml` / "CI - sfos4.2 branch on SDK for 4.3.0 (aarch64,armv7hl,i486)"
+  RELEASE: 5.0.0.43
 
 on:
   push:
