@@ -1,11 +1,11 @@
-name: CI - sfos4.2 branch on latest SDK (aarch64,armv7hl,i486)
+name: CI - sfos4.2 branch on SDK for 4.3.0 (aarch64,armv7hl,i486)
 
 env:
   # For the available docker images, see https://github.com/CODeRUS/docker-sailfishos-platform-sdk
-  # But LATEST means here, "known to run on the latest SailfishOS release": Binaries for 4.3.0 are known to run on 5.0.0.
+  # Binaries for 4.3.0 are known to run on the most recent SFOS release (5.0.0 as of April 2025),
+  # but when this breaks a new CI workflow configuration file shall be created from this one for the
+  # "oldest common denominator"-SDK known to generate binaries which run on the then current SailfishOS release.
   RELEASE: 4.3.0.12
-  # When LATEST has to be raised (e.g. to "RELEASE: 5.0.0.43"), create a new, separate workflow configuration file for 4.3.0,
-  # named: `build-sfos4.2_sdk4.3.yml` / "CI - sfos4.2 branch on SDK for 4.3.0 (aarch64,armv7hl,i486)"
 
 on:
   push:
@@ -15,9 +15,6 @@ on:
       - 'beta*_sfos4.2/*'
       - 'alpha*_sfos4.2/*'
       - 'sfos4.2/*'
-  pull_request:
-    branches:
-      - sfos4.2
   # Allows to run this workflow manually from the Actions tab.
   #workflow_dispatch:
   # Rather set a new release in the spec file and a new tag in the format N/X.Y.Z (e.g., release2_sfos4.2/0.6.3) to build a release version again.
@@ -78,7 +75,7 @@ jobs:
     - name: Upload build results
       uses: actions/upload-artifact@v4
       with:
-        name: RPM-build-results_SFOS${{ env.RELEASE }}+
+        name: RPM-build-results_SFOS4.3.0+
         path: RPMS/
 
 # Just for fun, see https://feathericons.com/ and
