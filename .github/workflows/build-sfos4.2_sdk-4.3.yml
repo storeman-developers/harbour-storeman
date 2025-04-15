@@ -75,7 +75,7 @@ jobs:
     - name: Upload build results
       uses: actions/upload-artifact@v4
       with:
-        name: RPM-build-results_SFOS${{ env.RELEASE }}+
+        name: RPM-build-results_SFOS4.3.0+
         path: RPMS/
 
 # Just for fun, see https://feathericons.com/ and
