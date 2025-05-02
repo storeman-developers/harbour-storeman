@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="fi">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="fi">
 <context>
-    <name></name>
+    <name/>
     <message id="orn-notrated">
         <source>Not rated yet</source>
         <translation>Ei arvioita</translation>
@@ -73,7 +71,7 @@
         <translation>Poistetaan</translation>
     </message>
     <message id="orn-error">
-        <source>An error occured</source>
+        <source>An error occurred</source>
         <translation>Tapahtui virhe</translation>
     </message>
     <message id="orn-repo-add">
@@ -118,7 +116,7 @@
     </message>
     <message id="orn-dt-format">
         <source>yyyy-MM-dd hh:mm</source>
-        <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
+        <extracomment>Output format for the date labels.  For details visit https://doc.qt.io/qt-5/qdate.html#toString</extracomment>
         <translation>hh:mm, dd.MM.yyyy</translation>
     </message>
     <message id="orn-version-noavailable">
@@ -179,7 +177,7 @@
     </message>
     <message id="orn-cat-patches">
         <source>Patches</source>
-        <translation>Käyttöjärjestelmän muokkaukset</translation>
+        <translation>Muutostiedostot</translation>
     </message>
     <message id="orn-cat-photo-video">
         <source>Photo &amp; video</source>
@@ -332,7 +330,8 @@
         <translation>Virkistä vetämällä alas</translation>
     </message>
     <message id="orn-development">
-        <source>Development</source>
+        <source>Credits</source>
+        <extracomment>Acknowledgements for contributions - should be a noun</extracomment>
         <translation>Kehitys</translation>
     </message>
     <message id="orn-developers">
@@ -340,11 +339,11 @@
         <translation>Kehittäjät</translation>
     </message>
     <message id="orn-appicon">
-        <source>Application Icon</source>
+        <source>Application icon</source>
         <translation>Sovelluksen kuvake</translation>
     </message>
     <message id="orn-sources">
-        <source>Source Code</source>
+        <source>Source code &amp; Issue tracker</source>
         <translation>Lähdekoodi</translation>
     </message>
     <message id="orn-just-now">
@@ -353,17 +352,11 @@
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%n minute(s) ago</source>
-        <translation>
-            <numerusform>%n minuutti sitten</numerusform>
-            <numerusform>%n minuuttia sitten</numerusform>
-        </translation>
+        <translation><numerusform>%n minuutti sitten</numerusform><numerusform>%n minuuttia sitten</numerusform></translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%n hour(s) ago</source>
-        <translation>
-            <numerusform>%n tunti sitten</numerusform>
-            <numerusform>%n tuntia sitten</numerusform>
-        </translation>
+        <translation><numerusform>%n tunti sitten</numerusform><numerusform>%n tuntia sitten</numerusform></translation>
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
@@ -536,7 +529,7 @@
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
-        <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
+        <extracomment>A template string for a dependency resolution error.  %1 is a dependency and %2 is a failed package.</extracomment>
         <translation>%2 tarvitsee paketin %1, jota ei löydy</translation>
     </message>
     <message id="orn-backups">
@@ -718,10 +711,7 @@
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
-        <translation>
-            <numerusform>Suoritetaan %n operaatiota</numerusform>
-            <numerusform>Suoritetaan %n operaatiota</numerusform>
-        </translation>
+        <translation><numerusform>Suoritetaan %n operaatiota</numerusform><numerusform>Suoritetaan %n operaatiota</numerusform></translation>
     </message>
     <message id="orn-version-available">
         <source>Available version</source>
@@ -775,17 +765,11 @@
     </message>
     <message id="orn-interval-m" numerus="yes">
         <source>%n minute(s)</source>
-        <translation>
-            <numerusform>%n minuutti</numerusform>
-            <numerusform>%n minuuttia</numerusform>
-        </translation>
+        <translation><numerusform>%n minuutti</numerusform><numerusform>%n minuuttia</numerusform></translation>
     </message>
     <message id="orn-interval-h" numerus="yes">
         <source>%n hour(s)</source>
-        <translation>
-            <numerusform>%n tunti</numerusform>
-            <numerusform>%n tuntia</numerusform>
-        </translation>
+        <translation><numerusform>%n tunti</numerusform><numerusform>%n tuntia</numerusform></translation>
     </message>
     <message id="orn-tag-strikeout">
         <source>S</source>
@@ -794,7 +778,7 @@
     </message>
     <message id="orn-hint-commentfield">
         <source>Swipe to see all the tag buttons</source>
-        <translation>Pyyhkäise nähdäksesi kaikki avainsanapainikkeet</translation>
+        <translation>Pyyhkäise nähdäksesi kaikki tunnistepainikkeet</translation>
     </message>
     <message id="orn-dcm-user2">
         <source>Deep Thought</source>
@@ -837,11 +821,11 @@
     </message>
     <message id="orn-login2rate">
         <source>Log in to rate the application</source>
-        <translation>Kirjaudu arvostelleksesi sovellus</translation>
+        <translation>Kirjaudu arvostellaksesi sovellus</translation>
     </message>
     <message id="orn-hint-rating">
         <source>Tap to rate the application</source>
-        <translation>Paina arvostelleksesi sovellus</translation>
+        <translation>Paina arvostellaksesi sovellus</translation>
     </message>
     <message id="orn-local-rpms">
         <source>Local RPM files</source>
@@ -1013,6 +997,7 @@
     </message>
     <message id="orn-donation">
         <source>Donation</source>
+        <extracomment>Should be a noun</extracomment>
         <translation>lahjoitus</translation>
     </message>
     <message id="orn-cover-updates-available">
@@ -1024,8 +1009,8 @@
         <translation>Paketti %0 päivitettiin onnistuneesti</translation>
     </message>
     <message id="orn-app-description-full">
-        <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues shall be reported preferably at GitHub or alternatively at OpenRepos (use the buttons below).&lt;/p&gt;</source>
-        <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software).</extracomment>
+        <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Any issues (bug reports, feature suggestions, help requests etc.) shall be filed at GitHub (you may use the button below).&lt;/p&gt;</source>
+        <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software), just keep it as &quot;(FLOSS)&quot;.</extracomment>
         <translation>&lt;p&gt;OpenRepos-sovelluskauppa SailfishOS:lle&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman on avoimen lähdekoodin sovellus, joka käyttää &lt;a href=&apos;%1&apos;&gt;MIT-lisenssiä&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Voit raportoida ongelmista GitHub-projektissa, tai OpenRepos-sivulla (allaolevat painikkeet).&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
@@ -1066,15 +1051,15 @@
     </message>
     <message id="orn-check-for-self-updates-switch">
         <source>Check for self-updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Tarkista sovelluksen päivitykset</translation>
     </message>
     <message id="orn-check-for-self-updates-descr">
         <source>Enable the Storeman OBS repository to check for Storeman updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Ota Storeman OBS -pakettilähde käyttöön Storemanin päivitysten tarkistusta varten</translation>
     </message>
     <message id="orn-storeman-repo-name">
         <source>Storeman OBS Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Storeman OBS -pakettilähde</translation>
     </message>
 </context>
 </TS>
