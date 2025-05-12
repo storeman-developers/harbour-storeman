@@ -6,7 +6,7 @@ Note that for Storeman principally translations designated with a country code o
 
 [Transifex](https://app.transifex.com/mentaljam/harbour-storeman) is the preferred way of submitting translations.  Please do not send pull requests (PRs) with translations directly to GitHub, if you have a Transifex account.
 
-If you do not want to use Atlassian's Transifex, alternatives are [Qt Linguist](https://doc.qt.io/qt-5/linguist-translators.html) or to perform this manually, which is tediously and error prone, hence only suitable for small changes.  The resulting changes must be submitted as a pull request, unfortunately.
+If you do not want to use Atlassian's Transifex, alternatives are [Qt Linguist](https://doc.qt.io/qt-5/linguist-translators.html) or to perform this manually, which is tedious and error prone, hence only suitable for small changes.  The resulting changes must be submitted as a pull request, unfortunately.
 
 ### Testing translations
 
