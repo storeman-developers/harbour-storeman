@@ -344,7 +344,7 @@
     </message>
     <message id="orn-sources">
         <source>Source code &amp; Issue tracker</source>
-        <translation>Lähdekoodin arkisto ja ongelmien seuranta</translation>
+        <translation>Lähdekoodi ja ongelmien seuranta</translation>
     </message>
     <message id="orn-just-now">
         <source>Just now</source>
