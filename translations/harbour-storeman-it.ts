@@ -993,7 +993,7 @@
     </message>
     <message id="orn-myrepository">
         <source>My repository</source>
-        <translation>I miei repository</translation>
+        <translation>Repository attivi</translation>
     </message>
     <message id="orn-donation">
         <source>Donation</source>
