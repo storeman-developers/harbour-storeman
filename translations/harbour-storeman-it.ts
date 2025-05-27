@@ -1,11 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="it">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="it">
 <context>
-    <name></name>
+    <name/>
     <message id="orn-notrated">
         <source>Not rated yet</source>
-        <translation>Nessun voto</translation>
+        <translation>Ancora nessun voto</translation>
     </message>
     <message id="orn-repositories">
         <source>Repositories</source>
@@ -73,7 +71,7 @@
         <translation>Rimozione</translation>
     </message>
     <message id="orn-error">
-        <source>An error occured</source>
+        <source>An error occurred</source>
         <translation>Errore</translation>
     </message>
     <message id="orn-repo-add">
@@ -118,7 +116,7 @@
     </message>
     <message id="orn-dt-format">
         <source>yyyy-MM-dd hh:mm</source>
-        <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
+        <extracomment>Output format for the date labels.  For details visit https://doc.qt.io/qt-5/qdate.html#toString</extracomment>
         <translation>dd MMM yyyy hh:mm</translation>
     </message>
     <message id="orn-version-noavailable">
@@ -332,7 +330,8 @@
         <translation>Trascina in basso per ricaricare</translation>
     </message>
     <message id="orn-development">
-        <source>Development</source>
+        <source>Credits</source>
+        <extracomment>Acknowledgements for contributions - should be a noun</extracomment>
         <translation>Sviluppo</translation>
     </message>
     <message id="orn-developers">
@@ -340,11 +339,11 @@
         <translation>Sviluppatori</translation>
     </message>
     <message id="orn-appicon">
-        <source>Application Icon</source>
+        <source>Application icon</source>
         <translation>Icona applicazione</translation>
     </message>
     <message id="orn-sources">
-        <source>Source Code</source>
+        <source>Source code &amp; Issue tracker</source>
         <translation>Codice sorgente</translation>
     </message>
     <message id="orn-just-now">
@@ -353,17 +352,11 @@
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%n minute(s) ago</source>
-        <translation>
-            <numerusform>%n minuto fa</numerusform>
-            <numerusform>%n minuti fa</numerusform>
-        </translation>
+        <translation><numerusform>%n minuto fa</numerusform><numerusform>%n minuti fa</numerusform><numerusform>%n minuti fa</numerusform></translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%n hour(s) ago</source>
-        <translation>
-            <numerusform>%n ora fa</numerusform>
-            <numerusform>%n ore fa</numerusform>
-        </translation>
+        <translation><numerusform>%n ora fa</numerusform><numerusform>%n ore fa</numerusform><numerusform>%n ore fa</numerusform></translation>
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
@@ -536,7 +529,7 @@
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
-        <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
+        <extracomment>A template string for a dependency resolution error.  %1 is a dependency and %2 is a failed package.</extracomment>
         <translation>Niente fornisce %1 richiesto da %2</translation>
     </message>
     <message id="orn-backups">
@@ -718,10 +711,7 @@
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
-        <translation>
-            <numerusform>%n operazione in corso</numerusform>
-            <numerusform>%n operazioni in corso</numerusform>
-        </translation>
+        <translation><numerusform>%n operazione in corso</numerusform><numerusform>%n operazioni in corso</numerusform><numerusform>%n operazioni in corso</numerusform></translation>
     </message>
     <message id="orn-version-available">
         <source>Available version</source>
@@ -775,17 +765,11 @@
     </message>
     <message id="orn-interval-m" numerus="yes">
         <source>%n minute(s)</source>
-        <translation>
-            <numerusform>%n minuto</numerusform>
-            <numerusform>%n minuti</numerusform>
-        </translation>
+        <translation><numerusform>%n minuto</numerusform><numerusform>%n minuti</numerusform><numerusform>%n minuti</numerusform></translation>
     </message>
     <message id="orn-interval-h" numerus="yes">
         <source>%n hour(s)</source>
-        <translation>
-            <numerusform>%n ora</numerusform>
-            <numerusform>%n ore</numerusform>
-        </translation>
+        <translation><numerusform>%n ora</numerusform><numerusform>%n ore</numerusform><numerusform>%n ore</numerusform></translation>
     </message>
     <message id="orn-tag-strikeout">
         <source>S</source>
@@ -1009,10 +993,11 @@
     </message>
     <message id="orn-myrepository">
         <source>My repository</source>
-        <translation>Le mie repository</translation>
+        <translation>Repository attivi</translation>
     </message>
     <message id="orn-donation">
         <source>Donation</source>
+        <extracomment>Should be a noun</extracomment>
         <translation>Dona</translation>
     </message>
     <message id="orn-cover-updates-available">
@@ -1024,57 +1009,57 @@
         <translation>%0 è stato aggiornato correttamente</translation>
     </message>
     <message id="orn-app-description-full">
-        <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues shall be reported preferably at GitHub or alternatively at OpenRepos (use the buttons below).&lt;/p&gt;</source>
-        <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software).</extracomment>
-        <translation type="unfinished"></translation>
+        <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Any issues (bug reports, feature suggestions, help requests etc.) shall be filed at GitHub (you may use the button below).&lt;/p&gt;</source>
+        <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software), just keep it as &quot;(FLOSS)&quot;.</extracomment>
+        <translation>&lt;p&gt;Client per OpenRepos per SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman è software libero (FLOSS) sotto i termini della &lt;a href=&apos;%1&apos;&gt;licenza MIT&amp;nbsp;&lt;/a&gt;.&lt;/p&gt;&lt;p&gt; Qualsiasi problema (sia esso una segnalazione di un bug, un suggerimento, una richiesta d&apos;aiuto ecc.) va segnalato su GitHub ( puoi usare il pulsante qui di fianco).&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra dettagli</translation>
     </message>
     <message id="orn-unused-repos-found">
         <source>Unused repositories found</source>
-        <translation type="unfinished"></translation>
+        <translation>Repository inutilizzati trovati</translation>
     </message>
     <message id="orn-no-unused-repos">
         <source>Unused repositories not found</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessun repository inutilizzato trovato</translation>
     </message>
     <message id="orn-search-unused-repos">
         <source>Search for unused</source>
-        <translation type="unfinished"></translation>
+        <translation>Cerca per inutilizzati</translation>
     </message>
     <message id="orn-unused-repos-switch">
         <source>Search for unused repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Cerca per repository inutilizzati</translation>
     </message>
     <message id="orn-unused-repos-switch-descr">
         <source>Search for unused repositories after removing packages.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cerca per repository inutilizzati dopo aver rimosso i pacchetti.</translation>
     </message>
     <message id="orn-unused-repos">
         <source>Unused repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Repository inutilizzati</translation>
     </message>
     <message id="orn-unused-repos-text">
         <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Non ci sono pacchetti installati per i prossimi repository.&lt;/p&gt;&lt;p&gt;Vuoi rimuoverli adesso?&lt;/p&gt;</translation>
     </message>
     <message id="orn-updates-check-interval-minimum">
         <source>At least 10 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>Almeno 10 minuti</translation>
     </message>
     <message id="orn-check-for-self-updates-switch">
         <source>Check for self-updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Controlla per aggiornamenti automatici</translation>
     </message>
     <message id="orn-check-for-self-updates-descr">
         <source>Enable the Storeman OBS repository to check for Storeman updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Abilita il repository OBS di storeman per controllare gli aggiornamenti di Storeman</translation>
     </message>
     <message id="orn-storeman-repo-name">
         <source>Storeman OBS Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Repository OBS di Storeman</translation>
     </message>
 </context>
 </TS>
