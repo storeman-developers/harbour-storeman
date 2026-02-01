@@ -131,11 +131,11 @@
     </message>
     <message id="orn-author-apps">
         <source>More by %0</source>
-        <translation type="unfinished"></translation>
+        <translation>Mer av %0</translation>
     </message>
     <message id="orn-cat-coding-competition">
         <source>Coding Competition</source>
-        <translation type="unfinished"></translation>
+        <translation>Kodekonkurranse</translation>
     </message>
     <message id="orn-cat-applications">
         <source>Applications</source>
@@ -151,7 +151,7 @@
     </message>
     <message id="orn-cat-business">
         <source>Business</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontor</translation>
     </message>
     <message id="orn-cat-city-guides-maps">
         <source>City guides &amp; maps</source>
@@ -179,7 +179,7 @@
     </message>
     <message id="orn-cat-patches">
         <source>Patches</source>
-        <translation type="unfinished"></translation>
+        <translation>Patcher</translation>
     </message>
     <message id="orn-cat-photo-video">
         <source>Photo &amp; video</source>
@@ -203,7 +203,7 @@
     </message>
     <message id="orn-cat-utilities">
         <source>Utilities</source>
-        <translation type="unfinished"></translation>
+        <translation>Verketøy</translation>
     </message>
     <message id="orn-cat-games">
         <source>Games</source>
@@ -243,7 +243,7 @@
     </message>
     <message id="orn-cat-trivia">
         <source>Trivia</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuriosa</translation>
     </message>
     <message id="orn-cat-translations">
         <source>Translations</source>
@@ -259,7 +259,7 @@
     </message>
     <message id="orn-update-available">
         <source>Update available</source>
-        <translation>Oppdatering tilgjengelig </translation>
+        <translation>Oppdatering tilgjengelig</translation>
     </message>
     <message id="orn-update">
         <source>Update</source>
@@ -288,7 +288,7 @@
     </message>
     <message id="orn-searchpage-placeholder-noresults-hint">
         <source>Try to change search keywords</source>
-        <translation>Forsøk å endre på  søkeord</translation>
+        <translation>Forsøk å endre på søkeord</translation>
     </message>
     <message id="orn-searchfield-placeholder">
         <source>Search</source>
@@ -309,7 +309,7 @@
     </message>
     <message id="orn-translations">
         <source>Translations</source>
-        <translation>Språk</translation>
+        <translation>Oversettelser</translation>
     </message>
     <message id="orn-coordinators">
         <source>Coordinators</source>
@@ -321,7 +321,7 @@
     </message>
     <message id="orn-reviewers">
         <source>Reviewers</source>
-        <translation type="unfinished"></translation>
+        <translation>Redigenter</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
@@ -329,11 +329,11 @@
     </message>
     <message id="orn-pull-refresh">
         <source>Pull down to refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Dra ned for å oppdatere</translation>
     </message>
     <message id="orn-development">
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>Utvikling</translation>
     </message>
     <message id="orn-developers">
         <source>Developers</source>
@@ -341,7 +341,7 @@
     </message>
     <message id="orn-appicon">
         <source>Application Icon</source>
-        <translation>Applikasjons icon</translation>
+        <translation>Applikasjonsikon</translation>
     </message>
     <message id="orn-sources">
         <source>Source Code</source>
@@ -353,22 +353,22 @@
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%n minute(s) ago</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n minutt siden</numerusform>
+            <numerusform>%n minutter siden</numerusform>
         </translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%n hour(s) ago</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n time siden</numerusform>
+            <numerusform>%n timer siden</numerusform>
         </translation>
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
         <extracomment>Active label to navigate to the original comment - should be a noun</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Svar til %0</translation>
     </message>
     <message id="orn-categories">
         <source>Categories</source>
@@ -376,7 +376,7 @@
     </message>
     <message id="orn-category-noapps">
         <source>Currently there are no apps in this category</source>
-        <translation type="unfinished"></translation>
+        <translation>Det finnes foreløpig ingen apper i denne kategorien.</translation>
     </message>
     <message id="orn-cat-unknown2">
         <source>Unknown category</source>
@@ -410,23 +410,23 @@
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not send your password to third-parties.</source>
-        <translation type="unfinished"></translation>
+        <translation>Logg inn på OpenRepos.net for å kommentere apper og svare på andres kommentarer.&lt;br /&gt;&lt;br /&gt;Storeman sender ikke passordet ditt til tredjepart.</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
-        <translation>Du er pålogget openrepos.net</translation>
+        <translation>Du er pålogget OpenRepos.net</translation>
     </message>
     <message id="orn-loggedout-message">
         <source>You have logged out from the OpenRepos.net</source>
-        <translation>Du er utlogget fra OpenRepos.net</translation>
+        <translation>Du er logget ut fra OpenRepos.net</translation>
     </message>
     <message id="orn-login-error-title">
         <source>Login error</source>
-        <translation>Feil ved innlogging</translation>
+        <translation>Feil ved pålogging</translation>
     </message>
     <message id="orn-login-error-message">
         <source>Could not log in the OpenRepos.net - check your credentials and network connection</source>
-        <translation>Kunne ikke logge på openrepos.net. Kontroller brukernavn og passord. Sjekk internett forbindelsen din.</translation>
+        <translation>Kunne ikke logge på OpenRepos.net - Kontroller brukernavn, passord og internettforbindelsen din.</translation>
     </message>
     <message id="orn-loggedin-menu-item">
         <source>Logged in as %0</source>
@@ -449,7 +449,7 @@
     <message id="orn-comment-update">
         <source>Update</source>
         <extracomment>Update a comment</extracomment>
-        <translation>Oppdatering</translation>
+        <translation>Oppdater</translation>
     </message>
     <message id="orn-comment-send">
         <source>Send</source>
@@ -465,7 +465,7 @@
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
-        <translation>Reautorisere</translation>
+        <translation>Klikk for å reautorisere</translation>
     </message>
     <message id="orn-enable-all">
         <source>Enable all</source>
@@ -489,11 +489,11 @@
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
-        <translation>Program  lagt til </translation>
+        <translation>Program  lagt til i bokmerker</translation>
     </message>
     <message id="orn-bookmarks-removed">
         <source>The app was removed from bookmarks</source>
-        <translation>Programmet ble fjernet fra bookmarks</translation>
+        <translation>Programmet ble fjernet fra bokmerker</translation>
     </message>
     <message id="orn-no-bookmarks">
         <source>Your bookmarked applications will be shown here</source>
@@ -505,15 +505,15 @@
     </message>
     <message id="orn-no-repos">
         <source>No OpenRepos repositories have been added yet</source>
-        <translation type="unfinished"></translation>
+        <translation>Det er ingen OpenRepos‑pakkebrønner lagt til ennå.</translation>
     </message>
     <message id="orn-add-repo-hint">
         <source>You can add a repository from an application page</source>
-        <translation type="unfinished"></translation>
+        <translation>Du kan legge til en pakkebrønn fra appens side.</translation>
     </message>
     <message id="orn-refresh-cache">
         <source>Refresh cache</source>
-        <translation type="unfinished"></translation>
+        <translation>Last inn cache på nytt</translation>
     </message>
     <message id="orn-tag-underscore">
         <source>U</source>
@@ -537,7 +537,7 @@
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
         <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ingenting tilbyr %1 som kreves av %2.</translation>
     </message>
     <message id="orn-backups">
         <source>Backups</source>
@@ -545,19 +545,19 @@
     </message>
     <message id="orn-backup-description">
         <source>Backup and restore repos and installed apps</source>
-        <translation type="unfinished"></translation>
+        <translation>Sikkerhetskopier og gjenopprett arkiver og installerte apper</translation>
     </message>
     <message id="orn-create-backup">
         <source>Create a backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Lag en sikkerhetskopi</translation>
     </message>
     <message id="orn-backup-error">
         <source>Backup error</source>
-        <translation type="unfinished"></translation>
+        <translation>Feil ved sikkerhetskopiering</translation>
     </message>
     <message id="orn-backup-error-directory">
         <source>Could not create directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Kunne ikke opprette katalog</translation>
     </message>
     <message id="orn-restore-title">
         <source>Restore from a file</source>
@@ -569,67 +569,69 @@
     </message>
     <message id="orn-restore-hint">
         <source>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gjenopprett OpenRepos‑pakkebrønner og installerte apper fra valgt fil. Denne handlingen påvirker ikke dine nåværende depoter og vil ikke fjerne installerte apper.</translation>
     </message>
     <message id="orn-created">
         <source>Created</source>
-        <translation type="unfinished"></translation>
+        <translation>Opprettet</translation>
     </message>
     <message id="orn-total-repos">
         <source>Total repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Totalt antall pakkebrønner</translation>
     </message>
     <message id="orn-details">
         <source>Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Detaljer</translation>
     </message>
     <message id="orn-backups-placeholder">
         <source>Backups will be shown here</source>
-        <translation type="unfinished"></translation>
+        <translation>Sikkerhetskopier vil vises her</translation>
     </message>
     <message id="orn-restoring-repos">
         <source>Restoring repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Gjenoppretter pakkebrønner</translation>
     </message>
     <message id="orn-refreshing-repos">
         <source>Refreshing repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Oppdaterer pakkebrønner</translation>
     </message>
     <message id="orn-searching-packages">
         <source>Searching packages</source>
-        <translation type="unfinished"></translation>
+        <translation>Søker etter pakker</translation>
     </message>
     <message id="orn-installing-repos">
         <source>Installing packages</source>
-        <translation type="unfinished"></translation>
+        <translation>Installerer pakker</translation>
     </message>
     <message id="orn-restoring-title">
         <source>Restoring</source>
-        <translation type="unfinished"></translation>
+        <translation >Gjenoppretter</translation>
     </message>
     <message id="orn-success-backup">
         <source>Successful backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Sikkerhetskopiering fullført</translation>
     </message>
     <message id="orn-success-restore">
         <source>Successful restore</source>
-        <translation type="unfinished"></translation>
+        <translation>Gjenoppretting fullført</translation>
     </message>
     <message id="orn-installed-packages">
         <source>Installed packages</source>
-        <translation type="unfinished"></translation>
+        <translation>Installerte pakker</translation>
     </message>
     <message id="orn-login2comment">
         <source>Login to comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Logg på for å kommentere</translation>
     </message>
     <message id="orn-backup">
         <source>Backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Sikkerhetskopi</translation>
     </message>
     <message id="orn-backup-hint">
         <source>&lt;h2&gt;Backup to a file&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;h2&gt;Backup til fil&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup lar deg lagre dine nåværende OpenRepos‑pakkebrønner, installerte apper og bokmerker og gjenopprette dem senere (for eksempel etter tilbakestilling til fabrikkinnstillinger). En backup er en lokal fil som lagres i
+&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt;-mappen.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Obs!&lt;/b&gt; Du bør kopiere backupene manuelt til et trygt sted før du utfører tilbakestilling til fabrikkinnstillinger. Dette kan være SD‑kort, ekstern lagring, skytjeneste eller lignende.&lt;/p&gt;
+</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
@@ -637,51 +639,51 @@
     </message>
     <message id="orn-pmstate-addingrepo">
         <source>Adding repo %0</source>
-        <translation type="unfinished"></translation>
+        <translation>Legger til pakkebrønn %0</translation>
     </message>
     <message id="orn-pmstate-removingrepo">
         <source>Removing repo %0</source>
-        <translation type="unfinished"></translation>
+        <translation>Fjerner pakkebrønn %0</translation>
     </message>
     <message id="orn-pmstate-enablingrepo">
         <source>Enabling repo %0</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktiverer pakkebrønn %0</translation>
     </message>
     <message id="orn-pmstate-disablingrepo">
         <source>Disabling repo %0</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Deaktiverer pakkebrønn %0</translation>
     </message>
     <message id="orn-pmstate-refreshingrepo">
         <source>Refreshing %0</source>
-        <translation type="unfinished"></translation>
+        <translation>Oppdaterer %0</translation>
     </message>
     <message id="orn-pmstate-installingpackage">
         <source>Installing package %0</source>
-        <translation type="unfinished"></translation>
+        <translation>Installerer pakke %0</translation>
     </message>
     <message id="orn-pmstate-removingpackage">
         <source>Removing package %0</source>
-        <translation type="unfinished"></translation>
+        <translation>Fjerner pakke %0</translation>
     </message>
     <message id="orn-pmstate-updatingpackage">
         <source>Updating package %0</source>
-        <translation type="unfinished"></translation>
+        <translation>Oppdaterer pakke %0</translation>
     </message>
     <message id="orn-repo-removed">
         <source>The repository %0 was removed</source>
-        <translation type="unfinished"></translation>
+        <translation>Pakkebrønn %0 ble fjernet</translation>
     </message>
     <message id="orn-repo-added">
         <source>The repository %0 was added</source>
-        <translation type="unfinished"></translation>
+        <translation>Pakkebrønn %0 ble lagt til</translation>
     </message>
     <message id="orn-repo-disabled">
         <source>The repository %0 was disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Pakkebrønn %0 ble deaktivert</translation>
     </message>
     <message id="orn-repo-enabled">
         <source>The repository %0 was enabled</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pakkebrønn %0 ble aktivert</translation>
     </message>
     <message id="orn-not-installed">
         <source>Not installed</source>
@@ -701,7 +703,7 @@
     </message>
     <message id="orn-version-available-global">
         <source>Available in other repositories</source>
-        <translation>Tilgjengelig i  andre pakkebrønner</translation>
+        <translation>Tilgjengelig i andre pakkebrønner</translation>
     </message>
     <message id="orn-installed-apps-description">
         <source>Only from enabled repositories</source>
@@ -718,9 +720,9 @@
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n operasjon pågår</numerusform>
+            <numerusform>%n operasjoner pågår</numerusform>
         </translation>
     </message>
     <message id="orn-version-available">
@@ -755,7 +757,7 @@
     </message>
     <message id="orn-comments-nocomments">
         <source>There is nothing here yet</source>
-        <translation>Intet her for,</translation>
+        <translation>Ingenting her ennå</translation>
     </message>
     <message id="orn-settings">
         <source>Settings</source>
@@ -767,24 +769,24 @@
     </message>
     <message id="orn-updates-notification-switch">
         <source>Show updates notification</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis oppdateringsvarsler</translation>
     </message>
     <message id="orn-updates-check-interval">
         <source>Updates check interval</source>
-        <translation type="unfinished"></translation>
+        <translation>Intervall for å se etter oppdateringer</translation>
     </message>
     <message id="orn-interval-m" numerus="yes">
         <source>%n minute(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n minutt</numerusform>
+            <numerusform>%n minutter</numerusform>
         </translation>
     </message>
     <message id="orn-interval-h" numerus="yes">
         <source>%n hour(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n time</numerusform>
+            <numerusform>%n timer</numerusform>
         </translation>
     </message>
     <message id="orn-tag-strikeout">
@@ -809,155 +811,155 @@
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Hva er svaret på det ultimate spørsmålet om livet, universet og alt?</translation>
     </message>
     <message id="orn-hint-commentdelegate-created">
         <source>7.5 million years ago</source>
-        <translation type="unfinished"></translation>
+        <translation>7.5 millioner år siden</translation>
     </message>
     <message id="orn-hint-commentdelegate">
         <source>Tap to navigate to the replied comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Trykk for å gå til kommentaren det ble svart på.</translation>
     </message>
     <message id="orn-tags">
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Emneknagger</translation>
     </message>
     <message id="orn-tag-apps">
         <source>Tagged Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Emnemerkede applikasjoner</translation>
     </message>
     <message id="orn-rate-app">
         <source>Rate the application</source>
-        <translation type="unfinished"></translation>
+        <translation>Vurder applikasjon</translation>
     </message>
     <message id="orn-vote-send">
         <source>Your vote has been sent</source>
-        <translation type="unfinished"></translation>
+        <translation>Din stemme er registrert</translation>
     </message>
     <message id="orn-login2rate">
         <source>Log in to rate the application</source>
-        <translation type="unfinished"></translation>
+        <translation>Logg inn for å vurdere applikasjonen</translation>
     </message>
     <message id="orn-hint-rating">
         <source>Tap to rate the application</source>
-        <translation type="unfinished"></translation>
+        <translation>Trykk for å vurdere applikasjonen</translation>
     </message>
     <message id="orn-local-rpms">
         <source>Local RPM files</source>
-        <translation type="unfinished"></translation>
+        <translation>Lokale RPM-filer</translation>
     </message>
     <message id="orn-delete">
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Slett</translation>
     </message>
     <message id="orn-deleting">
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation>Sletter</translation>
     </message>
     <message id="orn-no-local-rpms">
         <source>No local RPM files were found</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingen lokale RPM-filer funnet</translation>
     </message>
     <message id="orn-deletion-error">
         <source>Failed to delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Sletting feilet</translation>
     </message>
     <message id="orn-remove-all">
         <source>Remove all</source>
-        <translation type="unfinished"></translation>
+        <translation>Fjern alle</translation>
     </message>
     <message id="orn-removing-all">
         <source>Removing all</source>
-        <translation type="unfinished"></translation>
+        <translation>Fjerner alle</translation>
     </message>
     <message id="orn-repo-allremoved">
         <source>All repositories were removed</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle pakkebrønner ble fjernet</translation>
     </message>
     <message id="orn-search-on-openrepos">
         <source>Search on OpenRepos.net</source>
-        <translation type="unfinished"></translation>
+        <translation>Søk på OpenRepos.net</translation>
     </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Se etter oppdateringer</translation>
     </message>
     <message id="orn-check-for-updates-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation type="unfinished"></translation>
+        <translation>Oppdateringer sjekkes bare når Storeman kjører</translation>
     </message>
     <message id="orn-smart-check-switch">
         <source>Smart check</source>
-        <translation type="unfinished"></translation>
+        <translation>Smart sjekk</translation>
     </message>
     <message id="orn-smart-check-descr">
         <source>Use the OpenRepos.net API to determine if there are new updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Bruk OpenRepos.net‑APIet for å avgjøre om det finnes nye oppdateringer</translation>
     </message>
     <message id="orn-reload">
         <source>Reload</source>
-        <translation type="unfinished"></translation>
+        <translation>Last på nytt</translation>
     </message>
     <message id="orn-no-packages">
         <source>No packages available</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ingen pakker tilgjengelig</translation>
     </message>
     <message id="orn-error-comment-sending">
         <source>Error sending comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Feil ved sending av kommentar</translation>
     </message>
     <message id="orn-error-comment-deletion">
         <source>Error deleting comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Feil ved sletting av kommentar</translation>
     </message>
     <message id="orn-error-network">
         <source>Network error</source>
-        <translation type="unfinished"></translation>
+        <translation>Nettverksfeil</translation>
     </message>
     <message id="orn-hint-bookmark">
         <source>Tap to bookmark the application</source>
-        <translation type="unfinished"></translation>
+        <translation>Trykk for å bokmerke applikasjonen</translation>
     </message>
     <message id="orn-bad-appid">
         <source>Invalid package ID %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ugyldig pakke‑ID %1</translation>
     </message>
     <message id="orn-backup-filenameph">
         <source>A file name for backup</source>
-        <translation type="unfinished"></translation>
+        <translation>Et filnavn for sikkerhetskopi</translation>
     </message>
     <message id="orn-file-exists">
         <source>File already exists</source>
-        <translation type="unfinished"></translation>
+        <translation>Filen eksisterer allerede</translation>
     </message>
     <message id="orn-backup-items">
         <source>What to backup</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hva som skal sikkerhetskopieres</translation>
     </message>
     <message id="orn-backup-apps">
         <source>Installed applications</source>
-        <translation type="unfinished">Installerte programmer</translation>
+        <translation type="unfinished">Installerte applikasjoner</translation>
     </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Trykk igjen for å lukke tipset</translation>
     </message>
     <message id="orn-mainpage">
         <source>Main page</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hovedside</translation>
     </message>
     <message id="orn-show-recent-switch">
         <source>Show recently updated on start</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis nylig oppdatert ved oppstart</translation>
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>
-        <translation type="unfinished"></translation>
+        <translation>Åpne siden med nylig oppdaterte pakker ved oppstart</translation>
     </message>
     <message id="orn-mainpage-order">
         <source>Order items</source>
-        <translation>Bestill gjenstander</translation>
+        <translation>Bestill goppføringer</translation>
     </message>
     <message id="orn-reset">
         <source>Reset</source>
@@ -965,7 +967,7 @@
     </message>
     <message id="orn-mainpage-order-description">
         <source>Drag items to change their order</source>
-        <translation type="unfinished"></translation>
+        <translation>Dra oppføringer for å endre deres rekkefølge</translation>
     </message>
     <message id="orn-cat-adult-content">
         <source>Adult Content</source>
@@ -977,7 +979,7 @@
     </message>
     <message id="orn-categories-filter-descr">
         <source>Select which categories to show</source>
-        <translation type="unfinished"></translation>
+        <translation>Velg hvilke kategorier som skal vises</translation>
     </message>
     <message id="orn-pmstate-refreshingcache">
         <source>Refreshing of cache</source>
@@ -985,11 +987,11 @@
     </message>
     <message id="orn-refresh-cache-switch">
         <source>Refresh cache after system upgrade</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Oppfrisk mellomlagring etter systemoppgadering</translation>
     </message>
     <message id="orn-refresh-cache-switch-descr">
         <source>Force refreshing of cache of all repositories after system upgrade</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tvungen oppfrisking av mellomlagring for alle pakkebrønner etter systemoppgradering</translation>
     </message>
     <message id="orn-save-password">
         <source>Save password</source>
@@ -997,84 +999,84 @@
     </message>
     <message id="orn-save-password-help">
         <source>Save password to the encrypted device storage to perform automatic re-login.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lagre passord i enhetens krypterte lagring for automatisk pålogging. </translation>
     </message>
     <message id="orn-share-link">
         <source>Share link</source>
-        <translation type="unfinished"></translation>
+        <translation>Del lenke</translation>
     </message>
     <message id="orn-repository">
         <source>Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Pakkebrønner</translation>
     </message>
     <message id="orn-myrepository">
         <source>My repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Mine pakkebrønner</translation>
     </message>
     <message id="orn-donation">
         <source>Donation</source>
-        <translation type="unfinished"></translation>
+        <translation>Donasjon</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
-        <translation type="unfinished">Oppdateringer tilgjengelig</translation>
+        <translation>Oppdateringer er tilgjengelig</translation>
     </message>
     <message id="orn-package-updated">
         <source>Package %0 was successfully updated</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pakke %0 ble oppdatert</translation>
     </message>
     <message id="orn-app-description-full">
         <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues shall be reported preferably at GitHub or alternatively at OpenRepos (use the buttons below).&lt;/p&gt;</source>
         <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software).</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;OpenRepos‑klientapplikasjon for SailfishOSOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman er fri programvare (FLOSS), distribuert under vilkårene i &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;lisensen&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Feil bør rapporteres helst på GitHub eller alternativt på OpenRepos (bruk knappene nedenfor).&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis detaljer</translation>
     </message>
     <message id="orn-unused-repos-found">
         <source>Unused repositories found</source>
-        <translation type="unfinished"></translation>
+        <translation>Ubrukte pakkebrønner funnet</translation>
     </message>
     <message id="orn-no-unused-repos">
         <source>Unused repositories not found</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingen ubrukte pakkebrønner funnet</translation>
     </message>
     <message id="orn-search-unused-repos">
         <source>Search for unused</source>
-        <translation type="unfinished"></translation>
+        <translation>Søk etter ubrukte</translation>
     </message>
     <message id="orn-unused-repos-switch">
         <source>Search for unused repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Søk etter ubrukte pakkebrønner</translation>
     </message>
     <message id="orn-unused-repos-switch-descr">
         <source>Search for unused repositories after removing packages.</source>
-        <translation type="unfinished"></translation>
+        <translation>Søk etter ubrukte pakkebrønner etter fjerning av pakker.</translation>
     </message>
     <message id="orn-unused-repos">
         <source>Unused repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Ubrukte pakkebrønner</translation>
     </message>
     <message id="orn-unused-repos-text">
         <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Det finnes ingen installerte pakker for disse pakkebrønnene.&lt;/p&gt;&lt;p&gt;Vil du fjerne dem nå?&lt;/p&gt;</translation>
     </message>
     <message id="orn-updates-check-interval-minimum">
         <source>At least 10 minutes</source>
-        <translation type="unfinished"></translation>
+        <translation>Minst 10 minutter</translation>
     </message>
     <message id="orn-check-for-self-updates-switch">
         <source>Check for self-updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Se etter oppdateringer for programmet</translation>
     </message>
     <message id="orn-check-for-self-updates-descr">
         <source>Enable the Storeman OBS repository to check for Storeman updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktiver Storeman OBS-pakkebrønnen for å se etter oppdateringer av Storeman</translation>
     </message>
     <message id="orn-storeman-repo-name">
         <source>Storeman OBS Repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Storeman OBS-pakkebrønn</translation>
     </message>
 </context>
 </TS>
