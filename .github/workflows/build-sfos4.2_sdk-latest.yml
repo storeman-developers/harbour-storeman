@@ -1,22 +1,23 @@
-name: CI - sfos3.1 branch on SDK for 3.1.0 (armv7hl,i486)
+name: CI - sfos4.2 branch on latest SDK (aarch64,armv7hl,i486)
 
 env:
-  RELEASE: 3.1.0.12
+  # For the available docker images, see https://github.com/CODeRUS/docker-sailfishos-platform-sdk
+  RELEASE: 5.0.0.43
 
 on:
   push:
     tags:
-      - 'release*_sfos3.1/*'
-      - 'rc*_sfos3.1/*'
-      - 'beta*_sfos3.1/*'
-      - 'alpha*_sfos3.1/*'
-      - 'sfos3.1/*'
+      - 'release*_sfos4.2/*'
+      - 'rc*_sfos4.2/*'
+      - 'beta*_sfos4.2/*'
+      - 'alpha*_sfos4.2/*'
+      - 'sfos4.2/*'
   pull_request:
     branches:
-      - sfos3.1
+      - sfos4.2
   # Allows to run this workflow manually from the Actions tab.
   #workflow_dispatch:
-  # Rather set a new release in the spec file and a new tag in the format N/X.Y.Z (e.g., release2_sfos3.1/0.6.3) to build a release version again.
+  # Rather set a new release in the spec file and a new tag in the format N/X.Y.Z (e.g., release2_sfos4.2/0.6.3) to build a release version again.
 
 defaults:
   run:
@@ -34,7 +35,7 @@ jobs:
   build:
     runs-on: ubuntu-24.04
     env:
-      # Do not wait up to the default of 10 minutes for network timeouts in a workflow which runs ca. 5 minutes.
+      # Do not wait up to the default of 10 minutes for network timeouts in a workflow which runs ca. 10 minutes.
       SEGMENT_DOWNLOAD_TIMEOUT_MINS: 2
     steps:
 
@@ -53,14 +54,20 @@ jobs:
     - name: Prepare
       run: mkdir RPMS
 
+    - name: Build aarch64 on ${{ env.RELEASE }}
+      uses: coderus/github-sfos-build@master
+      with:
+        release: ${{ env.RELEASE }}
+        arch: aarch64
+
     - name: Build armv7hl on ${{ env.RELEASE }}
-      uses: coderus/github-sfos-build@old-stable
+      uses: coderus/github-sfos-build@master
       with:
         release: ${{ env.RELEASE }}
         arch: armv7hl
 
     - name: Build i486 on ${{ env.RELEASE }}
-      uses: coderus/github-sfos-build@old-stable
+      uses: coderus/github-sfos-build@master
       with:
         release: ${{ env.RELEASE }}
         arch: i486
@@ -68,7 +75,7 @@ jobs:
     - name: Upload build results
       uses: actions/upload-artifact@v4
       with:
-        name: RPM-build-results_SFOS3.1.0-3.2.1
+        name: RPM-build-results_SFOS${{ env.RELEASE }}+
         path: RPMS/
 
 # Just for fun, see https://feathericons.com/ and

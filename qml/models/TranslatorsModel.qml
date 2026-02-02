@@ -77,7 +77,9 @@ ListModel {
             ListElement { name: "raketti" },
             ListElement { name: "direc85" }
         ]
-        reviewers: []
+        reviewers: [
+            ListElement { name: "tuplasuhveli" }
+        ]
     }
 
     ListElement {
@@ -113,7 +115,9 @@ ListModel {
         translators: [
             ListElement { name: "claustn" }
         ]
-        reviewers: []
+        reviewers: [
+            ListElement { name: "legacychimera247" }
+        ]
     }
 
     ListElement {
@@ -139,7 +143,9 @@ ListModel {
         coordinators: [
             ListElement { name: "storeslem" }
         ]
-        translators: []
+        translators:  [
+            ListElement { name: "fsilye" }
+        ]
         reviewers: []
     }
 
