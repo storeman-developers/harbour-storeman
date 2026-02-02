@@ -1013,7 +1013,7 @@
     <message id="orn-app-description-full">
         <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Any issues (bug reports, feature suggestions, help requests etc.) shall be filed at GitHub (you may use the button below).&lt;/p&gt;</source>
         <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software), just keep it as &quot;(FLOSS)&quot;.</extracomment>
-        <translation>&lt;p&gt;OpenRepos‑klientapplikasjon for SailfishOSOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman er fri programvare (FLOSS), distribuert under vilkårene i &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;lisensen&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Feil bør rapporteres helst på GitHub eller alternativt på OpenRepos (bruk knappene nedenfor).&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;OpenRepos‑klientapplikasjon for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman er fri programvare (FLOSS), distribuert under vilkårene i &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;lisensen&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Feil bør rapporteres helst på GitHub (bruk knappene nedenfor).&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>
