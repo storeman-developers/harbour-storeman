@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="pl">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="pl">
 <context>
-    <name></name>
+    <name/>
     <message id="orn-notrated">
         <source>Not rated yet</source>
         <translation>Jeszcze nie ocenione</translation>
@@ -73,7 +71,7 @@
         <translation>Usuwanie</translation>
     </message>
     <message id="orn-error">
-        <source>An error occured</source>
+        <source>An error occurred</source>
         <translation>Wystąpił błąd</translation>
     </message>
     <message id="orn-repo-add">
@@ -118,7 +116,7 @@
     </message>
     <message id="orn-dt-format">
         <source>yyyy-MM-dd hh:mm</source>
-        <extracomment>Output format for the date labels. For details visit http://doc.qt.io/qt-5/qdate.html#toString</extracomment>
+        <extracomment>Output format for the date labels.  For details visit https://doc.qt.io/qt-5/qdate.html#toString</extracomment>
         <translation>dd-MM-yyyy hh:mm</translation>
     </message>
     <message id="orn-version-noavailable">
@@ -332,7 +330,8 @@
         <translation>Przeciągnij w dół aby odświeżyć</translation>
     </message>
     <message id="orn-development">
-        <source>Development</source>
+        <source>Credits</source>
+        <extracomment>Acknowledgements for contributions - should be a noun</extracomment>
         <translation>Rozwój</translation>
     </message>
     <message id="orn-developers">
@@ -340,11 +339,11 @@
         <translation>Deweloperzy</translation>
     </message>
     <message id="orn-appicon">
-        <source>Application Icon</source>
+        <source>Application icon</source>
         <translation>Ikona aplikacji</translation>
     </message>
     <message id="orn-sources">
-        <source>Source Code</source>
+        <source>Source code &amp; Issue tracker</source>
         <translation>Kod źródłowy</translation>
     </message>
     <message id="orn-just-now">
@@ -353,19 +352,11 @@
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%n minute(s) ago</source>
-        <translation>
-            <numerusform>%n minutę temu</numerusform>
-            <numerusform>%n minuty temu</numerusform>
-            <numerusform>%n minut temu</numerusform>
-        </translation>
+        <translation><numerusform>%n minutę temu</numerusform><numerusform>%n minuty temu</numerusform><numerusform>%n minut temu</numerusform><numerusform>%n minut temu</numerusform></translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%n hour(s) ago</source>
-        <translation>
-            <numerusform>%n godzinę temu</numerusform>
-            <numerusform>%n godziny temu</numerusform>
-            <numerusform>%n godzin temu</numerusform>
-        </translation>
+        <translation><numerusform>%n godzinę temu</numerusform><numerusform>%n godziny temu</numerusform><numerusform>%n godzin temu</numerusform><numerusform>%n godzin temu</numerusform></translation>
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
@@ -406,9 +397,9 @@
         <translation>Zaloguj</translation>
     </message>
     <message id="orn-username">
-        <source>Username or e-mail address</source>
-        <extracomment>A translated string should not be longer than the original</extracomment>
-        <translation>Nazwa użytkownika lub adres email</translation>
+        <source>Username</source>
+        <extracomment>A translated string should comprise less than 27 characters</extracomment>
+        <translation>Nazwa użytkownika</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not send your password to third-parties.</source>
@@ -538,7 +529,7 @@
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
-        <extracomment>A template string for a dependecy resolution error. %1 is a dependency and %2 is a failed package.</extracomment>
+        <extracomment>A template string for a dependency resolution error.  %1 is a dependency and %2 is a failed package.</extracomment>
         <translation>Nic nie zapewnia %1 wymaganego przez %2</translation>
     </message>
     <message id="orn-backups">
@@ -720,11 +711,7 @@
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
-        <translation>
-            <numerusform>%n proces w trakcie</numerusform>
-            <numerusform>%n procesy w trakcie</numerusform>
-            <numerusform>%n procesów w trakcie</numerusform>
-        </translation>
+        <translation><numerusform>%n proces w trakcie</numerusform><numerusform>%n procesy w trakcie</numerusform><numerusform>%n procesów w trakcie</numerusform><numerusform>%n procesów w trakcie</numerusform></translation>
     </message>
     <message id="orn-version-available">
         <source>Available version</source>
@@ -778,19 +765,11 @@
     </message>
     <message id="orn-interval-m" numerus="yes">
         <source>%n minute(s)</source>
-        <translation>
-            <numerusform>%n minuta</numerusform>
-            <numerusform>%n minuty</numerusform>
-            <numerusform>%n minut</numerusform>
-        </translation>
+        <translation><numerusform>%n minuta</numerusform><numerusform>%n minuty</numerusform><numerusform>%n minut</numerusform><numerusform>%n minut</numerusform></translation>
     </message>
     <message id="orn-interval-h" numerus="yes">
         <source>%n hour(s)</source>
-        <translation>
-            <numerusform>%n godzina</numerusform>
-            <numerusform>%n godziny</numerusform>
-            <numerusform>%n godzin</numerusform>
-        </translation>
+        <translation><numerusform>%n godzina</numerusform><numerusform>%n godziny</numerusform><numerusform>%n godzin</numerusform><numerusform>%n godzin</numerusform></translation>
     </message>
     <message id="orn-tag-strikeout">
         <source>S</source>
@@ -1018,6 +997,7 @@
     </message>
     <message id="orn-donation">
         <source>Donation</source>
+        <extracomment>Should be a noun</extracomment>
         <translation>Wspomóż</translation>
     </message>
     <message id="orn-cover-updates-available">
@@ -1029,8 +1009,8 @@
         <translation>Pakiet %0 został pomyślnie zaktualizowany</translation>
     </message>
     <message id="orn-app-description-full">
-        <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Issues shall be reported preferably at GitHub or alternatively at OpenRepos (use the buttons below).&lt;/p&gt;</source>
-        <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software).</extracomment>
+        <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Any issues (bug reports, feature suggestions, help requests etc.) shall be filed at GitHub (you may use the button below).&lt;/p&gt;</source>
+        <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software), just keep it as &quot;(FLOSS)&quot;.</extracomment>
         <translation>&lt;p&gt;Klient OpenRepos dla SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;To jest otwartoźródłowe oprogramowanie dystrybuowane na warunkach &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Możesz raportować błędy na GitHubie lub OpenRepos (użyj przycisków poniżej).&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
