@@ -7,7 +7,7 @@
     </message>
     <message id="orn-repositories">
         <source>Repositories</source>
-        <translation>Repository</translation>
+        <translation>Repository installati</translation>
     </message>
     <message id="orn-refresh">
         <source>Refresh</source>
