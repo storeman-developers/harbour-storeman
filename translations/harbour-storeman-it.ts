@@ -989,7 +989,7 @@
     </message>
     <message id="orn-repository">
         <source>Repository</source>
-        <translation>Repository</translation>
+        <translation>Repository attivi</translation>
     </message>
     <message id="orn-myrepository">
         <source>My repository</source>
