@@ -857,7 +857,7 @@
     </message>
     <message id="orn-repo-allremoved">
         <source>All repositories were removed</source>
-        <translation>Tutti i repo sono stati rimossi</translation>
+        <translation>Tutti i repository sono stati rimossi</translation>
     </message>
     <message id="orn-search-on-openrepos">
         <source>Search on OpenRepos.net</source>
