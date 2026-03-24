@@ -630,7 +630,7 @@
     </message>
     <message id="orn-pmstate-addingrepo">
         <source>Adding repo %0</source>
-        <translation>Aggiunta repository %0</translation>
+        <translation>Aggiungi repository %0</translation>
     </message>
     <message id="orn-pmstate-removingrepo">
         <source>Removing repo %0</source>
