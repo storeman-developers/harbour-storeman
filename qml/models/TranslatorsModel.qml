@@ -121,6 +121,15 @@ ListModel {
     }
 
     ListElement {
+        locale: "ja"
+        coordinators: []
+        translators: [
+            ListElement { name: "Macindebundra" }
+        ]
+        reviewers: []
+    }
+
+    ListElement {
         locale: "nl"
         coordinators: [
             ListElement { name: "pljmn" }
