@@ -1,512 +1,512 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="it">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="ja">
 <context>
     <name/>
     <message id="orn-notrated">
         <source>Not rated yet</source>
-        <translation>Ancora nessun voto</translation>
+        <translation>評価なし</translation>
     </message>
     <message id="orn-repositories">
         <source>Repositories</source>
-        <translation>Repository installati</translation>
+        <translation>リポジトリ</translation>
     </message>
     <message id="orn-refresh">
         <source>Refresh</source>
-        <translation>Ricarica</translation>
+        <translation>最新の状態に更新</translation>
     </message>
     <message id="orn-disable">
         <source>Disable</source>
-        <translation>Disattiva</translation>
+        <translation>無効化</translation>
     </message>
     <message id="orn-enable">
         <source>Enable</source>
-        <translation>Attiva</translation>
+        <translation>有効化</translation>
     </message>
     <message id="orn-enabled">
         <source>Enabled</source>
-        <translation>Attivato</translation>
+        <translation>有効</translation>
     </message>
     <message id="orn-disabled">
         <source>Disabled</source>
-        <translation>Disattivato</translation>
+        <translation>無効</translation>
     </message>
     <message id="orn-recently-updated">
         <source>Recently updated</source>
-        <translation>Aggiornati recentemente</translation>
+        <translation>最近の更新</translation>
     </message>
     <message id="orn-network-idle">
         <source>Network is unavailable</source>
-        <translation>Rete non disponibile</translation>
+        <translation>ネットワークに接続されていません</translation>
     </message>
     <message id="orn-today">
         <source>Today</source>
-        <translation>Oggi</translation>
+        <translation>今日</translation>
     </message>
     <message id="orn-yesterday">
         <source>Yesterday</source>
-        <translation>Ieri</translation>
+        <translation>昨日</translation>
     </message>
     <message id="orn-this-week">
         <source>This week</source>
-        <translation>Questa settimana</translation>
+        <translation>今週</translation>
     </message>
     <message id="orn-this-month">
         <source>This month</source>
-        <translation>Questo mese</translation>
+        <translation>今月</translation>
     </message>
     <message id="orn-month-format">
         <source>%0 %1</source>
         <extracomment>Output format for the month and year - %0 is a long month name and %1 is a year (for example &quot;May 2017&quot;)</extracomment>
-        <translation>%0 %1</translation>
+        <translation>%1 %0</translation>
     </message>
     <message id="orn-adding-repo">
         <source>Adding</source>
-        <translation>Aggiunta</translation>
+        <translation>追加しています…</translation>
     </message>
     <message id="orb-remove">
         <source>Remove</source>
-        <translation>Rimuovi</translation>
+        <translation>削除</translation>
     </message>
     <message id="orn-removing">
         <source>Removing</source>
-        <translation>Rimozione</translation>
+        <translation>削除しています…</translation>
     </message>
     <message id="orn-error">
         <source>An error occurred</source>
-        <translation>Errore</translation>
+        <translation>エラーが発生しました</translation>
     </message>
     <message id="orn-repo-add">
         <source>Add repository</source>
-        <translation>Aggiungi repository</translation>
+        <translation>リポジトリを追加</translation>
     </message>
     <message id="orn-repo-enable">
         <source>Enable repository</source>
-        <translation>Attiva repository</translation>
+        <translation>リポジトリを有効化</translation>
     </message>
     <message id="orn-install">
         <source>Install</source>
-        <translation>Installa</translation>
+        <translation>インストール</translation>
     </message>
     <message id="orn-remove">
         <source>Remove</source>
-        <translation>Disinstalla</translation>
+        <translation>削除</translation>
     </message>
     <message id="orn-launch">
         <source>Launch</source>
-        <translation>Apri</translation>
+        <translation>アプリを開く</translation>
     </message>
     <message id="orn-package-installed">
         <source>Package %0 was successfully installed</source>
-        <translation>%0 installato</translation>
+        <translation>パッケージ %0 は正常にインストールされました</translation>
     </message>
     <message id="orn-package-removed">
         <source>Package %0 was successfully removed</source>
-        <translation>%0 disinstallato</translation>
+        <translation>パッケージ %0 は正常に削除されました</translation>
     </message>
     <message id="orn-installed">
         <source>Installed</source>
-        <translation>Installato</translation>
+        <translation>インストール済み</translation>
     </message>
     <message id="orn-version-installed">
         <source>Installed version</source>
-        <translation>Versione installata</translation>
+        <translation>インストール済みのバージョン</translation>
     </message>
     <message id="orn-version-updated">
         <source>Last updated</source>
-        <translation>Ultimo aggiornamento</translation>
+        <translation>最終更新日</translation>
     </message>
     <message id="orn-dt-format">
         <source>yyyy-MM-dd hh:mm</source>
         <extracomment>Output format for the date labels.  For details visit https://doc.qt.io/qt-5/qdate.html#toString</extracomment>
-        <translation>dd MMM yyyy hh:mm</translation>
+        <translation>yyyy年M月d日 hh:mm </translation>
     </message>
     <message id="orn-version-noavailable">
         <source>No versions available</source>
-        <translation>Nessuna versione disponibile</translation>
+        <translation>利用可能なバージョンがありません</translation>
     </message>
     <message id="orn-comments">
         <source>Comments</source>
-        <translation>Commenti</translation>
+        <translation>コメント</translation>
     </message>
     <message id="orn-author-apps">
         <source>More by %0</source>
-        <translation>Altro da %0</translation>
+        <translation>%0 の他のアプリ</translation>
     </message>
     <message id="orn-cat-coding-competition">
         <source>Coding Competition</source>
-        <translation>Coding Competition</translation>
+        <translation>プログラム</translation>
     </message>
     <message id="orn-cat-applications">
         <source>Applications</source>
-        <translation>Applicazioni</translation>
+        <translation>アプリ</translation>
     </message>
     <message id="orn-cat-application">
         <source>Application</source>
-        <translation>Applicazione</translation>
+        <translation>アプリ</translation>
     </message>
     <message id="orn-cat-ambience-themes">
         <source>Ambience &amp; Themes</source>
-        <translation>Atmosfere &amp; temi</translation>
+        <translation>アンビエンス&amp;テーマ</translation>
     </message>
     <message id="orn-cat-business">
         <source>Business</source>
-        <translation>Ufficio</translation>
+        <translation>業務効率化</translation>
     </message>
     <message id="orn-cat-city-guides-maps">
         <source>City guides &amp; maps</source>
-        <translation>Mappe &amp; guide</translation>
+        <translation>マップ＆ガイド</translation>
     </message>
     <message id="orn-cat-education-science">
         <source>Education &amp; Science</source>
-        <translation>Scienza &amp; educazione</translation>
+        <translation>教育＆科学</translation>
     </message>
     <message id="orn-cat-entertainment">
         <source>Entertainment</source>
-        <translation>Intrattenimento</translation>
+        <translation>エンターテイメント</translation>
     </message>
     <message id="orn-cat-music">
         <source>Music</source>
-        <translation>Musica</translation>
+        <translation>ミュージック</translation>
     </message>
     <message id="orn-cat-network">
         <source>Network</source>
-        <translation>Rete</translation>
+        <translation>ネットワーク</translation>
     </message>
     <message id="orn-cat-news-info">
         <source>News &amp; info</source>
-        <translation>News &amp; info</translation>
+        <translation>ニュース</translation>
     </message>
     <message id="orn-cat-patches">
         <source>Patches</source>
-        <translation>Patch</translation>
+        <translation>パッチ</translation>
     </message>
     <message id="orn-cat-photo-video">
         <source>Photo &amp; video</source>
-        <translation>Foto &amp; video</translation>
+        <translation>写真＆動画</translation>
     </message>
     <message id="orn-cat-social-networks">
         <source>Social Networks</source>
-        <translation>Social network</translation>
+        <translation>SNS</translation>
     </message>
     <message id="orn-cat-sports">
         <source>Sports</source>
-        <translation>Sports</translation>
+        <translation>スポーツ</translation>
     </message>
     <message id="orn-cat-system">
         <source>System</source>
-        <translation>Sistema</translation>
+        <translation>システム</translation>
     </message>
     <message id="orn-cat-unknown">
         <source>Unknown</source>
-        <translation>Sconosciuto</translation>
+        <translation>カテゴリーなし</translation>
     </message>
     <message id="orn-cat-utilities">
         <source>Utilities</source>
-        <translation>Utility</translation>
+        <translation>ユーティリティ</translation>
     </message>
     <message id="orn-cat-games">
         <source>Games</source>
-        <translation>Giochi</translation>
+        <translation>ゲーム</translation>
     </message>
     <message id="orn-cat-game">
         <source>Game</source>
-        <translation>Gioco</translation>
+        <translation>ゲーム</translation>
     </message>
     <message id="orn-cat-action">
         <source>Action</source>
-        <translation>Azione</translation>
+        <translation>アクション</translation>
     </message>
     <message id="orn-cat-adventure">
         <source>Adventure</source>
-        <translation>Avventura</translation>
+        <translation>アドベンチャー</translation>
     </message>
     <message id="orn-cat-arcade">
         <source>Arcade</source>
-        <translation>Arcade</translation>
+        <translation>アーケード</translation>
     </message>
     <message id="orn-cat-card-casino">
         <source>Card &amp; casino</source>
-        <translation>Carte &amp; casinò</translation>
+        <translation>トランプ＆カジノ</translation>
     </message>
     <message id="orn-cat-education">
         <source>Education</source>
-        <translation>Educazione</translation>
+        <translation>教育</translation>
     </message>
     <message id="orn-cat-puzzle">
         <source>Puzzle</source>
-        <translation>Puzzle</translation>
+        <translation>パズル</translation>
     </message>
     <message id="orn-cat-strategy">
         <source>Strategy</source>
-        <translation>Strategia</translation>
+        <translation>ストラテジー</translation>
     </message>
     <message id="orn-cat-trivia">
         <source>Trivia</source>
-        <translation>Trivia</translation>
+        <translation>トリビア</translation>
     </message>
     <message id="orn-cat-translations">
         <source>Translations</source>
-        <translation>Traduzioni</translation>
+        <translation>翻訳</translation>
     </message>
     <message id="orn-cat-fonts">
         <source>Fonts</source>
-        <translation>Fonts</translation>
+        <translation>フォント</translation>
     </message>
     <message id="orn-cat-libraries">
         <source>Libraries</source>
-        <translation>Librerie</translation>
+        <translation>ライブラリ</translation>
     </message>
     <message id="orn-update-available">
         <source>Update available</source>
-        <translation>Aggiornamento disponibile</translation>
+        <translation>アップデートが利用可能です</translation>
     </message>
     <message id="orn-update">
         <source>Update</source>
-        <translation>Aggiorna</translation>
+        <translation>アップデート</translation>
     </message>
     <message id="orn-changelog">
         <source>Changelog</source>
-        <translation>Changelog</translation>
+        <translation>変更履歴</translation>
     </message>
     <message id="orn-comments-withnum">
         <source>Comments (%0)</source>
-        <translation>Commenti (%0)</translation>
+        <translation>コメント (%0)</translation>
     </message>
     <message id="orn-version-repo-disabled">
         <source>Enable the repository first</source>
-        <translation>Prima attiva il repository</translation>
+        <translation>リポジトリを有効化してください</translation>
     </message>
     <message id="orn-search">
         <source>Search</source>
         <extracomment>The search menu item and the search page header text - should be a noun</extracomment>
-        <translation>Cerca</translation>
+        <translation>検索</translation>
     </message>
     <message id="orn-searchpage-placeholder-noresults">
         <source>Nothing found</source>
-        <translation>Nessun risultato</translation>
+        <translation>結果なし</translation>
     </message>
     <message id="orn-searchpage-placeholder-noresults-hint">
         <source>Try to change search keywords</source>
-        <translation>Prova a cambiare parole chiave</translation>
+        <translation>検索ワードを変更してみて下さい</translation>
     </message>
     <message id="orn-searchfield-placeholder">
         <source>Search</source>
         <extracomment>The search field placeholder text - should be a verb</extracomment>
-        <translation>Cerca</translation>
+        <translation>検索</translation>
     </message>
     <message id="orn-searchpage-placeholder-default">
         <source>Search results will be shown here</source>
-        <translation>I risultati di ricerca saranno mostrati qui</translation>
+        <translation>検索結果はここに表示されます</translation>
     </message>
     <message id="orn-searchpage-placeholder-default-hint">
         <source>Type some keywords in the field above</source>
-        <translation>Digita alcune parole chiave nel campo di ricerca</translation>
+        <translation>検索するにはフィールドに検索ワードを入力</translation>
     </message>
     <message id="orn-about">
         <source>About Storeman</source>
-        <translation>Info su Storeman</translation>
+        <translation>Storemanについて</translation>
     </message>
     <message id="orn-translations">
         <source>Translations</source>
-        <translation>Traduzioni</translation>
+        <translation>翻訳</translation>
     </message>
     <message id="orn-coordinators">
         <source>Coordinators</source>
-        <translation>Coordinatori</translation>
+        <translation>コーディネーター</translation>
     </message>
     <message id="orn-translators">
         <source>Translators</source>
-        <translation>Traduttori</translation>
+        <translation>翻訳者</translation>
     </message>
     <message id="orn-reviewers">
         <source>Reviewers</source>
-        <translation>Revisori</translation>
+        <translation>レビュワー</translation>
     </message>
     <message id="orn-network-error">
         <source>A network error occurred</source>
-        <translation>Errore di rete</translation>
+        <translation>ネットワークエラーが発生しました</translation>
     </message>
     <message id="orn-pull-refresh">
         <source>Pull down to refresh</source>
-        <translation>Trascina in basso per ricaricare</translation>
+        <translation>プルダウンして再読み込み</translation>
     </message>
     <message id="orn-development">
         <source>Credits</source>
         <extracomment>Acknowledgements for contributions - should be a noun</extracomment>
-        <translation>Sviluppo</translation>
+        <translation>クレジット</translation>
     </message>
     <message id="orn-developers">
         <source>Developers</source>
-        <translation>Sviluppatori</translation>
+        <translation>開発者</translation>
     </message>
     <message id="orn-appicon">
         <source>Application icon</source>
-        <translation>Icona applicazione</translation>
+        <translation>アプリのアイコン</translation>
     </message>
     <message id="orn-sources">
         <source>Source code &amp; Issue tracker</source>
-        <translation>Codice sorgente</translation>
+        <translation>ソースコード＆問題報告</translation>
     </message>
     <message id="orn-just-now">
         <source>Just now</source>
-        <translation>Ora</translation>
+        <translation>たった今</translation>
     </message>
     <message id="orn-mins-ago" numerus="yes">
         <source>%n minute(s) ago</source>
-        <translation><numerusform>%n minuto fa</numerusform><numerusform>%n minuti fa</numerusform><numerusform>%n minuti fa</numerusform></translation>
+        <translation><numerusform>%n分前</numerusform></translation>
     </message>
     <message id="orn-hours-ago" numerus="yes">
         <source>%n hour(s) ago</source>
-        <translation><numerusform>%n ora fa</numerusform><numerusform>%n ore fa</numerusform><numerusform>%n ore fa</numerusform></translation>
+        <translation><numerusform>%n時間前</numerusform></translation>
     </message>
     <message id="orn-reply-to">
         <source>Reply to %0</source>
         <extracomment>Active label to navigate to the original comment - should be a noun</extracomment>
-        <translation>Risposta a %0</translation>
+        <translation>%0への返信</translation>
     </message>
     <message id="orn-categories">
         <source>Categories</source>
-        <translation>Categorie</translation>
+        <translation>カテゴリー</translation>
     </message>
     <message id="orn-category-noapps">
         <source>Currently there are no apps in this category</source>
-        <translation>Non ci sono app in questa categoria</translation>
+        <translation>現在このカテゴリーのアプリはありません</translation>
     </message>
     <message id="orn-cat-unknown2">
         <source>Unknown category</source>
-        <translation>Categoria sconosciuta</translation>
+        <translation>不明なカテゴリー</translation>
     </message>
     <message id="orn-comment-body">
         <source>Your comment</source>
-        <translation>Il tuo commento</translation>
+        <translation>あなたのコメント</translation>
     </message>
     <message id="orn-reply">
         <source>Reply</source>
         <extracomment>Menu item to reply for a comment - should be a verb</extracomment>
-        <translation>Rispondi</translation>
+        <translation>返信</translation>
     </message>
     <message id="orn-edit">
         <source>Edit</source>
-        <translation>Modifica</translation>
+        <translation>編集</translation>
     </message>
     <message id="orn-login-menu-item">
         <source>Log in to OpenRepos.net</source>
-        <translation>Accedi a OpenRepos.net</translation>
+        <translation>OpenRepos.netにログイン</translation>
     </message>
     <message id="orn-login-action">
         <source>Log in</source>
-        <translation>Accedi</translation>
+        <translation>ログイン</translation>
     </message>
     <message id="orn-username">
         <source>Username</source>
         <extracomment>A translated string should comprise less than 27 characters</extracomment>
-        <translation>Nome utente</translation>
+        <translation>ユーザー名</translation>
     </message>
     <message id="orn-login-help">
         <source>Log in to OpenRepos.net to comment applications and reply to others comments.&lt;br /&gt;&lt;br /&gt;Storeman does not send your password to third-parties.</source>
-        <translation>Accedi a OpenRepos.net per commentare e rispondere agli altri commenti. &lt;br /&gt;&lt;br /&gt; Storeman non invierà la tua password a terzi.</translation>
+        <translation>アプリにコメントしたり、コメントに返信するにはOpenRepos.netにログインして下さい。&lt;br /&gt;&lt;br /&gt;Storemanはパスワードを第三者に共有することはありません。</translation>
     </message>
     <message id="orn-loggedin-message">
         <source>You have successfully logged in to the OpenRepos.net</source>
-        <translation>Accesso a OpenRepos.net eseguito</translation>
+        <translation>OpenRepos.netへのログインに成功しました</translation>
     </message>
     <message id="orn-loggedout-message">
         <source>You have logged out from the OpenRepos.net</source>
-        <translation>Sei uscito da OpenRepos.net</translation>
+        <translation>OpenRepos.netからログアウトしました</translation>
     </message>
     <message id="orn-login-error-title">
         <source>Login error</source>
-        <translation>Errore accesso</translation>
+        <translation>ログインエラー</translation>
     </message>
     <message id="orn-login-error-message">
         <source>Could not log in the OpenRepos.net - check your credentials and network connection</source>
-        <translation>Non è possibile accedere a OpenRepos.net - controlla le tue credenziali e la rete</translation>
+        <translation>OpenRepos.netにログイン出来ませんでした。ログイン情報とネットワーク接続を確認して下さい。</translation>
     </message>
     <message id="orn-loggedin-menu-item">
         <source>Logged in as %0</source>
-        <translation>Accesso come %0</translation>
+        <translation>%0としてログインしました</translation>
     </message>
     <message id="orn-logout-action">
         <source>Log out</source>
         <extracomment>Menu item</extracomment>
-        <translation>Esci</translation>
+        <translation>ログアウト</translation>
     </message>
     <message id="orn-logout-remorse">
         <source>Logging out</source>
         <extracomment>Remorse text</extracomment>
-        <translation>Uscita</translation>
+        <translation>ログアウトしています…</translation>
     </message>
     <message id="orn-comment-edit-label">
         <source>Edit your comment</source>
-        <translation>Modifica commento</translation>
+        <translation>コメントを編集</translation>
     </message>
     <message id="orn-comment-update">
         <source>Update</source>
         <extracomment>Update a comment</extracomment>
-        <translation>Aggiorna</translation>
+        <translation>アップデート</translation>
     </message>
     <message id="orn-comment-send">
         <source>Send</source>
-        <translation>Invia</translation>
+        <translation>送信</translation>
     </message>
     <message id="orn-authorisation-expires-summary">
         <source>Authorisation expires</source>
-        <translation>Autorizzazione scade</translation>
+        <translation>認証が期限切れです</translation>
     </message>
     <message id="orn-authorisation-expired-summary">
         <source>Authorisation expired</source>
-        <translation>Autorizzazione scaduta</translation>
+        <translation>認証が期限切れしました</translation>
     </message>
     <message id="orn-reauthorise">
         <source>Click to reauthorise</source>
-        <translation>Clicca per riaccedere</translation>
+        <translation>タップして再認証</translation>
     </message>
     <message id="orn-enable-all">
         <source>Enable all</source>
-        <translation>Attiva tutti</translation>
+        <translation>全て有効化</translation>
     </message>
     <message id="orn-disable-all">
         <source>Disable all</source>
-        <translation>Disattiva tutti</translation>
+        <translation>全て無効化</translation>
     </message>
     <message id="orn-enabling-all">
         <source>Enabling all</source>
-        <translation>Attivazione</translation>
+        <translation>有効化しています…</translation>
     </message>
     <message id="orn-disabling-all">
         <source>Disabling all</source>
-        <translation>Disattivazione</translation>
+        <translation>無効化しています…</translation>
     </message>
     <message id="orn-installed-apps">
         <source>Installed applications</source>
-        <translation>Applicazioni installate</translation>
+        <translation>インストールされたアプリ</translation>
     </message>
     <message id="orn-bookmarks-added">
         <source>The app was added to bookmarks</source>
-        <translation>L&apos;app è stata aggiunta ai preferiti</translation>
+        <translation>ブックマークに追加されました</translation>
     </message>
     <message id="orn-bookmarks-removed">
         <source>The app was removed from bookmarks</source>
-        <translation>L&apos;app è stata rimossa dai preferiti</translation>
+        <translation>ブックマークから削除されました</translation>
     </message>
     <message id="orn-no-bookmarks">
         <source>Your bookmarked applications will be shown here</source>
-        <translation>Le tue app preferite saranno mostrate qui</translation>
+        <translation>ブックマークに追加されたアプリはここに表示されます</translation>
     </message>
     <message id="orn-bookmarks">
         <source>Bookmarks</source>
-        <translation>Preferiti</translation>
+        <translation>ブックマーク</translation>
     </message>
     <message id="orn-no-repos">
         <source>No OpenRepos repositories have been added yet</source>
-        <translation>Nessun repository di OpenRepos aggiunto</translation>
+        <translation>OpenReposのリポジトリが追加されていません</translation>
     </message>
     <message id="orn-add-repo-hint">
         <source>You can add a repository from an application page</source>
-        <translation>Puoi aggiungere un repository dalla pagina dell&apos;applicazione</translation>
+        <translation>アプリのページからリポジトリを追加できます</translation>
     </message>
     <message id="orn-refresh-cache">
         <source>Refresh cache</source>
-        <translation>Ricarica cache</translation>
+        <translation>キャッシュを初期化</translation>
     </message>
     <message id="orn-tag-underscore">
         <source>U</source>
@@ -525,251 +525,251 @@
     </message>
     <message id="orn-updates-available-summary">
         <source>Updates available</source>
-        <translation>Aggiornamenti disponibili</translation>
+        <translation>アップデートが利用可能です</translation>
     </message>
     <message id="orn-error-depresolution">
         <source>Nothing provides %1 needed by %2</source>
         <extracomment>A template string for a dependency resolution error.  %1 is a dependency and %2 is a failed package.</extracomment>
-        <translation>Niente fornisce %1 richiesto da %2</translation>
+        <translation>%2に必要な%1の提供元が見つかりません</translation>
     </message>
     <message id="orn-backups">
         <source>Backups</source>
-        <translation>Backup</translation>
+        <translation>バックアップ</translation>
     </message>
     <message id="orn-backup-description">
         <source>Backup and restore repos and installed apps</source>
-        <translation>Backup e ripristina repo e app installate</translation>
+        <translation>バックアップとリポジトリとインストールしたアプリの復元</translation>
     </message>
     <message id="orn-create-backup">
         <source>Create a backup</source>
-        <translation>Crea un backup</translation>
+        <translation>バックアップを作成</translation>
     </message>
     <message id="orn-backup-error">
         <source>Backup error</source>
-        <translation>Errore backup</translation>
+        <translation>バックアップエラー</translation>
     </message>
     <message id="orn-backup-error-directory">
         <source>Could not create directory</source>
-        <translation>Non è possibile creare la directory</translation>
+        <translation>ディレクトリの作成に失敗しました</translation>
     </message>
     <message id="orn-restore-title">
         <source>Restore from a file</source>
-        <translation>Ripristina da file</translation>
+        <translation>ファイルから復元</translation>
     </message>
     <message id="orn-restore">
         <source>Restore</source>
-        <translation>Ripristina</translation>
+        <translation>復元</translation>
     </message>
     <message id="orn-restore-hint">
         <source>Restore OpenRepos repositories and installed apps from the selected file. This action will not affect your current repositories and will not remove installed applications.</source>
-        <translation>Ripristina i repository e le app installate da OpenRepos. Questa operazione non avrà effetto sui repo e le app già installate.</translation>
+        <translation>指定されたファイルからOpenReposのリポジトリとインストールしたアプリを復元します。この操作は現在のリポジトリに影響したり、インストールされたアプリが削除されることはありません。</translation>
     </message>
     <message id="orn-created">
         <source>Created</source>
-        <translation>Creato</translation>
+        <translation>作成済み</translation>
     </message>
     <message id="orn-total-repos">
         <source>Total repositories</source>
-        <translation>Totale repository</translation>
+        <translation>リポジトリの合計</translation>
     </message>
     <message id="orn-details">
         <source>Details</source>
-        <translation>Dettagli</translation>
+        <translation>詳細</translation>
     </message>
     <message id="orn-backups-placeholder">
         <source>Backups will be shown here</source>
-        <translation>I backup verranno mostrati qui</translation>
+        <translation>バックアップはここに表示されます</translation>
     </message>
     <message id="orn-restoring-repos">
         <source>Restoring repositories</source>
-        <translation>Ripristino repository</translation>
+        <translation>リポジトリを復元しています…</translation>
     </message>
     <message id="orn-refreshing-repos">
         <source>Refreshing repositories</source>
-        <translation>Ricaricamento repository</translation>
+        <translation>リポジトリを最新の状態に更新しています…</translation>
     </message>
     <message id="orn-searching-packages">
         <source>Searching packages</source>
-        <translation>Ricerca pacchetti</translation>
+        <translation>パッケージを探しています…</translation>
     </message>
     <message id="orn-installing-repos">
         <source>Installing packages</source>
-        <translation>Installazione pacchetti</translation>
+        <translation>パッケージをインストールしています…</translation>
     </message>
     <message id="orn-restoring-title">
         <source>Restoring</source>
-        <translation>Ripristino</translation>
+        <translation>復元中…</translation>
     </message>
     <message id="orn-success-backup">
         <source>Successful backup</source>
-        <translation>Backup effettuato con successo</translation>
+        <translation>バックアップに成功しました</translation>
     </message>
     <message id="orn-success-restore">
         <source>Successful restore</source>
-        <translation>Ripristino effettuato con successo</translation>
+        <translation>復元に成功しました</translation>
     </message>
     <message id="orn-installed-packages">
         <source>Installed packages</source>
-        <translation>Pacchetti installati</translation>
+        <translation>パッケージをインストールしました</translation>
     </message>
     <message id="orn-login2comment">
         <source>Login to comment</source>
-        <translation>Accedi per commentare</translation>
+        <translation>ログインしてコメントする</translation>
     </message>
     <message id="orn-backup">
         <source>Backup</source>
-        <translation>Backup</translation>
+        <translation>バックアップ</translation>
     </message>
     <message id="orn-backup-hint">
         <source>&lt;h2&gt;Backup to a file&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Backup allows you to save your current OpenRepos repositories, installed applications and bookmarks and restore them later (for example after factory reset). A backup is a local file that is saved to the&lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; directory.&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attention!&lt;/b&gt; You should copy your backups manually to some safe place before performing a factory reset. It could be your SD card, external device, cloud storage or something else.&lt;/p&gt;</source>
-        <translation>&lt;h2&gt;File di backup&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;Il backup ti permette di salvare i tuoi repository, applicazioni installate e preferiti di OpenRepos e ripristinarli in seguito (ad esempio dopo un ripristino alle impostazioni di fabbrica del dispositivo). Un backup è un file salvato nella cartella &lt;br /&gt;&lt;i&gt;~/Documents/Storeman&lt;/i&gt; &lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;Attenzione!&lt;/b&gt;Prima di ripristinare il tuo dispositivo alle impostazioni di fabbrica, assicurati di spostare i tuoi backup in un posto sicuro, come la tua scheda SD, dispositivo esterno, cloud o altro.&lt;/p&gt;</translation>
+        <translation>&lt;h2&gt;ファイルへバックアップ&lt;/h2&gt;&lt;br /&gt;&lt;p&gt;バックアップは現在のOpenReposリポジトリや、現在インストールされているアプリ、ブックマークを保存し、後で復元することができます(工場出荷時の状態へリセットした後など)。バックアップファイルはディレクトリ&lt;br /&gt;&lt;i&gt;~/Documents/Storeman &lt;/i&gt;に保存されます。&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;b&gt;注意!&lt;/b&gt; バックアップファイルは工場出荷時の状態へリセットする前に手動で安全な場所に保管するようにしましょう。SDカードや外部ドライブなどが望ましいです。&lt;/p&gt;</translation>
     </message>
     <message id="orn-pmstate-initialising">
         <source>Initialising</source>
-        <translation>Inizializzazione</translation>
+        <translation>初期化中…</translation>
     </message>
     <message id="orn-pmstate-addingrepo">
         <source>Adding repo %0</source>
-        <translation>Aggiungi repository %0</translation>
+        <translation>リポジトリ%0を追加しています…</translation>
     </message>
     <message id="orn-pmstate-removingrepo">
         <source>Removing repo %0</source>
-        <translation>Rimozione repository %0</translation>
+        <translation>リポジトリ%0を削除しています…</translation>
     </message>
     <message id="orn-pmstate-enablingrepo">
         <source>Enabling repo %0</source>
-        <translation>Attivazione repository %0</translation>
+        <translation>リポジトリ%0を有効化しています…</translation>
     </message>
     <message id="orn-pmstate-disablingrepo">
         <source>Disabling repo %0</source>
-        <translation>Disattivazione repository %0</translation>
+        <translation>リポジトリ%0を無効化しています…</translation>
     </message>
     <message id="orn-pmstate-refreshingrepo">
         <source>Refreshing %0</source>
-        <translation>Ricaricamento %0</translation>
+        <translation>%0を更新しました</translation>
     </message>
     <message id="orn-pmstate-installingpackage">
         <source>Installing package %0</source>
-        <translation>Installazione pacchetto %0</translation>
+        <translation>パッケージ%0をインストールしています…</translation>
     </message>
     <message id="orn-pmstate-removingpackage">
         <source>Removing package %0</source>
-        <translation>Rimozione pacchetto %0</translation>
+        <translation>パッケージ%0を削除しています…</translation>
     </message>
     <message id="orn-pmstate-updatingpackage">
         <source>Updating package %0</source>
-        <translation>Aggiornamento pacchetto %0</translation>
+        <translation>パッケージ%0をアップデートしています…</translation>
     </message>
     <message id="orn-repo-removed">
         <source>The repository %0 was removed</source>
-        <translation>Il repository %0 è stato rimosso</translation>
+        <translation>リポジトリ%0が削除されました</translation>
     </message>
     <message id="orn-repo-added">
         <source>The repository %0 was added</source>
-        <translation>Il repository %0 è stato aggiunto</translation>
+        <translation>リポジトリ%0が追加されました</translation>
     </message>
     <message id="orn-repo-disabled">
         <source>The repository %0 was disabled</source>
-        <translation>Il repository %0 è stato disattivato</translation>
+        <translation>リポジトリ%0が無効化されました</translation>
     </message>
     <message id="orn-repo-enabled">
         <source>The repository %0 was enabled</source>
-        <translation>Il repository %0 è stato attivato</translation>
+        <translation>リポジトリ%0が有効化されました</translation>
     </message>
     <message id="orn-not-installed">
         <source>Not installed</source>
-        <translation>Non installata</translation>
+        <translation>インストールされていません</translation>
     </message>
     <message id="orn-installing">
         <source>Installing</source>
-        <translation>Installazione</translation>
+        <translation>インストール中…</translation>
     </message>
     <message id="orn-unknown">
         <source>Unknown</source>
-        <translation>Sconosciuto</translation>
+        <translation>不明</translation>
     </message>
     <message id="orn-updating">
         <source>Updating</source>
-        <translation>Aggiornamento</translation>
+        <translation>アップデートしています…</translation>
     </message>
     <message id="orn-version-available-global">
         <source>Available in other repositories</source>
-        <translation>Disponibile in altri repository</translation>
+        <translation>他のリポジトリで利用可能です</translation>
     </message>
     <message id="orn-installed-apps-description">
         <source>Only from enabled repositories</source>
-        <translation>Solo dai repository abilitati</translation>
+        <translation>有効化されたリポジトリからのみ</translation>
     </message>
     <message id="orn-update-all">
         <source>Update all</source>
-        <translation>Aggiorna tutto</translation>
+        <translation>全てアップデート</translation>
     </message>
     <message id="orn-no-installed-apps">
         <source>Could not find any applications installed from OpenRepos</source>
-        <translation>Nessuna applicazione installata da OpenRepos</translation>
+        <translation>OpenReposからインストールされたアプリが見つかりませんでした</translation>
     </message>
     <message id="orn-pmstate-multiple" numerus="yes">
         <source>%n operations are in progress</source>
         <extracomment>There are always more than 1 operations</extracomment>
-        <translation><numerusform>%n operazione in corso</numerusform><numerusform>%n operazioni in corso</numerusform><numerusform>%n operazioni in corso</numerusform></translation>
+        <translation><numerusform>%n件の処理が実行中です</numerusform></translation>
     </message>
     <message id="orn-version-available">
         <source>Available version</source>
-        <translation>Versione disponibile</translation>
+        <translation>利用可能なバージョン</translation>
     </message>
     <message id="orn-error-packagenotfound">
         <source>Couldn&apos;t find package</source>
-        <translation>Impossibie trovare il pacchetto</translation>
+        <translation>パッケージが見つかりませんでした</translation>
     </message>
     <message id="orn-size-installed">
         <source>Installed size</source>
-        <translation>Dimensione installato</translation>
+        <translation>インストールサイズ</translation>
     </message>
     <message id="orn-size-download-install">
         <source>Download / install size</source>
-        <translation>Dimensione download/installato</translation>
+        <translation>ダウンロード/ インストールサイズ</translation>
     </message>
     <message id="orn-cat-public-transport">
         <source>Public Transport</source>
-        <translation>Trasporto pubblico</translation>
+        <translation>公共交通機関</translation>
     </message>
     <message id="orn-comments-wait">
         <source>Wait for users&apos; feedback</source>
         <extracomment>This will be shown to an application author</extracomment>
-        <translation>In attesa di feedback</translation>
+        <translation>ユーザーからのフィードバックをお待ちください</translation>
     </message>
     <message id="orn-comments-bethefirst">
         <source>Be the first to comment</source>
         <extracomment>This will be shown to a normal user</extracomment>
-        <translation>Commenta per primo</translation>
+        <translation>最初にコメントする</translation>
     </message>
     <message id="orn-comments-nocomments">
         <source>There is nothing here yet</source>
-        <translation>Non c&apos;è ancora niente qui</translation>
+        <translation>ここにはまだ何もありません</translation>
     </message>
     <message id="orn-settings">
         <source>Settings</source>
-        <translation>Impostazioni</translation>
+        <translation>設定</translation>
     </message>
     <message id="orn-updates">
         <source>Updates</source>
-        <translation>Aggiornamenti</translation>
+        <translation>アップデート</translation>
     </message>
     <message id="orn-updates-notification-switch">
         <source>Show updates notification</source>
-        <translation>Mostra notifica aggiornamenti</translation>
+        <translation>アップデートの通知を表示する</translation>
     </message>
     <message id="orn-updates-check-interval">
         <source>Updates check interval</source>
-        <translation>Intervallo ricerca aggiornamenti</translation>
+        <translation>アップデートを確認する間隔</translation>
     </message>
     <message id="orn-interval-m" numerus="yes">
         <source>%n minute(s)</source>
-        <translation><numerusform>%n minuto</numerusform><numerusform>%n minuti</numerusform><numerusform>%n minuti</numerusform></translation>
+        <translation><numerusform>%n分</numerusform></translation>
     </message>
     <message id="orn-interval-h" numerus="yes">
         <source>%n hour(s)</source>
-        <translation><numerusform>%n ora</numerusform><numerusform>%n ore</numerusform><numerusform>%n ore</numerusform></translation>
+        <translation><numerusform>%n時間</numerusform></translation>
     </message>
     <message id="orn-tag-strikeout">
         <source>S</source>
@@ -778,288 +778,288 @@
     </message>
     <message id="orn-hint-commentfield">
         <source>Swipe to see all the tag buttons</source>
-        <translation>Swipe per vedere tutti i tag</translation>
+        <translation>スワイプして全てのタグボタンを見る</translation>
     </message>
     <message id="orn-dcm-user2">
         <source>Deep Thought</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>Pensiero Profondo</translation>
+        <translation>ディープ・ソート</translation>
     </message>
     <message id="orn-dcm-user1">
         <source>A little white mouse</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>Un topolino bianco</translation>
+        <translation>ハツカネズミ</translation>
     </message>
     <message id="orn-dcm-question">
         <source>What is the Answer to the Ultimate Question of Life, the Universe, and Everything?</source>
         <extracomment>https://simple.wikipedia.org/wiki/42_(answer)</extracomment>
-        <translation>Qual è la risposta alla domanda fondamentale sulla vita, l&apos;universo e tutto quanto?</translation>
+        <translation> 生命、宇宙、そして万物についての究極の疑問の答えとは何か？</translation>
     </message>
     <message id="orn-hint-commentdelegate-created">
         <source>7.5 million years ago</source>
-        <translation>7.5 milioni di anni fa</translation>
+        <translation>750万年前</translation>
     </message>
     <message id="orn-hint-commentdelegate">
         <source>Tap to navigate to the replied comment</source>
-        <translation>Tap per navigare alla risposta al commento</translation>
+        <translation>タップして返信されたコメントへ移動する</translation>
     </message>
     <message id="orn-tags">
         <source>Tags</source>
-        <translation>Tag</translation>
+        <translation>タグ</translation>
     </message>
     <message id="orn-tag-apps">
         <source>Tagged Applications</source>
-        <translation>App taggate</translation>
+        <translation>タグ付けされたアプリ</translation>
     </message>
     <message id="orn-rate-app">
         <source>Rate the application</source>
-        <translation>Vota l&apos;app</translation>
+        <translation>アプリを評価</translation>
     </message>
     <message id="orn-vote-send">
         <source>Your vote has been sent</source>
-        <translation>Voto inviato</translation>
+        <translation>あなたの評価が送信されました</translation>
     </message>
     <message id="orn-login2rate">
         <source>Log in to rate the application</source>
-        <translation>Accedi per votare l&apos;app</translation>
+        <translation>ログインしてアプリに評価する</translation>
     </message>
     <message id="orn-hint-rating">
         <source>Tap to rate the application</source>
-        <translation>Tap per votare l&apos;app</translation>
+        <translation>タップしてアプリに評価する</translation>
     </message>
     <message id="orn-local-rpms">
         <source>Local RPM files</source>
-        <translation>File RPM locali</translation>
+        <translation>デバイス上のRPMファイル</translation>
     </message>
     <message id="orn-delete">
         <source>Delete</source>
-        <translation>Elimina</translation>
+        <translation>削除</translation>
     </message>
     <message id="orn-deleting">
         <source>Deleting</source>
-        <translation>Eliminazione</translation>
+        <translation>削除中…</translation>
     </message>
     <message id="orn-no-local-rpms">
         <source>No local RPM files were found</source>
-        <translation>Nessun file RPM trovato</translation>
+        <translation>RPMファイルが見つかりませんでした</translation>
     </message>
     <message id="orn-deletion-error">
         <source>Failed to delete</source>
-        <translation>Impossibile eliminare</translation>
+        <translation>削除に失敗しました</translation>
     </message>
     <message id="orn-remove-all">
         <source>Remove all</source>
-        <translation>Rimuovi tutti</translation>
+        <translation>全て削除</translation>
     </message>
     <message id="orn-removing-all">
         <source>Removing all</source>
-        <translation>Rimozione</translation>
+        <translation>削除しています…</translation>
     </message>
     <message id="orn-repo-allremoved">
         <source>All repositories were removed</source>
-        <translation>Tutti i repository sono stati rimossi</translation>
+        <translation>全てのリポジトリが削除されました</translation>
     </message>
     <message id="orn-search-on-openrepos">
         <source>Search on OpenRepos.net</source>
-        <translation>Cerca su OpenRepos.net</translation>
+        <translation>OpenRepos.netで探す</translation>
     </message>
     <message id="orn-check-for-updates-switch">
         <source>Check for updates</source>
-        <translation>Controlla aggiornamenti</translation>
+        <translation>アップデートを確認する</translation>
     </message>
     <message id="orn-check-for-updates-descr">
         <source>Updates are checked only when the Storeman is running</source>
-        <translation>Gli aggiornamenti vengono ricercati solo quando Storeman è in esecuzione</translation>
+        <translation>Storemanを実行中の時のみアップデートを確認する</translation>
     </message>
     <message id="orn-smart-check-switch">
         <source>Smart check</source>
-        <translation>Controllo intelligente</translation>
+        <translation>スマートチェック</translation>
     </message>
     <message id="orn-smart-check-descr">
         <source>Use the OpenRepos.net API to determine if there are new updates</source>
-        <translation>Usa le API di OpenRepos.net per verificare se ci sono nuovi aggiornamenti</translation>
+        <translation>OpenRepos.net APIを使ってアップデートを確認する</translation>
     </message>
     <message id="orn-reload">
         <source>Reload</source>
-        <translation>Ricarica</translation>
+        <translation>再読み込み</translation>
     </message>
     <message id="orn-no-packages">
         <source>No packages available</source>
-        <translation>Nessun pacchetto disponibile</translation>
+        <translation>利用できるパッケージがありません</translation>
     </message>
     <message id="orn-error-comment-sending">
         <source>Error sending comment</source>
-        <translation>Errore nell&apos;invio del commento</translation>
+        <translation>メッセージの送信に失敗しました</translation>
     </message>
     <message id="orn-error-comment-deletion">
         <source>Error deleting comment</source>
-        <translation>Errore nell&apos;eliminazione del commento</translation>
+        <translation>コメントの削除に失敗しました</translation>
     </message>
     <message id="orn-error-network">
         <source>Network error</source>
-        <translation>Errore di rete</translation>
+        <translation>ネットワークエラー</translation>
     </message>
     <message id="orn-hint-bookmark">
         <source>Tap to bookmark the application</source>
-        <translation>Tap per aggiungere l&apos;app ai preferiti</translation>
+        <translation>タップしてアプリをブックマークに追加する</translation>
     </message>
     <message id="orn-bad-appid">
         <source>Invalid package ID %1</source>
-        <translation>ID pacchetto non valido %1</translation>
+        <translation>無効なパッケージID %1</translation>
     </message>
     <message id="orn-backup-filenameph">
         <source>A file name for backup</source>
-        <translation>Nome file per il backup</translation>
+        <translation>バックアップファイルの名前</translation>
     </message>
     <message id="orn-file-exists">
         <source>File already exists</source>
-        <translation>Il file esiste già</translation>
+        <translation>ファイルは既に存在しています</translation>
     </message>
     <message id="orn-backup-items">
         <source>What to backup</source>
-        <translation>Cosa salvare</translation>
+        <translation>バックアップする項目</translation>
     </message>
     <message id="orn-backup-apps">
         <source>Installed applications</source>
-        <translation>Applicazioni installate</translation>
+        <translation>インストールされたアプリ</translation>
     </message>
     <message id="orn-hint-close">
         <source>Tap again to close the hint</source>
-        <translation>Tap di nuovo per chiudere il suggerimento</translation>
+        <translation>再度タップしてヒントを閉じる</translation>
     </message>
     <message id="orn-mainpage">
         <source>Main page</source>
-        <translation>Pagina principale</translation>
+        <translation>メインページ</translation>
     </message>
     <message id="orn-show-recent-switch">
         <source>Show recently updated on start</source>
-        <translation>Mostra aggiornate recentemente all&apos;avvio</translation>
+        <translation>最近の更新を開始時に表示</translation>
     </message>
     <message id="orn-show-recent-switch-descr">
         <source>Switch to the page of recently updated packages on start</source>
-        <translation>All&apos;avvio passa alla pagina dei pacchetti aggiornati recentemente</translation>
+        <translation>起動時に最近の更新のページに移動する</translation>
     </message>
     <message id="orn-mainpage-order">
         <source>Order items</source>
-        <translation>Ordina elementi</translation>
+        <translation>項目の順番</translation>
     </message>
     <message id="orn-reset">
         <source>Reset</source>
-        <translation>Resetta</translation>
+        <translation>リセット</translation>
     </message>
     <message id="orn-mainpage-order-description">
         <source>Drag items to change their order</source>
-        <translation>Trascina gli elementi per cambiarne l&apos;ordine</translation>
+        <translation>ドラッグして順番を変更</translation>
     </message>
     <message id="orn-cat-adult-content">
         <source>Adult Content</source>
-        <translation>Contenuto per adulti</translation>
+        <translation>成人向けコンテンツ</translation>
     </message>
     <message id="orn-categories-filter">
         <source>Categories filter</source>
-        <translation>Filtro categorie</translation>
+        <translation>カテゴリーをフィルター</translation>
     </message>
     <message id="orn-categories-filter-descr">
         <source>Select which categories to show</source>
-        <translation>Seleziona quale categoria visualizzare</translation>
+        <translation>表示するカテゴリーを選択</translation>
     </message>
     <message id="orn-pmstate-refreshingcache">
         <source>Refreshing of cache</source>
-        <translation>Aggiorna la cache</translation>
+        <translation>キャッシュを初期化しています…</translation>
     </message>
     <message id="orn-refresh-cache-switch">
         <source>Refresh cache after system upgrade</source>
-        <translation>Aggiorna la cache dopo un aggiornamento del sistema</translation>
+        <translation>システムのアップデート後にキャッシュを初期化する</translation>
     </message>
     <message id="orn-refresh-cache-switch-descr">
         <source>Force refreshing of cache of all repositories after system upgrade</source>
-        <translation>Forza l&apos;aggiornamento della cache di tutte le repository dopo un aggiornamento di sistema.</translation>
+        <translation>システムのアップデート後に全てのリポジトリのキャッシュを初期化することを強制する</translation>
     </message>
     <message id="orn-save-password">
         <source>Save password</source>
-        <translation>Salva la password</translation>
+        <translation>パスワードを保存</translation>
     </message>
     <message id="orn-save-password-help">
         <source>Save password to the encrypted device storage to perform automatic re-login.</source>
-        <translation>Salva la password nella memoria crittografata per permettere l&apos;accesso automatico.</translation>
+        <translation>自動でログインするために暗号化されたデバイスストレージにパスワードを保存する</translation>
     </message>
     <message id="orn-share-link">
         <source>Share link</source>
-        <translation>Condividi link</translation>
+        <translation>リンクを共有</translation>
     </message>
     <message id="orn-repository">
         <source>Repository</source>
-        <translation>Repository attivi</translation>
+        <translation>リポジトリ</translation>
     </message>
     <message id="orn-myrepository">
         <source>My repository</source>
-        <translation>Repository personale</translation>
+        <translation>自分のリポジトリ</translation>
     </message>
     <message id="orn-donation">
         <source>Donation</source>
         <extracomment>Should be a noun</extracomment>
-        <translation>Dona</translation>
+        <translation>寄付</translation>
     </message>
     <message id="orn-cover-updates-available">
         <source>Updates available</source>
-        <translation>Aggiornamenti disponibili</translation>
+        <translation>アップデートが利用可能です</translation>
     </message>
     <message id="orn-package-updated">
         <source>Package %0 was successfully updated</source>
-        <translation>%0 è stato aggiornato correttamente</translation>
+        <translation>パッケージ%0のアップデートに成功しました</translation>
     </message>
     <message id="orn-app-description-full">
         <source>&lt;p&gt;OpenRepos client application for SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman is Free Software (FLOSS), distributed under the terms of the &lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;license&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Any issues (bug reports, feature suggestions, help requests etc.) shall be filed at GitHub (you may use the button below).&lt;/p&gt;</source>
         <extracomment>Avoid to translate the acronym FLOSS (Free, Libre, Open Source Software), just keep it as &quot;(FLOSS)&quot;.</extracomment>
-        <translation>&lt;p&gt;Client per OpenRepos per SailfishOS&lt;br /&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Storeman è software libero (FLOSS) sotto i termini della &lt;a href=&apos;%1&apos;&gt;licenza MIT&amp;nbsp;&lt;/a&gt;.&lt;/p&gt;&lt;p&gt; Qualsiasi problema (sia esso una segnalazione di un bug, un suggerimento, una richiesta d&apos;aiuto ecc.) va segnalato su GitHub ( puoi usare il pulsante qui di fianco).&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;SailfishOS向けのOprenReposクライアントアプリ&lt;br /&gt; &amp;nbsp; &lt;/p&gt;&lt;p&gt;Storemanはフリーソフトウェア(FLOSS)であり、&lt;a href=&apos;%1&apos;&gt;MIT&amp;nbsp;ライセンス&lt;/a&gt; の条件の元で配布されています。&lt;/p&gt;&lt;p&gt;バグ報告、機能提案、ヘルプリクエスト等の問題はGitHubに提出してください(以下のボタンをご利用ください)。&lt;/p&gt;</translation>
     </message>
     <message id="orn-show-details">
         <source>Show details</source>
-        <translation>Mostra dettagli</translation>
+        <translation>詳細を表示</translation>
     </message>
     <message id="orn-unused-repos-found">
         <source>Unused repositories found</source>
-        <translation>Repository inutilizzati trovati</translation>
+        <translation>使用されていないリポジトリが見つかりました</translation>
     </message>
     <message id="orn-no-unused-repos">
         <source>Unused repositories not found</source>
-        <translation>Nessun repository inutilizzato trovato</translation>
+        <translation>使用していないリポジトリはありませんでした</translation>
     </message>
     <message id="orn-search-unused-repos">
         <source>Search for unused</source>
-        <translation>Cerca per inutilizzati</translation>
+        <translation>使用していないの物の検索</translation>
     </message>
     <message id="orn-unused-repos-switch">
         <source>Search for unused repositories</source>
-        <translation>Cerca per repository inutilizzati</translation>
+        <translation>使用していないリポジトリの検索</translation>
     </message>
     <message id="orn-unused-repos-switch-descr">
         <source>Search for unused repositories after removing packages.</source>
-        <translation>Cerca per repository inutilizzati dopo aver rimosso i pacchetti.</translation>
+        <translation>パッケージの削除後に使用していないリポジトリの確認をする</translation>
     </message>
     <message id="orn-unused-repos">
         <source>Unused repositories</source>
-        <translation>Repository inutilizzati</translation>
+        <translation>使用されていないリポジトリ</translation>
     </message>
     <message id="orn-unused-repos-text">
         <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Non ci sono pacchetti installati per i prossimi repository.&lt;/p&gt;&lt;p&gt;Vuoi rimuoverli adesso?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;以下のリポジトリが提供するアプリはインストールされていません。&lt;/p&gt;&lt;p&gt;リポジトリを削除しますか？&lt;/p&gt;</translation>
     </message>
     <message id="orn-updates-check-interval-minimum">
         <source>At least 10 minutes</source>
-        <translation>Almeno 10 minuti</translation>
+        <translation>10分以上で指定して下さい</translation>
     </message>
     <message id="orn-check-for-self-updates-switch">
         <source>Check for self-updates</source>
-        <translation>Controlla per aggiornamenti automatici</translation>
+        <translation>Storemanのアップデートを確認する</translation>
     </message>
     <message id="orn-check-for-self-updates-descr">
         <source>Enable the Storeman OBS repository to check for Storeman updates</source>
-        <translation>Abilita il repository OBS di storeman per controllare gli aggiornamenti di Storeman</translation>
+        <translation>Storemanのアップデートを確認するためにStoreman OBS リポジトリを有効化します</translation>
     </message>
     <message id="orn-storeman-repo-name">
         <source>Storeman OBS Repository</source>
-        <translation>Repository OBS di Storeman</translation>
+        <translation>Storeman OBS リポジトリ</translation>
     </message>
 </context>
 </TS>
