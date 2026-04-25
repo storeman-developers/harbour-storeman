@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="no">
+<TS version="2.1" language="nb_NO">
 <context>
     <name></name>
     <message id="orn-notrated">
