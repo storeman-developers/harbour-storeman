@@ -189,3 +189,4 @@ dbus.path = $$INSTALL_ROOT/usr/share/dbus-1/services
 INSTALLS += privileges dbus
 
 include(translations/translations.pri)
+
