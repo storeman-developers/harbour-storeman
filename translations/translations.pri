@@ -36,3 +36,4 @@ translations.path  = $$PREFIX/share/$$TARGET/translations
 translations.CONFIG += no_check_exist
 
 INSTALLS += translations
+
