@@ -1023,7 +1023,7 @@
     </message>
     <message id="orn-no-unused-repos">
         <source>Unused repositories not found</source>
-        <translation>Geen ongebruikte pakketbronnen gevonden</translation>
+        <translation>Geên ongebruikte pakketbronnen gevonden</translation>
     </message>
     <message id="orn-search-unused-repos">
         <source>Search for unused</source>
