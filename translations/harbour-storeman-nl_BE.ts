@@ -1043,7 +1043,7 @@
     </message>
     <message id="orn-unused-repos-text">
         <source>&lt;p&gt;There are no installed packages for the next repositories.&lt;/p&gt;&lt;p&gt;Do you want to remove them now?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Er zijn geen pakketten geïnstalleerd van de volgende pakketbronnen.&lt;/p&gt;&lt;p&gt;Wil je ze nu verwijderen?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Der zijn geên pakketten geïnstalleerd van de volgende pakketbronnen.&lt;/p&gt;&lt;p&gt;Wilde ze nu verwijderen?&lt;/p&gt;</translation>
     </message>
     <message id="orn-updates-check-interval-minimum">
         <source>At least 10 minutes</source>
