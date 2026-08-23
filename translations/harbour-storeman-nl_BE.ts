@@ -1035,7 +1035,7 @@
     </message>
     <message id="orn-unused-repos-switch-descr">
         <source>Search for unused repositories after removing packages.</source>
-        <translation>Zoek naar ongebruikte pakketbronnen na het verwijderen van pakketten.</translation>
+        <translation>Zoekt naar ongebruikte pakketbronnen achter da’ ge pakketten verwijdert.</translation>
     </message>
     <message id="orn-unused-repos">
         <source>Unused repositories</source>
