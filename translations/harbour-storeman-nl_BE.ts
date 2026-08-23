@@ -1055,7 +1055,7 @@
     </message>
     <message id="orn-check-for-self-updates-descr">
         <source>Enable the Storeman OBS repository to check for Storeman updates</source>
-        <translation>Schakel de Storeman OBS-pakketbron in om te controleren op updates voor Storeman</translation>
+        <translation>Schakelt de Storeman OBS-pakketbron in voôr te controleren op updates voôr Storeman</translation>
     </message>
     <message id="orn-storeman-repo-name">
         <source>Storeman OBS Repository</source>
