@@ -10,6 +10,7 @@ TRANSLATIONS += \
     translations/harbour-storeman-fr.ts \
     translations/harbour-storeman-hu.ts \
     translations/harbour-storeman-it.ts \
+    translations/harbour-storeman-ja.ts \
     translations/harbour-storeman-nl.ts \
     translations/harbour-storeman-nl_BE.ts \
     translations/harbour-storeman-no.ts \
@@ -35,3 +36,4 @@ translations.path  = $$PREFIX/share/$$TARGET/translations
 translations.CONFIG += no_check_exist
 
 INSTALLS += translations
+

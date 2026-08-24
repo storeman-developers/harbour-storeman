@@ -100,7 +100,7 @@
     </message>
     <message id="orn-package-removed">
         <source>Package %0 was successfully removed</source>
-        <translation>Paketti 0% poistettiin onnistuneesti</translation>
+        <translation>Paketti %0 poistettiin onnistuneesti</translation>
     </message>
     <message id="orn-installed">
         <source>Installed</source>
